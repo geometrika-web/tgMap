@@ -1,0 +1,178 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template/simple-sidebar)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
+
+ /*#wrapper {
+    
+ }*/
+
+#sidebar-wrapper {
+  height:100vh;
+  position: absolute;
+  margin-left: -30rem;
+  -webkit-transition: margin .3s ease-out;
+  -moz-transition: margin .3s ease-out;
+  -o-transition: margin .3s ease-out;
+  transition: margin .3s ease-out;
+  overflow: hidden;
+  width: 30rem;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.6rem 1.25rem;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+/*#sidebar-wrapper .list-group {
+}*/
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -30rem;
+  }
+}
+
+
+/* Hamburger menu */
+.bar1, .bar2, .bar3 {
+  width: 50px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+#menu-toggle {
+  transition: ease-in-out 0.2s;
+}
+
+#menu-toggle:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+/* Map css */
+.map {
+  height: 92vh;
+  width: 100vw;
+}
+
+.hover :hover {
+  scale: 2;
+}
+
+/*.img-center {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%)
+}*/
+
+.overflow-hidden {
+  overflow: hidden; 
+}
+
+
+.bg-tomislav {
+  background-color:  rgb(176, 42, 51);
+}
+
+.nav-link {
+  color: #fff;
+  transition: ease-in-out 0.2s;
+}
+
+.nav-link:hover {
+  color: #f6dc34 ;
+  transform: scale(1.05);
+}
+.active .nav-link {
+  color: #f6dc34 ;
+}
+
+.active .nav-link:hover {
+  color: #f6dc34 ;
+  transform: scale(1);
+  cursor: default;
+}
+.activate {
+  border-bottom: 4px solid rgb(176, 42, 51) !important;
+
+}
+.sidebar-scroll {
+  height: calc(100vh - 174px);
+  overflow: auto;
+}
+#routes{
+  display: none;
+}
+
+ /* Dropdown Button */
+ .laydropbtn {
+  padding: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.laydropdown {
+  height: 100px;
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 12;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.laydropdown-content {
+  top: 200px;
+  display: none;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 12;
+}
+
+/* Links inside the dropdown */
+.laydropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.laydropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.laydropdown:hover .laydropdown-content {display: block;}

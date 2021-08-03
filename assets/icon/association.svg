@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Icons_Group"
+   overflow="hidden"
+   version="1.1"
+   viewBox="0 0 37.141869 20"
+   sodipodi:docname="association.svg"
+   width="37.141869"
+   height="20"
+   inkscape:export-filename="C:\Users\Korisnik\Documents\Geometrika\Karta_Tomislavgrad\webKarta\assets\icon\association.png"
+   inkscape:export-xdpi="109.5531"
+   inkscape:export-ydpi="109.5531"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)">
+  <metadata
+     id="metadata19">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs17" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1013"
+     id="namedview15"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="7.65625"
+     inkscape:cx="33.195241"
+     inkscape:cy="8.612286"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Icons_Group" />
+  <rect
+     style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.563039;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="rect858"
+     width="37.141869"
+     height="20"
+     x="0"
+     y="0"
+     rx="137.179"
+     ry="12.930613"
+     inkscape:export-xdpi="109"
+     inkscape:export-ydpi="109" />
+  <g
+     id="g12"
+     style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.85535;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     transform="matrix(0.29383627,0,0,0.29383627,4.0901373,-4.2949776)">
+    <circle
+       cx="78"
+       cy="25"
+       r="5"
+       id="circle2"
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.85535;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <circle
+       cx="18"
+       cy="25"
+       r="5"
+       id="circle4"
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.85535;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <circle
+       cx="58"
+       cy="25"
+       r="5"
+       id="circle6"
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.85535;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <circle
+       cx="38"
+       cy="25"
+       r="5"
+       id="circle8"
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.85535;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       d="M 89.9,49.5 86.7,34.9 C 86.6,34.5 86.4,34.1 86,33.8 84.8,32.9 83.5,32.1 82,31.7 80.7,31.3 79.4,31 78,31 c -1.4,0 -2.8,0.2 -4,0.7 -1.5,0.5 -2.8,1.2 -4,2.1 -0.4,0.3 -0.6,0.7 -0.7,1.1 L 68,40.8 v 0 L 66.7,34.9 C 66.6,34.5 66.4,34.1 66,33.8 64.8,32.9 63.5,32.1 62,31.7 60.7,31.3 59.4,31 58,31 c -1.4,0 -2.8,0.2 -4,0.7 -1.5,0.5 -2.8,1.2 -4,2.1 -0.4,0.3 -0.6,0.7 -0.7,1.1 L 48,40.7 v 0.1 L 46.7,34.9 C 46.6,34.5 46.4,34.1 46,33.8 44.8,32.9 43.5,32.1 42,31.7 40.7,31.3 39.4,31 38,31 c -1.4,0 -2.8,0.2 -4,0.7 -1.5,0.5 -2.8,1.2 -4,2.1 -0.4,0.3 -0.6,0.7 -0.7,1.1 L 28,40.7 v 0 L 26.7,34.9 C 26.6,34.5 26.4,34.1 26,33.8 24.8,32.9 23.5,32.1 22,31.7 20.7,31.3 19.4,31 18,31 c -1.4,0 -2.8,0.2 -4,0.7 -1.5,0.5 -2.8,1.2 -4,2.1 -0.4,0.3 -0.6,0.7 -0.7,1.1 L 6.1,49.4 c -0.3,1.1 0.4,2.3 1.6,2.5 0.1,0 0.2,0 0.3,0 0.9,0 1.7,-0.6 2,-1.6 L 13,37 v 7.1 L 10,59 h 3 v 17 h 4 V 59 h 2 v 17 h 4 V 59 h 3 L 23,44.1 V 37 l 3,13.4 c 0.2,0.9 1,1.6 1.9,1.6 v 0 c 0.9,0 1.7,-0.6 1.9,-1.6 L 33,37 v 16 23 h 4 V 53 h 2 v 23 h 4 V 53 37 l 3,13.4 c 0.2,0.9 1,1.6 2,1.6 0,0 0,0 0,0 v 0 c 0.9,0 1.7,-0.6 1.9,-1.6 L 53,37 v 7.2 L 50,59 h 3 v 17 h 4 V 59 h 2 v 17 h 4 V 59 h 3 L 63,44 v -7 l 3,13.4 c 0.2,0.9 1,1.6 2,1.6 0,0 0,0 0,0 v 0 c 0,0 0,0 0,0 0.9,0 1.7,-0.6 2,-1.6 L 73,37 v 16 23 h 4 V 53 h 2 v 23 h 4 V 53 37 l 3,13.4 c 0.2,0.9 1,1.6 2,1.6 0.2,0 0.5,0 0.7,-0.1 0.9,-0.4 1.4,-1.4 1.2,-2.4 z"
+       id="path10"
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.85535;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  </g>
+</svg>

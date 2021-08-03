@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Općina Tomislavgrad</title>
+
+  <!-- Bootstrap core CSS -->
+  
+  
+  
+  <script src="Op%C4%87ina%20Tomislavgrad_datoteke/ol.js"></script>
+
+  <!-- Custom styles for this template -->
+  
+  
+<link rel="shortcut icon" href="#"><link rel="stylesheet" href="Op%C4%87ina%20Tomislavgrad_datoteke/ol.css" type="text/css"><link href="Op%C4%87ina%20Tomislavgrad_datoteke/bootstrap.css" rel="stylesheet"><link href="Op%C4%87ina%20Tomislavgrad_datoteke/simple-sidebar.css" rel="stylesheet"><link href="Op%C4%87ina%20Tomislavgrad_datoteke/style.css" rel="stylesheet"></head>
+
+<body class="overflow-hidden">
+
+  <div class="d-flex" id="wrapper"> 
+    
+    
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      
+      <nav class="navbar navbar-expand-lg navbar-dark bg-tomislav pt-0 pb-0">
+        <div class="change" onclick="myFunction(this)" id="menu-toggle">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <img src="Op%C4%87ina%20Tomislavgrad_datoteke/tomislavGuides4.jpg" class=" mt-0 mr-0 mb-0 ml-4 p-0" style="height: 100px;" alt="">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Upoznaj Tomislavgrad<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:5501/tours.html">Prijedlozi obilazaka</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tomislavgrad
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Druga općina</a>
+                <a class="dropdown-item" href="#">Treća općina</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Servis u ostalim općinama</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container-fluid p-0">
+        <div id="map" class="map" style="cursor: default;">
+          <!-- Layers controls -->
+          <img class="laydropdown" src="Op%C4%87ina%20Tomislavgrad_datoteke/layers.svg">
+            <div class="laydropbtn"></div>
+            <span class="laydropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </span>
+           
+        <div class="ol-viewport" style="position: relative; overflow: hidden; width: 100%; height: 100%;"><div style="position: absolute; width: 100%; height: 100%; z-index: 0;" class="ol-unselectable ol-layers"><div class="ol-layer" style="position: absolute; width: 100%; height: 100%;"><canvas style="position: absolute; left: 0px; transform-origin: left top 0px; transform: matrix(1, 0, 0, 1, 0, 0);" width="1058" height="663"></canvas></div><div class="ol-layer" style="position: absolute; width: 100%; height: 100%;"><canvas style="position: absolute; left: 0px; transform-origin: left top 0px; transform: matrix(0.8, 0, 0, 0.8, -0.2, -0.1);" width="1323" height="829"></canvas></div><div class="ol-layer" style="position: absolute; width: 100%; height: 100%; opacity: 0;"><canvas style="position: absolute; left: 0px; transform-origin: left top 0px; transform: matrix(0.8, 0, 0, 0.8, 0, 0);" width="1323" height="829"></canvas></div><div class="ol-layer" style="position: absolute; width: 100%; height: 100%; opacity: 0;"><canvas style="position: absolute; left: 0px; transform-origin: left top 0px; transform: matrix(0.8, 0, 0, 0.8, 0, 0);" width="1323" height="829"></canvas></div><div class="ol-layer" style="position: absolute; width: 100%; height: 100%;"><canvas style="position: absolute; left: 0px; transform-origin: left top 0px;" width="0"></canvas></div></div><div style="position: absolute; z-index: 0; width: 100%; height: 100%; pointer-events: none;" class="ol-overlaycontainer"></div><div style="position: absolute; z-index: 0; width: 100%; height: 100%; pointer-events: none;" class="ol-overlaycontainer-stopevent"><div style="pointer-events: auto;" class="ol-rotate ol-unselectable ol-control ol-hidden"><button class="ol-rotate-reset" type="button" title="Reset rotation"><span class="ol-compass" style="transform: rotate(0rad);">⇧</span></button></div></div></div></div>
+      </div>
+      
+      <!-- Sidebar -->
+      <div class="bg-white border-right" id="sidebar-wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-4 p-0">
+              <button id="btn-meet" onclick="meetTg()" class="list-group-item list-group-item-action bg-warning text-white text-center activate"><img src="Op%C4%87ina%20Tomislavgrad_datoteke/placeholder.png" alt=""><div>UPOZNAJ TG</div></button>
+          
+            </div>
+            <div class="col-4 p-0">
+              <button id="btn-routes" onclick="routes()" class="list-group-item list-group-item-action bg-warning text-white text-center"><img src="Op%C4%87ina%20Tomislavgrad_datoteke/route.png" alt=""><div>OBILASCI</div></button>
+            </div>
+            <div class="col-4 p-0">
+              <button id="btn-assoc" onclick="assoc()" class="list-group-item list-group-item-action bg-warning text-white text-center"><img src="Op%C4%87ina%20Tomislavgrad_datoteke/association2.svg" alt=""><div>UDRUGE</div></button>
+          
+            </div>
+          </div>
+        </div>
+        <!--Meet-->
+        <div id="meet" class="list-group list-group-flush sidebar-scroll text-center">
+          <div class="text-muted text-center pt-4" id="msg"><small><em>Odabirom na karti prikažite dodatne informacije!</em></small></div>
+          <div id="landmark" class="mt-4 h3 text-center"></div>
+          <div id="landmark-about" class="p-2 mb-2 text-center"></div>
+          <div id="nodelist" class="p-4">
+            <em class="text-center"></em>
+          </div>
+          <img id="image" class="hover p-2" src="" width="100%" height="auto">
+          <!--<a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>-->
+          <!--<a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>-->
+          <!--<a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>-->
+          <!--<a href="#" class="list-group-item list-group-item-action bg-light">Events</a>-->
+          <!--<a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>-->
+          <!--<a href="#" class="list-group-item list-group-item-action bg-light">Status</a>-->
+        </div>
+        <!--Routes-->
+        <div id="msg_el" style="display: none;"></div>
+        <div id="routes" class="list-group list-group-flush">
+          <button onclick="getSourceJSON(this.id)" id="tour1" class="mt-5 list-group-item list-group-item-action mt-2">Tomislavgrad centar</button>
+          <small id="tour1-text" class="p-3" style="display: none;">
+            <div class="text-right text-muted"><img src="Op%C4%87ina%20Tomislavgrad_datoteke/walkingMan.svg" class="mr-2" style="height: 30px;" alt="">20 min</div>
+            Justo vero magna clita sea et ea ea dolor elitr no. Sea 
+gubergren sed magna labore ipsum. Dolores amet sea.Girls of was his 
+though below given loathed lowly. Her on vast loathed eros he at lemans 
+flaunting, prose childe.
+          </small>
+          <button onclick="getSourceJSON(this.id)" id="tour2" class="list-group-item list-group-item-action">Vjetrenjače - Mlinica - Vrleti</button>
+          <small id="tour2-text" class="p-3 ml-4 " style="display: none;">
+            <div class="text-right text-muted"><img src="Op%C4%87ina%20Tomislavgrad_datoteke/car.svg" class="mr-2" style="height: 20px;" alt="">5h</div>
+            <div class="h6 mt-2">Vjetrenjače u Mrkodolu</div>
+            <img src="Op%C4%87ina%20Tomislavgrad_datoteke/three-dots-vertical.svg" alt=""><span class="ml-2">6 km</span>
+            <div class="h6 mt-2">Mlinica u Mesihovini</div>
+            <img src="Op%C4%87ina%20Tomislavgrad_datoteke/three-dots-vertical.svg" alt=""><span class="ml-2">35 km</span>
+            <div class="h6 mt-2">Hajdučke vrleti</div>
+            <div class="mt-4">Lorem ipsum dolor sit amet consectetur 
+adipisicing elit. Alias veritatis at laborum ut aspernatur deserunt 
+voluptatum illum minus voluptates. Accusamus culpa iste quod sed nisi, 
+eius ratione incidunt dicta doloribus.</div>
+          </small>
+          
+          <!--<a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>-->
+          <!--<a href="#" class="list-group-item list-group-item-action bg-light">Events</a>-->
+          <!--<a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>-->
+          <!--<a href="#" class="list-group-item list-group-item-action bg-light">Status</a>-->
+        </div>
+        <!--Associations-->
+        <div id="assoc" class="list-group list-group-flush">
+          <button id="assoc1" class="mt-5 list-group-item list-group-item-action bg-light mt-2">PD Orlova Stina</button>
+          <small id="assoc1-text" class="p-3" style="display: none;">
+            <div class="text-right text-muted"></div>
+            Justo vero magna clita sea et ea ea dolor elitr no. Sea 
+gubergren sed magna labore ipsum. Dolores amet sea.Girls of was his 
+though below given loathed lowly. Her on vast loathed eros he at lemans 
+flaunting, prose childe.
+          </small>
+          <button id="assoc2" class="list-group-item list-group-item-action bg-light mt-2">Udruga 2</button>
+          <small id="assoc2-text" class="p-3" style="display: none;">Justo
+ vero magna clita sea et ea ea dolor elitr no. Sea gubergren sed magna 
+labore ipsum. Dolores amet sea.Girls of was his though below given 
+loathed lowly. Her on vast loathed eros he at lemans flaunting, prose 
+childe.</small>
+        </div>
+      </div>
+      <!-- /#sidebar-wrapper -->
+    </div>
+    <!-- /#page-content-wrapper -->
+
+    
+  </div>
+  <script src="Op%C4%87ina%20Tomislavgrad_datoteke/ol-ext.js"></script>
+  <script src="Op%C4%87ina%20Tomislavgrad_datoteke/main.js"></script>
+  <!-- /#wrapper -->
+  
+  <!-- Bootstrap core JavaScript -->
+  <script src="Op%C4%87ina%20Tomislavgrad_datoteke/jquery.js"></script>
+  <script src="Op%C4%87ina%20Tomislavgrad_datoteke/bootstrap.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tomislavgrad 360°</title>
+  <link rel="stylesheet" href="Photo-Sphere-Viewer-4.2.1\dist\photo-sphere-viewer.css"/>
+  <link rel="stylesheet" href="Photo-Sphere-Viewer-4.2.1\dist\plugins\markers.css"/>
+  <!--Dependencies-->
+  <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8.1.3/dist/polyfill.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uevent@2/browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/plugins/markers.js"></script>
+  <link rel="stylesheet" href="css/style360.css"/>
+</head>
+<body id="body">
+  <div id="photosphere" >
+    <a title="Povratak na kartu" id="back-href" href=""><img class="back-icon" id="back-icon" src="/assets/icon/back.svg" alt=""></a>
+  </div>
+  <script type="text/template" id="lorem-content">
+    <h1>HTML Ipsum Presents</h1>
+
+    <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas.
+      Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+      egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et
+      sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet,
+      wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac
+      dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54469.108394396746!2d6.9617553450295855!3d44.151844842645815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdaf6678af879d%3A0xcabc15aee7b89386!2sParc%20national%20du%20Mercantour!5e0!3m2!1sfr!2sfr!4v1611498421096!5m2!1sfr!2sfr" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+    <h2>Header Level 2</h2>
+
+    <ol>
+      <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+      <li>Aliquam tincidunt mauris eu risus.</li>
+    </ol>
+
+    <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet
+      congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis,
+      tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+
+    <h3>Header Level 3</h3>
+
+    <ul>
+      <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+      <li>Aliquam tincidunt mauris eu risus.</li>
+    </ul>
+  </script>
+  <!--Staro groblje Mesihovina-->
+  <script type="text/template" id="staroGrobljeMesihovina">
+    <h1>Staro Groblje</h1>
+
+    <p><strong>Staro groblje u mjestu Mesihovina...</p>
+  </script>
+  <!--Crkva u Mesihovini-->
+  <script type="text/template" id="crkvaMesihovina">
+    <h1>Crkva u Mesihovini</h1>
+
+    <p><strong>Crkva u mjestu Mesihovina...</p>
+  </script>
+  <!--Bukovica-->
+  <script type="text/template" id="bukovica">
+    <h1>Bukovica</h1>
+
+    <p><strong>Bukovica je naseljeno mjesto u općini Tomislavgrad, Federacija Bosne i Hercegovine, BiH.</p>
+  </script>
+  <!--Seonica-->
+  <script type="text/template" id="seonica">
+    <h1>Seonica</h1>
+
+    <p><strong>Seonica je naseljeno mjesto u općini Tomislavgrad, Federacija Bosne i Hercegovine, BiH.</p>
+  </script>
+  <!--Crvenice-->
+  <script type="text/template" id="crvenice">
+    <h1>Crvenice</h1>
+
+    <p><strong>Crvenice su naseljeno mjesto u općini Tomislavgrad, Federacija Bosne i Hercegovine, BiH.</p>
+  </script>
+<!--GLIZICA MLINICA-->
+  <!--Glizica mlinica-->
+  <script type="text/template" id="glizicaMlinica">
+    <h1>Glizića mlinica</h1>
+
+    <p><strong>O Glizića mlinici...</p>
+  </script>
+</body>
+<script src="js/main360_2.js"></script>
+</html>

@@ -1,0 +1,6 @@
+Fotografiranje dronom s ručno postavljenom ekspozicijom i u raw formatu.
+Kamera horizontalno i prema prikazu drona na karti slikati svakih 45°. Nakon zatvorenog kruga spustiti kameru 30° i ponoviti slikanje u krug. Nakon toga, još jednom spustit kameru za oko 30° i uslikati sve slike te na kraju uslikati JEDNU sliku nadira.
+Sve fotografije uvesti u Photoshop te ih urediti jednako kako bi se izbjegle veće razlike u tonovima.
+Uređene fotografije softverom PTGui spojiti u panoramu.
+Softverom Skyfill dodati dio neba koji fali.
+Dobivenu panoramu učitati u Photoshop, filterom srediti dodani dio neba i izvesti u JPG formatu.
