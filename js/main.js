@@ -1497,8 +1497,15 @@ function toggle(x) {
 }
 
 function toggleOnSelect() {
-  if (document.getElementById('menu-toggle').classList != 'change') {
-    toggle(document.getElementById('menu-toggle'))
+  if (window.innerWidth > 575.99) {
+    if (document.getElementById('menu-toggle').classList != 'change') {
+      toggle(document.getElementById('menu-toggle'))
+    }
+  }
+  else {
+    if (document.getElementById('menu-toggle').classList = 'change') {
+      toggle(document.getElementById('menu-toggle'))
+    }
   }
 }
 
