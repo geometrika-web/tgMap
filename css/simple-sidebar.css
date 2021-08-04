@@ -77,6 +77,7 @@
     overflow: hidden;
     margin-left: 0;
     width: 100vw;
+
   }
 }
 
@@ -275,15 +276,15 @@
   margin: 1rem;
 }
 
+
+
 .dropdown-menu2 {
   position: absolute;
   top: 0;
-  right: -25rem;
+  right: 0;
   z-index: 1000;
-  float: left;
   width: 20rem;
   padding: 0rem 0;
-  margin: 0rem 0 0;
   font-size: 1rem;
   color: #212529;
   text-align: left;
@@ -292,7 +293,9 @@
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.2rem;
-  transition: ease-out 0.5s;
+  transition: ease-in-out 0.3s;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .dropdown-item2 {
@@ -302,11 +305,9 @@
  color: black;
  background-color: rgb(235, 235, 235);
 }
-
 .dropdown-layer:hover .dropdown-menu2 {
-  
-  margin-top: 0;
-  right: 0;
+  opacity: 1;
+  visibility: visible;
 }
 
 .no-outline:focus {
