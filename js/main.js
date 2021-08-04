@@ -280,6 +280,7 @@ var map = new ol.Map({
   ],
   target: 'map',
   view: new ol.View({
+    enableRotation: false,
     center: center,
     zoom: zoom,
     extent: [xE, yS, xW, yN]
