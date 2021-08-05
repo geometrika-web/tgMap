@@ -5,7 +5,7 @@ document.onreadystatechange = function() {
     document.getElementById('back-icon').style.visibility = 'visible';
   }
 }
-document.getElementById('back-href').setAttribute('href', 'http://127.0.0.1:5501/index.html'+localStorage.hash)
+document.getElementById('back-href').setAttribute('href', 'index.html'+localStorage.hash)
 if (window.location.hash == '#mesihovina') {
   var viewer = new PhotoSphereViewer.Viewer({
     panorama: '../assets/360/crkvaMesihovina.jpg',

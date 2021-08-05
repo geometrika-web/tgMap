@@ -423,12 +423,12 @@ var images = [
   {
     center: [17.282138, 43.580198],
     name: 'Crkva svetog Nikole Tavelića',
-    url: 'http://127.0.0.1:5501/panorama_tomislavgrad_2.html#mesihovina'
+    url: 'panorama_tomislavgrad_2.html#mesihovina'
   },
   {
     center: [17.299530, 43.585027],
     name: 'Glizića mlinica',
-    url: 'http://127.0.0.1:5501/panorama_tomislavgrad_2.html#glizicaMlin'
+    url: 'panorama_tomislavgrad_2.html#glizicaMlin'
   },
   //{
   //  center: [17.226113, 43.718290],
