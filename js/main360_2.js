@@ -13,8 +13,9 @@ if (window.location.hash == '#mesihovina') {
     loadingImg: 'assets/icon/virtual-reality.svg',
     defaultLat: -0.45,
     defaultLong: 2.15,
-    touchmoveTwoFingers: true,
+    touchmoveTwoFingers: false,
     mousewheelCtrlKey: false,
+    moveInertia: true,
   
     plugins: [
       [PhotoSphereViewer.MarkersPlugin, {
@@ -247,8 +248,9 @@ if (window.location.hash == '#glizicaMlin') {
     loadingImg: 'assets/icon/virtual-reality.svg',
     defaultLong: 4.02,
     defaultLat: -0.24,
-    touchmoveTwoFingers: true,
+    touchmoveTwoFingers: false,
     mousewheelCtrlKey: false,
+    moveInertia: true,
   
     plugins: [
       [PhotoSphereViewer.MarkersPlugin, {
