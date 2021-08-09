@@ -242,7 +242,7 @@ if (window.location.hash == '#mesihovina') {
 
 if (window.location.hash == '#glizicaMlin') {
   var viewer = new PhotoSphereViewer.Viewer({
-    panorama: '../assets/360/glizicaMlinica2.jpg',
+    panorama: '../assets/360/glizicaMlinica.jpg',
     container: 'photosphere',
     loadingImg: 'assets/icon/virtual-reality.svg',
     defaultLong: 4.02,
