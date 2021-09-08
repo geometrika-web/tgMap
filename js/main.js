@@ -53,8 +53,9 @@ var map = new ol.Map({
 
     topo = new ol.layer.Tile({
       source: new ol.source.OSM(),
-      opacity: 0.5,
-      name: 'basemap'
+      opacity: 0.4,
+      brightness: 0.1,
+      name: 'basemap',
     }),
 
     //topo = new ol.layer.MapboxVector({
@@ -879,7 +880,79 @@ function getFeatureStyleAssoc (feature, resolution, sel) {
   }
   return [style];
 }
+
+function zoomTo(i) {
+  view.animate({
+    center: ol.proj.fromLonLat(coord[i]),
+    duration: 3000,
+    zoom: landmarksZoom[i]
+  });
+} 
 // GeoJSON layers -----------------------------------------
+coord = []
+landmarksZoom = []
+document.getElementById('landmarksAll').style.display = 'none'
+window.onload = function() {
+  $.getJSON("assets/landmarks/landmarks.geojson", function(data) {
+    for(i in data.features) {
+      var landmarkAll = document.createElement('button')
+      landmarkAll.id = i
+      landmarkAll.classList.add("list-group-item", "list-group-item-action", "no-outline", "pl-5", "landmarkList-height", "scale-animation-right")
+      //landmarkAll.innerText = data.features[i].properties.name
+      landmarkAll.onclick = function() { zoomTo(this.id); };
+      var parent = document.getElementById('landmark-name')
+      parent.appendChild(landmarkAll)
+      coord[i] = data.features[i].geometry.coordinates
+      landmarksZoom[i] = data.features[i].properties.zoom
+      console.log(data.features[i].properties.zoom)
+      var landmarkImg = document.createElement('img')
+      landmarkImg.src =  data.features[i].properties.img
+      landmarkImg.classList.add("landmarkList-img", 'mr-4', "ml-4")
+      landmarkAll.appendChild(landmarkImg)
+
+      var landmarkText = document.createElement('span')
+      landmarkText.classList.add("scale-animation")
+      landmarkText.innerText = data.features[i].properties.name
+      landmarkAll.appendChild(landmarkText)
+      //console.log(coord[i])
+      //document.getElementById("landmark-name").innerHTML += "<button id='i' onClick='zoomTo(this.id)'>"+data.features[i].properties.name+"</button>"
+    } 
+     //data.features.forEach(function(i) {
+     //  console.log(i.geometry.coordinates)
+     //  coord[i] = i.geometry.coordinates
+     //  console.log(coord)
+     //  document.getElementById("landmark-name").innerHTML += "<button onClick='zoomTo(coord[i])'>"+i.properties.name+"</button>"
+  //})
+})
+  //landmarksData.features.forEach(function(entry) {
+    //console.log(entry.name)
+    //document.getElementById("landmarksAll").innerHTML += "<tr><td>" + entry.properties.name + "</td></tr>";
+  //});
+}
+
+// Landmarks Pins
+var vectorPinSource = new ol.source.Vector({
+  url: 'assets/landmarks/landmarks.geojson',
+  projection: 'EPSG:3857',
+  format: new ol.format.GeoJSON(),
+});
+var pinStyle = new ol.style.Style({
+  image: new ol.style.Icon({
+    src: 'assets/icon/pin.svg',
+    opacity: 1,
+  })
+})
+
+var vectorPin = new ol.layer.Vector({
+  //minZoom: 11.5,
+  name: 'landmarks',
+  source: vectorPinSource,
+  declutter: false,
+  // y ordering
+  //renderOrder: ol.ordering.yOrdering(),
+  style: pinStyle,
+});
+map.addLayer(vectorPin)
 // Landmarks
 var vectorSource = new ol.source.Vector({
   url: 'assets/landmarks/landmarks.geojson',
@@ -919,6 +992,7 @@ var vector = new ol.layer.Vector({
 map.addLayer(vector);
 vector.setZIndex(15)
 //vectorSource.refresh()
+
 
 // Tours
 
@@ -1011,6 +1085,18 @@ if (localStorage.zastave == 2) {
 
 
 // MeetTg and Routes functions -----------------------------------------------
+var allLandmarksMenu = false
+function allLandmarks() {
+  if(!allLandmarksMenu) {
+    allLandmarksMenu = true
+    document.getElementById('msg').style.display = 'none'
+    document.getElementById('landmarksAll').style.display = 'block'
+  } else {
+    allLandmarksMenu = false
+    document.getElementById('msg').style.display = 'block'
+    document.getElementById('landmarksAll').style.display = 'none'
+  }
+}
 var meet = 1
 document.getElementById('routes').style.display = 'none'
 document.getElementById('assoc').style.display = 'none'
@@ -1030,6 +1116,7 @@ function meetTg() {
     }
     document.getElementById('msg').style.display = 'block'
     document.getElementById('meet').style.display = 'block'
+    document.getElementById('landmarksAll').style.display = 'none'
     document.getElementById('routes').style.display = 'none'
     document.getElementById('assoc').style.display = 'none'
     var activate = document.getElementsByClassName('activate')
@@ -1060,6 +1147,7 @@ function routes() {
     document.getElementById('msg').style.display = 'none'
     document.getElementById('meet').style.display = 'none'
     document.getElementById('assoc').style.display = 'none'
+    document.getElementById('landmarksAll').style.display = 'none'
     document.getElementById('routes').style.display = 'block'
     var activate = document.getElementsByClassName('activate')
     while(activate.length){
@@ -1103,6 +1191,7 @@ function assoc() {
     document.getElementById('msg').style.display = 'none'
     document.getElementById('meet').style.display = 'none'
     document.getElementById('routes').style.display = 'none'
+    document.getElementById('landmarksAll').style.display = 'none'
     document.getElementById('assoc').style.display = 'block'    
     var activate = document.getElementsByClassName('activate')
     while(activate.length){
@@ -1136,6 +1225,7 @@ select.getFeatures().on(['add','remove'], function(e) {
       //var info = $("#select").html("<p>Selection:</p>");
       var feature = e.element;
       document.getElementById('meet').style.display = 'block';
+      document.getElementById('landmarksAll').style.display = 'none';
       document.getElementById('landmark').style.display = 'inline-block';
       document.getElementById('image').style.display = 'inline-block';
       document.getElementById('landmark-about').style.display = 'inline-block';
@@ -1156,7 +1246,11 @@ select.getFeatures().on(['add','remove'], function(e) {
     else {
       //$("#select").html("<p>Select an image.</p>");
       if(meet==1) {
-        document.getElementById('msg').style.display = 'block';
+        if(!allLandmarksMenu) {
+          document.getElementById('msg').style.display = 'block';
+        } else {
+          document.getElementById('landmarksAll').style.display = 'block';
+        }
       }
       document.getElementById('meet').style.display = 'none';
       document.getElementById('landmark').style.display = 'none';
@@ -1200,7 +1294,11 @@ select.getFeatures().on(['add','remove'], function(e) {
       else {
         //$("#select").html("<p>Select an image.</p>");
         if(meet==1) {
-          document.getElementById('msg').style.display = 'block';
+          if(!allLandmarksMenu) {
+            document.getElementById('msg').style.display = 'block';
+          } else {
+            document.getElementById('landmarksAll').style.display = 'block';
+          }
         }
         document.getElementById(id+'-text').style.display = 'block'
         getAssoc(id)
@@ -1690,7 +1788,7 @@ function getAssoc(clickedID) {
     document.getElementById(clickedID+"-text").style.display = 'none';
     document.getElementById(clickedID).classList.remove('activate-assoc')
     assocSource.refresh()
-  } 
+  }
 }
   
 //layers = map.getLayers().array_
@@ -1938,9 +2036,9 @@ function basemapSatellite() {
 
 function zoomOut() {
   view.animate({
-    center: [1907388.12, 5419414.80],
+    center: [1922049.90, 5426332.39],
     duration: 1000,
-    zoom: 10.5
+    zoom: 9.8
   });
   meetTg()
 }

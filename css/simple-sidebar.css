@@ -8,8 +8,12 @@
     
  }*/
 
+ .cursor-pointer {
+   cursor: pointer;
+ }
+
  .z-index {
-   z-index: 1000;
+   z-index: 100000;
  }
  .top-0 {
    top: 0;
@@ -29,32 +33,41 @@
    transform: translate(0, -50%);
  }
 #sidebar-wrapper {
+  left: 0rem;
   height: 100vh;
-  position: absolute;
   margin-left: 0rem;
   -webkit-transition: margin .3s ease-out;
   -moz-transition: margin .3s ease-out;
   -o-transition: margin .3s ease-out;
   transition: margin .3s ease-out;
   overflow: hidden;
-  width: 30rem;
+  width: 40rem;
+  min-width: 28rem;
+  z-index: 100000;
 }
 
 #sidebar-wrapper .sidebar-heading {
   padding: 0.6rem 1.25rem;
   text-align: center;
   font-size: 1.6rem;
+  margin-left: 0;
+  z-index: 100000;
 }
 
 /*#sidebar-wrapper .list-group {
 }*/
 
 #page-content-wrapper {
-  min-width: 100vw;
+  min-width: 0;
+  width: 100%;
 }
 
 #wrapper.toggled #sidebar-wrapper {
-  margin-left: -30rem;
+  margin-left: -40rem;
+}
+
+#wrapper.toggled #map {
+  margin-left: 0rem;
 }
 
 /*@media (min-width: 767.99px) {
@@ -74,8 +87,12 @@
 
 @media (max-width: 575.99px) {
   #sidebar-wrapper {
-    margin-left: -100vw;
+    position: absolute;
+    min-width: 0;
     width: 100vw;
+    left: 0;
+    margin-left: -100vw;
+    z-index: 10000;
   }
 
   #page-content-wrapper {
@@ -90,16 +107,17 @@
 
 /* Hamburger menu */
 .bar1, .bar2, .bar3 {
-  width: 60px;
-  height: 6px;
+  width: 30px;
+  height: 2.8px;
   background-color: #fff;
-  margin: 6px 0;
+  margin: 5px 0;
   transition: 0.4s;
 }
 
 #div-toggle {
   background-color: rgb(176, 42, 51);
   padding: 1rem;
+  border-radius: 100%;
 }
 
 /*.bg-toggle {
@@ -112,53 +130,56 @@
 
 #menu-toggle:hover {
   cursor: pointer;
-  transform: scale(1.2);
+  transform: scale(1.3);
 }
 
 .change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 8px);
-  transform: rotate(-45deg) translate(-9px, 8px);
+  -webkit-transform: rotate(-45deg) translate(-4.0px, -2px);
+  transform: rotate(-45deg) translate(-4.0px, -2px);
   background-color: #fff;
+  width: 21px;
 }
 
-.change .bar2 {opacity: 0;}
+.change .bar2 {opacity: 1;}
 
 .change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
-  transform: rotate(45deg) translate(-8px, -8px);
+  -webkit-transform: rotate(45deg) translate(-4px, 2px);
+  transform: rotate(45deg) translate(-4px, 2px);
   background-color: #fff;
+  width: 21px;
 }
 
 @media (max-width: 575.99px) {
   .bar1 {
-    width: 60px;
-    height: 6px;
+    width: 40px;
+    height: 2.8px;
     background-color: #fff;
-    margin: 6px 0;
+    margin: 5px 0;
     transition: 0.4s;
-    -webkit-transform: rotate(-45deg) translate(-9px, 8px);
-    transform: rotate(-45deg) translate(-9px, 8px);
+    -webkit-transform: rotate(-45deg) translate(-3px, -8px);
+    transform: rotate(-45deg) translate(-3px, 8px);
     background-color: #fff;
   }
   .bar2 {
-    width: 60px;
-    height: 6px;
+    width: 30px;
+    height: 2.8px;
     background-color: #fff;
-    margin: 6px 0;
+    margin: 5px 0;
     transition: 0.4s;
     opacity: 0;
   }
   .bar3 {
-    width: 60px;
-    height: 6px;
+    width: 40px;
+    height: 2.8px;
     background-color: #fff;
-    margin: 6px 0;
+    margin: 5px 0;
     transition: 0.4s;
-    -webkit-transform: rotate(0deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
+    -webkit-transform: rotate(0deg) translate(-3px, -8px);
+    transform: rotate(45deg) translate(-3px, -8px);
     background-color: #fff;
   }
   .change .bar1 {
+    width: 30px;
     -webkit-transform: rotate(0deg) translate(0px, 0px);
     transform: rotate(0deg) translate(0px, 0px);
     background-color: #fff;
@@ -167,6 +188,7 @@
   .change .bar2 {opacity: 1;}
   
   .change .bar3 {
+    width: 30px;
     -webkit-transform: rotate(0deg) translate(0px, 0px);
     transform: rotate(0deg) translate(0px, 0px);
     background-color: #fff;
@@ -185,6 +207,18 @@
 }
 .scale-animation05:hover {
   transform: scale(1.04);
+}
+.scale-animation-13 {
+  transition: cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.2s;
+}
+.scale-animation-13:hover {
+  transform: scale(1.3);
+}
+.scale-animation-right {
+  transition: ease-in-out 0.2s;
+}
+.scale-animation-right:hover {
+  transform: translate(1rem);
 }
 
 .logo {
@@ -206,7 +240,15 @@
   height: 100vh;
   width: 100vw;
 }
-
+@media (min-width: 575.99px) {
+  .map {
+    margin-left: -14rem;
+    -webkit-transition: margin .3s ease-out;
+    -moz-transition: margin .3s ease-out;
+    -o-transition: margin .3s ease-out;
+    transition: margin .3s ease-out;
+  }
+}
 .hover :hover {
   scale: 2;
 }
@@ -222,6 +264,16 @@
   transform: translate(-50%);
   width: 100%;
   opacity: 100%;
+}
+.image-right {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  transition: 200ms ease-in-out;
+}
+
+.image-right:hover {
+  transform: scale(	1.2) translate(-40%);
 }
 
 .welcome-text {
@@ -304,6 +356,12 @@
   height: calc(100vh - 180px);
   overflow: auto;
 }
+.landmarksAll-scroll {
+  height: calc(100vh - 180px);
+  overflow: auto;
+  overflow-x: hidden;
+
+}
 .routes-scroll {
   height: calc(100vh - 224px);
   overflow: auto;
@@ -364,6 +422,11 @@
   outline: none !important;
 }
 
+.zoom-extents {
+  right: 1rem;
+  top: 3rem;
+}
+
 .contact-image {
   width: 20px;
   height: 20px;
@@ -397,4 +460,130 @@
 
 .column img:hover {
   opacity: 0.7;
+}
+
+.line-height-small {
+  line-height: normal;
+}
+
+
+#landmarks-btn {
+	width: 300px;
+	height: 30px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	background: transparent;
+	border: none;
+	border-radius: 5px;
+  background-color: #ffc107;
+  border: solid #ffc107; 
+
+}
+
+#landmarks-btn, #landmarks-btn span, #landmarks-btn img {
+	transition: ease-in-out 500ms;
+}
+
+#landmarks-btn .text {
+	transform: translateX(55px);
+	color: white;
+	font-weight: bold;
+}
+
+#landmarks-btn .icon {
+	position: absolute;
+	transform: translateX(240px);
+	height: 40px;
+	width: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#landmarks-btn img {
+  height: 20px;
+}
+
+#landmarks-btn:hover {
+  background-color: transparent;
+  border-radius: 100px;
+  width: 80px;
+  height: 80px;
+}
+
+#landmarks-btn:hover .text {
+	color: transparent;
+}
+
+#landmarks-btn:hover .icon {
+	width: 300px;
+	transform: translateX(-116.5px);
+}
+
+#landmarks-btn:hover img {
+	height: 40px;
+}
+
+#landmarks-btn:focus {
+	outline: none;
+}
+
+.icon-link {  
+  display: inline-flex;
+  font-size: 3rem;  
+  text-decoration: none;  
+  color: var(--color-icon);
+  width: 6rem;
+  height: 6rem;   
+  transition: .5s linear;
+  position: relative;
+  z-index: 1;
+  margin: auto
+}
+
+.icon-link img {
+  height: 60px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon-link:hover {
+  color: #fff;
+}
+
+.icon-link i {
+  margin: auto;    
+}
+
+.icon-link::before {  
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 6rem;
+  height: 6rem;
+  background: #ffc107;
+  border-radius: 50%;
+  z-index: -1;
+  transform: scale(0);
+  transition: 0.3s cubic-bezier(.95, .32, .37, 1.21);
+}
+  
+.icon-link:hover::before {  
+  transform: scale(1);
+}
+
+.landmarkList-img {
+  height: 85px;
+  width: 85px;
+  border-radius: 100px;
+  border: solid 0.5px black;
+}
+
+.landmarkList-height {
+  height: 90px;
+  padding: 0 !important;
 }

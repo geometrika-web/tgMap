@@ -1,4 +1,4 @@
-{
+var landmarks = {
  "type": "FeatureCollection",
  "features": [
   {
@@ -18,7 +18,6 @@
 	"img3": "/assets/samostanTomislavgrad.jpg",
 	"img4": "/assets/samostanTomislavgrad.jpg",
 	"img5": "/assets/samostanTomislavgrad.jpg",
-	"zoom": "18",
 	"id": "landmarks"
    }
   },
@@ -39,7 +38,6 @@
 	"img3": "/assets/crkvaTomislavgrad.jpg",
 	"img4": "/assets/crkvaTomislavgrad.jpg",
 	"img5": "/assets/crkvaTomislavgrad.jpg",
-	"zoom": "18",
 	"id": "landmarks"
    }
   },
@@ -60,7 +58,6 @@
 	"img3": "/assets/trgGange.jpg",
 	"img4": "/assets/trgGange.jpg",
 	"img5": "/assets/trgGange.jpg",
-	"zoom": "18",
 	"id": "landmarks"
    }
   },
@@ -81,7 +78,6 @@
 	"img3": "/assets/kraljTomislav2.jpg",
 	"img4": "/assets/kraljTomislav2.jpg",
 	"img5": "/assets/kraljTomislav2.jpg",
-	"zoom": "18",
 	"id": "landmarks"
    }
   },
@@ -102,7 +98,6 @@
 	"img3": "/assets/opcinaTomislavgrad2.jpg",
 	"img4": "/assets/opcinaTomislavgrad.jpg",
 	"img5": "/assets/opcinaTomislavgrad2.jpg",
-	"zoom": "18",
 	"id": "landmarks"
    }
   },
@@ -122,8 +117,7 @@
 	"img2": "/assets/vjetroparkMrkodol2.jpg",
 	"img3": "/assets/vjetroparkMrkodol.jpg",
 	"img4": "/assets/vjetroparkMrkodol2.jpg",
-	"img5": "/assets/vjetroparkMrkodol2.jpg",
-	"zoom": "15",
+	"img5": "/assets/vjetroparkMrkodol2.jpg",	
 	"id": "landmarks"
    }
   },
@@ -143,8 +137,7 @@
 	"img2": "/assets/hajduckeVrleti.jpg",
 	"img3": "/assets/hajduckeVrleti.jpg",
 	"img4": "/assets/hajduckeVrleti.jpg",
-	"img5": "/assets/hajduckeVrleti.jpg",
-	"zoom": "15",	
+	"img5": "/assets/hajduckeVrleti.jpg",	
 	"id": "landmarks"
    }
   },
@@ -164,8 +157,7 @@
 	"img2": "/assets/crkvaMesihovina2.jpeg",
 	"img3": "/assets/crkvaMesihovina2.jpeg",
 	"img4": "/assets/crkvaMesihovina2.jpeg",
-	"img5": "/assets/crkvaMesihovina2.jpeg",
-	"zoom": "15",
+	"img5": "/assets/crkvaMesihovina2.jpeg",	
 	"id": "landmarks"
    }
   },
@@ -185,8 +177,7 @@
 	"img2": "/assets/GlizicaMlin3.jpeg",
 	"img3": "/assets/GlizicaMlin1.jpeg",
 	"img4": "/assets/GlizicaMlin3.jpeg",
-	"img5": "/assets/GlizicaMlin1.jpeg",
-	"zoom": "15",
+	"img5": "/assets/GlizicaMlin1.jpeg",	
 	"id": "landmarks"
    }
   },
@@ -207,7 +198,6 @@
 	"img3": "/assets/zukovica.jpg",
 	"img4": "/assets/zukovica.jpg",
 	"img5": "/assets/zukovica.jpg",
-	"zoom": "15",
 	"id": "landmarks"
    }
   },
@@ -228,7 +218,6 @@
 	"img3": "/assets/CrkvaGospeKraljiceHrvata2.jpg",
 	"img4": "/assets/CrkvaGospeKraljiceHrvata3.jpg",
 	"img5": "/assets/CrkvaGospeKraljiceHrvata4.jpg",
-	"zoom": "15",
 	"id": "landmarks"
    }
   },
@@ -249,7 +238,6 @@
 	"img3": "/assets/CrkvaPrečistogSrcaMarijina2.jpg",
 	"img4": "/assets/CrkvaPrečistogSrcaMarijina3.jpg",
 	"img5": "/assets/CrkvaPrečistogSrcaMarijina4.jpg",
-	"zoom": "15",
 	"id": "landmarks"
    }
   }
