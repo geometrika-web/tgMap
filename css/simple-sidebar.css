@@ -8,6 +8,10 @@
     
  }*/
 
+ .mobile-height {
+   height: 100%;
+ }
+
  .cursor-pointer {
    cursor: pointer;
  }
