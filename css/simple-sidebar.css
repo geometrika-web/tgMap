@@ -353,11 +353,11 @@
 }
 
 .sidebar-scroll {
-  height: calc(99vh - 180px);
+  height: calc(100vh - 180px);
   overflow: auto;
 }
 .landmarksAll-scroll {
-  height: calc(99vh - 270px);
+  height: calc(100vh - 270px);
   overflow: auto;
   overflow-x: hidden;
 
@@ -366,6 +366,24 @@
   height: calc(100vh - 224px);
   overflow: auto;
 }
+
+@media(max-width: 575.99) {
+  .sidebar-scroll {
+    height: calc(95vh - 180px);
+    overflow: auto;
+  }
+  .landmarksAll-scroll {
+    height: calc(95vh - 270px);
+    overflow: auto;
+    overflow-x: hidden;
+  
+  }
+  .routes-scroll {
+    height: calc(95vh - 224px);
+    overflow: auto;
+  }
+}
+
 #routes{
   display: none;
 }
