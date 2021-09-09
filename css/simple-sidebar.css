@@ -353,11 +353,11 @@
 }
 
 .sidebar-scroll {
-  height: calc(100vh - 180px);
+  height: calc(99vh - 180px);
   overflow: auto;
 }
 .landmarksAll-scroll {
-  height: calc(100vh - 180px);
+  height: calc(99vh - 270px);
   overflow: auto;
   overflow-x: hidden;
 
@@ -478,15 +478,20 @@
 	border-radius: 5px;
   background-color: #ffc107;
   border: solid #ffc107; 
-
 }
 
 #landmarks-btn, #landmarks-btn span, #landmarks-btn img {
-	transition: ease-in-out 500ms;
+	transition: ease-in-out 300ms;
 }
 
 #landmarks-btn .text {
 	transform: translateX(55px);
+	color: white;
+	font-weight: bold;
+}
+
+#landmarks-btn .text-2 {
+	transform: translateX(100px);
 	color: white;
 	font-weight: bold;
 }

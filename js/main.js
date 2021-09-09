@@ -1096,17 +1096,22 @@ if (localStorage.zastave == 2) {
 
 // MeetTg and Routes functions -----------------------------------------------
 var allLandmarksMenu = false
+var msgDisplay = document.getElementById('msg').style.display
+var landmarksAllDisplay = document.getElementById('landmarksAll').style.display
+var meetDisplay = document.getElementById('meet').style.display
 function allLandmarks() {
-  if(!allLandmarksMenu) {
+  deselect()
+  if(allLandmarksMenu == false) {
     allLandmarksMenu = true
     document.getElementById('msg').style.display = 'none'
     document.getElementById('landmarksAll').style.display = 'block'
   } else {
-    allLandmarksMenu = false
+    allLandmarksMenu = 0
     document.getElementById('msg').style.display = 'block'
     document.getElementById('landmarksAll').style.display = 'none'
   }
 }
+
 var meet = 1
 document.getElementById('routes').style.display = 'none'
 document.getElementById('assoc').style.display = 'none'
@@ -1115,6 +1120,7 @@ function meetTg() {
   if(meet==1) {
     return
   } else {
+    deselect()
     meet = 1
     assocs.setZIndex(10)
     vector.setZIndex(20)
@@ -1148,6 +1154,7 @@ function routes() {
   if(meet==2) {
     return
   } else {
+    deselect()
     meet = 2
     if (zastave) {
       zastaveOpcina()
@@ -1189,6 +1196,7 @@ function assoc() {
   if(meet==3){
     return
   } else {
+    deselect()
     meet = 3
     for (var i = 0; i < toursDesc.length; i++){
       toursDesc[i].style.display = 'none'
@@ -1215,17 +1223,35 @@ function assoc() {
   }
 }
 
+function backFromMeet () {
+  deselect()
+  if(meet == 1) {
+    if(allLandmarksMenu == true) {
+      document.getElementById('landmarksAll').style.display = 'block'
+    } else {
+      document.getElementById('msg').style.display = 'block'
+    }
+  } else if(meet == 2) {
+      document.getElementById('routes').style.display = 'block'
+  } else if(meet == 3) {
+    document.getElementById('assoc').style.display = 'block'
+  }
+}
+
 // Control Select 
 var select = new ol.interaction.Select({
   layers: [vector, tour1, tour2],
   condition: ol.events.condition.click,
-  style: function (feature, resolution) { return getFeatureStyle(feature, resolution, true); }
+  style: function (feature, resolution) { return getFeatureStyle(feature, resolution, true); },
 })
-
 
 map.addInteraction(select);
 
-select.getFeatures().on(['add','remove'], function(e) {
+function deselect() {
+  select.getFeatures().clear()
+}
+
+features = select.getFeatures().on(['add','remove'], function(e) {
   if (!zastave || currZoom > 11.5) {
     if (e.type=="add") {
       if(meet==1) {
@@ -2051,6 +2077,7 @@ function zoomOut() {
     zoom: 9.8
   });
   meetTg()
+  deselect()
 }
 
 
