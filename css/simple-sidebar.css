@@ -8,9 +8,11 @@
     
  }*/
 
- .mobile-height {
-   height: 100%;
- }
+ @media (max-width: 575.99px) {
+  .mobile-height {
+    height: 100%;
+  }
+}
 
  .cursor-pointer {
    cursor: pointer;
