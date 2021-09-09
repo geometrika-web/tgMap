@@ -195,32 +195,32 @@
   }
 }
 
-
-.scale-animation {
-  transition: ease-in-out 0.2s;
+@media (min-width: 575.99px) {
+  .scale-animation {
+    transition: ease-in-out 0.2s;
+  }
+  .scale-animation:hover {
+    transform: scale(1.1);
+  }
+  .scale-animation05 {
+    transition: ease-in-out 0.2s;
+  }
+  .scale-animation05:hover {
+    transform: scale(1.04);
+  }
+  .scale-animation-13 {
+    transition: cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.2s;
+  }
+  .scale-animation-13:hover {
+    transform: scale(1.3);
+  }
+  .scale-animation-right {
+    transition: ease-in-out 0.2s;
+  }
+  .scale-animation-right:hover {
+    transform: translate(1rem);
+  }
 }
-.scale-animation:hover {
-  transform: scale(1.1);
-}
-.scale-animation05 {
-  transition: ease-in-out 0.2s;
-}
-.scale-animation05:hover {
-  transform: scale(1.04);
-}
-.scale-animation-13 {
-  transition: cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.2s;
-}
-.scale-animation-13:hover {
-  transform: scale(1.3);
-}
-.scale-animation-right {
-  transition: ease-in-out 0.2s;
-}
-.scale-animation-right:hover {
-  transform: translate(1rem);
-}
-
 .logo {
   height: 100px; 
   left: 50%; 
@@ -367,19 +367,19 @@
   overflow: auto;
 }
 
-@media(max-width: 575.99) {
+@media(max-width: 575.99px) {
   .sidebar-scroll {
-    height: calc(90vh - 180px);
+    height: calc(95vh - 180px);
     overflow: auto;
   }
   .landmarksAll-scroll {
-    height: calc(90vh - 270px);
+    height: calc(95vh - 270px);
     overflow: auto;
     overflow-x: hidden;
   
   }
   .routes-scroll {
-    height: calc(90vh - 224px);
+    height: calc(95vh - 224px);
     overflow: auto;
   }
 }
@@ -528,26 +528,27 @@
   height: 20px;
 }
 
-#landmarks-btn:hover {
-  background-color: transparent;
-  border-radius: 100px;
-  width: 80px;
-  height: 80px;
+@media (min-width: 575.99px) {
+  #landmarks-btn:hover {
+    background-color: transparent;
+    border-radius: 100px;
+    width: 80px;
+    height: 80px;
+  }
+  
+  #landmarks-btn:hover .text {
+  	color: transparent;
+  }
+  
+  #landmarks-btn:hover .icon {
+  	width: 300px;
+  	transform: translateX(-116.5px);
+  }
+  
+  #landmarks-btn:hover img {
+  	height: 40px;
+  }
 }
-
-#landmarks-btn:hover .text {
-	color: transparent;
-}
-
-#landmarks-btn:hover .icon {
-	width: 300px;
-	transform: translateX(-116.5px);
-}
-
-#landmarks-btn:hover img {
-	height: 40px;
-}
-
 #landmarks-btn:focus {
 	outline: none;
 }
