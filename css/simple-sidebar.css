@@ -369,17 +369,17 @@
 
 @media(max-width: 575.99) {
   .sidebar-scroll {
-    height: calc(95vh - 180px);
+    height: calc(90vh - 180px);
     overflow: auto;
   }
   .landmarksAll-scroll {
-    height: calc(95vh - 270px);
+    height: calc(90vh - 270px);
     overflow: auto;
     overflow-x: hidden;
   
   }
   .routes-scroll {
-    height: calc(95vh - 224px);
+    height: calc(90vh - 224px);
     overflow: auto;
   }
 }
