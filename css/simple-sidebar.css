@@ -272,6 +272,15 @@
   width: 100%;
   opacity: 100%;
 }
+.center-y {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.center-allLandmarks-text {
+  align-items: center;
+  display: flex;
+}
 .image-right {
   position: relative;
   left: 50%;

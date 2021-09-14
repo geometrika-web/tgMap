@@ -899,6 +899,8 @@ function zoomTo(i) {
   }
 } 
 // GeoJSON layers -----------------------------------------
+
+// Load list of all landmarks from GeoJSON file
 coord = []
 landmarksZoom = []
 document.getElementById('landmarksAll').style.display = 'none'
@@ -907,7 +909,7 @@ window.onload = function() {
     for(i in data.features) {
       var landmarkAll = document.createElement('button')
       landmarkAll.id = i
-      landmarkAll.classList.add("list-group-item", "list-group-item-action", "no-outline", "pl-5", "landmarkList-height", "scale-animation-right")
+      landmarkAll.classList.add("list-group-item", "list-group-item-action", "no-outline", "pl-5", "landmarkList-height", "scale-animation-right", "d-flex")
       //landmarkAll.innerText = data.features[i].properties.name
       landmarkAll.onclick = function() { zoomTo(this.id); };
       var parent = document.getElementById('landmark-name')
@@ -917,11 +919,11 @@ window.onload = function() {
       console.log(data.features[i].properties.zoom)
       var landmarkImg = document.createElement('img')
       landmarkImg.src =  data.features[i].properties.img
-      landmarkImg.classList.add("landmarkList-img", 'mr-4', "ml-4")
+      landmarkImg.classList.add("landmarkList-img", "ml-4", "center-y")
       landmarkAll.appendChild(landmarkImg)
 
-      var landmarkText = document.createElement('span')
-      landmarkText.classList.add("scale-animation")
+      var landmarkText = document.createElement('div')
+      landmarkText.classList.add("col-8", "center-allLandmarks-text")
       landmarkText.innerText = data.features[i].properties.name
       landmarkAll.appendChild(landmarkText)
       //console.log(coord[i])
@@ -939,6 +941,60 @@ window.onload = function() {
     //document.getElementById("landmarksAll").innerHTML += "<tr><td>" + entry.properties.name + "</td></tr>";
   //});
 }
+
+// Load list of all routes from GeoJSON file
+//document.getElementById('routesAll').style.display = 'none'
+//window.onload = function() {
+//  $.getJSON("assets/tours/routes.geojson", function(data) {
+//    features = data.features
+//    for(i in features) {
+//      var routesAll = document.createElement('button')
+//      routesAll.id = features[i].properties.id
+//      routesAll.classList.add("list-group-item", "list-group-item-action", "no-outline")
+//      routesAll.innerText = features[i].properties.name
+//      routesAll.onclick = function() { getSourceJSON(this.id); };
+//      var parent = document.getElementById('routesAll')
+//      parent.appendChild(routesAll)
+//
+//      var routeText = document.createElement('small')
+//      routeText.id = features[i].properties.id+'-text'
+//      routeText.classList.add("p-3", "ml-4")
+//      document.getElementById("routesAll").appendChild(routeText)
+//
+//      var routeDuration = document.createElement('div')
+//      routeDuration.classList.add("text-right", "text-muted", "mr-4")
+//      routeDuration.innerText = features[i].properties.duration
+//      var routeType = document.createElement('img')
+//      routeType.classList.add("ml-2")
+//      routeType.src = features[i].properties.type
+//      routeDuration.appendChild(routeType)
+//      routeText.appendChild(routeDuration)
+//
+//      var stops = features[i].properties.stops
+//      var dists = features[i].properties.dists
+//      for(j in stops) {
+//        var stopName = document.createElement("div")
+//        stopName.innerText = stops[j]
+//        stopName.classList.add("h6", "mt-2", "pl-4")
+//        routeText.appendChild(stopName)
+//        if(dists[j]) {
+//          var dots = document.createElement("img")
+//          dots.src = "/assets/icon/three-dots-vertical.svg"
+//          dots.classList.add("ml-4")
+//          var dist = document.createElement("span")
+//          dist.innerText = dists[j]
+//          dist.classList.add("ml-4")
+//          routeText.appendChild(dots)
+//          routeText.appendChild(dist)
+//        }
+//      }
+//      var aboutRoute = document.createElement("div")
+//        aboutRoute.innerText = features[i].properties.about
+//        aboutRoute.classList.add("mt-4", "pl-4")
+//        routeText.appendChild(aboutRoute)
+//    }
+//  })
+//}
 
 // Landmarks Pins
 var vectorPinSource = new ol.source.Vector({
@@ -971,7 +1027,7 @@ var vectorSource = new ol.source.Vector({
 });
 
 var vector = new ol.layer.Vector({
-  //minZoom: 11.5,
+  minZoom: 10.5,
   name: 'landmarks',
   source: vectorSource,
   declutter: true,
@@ -1056,7 +1112,7 @@ assocSource = new ol.source.Vector({
 })
 
 var assocs = new ol.layer.Vector({
-  //minZoom: 13,
+  minZoom: 13,
   name: 'assocs',
   source: assocSource,
   declutter: true,
@@ -1098,7 +1154,7 @@ if (localStorage.zastave == 2) {
 var allLandmarksMenu = false
 var msgDisplay = document.getElementById('msg').style.display
 var landmarksAllDisplay = document.getElementById('landmarksAll').style.display
-var meetDisplay = document.getElementById('meet').style.display
+document.getElementById('meet').style.display = 'none'
 function allLandmarks() {
   deselect()
   if(allLandmarksMenu == false) {
@@ -1340,7 +1396,7 @@ features = select.getFeatures().on(['add','remove'], function(e) {
         getAssoc(id)
       }
     }
-    });
+  });
 
 // Scale image on hover ------------------------------------------
 
@@ -1729,9 +1785,10 @@ function getSourceJSON(clickedID, selected) {
   map.getLayers().forEach(function (layer) { 
     let name = layer.get('name');
     if(name){
-      console.log(name.slice(0,4))
       if(name.slice(0,4) == 'tour' || name.slice(0,4) == 'dest'){
         layer.setVisible(false)
+        console.log("kliknuto "+name)
+        console.log(clickedID)
         document.getElementById(name).classList.remove('activate')
       }
       if(name == clickedID) {
@@ -1741,6 +1798,7 @@ function getSourceJSON(clickedID, selected) {
             }
           let clickedIDtext = document.getElementById(clickedID+'-text').style.display
           if(clickedIDtext == 'none'){
+            console.log("kliknuto 2")
             zoomToRoute(clickedID)
             document.getElementById(clickedID).classList.add('activate')
             document.getElementById(clickedID+"-text").style.display = 'block';
@@ -1922,14 +1980,14 @@ function zoomToRoute(id) {
   }
   if(id=="tour1"){
     view.animate({
-      center: ol.proj.fromLonLat([17.225, 43.719]),
+      center: [1917682, 5422196],
       duration: 3000,
       zoom: 16.5
     });
   }
   if(id=="tour2"){
     view.animate({
-      center: [1920989.58, 5403354.12],
+      center: [1931475, 5409191],
       duration: 3000,
       zoom: 11.5
     });
@@ -2073,7 +2131,7 @@ function basemapSatellite() {
 function zoomOut() {
   view.animate({
     center: [1922049.90, 5426332.39],
-    duration: 1000,
+    duration: 4000,
     zoom: 9.8
   });
   meetTg()
