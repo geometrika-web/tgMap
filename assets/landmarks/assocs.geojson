@@ -15,6 +15,8 @@
     "about": "Samostan u Tomislavgradu, je franjevački samostan u Mostarsko-duvanjskoj biskupiji, u Tomislavgradu, Bosna i Hercegovina. Proglašen je za nacionalni spomenik Bosne i Hercegovine na sjednici održanoj u Sarajevu od 11. oktobra 2017. godine. Odluku donijela je Komisija u sastavu: Amir Pašić, Goran Milojević (predsjedvajući), Radoje Vidović. Nacionalni spomenik se sastoji od: crkve sv. Nikole Tavelića i zapadnog krila franjevačkog samostana.",
     "img": "/assets/assoc/PdOrlovaStina3.jpg",
 	"img2": "/assets/assoc/PdOrlovaStina2.jpg",
+	"info": ["Ivo Ivić", "www.novosti.ba", "www.uclanise.ba"],
+	"contact": ["063 321 321", "udruga@gmail.com", "Ulica br., Tomislavgrad", "www.facebook.com"],
 	"id": "assoc1"
    }
   },
@@ -32,6 +34,8 @@
     "about": "Samostan u Tomislavgradu, je franjevački samostan u Mostarsko-duvanjskoj biskupiji, u Tomislavgradu, Bosna i Hercegovina. Proglašen je za nacionalni spomenik Bosne i Hercegovine na sjednici održanoj u Sarajevu od 11. oktobra 2017. godine. Odluku donijela je Komisija u sastavu: Amir Pašić, Goran Milojević (predsjedvajući), Radoje Vidović. Nacionalni spomenik se sastoji od: crkve sv. Nikole Tavelića i zapadnog krila franjevačkog samostana.",
     "img": "/assets/assoc/buskoBlato.jpg",
 	"img2": "/assets/assoc/buskoBlato.jpg",
+	"info": ["Ivo Ivić", "www.novosti.ba", "www.uclanise.ba"],
+	"contact": ["063 321 321", "udruga@gmail.com", "Ulica br., Tomislavgrad", "www.facebook.com"],
 	"id": "assoc2"
    }
   },
@@ -49,6 +53,8 @@
     "about": "Samostan u Tomislavgradu, je franjevački samostan u Mostarsko-duvanjskoj biskupiji, u Tomislavgradu, Bosna i Hercegovina. Proglašen je za nacionalni spomenik Bosne i Hercegovine na sjednici održanoj u Sarajevu od 11. oktobra 2017. godine. Odluku donijela je Komisija u sastavu: Amir Pašić, Goran Milojević (predsjedvajući), Radoje Vidović. Nacionalni spomenik se sastoji od: crkve sv. Nikole Tavelića i zapadnog krila franjevačkog samostana.",
     "img": "/assets/assoc/LuZavelim.jpg",
 	"img2": "/assets/assoc/LuZavelim.jpg",
+	"info": ["Ivo Ivić", "www.novosti.ba", "www.uclanise.ba"],
+	"contact": ["063 321 321", "udruga@gmail.com", "Ulica br., Tomislavgrad", "www.facebook.com"],
 	"id": "assoc3"
    }
   },
@@ -66,7 +72,9 @@
     "about": "Samostan u Tomislavgradu, je franjevački samostan u Mostarsko-duvanjskoj biskupiji, u Tomislavgradu, Bosna i Hercegovina. Proglašen je za nacionalni spomenik Bosne i Hercegovine na sjednici održanoj u Sarajevu od 11. oktobra 2017. godine. Odluku donijela je Komisija u sastavu: Amir Pašić, Goran Milojević (predsjedvajući), Radoje Vidović. Nacionalni spomenik se sastoji od: crkve sv. Nikole Tavelića i zapadnog krila franjevačkog samostana.",
     "img": "/assets/assoc/LuZavelim.jpg",
 	"img2": "/assets/assoc/LuZavelim.jpg",
-	"id": "assoc3"
+	"info": ["Ivo Ivić", "www.novosti.ba", "www.uclanise.ba"],
+	"contact": ["063 321 321", "udruga@gmail.com", "Ulica br., Tomislavgrad", "www.facebook.com"],
+	"id": "assoc4"
    }
   },
   {
@@ -83,7 +91,9 @@
     "about": "Samostan u Tomislavgradu, je franjevački samostan u Mostarsko-duvanjskoj biskupiji, u Tomislavgradu, Bosna i Hercegovina. Proglašen je za nacionalni spomenik Bosne i Hercegovine na sjednici održanoj u Sarajevu od 11. oktobra 2017. godine. Odluku donijela je Komisija u sastavu: Amir Pašić, Goran Milojević (predsjedvajući), Radoje Vidović. Nacionalni spomenik se sastoji od: crkve sv. Nikole Tavelića i zapadnog krila franjevačkog samostana.",
     "img": "/assets/assoc/kapLjubavi.jpg",
 	"img2": "/assets/assoc/kapLjubavi.jpg",
-	"id": "assoc4"
+	"info": ["Ivo Ivić", "www.novosti.ba", "www.uclanise.ba"],
+	"contact": ["063 321 321", "udruga@gmail.com", "Ulica br., Tomislavgrad", "www.facebook.com"],
+	"id": "assoc5"
    }
   } 
  ]

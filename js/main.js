@@ -43,8 +43,6 @@ var markers = new ol.layer.Vector({
   minZoom: 13.5,
 })
 
-
-
 var map = new ol.Map({
   controls : ol.control.defaults({
     attribution : false,
@@ -75,6 +73,17 @@ var map = new ol.Map({
         url: 'https://api.mapbox.com/v4/mapbox.satellite/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibGF2dGljMjIiLCJhIjoiY2ttdWZhNHZrMHVwNjJxbXdsem4wd2k2MiJ9.enCC1BQeW5JXwCYbkB0Ecw'
       })
     }),
+
+    //untiled = new ol.layer.Image({
+    //  source: new ol.source.ImageWMS({
+    //    ratio: 1,
+    //    url: 'http://gmetrika.ddns.net:80/geoserver/Tomislavgrad/wms',
+    //    params: {'VERSION': '1.1.1',  
+    //          "LAYERS": 'tomislavgradZastava',
+    //          "exceptions": 'application/vnd.ogc.se_inimage',
+    //    }
+    //  })
+    //}),
     //new ol.layer.Image({
     //  source: new ol.source.ImageWMS({
     //    url: 'http://localhost:8080/geoserver/Drinovci/wms',
@@ -403,8 +412,8 @@ const addImage = (obj) => {
       src: 'assets/icon/virtual-reality.svg',
       anchor: [0.5, 0,5],
       size: [230, 230],
-      scale: 0.55,
-      opacity: 0.5,
+      scale: 0.4,
+      opacity: 0.75,
     })
   })
           
@@ -598,9 +607,11 @@ map.on('moveend', function(e) {
     if (currZoom < 11.5 && zastave == true) {
       vector.setVisible(false)
       assocs.setVisible(false)
+      vjerskiObjekti.setVisible(false)
     } else {
       if (landmarksVisible == true) {
         vector.setVisible(true)
+        vjerskiObjekti.setVisible(true)
       } else {
         vector.setVisible(false)
       }
@@ -817,12 +828,14 @@ a = map.on('singleclick', function(evt) {
 
 
 // Array to cache image style
-//var styleCache = {};
+var styleCache1 = {};
+var styleCache2 = {};
+var styleCache3 = {};
 // Vector style
 function getFeatureStyle (feature, resolution, sel) {
-  //var k = $('#kind').val()+"_"+$("#border").val()+"_"+feature.get("img").match(/[^\\/]+$/)[0]+($("#shadow").prop('checked')?"_1":"_0")+($("#crop").prop('checked')?"_1":"_0")+(sel?"_1":"");
-  //var k = $('#kind').val()+"_"+$("#border").val()+"_"+feature.get("img").match(/[^\\/]+$/)[0]+($("#shadow").prop('checked')?"_1":"_0")+($("#crop").prop('checked')?"_1":"_0")+(sel?"_1":"");
-  //var style = styleCache[k];
+  var k = $('#kind').val()+"_"+$("#border").val()+"_"+feature.get("img").match(/[^\\/]+$/)[0]+($("#shadow").prop('checked')?"_1":"_0")+($("#crop").prop('checked')?"_1":"_0")+(sel?"_1":"");
+  var k = $('#kind').val()+"_"+$("#border").val()+"_"+feature.get("img").match(/[^\\/]+$/)[0]+($("#shadow").prop('checked')?"_1":"_0")+($("#crop").prop('checked')?"_1":"_0")+(sel?"_1":"");
+  var style = styleCache1[k];
     if (!style) {
       var style = new ol.style.Style ({
         image: new ol.style.Photo ({
@@ -843,9 +856,9 @@ function getFeatureStyle (feature, resolution, sel) {
 }
 
 function getFeatureStyleTours (feature, resolution, sel) {
-  // var k = $('#kind').val()+"_"+$("#border").val()+"_"+feature.get("img").match(/[^\\/]+$/)[0]+($("#shadow").prop('checked')?"_1":"_0")+($("#crop").prop('checked')?"_1":"_0")+(sel?"_1":"");
-    //var k = $('#kind').val()+"_"+$("#border").val()+"_"+feature.get("img").match(/[^\\/]+$/)[0]+($("#shadow").prop('checked')?"_1":"_0")+($("#crop").prop('checked')?"_1":"_0")+(sel?"_1":"");
-    //var style = styleCache[k];
+    var k = $('#kind').val()+"_"+$("#border").val()+"_"+feature.get("img").match(/[^\\/]+$/)[0]+($("#shadow").prop('checked')?"_1":"_0")+($("#crop").prop('checked')?"_1":"_0")+(sel?"_1":"");
+    var k = $('#kind').val()+"_"+$("#border").val()+"_"+feature.get("img").match(/[^\\/]+$/)[0]+($("#shadow").prop('checked')?"_1":"_0")+($("#crop").prop('checked')?"_1":"_0")+(sel?"_1":"");
+    var style = styleCache2[k];
     if (!style) {
       var style = new ol.style.Style ({
         image: new ol.style.Photo ({
@@ -866,9 +879,9 @@ function getFeatureStyleTours (feature, resolution, sel) {
 }
 
 function getFeatureStyleAssoc (feature, resolution, sel) {
-  // var k = $('#kind').val()+"_"+$("#border").val()+"_"+feature.get("img").match(/[^\\/]+$/)[0]+($("#shadow").prop('checked')?"_1":"_0")+($("#crop").prop('checked')?"_1":"_0")+(sel?"_1":"");
-    //var k = $('#kind').val()+"_"+$("#border").val()+"_"+feature.get("img").match(/[^\\/]+$/)[0]+($("#shadow").prop('checked')?"_1":"_0")+($("#crop").prop('checked')?"_1":"_0")+(sel?"_1":"");
-    //var style = styleCache[k];
+    var k = $('#kind').val()+"_"+$("#border").val()+"_"+feature.get("img").match(/[^\\/]+$/)[0]+($("#shadow").prop('checked')?"_1":"_0")+($("#crop").prop('checked')?"_1":"_0")+(sel?"_1":"");
+    var k = $('#kind').val()+"_"+$("#border").val()+"_"+feature.get("img").match(/[^\\/]+$/)[0]+($("#shadow").prop('checked')?"_1":"_0")+($("#crop").prop('checked')?"_1":"_0")+(sel?"_1":"");
+    var style = styleCache3[k];
     if (!style) {
       var style = new ol.style.Style ({
         image: new ol.style.Photo ({
@@ -900,107 +913,228 @@ function zoomTo(i) {
 } 
 // GeoJSON layers -----------------------------------------
 
-// Load list of all landmarks from GeoJSON file
+// Load list from GeoJSON file
 coord = []
 landmarksZoom = []
 document.getElementById('landmarksAll').style.display = 'none'
 window.onload = function() {
-  $.getJSON("assets/landmarks/landmarks.geojson", function(data) {
-    for(i in data.features) {
+  // Load list of all landmarks from GeoJSON file
+  //$.getJSON("assets/landmarks/landmarks.geojson", function(data) {
+    for(i in landmarksData.features) {
+      console.log(landmarksData.features[i])
       var landmarkAll = document.createElement('button')
       landmarkAll.id = i
       landmarkAll.classList.add("list-group-item", "list-group-item-action", "no-outline", "pl-5", "landmarkList-height", "scale-animation-right", "d-flex")
-      //landmarkAll.innerText = data.features[i].properties.name
       landmarkAll.onclick = function() { zoomTo(this.id); };
       var parent = document.getElementById('landmark-name')
       parent.appendChild(landmarkAll)
-      coord[i] = data.features[i].geometry.coordinates
-      landmarksZoom[i] = data.features[i].properties.zoom
-      console.log(data.features[i].properties.zoom)
+      coord[i] = landmarksData.features[i].geometry.coordinates
+      landmarksZoom[i] = landmarksData.features[i].properties.zoom
+      console.log(landmarksData.features[i].properties.zoom)
       var landmarkImg = document.createElement('img')
-      landmarkImg.src =  data.features[i].properties.img
+      landmarkImg.src =  landmarksData.features[i].properties.img
       landmarkImg.classList.add("landmarkList-img", "ml-4", "center-y")
       landmarkAll.appendChild(landmarkImg)
 
       var landmarkText = document.createElement('div')
       landmarkText.classList.add("col-8", "center-allLandmarks-text")
-      landmarkText.innerText = data.features[i].properties.name
+      landmarkText.innerText = landmarksData.features[i].properties.name
       landmarkAll.appendChild(landmarkText)
-      //console.log(coord[i])
-      //document.getElementById("landmark-name").innerHTML += "<button id='i' onClick='zoomTo(this.id)'>"+data.features[i].properties.name+"</button>"
     } 
-     //data.features.forEach(function(i) {
-     //  console.log(i.geometry.coordinates)
-     //  coord[i] = i.geometry.coordinates
-     //  console.log(coord)
-     //  document.getElementById("landmark-name").innerHTML += "<button onClick='zoomTo(coord[i])'>"+i.properties.name+"</button>"
   //})
-})
-  //landmarksData.features.forEach(function(entry) {
-    //console.log(entry.name)
-    //document.getElementById("landmarksAll").innerHTML += "<tr><td>" + entry.properties.name + "</td></tr>";
-  //});
+  //End for landmarks
+  // Load list of all routes from GeoJSON file
+  //$.getJSON("assets/tours/routes.geojson", function(data) {
+    features = routesData.features
+    for(i in features) {
+      var routesAll = document.createElement('button')
+      routesAll.id = features[i].properties.id
+      routesAll.classList.add("list-group-item", "list-group-item-action", "no-outline")
+      routesAll.innerText = features[i].properties.name
+      routesAll.onclick = function() { getSourceJSON(this.id); };
+      var parent = document.getElementById('routesAll')
+      parent.appendChild(routesAll)
+
+      var routeText = document.createElement('small')
+      routeText.id = features[i].properties.id+'-text'
+      routeText.classList.add("p-3", "ml-4")
+      routeText.style.display = 'none'
+      toursDesc.push(routeText)
+      document.getElementById("routesAll").appendChild(routeText)
+
+      var routeDuration = document.createElement('div')
+      routeDuration.classList.add("text-right", "text-muted", "mr-4")
+      routeDuration.innerText = features[i].properties.duration
+      var routeType = document.createElement('img')
+      routeType.classList.add("ml-2")
+      routeType.src = features[i].properties.type
+      routeDuration.appendChild(routeType)
+      routeText.appendChild(routeDuration)
+
+      var stops = features[i].properties.stops
+      var dists = features[i].properties.dists
+      for(j in stops) {
+        var stopName = document.createElement("div")
+        stopName.innerText = stops[j]
+        stopName.classList.add("h6", "mt-2", "pl-4")
+        routeText.appendChild(stopName)
+        if(dists[j]) {
+          var dots = document.createElement("img")
+          dots.src = "/assets/icon/three-dots-vertical.svg"
+          dots.classList.add("ml-4")
+          var dist = document.createElement("span")
+          dist.innerText = dists[j]
+          dist.classList.add("ml-4")
+          routeText.appendChild(dots)
+          routeText.appendChild(dist)
+        }
+      }
+      var aboutRoute = document.createElement("div")
+      aboutRoute.innerText = features[i].properties.about
+      aboutRoute.classList.add("mt-4", "pl-4")
+      routeText.appendChild(aboutRoute)
+    }
+  //})
+  //End for routes
+  //Weekend destinations GeoJSON
+  destInfoList = ["Mjesto polaska:", "Vrijeme polaska:", "Vrijeme povratka:", "Trajanje:", "Za ponijeti:", "Vodič i kontakt:", "Napomena:", "Ostale info:"]
+  $.getJSON("assets/tours/destinations.geojson", function(data) {
+    features = data.features
+    for(i in features) {
+      var destinationsAll = document.createElement('button')
+      destinationsAll.id = features[i].properties.id
+      destinationsAll.classList.add("list-group-item", "list-group-item-action", "no-outline")
+      destinationsAll.innerText = features[i].properties.name
+      destinationsAll.onclick = function() { getSourceJSON(this.id); };
+      var parent = document.getElementById('destinationsAll')
+      parent.appendChild(destinationsAll)
+
+      var destinationText = document.createElement('small')
+      destinationText.id = features[i].properties.id+'-text'
+      console.log(destinationText.id)
+      destinationText.classList.add("p-3", "ml-2")
+      destinationText.style.display = 'none'
+      weekendDestinationsDesc.push(destinationText)
+      document.getElementById("destinationsAll").appendChild(destinationText)
+
+      var destinationDuration = document.createElement('div')
+      destinationDuration.classList.add("text-right", "text-muted", "mr-4")
+      destinationDuration.innerText = features[i].properties.duration
+      var destinationType = document.createElement('img')
+      destinationType.classList.add("ml-2")
+      destinationType.src = features[i].properties.type
+      destinationDuration.appendChild(destinationType)
+      destinationText.appendChild(destinationDuration)
+      
+      var aboutDestinaion = document.createElement("div")
+      aboutDestinaion.innerText = features[i].properties.about
+      aboutDestinaion.classList.add("mt-4", "pl-2")
+      destinationText.appendChild(aboutDestinaion)
+
+      var info = document.createElement("div")
+      info.classList.add("row", "pl-2")
+      destinationText.appendChild(info)
+
+      var list = document.createElement("ul")
+      info.classList.add("list-unstyled", "mb-0", "mt-4")
+      info.appendChild(list)
+
+      for (k in destInfoList) {
+        console.log(k)
+        var item = document.createElement("li")
+        item.classList.add("mt-2")
+        list.appendChild(item)
+        var itemTitle = document.createElement("span")
+        itemTitle.innerText = destInfoList[k]
+        itemTitle.classList.add("text-muted")
+        item.appendChild(itemTitle)
+        var itemText = document.createElement("span")
+        itemText.innerText = features[i].properties.info[k]
+        item.appendChild(itemText)
+      }
+    }
+  })
+  var assocInfoList1 = ["Predsjednik:", "Novosti:", "Postani član:"], assocInfoList2 = ["assets/contact/phone.png","assets/contact/mail.png", "assets/contact/location.png", "assets/contact/facebook.png"];
+  $.getJSON("assets/landmarks/assocs.geojson", function(data) {
+    features = data.features
+    for(i in features) {
+      var assocsAll = document.createElement('button')
+      assocsAll.id = features[i].properties.id
+      assocsAll.classList.add("list-group-item", "list-group-item-action", "no-outline")
+      assocsAll.innerText = features[i].properties.name
+      assocsAll.onclick = function() { getAssoc(this.id); };
+      var parent = document.getElementById('assocsAll')
+      parent.appendChild(assocsAll)
+      
+      assocCoord.push(features[i].geometry.coordinates)
+
+      var assocText = document.createElement('small')
+      assocText.id = features[i].properties.id+'-text'
+      assocText.classList.add("p-3", "ml-2")
+      assocText.style.display = 'none'
+      assocText.innerHTML = features[i].properties.about
+      assocDesc.push(assocText)
+      document.getElementById("assocsAll").appendChild(assocText)
+      
+      //var aboutDestinaion = document.createElement("div")
+      //aboutDestinaion.innerText = features[i].properties.about
+      //aboutDestinaion.classList.add("mt-4", "pl-2")
+      //destinationText.appendChild(aboutDestinaion)
+
+      var assocInfo = document.createElement("div")
+      assocInfo.classList.add("row")
+      assocText.appendChild(assocInfo)
+
+      var list1 = document.createElement("ul")
+      list1.classList.add("list-unstyled", "mb-0", "mt-4", "col-6")
+      assocInfo.appendChild(list1)
+      var list2 = document.createElement("ul")
+      list2.classList.add("list-unstyled", "mb-0", "mt-4", "col-6")
+      assocInfo.appendChild(list2)
+
+      for (g in assocInfoList1) {
+        var item = document.createElement("li")
+        item.classList.add("mt-2")
+        list1.appendChild(item)
+        var itemTitle = document.createElement("span")
+        itemTitle.innerText = assocInfoList1[g]
+        itemTitle.classList.add("text-muted")
+        item.appendChild(itemTitle)
+        if(g == 0){
+          var itemText = document.createElement("span")
+          itemText.innerText = features[i].properties.info[g]
+          item.appendChild(itemText)
+        } else {
+          var itemText = document.createElement("a")
+          itemText.href = features[i].properties.info[g]
+          itemText.innerText = features[i].properties.info[g]
+          item.appendChild(itemText)
+        }
+      }
+      for (g in assocInfoList2) {
+        var item = document.createElement("li")
+        item.classList.add("mt-2")
+        list2.appendChild(item)
+        var itemTitle = document.createElement("img")
+        itemTitle.src = assocInfoList2[g]
+        itemTitle.classList.add("contact-image", "mr-2")
+        item.appendChild(itemTitle)
+        var itemText = document.createElement("span")
+        itemText.innerText = features[i].properties.contact[g]
+        item.appendChild(itemText)
+      }
+    }
+  })
 }
-
-// Load list of all routes from GeoJSON file
-//document.getElementById('routesAll').style.display = 'none'
-//window.onload = function() {
-//  $.getJSON("assets/tours/routes.geojson", function(data) {
-//    features = data.features
-//    for(i in features) {
-//      var routesAll = document.createElement('button')
-//      routesAll.id = features[i].properties.id
-//      routesAll.classList.add("list-group-item", "list-group-item-action", "no-outline")
-//      routesAll.innerText = features[i].properties.name
-//      routesAll.onclick = function() { getSourceJSON(this.id); };
-//      var parent = document.getElementById('routesAll')
-//      parent.appendChild(routesAll)
-//
-//      var routeText = document.createElement('small')
-//      routeText.id = features[i].properties.id+'-text'
-//      routeText.classList.add("p-3", "ml-4")
-//      document.getElementById("routesAll").appendChild(routeText)
-//
-//      var routeDuration = document.createElement('div')
-//      routeDuration.classList.add("text-right", "text-muted", "mr-4")
-//      routeDuration.innerText = features[i].properties.duration
-//      var routeType = document.createElement('img')
-//      routeType.classList.add("ml-2")
-//      routeType.src = features[i].properties.type
-//      routeDuration.appendChild(routeType)
-//      routeText.appendChild(routeDuration)
-//
-//      var stops = features[i].properties.stops
-//      var dists = features[i].properties.dists
-//      for(j in stops) {
-//        var stopName = document.createElement("div")
-//        stopName.innerText = stops[j]
-//        stopName.classList.add("h6", "mt-2", "pl-4")
-//        routeText.appendChild(stopName)
-//        if(dists[j]) {
-//          var dots = document.createElement("img")
-//          dots.src = "/assets/icon/three-dots-vertical.svg"
-//          dots.classList.add("ml-4")
-//          var dist = document.createElement("span")
-//          dist.innerText = dists[j]
-//          dist.classList.add("ml-4")
-//          routeText.appendChild(dots)
-//          routeText.appendChild(dist)
-//        }
-//      }
-//      var aboutRoute = document.createElement("div")
-//        aboutRoute.innerText = features[i].properties.about
-//        aboutRoute.classList.add("mt-4", "pl-4")
-//        routeText.appendChild(aboutRoute)
-//    }
-//  })
-//}
-
-// Landmarks Pins
+//Onload End
+var toursDesc = [], weekendDestinationsDesc = [], assocDesc = [], assocCoord = [];
+//Landmarks Pins
 var vectorPinSource = new ol.source.Vector({
-  url: 'assets/landmarks/landmarks.geojson',
-  projection: 'EPSG:3857',
-  format: new ol.format.GeoJSON(),
+  features: (new ol.format.GeoJSON()).readFeatures(landmarksData, {
+    featureProjection: 'EPSG:3857'
+  }),
+  //projection: 'EPSG:3857',
+  //format: new ol.format.GeoJSON(),
 });
 var pinStyle = new ol.style.Style({
   image: new ol.style.Icon({
@@ -1021,15 +1155,37 @@ var vectorPin = new ol.layer.Vector({
 map.addLayer(vectorPin)
 // Landmarks
 var vectorSource = new ol.source.Vector({
-  url: 'assets/landmarks/landmarks.geojson',
-  projection: 'EPSG:3857',
-  format: new ol.format.GeoJSON(),
+  features: (new ol.format.GeoJSON()).readFeatures(landmarksData, {
+    featureProjection: 'EPSG:3857'
+  }),
+  //url: 'assets/landmarks/landmarks.geojson',
+  //projection: 'EPSG:3857',
+  //format: new ol.format.GeoJSON(),
 });
 
 var vector = new ol.layer.Vector({
   minZoom: 10.5,
   name: 'landmarks',
   source: vectorSource,
+  declutter: true,
+  // y ordering
+  //renderOrder: ol.ordering.yOrdering(),
+  style: getFeatureStyle
+});
+
+var vjerskiObjektiSource = new ol.source.Vector({
+  features: (new ol.format.GeoJSON()).readFeatures(vjerskiObjekti, {
+    featureProjection: 'EPSG:3857'
+  }),
+  //url: 'assets/landmarks/vjerskiObjekti.geojson',
+  //projection: 'EPSG:3857',
+  //format: new ol.format.GeoJSON(),
+});
+
+var vjerskiObjekti = new ol.layer.Vector({
+  minZoom: 10.5,
+  name: 'vjerskiObjekti',
+  source: vjerskiObjektiSource,
   declutter: true,
   // y ordering
   //renderOrder: ol.ordering.yOrdering(),
@@ -1055,6 +1211,7 @@ var vector = new ol.layer.Vector({
 
 //map.addLayer(vectorTours)
 //vectorTours.setZIndex(10)
+map.addLayer(vjerskiObjekti);
 map.addLayer(vector);
 vector.setZIndex(15)
 //vectorSource.refresh()
@@ -1146,6 +1303,7 @@ if (localStorage.zastave == 2) {
   }
   vector.setVisible(true)
   assocs.setVisible(true)
+  vjerskiObjekti.setVisible(true)
 }
 
 
@@ -1171,7 +1329,7 @@ function allLandmarks() {
 var meet = 1
 document.getElementById('routes').style.display = 'none'
 document.getElementById('assoc').style.display = 'none'
-document.getElementById('weekend-destinations').style.display = 'none'
+document.getElementById('destinationsAll').style.display = 'none'
 function meetTg() {
   if(meet==1) {
     return
@@ -1236,14 +1394,14 @@ function routes() {
 }
 
 function touristTours() {
-  document.getElementById('tourist-tours').style.display = 'block'
-  document.getElementById('weekend-destinations').style.display = 'none'
+  document.getElementById('routesAll').style.display = 'block'
+  document.getElementById('destinationsAll').style.display = 'none'
   document.getElementById('btn-touristTours').classList.add('activate-routes')
   document.getElementById('btn-weekendDestinations').classList.remove('activate-routes')
 }
 function weekendDestinations() {
-  document.getElementById('tourist-tours').style.display = 'none'
-  document.getElementById('weekend-destinations').style.display = 'block'
+  document.getElementById('routesAll').style.display = 'none'
+  document.getElementById('destinationsAll').style.display = 'block'
   document.getElementById('btn-weekendDestinations').classList.add('activate-routes')
   document.getElementById('btn-touristTours').classList.remove('activate-routes')
 }
@@ -1296,7 +1454,7 @@ function backFromMeet () {
 
 // Control Select 
 var select = new ol.interaction.Select({
-  layers: [vector, tour1, tour2],
+  layers: [vector, tour1, tour2, vjerskiObjekti],
   condition: ol.events.condition.click,
   style: function (feature, resolution) { return getFeatureStyle(feature, resolution, true); },
 })
@@ -1453,7 +1611,7 @@ var iconStyle2 = new ol.style.Style({
     src: 'assets/icon/virtual-reality.svg',
     anchor: [0.5, 0,5],
     size: [230, 230],
-    scale: 0.7,
+    scale: 0.5,
     opacity: 1,
   })
 })
@@ -1680,9 +1838,11 @@ select360.getFeatures().on(['add','remove'], function(e) {
 //    })
 //  });
 
+
 function toggle(x) {
   x.classList.toggle("change");
   $("#wrapper").toggleClass("toggled")
+  $("#logo").toggleClass("logo-toggle")
   //document.getElementById('div-toggle').classList.toggle('bg-toggle');
 }
 
@@ -1707,7 +1867,7 @@ document.getElementById('msg_el').style.display = 'none'
 // Make route layer
 
  //points = [],
-msg_el = document.getElementById('msg_el'),
+//msg_el = document.getElementById('msg_el'),
 url_osrm_nearest = '//router.project-osrm.org/nearest/v1/driving/',
 url_osrm_route = '//router.project-osrm.org/route/v1/driving/',
 icon_url = '/assets/icon/placeholder2.png',
@@ -1787,8 +1947,6 @@ function getSourceJSON(clickedID, selected) {
     if(name){
       if(name.slice(0,4) == 'tour' || name.slice(0,4) == 'dest'){
         layer.setVisible(false)
-        console.log("kliknuto "+name)
-        console.log(clickedID)
         document.getElementById(name).classList.remove('activate')
       }
       if(name == clickedID) {
@@ -1798,17 +1956,15 @@ function getSourceJSON(clickedID, selected) {
             }
           let clickedIDtext = document.getElementById(clickedID+'-text').style.display
           if(clickedIDtext == 'none'){
-            console.log("kliknuto 2")
             zoomToRoute(clickedID)
             document.getElementById(clickedID).classList.add('activate')
             document.getElementById(clickedID+"-text").style.display = 'block';
             //vector.getSource().once('addfeature', function() {
             layer.setOpacity(1)
             layer.setVisible(true)
-            layer.setZIndex(100)
+            layer.setZIndex(10000)
             var points = []
             var features = layer.getSource().getFeatures()
-            console.log(features)
             for(feature in features){
               points.push(features[feature].geometryChangeKey_.target.flatCoordinates)
              }
@@ -1817,10 +1973,10 @@ function getSourceJSON(clickedID, selected) {
               utils.getNearest(evt).then(function(coord_street){
                 var last_point = points[points.length - 1];
                 var points_length = points.push(coord_street);
-                if (points_length < 2) {
-                  msg_el.innerHTML = 'Click to add another point';
-                  return;
-                }
+                //if (points_length < 2) {
+                //  msg_el.innerHTML = 'Click to add another point';
+                //  return;
+                //}
                 //get the route
                 var point1 = last_point.join();
                 var point2 = coord_street.join();
@@ -1828,11 +1984,11 @@ function getSourceJSON(clickedID, selected) {
                 fetch(url_osrm_route + point1 + ';' + point2).then(function(r) { 
                   return r.json();
                 }).then(function(json) {
-                  if(json.code !== 'Ok') {
-                    msg_el.innerHTML = 'No route found.';
-                    return;
-                  }
-                  msg_el.innerHTML = 'Route added';
+                  //if(json.code !== 'Ok') {
+                  //  msg_el.innerHTML = 'No route found.';
+                  //  return;
+                  //}
+                  //msg_el.innerHTML = 'Route added';
                   points.length = 0;
                   utils.createRoute(json.routes[0].geometry);
                   //document.getElementById('sidebar-wrapper').style.pointerEvents = 'auto' 
@@ -1954,21 +2110,21 @@ map.getLayers().forEach(function (layer) {
     }
   }
 })
-var toursDesc = []
-
-for(var i = 1; i <= tours.length; i++){
-  var id = document.getElementById("tour"+i+"-text")
-  toursDesc.push(id)
-}
+//var toursDesc = ["tour2-text", "tour1-text"]
+//
+////for(var i = 1; i <= tours.length; i++){
+////  var id = document.getElementById("tour"+i+"-text")
+////  toursDesc.push(id)
+////}
 for (var i = 0; i < toursDesc.length; i++){
   toursDesc[i].style.display = 'none'
 }
 
-var weekendDestinationsDesc = []
-for(var i = 1; i <= weekendDestinationsList.length; i++){
-  var id = document.getElementById("destination"+i+"-text")
-  weekendDestinationsDesc.push(id)
-}
+//var weekendDestinationsDesc = []
+//for(var i = 1; i <= weekendDestinationsList.length; i++){
+//  var id = document.getElementById("destination"+i+"-text")
+//  weekendDestinationsDesc.push(id)
+//}
 for (var i = 0; i < weekendDestinationsDesc.length; i++){
   weekendDestinationsDesc[i].style.display = 'none'
 }
@@ -2008,25 +2164,24 @@ function zoomToDest(id) {
 
 // Association description and zoom
 
-var assocDesc = []
-var assocCoord = [[1917107.92, 5422196.02], [1893631.38, 5405800.73], [1906043.14, 5404598.15], [1917500.92, 5421475.52]]
-for(var i = 1; i <= assocCoord.length; i++){
-  var idAssoc = document.getElementById("assoc"+i+"-text")
-  assocDesc.push(idAssoc)
-}
-for (var i = 0; i < assocDesc.length; i++){
-  assocDesc[i].style.display = 'none'
-}
-
+//var assocDesc = []
+//var assocCoord = [[1917107.92, 5422196.02], [1893631.38, 5405800.73], [1906043.14, 5404598.15], [1917500.92, 5421475.52]]
+//for(var i = 1; i <= assocCoord.length; i++){
+//  var idAssoc = document.getElementById("assoc"+i+"-text")
+//  assocDesc.push(idAssoc)
+//}
+//for (var i = 0; i < assocDesc.length; i++){
+//  assocDesc[i].style.display = 'none'
+//}
+console.log(assocDesc)
 function zoomToAssoc(id) {
   for (var i = 0; i < assocDesc.length; i++){
     assocDesc[i].style.display = 'none'
   }
   var num = id.slice(5)
-  console.log(assocCoord[num-1])
   view.animate({
-    center: assocCoord[num-1],
-    duration: 1000,
+    center: ol.proj.fromLonLat(assocCoord[num-1]),
+    duration: 2000,
     zoom: 16
   })
   //if(id=="assoc1"){
@@ -2058,6 +2213,7 @@ function zastaveOpcina() {
     localStorage.zastave = 2
     vector.setVisible(true)
     assocs.setVisible(true)
+    vjerskiObjekti.setVisible(true)
   } else {
     zastave = true
     document.getElementById('zastaveOpcina').classList.add('activate-layer')
@@ -2067,6 +2223,7 @@ function zastaveOpcina() {
     localStorage.zastave = 1
     vector.setVisible(false)
     assocs.setVisible(false)
+    vjerskiObjekti.setVisible(false)
   }
 }
 
@@ -2091,10 +2248,12 @@ function znamenitosti() {
     landmarksVisible = false
     document.getElementById('znamenitosti').classList.remove('activate-layer')
     vector.setVisible(false)
+    vjerskiObjekti.setVisible(false)
   } else {
     landmarksVisible = true
     document.getElementById('znamenitosti').classList.add('activate-layer')
     vector.setVisible(true)
+    vjerskiObjekti.setVisible(true)
   }
 }
 
@@ -2140,18 +2299,20 @@ function zoomOut() {
 
 
 // Dodavanje slika na kartu iz html-a
-//var vienna = new ol.Overlay({
-//  position: [1917126.71, 5421738.68],
-//  element: document.getElementById('vienna'),
-//});
-//map.addOverlay(vienna);
+var vienna = new ol.Overlay({
+  position: [1917126.71, 5421738.68],
+  element: document.getElementById('vienna'),
+});
+map.addOverlay(vienna);
 if (currZoom < 11.5 && zastave == true) {
   vector.setVisible(false)
   assocs.setVisible(false)
+  vjerskiObjekti.setVisible(false)
   
 } else {
   vector.setVisible(true)
   assocs.setVisible(true)
+  vjerskiObjekti.setVisible(true)
   document.getElementById('zastaveOpcina').classList.add('disabled')
 }
 if (currZoom < 11.5){
@@ -2166,3 +2327,42 @@ function sidebarGallery(imgs) {
   expandImg.parentElement.style.display = "block";
 }
 
+
+let request = new XMLHttpRequest();
+
+request.open('POST', "https://api.openrouteservice.org/v2/directions/driving-car/geojson");
+
+request.setRequestHeader('Accept', 'application/json, application/geo+json, application/gpx+xml, img/png; charset=utf-8');
+request.setRequestHeader('Content-Type', 'application/json');
+request.setRequestHeader('Authorization', '5b3ce3597851110001cf62480f2a839c2c304a6db122388e30530fcd');
+
+request.onreadystatechange = function () {
+  if (this.readyState === 4) {
+    console.log('Status:', this.status);
+    console.log('Headers:', this.getAllResponseHeaders());
+    console.log('Body:', this.responseText);
+    console.log("kordinate su : "+this.responseText.geometry)
+  }
+};
+
+const body = '{"coordinates":[[17.233632,43.625019],[17.298278,43.586705],[17.532945,43.653143]]}';
+
+request.send(body);
+
+var routesStyle = new ol.style.Style({
+  stroke: new ol.style.Stroke({
+    color: 'green',
+    width: 1,
+  }),
+})
+
+const routeSource2 = new ol.source.Vector({
+  features: body.coordinates,
+});
+
+var routeNew = new ol.layer.Vector({
+  source: routeSource2,
+  style: routesStyle
+})
+
+map.addLayer(routeNew)

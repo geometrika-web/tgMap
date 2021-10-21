@@ -1,0 +1,27 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+   {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+	"zoom": "16",
+    "coordinates": [
+     1917577,
+	 5422168
+    ]
+   },
+   "properties": {
+    "name": "Vodopad Žukovica",
+	"type": "/assets/icon/walkingMan.svg",
+	"duration": "5h",
+	"stops": ["Vjetrenjače", "Mesihovina", "Vrleti"],
+	"dists": ["150m", "600m"],
+    "about": "Vodopad Žukovica nalazi se na području susjedne općine Posušje u selu Zagorje. Vodopad je prirodni biser u stijeni koji pruža vrhunski užitak i doživljaj za svakoga tko ga posjeti. Ove prirodne ljepote pružaju avanturu koja se može doživjeti na više načina, a onaj koji mi preporučavamo je pješačka avantura iz naše općine iz sela Mesihovine preko brda do vodopada Žukovica.",
+	"infoStructure": ["Mjesto polaska", "Vrijeme polaska", "Vrijeme povratka", "Trajanje", "Preporučeno za ponijeti", "Vodič i kontakt", "Napomena", "Ostale info"],
+	"info": ["Crkva u Mesihovini", "8:30", "13:00", "2,5 h u jednom smjeru", "2l vode i hranu", "Josip Petrović, 063 265 654", "Polazak je ispred crkve u Mesihovini gdje ima parking. Potrebno se prijaviti dva dana ranije preko stranice TomislavGuides.ba. Mlađi od 15 godina uz pratnju odraslih.", "Putovanje može trajati vremenski i kraće ili duže. Zadržavanje na Žukovici je 2h."],
+	"id": "destination1"
+   }
+  }
+ ]
+}

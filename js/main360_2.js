@@ -8,7 +8,7 @@ document.onreadystatechange = function() {
 document.getElementById('back-href').setAttribute('href', 'index.html'+localStorage.hash)
 if (window.location.hash == '#mesihovina') {
   var viewer = new PhotoSphereViewer.Viewer({
-    panorama: '../assets/360/crkvaMesihovina.jpg',
+    panorama: '../assets/360/NO/maliSamograd2-filled.jpg',
     container: 'photosphere',
     loadingImg: 'assets/icon/virtual-reality.svg',
     defaultLat: -0.45,
