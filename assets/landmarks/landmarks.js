@@ -13,11 +13,11 @@ var landmarksData = {
       "properties": {
        "name": "Franjevački samostan Tomislavgrad",
        "about": "Samostan u Tomislavgradu, je franjevački samostan u Mostarsko-duvanjskoj biskupiji, u Tomislavgradu, Bosna i Hercegovina. Proglašen je za nacionalni spomenik Bosne i Hercegovine na sjednici održanoj u Sarajevu od 11. oktobra 2017. godine. Odluku donijela je Komisija u sastavu: Amir Pašić, Goran Milojević (predsjedvajući), Radoje Vidović. Nacionalni spomenik se sastoji od: crkve sv. Nikole Tavelića i zapadnog krila franjevačkog samostana.",
-       "img": "/assets/samostanTomislavgrad.jpg",
-       "img2": "/assets/samostanTomislavgrad2.jpg",
-       "img3": "/assets/samostanTomislavgrad.jpg",
-       "img4": "/assets/samostanTomislavgrad.jpg",
-       "img5": "/assets/samostanTomislavgrad.jpg",
+       "img": "/assets/img/samostanTomislavgrad.jpg",
+       "img2": "/assets/img/samostanTomislavgrad2.jpg",
+       "img3": "/assets/img/samostanTomislavgrad.jpg",
+       "img4": "/assets/img/samostanTomislavgrad.jpg",
+       "img5": "/assets/img/samostanTomislavgrad.jpg",
        "zoom": "18",
        "id": "landmarks"
       }
@@ -34,11 +34,11 @@ var landmarksData = {
       "properties": {
        "name": "Crkva sv. Nikole Tavelića",
        "about": "Samostan u Tomislavgradu, je franjevački samostan u Mostarsko-duvanjskoj biskupiji, u Tomislavgradu, Bosna i Hercegovina. Proglašen je za nacionalni spomenik Bosne i Hercegovine na sjednici održanoj u Sarajevu od 11. oktobra 2017. godine. Odluku donijela je Komisija u sastavu: Amir Pašić, Goran Milojević (predsjedvajući), Radoje Vidović. Nacionalni spomenik se sastoji od: crkve sv. Nikole Tavelića i zapadnog krila franjevačkog samostana.",
-       "img": "/assets/crkvaTomislavgrad.jpg",
-       "img2": "/assets/crkvaTomislavgrad2.jpg",
-       "img3": "/assets/crkvaTomislavgrad.jpg",
-       "img4": "/assets/crkvaTomislavgrad.jpg",
-       "img5": "/assets/crkvaTomislavgrad.jpg",
+       "img": "/assets/img/crkvaTomislavgrad.jpg",
+       "img2": "/assets/img/crkvaTomislavgrad2.jpg",
+       "img3": "/assets/img/crkvaTomislavgrad.jpg",
+       "img4": "/assets/img/crkvaTomislavgrad.jpg",
+       "img5": "/assets/img/crkvaTomislavgrad.jpg",
        "zoom": "18",
        "id": "landmarks"
       }
@@ -55,11 +55,11 @@ var landmarksData = {
       "properties": {
        "name": "Trg gange i hajdučke družine",
        "about": "Samostan u Tomislavgradu, je franjevački samostan u Mostarsko-duvanjskoj biskupiji, u Tomislavgradu, Bosna i Hercegovina. Proglašen je za nacionalni spomenik Bosne i Hercegovine na sjednici održanoj u Sarajevu od 11. oktobra 2017. godine. Odluku donijela je Komisija u sastavu: Amir Pašić, Goran Milojević (predsjedvajući), Radoje Vidović. Nacionalni spomenik se sastoji od: crkve sv. Nikole Tavelića i zapadnog krila franjevačkog samostana.",
-       "img": "/assets/trgGange.jpg",
-       "img2": "/assets/trgGange2.jpg",
-       "img3": "/assets/trgGange.jpg",
-       "img4": "/assets/trgGange.jpg",
-       "img5": "/assets/trgGange.jpg",
+       "img": "/assets/img/trgGange.jpg",
+       "img2": "/assets/img/trgGange2.jpg",
+       "img3": "/assets/img/trgGange.jpg",
+       "img4": "/assets/img/trgGange.jpg",
+       "img5": "/assets/img/trgGange.jpg",
        "zoom": "18",
        "id": "landmarks"
       }
@@ -76,11 +76,11 @@ var landmarksData = {
       "properties": {
        "name": "Spomenik Kralju Tomislavu",
        "about": "Samostan u Tomislavgradu, je franjevački samostan u Mostarsko-duvanjskoj biskupiji, u Tomislavgradu, Bosna i Hercegovina. Proglašen je za nacionalni spomenik Bosne i Hercegovine na sjednici održanoj u Sarajevu od 11. oktobra 2017. godine. Odluku donijela je Komisija u sastavu: Amir Pašić, Goran Milojević (predsjedvajući), Radoje Vidović. Nacionalni spomenik se sastoji od: crkve sv. Nikole Tavelića i zapadnog krila franjevačkog samostana.",
-       "img": "/assets/kraljTomislav.jpg",
-       "img2": "/assets/kraljTomislav2.jpg",
-       "img3": "/assets/kraljTomislav2.jpg",
-       "img4": "/assets/kraljTomislav2.jpg",
-       "img5": "/assets/kraljTomislav2.jpg",
+       "img": "/assets/img/kraljTomislav.jpg",
+       "img2": "/assets/img/kraljTomislav2.jpg",
+       "img3": "/assets/img/kraljTomislav2.jpg",
+       "img4": "/assets/img/kraljTomislav2.jpg",
+       "img5": "/assets/img/kraljTomislav2.jpg",
        "zoom": "18",
        "id": "landmarks"
       }
@@ -97,11 +97,11 @@ var landmarksData = {
       "properties": {
        "name": "Zgrada Općine Tomislavgrad",
        "about": "Samostan u Tomislavgradu, je franjevački samostan u Mostarsko-duvanjskoj biskupiji, u Tomislavgradu, Bosna i Hercegovina. Proglašen je za nacionalni spomenik Bosne i Hercegovine na sjednici održanoj u Sarajevu od 11. oktobra 2017. godine. Odluku donijela je Komisija u sastavu: Amir Pašić, Goran Milojević (predsjedvajući), Radoje Vidović. Nacionalni spomenik se sastoji od: crkve sv. Nikole Tavelića i zapadnog krila franjevačkog samostana.",
-       "img": "/assets/opcinaTomislavgrad.jpg",
-       "img2": "/assets/opcinaTomislavgrad2.jpg",
-       "img3": "/assets/opcinaTomislavgrad2.jpg",
-       "img4": "/assets/opcinaTomislavgrad.jpg",
-       "img5": "/assets/opcinaTomislavgrad2.jpg",
+       "img": "/assets/img/opcinaTomislavgrad.jpg",
+       "img2": "/assets/img/opcinaTomislavgrad2.jpg",
+       "img3": "/assets/img/opcinaTomislavgrad2.jpg",
+       "img4": "/assets/img/opcinaTomislavgrad.jpg",
+       "img5": "/assets/img/opcinaTomislavgrad2.jpg",
        "zoom": "18",
        "id": "landmarks"
       }
@@ -118,11 +118,11 @@ var landmarksData = {
       "properties": {
        "name": "Vjetropark Mrkodol",
        "about": "Vjetropark Mrkodol je ....",
-       "img": "/assets/vjetroparkMrkodol.jpg",
-       "img2": "/assets/vjetroparkMrkodol1.jpg",
-       "img3": "/assets/vjetroparkMrkodol2.jpg",
-       "img4": "/assets/vjetroparkMrkodol3.jpg",
-       "img5": "/assets/vjetroparkMrkodol4.jpg",
+       "img": "/assets/img/vjetroparkMrkodol.jpg",
+       "img2": "/assets/img/vjetroparkMrkodol1.jpg",
+       "img3": "/assets/img/vjetroparkMrkodol2.jpg",
+       "img4": "/assets/img/vjetroparkMrkodol3.jpg",
+       "img5": "/assets/img/vjetroparkMrkodol4.jpg",
        "zoom": "15",
        "id": "landmarks"
       }
@@ -139,11 +139,11 @@ var landmarksData = {
       "properties": {
        "name": "Hajdučke vrleti",
        "about": "Samostan u Tomislavgradu, je franjevački samostan u Mostarsko-duvanjskoj biskupiji, u Tomislavgradu, Bosna i Hercegovina. Proglašen je za nacionalni spomenik Bosne i Hercegovine na sjednici održanoj u Sarajevu od 11. oktobra 2017. godine. Odluku donijela je Komisija u sastavu: Amir Pašić, Goran Milojević (predsjedvajući), Radoje Vidović. Nacionalni spomenik se sastoji od: crkve sv. Nikole Tavelića i zapadnog krila franjevačkog samostana.",
-       "img": "/assets/hajduckeVrleti.jpg",
-       "img2": "/assets/hajduckeVrleti.jpg",
-       "img3": "/assets/hajduckeVrleti.jpg",
-       "img4": "/assets/hajduckeVrleti.jpg",
-       "img5": "/assets/hajduckeVrleti.jpg",
+       "img": "/assets/img/hajduckeVrleti.jpg",
+       "img2": "/assets/img/hajduckeVrleti.jpg",
+       "img3": "/assets/img/hajduckeVrleti.jpg",
+       "img4": "/assets/img/hajduckeVrleti.jpg",
+       "img5": "/assets/img/hajduckeVrleti.jpg",
        "zoom": "15",	
        "id": "landmarks"
       }
@@ -160,11 +160,11 @@ var landmarksData = {
       "properties": {
        "name": "Glizića mlinica",
        "about": "Samostan u Tomislavgradu, je franjevački samostan u Mostarsko-duvanjskoj biskupiji, u Tomislavgradu, Bosna i Hercegovina. Proglašen je za nacionalni spomenik Bosne i Hercegovine na sjednici održanoj u Sarajevu od 11. oktobra 2017. godine. Odluku donijela je Komisija u sastavu: Amir Pašić, Goran Milojević (predsjedvajući), Radoje Vidović. Nacionalni spomenik se sastoji od: crkve sv. Nikole Tavelića i zapadnog krila franjevačkog samostana.",
-       "img": "/assets/GlizicaMlin1.jpeg",
-       "img2": "/assets/GlizicaMlin3.jpeg",
-       "img3": "/assets/GlizicaMlin1.jpeg",
-       "img4": "/assets/GlizicaMlin3.jpeg",
-       "img5": "/assets/GlizicaMlin1.jpeg",
+       "img": "/assets/img/GlizicaMlin1.jpeg",
+       "img2": "/assets/img/GlizicaMlin3.jpeg",
+       "img3": "/assets/img/GlizicaMlin1.jpeg",
+       "img4": "/assets/img/GlizicaMlin3.jpeg",
+       "img5": "/assets/img/GlizicaMlin1.jpeg",
        "zoom": "15",
        "id": "landmarks"
       }
@@ -181,11 +181,11 @@ var landmarksData = {
       "properties": {
        "name": "Vodopad Žukovica",
        "about": "Samostan u Tomislavgradu, je franjevački samostan u Mostarsko-duvanjskoj biskupiji, u Tomislavgradu, Bosna i Hercegovina. Proglašen je za nacionalni spomenik Bosne i Hercegovine na sjednici održanoj u Sarajevu od 11. oktobra 2017. godine. Odluku donijela je Komisija u sastavu: Amir Pašić, Goran Milojević (predsjedvajući), Radoje Vidović. Nacionalni spomenik se sastoji od: crkve sv. Nikole Tavelića i zapadnog krila franjevačkog samostana.",
-       "img": "/assets/zukovica.jpg",
-       "img2": "/assets/zukovica.jpg",
-       "img3": "/assets/zukovica.jpg",
-       "img4": "/assets/zukovica.jpg",
-       "img5": "/assets/zukovica.jpg",
+       "img": "/assets/img/zukovica.jpg",
+       "img2": "/assets/img/zukovica.jpg",
+       "img3": "/assets/img/zukovica.jpg",
+       "img4": "/assets/img/zukovica.jpg",
+       "img5": "/assets/img/zukovica.jpg",
        "zoom": "15",
        "id": "landmarks"
       }
@@ -202,11 +202,11 @@ var landmarksData = {
       "properties": {
        "name": "Bojkanovića Mlin - Crvenice",
        "about": "Bojkanovića mlin je...",
-       "img": "/assets/BojkanovićaMlin1.jpg",
-       "img2": "/assets/BojkanovićaMlin1.jpg",
-       "img3": "/assets/BojkanovićaMlin2.jpg",
-       "img4": "/assets/BojkanovićaMlin3.jpg",
-       "img5": "/assets/BojkanovićaMlin4.jpg",
+       "img": "/assets/img/BojkanovićaMlin1.jpg",
+       "img2": "/assets/img/BojkanovićaMlin1.jpg",
+       "img3": "/assets/img/BojkanovićaMlin2.jpg",
+       "img4": "/assets/img/BojkanovićaMlin3.jpg",
+       "img5": "/assets/img/BojkanovićaMlin4.jpg",
        "zoom": "15",
        "id": "landmarks"
       }
@@ -223,11 +223,11 @@ var landmarksData = {
       "properties": {
        "name": "Izvor Močila - Roško Polje",
        "about": "Izvor Močila - Roško Polje je...",
-       "img": "/assets/IzvorMočila1.jpg",
-       "img2": "/assets/IzvorMočila1.jpg",
-       "img3": "/assets/IzvorMočila2.jpg",
-       "img4": "/assets/IzvorMočila3.jpg",
-       "img5": "/assets/IzvorMočila4.jpg",
+       "img": "/assets/img/IzvorMočila1.jpg",
+       "img2": "/assets/img/IzvorMočila1.jpg",
+       "img3": "/assets/img/IzvorMočila2.jpg",
+       "img4": "/assets/img/IzvorMočila3.jpg",
+       "img5": "/assets/img/IzvorMočila4.jpg",
        "zoom": "15",
        "id": "landmarks"
       }
@@ -244,11 +244,11 @@ var landmarksData = {
       "properties": {
        "name": "Veliki Samograd",
        "about": "Veliki Samograd je...",
-       "img": "/assets/VelikiSamograd1.jpg",
-       "img2": "/assets/VelikiSamograd1.jpg",
-       "img3": "/assets/VelikiSamograd2.jpg",
-       "img4": "/assets/VelikiSamograd3.jpg",
-       "img5": "/assets/VelikiSamograd4.jpg",
+       "img": "/assets/img/VelikiSamograd1.jpg",
+       "img2": "/assets/img/VelikiSamograd1.jpg",
+       "img3": "/assets/img/VelikiSamograd2.jpg",
+       "img4": "/assets/img/VelikiSamograd3.jpg",
+       "img5": "/assets/img/VelikiSamograd4.jpg",
        "zoom": "15",
        "id": "landmarks"
       }
@@ -265,11 +265,11 @@ var landmarksData = {
       "properties": {
        "name": "Studena",
        "about": "Izletište Studena ...",
-       "img": "/assets/studena1.jpg",
-       "img2": "/assets/studena1.jpg",
-       "img3": "/assets/studena2.jpg",
-       "img4": "/assets/studena3.jpg",
-       "img5": "/assets/studena4.jpg",
+       "img": "/assets/img/studena1.jpg",
+       "img2": "/assets/img/studena1.jpg",
+       "img3": "/assets/img/studena2.jpg",
+       "img4": "/assets/img/studena3.jpg",
+       "img5": "/assets/img/studena4.jpg",
        "id": "landmarks"
       }
      },
@@ -285,11 +285,11 @@ var landmarksData = {
       "properties": {
        "name": "Ostatci starokršćanske bazilike",
        "about": "Ostatci starokršćanske bazilike ...",
-       "img": "/assets/starokrscanskaBazilika1.jpg",
-       "img2": "/assets/starokrscanskaBazilika1.jpg",
-       "img3": "/assets/starokrscanskaBazilika2.jpg",
-       "img4": "/assets/starokrscanskaBazilika3.jpg",
-       "img5": "/assets/starokrscanskaBazilika4.jpg",
+       "img": "/assets/img/starokrscanskaBazilika1.jpg",
+       "img2": "/assets/img/starokrscanskaBazilika1.jpg",
+       "img3": "/assets/img/starokrscanskaBazilika2.jpg",
+       "img4": "/assets/img/starokrscanskaBazilika3.jpg",
+       "img5": "/assets/img/starokrscanskaBazilika4.jpg",
        "id": "landmarks"
       }
      },
@@ -305,11 +305,11 @@ var landmarksData = {
       "properties": {
        "name": "Ostatci rimske vile",
        "about": "Ostatci rimske vile ...",
-       "img": "/assets/rimskaVila1.jpg",
-       "img2": "/assets/rimskaVila1.jpg",
-       "img3": "/assets/rimskaVila2.jpg",
-       "img4": "/assets/rimskaVila3.jpg",
-       "img5": "/assets/rimskaVila4.jpg",
+       "img": "/assets/img/rimskaVila1.jpg",
+       "img2": "/assets/img/rimskaVila1.jpg",
+       "img3": "/assets/img/rimskaVila2.jpg",
+       "img4": "/assets/img/rimskaVila3.jpg",
+       "img5": "/assets/img/rimskaVila4.jpg",
        "id": "landmarks"
       }
      },
@@ -325,11 +325,11 @@ var landmarksData = {
       "properties": {
        "name": "Stećci Petrovac",
        "about": "Stećci Petrovac ...",
-       "img": "/assets/stecciPetrovac1.jpg",
-       "img2": "/assets/stecciPetrovac1.jpg",
-       "img3": "/assets/stecciPetrovac2.jpg",
-       "img4": "/assets/stecciPetrovac3.jpg",
-       "img5": "/assets/stecciPetrovac4.jpg",
+       "img": "/assets/img/stecciPetrovac1.jpg",
+       "img2": "/assets/img/stecciPetrovac1.jpg",
+       "img3": "/assets/img/stecciPetrovac2.jpg",
+       "img4": "/assets/img/stecciPetrovac3.jpg",
+       "img5": "/assets/img/stecciPetrovac4.jpg",
        "id": "landmarks"
       }
      },
@@ -345,11 +345,11 @@ var landmarksData = {
       "properties": {
        "name": "Stećci Lipa",
        "about": "Stećci Lipa ...",
-       "img": "/assets/stecciLipa1.jpg",
-       "img2": "/assets/stecciLipa1.jpg",
-       "img3": "/assets/stecciLipa2.jpg",
-       "img4": "/assets/stecciLipa3.jpg",
-       "img5": "/assets/stecciLipa4.jpg",
+       "img": "/assets/img/stecciLipa1.jpg",
+       "img2": "/assets/img/stecciLipa1.jpg",
+       "img3": "/assets/img/stecciLipa2.jpg",
+       "img4": "/assets/img/stecciLipa3.jpg",
+       "img5": "/assets/img/stecciLipa4.jpg",
        "id": "landmarks"
       }
      }
@@ -366,11 +366,11 @@ var landmarksData = {
       "properties": {
        "name": "Bukovačka katedrala",
        "about": "Bukovačka katedrala ...",
-       "img": "/assets/bukovackaKatedrala1.jpg",
-       "img2": "/assets/bukovackaKatedrala1.jpg",
-       "img3": "/assets/bukovackaKatedrala2.jpg",
-       "img4": "/assets/bukovackaKatedrala3.jpg",
-       "img5": "/assets/bukovackaKatedrala4.jpg",
+       "img": "/assets/img/bukovackaKatedrala1.jpg",
+       "img2": "/assets/img/bukovackaKatedrala1.jpg",
+       "img3": "/assets/img/bukovackaKatedrala2.jpg",
+       "img4": "/assets/img/bukovackaKatedrala3.jpg",
+       "img5": "/assets/img/bukovackaKatedrala4.jpg",
        "id": "landmarks"
       }
      }

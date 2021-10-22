@@ -9,7 +9,7 @@
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <title>Općina Tomislavgrad</title>
-  <link rel="icon" type="image/x-icon" href="assets/logo/logonew.svg" />
+  <link rel="icon" type="image/x-icon" href="assets/logo/logo_crown+trajectory_black.svg" />
   <!-- Bootstrap core CSS -->
   <link rel="shortcut icon" href="#">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
@@ -76,17 +76,20 @@
         <img src="/assets/panorameOpcina/tomislavgrad.jpg" class=" mt-4 image-center" alt="">
       </div>
       <div id="landmarksAll" class="">
-        <div>
-          <button onclick="allLandmarks()" id="landmarks-btn" class="mt-4 image-center"><span class='text'>Povratak na početnu</span><span class="icon"><img src="/assets/icon/back_black.svg" alt=""> </span></button>
-        </div>
-        <div id="landmark-name" class="mt-4 landmarksAll-scroll border-bottom"></div>
+        
+          <!--<button onclick="allLandmarks()" id="landmarks-btn" class="mt-4 image-center"><span class='text'>Povratak na početnu</span><span class="icon"><img src="/assets/icon/back_black.svg" alt=""> </span></button>-->
+          
+        
+        <div id="landmark-name" class="landmarksAll-scroll border-bottom"></div>
+        <button class="btn-back" onclick="allLandmarks()"><span style="font-size: larger;">&#8592;</span> POVRATAK NA POČETNU</button>
       </div>
       <div id="meet" class="list-group list-group-flush sidebar-scroll text-center">
         <div>
-          <button onclick="backFromMeet()" id="landmarks-btn" class="mt-4 image-center"><span class='text-2'>Povratak</span><span class="icon"><img src="/assets/icon/back_black.svg" alt=""> </span></button>
+          
+          <!--<button onclick="backFromMeet()" id="landmarks-btn" class="mt-4 image-center"><span class='text-2'>Povratak</span><span class="icon"><img src="/assets/icon/back_black.svg" alt=""> </span></button>-->
         </div>
-        <div id="landmark" class="mt-4 h3 text-center"></div>
-        <div id="image" class="mt-3">
+        <div id="landmark" class="m-4 pt-4 display-4 welcome-text text-left d-block"></div>
+        <div id="image" class="">
           <div class="container"><img id="expandedImg" class="w-100 rounded"></div>
           <div class="container image-center mt-2">
             <div class="column">
@@ -103,10 +106,11 @@
             </div>
           </div>
         </div>
-        <div id="landmark-about" class="p-2 mb-2 text-center"></div>
+        <div id="landmark-about" class="p-4 mb-2 text-justify d-block"></div>
         <div id="nodelist" class="p-4">
         <em class="text-center"></em>
         </div>
+        
         <!--<img id="image" class="hover p-2" src="" width= "100%" height="auto">-->
         <!--<a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>-->
         <!--<a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>-->
@@ -114,6 +118,7 @@
         <!--<a href="#" class="list-group-item list-group-item-action bg-light">Events</a>-->
         <!--<a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>-->
         <!--<a href="#" class="list-group-item list-group-item-action bg-light">Status</a>-->
+        <button class="btn-back" onclick="backFromMeet()"><span style="font-size: larger;">&#8592;</span> POVRATAK</button>
       </div>
       <!--Routes-->
     <div id="msg_el"></div>

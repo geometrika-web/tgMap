@@ -394,7 +394,7 @@
   overflow: auto;
 }
 .landmarksAll-scroll {
-  height: calc(100vh - 270px);
+  height: calc(100vh - 220px);
   overflow: auto;
   overflow-x: hidden;
 
@@ -768,4 +768,16 @@
 }
 .btn-arrow-slide-cont--orange .btn-arrow-slide-text{
 	color: #ffc107;
+}
+.btn-back {
+  width: 100%;
+  background-color: #ffd581;
+  color: #fff;
+  border: 0;
+  height: 50px;
+  font-weight:400;
+  vertical-align: center;
+}
+.btn-back:hover {
+  background-color: rgb(255, 197, 91);
 }
