@@ -337,11 +337,11 @@
   height: 100px;
 }
 
-@media(max-width: 575.99px) {
+/*@media(max-width: 575.99px) {
   .bg-tomislav {
     height: 60px;
   }
-}
+}*/
 
 .nav-link {
   color: #fff;
