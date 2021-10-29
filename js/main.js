@@ -447,6 +447,16 @@ var images = [
     name: 'Glizića mlinica',
     url: 'panorama_tomislavgrad_2.html#glizicaMlin'
   },
+  {
+    center: [17.176775523281634, 43.66570343497966],
+    name: 'Mali samograd',
+    url: 'panorama_tomislavgrad_2.html#maliSamograd'
+  },
+  {
+    center: [17.299634881518827,43.68405773083877],
+    name: 'Mandina gradina',
+    url: 'panorama_tomislavgrad_2.html#mandinaGradina'
+  },
   //{
   //  center: [17.226113, 43.718290],
   //  name: 'Spomenik kralju Tomislavu',

@@ -8,7 +8,7 @@ document.onreadystatechange = function() {
 document.getElementById('back-href').setAttribute('href', 'index.html'+localStorage.hash)
 if (window.location.hash == '#mesihovina') {
   var viewer = new PhotoSphereViewer.Viewer({
-    panorama: '../assets/360/NO/maliSamograd2-filled.jpg',
+    panorama: '../assets/360/crkvaMesihovina.jpg',
     container: 'photosphere',
     loadingImg: 'assets/icon/virtual-reality.svg',
     defaultLat: -0.45,
@@ -452,4 +452,38 @@ if (window.location.hash == '#glizicaMlin') {
       location.href = "https://"+marker.id+".com"
     console.log(marker.id)}
   });
+}
+
+
+
+if (window.location.hash == '#maliSamograd') {
+  var viewer = new PhotoSphereViewer.Viewer({
+    panorama: '../assets/360/maliSamograd.jpg',
+    container: 'photosphere',
+    loadingImg: 'assets/icon/virtual-reality.svg',
+    defaultLat: -0.45,
+    defaultLong: 2.15,
+    touchmoveTwoFingers: false,
+    mousewheelCtrlKey: false,
+    moveInertia: true,
+  });
+  
+  var markersPlugin = viewer.getPlugin(PhotoSphereViewer.MarkersPlugin);
+}
+
+
+
+if (window.location.hash == '#mandinaGradina') {
+  var viewer = new PhotoSphereViewer.Viewer({
+    panorama: '../assets/360/mandinaGradina.jpg',
+    container: 'photosphere',
+    loadingImg: 'assets/icon/virtual-reality.svg',
+    defaultLat: -0.45,
+    defaultLong: 2.15,
+    touchmoveTwoFingers: false,
+    mousewheelCtrlKey: false,
+    moveInertia: true,
+  });
+  
+  var markersPlugin = viewer.getPlugin(PhotoSphereViewer.MarkersPlugin);
 }

@@ -114,8 +114,8 @@
 
 /* Hamburger menu */
 .bar1, .bar2, .bar3 {
-  width: 30px;
-  height: 2.8px;
+  width: 25px;
+  height: 2px;
   background-color: #fff;
   margin: 5px 0;
   transition: 0.4s;
@@ -123,8 +123,8 @@
 
 #div-toggle {
   /*background-color: rgb(176, 42, 51);*/
-  background-color: #cdcdcd;
-  padding: 1rem;
+  background-color: #ff6e5e;
+  padding: 0.8rem;
   border-radius: 100%;
 }
 
@@ -236,6 +236,16 @@
   transform: translate(-50%);
   z-index: 100000000000;
 }
+.logo-font {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 500;
+  
+}
+.text-font {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: small;
+}
 
 @media (min-width: 575.99px) {
   .logo {
@@ -308,10 +318,6 @@
   transform: scale(	1.2) translate(-40%);
 }
 
-.welcome-text {
-  font-family: "Times New Roman", Times, serif;
-}
-
 
 .overflow-hidden {
   overflow: hidden !important; 
@@ -327,8 +333,14 @@
 
 .bg-tomislav {
   /*background-color:  rgb(176, 42, 51);*/
-  background-color: #cdcdcd;
+  background-color: #ff6e5e;
   height: 100px;
+}
+
+@media(max-width: 575.99px) {
+  .bg-tomislav {
+    height: 60px;
+  }
 }
 
 .nav-link {
@@ -350,8 +362,7 @@
   cursor: default;
 }
 .activate {
-  border-bottom: 4px solid rgb(176, 42, 51) !important;
-  z-index: 10;
+ background-color: #ffd071 !important;
 }
 .activate-assoc {
   border-bottom: 4px solid rgb(176, 42, 51) !important;
@@ -521,7 +532,8 @@
 }
 
 .line-height-small {
-  line-height: normal;
+  line-height: small;
+  font-size: small;
 }
 
 
@@ -653,12 +665,9 @@
 }
 
 .bg-warn {
-  background-color: #ffd581 !important;
+  background-color: #d4d6d4;
 }
-.bg-warn-hover:hover button  {
-  background-color: rgb(255, 197, 91) !important;
-}
-.bg-warn-hover:hover {
+.bg-warn:hover {
   background-color: rgb(255, 197, 91);
 }
 
@@ -764,10 +773,10 @@
 	color: #fff;
 }
 .btn-arrow-slide-cont--orange .btn-arrow-slide-circle{
-	background: #ffc107;
+	background: #ffd071;
 }
 .btn-arrow-slide-cont--orange .btn-arrow-slide-text{
-	color: #ffc107;
+	color: #ffd071;
 }
 .btn-back {
   width: 100%;
@@ -780,4 +789,8 @@
 }
 .btn-back:hover {
   background-color: rgb(255, 197, 91);
+}
+
+.box-shadow {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 10px;
 }
