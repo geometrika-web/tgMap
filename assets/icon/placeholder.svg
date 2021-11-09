@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    id="Capa_1"
    x="0px"
    y="0px"
-   viewBox="0 0 59.709999 20.000001"
+   viewBox="0 0 24 30.000002"
    xml:space="preserve"
    sodipodi:docname="placeholder.svg"
-   width="59.709999"
-   height="20"
+   width="24"
+   height="30"
    inkscape:export-filename="C:\Users\Korisnik\Documents\Geometrika\Karta_Tomislavgrad\webKarta\assets\icon\placeholder.png"
    inkscape:export-xdpi="96.466255"
    inkscape:export-ydpi="96.466255"
-   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"><metadata
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"><metadata
    id="metadata41"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
    id="defs39"><inkscape:path-effect
      effect="spiro"
      id="path-effect850"
      is_visible="true"
      lpeversion="1" /></defs><sodipodi:namedview
-   pagecolor="#ffffff"
+   pagecolor="#ff8181"
    bordercolor="#666666"
    borderopacity="1"
    objecttolerance="10"
@@ -44,81 +44,80 @@
    fit-margin-left="0"
    fit-margin-right="0"
    fit-margin-bottom="0"
-   inkscape:zoom="2.8710938"
-   inkscape:cx="-37.16159"
-   inkscape:cy="69.891199"
+   inkscape:zoom="11.484375"
+   inkscape:cx="-13.627211"
+   inkscape:cy="18.068027"
    inkscape:window-x="-9"
    inkscape:window-y="-9"
    inkscape:window-maximized="1"
    inkscape:current-layer="Capa_1"
    inkscape:document-rotation="0"
-   inkscape:object-paths="true" />
-<path
-   style="fill:#fd003a;stroke-width:0.0390627"
-   d="m 30.019012,0.13157552 c -3.878989,0 -7.031258,3.15234768 -7.031258,7.03125668 0,1.3125004 0.363361,2.5898805 1.054728,3.6914568 l 5.499889,9.000549 c 0.09383,0.152341 0.234453,0.246134 0.398554,0.269575 0.222579,0.03506 0.46879,-0.0586 0.597658,-0.281247 l 5.515631,-9.082671 c 0.656172,-1.078088 0.996054,-2.3319963 0.996054,-3.5976628 0,-3.878909 -3.152267,-7.03125668 -7.031256,-7.03125668 z m 0,10.54689148 c -1.968675,0 -3.515629,-1.5937541 -3.515629,-3.5156348 0,-1.9336351 1.581995,-3.515622 3.515629,-3.515622 1.933635,0 3.515628,1.5819869 3.515628,3.515622 0,1.910161 -1.523477,3.5156348 -3.515628,3.5156348 z"
-   id="path2" />
-<path
-   style="fill:#e50027;stroke-width:0.0390627"
-   d="M 30.019012,0.13157552 V 3.6472102 c 1.933635,0 3.515628,1.5819869 3.515628,3.515622 0,1.910161 -1.523477,3.5156348 -3.515628,3.5156348 v 9.452779 c 0.199962,0.0048 0.405587,-0.09121 0.519533,-0.28808 l 5.51563,-9.082671 c 0.656211,-1.078088 0.996093,-2.3319963 0.996093,-3.5976628 0,-3.878909 -3.152267,-7.03125668 -7.031256,-7.03125668 z"
-   id="path4" />
+   inkscape:object-paths="true"
+   inkscape:pagecheckerboard="0" />
+
+
 <g
    id="g6"
-   transform="translate(-76,-481.9737)">
+   transform="translate(-101.53464,-482.1052)">
 </g>
 <g
    id="g8"
-   transform="translate(-76,-481.9737)">
+   transform="translate(-101.53464,-482.1052)">
 </g>
 <g
    id="g10"
-   transform="translate(-76,-481.9737)">
+   transform="translate(-101.53464,-482.1052)">
 </g>
 <g
    id="g12"
-   transform="translate(-76,-481.9737)">
+   transform="translate(-101.53464,-482.1052)">
 </g>
 <g
    id="g14"
-   transform="translate(-76,-481.9737)">
+   transform="translate(-101.53464,-482.1052)">
 </g>
 <g
    id="g16"
-   transform="translate(-76,-481.9737)">
+   transform="translate(-101.53464,-482.1052)">
 </g>
 <g
    id="g18"
-   transform="translate(-76,-481.9737)">
+   transform="translate(-101.53464,-482.1052)">
 </g>
 <g
    id="g20"
-   transform="translate(-76,-481.9737)">
+   transform="translate(-101.53464,-482.1052)">
 </g>
 <g
    id="g22"
-   transform="translate(-76,-481.9737)">
+   transform="translate(-101.53464,-482.1052)">
 </g>
 <g
    id="g24"
-   transform="translate(-76,-481.9737)">
+   transform="translate(-101.53464,-482.1052)">
 </g>
 <g
    id="g26"
-   transform="translate(-76,-481.9737)">
+   transform="translate(-101.53464,-482.1052)">
 </g>
 <g
    id="g28"
-   transform="translate(-76,-481.9737)">
+   transform="translate(-101.53464,-482.1052)">
 </g>
 <g
    id="g30"
-   transform="translate(-76,-481.9737)">
+   transform="translate(-101.53464,-482.1052)">
 </g>
 <g
    id="g32"
-   transform="translate(-76,-481.9737)">
+   transform="translate(-101.53464,-482.1052)">
 </g>
 <g
    id="g34"
-   transform="translate(-76,-481.9737)">
+   transform="translate(-101.53464,-482.1052)">
 </g>
-</svg>
+<path
+   d="M 11.741497,2.7863945 A 10,10 0 0 0 1.7414966,12.786395 c 0,6.675 7.6875,15 10.0000004,15 2.3125,0 10,-8.325 10,-15 a 10,10 0 0 0 -10,-10.0000005 z m 0,15.0000005 a 5,5 0 1 1 5,-5 5,5 0 0 1 -5,5 z"
+   fill="#464646"
+   id="path4-1"
+   style="fill:#c3c3c3;fill-opacity:1;stroke-width:1.25" /></svg>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="svg"
+   version="1.1"
+   width="32.275761"
+   height="40"
+   viewBox="0 0 32.275763 39.999999"
+   sodipodi:docname="turistickaPonuda_pin.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs11" />
+  <sodipodi:namedview
+     id="namedview9"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="7.4"
+     inkscape:cx="32.905405"
+     inkscape:cy="35.608108"
+     inkscape:window-width="1920"
+     inkscape:window-height="1013"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svgg" />
+  <g
+     id="svgg"
+     transform="translate(-5.6033758,-31.174838)">
+    <path
+       d="m 21.741255,31.864238 c -8.531962,-1e-6 -15.4484815,6.916523 -15.4484792,15.448484 0,10.311859 11.8760172,23.172716 15.4484792,23.172716 3.572461,0 15.44848,-12.860857 15.44848,-23.172716 5e-6,-8.531963 -6.916518,-15.448485 -15.44848,-15.448484 z"
+       fill="#464646"
+       id="path4-6"
+       style="fill:#ff7262;fill-opacity:1;stroke:#fcfcfc;stroke-width:1.3788;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:nodetypes="ssscs" />
+    <path
+       d="m 23.741255,40.774837 h -3.999999 l -2,2.4 h -2.4 c -0.42432,0 -0.83128,0.16856 -1.13136,0.46864 -0.30008,0.30008 -0.46864,0.70704 -0.46864,1.13136 v 7.199998 c 0,0.42432 0.16856,0.83128 0.46864,1.13136 0.30008,0.30008 0.70704,0.46864 1.13136,0.46864 h 12.799999 c 0.42432,0 0.83128,-0.16856 1.13136,-0.46864 0.30008,-0.30008 0.46864,-0.70704 0.46864,-1.13136 v -7.199998 c 0,-0.42432 -0.16856,-0.83128 -0.46864,-1.13136 -0.30008,-0.30008 -0.70704,-0.46864 -1.13136,-0.46864 h -2.4 z"
+       stroke="#ffffff"
+       stroke-width="1.6"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       id="path4"
+       style="fill:#ff7262;fill-opacity:1" />
+    <path
+       d="m 21.741255,50.374835 c 1.32552,0 2.4,-1.074478 2.4,-2.399998 0,-1.32552 -1.07448,-2.4 -2.4,-2.4 -1.325519,0 -2.399999,1.07448 -2.399999,2.4 0,1.32552 1.07448,2.399998 2.399999,2.399998 z"
+       stroke="#ffffff"
+       stroke-width="1.6"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       id="path6"
+       style="fill:#ff7262;fill-opacity:1" />
+  </g>
+</svg>

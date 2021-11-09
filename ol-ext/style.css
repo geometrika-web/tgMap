@@ -117,10 +117,10 @@ i.icss-github-corner:after {
 	22%,100%{-webkit-transform:translate(0,0);transform:translate(0,0)}
 }
 /**/
-body {
+/*body {
   font-family: 'Lucida Grande',Verdana,Geneva,Lucida,Arial,Helvetica,sans-serif;
 	font-size: 16px;
-}
+}*/
 a, i, b {
   color: #337ab7;
 	text-decoration: none;

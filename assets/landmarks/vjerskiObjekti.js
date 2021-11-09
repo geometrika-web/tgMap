@@ -19,7 +19,8 @@ var vjerskiObjekti = {
        "img4": "/assets/img/CrkvaGospeKraljiceHrvata3.jpg",
        "img5": "/assets/img/CrkvaGospeKraljiceHrvata4.jpg",
        "zoom": "15",
-       "id": "landmarks"
+       "id": "landmarks",
+       "pin": "/assets/icon/landmarks/catolic.svg"
       }
      },
      {
@@ -40,7 +41,8 @@ var vjerskiObjekti = {
        "img4": "/assets/img/crkvaPrecistogSrcaMarijina3.jpg",
        "img5": "/assets/img/crkvaPrecistogSrcaMarijina4.jpg",
        "zoom": "15",
-       "id": "landmarks"
+       "id": "landmarks",
+       "pin": "/assets/icon/landmarks/catolic.svg"
       }
      },
      {
@@ -61,7 +63,8 @@ var vjerskiObjekti = {
        "img4": "/assets/img/CrkvaSvetogStjepana3.jpg",
        "img5": "/assets/img/CrkvaSvetogStjepana4.jpg",
        "zoom": "15",
-       "id": "landmarks"
+       "id": "landmarks",
+       "pin": "/assets/icon/landmarks/catolic.svg"
       }
      },
      {
@@ -82,7 +85,8 @@ var vjerskiObjekti = {
        "img4": "/assets/img/CrkvaPresvetogSrcaIsusova3.jpg",
        "img5": "/assets/img/CrkvaPresvetogSrcaIsusova4.jpg",
        "zoom": "15",
-       "id": "landmarks"
+       "id": "landmarks",
+       "pin": "/assets/icon/landmarks/catolic.svg"
       }
      },
      {
@@ -103,7 +107,8 @@ var vjerskiObjekti = {
        "img4": "/assets/img/CrkvaSvetogAnte3.jpg",
        "img5": "/assets/img/CrkvaSvetogAnte4.jpg",
        "zoom": "15",
-       "id": "landmarks"
+       "id": "landmarks",
+       "pin": "/assets/icon/landmarks/catolic.svg"
       }
      },
      {
@@ -124,7 +129,8 @@ var vjerskiObjekti = {
        "img4": "/assets/img/CrkvaSvetogAntePadovanskog3.jpg",
        "img5": "/assets/img/CrkvaSvetogAntePadovanskog4.jpg",
        "zoom": "15",
-       "id": "landmarks"
+       "id": "landmarks",
+       "pin": "/assets/icon/landmarks/catolic.svg"
       }
      },
      {
@@ -145,7 +151,8 @@ var vjerskiObjekti = {
        "img4": "/assets/img/crkvaBorcani3.jpg",
        "img5": "/assets/img/crkvaBorcani4.jpg",
        "zoom": "15",
-       "id": "landmarks"
+       "id": "landmarks",
+       "pin": "/assets/icon/landmarks/catolic.svg"
       }
      },
      {
@@ -166,7 +173,8 @@ var vjerskiObjekti = {
        "img4": "/assets/img/CrkvaUznesenjaBlaženeDjeviceMarije3.jpg",
        "img5": "/assets/img/CrkvaUznesenjaBlaženeDjeviceMarije4.jpg",
        "zoom": "15",
-       "id": "landmarks"
+       "id": "landmarks",
+       "pin": "/assets/icon/landmarks/catolic.svg"
       }
      },
      {
@@ -187,7 +195,8 @@ var vjerskiObjekti = {
        "img4": "/assets/img/DžamijaDilaveri3.jpg",
        "img5": "/assets/img/DžamijaDilaveri4.jpg",
        "zoom": "15",
-       "id": "landmarks"
+       "id": "landmarks",
+       "pin": "/assets/icon/landmarks/islam.svg"
       }
      },
      {
@@ -208,7 +217,8 @@ var vjerskiObjekti = {
        "img4": "/assets/img/DžamijaMokronoge3.jpg",
        "img5": "/assets/img/DžamijaMokronoge4.jpg",
        "zoom": "19",
-       "id": "landmarks"
+       "id": "landmarks",
+       "pin": "/assets/icon/landmarks/islam.svg"
       }
      },
      {
@@ -229,7 +239,8 @@ var vjerskiObjekti = {
        "img4": "/assets/img/DžamijaOplećani3.jpg",
        "img5": "/assets/img/DžamijaOplećani4.jpg",
        "zoom": "15",
-       "id": "landmarks"
+       "id": "landmarks",
+       "pin": "/assets/icon/landmarks/islam.svg"
       }
      },
      {
@@ -250,7 +261,8 @@ var vjerskiObjekti = {
        "img4": "/assets/img/DžamijaŠujica3.jpg",
        "img5": "/assets/img/DžamijaŠujica4.jpg",
        "zoom": "15",
-       "id": "landmarks"
+       "id": "landmarks",
+       "pin": "/assets/icon/landmarks/islam.svg"
       }
      }
     ]

@@ -926,7 +926,6 @@ function zoomTo(i) {
 // Load list from GeoJSON file
 coord = []
 landmarksZoom = []
-document.getElementById('landmarksAll').style.display = 'none'
 window.onload = function() {
   // Load list of all landmarks from GeoJSON file
   //$.getJSON("assets/landmarks/landmarks.geojson", function(data) {
@@ -934,7 +933,8 @@ window.onload = function() {
       console.log(landmarksData.features[i])
       var landmarkAll = document.createElement('button')
       landmarkAll.id = i
-      landmarkAll.classList.add("list-group-item", "list-group-item-action", "no-outline", "pl-5", "landmarkList-height", "scale-animation-right", "d-flex")
+      landmarkAll.classList.add("list-group-item", "list-group-item-action", "no-outline", "mt-4", "pl-5", "landmarkList-height", "scale-animation-right", "d-flex", "text-font")
+      landmarkAll.classList.add(landmarksData.features[i].properties.id)
       landmarkAll.onclick = function() { zoomTo(this.id); };
       var parent = document.getElementById('landmark-name')
       parent.appendChild(landmarkAll)
@@ -947,9 +947,28 @@ window.onload = function() {
       landmarkAll.appendChild(landmarkImg)
 
       var landmarkText = document.createElement('div')
-      landmarkText.classList.add("col-8", "center-allLandmarks-text")
-      landmarkText.innerText = landmarksData.features[i].properties.name
+      landmarkText.classList.add("pt-2", "pl-4")
       landmarkAll.appendChild(landmarkText)
+      
+      var landmarkPlace = document.createElement('div')
+      var landmarkName = document.createElement('div')
+      var landmarkType = document.createElement('img')
+      var landmark360 = document.createElement('img')
+      landmarkPlace.innerText = landmarksData.features[i].properties.place
+      landmarkName.innerText = landmarksData.features[i].properties.name
+      landmarkType.src = landmarksData.features[i].properties.thumb
+      landmarkPlace.classList.add('menu-btn', 'text-c3')
+      landmarkName.classList.add('text-font')
+      landmarkType.classList.add('kategorije-thumb')
+      landmark360.classList.add('kategorije-thumb')
+      landmarkText.appendChild(landmarkPlace)
+      landmarkText.appendChild(landmarkName)
+      landmarkText.appendChild(landmarkType)
+      var i360 = landmarksData.features[i].properties.i360
+      if(i360 == "1") {
+        landmark360.src = "/assets/icon/360_icon.svg"
+        landmarkText.appendChild(landmark360)
+      }
     } 
   //})
   //End for landmarks
@@ -1136,7 +1155,32 @@ window.onload = function() {
     }
   })
 }
+
 //Onload End
+
+//Kontrola popisa znamenitosti
+var kultura = [], priroda = [], turizam = [];
+kulturaFilter = function (){
+  console.log(priroda)
+  if (kultura == [] && priroda == [] && turizam == []) {
+    var kultura = document.querySelectorAll('.kultura');
+    var priroda = document.querySelectorAll('.priroda');
+    var turizam = document.querySelectorAll('.turizam');
+    console.log(priroda)
+  }
+  for (let item1 of priroda) {
+    item1.classList.add('d-none')
+  }
+  for (let item2 of turizam) {
+    item2.classList.add('d-none')
+  }
+  for (let item3 of kultura) {
+    item3.classList.add('d-block')
+  }
+}
+
+
+
 var toursDesc = [], weekendDestinationsDesc = [], assocDesc = [], assocCoord = [];
 //Landmarks Pins
 var vectorPinSource = new ol.source.Vector({
@@ -1146,12 +1190,30 @@ var vectorPinSource = new ol.source.Vector({
   //projection: 'EPSG:3857',
   //format: new ol.format.GeoJSON(),
 });
-var pinStyle = new ol.style.Style({
-  image: new ol.style.Icon({
-    src: 'assets/icon/pin.svg',
-    opacity: 1,
+var vjerskiPinSource = new ol.source.Vector({
+  features: (new ol.format.GeoJSON()).readFeatures(vjerskiObjekti, {
+    featureProjection: 'EPSG:3857'
+  }),
+  //projection: 'EPSG:3857',
+  //format: new ol.format.GeoJSON(),
+});
+
+var pinStyle = function(feature, resolution) {
+  return (new ol.style.Style({
+    image: new ol.style.Icon({
+      src: feature.get('pin'),
+      opacity: 1,
+    })
   })
-})
+)}
+var vjerskiPinStyle = function(feature, resolution) {
+  return (new ol.style.Style({
+    image: new ol.style.Icon({
+      src: feature.get('pin'),
+      opacity: 1,
+    })
+  })
+)}
 
 var vectorPin = new ol.layer.Vector({
   //minZoom: 11.5,
@@ -1162,6 +1224,16 @@ var vectorPin = new ol.layer.Vector({
   //renderOrder: ol.ordering.yOrdering(),
   style: pinStyle,
 });
+var vjerskiPin = new ol.layer.Vector({
+  //minZoom: 11.5,
+  name: 'vjerski',
+  source: vjerskiPinSource,
+  declutter: false,
+  // y ordering
+  //renderOrder: ol.ordering.yOrdering(),
+  style: vjerskiPinStyle,
+});
+map.addLayer(vjerskiPin)
 map.addLayer(vectorPin)
 // Landmarks
 var vectorSource = new ol.source.Vector({
@@ -1173,6 +1245,7 @@ var vectorSource = new ol.source.Vector({
   //format: new ol.format.GeoJSON(),
 });
 
+
 var vector = new ol.layer.Vector({
   minZoom: 10.5,
   name: 'landmarks',
@@ -1180,7 +1253,7 @@ var vector = new ol.layer.Vector({
   declutter: true,
   // y ordering
   //renderOrder: ol.ordering.yOrdering(),
-  style: getFeatureStyle
+  style:  function (feature, resolution) { return getFeatureStyle(feature, resolution, false); },
 });
 
 var vjerskiObjektiSource = new ol.source.Vector({
@@ -1199,7 +1272,7 @@ var vjerskiObjekti = new ol.layer.Vector({
   declutter: true,
   // y ordering
   //renderOrder: ol.ordering.yOrdering(),
-  style: getFeatureStyle
+  style: function (feature, resolution) { return getFeatureStyle(feature, resolution, false); },
 });
 //var vectorSourceTour = new ol.source.Vector({
 //  url: 'assets/tours/tour2.geojson',
@@ -1224,6 +1297,7 @@ var vjerskiObjekti = new ol.layer.Vector({
 map.addLayer(vjerskiObjekti);
 map.addLayer(vector);
 vector.setZIndex(15)
+vjerskiObjekti.setZIndex(1)
 //vectorSource.refresh()
 
 
@@ -1288,7 +1362,7 @@ var assocs = new ol.layer.Vector({
   //renderOrder: ol.ordering.yOrdering(),
   style: getFeatureStyleAssoc,
 });
-map.addLayer(assocs)
+//map.addLayer(assocs)
 
 // localStorage
 var zoom = map.getView().getZoom()
@@ -1323,18 +1397,18 @@ var allLandmarksMenu = false
 var msgDisplay = document.getElementById('msg').style.display
 var landmarksAllDisplay = document.getElementById('landmarksAll').style.display
 document.getElementById('meet').style.display = 'none'
-function allLandmarks() {
-  deselect()
-  if(allLandmarksMenu == false) {
-    allLandmarksMenu = true
-    document.getElementById('msg').style.display = 'none'
-    document.getElementById('landmarksAll').style.display = 'block'
-  } else {
-    allLandmarksMenu = 0
-    document.getElementById('msg').style.display = 'block'
-    document.getElementById('landmarksAll').style.display = 'none'
-  }
-}
+//function allLandmarks() {
+//  deselect()
+//  if(allLandmarksMenu == false) {
+//    allLandmarksMenu = true
+//    document.getElementById('msg').style.display = 'none'
+//    document.getElementById('landmarksAll').style.display = 'block'
+//  } else {
+//    allLandmarksMenu = 0
+//    document.getElementById('msg').style.display = 'block'
+//    document.getElementById('landmarksAll').style.display = 'none'
+//  }
+//}
 
 var meet = 1
 document.getElementById('routes').style.display = 'none'
@@ -1356,7 +1430,6 @@ function meetTg() {
     }
     document.getElementById('msg').style.display = 'block'
     document.getElementById('meet').style.display = 'block'
-    document.getElementById('landmarksAll').style.display = 'none'
     document.getElementById('routes').style.display = 'none'
     document.getElementById('assoc').style.display = 'none'
     var activate = document.getElementsByClassName('activate')
@@ -1388,7 +1461,6 @@ function routes() {
     document.getElementById('msg').style.display = 'none'
     document.getElementById('meet').style.display = 'none'
     document.getElementById('assoc').style.display = 'none'
-    document.getElementById('landmarksAll').style.display = 'none'
     document.getElementById('routes').style.display = 'block'
     var activate = document.getElementsByClassName('activate')
     while(activate.length){
@@ -1433,7 +1505,6 @@ function assoc() {
     document.getElementById('msg').style.display = 'none'
     document.getElementById('meet').style.display = 'none'
     document.getElementById('routes').style.display = 'none'
-    document.getElementById('landmarksAll').style.display = 'none'
     document.getElementById('assoc').style.display = 'block'    
     var activate = document.getElementsByClassName('activate')
     while(activate.length){
@@ -1450,11 +1521,7 @@ function assoc() {
 function backFromMeet () {
   deselect()
   if(meet == 1) {
-    if(allLandmarksMenu == true) {
-      document.getElementById('landmarksAll').style.display = 'block'
-    } else {
       document.getElementById('msg').style.display = 'block'
-    }
   } else if(meet == 2) {
       document.getElementById('routes').style.display = 'block'
   } else if(meet == 3) {
@@ -1485,7 +1552,6 @@ features = select.getFeatures().on(['add','remove'], function(e) {
       //var info = $("#select").html("<p>Selection:</p>");
       var feature = e.element;
       document.getElementById('meet').style.display = 'block';
-      document.getElementById('landmarksAll').style.display = 'none';
       document.getElementById('landmark').style.display = 'inline-block';
       document.getElementById('image').style.display = 'inline-block';
       document.getElementById('landmark-about').style.display = 'inline-block';
@@ -1506,11 +1572,8 @@ features = select.getFeatures().on(['add','remove'], function(e) {
     else {
       //$("#select").html("<p>Select an image.</p>");
       if(meet==1) {
-        if(!allLandmarksMenu) {
+
           document.getElementById('msg').style.display = 'block';
-        } else {
-          document.getElementById('landmarksAll').style.display = 'block';
-        }
       }
       document.getElementById('meet').style.display = 'none';
       document.getElementById('landmark').style.display = 'none';
@@ -1554,11 +1617,8 @@ features = select.getFeatures().on(['add','remove'], function(e) {
       else {
         //$("#select").html("<p>Select an image.</p>");
         if(meet==1) {
-          if(!allLandmarksMenu) {
             document.getElementById('msg').style.display = 'block';
-          } else {
-            document.getElementById('landmarksAll').style.display = 'block';
-          }
+
         }
         document.getElementById(id+'-text').style.display = 'block'
         getAssoc(id)
@@ -1847,12 +1907,14 @@ select360.getFeatures().on(['add','remove'], function(e) {
 //      //extent: [xE, yS, xW, yN]
 //    })
 //  });
-
-
+if(isMobile){
+  document.getElementById("logo").classList.add("logo-color")
+}
 function toggle(x) {
   x.classList.toggle("change");
   $("#wrapper").toggleClass("toggled")
   $("#logo").toggleClass("logo-toggle")
+  $("#logo").toggleClass("logo-color")
   //document.getElementById('div-toggle').classList.toggle('bg-toggle');
 }
 
@@ -2309,11 +2371,11 @@ function zoomOut() {
 
 
 // Dodavanje slika na kartu iz html-a
-var vienna = new ol.Overlay({
-  position: [1917126.71, 5421738.68],
-  element: document.getElementById('vienna'),
-});
-map.addOverlay(vienna);
+//var vienna = new ol.Overlay({
+//  position: [1917126.71, 5421738.68],
+//  element: document.getElementById('vienna'),
+//});
+//map.addOverlay(vienna);
 if (currZoom < 11.5 && zastave == true) {
   vector.setVisible(false)
   assocs.setVisible(false)

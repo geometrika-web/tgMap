@@ -6,7 +6,7 @@
    y="0px"
    viewBox="0 0 35.156288 50.000003"
    xml:space="preserve"
-   sodipodi:docname="placeholder2 – kopija.svg"
+   sodipodi:docname="placeholder2_gray.svg"
    width="35.156288"
    height="50"
    inkscape:export-filename="C:\Users\Korisnik\Documents\Geometrika\Karta_Tomislavgrad\webKarta\assets\icon\placeholder2.png"
@@ -45,7 +45,7 @@
    fit-margin-right="0"
    fit-margin-bottom="0"
    inkscape:zoom="3.6203867"
-   inkscape:cx="108.13762"
+   inkscape:cx="108.27573"
    inkscape:cy="13.120145"
    inkscape:window-x="-9"
    inkscape:window-y="-9"
@@ -55,13 +55,10 @@
    inkscape:object-paths="true"
    inkscape:pagecheckerboard="0" />
 <path
-   style="fill:#4d4d4d;stroke-width:0.0976568"
+   style="fill:#c3c3c3;stroke-width:0.0976568;fill-opacity:1"
    d="M 17.578146,0 C 7.880673,0 0,7.8808697 0,17.578142 c 0,3.281251 0.908403,6.474702 2.63682,9.228643 l 13.749723,22.501374 c 0.234575,0.380852 0.586133,0.615335 0.996385,0.673937 0.556448,0.08765 1.171975,-0.1465 1.494145,-0.703117 L 32.666152,26.5723 c 1.64043,-2.69522 2.490135,-5.829991 2.490135,-8.994158 C 35.156287,7.8808697 27.275619,0 17.578146,0 Z m 0,26.36723 c -4.921688,0 -8.789073,-3.984386 -8.789073,-8.789088 0,-4.834088 3.954987,-8.7890547 8.789073,-8.7890547 4.834088,0 8.78907,3.9549667 8.78907,8.7890547 0,4.775403 -3.808692,8.789088 -8.78907,8.789088 z"
    id="path2" />
-<path
-   style="fill:#4d4d4d;stroke-width:0.0976568"
-   d="m 17.578146,0 v 8.7890873 c 4.834088,0 8.78907,3.9549667 8.78907,8.7890547 0,4.775403 -3.808692,8.789088 -8.78907,8.789088 v 23.631949 c 0.499905,0.012 1.013967,-0.228025 1.298832,-0.7202 L 32.666054,26.5723 c 1.640528,-2.69522 2.490233,-5.829991 2.490233,-8.994158 C 35.156287,7.8808697 27.275619,0 17.578146,0 Z"
-   id="path4" />
+
 <g
    id="g6"
    transform="translate(-98.987754,-482.10528)">

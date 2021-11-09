@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="icons"
+   viewBox="0 0 32.275757 40"
+   version="1.1"
+   sodipodi:docname="prirodneLjepote_pin.svg"
+   width="32.275757"
+   height="40"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs53" />
+  <sodipodi:namedview
+     id="namedview51"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="8.7058824"
+     inkscape:cx="34.861486"
+     inkscape:cy="29.577703"
+     inkscape:window-width="1920"
+     inkscape:window-height="1013"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="icons" />
+  <title
+     id="title2" />
+  <path
+     d="M 16.137879,0.68940002 C 7.6059171,0.68939922 0.68939762,7.6059227 0.68940002,16.137884 c 0,10.311857 11.87601698,23.172716 15.44847898,23.172716 3.572461,0 15.448478,-12.860859 15.448478,-23.172716 6e-6,-8.5319621 -6.916517,-15.44848478 -15.448478,-15.44848398 z"
+     fill="#464646"
+     id="path4"
+     style="fill:#4ca6a8;fill-opacity:1;stroke:#fcfcfc;stroke-width:1.3788;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     sodipodi:nodetypes="ssscs" />
+  <path
+     d="m 12.972973,8.4215571 3.199999,6.3999989 4,-3.999999 4,11.999999 H 8.1729731 Z"
+     stroke="#ffffff"
+     stroke-width="1.6"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="path4-9"
+     style="fill:#4ca6a8;fill-opacity:1" />
+  <path
+     d="m 9.7369729,18.085556 c 2.0960001,-1.256 4.1919991,-1.144 6.2879991,0.336 2.192,1.552 4.392,1.6 6.584,0.152"
+     stroke="#ffffff"
+     stroke-width="1.6"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="path6"
+     style="fill:#4ca6a8;fill-opacity:1" />
+</svg>

@@ -8,6 +8,10 @@
     
  }*/
 
+ body {
+   font-family: 'Open Sans', sans-serif;;
+ } 
+
  @media (max-width: 575.99px) {
   .mobile-height {
     height: 100%;
@@ -35,8 +39,8 @@
  }
 
  .center-toggle {
-   top: 50px;
-   left: 1rem;
+   top: 55px;
+   left:3rem;
    transform: translate(0, -50%);
  }
 #sidebar-wrapper {
@@ -116,23 +120,15 @@
 .bar1, .bar2, .bar3 {
   width: 25px;
   height: 2px;
-  background-color: #fff;
+  background-color: #000;
   margin: 5px 0;
   transition: 0.4s;
 }
 
-#div-toggle {
-  /*background-color: rgb(176, 42, 51);*/
-  background-color: #ff6e5e;
+#menu-toggle {
+  background-color: #fff;
   padding: 0.8rem;
   border-radius: 100%;
-}
-
-/*.bg-toggle {
-  background-color: rgb(176, 42, 51, 0.7);
-}*/
-
-#menu-toggle {
   transition: ease-in-out 0.2s;
 }
 
@@ -142,64 +138,64 @@
 }
 
 .change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-4px, -2px);
-  transform: rotate(-45deg) translate(-4px, -2px);
-  background-color: #fff;
-  width: 21px;
+  -webkit-transform: rotate(-45deg) translate(-4px, 2px);
+  transform: rotate(-45deg) translate(-4px, 2px);
+  background-color: #000;
+  width: 10px;
 }
 
 .change .bar2 {opacity: 1;}
 
 .change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-4px, 2px);
-  transform: rotate(45deg) translate(-4px, 2px);
-  background-color: #fff;
-  width: 21px;
+  -webkit-transform: rotate(45deg) translate(-4px, -2px);
+  transform: rotate(45deg) translate(-4px, -2px);
+  background-color: #000;
+  width: 10px;
 }
 
 @media (max-width: 575.99px) {
   .bar1 {
-    width: 20px;
-    height: 2.8px;
-    background-color: #fff;
-    margin: 5px 0;
+    width: 7px;
+    height: 2px;
+    background-color: #000;
+    margin: 3px 0;
     transition: 0.4s;
-    -webkit-transform: rotate(-45deg) translate(-4px, -2px);
-    transform: rotate(-45deg) translate(-4px, -2px);
-    background-color: #fff;
+    -webkit-transform: rotate(-45deg) translate(-4px, 0px);
+    transform: rotate(-45deg) translate(-4px, 0px);
+    background-color: #000;
   }
   .bar2 {
-    width: 30px;
-    height: 2.8px;
-    background-color: #fff;
-    margin: 5px 0;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    margin: 3px 0;
     transition: 0.4s;
     opacity: 1;
   }
   .bar3 {
-    width: 20px;
-    height: 2.8px;
-    background-color: #fff;
-    margin: 5px 0;
+    width: 7px;
+    height: 2px;
+    background-color: #000;
+    margin: 3px 0;
     transition: 0.4s;
-    -webkit-transform: rotate(0deg) translate(-4px, 2px);
-    transform: rotate(45deg) translate(-4px, 2px);
-    background-color: #fff;
+    -webkit-transform: rotate(0deg) translate(-4px, 0px);
+    transform: rotate(45deg) translate(-4px, 0px);
+    background-color: #000;
   }
   .change .bar1 {
-    width: 30px;
+    width: 15px;
     -webkit-transform: rotate(0deg) translate(0px, 0px);
     transform: rotate(0deg) translate(0px, 0px);
-    background-color: #fff;
+    background-color: #000;
   }
   
   .change .bar2 {opacity: 1;}
   
   .change .bar3 {
-    width: 30px;
+    width: 15px;
     -webkit-transform: rotate(0deg) translate(0px, 0px);
     transform: rotate(0deg) translate(0px, 0px);
-    background-color: #fff;
+    background-color: #000;
   }
 }
 
@@ -231,28 +227,26 @@
 }
 .logo {
   top: 10px;
-  height: 80px; 
+  height: 60px; 
   left: 50%; 
   transform: translate(-50%);
   z-index: 100000000000;
 }
-.logo-font {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 500;
-  
-}
 .text-font {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  font-size: small;
+  font-weight: 500;
+  font-size: 15px;
+}
+.logo-color {
+  filter: brightness(0) saturate(100%) invert(100%);
 }
 
 @media (min-width: 575.99px) {
   .logo {
-    top: 0;
-    height: 100px;
+    height: 70px;
+    top: 50px;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%, -50%);
     z-index: 100000000000;
     transition:             left 500ms ease;
         -moz-transition:    left 500ms ease;
@@ -261,11 +255,17 @@
         -webkit-transition: left 500ms ease;
   }
   .logo-toggle {
-    left: 224px;
+    left: 300px;
     z-index: 100000000000;
+    
   }
+  .logo-color {
+    filter: brightness(0) saturate(100%) invert(100%);
+  }
+
   .menu-btn {
-    font-size: small;
+    font-size: 12px;
+    font-weight: 500;
   }
 }
 /* Map css */
@@ -286,6 +286,7 @@
   scale: 2;
 }
 
+
 /*.center {
   position: relative;
   left: 50%;
@@ -294,9 +295,8 @@
 .image-center {
   position: relative;
   left: 50%;
-  transform: translate(-50%);
-  width: 100%;
-  opacity: 100%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .center-y {
   position: relative;
@@ -315,7 +315,7 @@
 }
 
 .image-right:hover {
-  transform: scale(	1.2) translate(-40%);
+  transform: scale(1.2) translate(-40%);
 }
 
 
@@ -333,8 +333,11 @@
 
 .bg-tomislav {
   /*background-color:  rgb(176, 42, 51);*/
-  background-color: #ff6e5e;
   height: 100px;
+}
+
+.p-0-2 {
+  padding: 0 2rem;
 }
 
 /*@media(max-width: 575.99px) {
@@ -361,22 +364,11 @@
   transform: scale(1);
   cursor: default;
 }
+.menuBtn-border {
+  border-bottom: 2px solid #c3c3c3;
+}
 .activate {
- background-color: #ffd071 !important;
-}
-.activate-assoc {
-  border-bottom: 4px solid rgb(176, 42, 51) !important;
-}
-.activate-baselayer {
-  border-bottom: 4px solid rgb(176, 42, 51) !important;
-}
-.activate-layer {
-  border-bottom: 4px solid rgb(176, 42, 51) !important;
-  background-color: #ffc107 !important;
-  color: #fff !important;
-}
-.activate-routes {
-  border-bottom: 4px solid rgb(39, 39, 39) !important;
+ filter: brightness(0) saturate(100%) invert(70%) sepia(92%) saturate(696%) hue-rotate(352deg) brightness(100%) contrast(103%);
 }
 .layer-hover{
   transition: ease-in-out 0.2s;
@@ -656,7 +648,6 @@
   height: 85px;
   width: 85px;
   border-radius: 100px;
-  border: solid 0.5px black;
 }
 
 .landmarkList-height {
@@ -674,6 +665,9 @@
 
 .text-small {
   font-size: small;
+}
+.text-c3 {
+  color: #c3c3c3;
 }
 @media (max-width: 575.99px) {
   .text-small {
@@ -793,4 +787,59 @@
 
 .box-shadow {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 10px;
+}
+
+.bg-povijesneZnamenitosti {
+  height: 100px;
+  background-color: #ff6e5e;
+  padding: 2rem;
+}
+.bg-prirodneLjepote {
+  height: 100px;
+  background-color: #48cfad;
+  padding: 2rem;
+}
+.bg-turistickaPonuda {
+  height: 100px;
+  background-color: #93cbe4;
+  padding: 2rem;
+}
+.bg-vjerskiObjekti {
+  height: 100px;
+  background-color: #ffd071;
+  padding: 2rem;
+}
+.bg-kategorije:hover {
+  opacity: 0.7;
+}
+.kategorije-text {
+  color: white;
+  bottom: 10%;
+}
+#kategorije {
+  text-align: center;
+}
+.kategorije-check {
+  position: absolute;
+  left: 80px;
+  top: 50px;
+  z-index: 1;
+  transition:               left 500ms ease;
+        -moz-transition:    left 500ms ease;
+        -ms-transition:     left 500ms ease;
+        -o-transition:      left 500ms ease;
+        -webkit-transition: left 500ms ease;
+}
+.kategorije-thumb {
+  height: 30px;
+  width: auto;
+}
+.check-kultura {
+  left: 200px;
+}
+.height-50 {
+  width: 30%;
+}
+.d-none {
+  display: none !important;
 }
