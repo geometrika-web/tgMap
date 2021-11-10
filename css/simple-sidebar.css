@@ -11,21 +11,23 @@
  body {
    font-family: 'Open Sans', sans-serif;;
  } 
-
+ .p-0-2-m {
+  padding: 0 2rem;
+}
+.p-0-2 {
+  padding: 0 2rem;
+}
  @media (max-width: 575.99px) {
   .mobile-height {
     height: 100%;
     width: 100%;
   }
-  .p-0-2 {
-    padding: 0 2rem;
+  .p-0-2-m {
+    padding: 0 1rem;
   }
 }
-@media (min-width: 575.99px) {
-  .p-0-2 {
-    padding: 0 2rem;
-  }
-}
+
+
 
 
  .cursor-pointer {
@@ -367,6 +369,7 @@
   font-size: 12px;
   font-weight: 500;
 }
+
 .activate {
  filter: brightness(0) saturate(100%) invert(70%) sepia(92%) saturate(696%) hue-rotate(352deg) brightness(100%) contrast(103%);
 }
@@ -831,7 +834,7 @@
 }
 #kategorije-check {
   position: absolute;
-  left: 85px;
+  left: 20%;
   top: 50px;
   z-index: 1;
   transition:               left 250ms cubic-bezier(.8,-0.33,.88,1.04);
@@ -840,6 +843,10 @@
         -o-transition:      left 250ms cubic-bezier(.8,-0.33,.88,1.04);
         -webkit-transition: left 250ms cubic-bezier(.8,-0.33,.88,1.04);
 }
+.kategorije-hover:hover {
+  opacity: 80%;
+}
+/*brightness(0) saturate(100%) invert(70%) sepia(92%) saturate(696%) hue-rotate(352deg) brightness(100%) contrast(103%);*/
 .check-kultura {
   left: 200px;
 }

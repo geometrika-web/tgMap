@@ -1170,7 +1170,7 @@ allFilter = function (){
     var turizamElement = document.querySelectorAll('.turizam');
     console.log(kulturaElement)
   }
-  document.getElementById('kategorije-check').style.left = 85+"px"
+  document.getElementById('kategorije-check').style.left = 18+"%"
   for (let item1 of prirodaElement) {
     item1.style.display = 'flex'
   }
@@ -1188,7 +1188,7 @@ kulturaFilter = function (){
     var turizamElement = document.querySelectorAll('.turizam');
     console.log(kulturaElement)
   }
-  document.getElementById('kategorije-check').style.left = 185+"px"
+  document.getElementById('kategorije-check').style.left = 43+"%"
   for (let item1 of prirodaElement) {
     item1.style.display = 'none'
   }
@@ -1206,7 +1206,7 @@ prirodaFilter = function (){
     var turizamElement = document.querySelectorAll('.turizam');
     console.log(kulturaElement)
   }
-  document.getElementById('kategorije-check').style.left = 285+"px"
+  document.getElementById('kategorije-check').style.left = 66+"%"
   for (let item1 of prirodaElement) {
     item1.style.display = 'flex'
   }
@@ -1223,7 +1223,7 @@ turizamFilter = function (){
     var prirodaElement = document.querySelectorAll('.priroda');
     var turizamElement = document.querySelectorAll('.turizam');
   }
-  document.getElementById('kategorije-check').style.left = 385+"px"
+  document.getElementById('kategorije-check').style.left = 90+"%"
   for (let item1 of prirodaElement) {
     item1.style.display = 'none'
   }
