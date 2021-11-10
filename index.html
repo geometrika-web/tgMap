@@ -56,31 +56,31 @@
       </nav>
       <div class="container p-0-2 mt-2">
         <div class="row text-small">
-          <div id="btn-meet" onclick="meetTg()" class="menuBtn-border activate col-3 cursor-pointer menu-btn text-c3 text-center no-outline pt-2 pb-2">
+          <div id="btn-meet" onclick="meetTg()" class="menuBtn-border activate col-3 cursor-pointer menu-btn text-c3 text-center no-outline p-0 pt-2 pb-2">
             <img src="assets/icon/placeholder.svg" alt=""><div>Upoznaj</div>
          
           </div>
-          <div id="btn-routes" onclick="routes()" class="menuBtn-border col-3 cursor-pointer menu-btn text-c3 text-center no-outline pt-2 pb-2">
+          <div id="btn-routes" onclick="routes()" class="menuBtn-border col-3 cursor-pointer menu-btn text-c3 text-center no-outline p-0 pt-2 pb-2">
             <img src="assets/icon/route.svg" alt=""><div>Obilasci</div>
           </div>
-          <div id="btn-assoc" onclick="assoc()" class="menuBtn-border col-3 cursor-pointer menu-btn text-c3 text-center no-outline pt-2 pb-2">
+          <div id="btn-assoc" onclick="assoc()" class="menuBtn-border col-3 cursor-pointer menu-btn text-c3 text-center no-outline p-0 pt-2 pb-2">
             <img src="assets/icon/association.svg" alt=""><div>Udruge</div>
         
           </div>
-          <div id="btn-assoc" onclick="assoc()" class="menuBtn-border col-3 cursor-pointer menu-btn text-c3 text-center no-outline pt-2 pb-2">
+          <div id="btn-assoc" onclick="assoc()" class="menuBtn-border col-3 cursor-pointer menu-btn text-c3 text-center no-outline p-0 pt-2 pb-2">
             <img src="assets/icon/business.svg" alt=""><div>Poduzetnici</div>
         
           </div>
         </div>
       </div>
       <!--Meet-->
-      <div class="overflow-auto position-relative sidebar-scroll" id='msg'>
+      <div class="position-relative sidebar-scroll" id='msg'>
         <div id="kategorije" class="container-fluid mt-5 mb-5 cursor-pointer position-relative p-0-2">
           <div class="text-left mb-4 text-font">Kategorije</div>
           <div class="row">
-            <img class="kategorije-check" src="assets/icon/kategorije_Check.svg" alt="">
+            <img id="kategorije-check" src="assets/icon/kategorije_Check.svg" alt="">
             <div class="col-3">
-              <div class="image-center menu-btn">
+              <div class="image-center menu-btn" onclick="allFilter()">
                 <img class="d-inline" src="/assets/icon/kategorije_Sve.svg" alt="">
                 <div class="d-inline d-block mt-2 text-c3">Sve</div>
               </div>
@@ -92,13 +92,13 @@
               </div>
             </div>
             <div class="col-3">
-              <div class="image-center menu-btn">
+              <div class="image-center menu-btn" onclick="prirodaFilter()">
                 <img class="d-inline" src="/assets/icon/kategorije_Priroda.svg" alt="">
                 <div class="d-inline d-block mt-2 text-c3">Priroda</div>
               </div>
             </div>
             <div class="col-3">
-              <div class="image-center menu-btn">
+              <div class="image-center menu-btn" onclick="turizamFilter()">
                 <img class="d-inline" src="/assets/icon/kategorije_Turizam.svg" alt="">
                 <div class="d-inline d-block mt-2 text-c3">Turizam</div>
               </div>
@@ -330,7 +330,7 @@
         <img id="logo" onclick="zoomOut()" src="assets/logo/logo.svg" class="mt-0 mr-0 mb-0 ml-0 p-0 position-absolute logo logo-toggle pointer-cursor"  alt="TomislavGuides">
         <div class="dropdown dropdown-layer position-absolute dropdown-menu-right">
           <button class="bg-transparent border-0 pr-4 pl-5 pt-4 pb-2  no-outline" type="button" id="dropdownMenuButton" data-toggle="" aria-haspopup="true" aria-expanded="false">
-            <img src="/assets/icon/layers.svg" alt="" style="height: 50px;">
+            <img class="mobile-scale" src="/assets/icon/layers.svg" alt="">
           </button>
           <div class="dropdown-menu2 dropdown-menu-right border-0 p-0 top-0" aria-labelledby="dropdownMenuButton">
               <div class='mt-2 ml-3 mt-5 text-left'><small><b class="text-muted">SLOJEVI</b></small></div>
@@ -348,7 +348,10 @@
             </div>
           </div>
           <button onclick="zoomOut()" class="zoom-extents bg-transparent position-absolute border-0 no-outline d-block mt-5 scale-animation-13" type="button">
-            <img src="/assets/icon/zoomToExtents.svg" alt="">
+            <img class="mobile-scale" src="/assets/icon/zoomOut.svg" alt="">
+          </button>
+          <button onclick="zoomOut()" class="info bg-transparent position-absolute border-0 no-outline d-block scale-animation-13" type="button">
+            <img  class="mobile-scale" src="/assets/icon/info.svg" alt="">
           </button>
         </div>
       

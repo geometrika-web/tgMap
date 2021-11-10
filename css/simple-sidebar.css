@@ -17,7 +17,16 @@
     height: 100%;
     width: 100%;
   }
+  .p-0-2 {
+    padding: 0 2rem;
+  }
 }
+@media (min-width: 575.99px) {
+  .p-0-2 {
+    padding: 0 2rem;
+  }
+}
+
 
  .cursor-pointer {
    cursor: pointer;
@@ -36,12 +45,6 @@
 
  .pt-45 {
    padding-top: 4.9rem;
- }
-
- .center-toggle {
-   top: 55px;
-   left:3rem;
-   transform: translate(0, -50%);
  }
 #sidebar-wrapper {
   left: 0rem;
@@ -119,15 +122,19 @@
 /* Hamburger menu */
 .bar1, .bar2, .bar3 {
   width: 25px;
-  height: 2px;
-  background-color: #000;
-  margin: 5px 0;
+  height: 3px;
+  background-color: #5f6368;
+  margin: 4px 0;
   transition: 0.4s;
 }
-
+.center-toggle {
+  top: 50px;
+  left:2rem;
+  transform: translate(0, -50%);
+}
 #menu-toggle {
   background-color: #fff;
-  padding: 0.8rem;
+  padding: 10px 10px ;
   border-radius: 100%;
   transition: ease-in-out 0.2s;
 }
@@ -138,64 +145,67 @@
 }
 
 .change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-4px, 2px);
-  transform: rotate(-45deg) translate(-4px, 2px);
-  background-color: #000;
-  width: 10px;
+  -webkit-transform: rotate(-45deg) translate(-4px, 1px);
+  transform: rotate(-45deg) translate(-4px, 1px);
+  width: 12px;
 }
 
 .change .bar2 {opacity: 1;}
 
 .change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-4px, -2px);
-  transform: rotate(45deg) translate(-4px, -2px);
-  background-color: #000;
-  width: 10px;
+  -webkit-transform: rotate(45deg) translate(-4px, -1px);
+  transform: rotate(45deg) translate(-4px, -1px);
+  width: 12px;
 }
 
 @media (max-width: 575.99px) {
+  .center-toggle {
+    top: 2.2rem;
+    left:1.5rem;
+  }
   .bar1 {
-    width: 7px;
-    height: 2px;
-    background-color: #000;
-    margin: 3px 0;
+    width: 10px;
+    height: .15rem;
+    background-color: #5f6368;
+    margin: .15rem 0;
     transition: 0.4s;
-    -webkit-transform: rotate(-45deg) translate(-4px, 0px);
-    transform: rotate(-45deg) translate(-4px, 0px);
-    background-color: #000;
+    -webkit-transform: rotate(-45deg) translate(-3px, 0px);
+    transform: rotate(-45deg) translate(-3px, 0px);
   }
   .bar2 {
-    width: 15px;
-    height: 2px;
-    background-color: #000;
-    margin: 3px 0;
+    width: 19.5px;
+    height: .15rem;
+    background-color: #5f6368;
+    margin: .15rem 0;
     transition: 0.4s;
     opacity: 1;
   }
   .bar3 {
-    width: 7px;
-    height: 2px;
-    background-color: #000;
-    margin: 3px 0;
+    width: 10px;
+    height: .15rem;
+    background-color: #5f6368;
+    margin: .15rem 0;
     transition: 0.4s;
-    -webkit-transform: rotate(0deg) translate(-4px, 0px);
-    transform: rotate(45deg) translate(-4px, 0px);
-    background-color: #000;
+    -webkit-transform: rotate(0deg) translate(-3px, 0px);
+    transform: rotate(45deg) translate(-3px, 0px);
+    background-color: #5f6368;
   }
   .change .bar1 {
-    width: 15px;
+    width: 19.5px;
     -webkit-transform: rotate(0deg) translate(0px, 0px);
     transform: rotate(0deg) translate(0px, 0px);
-    background-color: #000;
   }
   
   .change .bar2 {opacity: 1;}
   
   .change .bar3 {
-    width: 15px;
+    width: 19.5px;
     -webkit-transform: rotate(0deg) translate(0px, 0px);
     transform: rotate(0deg) translate(0px, 0px);
-    background-color: #000;
+  }
+  #menu-toggle {
+    cursor: pointer;
+    padding: 12px 10px;
   }
 }
 
@@ -225,8 +235,9 @@
     transform: translate(1rem);
   }
 }
+/*Logo*/
 .logo {
-  top: 10px;
+  top: 0px;
   height: 60px; 
   left: 50%; 
   transform: translate(-50%);
@@ -240,10 +251,15 @@
 .logo-color {
   filter: brightness(0) saturate(100%) invert(100%);
 }
-
+.bg-tomislav {
+  height: 60px;
+}
 @media (min-width: 575.99px) {
+  .bg-tomislav {
+    height: 100px;
+  }
   .logo {
-    height: 70px;
+    height: 80px;
     top: 50px;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -263,10 +279,7 @@
     filter: brightness(0) saturate(100%) invert(100%);
   }
 
-  .menu-btn {
-    font-size: 12px;
-    font-weight: 500;
-  }
+  
 }
 /* Map css */
 .map {
@@ -329,23 +342,6 @@
 .list-group-item {
   border: 0px !important
 }
-
-
-.bg-tomislav {
-  /*background-color:  rgb(176, 42, 51);*/
-  height: 100px;
-}
-
-.p-0-2 {
-  padding: 0 2rem;
-}
-
-/*@media(max-width: 575.99px) {
-  .bg-tomislav {
-    height: 60px;
-  }
-}*/
-
 .nav-link {
   color: #fff;
   transition: ease-in-out 0.2s;
@@ -366,6 +362,10 @@
 }
 .menuBtn-border {
   border-bottom: 2px solid #c3c3c3;
+}
+.menu-btn {
+  font-size: 12px;
+  font-weight: 500;
 }
 .activate {
  filter: brightness(0) saturate(100%) invert(70%) sepia(92%) saturate(696%) hue-rotate(352deg) brightness(100%) contrast(103%);
@@ -394,7 +394,8 @@
 
 .sidebar-scroll {
   height: calc(100vh - 180px);
-  overflow: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .landmarksAll-scroll {
   height: calc(100vh - 220px);
@@ -433,8 +434,8 @@
 
 .layer-dropdown {
   position: absolute;
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
   background-color: transparent;
   border: transparent;
   background-image: url('../assets/icon/layers.svg');
@@ -484,8 +485,17 @@
 }
 
 .zoom-extents {
-  right: 1rem;
+  right: 20px;
   top: 3rem;
+}
+.info {
+  right: 20px;
+  bottom: 0rem;
+}
+@media (max-width: 575.99px) {
+  .mobile-scale {
+    scale: 0.8889;
+  }
 }
 
 .contact-image {
@@ -819,26 +829,29 @@
 #kategorije {
   text-align: center;
 }
-.kategorije-check {
+#kategorije-check {
   position: absolute;
-  left: 80px;
+  left: 85px;
   top: 50px;
   z-index: 1;
-  transition:               left 500ms ease;
-        -moz-transition:    left 500ms ease;
-        -ms-transition:     left 500ms ease;
-        -o-transition:      left 500ms ease;
-        -webkit-transition: left 500ms ease;
+  transition:               left 250ms cubic-bezier(.8,-0.33,.88,1.04);
+        -moz-transition:    left 250ms cubic-bezier(.8,-0.33,.88,1.04);
+        -ms-transition:     left 250ms cubic-bezier(.8,-0.33,.88,1.04);
+        -o-transition:      left 250ms cubic-bezier(.8,-0.33,.88,1.04);
+        -webkit-transition: left 250ms cubic-bezier(.8,-0.33,.88,1.04);
+}
+.check-kultura {
+  left: 200px;
 }
 .kategorije-thumb {
   height: 30px;
   width: auto;
 }
-.check-kultura {
-  left: 200px;
-}
 .height-50 {
   width: 30%;
+}
+.display-flex {
+  display: flex;
 }
 .d-none {
   display: none !important;

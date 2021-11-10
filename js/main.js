@@ -933,7 +933,7 @@ window.onload = function() {
       console.log(landmarksData.features[i])
       var landmarkAll = document.createElement('button')
       landmarkAll.id = i
-      landmarkAll.classList.add("list-group-item", "list-group-item-action", "no-outline", "mt-4", "pl-5", "landmarkList-height", "scale-animation-right", "d-flex", "text-font")
+      landmarkAll.classList.add("list-group-item", "list-group-item-action", "no-outline", "mt-4", "pl-5", "landmarkList-height", "scale-animation-right", "display-flex", "text-font")
       landmarkAll.classList.add(landmarksData.features[i].properties.id)
       landmarkAll.onclick = function() { zoomTo(this.id); };
       var parent = document.getElementById('landmark-name')
@@ -1159,23 +1159,79 @@ window.onload = function() {
 //Onload End
 
 //Kontrola popisa znamenitosti
-var kultura = [], priroda = [], turizam = [];
+const kultura = []
+const priroda = []
+const turizam = []
+console.log(kultura)
+allFilter = function (){
+  if (kultura.length == 0) {
+    var kulturaElement = document.querySelectorAll('.kultura');
+    var prirodaElement = document.querySelectorAll('.priroda');
+    var turizamElement = document.querySelectorAll('.turizam');
+    console.log(kulturaElement)
+  }
+  document.getElementById('kategorije-check').style.left = 85+"px"
+  for (let item1 of prirodaElement) {
+    item1.style.display = 'flex'
+  }
+  for (let item2 of turizamElement) {
+    item2.style.display = 'flex'
+  }
+  for (let item3 of kulturaElement) {
+    item3.style.display = 'flex'
+  }
+}
 kulturaFilter = function (){
-  console.log(priroda)
-  if (kultura == [] && priroda == [] && turizam == []) {
-    var kultura = document.querySelectorAll('.kultura');
-    var priroda = document.querySelectorAll('.priroda');
-    var turizam = document.querySelectorAll('.turizam');
-    console.log(priroda)
+  if (kultura.length == 0) {
+    var kulturaElement = document.querySelectorAll('.kultura');
+    var prirodaElement = document.querySelectorAll('.priroda');
+    var turizamElement = document.querySelectorAll('.turizam');
+    console.log(kulturaElement)
   }
-  for (let item1 of priroda) {
-    item1.classList.add('d-none')
+  document.getElementById('kategorije-check').style.left = 185+"px"
+  for (let item1 of prirodaElement) {
+    item1.style.display = 'none'
   }
-  for (let item2 of turizam) {
-    item2.classList.add('d-none')
+  for (let item2 of turizamElement) {
+    item2.style.display = 'none'
   }
-  for (let item3 of kultura) {
-    item3.classList.add('d-block')
+  for (let item3 of kulturaElement) {
+    item3.style.display = 'flex'
+  }
+}
+prirodaFilter = function (){
+  if (kultura.length == 0) {
+    var kulturaElement = document.querySelectorAll('.kultura');
+    var prirodaElement = document.querySelectorAll('.priroda');
+    var turizamElement = document.querySelectorAll('.turizam');
+    console.log(kulturaElement)
+  }
+  document.getElementById('kategorije-check').style.left = 285+"px"
+  for (let item1 of prirodaElement) {
+    item1.style.display = 'flex'
+  }
+  for (let item2 of turizamElement) {
+    item2.style.display = 'none'
+  }
+  for (let item3 of kulturaElement) {
+    item3.style.display = 'none'
+  }
+}
+turizamFilter = function (){
+  if (kultura.length == 0) {
+    var kulturaElement = document.querySelectorAll('.kultura');
+    var prirodaElement = document.querySelectorAll('.priroda');
+    var turizamElement = document.querySelectorAll('.turizam');
+  }
+  document.getElementById('kategorije-check').style.left = 385+"px"
+  for (let item1 of prirodaElement) {
+    item1.style.display = 'none'
+  }
+  for (let item2 of turizamElement) {
+    item2.style.display = 'flex'
+  }
+  for (let item3 of kulturaElement) {
+    item3.style.display = 'none'
   }
 }
 

@@ -6,7 +6,7 @@
    fill="#000000"
    version="1.1"
    id="svg6"
-   sodipodi:docname="layers.svg"
+   sodipodi:docname="zoomOut.svg"
    inkscape:version="1.1 (c68e22c387, 2021-05-23)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -27,9 +27,9 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:zoom="3.8541667"
-     inkscape:cx="59.027027"
-     inkscape:cy="55.394595"
+     inkscape:zoom="7.7083333"
+     inkscape:cx="33.794595"
+     inkscape:cy="25.362162"
      inkscape:window-width="1920"
      inkscape:window-height="1013"
      inkscape:window-x="-9"
@@ -37,18 +37,17 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="svg6" />
   <circle
-     style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:2.90272;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+     style="font-variation-settings:normal;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:2.90272;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
      id="path849"
      cx="22.5"
      cy="22.5"
      r="22.5" />
   <path
-     d="M 22.48689,31.683272 12.825118,24.171474 10.701364,25.823283 22.500001,35 34.298636,25.823283 32.161772,24.158364 Z M 22.5,28.353435 32.148662,20.841636 34.298635,19.176718 22.5,10 l -11.798637,9.176718 2.136864,1.664918 z m 0,-15.036707 7.524908,5.85999 L 22.5,25.036707 14.975091,19.176718 Z"
-     id="path4"
-     style="stroke-width:1.31096;fill:#5f6368;fill-opacity:1" />
-  <path
-     d="M 0.9,1.7370003 H 44.1 V 44.937 H 0.9 Z"
+     d="m 10.5,10.5 h 24 v 24 h -24 z"
      fill="none"
-     id="path2"
-     style="stroke-width:1.8" />
+     id="path2" />
+  <path
+     d="m 25.5,13.5 2.3,2.3 -2.89,2.87 1.42,1.42 2.87,-2.89 2.3,2.3 v -6 z m -12,6 2.3,-2.3 2.87,2.89 1.42,-1.42 -2.89,-2.87 2.3,-2.3 h -6 z m 6,12 -2.3,-2.3 2.89,-2.87 -1.42,-1.42 -2.87,2.89 -2.3,-2.3 v 6 z m 12,-6 -2.3,2.3 -2.87,-2.89 -1.42,1.42 2.89,2.87 -2.3,2.3 h 6 z"
+     id="path4"
+     style="fill:#5f6368;fill-opacity:1" />
 </svg>
