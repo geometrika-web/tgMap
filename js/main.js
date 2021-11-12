@@ -1,8 +1,8 @@
 var isMobile = false; //initiate as false
 // device detection
-if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
-    || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4))) { 
-    isMobile = true;
+if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
+  || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0, 4))) {
+  isMobile = true;
 }
 
 const lat = 43.787183
@@ -17,7 +17,7 @@ const lonLatCrkvaTG = [17.225002, 43.721394]
 
 // default zoom, center and rotation
 var zoom = 9.5;
-var center =  ol.proj.fromLonLat([lon, lat]);
+var center = ol.proj.fromLonLat([lon, lat]);
 
 
 if (window.location.hash !== '') {
@@ -44,11 +44,11 @@ var markers = new ol.layer.Vector({
 })
 
 var map = new ol.Map({
-  controls : ol.control.defaults({
-    attribution : false,
-    zoom : false,
+  controls: ol.control.defaults({
+    attribution: false,
+    zoom: false,
   }),
-  layers: [ 
+  layers: [
     //new ol.layer.Tile({
     //  source: new ol.source.Stamen({
     //    layer: 'terrain'
@@ -118,10 +118,11 @@ var map = new ol.Map({
       source: new ol.source.ImageWMS({
         ratio: 1,
         url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: {'VERSION': '1.1.1',  
-              "STYLES": '',
-              "LAYERS": 'Tomislavgrad:Zukovicalinija',
-              "exceptions": 'application/vnd.ogc.se_inimage',
+        params: {
+          'VERSION': '1.1.1',
+          "STYLES": '',
+          "LAYERS": 'Tomislavgrad:Zukovicalinija',
+          "exceptions": 'application/vnd.ogc.se_inimage',
         }
       })
     }),
@@ -131,7 +132,7 @@ var map = new ol.Map({
       opacity: 1,
       source: new ol.source.ImageWMS({
         url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: {'LAYERS' : 'Tomislavgrad:NM_TG_polygon'},
+        params: { 'LAYERS': 'Tomislavgrad:NM_TG_polygon' },
         ratio: 1,
         serverType: 'geoserver'
       }),
@@ -143,7 +144,7 @@ var map = new ol.Map({
       opacity: 1,
       source: new ol.source.ImageWMS({
         url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: {'LAYERS' : 'Tomislavgrad:tomislavgradNaselja_nazivi'},
+        params: { 'LAYERS': 'Tomislavgrad:tomislavgradNaselja_nazivi' },
         ratio: 1,
         serverType: 'geoserver'
       }),
@@ -156,18 +157,18 @@ var map = new ol.Map({
         servertype: 'geoserver',
         url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
         params: {
-              "LAYERS": 'Tomisavgrad:opcine',
-              "exceptions": 'application/vnd.ogc.se_inimage',
+          "LAYERS": 'Tomisavgrad:opcine',
+          "exceptions": 'application/vnd.ogc.se_inimage',
         },
         name: 'opcine'
       })
-    }),    
+    }),
     tomislavgradZastava = new ol.layer.Image({
       maxZoom: 11.5,
       opacity: 1,
       source: new ol.source.ImageWMS({
         url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: {'LAYERS' : 'Tomislavgrad:tomislavgradZastava'},
+        params: { 'LAYERS': 'Tomislavgrad:tomislavgradZastava' },
         ratio: 1,
         serverType: 'geoserver'
       }),
@@ -178,7 +179,7 @@ var map = new ol.Map({
       opacity: 1,
       source: new ol.source.ImageWMS({
         url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: {'LAYERS' : 'Tomislavgrad:ramaPodloga'},
+        params: { 'LAYERS': 'Tomislavgrad:ramaPodloga' },
         ratio: 1,
         serverType: 'geoserver'
       }),
@@ -189,7 +190,7 @@ var map = new ol.Map({
       opacity: 1,
       source: new ol.source.ImageWMS({
         url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: {'LAYERS' : 'Tomislavgrad:ramaZastava'},
+        params: { 'LAYERS': 'Tomislavgrad:ramaZastava' },
         ratio: 1,
         serverType: 'geoserver'
       }),
@@ -200,7 +201,7 @@ var map = new ol.Map({
       opacity: 1,
       source: new ol.source.ImageWMS({
         url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: {'LAYERS' : 'Tomislavgrad:posusjeZastava'},
+        params: { 'LAYERS': 'Tomislavgrad:posusjeZastava' },
         ratio: 1,
         serverType: 'geoserver'
       }),
@@ -211,7 +212,7 @@ var map = new ol.Map({
       opacity: 1,
       source: new ol.source.ImageWMS({
         url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: {'LAYERS' : 'Tomislavgrad:livnoPodloga'},
+        params: { 'LAYERS': 'Tomislavgrad:livnoPodloga' },
         ratio: 1,
         serverType: 'geoserver'
       }),
@@ -222,7 +223,7 @@ var map = new ol.Map({
       opacity: 1,
       source: new ol.source.ImageWMS({
         url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: {'LAYERS' : 'Tomislavgrad:livnoZastava'},
+        params: { 'LAYERS': 'Tomislavgrad:livnoZastava' },
         ratio: 1,
         serverType: 'geoserver'
       }),
@@ -233,7 +234,7 @@ var map = new ol.Map({
       opacity: 1,
       source: new ol.source.ImageWMS({
         url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: {'LAYERS' : 'Tomislavgrad:kupresZastava'},
+        params: { 'LAYERS': 'Tomislavgrad:kupresZastava' },
         ratio: 1,
         serverType: 'geoserver'
       }),
@@ -244,7 +245,7 @@ var map = new ol.Map({
       opacity: 1,
       source: new ol.source.ImageWMS({
         url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: {'LAYERS' : 'Tomislavgrad:kupresPodloga_blue'},
+        params: { 'LAYERS': 'Tomislavgrad:kupresPodloga_blue' },
         ratio: 1,
         serverType: 'geoserver'
       }),
@@ -255,7 +256,7 @@ var map = new ol.Map({
       opacity: 1,
       source: new ol.source.ImageWMS({
         url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: {'LAYERS' : 'Tomislavgrad:kupresPodloga_red'},
+        params: { 'LAYERS': 'Tomislavgrad:kupresPodloga_red' },
         ratio: 1,
         serverType: 'geoserver'
       }),
@@ -266,7 +267,7 @@ var map = new ol.Map({
       opacity: 1,
       source: new ol.source.ImageWMS({
         url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: {'LAYERS' : 'Tomislavgrad:jablanicaZastava'},
+        params: { 'LAYERS': 'Tomislavgrad:jablanicaZastava' },
         ratio: 1,
         serverType: 'geoserver'
       }),
@@ -288,7 +289,7 @@ var map = new ol.Map({
       opacity: 1,
       source: new ol.source.ImageWMS({
         url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: {'LAYERS' : 'Tomislavgrad:opcine_granice'},
+        params: { 'LAYERS': 'Tomislavgrad:opcine_granice' },
         ratio: 1,
         serverType: 'geoserver'
       }),
@@ -301,23 +302,23 @@ var map = new ol.Map({
     center: center,
     zoom: zoom,
     extent: [xE, yS, xW, yN]
-  }),  
+  }),
 });
 //Pointer style
 map.on("pointerdrag", function (evt) {
   this.getTargetElement().style.cursor = "move"
 })
-map.on("pointerup", function (evt){
+map.on("pointerup", function (evt) {
   this.getTargetElement().style.cursor = 'default'
 })
 map.on("pointermove", function (evt) {
-  var hit = this.forEachFeatureAtPixel(evt.pixel, function(feature, layer) {
-      return true;
-  }); 
+  var hit = this.forEachFeatureAtPixel(evt.pixel, function (feature, layer) {
+    return true;
+  });
   if (hit) {
-      this.getTargetElement().style.cursor = 'pointer';
+    this.getTargetElement().style.cursor = 'pointer';
   } else {
-      this.getTargetElement().style.cursor = 'default';
+    this.getTargetElement().style.cursor = 'default';
   }
 });
 //function setSource() {
@@ -397,40 +398,40 @@ map.on("pointermove", function (evt) {
 
 // Add virtual reality icons
 const addImage = (obj) => {
-        
+
 
   //var polyFeature = new ol.Feature({
   //  geometry: new ol.geom.Point(center)
   //})
   var iconFeature = new ol.Feature({
-      geometry: new ol.geom.Point(ol.proj.fromLonLat(obj.center)),
-      name: obj.name,
-      url: obj.url,
-    })
+    geometry: new ol.geom.Point(ol.proj.fromLonLat(obj.center)),
+    name: obj.name,
+    url: obj.url,
+  })
   var iconStyle = new ol.style.Style({
     image: new ol.style.Icon({
       src: 'assets/icon/virtual-reality.svg',
-      anchor: [0.5, 0,5],
+      anchor: [0.5, 0, 5],
       size: [230, 230],
       scale: 0.4,
       opacity: 0.75,
     })
   })
-          
+
   iconFeature.setStyle(iconStyle)
   sourceFeatures.addFeature(iconFeature)
   //polyFeature.setStyle(polyStyle)
   //sourcePoly.addFeature(polyFeature)
-      
-    
-  
+
+
+
   //iconFeature.type = obj.type
   //imageObjects.push(iconFeature)
   //console.log(iconFeature.type)
-      
-      
+
+
 }
-    
+
 //map.addLayer(layerPoly)
 map.addLayer(markers)
 
@@ -453,7 +454,7 @@ var images = [
     url: 'panorama_tomislavgrad_2.html#maliSamograd'
   },
   {
-    center: [17.299634881518827,43.68405773083877],
+    center: [17.299634881518827, 43.68405773083877],
     name: 'Mandina gradina',
     url: 'panorama_tomislavgrad_2.html#mandinaGradina'
   },
@@ -595,202 +596,210 @@ var updatePermalink = function () {
   };
   localStorage.hash = hash;
   window.history.pushState(state, 'map', hash);
-  
+
 };
 console.log(localStorage.hash)
 map.on('moveend', updatePermalink);
 
 
 var currZoom = map.getView().getZoom();
-map.on('moveend', function(e) {
+map.on('moveend', function (e) {
   var newZoom = map.getView().getZoom();
   if (currZoom != newZoom) {
     console.log('currzooom  ' + newZoom);
     currZoom = newZoom;
     console.log(currZoom)
     if (currZoom > 11.5) {
-      document.getElementById('zastaveOpcina').classList.add('disabled')
+      document.getElementById('zastaveOpcina').disabled = true
+      document.getElementById('zastaveOpcinaBox').classList.add('disabled')
     }
     if (currZoom <= 11.5) {
-      document.getElementById('zastaveOpcina').classList.remove('disabled')
+      document.getElementById('zastaveOpcina').disabled = false
+      document.getElementById('zastaveOpcinaBox').classList.remove('disabled')
     }
-    if (currZoom < 11.5 && zastave == true) {
-      vector.setVisible(false)
-      assocs.setVisible(false)
-      vjerskiObjekti.setVisible(false)
-    } else {
-      if (landmarksVisible == true) {
-        vector.setVisible(true)
-        vjerskiObjekti.setVisible(true)
-      } else {
-        vector.setVisible(false)
-      }
-      if (assocsVisible == true) {
-        assocs.setVisible(true)
-      } else {
-        assocs.setVisible(false)
-      }
+    //if (currZoom < 11.5 && zastave == true) {
+    //  vector.setVisible(false)
+    //  nature.setVisible(false)
+    //  tourist.setVisible(false)
+    //  assocs.setVisible(false)
+    //  vjerskiObjekti.setVisible(false)
+    //} else {
+    //  if (landmarksVisible == true) {
+    //    vector.setVisible(true)
+    //    nature.setVisible(true)
+    //    tourist.setVisible(true)
+    //    vjerskiObjekti.setVisible(true)
+    //  } else {
+    //    vector.setVisible(false)
+    //    nature.setVisible(false)
+    //    tourist.setVisible(false)
+    //  }
+      //if (assocsVisible == true) {
+      //  assocs.setVisible(true)
+      //} else {
+      //  assocs.setVisible(false)
+      //}
     }
-  //  if (currZoom <= 11.5) {
-  //    //layerPoly.setOpacity(0)
-  //    opcine.setOpacity(1)
-  //    tomislavgradNaselja.setOpacity(0)
-  //    opcineGranice.setOpacity(1)
-  //    //opcineZastave.setOpacity(1)
-  //    tomislavgradZastava.setOpacity(1)
-  //    livnoZastava.setOpacity(1)
-  //    kupresZastava.setOpacity(1)
-  //    jablanicaZastava.setOpacity(1)
-  //    posusjeZastava.setOpacity(1)
-  //    ramaZastava.setOpacity(1)
-  //    livnoPodloga.setOpacity(1)
-  //    ramaPodloga.setOpacity(1)
-  //    kupresPodloga_blue.setOpacity(1)
-  //    kupresPodloga_red.setOpacity(1)  
-//
-  //    //for (const img in imageObjects){
-  //    //  if (imageObjects[img].type == 'znamenitost'){
-  //    //    imageObjects[img].getStyle().getImage().setOpacity(0)
-  //    //    imageObjects[img].changed()
-  //    //  } else {
-  //    //    imageObjects[img].getStyle().getImage().setOpacity(0)
-  //    //    imageObjects[img].changed()
-  //    //  }
-  //    //}
-  //  //marker1.getStyle().getImage().setOpacity(1);
-  //  //marker2.getStyle().getImage().setOpacity(0);
-  //  //marker2.getSource().changed()
-  //  }
-  //  if (currZoom <= 11.5) {
-  //    vector.setOpacity(0)
-  //    opcine.setOpacity(1)
-  //    tomislavgradNaselja.setOpacity(0)
-  //    opcineGranice.setOpacity(1)
-  //    //opcineZastave.setOpacity(1)
-  //    tomislavgradZastava.setOpacity(1)
-  //    livnoZastava.setOpacity(1)
-  //    kupresZastava.setOpacity(1)
-  //    jablanicaZastava.setOpacity(1)
-  //    posusjeZastava.setOpacity(1)
-  //    ramaZastava.setOpacity(1)
-  //    livnoPodloga.setOpacity(1)
-  //    ramaPodloga.setOpacity(1)
-  //    kupresPodloga_blue.setOpacity(1)
-  //    kupresPodloga_red.setOpacity(1)  
-//
-  //    //for (const img in imageObjects){
-  //    //  if (imageObjects[img].type == 'znamenitost'){
-  //    //    imageObjects[img].getStyle().getImage().setOpacity(0)
-  //    //    imageObjects[img].changed()
-  //    //  } else {
-  //    //    imageObjects[img].getStyle().getImage().setOpacity(0)
-  //    //    imageObjects[img].changed()
-  //    //  }
-  //    //}
-  //  //marker1.getStyle().getImage().setOpacity(1);
-  //  //marker2.getStyle().getImage().setOpacity(0);
-  //  //marker2.getSource().changed()
-  //  }
-  //  if (currZoom > 11.5 && currZoom < 13) {
-//
-  //    //map.on('singleclick', function (evt) {
-  //    console.log("zoom je veći od 10 manji od 13");
-  //      //map.forEachLayerAtPixel(evt.pixel, function(layer) {
-  //      //    console.log(evt.pixel);
-  //      //    console.log(layer);
-  //      //    var id = layer.get('title');
-  //      //    console.log(id);
-  //      //    var title = layer.get('title');
-  //      //    console.log(title);
-  //      //    var whatever = layer.get('whatever');
-  //      //    console.log(whatever);
-  //      //});
-  //    //});
-  //    vector.setOpacity(0)
-  //    opcine.setOpacity(0)
-  //    tomislavgradNaselja.setOpacity(1)
-  //    opcineGranice.setOpacity(1)
-  //    //opcineZastave.setOpacity(0)
-//
-  //    tomislavgradZastava.setOpacity(0)
-  //    livnoZastava.setOpacity(0)
-  //    kupresZastava.setOpacity(0)
-  //    jablanicaZastava.setOpacity(0)
-  //    posusjeZastava.setOpacity(0)
-  //    ramaZastava.setOpacity(0)
-  //    livnoPodloga.setOpacity(0)
-  //    ramaPodloga.setOpacity(0)
-  //    kupresPodloga_blue.setOpacity(0)
-  //    kupresPodloga_red.setOpacity(0)
-//
-  //    //for (const img in imageObjects){
-  //    //  if (imageObjects[img].type == 'znamenitost'){
-  //    //  imageObjects[img].getStyle().getImage().setOpacity(0)
-  //    //  imageObjects[img].changed()
-  //    //} else {
-  //    //  console.log(imageObjects[img].type)
-  //    //  imageObjects[img].getStyle().getImage().setOpacity(0)
-  //    //  imageObjects[img].changed()
-  //    //}
-////
-  //    //}
-  //    //marker1.getStyle().getImage().setOpacity(1);
-  //    //marker2.getStyle().getImage().setOpacity(1);
-  //    //marker2.getSource().changed()
-  //  } 
-  //  if (currZoom > 13) {
-//
-  //    //map.on('singleclick', function (evt) {
-  //    console.log("zoom je veći od 13");
-  //      //map.forEachLayerAtPixel(evt.pixel, function(layer) {
-  //      //    console.log(evt.pixel);
-  //      //    console.log(layer);
-  //      //    var id = layer.get('title');
-  //      //    console.log(id);
-  //      //    var title = layer.get('title');
-  //      //    console.log(title);
-  //      //    var whatever = layer.get('whatever');
-  //      //    console.log(whatever);
-  //      //});
-  //    //});
-  //    vector.setOpacity(1)
-  //    opcine.setOpacity(0)
-  //    tomislavgradNaselja.setOpacity(0)
-  //    //opcineZastave.setOpacity(0)
-//
-  //    tomislavgradZastava.setOpacity(0)
-  //    livnoZastava.setOpacity(0)
-  //    kupresZastava.setOpacity(0)
-  //    jablanicaZastava.setOpacity(0)
-  //    posusjeZastava.setOpacity(0)
-  //    ramaZastava.setOpacity(0)
-  //    livnoPodloga.setOpacity(0)
-  //    ramaPodloga.setOpacity(0)
-  //    kupresPodloga_blue.setOpacity(0)
-  //    kupresPodloga_red.setOpacity(0)
-//
-  //    //for (const img in imageObjects){
-  //    //  if (imageObjects[img].type == 'znamenitost'){
-  //    //  imageObjects[img].getStyle().getImage().setOpacity(1)
-  //    //  imageObjects[img].changed()
-  //    //} else {
-  //    //  console.log(imageObjects[img].type)
-  //    //  imageObjects[img].getStyle().getImage().setOpacity(1)
-  //    //  imageObjects[img].changed()
-  //    //}
-////
-  //    //}
-  //    //marker1.getStyle().getImage().setOpacity(1);
-  //    //marker2.getStyle().getImage().setOpacity(1);
-  //    //marker2.getSource().changed()
-  //  } 
+    //  if (currZoom <= 11.5) {
+    //    //layerPoly.setOpacity(0)
+    //    opcine.setOpacity(1)
+    //    tomislavgradNaselja.setOpacity(0)
+    //    opcineGranice.setOpacity(1)
+    //    //opcineZastave.setOpacity(1)
+    //    tomislavgradZastava.setOpacity(1)
+    //    livnoZastava.setOpacity(1)
+    //    kupresZastava.setOpacity(1)
+    //    jablanicaZastava.setOpacity(1)
+    //    posusjeZastava.setOpacity(1)
+    //    ramaZastava.setOpacity(1)
+    //    livnoPodloga.setOpacity(1)
+    //    ramaPodloga.setOpacity(1)
+    //    kupresPodloga_blue.setOpacity(1)
+    //    kupresPodloga_red.setOpacity(1)  
+    //
+    //    //for (const img in imageObjects){
+    //    //  if (imageObjects[img].type == 'znamenitost'){
+    //    //    imageObjects[img].getStyle().getImage().setOpacity(0)
+    //    //    imageObjects[img].changed()
+    //    //  } else {
+    //    //    imageObjects[img].getStyle().getImage().setOpacity(0)
+    //    //    imageObjects[img].changed()
+    //    //  }
+    //    //}
+    //  //marker1.getStyle().getImage().setOpacity(1);
+    //  //marker2.getStyle().getImage().setOpacity(0);
+    //  //marker2.getSource().changed()
+    //  }
+    //  if (currZoom <= 11.5) {
+    //    vector.setOpacity(0)
+    //    opcine.setOpacity(1)
+    //    tomislavgradNaselja.setOpacity(0)
+    //    opcineGranice.setOpacity(1)
+    //    //opcineZastave.setOpacity(1)
+    //    tomislavgradZastava.setOpacity(1)
+    //    livnoZastava.setOpacity(1)
+    //    kupresZastava.setOpacity(1)
+    //    jablanicaZastava.setOpacity(1)
+    //    posusjeZastava.setOpacity(1)
+    //    ramaZastava.setOpacity(1)
+    //    livnoPodloga.setOpacity(1)
+    //    ramaPodloga.setOpacity(1)
+    //    kupresPodloga_blue.setOpacity(1)
+    //    kupresPodloga_red.setOpacity(1)  
+    //
+    //    //for (const img in imageObjects){
+    //    //  if (imageObjects[img].type == 'znamenitost'){
+    //    //    imageObjects[img].getStyle().getImage().setOpacity(0)
+    //    //    imageObjects[img].changed()
+    //    //  } else {
+    //    //    imageObjects[img].getStyle().getImage().setOpacity(0)
+    //    //    imageObjects[img].changed()
+    //    //  }
+    //    //}
+    //  //marker1.getStyle().getImage().setOpacity(1);
+    //  //marker2.getStyle().getImage().setOpacity(0);
+    //  //marker2.getSource().changed()
+    //  }
+    //  if (currZoom > 11.5 && currZoom < 13) {
+    //
+    //    //map.on('singleclick', function (evt) {
+    //    console.log("zoom je veći od 10 manji od 13");
+    //      //map.forEachLayerAtPixel(evt.pixel, function(layer) {
+    //      //    console.log(evt.pixel);
+    //      //    console.log(layer);
+    //      //    var id = layer.get('title');
+    //      //    console.log(id);
+    //      //    var title = layer.get('title');
+    //      //    console.log(title);
+    //      //    var whatever = layer.get('whatever');
+    //      //    console.log(whatever);
+    //      //});
+    //    //});
+    //    vector.setOpacity(0)
+    //    opcine.setOpacity(0)
+    //    tomislavgradNaselja.setOpacity(1)
+    //    opcineGranice.setOpacity(1)
+    //    //opcineZastave.setOpacity(0)
+    //
+    //    tomislavgradZastava.setOpacity(0)
+    //    livnoZastava.setOpacity(0)
+    //    kupresZastava.setOpacity(0)
+    //    jablanicaZastava.setOpacity(0)
+    //    posusjeZastava.setOpacity(0)
+    //    ramaZastava.setOpacity(0)
+    //    livnoPodloga.setOpacity(0)
+    //    ramaPodloga.setOpacity(0)
+    //    kupresPodloga_blue.setOpacity(0)
+    //    kupresPodloga_red.setOpacity(0)
+    //
+    //    //for (const img in imageObjects){
+    //    //  if (imageObjects[img].type == 'znamenitost'){
+    //    //  imageObjects[img].getStyle().getImage().setOpacity(0)
+    //    //  imageObjects[img].changed()
+    //    //} else {
+    //    //  console.log(imageObjects[img].type)
+    //    //  imageObjects[img].getStyle().getImage().setOpacity(0)
+    //    //  imageObjects[img].changed()
+    //    //}
+    ////
+    //    //}
+    //    //marker1.getStyle().getImage().setOpacity(1);
+    //    //marker2.getStyle().getImage().setOpacity(1);
+    //    //marker2.getSource().changed()
+    //  } 
+    //  if (currZoom > 13) {
+    //
+    //    //map.on('singleclick', function (evt) {
+    //    console.log("zoom je veći od 13");
+    //      //map.forEachLayerAtPixel(evt.pixel, function(layer) {
+    //      //    console.log(evt.pixel);
+    //      //    console.log(layer);
+    //      //    var id = layer.get('title');
+    //      //    console.log(id);
+    //      //    var title = layer.get('title');
+    //      //    console.log(title);
+    //      //    var whatever = layer.get('whatever');
+    //      //    console.log(whatever);
+    //      //});
+    //    //});
+    //    vector.setOpacity(1)
+    //    opcine.setOpacity(0)
+    //    tomislavgradNaselja.setOpacity(0)
+    //    //opcineZastave.setOpacity(0)
+    //
+    //    tomislavgradZastava.setOpacity(0)
+    //    livnoZastava.setOpacity(0)
+    //    kupresZastava.setOpacity(0)
+    //    jablanicaZastava.setOpacity(0)
+    //    posusjeZastava.setOpacity(0)
+    //    ramaZastava.setOpacity(0)
+    //    livnoPodloga.setOpacity(0)
+    //    ramaPodloga.setOpacity(0)
+    //    kupresPodloga_blue.setOpacity(0)
+    //    kupresPodloga_red.setOpacity(0)
+    //
+    //    //for (const img in imageObjects){
+    //    //  if (imageObjects[img].type == 'znamenitost'){
+    //    //  imageObjects[img].getStyle().getImage().setOpacity(1)
+    //    //  imageObjects[img].changed()
+    //    //} else {
+    //    //  console.log(imageObjects[img].type)
+    //    //  imageObjects[img].getStyle().getImage().setOpacity(1)
+    //    //  imageObjects[img].changed()
+    //    //}
+    ////
+    //    //}
+    //    //marker1.getStyle().getImage().setOpacity(1);
+    //    //marker2.getStyle().getImage().setOpacity(1);
+    //    //marker2.getSource().changed()
+    //  } 
   }
-})
+)
 
 
 
 // Eventlistener za općine
-a = map.on('singleclick', function(evt) {
+a = map.on('singleclick', function (evt) {
   if (currZoom < 11.5 && zastave) {
     document.getElementById('landmark').style.display = 'none';
     document.getElementById('image').style.display = 'none';
@@ -799,40 +808,40 @@ a = map.on('singleclick', function(evt) {
     document.getElementById('nodelist').innerHTML = "Učitavanje";
     var view = map.getView();
     var viewResolution = view.getResolution();
-    var source =  opcine.getSource()
+    var source = opcine.getSource()
     var url = source.getFeatureInfoUrl(
       evt.coordinate, viewResolution, view.getProjection(),
-      {'INFO_FORMAT': 'text/html'});
+      { 'INFO_FORMAT': 'text/html' });
     if (url) {
       fetch(url)
-      .then(function (response) { return response.text(); })
-      .then(function (html) {
-        document.getElementById('nodelist').innerHTML = html
-        //source.syle = highlightStyle2
-        opcine.changed()
-        if(html[1] == 'h'){
-          document.getElementById('msg').style.display = 'inline-block'
-        } else {
-          document.getElementById('msg').style.display = 'none'
-        }
-      });
+        .then(function (response) { return response.text(); })
+        .then(function (html) {
+          document.getElementById('nodelist').innerHTML = html
+          //source.syle = highlightStyle2
+          opcine.changed()
+          if (html[1] == 'h') {
+            document.getElementById('msg').style.display = 'inline-block'
+          } else {
+            document.getElementById('msg').style.display = 'none'
+          }
+        });
     }
-  } 
-//  if (currZoom > 13) {
-    
-//      var feature = map.forEachFeatureAtPixel(evt.pixel, function (feature) {
-//        return feature;
-//      });
-//      if (feature) {
-//        document.getElementById('nodelist').style.display = 'none';
-//        document.getElementById('landmark').style.display = 'inline-block';
-//        document.getElementById('image').style.display = 'inline-block';
-//        document.getElementById('landmark-about').style.display = 'inline-block';
-//        document.getElementById('landmark').innerHTML = feature.get('name');
-//        document.getElementById('landmark-about').innerHTML = feature.get('about');
-//        document.getElementById('image').src = feature.get('url2');
-//      }
-//  }
+  }
+  //  if (currZoom > 13) {
+
+  //      var feature = map.forEachFeatureAtPixel(evt.pixel, function (feature) {
+  //        return feature;
+  //      });
+  //      if (feature) {
+  //        document.getElementById('nodelist').style.display = 'none';
+  //        document.getElementById('landmark').style.display = 'inline-block';
+  //        document.getElementById('image').style.display = 'inline-block';
+  //        document.getElementById('landmark-about').style.display = 'inline-block';
+  //        document.getElementById('landmark').innerHTML = feature.get('name');
+  //        document.getElementById('landmark-about').innerHTML = feature.get('about');
+  //        document.getElementById('image').src = feature.get('url2');
+  //      }
+  //  }
 })
 
 
@@ -842,22 +851,22 @@ var styleCache1 = {};
 var styleCache2 = {};
 var styleCache3 = {};
 // Vector style
-function getFeatureStyle (feature, resolution, sel) {
-  var k = $('#kind').val()+"_"+$("#border").val()+"_"+feature.get("img").match(/[^\\/]+$/)[0]+($("#shadow").prop('checked')?"_1":"_0")+($("#crop").prop('checked')?"_1":"_0")+(sel?"_1":"");
-  var k = $('#kind').val()+"_"+$("#border").val()+"_"+feature.get("img").match(/[^\\/]+$/)[0]+($("#shadow").prop('checked')?"_1":"_0")+($("#crop").prop('checked')?"_1":"_0")+(sel?"_1":"");
+function getFeatureStyle(feature, resolution, sel) {
+  var k = $('#kind').val() + "_" + $("#border").val() + "_" + feature.get("img").match(/[^\\/]+$/)[0] + ($("#shadow").prop('checked') ? "_1" : "_0") + ($("#crop").prop('checked') ? "_1" : "_0") + (sel ? "_1" : "");
+  var k = $('#kind').val() + "_" + $("#border").val() + "_" + feature.get("img").match(/[^\\/]+$/)[0] + ($("#shadow").prop('checked') ? "_1" : "_0") + ($("#crop").prop('checked') ? "_1" : "_0") + (sel ? "_1" : "");
   var style = styleCache1[k];
-    if (!style) {
-      var style = new ol.style.Style ({
-        image: new ol.style.Photo ({
-          src: feature.get("img"),
-          radius: sel ? 60 : 60,
-          crop: true,
-          kind: sel ? 'square' : 'circle',
-          shadow: 25,
-          onload: function(){vector.changed();},
-          stroke: new ol.style.Stroke({
-            width: 1.5 + (sel ? 1 : 0),
-            color: sel ? '#fff' : '#fff'
+  if (!style) {
+    var style = new ol.style.Style({
+      image: new ol.style.Photo({
+        src: feature.get("img"),
+        radius: sel ? 60 : 60,
+        crop: true,
+        kind: sel ? 'square' : 'circle',
+        shadow: 25,
+        //onload: function(){vector.changed(); nature.changed(); tourist.changed(); vjerskiObjekti.changed()},
+        stroke: new ol.style.Stroke({
+          width: 1.5 + (sel ? 1 : 0),
+          color: sel ? '#fff' : '#fff'
         })
       })
     });
@@ -865,22 +874,22 @@ function getFeatureStyle (feature, resolution, sel) {
   return [style];
 }
 
-function getFeatureStyleTours (feature, resolution, sel) {
-    var k = $('#kind').val()+"_"+$("#border").val()+"_"+feature.get("img").match(/[^\\/]+$/)[0]+($("#shadow").prop('checked')?"_1":"_0")+($("#crop").prop('checked')?"_1":"_0")+(sel?"_1":"");
-    var k = $('#kind').val()+"_"+$("#border").val()+"_"+feature.get("img").match(/[^\\/]+$/)[0]+($("#shadow").prop('checked')?"_1":"_0")+($("#crop").prop('checked')?"_1":"_0")+(sel?"_1":"");
-    var style = styleCache2[k];
-    if (!style) {
-      var style = new ol.style.Style ({
-        image: new ol.style.Photo ({
-          src: feature.get("img"),
-          radius: sel ? 60 : 40,
-          crop: true,
-          kind: sel ? 'anchored' : 'anchored',
-          shadow: 25,
-          onload: function(){vector.changed();}, //function(){vector.changed();},
-          stroke: new ol.style.Stroke({
-            width: 1.5 + (sel ? 1 : 0),
-            color: sel ? '#fff' : '#fff'
+function getFeatureStyleTours(feature, resolution, sel) {
+  var k = $('#kind').val() + "_" + $("#border").val() + "_" + feature.get("img").match(/[^\\/]+$/)[0] + ($("#shadow").prop('checked') ? "_1" : "_0") + ($("#crop").prop('checked') ? "_1" : "_0") + (sel ? "_1" : "");
+  var k = $('#kind').val() + "_" + $("#border").val() + "_" + feature.get("img").match(/[^\\/]+$/)[0] + ($("#shadow").prop('checked') ? "_1" : "_0") + ($("#crop").prop('checked') ? "_1" : "_0") + (sel ? "_1" : "");
+  var style = styleCache2[k];
+  if (!style) {
+    var style = new ol.style.Style({
+      image: new ol.style.Photo({
+        src: feature.get("img"),
+        radius: sel ? 60 : 40,
+        crop: true,
+        kind: sel ? 'anchored' : 'anchored',
+        shadow: 25,
+        //onload: function(){vector.changed();}, //function(){vector.changed();},
+        stroke: new ol.style.Stroke({
+          width: 1.5 + (sel ? 1 : 0),
+          color: sel ? '#fff' : '#fff'
         })
       })
     });
@@ -888,22 +897,22 @@ function getFeatureStyleTours (feature, resolution, sel) {
   return [style];
 }
 
-function getFeatureStyleAssoc (feature, resolution, sel) {
-    var k = $('#kind').val()+"_"+$("#border").val()+"_"+feature.get("img").match(/[^\\/]+$/)[0]+($("#shadow").prop('checked')?"_1":"_0")+($("#crop").prop('checked')?"_1":"_0")+(sel?"_1":"");
-    var k = $('#kind').val()+"_"+$("#border").val()+"_"+feature.get("img").match(/[^\\/]+$/)[0]+($("#shadow").prop('checked')?"_1":"_0")+($("#crop").prop('checked')?"_1":"_0")+(sel?"_1":"");
-    var style = styleCache3[k];
-    if (!style) {
-      var style = new ol.style.Style ({
-        image: new ol.style.Photo ({
-          src: feature.get("img"),
-          radius: sel ? 60 : 60,
-          crop: true,
-          kind: sel ? 'square' : 'circle',
-          shadow: 25,
-          onload: function(){vector.changed();}, //function(){vector.changed();},
-          stroke: new ol.style.Stroke({
-            width: 1.5 + (sel ? 1 : 0),
-            color: 'black',
+function getFeatureStyleAssoc(feature, resolution, sel) {
+  var k = $('#kind').val() + "_" + $("#border").val() + "_" + feature.get("img").match(/[^\\/]+$/)[0] + ($("#shadow").prop('checked') ? "_1" : "_0") + ($("#crop").prop('checked') ? "_1" : "_0") + (sel ? "_1" : "");
+  var k = $('#kind').val() + "_" + $("#border").val() + "_" + feature.get("img").match(/[^\\/]+$/)[0] + ($("#shadow").prop('checked') ? "_1" : "_0") + ($("#crop").prop('checked') ? "_1" : "_0") + (sel ? "_1" : "");
+  var style = styleCache3[k];
+  if (!style) {
+    var style = new ol.style.Style({
+      image: new ol.style.Photo({
+        src: feature.get("img"),
+        radius: sel ? 60 : 60,
+        crop: true,
+        kind: sel ? 'square' : 'circle',
+        shadow: 25,
+        //onload: function(){vector.changed();}, //function(){vector.changed();},
+        stroke: new ol.style.Stroke({
+          width: 1.5 + (sel ? 1 : 0),
+          color: 'black',
         })
       })
     });
@@ -917,129 +926,208 @@ function zoomTo(i) {
     duration: 3000,
     zoom: landmarksZoom[i]
   });
-  if(isMobile) {
+  if (isMobile) {
     toggle(document.getElementById('menu-toggle'))
   }
-} 
-// GeoJSON layers -----------------------------------------
+}
 
 // Load list from GeoJSON file
 coord = []
 landmarksZoom = []
-window.onload = function() {
+window.onload = function () {
   // Load list of all landmarks from GeoJSON file
   //$.getJSON("assets/landmarks/landmarks.geojson", function(data) {
-    for(i in landmarksData.features) {
-      console.log(landmarksData.features[i])
-      var landmarkAll = document.createElement('button')
-      landmarkAll.id = i
-      landmarkAll.classList.add("list-group-item", "list-group-item-action", "no-outline", "mt-4", "pl-5", "landmarkList-height", "scale-animation-right", "display-flex", "text-font")
-      landmarkAll.classList.add(landmarksData.features[i].properties.id)
-      landmarkAll.onclick = function() { zoomTo(this.id); };
-      var parent = document.getElementById('landmark-name')
-      parent.appendChild(landmarkAll)
-      coord[i] = landmarksData.features[i].geometry.coordinates
-      landmarksZoom[i] = landmarksData.features[i].properties.zoom
-      console.log(landmarksData.features[i].properties.zoom)
-      var landmarkImg = document.createElement('img')
-      landmarkImg.src =  landmarksData.features[i].properties.img
-      landmarkImg.classList.add("landmarkList-img", "ml-4", "center-y")
-      landmarkAll.appendChild(landmarkImg)
+  for (i in landmarksData.features) {
+    console.log(landmarksData.features[i])
+    var landmarkAll = document.createElement('button')
+    landmarkAll.id = i
+    landmarkAll.classList.add("list-group-item", "list-group-item-action", "no-outline", "mt-4", "pl-5", "landmarkList-height", "scale-animation-right", "display-flex", "text-font")
+    landmarkAll.classList.add(landmarksData.features[i].properties.id)
+    landmarkAll.onclick = function () { zoomTo(this.id); };
+    var parent = document.getElementById('landmark-name')
+    parent.appendChild(landmarkAll)
+    coord[i] = landmarksData.features[i].geometry.coordinates
+    landmarksZoom[i] = landmarksData.features[i].properties.zoom
+    console.log(landmarksData.features[i].properties.zoom)
+    var landmarkImg = document.createElement('img')
+    landmarkImg.src = landmarksData.features[i].properties.img
+    landmarkImg.classList.add("landmarkList-img", "ml-4", "center-y")
+    landmarkAll.appendChild(landmarkImg)
 
-      var landmarkText = document.createElement('div')
-      landmarkText.classList.add("pt-2", "pl-4")
-      landmarkAll.appendChild(landmarkText)
-      
-      var landmarkPlace = document.createElement('div')
-      var landmarkName = document.createElement('div')
-      var landmarkType = document.createElement('img')
-      var landmark360 = document.createElement('img')
-      landmarkPlace.innerText = landmarksData.features[i].properties.place
-      landmarkName.innerText = landmarksData.features[i].properties.name
-      landmarkType.src = landmarksData.features[i].properties.thumb
-      landmarkPlace.classList.add('menu-btn', 'text-c3')
-      landmarkName.classList.add('text-font')
-      landmarkType.classList.add('kategorije-thumb')
-      landmark360.classList.add('kategorije-thumb')
-      landmarkText.appendChild(landmarkPlace)
-      landmarkText.appendChild(landmarkName)
-      landmarkText.appendChild(landmarkType)
-      var i360 = landmarksData.features[i].properties.i360
-      if(i360 == "1") {
-        landmark360.src = "/assets/icon/360_icon.svg"
-        landmarkText.appendChild(landmark360)
-      }
-    } 
+    var landmarkText = document.createElement('div')
+    landmarkText.classList.add("pt-2", "pl-4")
+    landmarkAll.appendChild(landmarkText)
+
+    var landmarkPlace = document.createElement('div')
+    var landmarkName = document.createElement('div')
+    var landmarkType = document.createElement('img')
+    var landmark360 = document.createElement('img')
+    landmarkPlace.innerText = landmarksData.features[i].properties.place
+    landmarkName.innerText = landmarksData.features[i].properties.name
+    landmarkType.src = landmarksData.features[i].properties.thumb
+    landmarkPlace.classList.add('menu-btn', 'text-c3')
+    landmarkName.classList.add('text-font')
+    landmarkType.classList.add('kategorije-thumb')
+    landmark360.classList.add('kategorije-thumb')
+    landmarkText.appendChild(landmarkPlace)
+    landmarkText.appendChild(landmarkName)
+    landmarkText.appendChild(landmarkType)
+    var i360 = landmarksData.features[i].properties.i360
+    if (i360 == "1") {
+      landmark360.src = "/assets/icon/360_icon.svg"
+      landmarkText.appendChild(landmark360)
+    }
+  }
+  for (i in natureData.features) {
+    var landmarkAll = document.createElement('button')
+    landmarkAll.id = i
+    landmarkAll.classList.add("list-group-item", "list-group-item-action", "no-outline", "mt-4", "pl-5", "landmarkList-height", "scale-animation-right", "display-flex", "text-font")
+    landmarkAll.classList.add(natureData.features[i].properties.id)
+    landmarkAll.onclick = function () { zoomTo(this.id); };
+    var parent = document.getElementById('landmark-name')
+    parent.appendChild(landmarkAll)
+    coord[i] = natureData.features[i].geometry.coordinates
+    landmarksZoom[i] = natureData.features[i].properties.zoom
+    console.log(natureData.features[i].properties.zoom)
+    var landmarkImg = document.createElement('img')
+    landmarkImg.src = natureData.features[i].properties.img
+    landmarkImg.classList.add("landmarkList-img", "ml-4", "center-y")
+    landmarkAll.appendChild(landmarkImg)
+
+    var landmarkText = document.createElement('div')
+    landmarkText.classList.add("pt-2", "pl-4")
+    landmarkAll.appendChild(landmarkText)
+
+    var landmarkPlace = document.createElement('div')
+    var landmarkName = document.createElement('div')
+    var landmarkType = document.createElement('img')
+    var landmark360 = document.createElement('img')
+    landmarkPlace.innerText = natureData.features[i].properties.place
+    landmarkName.innerText = natureData.features[i].properties.name
+    landmarkType.src = natureData.features[i].properties.thumb
+    landmarkPlace.classList.add('menu-btn', 'text-c3')
+    landmarkName.classList.add('text-font')
+    landmarkType.classList.add('kategorije-thumb')
+    landmark360.classList.add('kategorije-thumb')
+    landmarkText.appendChild(landmarkPlace)
+    landmarkText.appendChild(landmarkName)
+    landmarkText.appendChild(landmarkType)
+    var i360 = natureData.features[i].properties.i360
+    if (i360 == "1") {
+      landmark360.src = "/assets/icon/360_icon.svg"
+      landmarkText.appendChild(landmark360)
+    }
+  }
+  for (i in touristData.features) {
+    var landmarkAll = document.createElement('button')
+    landmarkAll.id = i
+    landmarkAll.classList.add("list-group-item", "list-group-item-action", "no-outline", "mt-4", "pl-5", "landmarkList-height", "scale-animation-right", "display-flex", "text-font")
+    landmarkAll.classList.add(touristData.features[i].properties.id)
+    landmarkAll.onclick = function () { zoomTo(this.id); };
+    var parent = document.getElementById('landmark-name')
+    parent.appendChild(landmarkAll)
+    coord[i] = touristData.features[i].geometry.coordinates
+    landmarksZoom[i] = touristData.features[i].properties.zoom
+    console.log(touristData.features[i].properties.zoom)
+    var landmarkImg = document.createElement('img')
+    landmarkImg.src = touristData.features[i].properties.img
+    landmarkImg.classList.add("landmarkList-img", "ml-4", "center-y")
+    landmarkAll.appendChild(landmarkImg)
+
+    var landmarkText = document.createElement('div')
+    landmarkText.classList.add("pt-2", "pl-4")
+    landmarkAll.appendChild(landmarkText)
+
+    var landmarkPlace = document.createElement('div')
+    var landmarkName = document.createElement('div')
+    var landmarkType = document.createElement('img')
+    var landmark360 = document.createElement('img')
+    landmarkPlace.innerText = touristData.features[i].properties.place
+    landmarkName.innerText = touristData.features[i].properties.name
+    landmarkType.src = touristData.features[i].properties.thumb
+    landmarkPlace.classList.add('menu-btn', 'text-c3')
+    landmarkName.classList.add('text-font')
+    landmarkType.classList.add('kategorije-thumb')
+    landmark360.classList.add('kategorije-thumb')
+    landmarkText.appendChild(landmarkPlace)
+    landmarkText.appendChild(landmarkName)
+    landmarkText.appendChild(landmarkType)
+    var i360 = touristData.features[i].properties.i360
+    if (i360 == "1") {
+      landmark360.src = "/assets/icon/360_icon.svg"
+      landmarkText.appendChild(landmark360)
+    }
+  }
   //})
   //End for landmarks
   // Load list of all routes from GeoJSON file
   //$.getJSON("assets/tours/routes.geojson", function(data) {
-    features = routesData.features
-    for(i in features) {
-      var routesAll = document.createElement('button')
-      routesAll.id = features[i].properties.id
-      routesAll.classList.add("list-group-item", "list-group-item-action", "no-outline")
-      routesAll.innerText = features[i].properties.name
-      routesAll.onclick = function() { getSourceJSON(this.id); };
-      var parent = document.getElementById('routesAll')
-      parent.appendChild(routesAll)
+  features = routesData.features
+  for (i in features) {
+    var routesAll = document.createElement('button')
+    routesAll.id = features[i].properties.id
+    routesAll.classList.add("list-group-item", "list-group-item-action", "no-outline")
+    routesAll.innerText = features[i].properties.name
+    routesAll.onclick = function () { getSourceJSON(this.id); };
+    var parent = document.getElementById('routesAll')
+    parent.appendChild(routesAll)
 
-      var routeText = document.createElement('small')
-      routeText.id = features[i].properties.id+'-text'
-      routeText.classList.add("p-3", "ml-4")
-      routeText.style.display = 'none'
-      toursDesc.push(routeText)
-      document.getElementById("routesAll").appendChild(routeText)
+    var routeText = document.createElement('small')
+    routeText.id = features[i].properties.id + '-text'
+    routeText.classList.add("p-3", "ml-4")
+    routeText.style.display = 'none'
+    toursDesc.push(routeText)
+    document.getElementById("routesAll").appendChild(routeText)
 
-      var routeDuration = document.createElement('div')
-      routeDuration.classList.add("text-right", "text-muted", "mr-4")
-      routeDuration.innerText = features[i].properties.duration
-      var routeType = document.createElement('img')
-      routeType.classList.add("ml-2")
-      routeType.src = features[i].properties.type
-      routeDuration.appendChild(routeType)
-      routeText.appendChild(routeDuration)
+    var routeDuration = document.createElement('div')
+    routeDuration.classList.add("text-right", "text-muted", "mr-4")
+    routeDuration.innerText = features[i].properties.duration
+    var routeType = document.createElement('img')
+    routeType.classList.add("ml-2")
+    routeType.src = features[i].properties.type
+    routeDuration.appendChild(routeType)
+    routeText.appendChild(routeDuration)
 
-      var stops = features[i].properties.stops
-      var dists = features[i].properties.dists
-      for(j in stops) {
-        var stopName = document.createElement("div")
-        stopName.innerText = stops[j]
-        stopName.classList.add("h6", "mt-2", "pl-4")
-        routeText.appendChild(stopName)
-        if(dists[j]) {
-          var dots = document.createElement("img")
-          dots.src = "/assets/icon/three-dots-vertical.svg"
-          dots.classList.add("ml-4")
-          var dist = document.createElement("span")
-          dist.innerText = dists[j]
-          dist.classList.add("ml-4")
-          routeText.appendChild(dots)
-          routeText.appendChild(dist)
-        }
+    var stops = features[i].properties.stops
+    var dists = features[i].properties.dists
+    for (j in stops) {
+      var stopName = document.createElement("div")
+      stopName.innerText = stops[j]
+      stopName.classList.add("h6", "mt-2", "pl-4")
+      routeText.appendChild(stopName)
+      if (dists[j]) {
+        var dots = document.createElement("img")
+        dots.src = "/assets/icon/three-dots-vertical.svg"
+        dots.classList.add("ml-4")
+        var dist = document.createElement("span")
+        dist.innerText = dists[j]
+        dist.classList.add("ml-4")
+        routeText.appendChild(dots)
+        routeText.appendChild(dist)
       }
-      var aboutRoute = document.createElement("div")
-      aboutRoute.innerText = features[i].properties.about
-      aboutRoute.classList.add("mt-4", "pl-4")
-      routeText.appendChild(aboutRoute)
     }
+    var aboutRoute = document.createElement("div")
+    aboutRoute.innerText = features[i].properties.about
+    aboutRoute.classList.add("mt-4", "pl-4")
+    routeText.appendChild(aboutRoute)
+  }
   //})
   //End for routes
   //Weekend destinations GeoJSON
   destInfoList = ["Mjesto polaska:", "Vrijeme polaska:", "Vrijeme povratka:", "Trajanje:", "Za ponijeti:", "Vodič i kontakt:", "Napomena:", "Ostale info:"]
-  $.getJSON("assets/tours/destinations.geojson", function(data) {
+  $.getJSON("assets/tours/destinations.geojson", function (data) {
     features = data.features
-    for(i in features) {
+    for (i in features) {
       var destinationsAll = document.createElement('button')
       destinationsAll.id = features[i].properties.id
       destinationsAll.classList.add("list-group-item", "list-group-item-action", "no-outline")
       destinationsAll.innerText = features[i].properties.name
-      destinationsAll.onclick = function() { getSourceJSON(this.id); };
+      destinationsAll.onclick = function () { getSourceJSON(this.id); };
       var parent = document.getElementById('destinationsAll')
       parent.appendChild(destinationsAll)
 
       var destinationText = document.createElement('small')
-      destinationText.id = features[i].properties.id+'-text'
+      destinationText.id = features[i].properties.id + '-text'
       console.log(destinationText.id)
       destinationText.classList.add("p-3", "ml-2")
       destinationText.style.display = 'none'
@@ -1054,7 +1142,7 @@ window.onload = function() {
       destinationType.src = features[i].properties.type
       destinationDuration.appendChild(destinationType)
       destinationText.appendChild(destinationDuration)
-      
+
       var aboutDestinaion = document.createElement("div")
       aboutDestinaion.innerText = features[i].properties.about
       aboutDestinaion.classList.add("mt-4", "pl-2")
@@ -1083,28 +1171,28 @@ window.onload = function() {
       }
     }
   })
-  var assocInfoList1 = ["Predsjednik:", "Novosti:", "Postani član:"], assocInfoList2 = ["assets/contact/phone.png","assets/contact/mail.png", "assets/contact/location.png", "assets/contact/facebook.png"];
-  $.getJSON("assets/landmarks/assocs.geojson", function(data) {
+  var assocInfoList1 = ["Predsjednik:", "Novosti:", "Postani član:"], assocInfoList2 = ["assets/contact/phone.png", "assets/contact/mail.png", "assets/contact/location.png", "assets/contact/facebook.png"];
+  $.getJSON("assets/landmarks/assocs.geojson", function (data) {
     features = data.features
-    for(i in features) {
+    for (i in features) {
       var assocsAll = document.createElement('button')
       assocsAll.id = features[i].properties.id
       assocsAll.classList.add("list-group-item", "list-group-item-action", "no-outline")
       assocsAll.innerText = features[i].properties.name
-      assocsAll.onclick = function() { getAssoc(this.id); };
+      assocsAll.onclick = function () { getAssoc(this.id); };
       var parent = document.getElementById('assocsAll')
       parent.appendChild(assocsAll)
-      
+
       assocCoord.push(features[i].geometry.coordinates)
 
       var assocText = document.createElement('small')
-      assocText.id = features[i].properties.id+'-text'
+      assocText.id = features[i].properties.id + '-text'
       assocText.classList.add("p-3", "ml-2")
       assocText.style.display = 'none'
       assocText.innerHTML = features[i].properties.about
       assocDesc.push(assocText)
       document.getElementById("assocsAll").appendChild(assocText)
-      
+
       //var aboutDestinaion = document.createElement("div")
       //aboutDestinaion.innerText = features[i].properties.about
       //aboutDestinaion.classList.add("mt-4", "pl-2")
@@ -1129,7 +1217,7 @@ window.onload = function() {
         itemTitle.innerText = assocInfoList1[g]
         itemTitle.classList.add("text-muted")
         item.appendChild(itemTitle)
-        if(g == 0){
+        if (g == 0) {
           var itemText = document.createElement("span")
           itemText.innerText = features[i].properties.info[g]
           item.appendChild(itemText)
@@ -1154,6 +1242,10 @@ window.onload = function() {
       }
     }
   })
+  vector.changed()
+  nature.changed()
+  tourist.changed()
+  //vjerskiObjekti.changed()
 }
 
 //Onload End
@@ -1163,14 +1255,14 @@ const kultura = []
 const priroda = []
 const turizam = []
 console.log(kultura)
-allFilter = function (){
+allFilter = function () {
   if (kultura.length == 0) {
     var kulturaElement = document.querySelectorAll('.kultura');
     var prirodaElement = document.querySelectorAll('.priroda');
     var turizamElement = document.querySelectorAll('.turizam');
     console.log(kulturaElement)
   }
-  document.getElementById('kategorije-check').style.left = 18+"%"
+  document.getElementById('kategorije-check').style.left = 18 + "%"
   for (let item1 of prirodaElement) {
     item1.style.display = 'flex'
   }
@@ -1180,15 +1272,21 @@ allFilter = function (){
   for (let item3 of kulturaElement) {
     item3.style.display = 'flex'
   }
+  vector.setVisible(true)
+  vectorPin.setVisible(true)
+  nature.setVisible(true)
+  naturePin.setVisible(true)
+  tourist.setVisible(true)
+  touristPin.setVisible(true)
 }
-kulturaFilter = function (){
+kulturaFilter = function () {
   if (kultura.length == 0) {
     var kulturaElement = document.querySelectorAll('.kultura');
     var prirodaElement = document.querySelectorAll('.priroda');
     var turizamElement = document.querySelectorAll('.turizam');
     console.log(kulturaElement)
   }
-  document.getElementById('kategorije-check').style.left = 43+"%"
+  document.getElementById('kategorije-check').style.left = 43 + "%"
   for (let item1 of prirodaElement) {
     item1.style.display = 'none'
   }
@@ -1198,15 +1296,21 @@ kulturaFilter = function (){
   for (let item3 of kulturaElement) {
     item3.style.display = 'flex'
   }
+  vector.setVisible(true)
+  vectorPin.setVisible(true)
+  nature.setVisible(false)
+  naturePin.setVisible(false)
+  tourist.setVisible(false)
+  touristPin.setVisible(false)
 }
-prirodaFilter = function (){
+prirodaFilter = function () {
   if (kultura.length == 0) {
     var kulturaElement = document.querySelectorAll('.kultura');
     var prirodaElement = document.querySelectorAll('.priroda');
     var turizamElement = document.querySelectorAll('.turizam');
     console.log(kulturaElement)
   }
-  document.getElementById('kategorije-check').style.left = 66+"%"
+  document.getElementById('kategorije-check').style.left = 66 + "%"
   for (let item1 of prirodaElement) {
     item1.style.display = 'flex'
   }
@@ -1216,14 +1320,20 @@ prirodaFilter = function (){
   for (let item3 of kulturaElement) {
     item3.style.display = 'none'
   }
+  vector.setVisible(false)
+  vectorPin.setVisible(false)
+  nature.setVisible(true)
+  naturePin.setVisible(true)
+  tourist.setVisible(false)
+  touristPin.setVisible(false)
 }
-turizamFilter = function (){
+turizamFilter = function () {
   if (kultura.length == 0) {
     var kulturaElement = document.querySelectorAll('.kultura');
     var prirodaElement = document.querySelectorAll('.priroda');
     var turizamElement = document.querySelectorAll('.turizam');
   }
-  document.getElementById('kategorije-check').style.left = 90+"%"
+  document.getElementById('kategorije-check').style.left = 90 + "%"
   for (let item1 of prirodaElement) {
     item1.style.display = 'none'
   }
@@ -1233,6 +1343,12 @@ turizamFilter = function (){
   for (let item3 of kulturaElement) {
     item3.style.display = 'none'
   }
+  vector.setVisible(false)
+  vectorPin.setVisible(false)
+  nature.setVisible(false)
+  naturePin.setVisible(false)
+  tourist.setVisible(true)
+  touristPin.setVisible(true)
 }
 
 
@@ -1243,8 +1359,16 @@ var vectorPinSource = new ol.source.Vector({
   features: (new ol.format.GeoJSON()).readFeatures(landmarksData, {
     featureProjection: 'EPSG:3857'
   }),
-  //projection: 'EPSG:3857',
-  //format: new ol.format.GeoJSON(),
+});
+var naturePinSource = new ol.source.Vector({
+  features: (new ol.format.GeoJSON()).readFeatures(natureData, {
+    featureProjection: 'EPSG:3857'
+  }),
+});
+var touristPinSource = new ol.source.Vector({
+  features: (new ol.format.GeoJSON()).readFeatures(touristData, {
+    featureProjection: 'EPSG:3857'
+  }),
 });
 var vjerskiPinSource = new ol.source.Vector({
   features: (new ol.format.GeoJSON()).readFeatures(vjerskiObjekti, {
@@ -1254,22 +1378,24 @@ var vjerskiPinSource = new ol.source.Vector({
   //format: new ol.format.GeoJSON(),
 });
 
-var pinStyle = function(feature, resolution) {
+var pinStyle = function (feature, resolution) {
   return (new ol.style.Style({
     image: new ol.style.Icon({
       src: feature.get('pin'),
       opacity: 1,
     })
   })
-)}
-var vjerskiPinStyle = function(feature, resolution) {
+  )
+}
+var vjerskiPinStyle = function (feature, resolution) {
   return (new ol.style.Style({
     image: new ol.style.Icon({
       src: feature.get('pin'),
       opacity: 1,
     })
   })
-)}
+  )
+}
 
 var vectorPin = new ol.layer.Vector({
   //minZoom: 11.5,
@@ -1280,36 +1406,75 @@ var vectorPin = new ol.layer.Vector({
   //renderOrder: ol.ordering.yOrdering(),
   style: pinStyle,
 });
+var naturePin = new ol.layer.Vector({
+  //minZoom: 11.5,
+  name: 'landmarks',
+  source: naturePinSource,
+  declutter: false,
+  // y ordering
+  //renderOrder: ol.ordering.yOrdering(),
+  style: pinStyle,
+});
+var touristPin = new ol.layer.Vector({
+  //minZoom: 11.5,
+  name: 'landmarks',
+  source: touristPinSource,
+  declutter: false,
+  // y ordering
+  //renderOrder: ol.ordering.yOrdering(),
+  style: pinStyle,
+});
 var vjerskiPin = new ol.layer.Vector({
   //minZoom: 11.5,
   name: 'vjerski',
   source: vjerskiPinSource,
   declutter: false,
+  visible: false,
   // y ordering
   //renderOrder: ol.ordering.yOrdering(),
   style: vjerskiPinStyle,
 });
 map.addLayer(vjerskiPin)
+vjerskiPin.setZIndex(0)
+map.addLayer(naturePin)
+map.addLayer(touristPin)
 map.addLayer(vectorPin)
 // Landmarks
 var vectorSource = new ol.source.Vector({
   features: (new ol.format.GeoJSON()).readFeatures(landmarksData, {
     featureProjection: 'EPSG:3857'
   }),
-  //url: 'assets/landmarks/landmarks.geojson',
-  //projection: 'EPSG:3857',
-  //format: new ol.format.GeoJSON(),
 });
-
-
+var natureSource = new ol.source.Vector({
+  features: (new ol.format.GeoJSON()).readFeatures(natureData, {
+    featureProjection: 'EPSG:3857'
+  }),
+});
+var touristSource = new ol.source.Vector({
+  features: (new ol.format.GeoJSON()).readFeatures(touristData, {
+    featureProjection: 'EPSG:3857'
+  }),
+});
 var vector = new ol.layer.Vector({
   minZoom: 10.5,
   name: 'landmarks',
   source: vectorSource,
   declutter: true,
-  // y ordering
-  //renderOrder: ol.ordering.yOrdering(),
-  style:  function (feature, resolution) { return getFeatureStyle(feature, resolution, false); },
+  style: function (feature, resolution) { return getFeatureStyle(feature, resolution, false); },
+});
+var nature = new ol.layer.Vector({
+  minZoom: 10.5,
+  name: 'nature',
+  source: natureSource,
+  declutter: true,
+  style: function (feature, resolution) { return getFeatureStyle(feature, resolution, false); },
+});
+var tourist = new ol.layer.Vector({
+  minZoom: 10.5,
+  name: 'tourist',
+  source: touristSource,
+  declutter: true,
+  style: function (feature, resolution) { return getFeatureStyle(feature, resolution, false); },
 });
 
 var vjerskiObjektiSource = new ol.source.Vector({
@@ -1326,6 +1491,7 @@ var vjerskiObjekti = new ol.layer.Vector({
   name: 'vjerskiObjekti',
   source: vjerskiObjektiSource,
   declutter: true,
+  visible: false,
   // y ordering
   //renderOrder: ol.ordering.yOrdering(),
   style: function (feature, resolution) { return getFeatureStyle(feature, resolution, false); },
@@ -1351,55 +1517,57 @@ var vjerskiObjekti = new ol.layer.Vector({
 //map.addLayer(vectorTours)
 //vectorTours.setZIndex(10)
 map.addLayer(vjerskiObjekti);
+map.addLayer(nature);
+map.addLayer(tourist);
 map.addLayer(vector);
 vector.setZIndex(15)
-vjerskiObjekti.setZIndex(1)
+vjerskiObjekti.setZIndex(0)
 //vectorSource.refresh()
 
 
 // Tours
 
 // tour1
-var tour1Source = new ol.source.Vector({
-  url: 'assets/tours/tour1.geojson',
-  projection: 'EPSG:3857',
-  format: new ol.format.GeoJSON(),
-});
-
-var tour1 = new ol.layer.Vector({
-  //minZoom: 13,
-  name: 'tour1',
-  source: tour1Source,
-  declutter: true,
-  opacity: 0,
-  // y ordering
-  //renderOrder: ol.ordering.yOrdering(),
-  style: getFeatureStyleTours
-});
-
-map.addLayer(tour1);
-tour1.setZIndex(1)
-
-// tour2
-var tour2Source = new ol.source.Vector({
-  url: 'assets/tours/tour2.geojson',
-  projection: 'EPSG:3857',
-  format: new ol.format.GeoJSON(),
-});
-
-var tour2 = new ol.layer.Vector({
-  //minZoom: 13,
-  name: 'tour2',
-  source: tour2Source,
-  declutter: true,
-  opacity: 0,
-  // y ordering
-  //renderOrder: ol.ordering.yOrdering(),
-  style: getFeatureStyleTours
-});
-
-map.addLayer(tour2);
-tour2.setZIndex(1)
+//var tour1Source = new ol.source.Vector({
+//  url: 'assets/tours/tour1.geojson',
+//  projection: 'EPSG:3857',
+//  format: new ol.format.GeoJSON(),
+//});
+//
+//var tour1 = new ol.layer.Vector({
+//  //minZoom: 13,
+//  name: 'tour1',
+//  source: tour1Source,
+//  declutter: true,
+//  opacity: 0,
+//  // y ordering
+//  //renderOrder: ol.ordering.yOrdering(),
+//  style: getFeatureStyleTours
+//});
+//
+//map.addLayer(tour1);
+//tour1.setZIndex(1)
+//
+//// tour2
+//var tour2Source = new ol.source.Vector({
+//  url: 'assets/tours/tour2.geojson',
+//  projection: 'EPSG:3857',
+//  format: new ol.format.GeoJSON(),
+//});
+//
+//var tour2 = new ol.layer.Vector({
+//  //minZoom: 13,
+//  name: 'tour2',
+//  source: tour2Source,
+//  declutter: true,
+//  opacity: 0,
+//  // y ordering
+//  //renderOrder: ol.ordering.yOrdering(),
+//  style: getFeatureStyleTours
+//});
+//
+//map.addLayer(tour2);
+//tour2.setZIndex(1)
 
 // Associations layer
 assocSource = new ol.source.Vector({
@@ -1423,27 +1591,29 @@ var assocs = new ol.layer.Vector({
 // localStorage
 var zoom = map.getView().getZoom()
 if (localStorage.basemap == 2) {
-  document.getElementById('satellite').classList.add('activate-baselayer')
-  document.getElementById('topo').classList.remove('activate-baselayer')
+  //document.getElementById('satellite').classList.add('activate-baselayer')
+  //document.getElementById('topo').classList.remove('activate-baselayer')
   topo.setVisible(false)
   satellite.setVisible(true)
 }
 
 var zastave = true
 var zastaveList = [tomislavgradZastava, ramaPodloga, ramaZastava, posusjeZastava, livnoPodloga, livnoZastava, kupresZastava, kupresPodloga_blue, kupresPodloga_red, jablanicaZastava, opcine, opcineGranice]
-for(zastava in zastaveList){
+for (zastava in zastaveList) {
   zastaveList[zastava].setZIndex(5)
 }
 console.log(localStorage.zastave)
 if (localStorage.zastave == 2) {
   zastave = false
-  document.getElementById('zastaveOpcina').classList.remove('activate-layer')
-  for(zastava in zastaveList){
+  //document.getElementById('zastaveOpcina').classList.remove('activate-layer')
+  for (zastava in zastaveList) {
     zastaveList[zastava].setVisible(false)
   }
   vector.setVisible(true)
+  nature.setVisible(true)
+  tourist.setVisible(true)
   assocs.setVisible(true)
-  vjerskiObjekti.setVisible(true)
+  //vjerskiObjekti.setVisible(true)
 }
 
 
@@ -1471,17 +1641,19 @@ document.getElementById('routes').style.display = 'none'
 document.getElementById('assoc').style.display = 'none'
 document.getElementById('destinationsAll').style.display = 'none'
 function meetTg() {
-  if(meet==1) {
+  if (meet == 1) {
     return
   } else {
     deselect()
     meet = 1
     assocs.setZIndex(10)
     vector.setZIndex(20)
-    for (var i = 0; i < toursDesc.length; i++){
+    nature.setZIndex(20)
+    tourist.setZIndex(20)
+    for (var i = 0; i < toursDesc.length; i++) {
       toursDesc[i].style.display = 'none'
     }
-    for (var i = 0; i < weekendDestinationsDesc.length; i++){
+    for (var i = 0; i < weekendDestinationsDesc.length; i++) {
       weekendDestinationsDesc[i].style.display = 'none'
     }
     document.getElementById('msg').style.display = 'block'
@@ -1489,7 +1661,7 @@ function meetTg() {
     document.getElementById('routes').style.display = 'none'
     document.getElementById('assoc').style.display = 'none'
     var activate = document.getElementsByClassName('activate')
-    while(activate.length){
+    while (activate.length) {
       activate[0].classList.remove('activate')
     }
     document.getElementById('btn-meet').classList.add('activate')
@@ -1500,11 +1672,11 @@ function meetTg() {
     tour2.setVisible(false)
     destination1.setVisible(false)
     routeSource.clear()
-  } 
+  }
 }
 
 function routes() {
-  if(meet==2) {
+  if (meet == 2) {
     return
   } else {
     deselect()
@@ -1514,12 +1686,14 @@ function routes() {
     }
     assocs.setZIndex(10)
     vector.setZIndex(20)
+    nature.setZIndex(20)
+    tourist.setZIndex(20)
     document.getElementById('msg').style.display = 'none'
     document.getElementById('meet').style.display = 'none'
     document.getElementById('assoc').style.display = 'none'
     document.getElementById('routes').style.display = 'block'
     var activate = document.getElementsByClassName('activate')
-    while(activate.length){
+    while (activate.length) {
       activate[0].classList.remove('activate')
     }
     document.getElementById('btn-routes').classList.add('activate')
@@ -1528,7 +1702,7 @@ function routes() {
     //tour1.setOpacity(1)
     //tour2.setOpacity(1)
     //route.setOpacity(1)
-  } 
+  }
 }
 
 function touristTours() {
@@ -1545,25 +1719,27 @@ function weekendDestinations() {
 }
 
 function assoc() {
-  if(meet==3){
+  if (meet == 3) {
     return
   } else {
     deselect()
     meet = 3
-    for (var i = 0; i < toursDesc.length; i++){
+    for (var i = 0; i < toursDesc.length; i++) {
       toursDesc[i].style.display = 'none'
     }
-    for (var i = 0; i < weekendDestinationsDesc.length; i++){
+    for (var i = 0; i < weekendDestinationsDesc.length; i++) {
       weekendDestinationsDesc[i].style.display = 'none'
     }
     assocs.setZIndex(20)
     vector.setZIndex(10)
+    nature.setZIndex(10)
+    tourist.setZIndex(10)
     document.getElementById('msg').style.display = 'none'
     document.getElementById('meet').style.display = 'none'
     document.getElementById('routes').style.display = 'none'
-    document.getElementById('assoc').style.display = 'block'    
+    document.getElementById('assoc').style.display = 'block'
     var activate = document.getElementsByClassName('activate')
-    while(activate.length){
+    while (activate.length) {
       activate[0].classList.remove('activate')
     }
     document.getElementById('btn-assoc').classList.add('activate')
@@ -1574,20 +1750,20 @@ function assoc() {
   }
 }
 
-function backFromMeet () {
+function backFromMeet() {
   deselect()
-  if(meet == 1) {
-      document.getElementById('msg').style.display = 'block'
-  } else if(meet == 2) {
-      document.getElementById('routes').style.display = 'block'
-  } else if(meet == 3) {
+  if (meet == 1) {
+    document.getElementById('msg').style.display = 'block'
+  } else if (meet == 2) {
+    document.getElementById('routes').style.display = 'block'
+  } else if (meet == 3) {
     document.getElementById('assoc').style.display = 'block'
   }
 }
 
 // Control Select 
 var select = new ol.interaction.Select({
-  layers: [vector, tour1, tour2, vjerskiObjekti],
+  layers: [vector, nature, tourist, vjerskiObjekti],
   condition: ol.events.condition.click,
   style: function (feature, resolution) { return getFeatureStyle(feature, resolution, true); },
 })
@@ -1598,10 +1774,10 @@ function deselect() {
   select.getFeatures().clear()
 }
 
-features = select.getFeatures().on(['add','remove'], function(e) {
+features = select.getFeatures().on(['add', 'remove'], function (e) {
   if (!zastave || currZoom > 11.5) {
-    if (e.type=="add") {
-      if(meet==1) {
+    if (e.type == "add") {
+      if (meet == 1) {
         document.getElementById('msg').style.display = 'none';
       }
       toggleOnSelect()
@@ -1624,12 +1800,12 @@ features = select.getFeatures().on(['add','remove'], function(e) {
       //$("<p>").text(el.get("commune")+" ("+el.get("region")+" - "+el.get("date").replace(".","/")+")").appendTo(info);
       //$("<p>").addClass('copy').html("&copy; "+el.get("copy")+" - "+el.get("author")).appendTo(info);
     }
-  
+
     else {
       //$("#select").html("<p>Select an image.</p>");
-      if(meet==1) {
+      if (meet == 1) {
 
-          document.getElementById('msg').style.display = 'block';
+        document.getElementById('msg').style.display = 'block';
       }
       document.getElementById('meet').style.display = 'none';
       document.getElementById('landmark').style.display = 'none';
@@ -1637,50 +1813,50 @@ features = select.getFeatures().on(['add','remove'], function(e) {
       document.getElementById('landmark-about').style.display = 'none';
     }
   }
-  });
+});
 
 
-  var selectAssoc = new ol.interaction.Select({
-    layers: [assocs],
-    condition: ol.events.condition.click,
-    style: function (feature, resolution) { return getFeatureStyleAssoc(feature, resolution, true); }
-  })
-  
-  
-  map.addInteraction(selectAssoc);
-  
-  selectAssoc.getFeatures().on(['add','remove'], function(e) {
-    if (!zastave || currZoom > 11.5) {
-      toggleOnSelect()
-      var feature = e.element;
-      var id = feature.get('id')
-      if (e.type=="add") {
-        if(meet==1) {
-          document.getElementById('msg').style.display = 'none';
-        }
-        //var info = $("#select").html("<p>Selection:</p>");
-        console.log(id)
-        assoc()
-        document.getElementById(id+'-text').style.display = 'none'
-        getAssoc(id)
-        
-        //$("<img>").attr('src',el.get("img")).appendTo(info);
-        //$("<p>").text(el.get("text")).appendTo(info);
-        //$("<p>").text(el.get("commune")+" ("+el.get("region")+" - "+el.get("date").replace(".","/")+")").appendTo(info);
-        //$("<p>").addClass('copy').html("&copy; "+el.get("copy")+" - "+el.get("author")).appendTo(info);
+var selectAssoc = new ol.interaction.Select({
+  layers: [assocs],
+  condition: ol.events.condition.click,
+  style: function (feature, resolution) { return getFeatureStyleAssoc(feature, resolution, true); }
+})
+
+
+map.addInteraction(selectAssoc);
+
+selectAssoc.getFeatures().on(['add', 'remove'], function (e) {
+  if (!zastave || currZoom > 11.5) {
+    toggleOnSelect()
+    var feature = e.element;
+    var id = feature.get('id')
+    if (e.type == "add") {
+      if (meet == 1) {
+        document.getElementById('msg').style.display = 'none';
       }
-    
-      else {
-        //$("#select").html("<p>Select an image.</p>");
-        if(meet==1) {
-            document.getElementById('msg').style.display = 'block';
+      //var info = $("#select").html("<p>Selection:</p>");
+      console.log(id)
+      assoc()
+      document.getElementById(id + '-text').style.display = 'none'
+      getAssoc(id)
 
-        }
-        document.getElementById(id+'-text').style.display = 'block'
-        getAssoc(id)
-      }
+      //$("<img>").attr('src',el.get("img")).appendTo(info);
+      //$("<p>").text(el.get("text")).appendTo(info);
+      //$("<p>").text(el.get("commune")+" ("+el.get("region")+" - "+el.get("date").replace(".","/")+")").appendTo(info);
+      //$("<p>").addClass('copy').html("&copy; "+el.get("copy")+" - "+el.get("author")).appendTo(info);
     }
-  });
+
+    else {
+      //$("#select").html("<p>Select an image.</p>");
+      if (meet == 1) {
+        document.getElementById('msg').style.display = 'block';
+
+      }
+      document.getElementById(id + '-text').style.display = 'block'
+      getAssoc(id)
+    }
+  }
+});
 
 // Scale image on hover ------------------------------------------
 
@@ -1693,22 +1869,22 @@ features = select.getFeatures().on(['add','remove'], function(e) {
 //        console.log(feature)
 //        feature.changed
 //      });
- //     if (feature) {
- //       feature.setStyle(new ol.style.Style({
- //         image: new ol.style.Icon({
- //           src: feature.get('url'),
- //           anchor: [0.5, 0.5],
- //           opacity: 1,
- //           scale: 2
- //         })
- //       }))
- //       document.getElementById('nodelist').innerHTML = feature.get('name');
- //       document.getElementById('image').src = feature.get('url');
- //     }
- //     else {
- //       console.log(feature)
- //     }
- //   });
+//     if (feature) {
+//       feature.setStyle(new ol.style.Style({
+//         image: new ol.style.Icon({
+//           src: feature.get('url'),
+//           anchor: [0.5, 0.5],
+//           opacity: 1,
+//           scale: 2
+//         })
+//       }))
+//       document.getElementById('nodelist').innerHTML = feature.get('name');
+//       document.getElementById('image').src = feature.get('url');
+//     }
+//     else {
+//       console.log(feature)
+//     }
+//   });
 
 // Za izmjenu bboje poligona-------------------------------------------------------
 //var selected = null;
@@ -1735,7 +1911,7 @@ features = select.getFeatures().on(['add','remove'], function(e) {
 var iconStyle2 = new ol.style.Style({
   image: new ol.style.Icon({
     src: 'assets/icon/virtual-reality.svg',
-    anchor: [0.5, 0,5],
+    anchor: [0.5, 0, 5],
     size: [230, 230],
     scale: 0.5,
     opacity: 1,
@@ -1760,8 +1936,8 @@ var select360 = new ol.interaction.Select({
   style: iconStyle2
 })
 map.addInteraction(select360);
-select360.getFeatures().on(['add','remove'], function(e) {
-  if(e.type == 'add') {
+select360.getFeatures().on(['add', 'remove'], function (e) {
+  if (e.type == 'add') {
     window.open(e.element.values_.url, '_self')
   }
 
@@ -1963,7 +2139,7 @@ select360.getFeatures().on(['add','remove'], function(e) {
 //      //extent: [xE, yS, xW, yN]
 //    })
 //  });
-if(isMobile){
+if (isMobile) {
   document.getElementById("logo").classList.add("logo-color")
 }
 function toggle(x) {
@@ -1987,6 +2163,15 @@ function toggleOnSelect() {
   }
 }
 
+function slojevi() {
+  document.getElementById('dropdown-menu').style.visibility = 'visible'
+  document.getElementById('dropdown-menu').style.opacity = 1
+}
+function slojeviClose() {
+  document.getElementById('dropdown-menu').style.visibility = 'hidden'
+  document.getElementById('dropdown-menu').style.opacity = 0
+}
+
 // Routing ---------------------------------------------------
 // Get coordinates from geojson (for route)
 
@@ -1994,47 +2179,47 @@ document.getElementById('msg_el').style.display = 'none'
 
 // Make route layer
 
- //points = [],
+//points = [],
 //msg_el = document.getElementById('msg_el'),
 url_osrm_nearest = '//router.project-osrm.org/nearest/v1/driving/',
-url_osrm_route = '//router.project-osrm.org/route/v1/driving/',
-icon_url = '/assets/icon/placeholder2.png',
-routeSource = new ol.source.Vector(),
-route = new ol.layer.Vector({
-  name: 'route',
-  source: routeSource,
-}),
-styles = {
-  route: new ol.style.Style({
-    stroke: new ol.style.Stroke({
-      width: 6, color: [255, 193, 7]
-    })
+  url_osrm_route = '//router.project-osrm.org/route/v1/driving/',
+  icon_url = '/assets/icon/placeholder2.png',
+  routeSource = new ol.source.Vector(),
+  route = new ol.layer.Vector({
+    name: 'route',
+    source: routeSource,
   }),
-  icon: new ol.style.Style({
-    image: new ol.style.Icon({
-      anchor: [0.5, 1],
-      src: icon_url,
+  styles = {
+    route: new ol.style.Style({
+      stroke: new ol.style.Stroke({
+        width: 6, color: [255, 193, 7]
+      })
+    }),
+    icon: new ol.style.Style({
+      image: new ol.style.Icon({
+        anchor: [0.5, 1],
+        src: icon_url,
+      })
     })
-  })
-}
+  }
 map.addLayer(route)
 
 // Routing
 var utils = {
-  getNearest: function(coord){
+  getNearest: function (coord) {
     var coord4326 = utils.to4326(coord);
-    return new Promise(function(resolve, reject) {
+    return new Promise(function (resolve, reject) {
       //make sure the coord is on street
-      fetch(url_osrm_nearest + coord4326.join()).then(function(response) { 
+      fetch(url_osrm_nearest + coord4326.join()).then(function (response) {
         // Convert to JSON
         return response.json();
-      }).then(function(json) {
+      }).then(function (json) {
         if (json.code === 'Ok') resolve(json.waypoints[0].location);
         else reject();
       });
     });
   },
-  createFeature: function(coord) {
+  createFeature: function (coord) {
     var feature = new ol.Feature({
       type: 'place',
       geometry: new ol.geom.Point(coord)
@@ -2042,7 +2227,7 @@ var utils = {
     feature.setStyle(styles.icon);
     routeSource.addFeature(feature);
   },
-  createRoute: function(polyline) {
+  createRoute: function (polyline) {
     // route is ol.geom.LineString
     var route = new ol.format.Polyline({
       factor: 1e5
@@ -2057,7 +2242,7 @@ var utils = {
     feature.setStyle(styles.route);
     routeSource.addFeature(feature);
   },
-  to4326: function(coord) {
+  to4326: function (coord) {
     return ol.proj.transform([
       parseFloat(coord[0]), parseFloat(coord[1])
     ], 'EPSG:3857', 'EPSG:4326');
@@ -2070,35 +2255,35 @@ var utils = {
 function getSourceJSON(clickedID, selected) {
   //document.getElementById('sidebar-wrapper').style.pointerEvents = 'none'
   routeSource.clear()
-  map.getLayers().forEach(function (layer) { 
+  map.getLayers().forEach(function (layer) {
     let name = layer.get('name');
-    if(name){
-      if(name.slice(0,4) == 'tour' || name.slice(0,4) == 'dest'){
+    if (name) {
+      if (name.slice(0, 4) == 'tour' || name.slice(0, 4) == 'dest') {
         layer.setVisible(false)
         document.getElementById(name).classList.remove('activate')
       }
-      if(name == clickedID) {
-          if (name.slice(0,4) == 'tour') {
-            for (var i = 0; i < weekendDestinationsDesc.length; i++){
-              weekendDestinationsDesc[i].style.display = 'none'
-            }
-          let clickedIDtext = document.getElementById(clickedID+'-text').style.display
-          if(clickedIDtext == 'none'){
+      if (name == clickedID) {
+        if (name.slice(0, 4) == 'tour') {
+          for (var i = 0; i < weekendDestinationsDesc.length; i++) {
+            weekendDestinationsDesc[i].style.display = 'none'
+          }
+          let clickedIDtext = document.getElementById(clickedID + '-text').style.display
+          if (clickedIDtext == 'none') {
             zoomToRoute(clickedID)
             document.getElementById(clickedID).classList.add('activate')
-            document.getElementById(clickedID+"-text").style.display = 'block';
+            document.getElementById(clickedID + "-text").style.display = 'block';
             //vector.getSource().once('addfeature', function() {
             layer.setOpacity(1)
             layer.setVisible(true)
             layer.setZIndex(10000)
             var points = []
             var features = layer.getSource().getFeatures()
-            for(feature in features){
+            for (feature in features) {
               points.push(features[feature].geometryChangeKey_.target.flatCoordinates)
-             }
-            for(point in points){
+            }
+            for (point in points) {
               var evt = points[point]
-              utils.getNearest(evt).then(function(coord_street){
+              utils.getNearest(evt).then(function (coord_street) {
                 var last_point = points[points.length - 1];
                 var points_length = points.push(coord_street);
                 //if (points_length < 2) {
@@ -2108,10 +2293,10 @@ function getSourceJSON(clickedID, selected) {
                 //get the route
                 var point1 = last_point.join();
                 var point2 = coord_street.join();
-                
-                fetch(url_osrm_route + point1 + ';' + point2).then(function(r) { 
+
+                fetch(url_osrm_route + point1 + ';' + point2).then(function (r) {
                   return r.json();
-                }).then(function(json) {
+                }).then(function (json) {
                   //if(json.code !== 'Ok') {
                   //  msg_el.innerHTML = 'No route found.';
                   //  return;
@@ -2127,113 +2312,113 @@ function getSourceJSON(clickedID, selected) {
             //})
           } else {
             layer.setZIndex(1)
-            document.getElementById(clickedID+'-text').style.display = 'none'
+            document.getElementById(clickedID + '-text').style.display = 'none'
             //document.getElementById('sidebar-wrapper').style.pointerEvents = 'auto' 
           }
         }
-        if (name.slice(0,4) == 'dest') {
-          let clickedIDtext = document.getElementById(clickedID+'-text').style.display
-          if(clickedIDtext == 'none'){
-              zoomToDest(clickedID)
-              document.getElementById(clickedID).classList.add('activate')
-              document.getElementById(clickedID+"-text").style.display = 'block';
-              //vector.getSource().once('addfeature', function() {
-              layer.setOpacity(1)
-              layer.setVisible(true)
-              layer.setZIndex(1)
+        if (name.slice(0, 4) == 'dest') {
+          let clickedIDtext = document.getElementById(clickedID + '-text').style.display
+          if (clickedIDtext == 'none') {
+            zoomToDest(clickedID)
+            document.getElementById(clickedID).classList.add('activate')
+            document.getElementById(clickedID + "-text").style.display = 'block';
+            //vector.getSource().once('addfeature', function() {
+            layer.setOpacity(1)
+            layer.setVisible(true)
+            layer.setZIndex(1)
           } else {
             layer.setZIndex(1)
-              document.getElementById(clickedID+'-text').style.display = 'none'
+            document.getElementById(clickedID + '-text').style.display = 'none'
           }
-      }
+        }
       }
     }
   })
 }
 
-      
+
 function getAssoc(clickedID) {
-  let clickedIDtext = document.getElementById(clickedID+'-text').style.display
-  if(clickedIDtext == 'none'){
+  let clickedIDtext = document.getElementById(clickedID + '-text').style.display
+  if (clickedIDtext == 'none') {
     var activate = document.getElementsByClassName('activate-assoc')
-    while(activate.length){
+    while (activate.length) {
       activate[0].classList.remove('activate-assoc')
     }
     zoomToAssoc(clickedID)
-    document.getElementById(clickedID+"-text").style.display = 'block';
+    document.getElementById(clickedID + "-text").style.display = 'block';
     document.getElementById(clickedID).classList.add('activate-assoc')
   } else {
-    document.getElementById(clickedID+"-text").style.display = 'none';
+    document.getElementById(clickedID + "-text").style.display = 'none';
     document.getElementById(clickedID).classList.remove('activate-assoc')
     assocSource.refresh()
   }
 }
-  
+
 //layers = map.getLayers().array_
 
-  
-  //document.addEventListener('click', function(e) {
-  //  //if(meet==2){
-  //  //  e = e || window.event;
-  //  //  var target = e.target || e.srcElement,
-  //  //  //text = target.textContent || target.innerText;
-  //  //  id = [target.id],
-  //  //  node = target.nodeName,
-  //  //  display = document.getElementById(id+"-text").style.display
-  //  //  console.log(id)
-  //  //  if(node == "BUTTON" && display=='none'){
-  //  //    zoomToRoute(id)
-  //  //    document.getElementById(id+"-text").style.display = 'block';
-  //  //    //route.setVisible(true)
-  //  //    //route.changed()
-  //  //    //for(layer in layers){
-  //  //    //  if (layers[layer].values_.name == 'route'){
-  //  //    //    layers[layer].setVisible(false)
-  //  //    //    layers[layer].changed()
-  //  //    //  }
-  //  //    //  if (layers[layer].values_.name == 'route'){
-  //  //    //    layers[layer].setVisible(true)
-  //  //    //    layers[layer].changed()
-  //  //    //  }
-  //  //    //}
-  //  //  } else {
-  //  //    document.getElementById(id+"-text").style.display = 'none';
-  //  //  }
-  //  //}
-  //  if(meet==3){
-  //    e = e || window.event;
-  //    var target = e.target || e.srcElement,
-  //    //text = target.textContent || target.innerText;
-  //    id = [target.id]
-  //    node = target.nodeName
-  //    //if(node == "BUTTON"){
-  //    //  zoomToAssoc(id)
-  //    //  document.getElementById(id+"-text").style.display = 'block';
-  //    //  //route.setVisible(true)
-  //    //  //route.changed()
-  //    //  //for(layer in layers){
-  //    //  //  if (layers[layer].values_.name == 'route'){
-  //    //  //    layers[layer].setVisible(false)
-  //    //  //    layers[layer].changed()
-  //    //  //  }
-  //    //  //  if (layers[layer].values_.name == 'route'){
-  //    //  //    layers[layer].setVisible(true)
-  //    //  //    layers[layer].changed()
-  //    //  //  }
-  //    //  //}
-  //    //}
-  //  }
-  //}, false);
-  
+
+//document.addEventListener('click', function(e) {
+//  //if(meet==2){
+//  //  e = e || window.event;
+//  //  var target = e.target || e.srcElement,
+//  //  //text = target.textContent || target.innerText;
+//  //  id = [target.id],
+//  //  node = target.nodeName,
+//  //  display = document.getElementById(id+"-text").style.display
+//  //  console.log(id)
+//  //  if(node == "BUTTON" && display=='none'){
+//  //    zoomToRoute(id)
+//  //    document.getElementById(id+"-text").style.display = 'block';
+//  //    //route.setVisible(true)
+//  //    //route.changed()
+//  //    //for(layer in layers){
+//  //    //  if (layers[layer].values_.name == 'route'){
+//  //    //    layers[layer].setVisible(false)
+//  //    //    layers[layer].changed()
+//  //    //  }
+//  //    //  if (layers[layer].values_.name == 'route'){
+//  //    //    layers[layer].setVisible(true)
+//  //    //    layers[layer].changed()
+//  //    //  }
+//  //    //}
+//  //  } else {
+//  //    document.getElementById(id+"-text").style.display = 'none';
+//  //  }
+//  //}
+//  if(meet==3){
+//    e = e || window.event;
+//    var target = e.target || e.srcElement,
+//    //text = target.textContent || target.innerText;
+//    id = [target.id]
+//    node = target.nodeName
+//    //if(node == "BUTTON"){
+//    //  zoomToAssoc(id)
+//    //  document.getElementById(id+"-text").style.display = 'block';
+//    //  //route.setVisible(true)
+//    //  //route.changed()
+//    //  //for(layer in layers){
+//    //  //  if (layers[layer].values_.name == 'route'){
+//    //  //    layers[layer].setVisible(false)
+//    //  //    layers[layer].changed()
+//    //  //  }
+//    //  //  if (layers[layer].values_.name == 'route'){
+//    //  //    layers[layer].setVisible(true)
+//    //  //    layers[layer].changed()
+//    //  //  }
+//    //  //}
+//    //}
+//  }
+//}, false);
+
 let tours = []
 let weekendDestinationsList = []
 map.getLayers().forEach(function (layer) {
   let layName = layer.get('name')
-  if(layName){
-    if(layName.slice(0,4)=='tour'){
+  if (layName) {
+    if (layName.slice(0, 4) == 'tour') {
       tours.push(layer)
     }
-    if(layName.slice(0,4) =='dest'){
+    if (layName.slice(0, 4) == 'dest') {
       weekendDestinationsList.push(layer)
     }
   }
@@ -2244,7 +2429,7 @@ map.getLayers().forEach(function (layer) {
 ////  var id = document.getElementById("tour"+i+"-text")
 ////  toursDesc.push(id)
 ////}
-for (var i = 0; i < toursDesc.length; i++){
+for (var i = 0; i < toursDesc.length; i++) {
   toursDesc[i].style.display = 'none'
 }
 
@@ -2253,23 +2438,23 @@ for (var i = 0; i < toursDesc.length; i++){
 //  var id = document.getElementById("destination"+i+"-text")
 //  weekendDestinationsDesc.push(id)
 //}
-for (var i = 0; i < weekendDestinationsDesc.length; i++){
+for (var i = 0; i < weekendDestinationsDesc.length; i++) {
   weekendDestinationsDesc[i].style.display = 'none'
 }
 
 
 function zoomToRoute(id) {
-  for (var i = 0; i < toursDesc.length; i++){
+  for (var i = 0; i < toursDesc.length; i++) {
     toursDesc[i].style.display = 'none'
   }
-  if(id=="tour1"){
+  if (id == "tour1") {
     view.animate({
       center: [1917682, 5422196],
       duration: 3000,
       zoom: 16.5
     });
   }
-  if(id=="tour2"){
+  if (id == "tour2") {
     view.animate({
       center: [1931475, 5409191],
       duration: 3000,
@@ -2282,11 +2467,11 @@ function zoomToRoute(id) {
 var destCoord = [[[1919403.44, 5398854.51], 14]]
 function zoomToDest(id) {
   var num = id.slice(11)
-  console.log(destCoord[num-1])
+  console.log(destCoord[num - 1])
   view.animate({
-    center: destCoord[num-1][0],
+    center: destCoord[num - 1][0],
     duration: 1000,
-    zoom: destCoord[num-1][1]
+    zoom: destCoord[num - 1][1]
   })
 }
 
@@ -2303,12 +2488,12 @@ function zoomToDest(id) {
 //}
 console.log(assocDesc)
 function zoomToAssoc(id) {
-  for (var i = 0; i < assocDesc.length; i++){
+  for (var i = 0; i < assocDesc.length; i++) {
     assocDesc[i].style.display = 'none'
   }
   var num = id.slice(5)
   view.animate({
-    center: ol.proj.fromLonLat(assocCoord[num-1]),
+    center: ol.proj.fromLonLat(assocCoord[num - 1]),
     duration: 2000,
     zoom: 16
   })
@@ -2334,67 +2519,84 @@ console.log(localStorage.zastave)
 function zastaveOpcina() {
   if (zastave) {
     zastave = false
-    document.getElementById('zastaveOpcina').classList.remove('activate-layer')
-    for(zastava in zastaveList){
+    document.getElementById('zastaveOpcina').checked = false
+    for (zastava in zastaveList) {
       zastaveList[zastava].setVisible(false)
     }
     localStorage.zastave = 2
     vector.setVisible(true)
+    nature.setVisible(true)
+    tourist.setVisible(true)
     assocs.setVisible(true)
-    vjerskiObjekti.setVisible(true)
+    //vjerskiObjekti.setVisible(true)
   } else {
     zastave = true
-    document.getElementById('zastaveOpcina').classList.add('activate-layer')
-    for(zastava in zastaveList){
+    document.getElementById('zastaveOpcina').checked = true
+    for (zastava in zastaveList) {
       zastaveList[zastava].setVisible(true)
     }
     localStorage.zastave = 1
     vector.setVisible(false)
+    nature.setVisible(false)
+    tourist.setVisible(false)
     assocs.setVisible(false)
-    vjerskiObjekti.setVisible(false)
+    //vjerskiObjekti.setVisible(false)
   }
 }
 
 var graniceNaselja = true
+document.getElementById('naseljaTomislavgrad').checked = true
 function naselja() {
   if (graniceNaselja) {
     graniceNaselja = false
-    document.getElementById('naseljaTomislavgrad').classList.remove('activate-layer')
+    document.getElementById('naseljaTomislavgrad').checked = false
     tomislavgradNaselja.setVisible(false)
     tomislavgradNaselja_nazivi.setVisible(false)
   } else {
     graniceNaselja = true
-    document.getElementById('naseljaTomislavgrad').classList.add('activate-layer')
+    document.getElementById('naseljaTomislavgrad').checked = true
     tomislavgradNaselja.setVisible(true)
     tomislavgradNaselja_nazivi.setVisible(true)
   }
 }
 
 var landmarksVisible = true
+document.getElementById('znamenitosti').checked = true
 function znamenitosti() {
   if (landmarksVisible) {
     landmarksVisible = false
-    document.getElementById('znamenitosti').classList.remove('activate-layer')
+    document.getElementById('znamenitosti').checked = false
     vector.setVisible(false)
-    vjerskiObjekti.setVisible(false)
+    nature.setVisible(false)
+    tourist.setVisible(false)
+    vectorPin.setVisible(false)
+    naturePin.setVisible(false)
+    touristPin.setVisible(false)
   } else {
     landmarksVisible = true
-    document.getElementById('znamenitosti').classList.add('activate-layer')
+    document.getElementById('znamenitosti').checked = true
     vector.setVisible(true)
-    vjerskiObjekti.setVisible(true)
+    nature.setVisible(true)
+    tourist.setVisible(true)
+    vectorPin.setVisible(true)
+    naturePin.setVisible(true)
+    touristPin.setVisible(true)
   }
 }
 
-var assocsVisible = true
-function udruge() {
-  if (assocsVisible) {
-    assocsVisible = false
-    document.getElementById('udruge').classList.remove('activate-layer')
-    assocs.setVisible(false)
+var vjerskiVisible = false
+document.getElementById('vjerski').checked = false
+function vjerski() {
+  if (vjerskiVisible) {
+    vjerskiVisible = false
+    document.getElementById('vjerski').checked = false
+    vjerskiObjekti.setVisible(false)
+    vjerskiPin.setVisible(false)
   } else {
-    assocsVisible = true
-    document.getElementById('udruge').classList.add('activate-layer')
-    assocs.setVisible(true)
+    vjerskiVisible = true
+    document.getElementById('vjerski').checked = true
+    vjerskiObjekti.setVisible(true)
+    vjerskiPin.setVisible(true)
   }
 }
 
@@ -2434,19 +2636,26 @@ function zoomOut() {
 //map.addOverlay(vienna);
 if (currZoom < 11.5 && zastave == true) {
   vector.setVisible(false)
+  nature.setVisible(false)
+  tourist.setVisible(false)
   assocs.setVisible(false)
-  vjerskiObjekti.setVisible(false)
-  
+  //vjerskiObjekti.setVisible(false)
+
 } else {
   vector.setVisible(true)
+  nature.setVisible(true)
+  tourist.setVisible(true)
   assocs.setVisible(true)
-  vjerskiObjekti.setVisible(true)
-  document.getElementById('zastaveOpcina').classList.add('disabled')
+  //vjerskiObjekti.setVisible(true)
+  document.getElementById('zastaveOpcina').disabled = true
+  document.getElementById('zastaveOpcinaBox').classList.add('disabled')
 }
-if (currZoom < 11.5){
-  document.getElementById('zastaveOpcina').classList.remove('disabled')
+if (currZoom < 11.5) {
+  document.getElementById('zastaveOpcina').disabled = false
+  document.getElementById('zastaveOpcinaBox').classList.remove('disabled')
 } else {
-  document.getElementById('zastaveOpcina').classList.add('disabled')
+  document.getElementById('zastaveOpcina').disabled = true
+  document.getElementById('zastaveOpcinaBox').classList.add('disabled')
 }
 
 function sidebarGallery(imgs) {
@@ -2469,7 +2678,7 @@ request.onreadystatechange = function () {
     console.log('Status:', this.status);
     console.log('Headers:', this.getAllResponseHeaders());
     console.log('Body:', this.responseText);
-    console.log("kordinate su : "+this.responseText.geometry)
+    console.log("kordinate su : " + this.responseText.geometry)
   }
 };
 

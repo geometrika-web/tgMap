@@ -177,93 +177,93 @@ var vjerskiObjekti = {
        "pin": "/assets/icon/landmarks/catolic.svg"
       }
      },
-     {
-      "type": "Feature",
-      "geometry": {
-       "type": "Point",
-       "coordinates": [
-        17.308621,
-        43.683299
-       ]
-      },
-      "properties": {
-       "name": "Džamija Dilaveri - Mandino Selo",
-       "about": "Džamija Dilaveri - Mandino Selo je...",
-       "img": "/assets/img/DžamijaDilaveri1.jpg",
-       "img2": "/assets/img/DžamijaDilaveri1.jpg",
-       "img3": "/assets/img/DžamijaDilaveri2.jpg",
-       "img4": "/assets/img/DžamijaDilaveri3.jpg",
-       "img5": "/assets/img/DžamijaDilaveri4.jpg",
-       "zoom": "15",
-       "id": "landmarks",
-       "pin": "/assets/icon/landmarks/islam.svg"
-      }
-     },
-     {
-      "type": "Feature",
-      "geometry": {
-       "type": "Point",
-       "coordinates": [
-        17.226944,
-        43.764921
-       ]
-      },
-      "properties": {
-       "name": "Džamija Mokronoge - Mokronoge",
-       "about": "Džamija Mokronoge - Mokronoge je...",
-       "img": "/assets/img/DžamijaMokronoge1.jpg",
-       "img2": "/assets/img/DžamijaMokronoge1.jpg",
-       "img3": "/assets/img/DžamijaMokronoge2.jpg",
-       "img4": "/assets/img/DžamijaMokronoge3.jpg",
-       "img5": "/assets/img/DžamijaMokronoge4.jpg",
-       "zoom": "19",
-       "id": "landmarks",
-       "pin": "/assets/icon/landmarks/islam.svg"
-      }
-     },
-     {
-      "type": "Feature",
-      "geometry": {
-       "type": "Point",
-       "coordinates": [
-        17.277843,
-        43.716923
-       ]
-      },
-      "properties": {
-       "name": "Džamija Oplećani - Oplećani",
-       "about": "Džamija Oplećani - Oplećani je...",
-       "img": "/assets/img/DžamijaOplećani1.jpg",
-       "img2": "/assets/img/DžamijaOplećani1.jpg",
-       "img3": "/assets/img/DžamijaOplećani2.jpg",
-       "img4": "/assets/img/DžamijaOplećani3.jpg",
-       "img5": "/assets/img/DžamijaOplećani4.jpg",
-       "zoom": "15",
-       "id": "landmarks",
-       "pin": "/assets/icon/landmarks/islam.svg"
-      }
-     },
-     {
-      "type": "Feature",
-      "geometry": {
-       "type": "Point",
-       "coordinates": [
-        17.184338,
-        43.833309
-       ]
-      },
-      "properties": {
-       "name": "Džamija Šujica - Šujica",
-       "about": "Džamija Šujica - Šujica je...",
-       "img": "/assets/img/DžamijaŠujica1.jpg",
-       "img2": "/assets/img/DžamijaŠujica1.jpg",
-       "img3": "/assets/img/DžamijaŠujica2.jpg",
-       "img4": "/assets/img/DžamijaŠujica3.jpg",
-       "img5": "/assets/img/DžamijaŠujica4.jpg",
-       "zoom": "15",
-       "id": "landmarks",
-       "pin": "/assets/icon/landmarks/islam.svg"
-      }
-     }
+     //{
+     // "type": "Feature",
+     // "geometry": {
+     //  "type": "Point",
+     //  "coordinates": [
+     //   17.308621,
+     //   43.683299
+     //  ]
+     // },
+     // "properties": {
+     //  "name": "Džamija Dilaveri - Mandino Selo",
+     //  "about": "Džamija Dilaveri - Mandino Selo je...",
+     //  "img": "/assets/img/DžamijaDilaveri1.jpg",
+     //  "img2": "/assets/img/DžamijaDilaveri1.jpg",
+     //  "img3": "/assets/img/DžamijaDilaveri2.jpg",
+     //  "img4": "/assets/img/DžamijaDilaveri3.jpg",
+     //  "img5": "/assets/img/DžamijaDilaveri4.jpg",
+     //  "zoom": "15",
+     //  "id": "landmarks",
+     //  "pin": "/assets/icon/landmarks/islam.svg"
+     // }
+     //},
+     //{
+     // "type": "Feature",
+     // "geometry": {
+     //  "type": "Point",
+     //  "coordinates": [
+     //   17.226944,
+     //   43.764921
+     //  ]
+     // },
+     // "properties": {
+     //  "name": "Džamija Mokronoge - Mokronoge",
+     //  "about": "Džamija Mokronoge - Mokronoge je...",
+     //  "img": "/assets/img/DžamijaMokronoge1.jpg",
+     //  "img2": "/assets/img/DžamijaMokronoge1.jpg",
+     //  "img3": "/assets/img/DžamijaMokronoge2.jpg",
+     //  "img4": "/assets/img/DžamijaMokronoge3.jpg",
+     //  "img5": "/assets/img/DžamijaMokronoge4.jpg",
+     //  "zoom": "19",
+     //  "id": "landmarks",
+     //  "pin": "/assets/icon/landmarks/islam.svg"
+     // }
+     //},
+     //{
+     // "type": "Feature",
+     // "geometry": {
+     //  "type": "Point",
+     //  "coordinates": [
+     //   17.277843,
+     //   43.716923
+     //  ]
+     // },
+     // "properties": {
+     //  "name": "Džamija Oplećani - Oplećani",
+     //  "about": "Džamija Oplećani - Oplećani je...",
+     //  "img": "/assets/img/DžamijaOplećani1.jpg",
+     //  "img2": "/assets/img/DžamijaOplećani1.jpg",
+     //  "img3": "/assets/img/DžamijaOplećani2.jpg",
+     //  "img4": "/assets/img/DžamijaOplećani3.jpg",
+     //  "img5": "/assets/img/DžamijaOplećani4.jpg",
+     //  "zoom": "15",
+     //  "id": "landmarks",
+     //  "pin": "/assets/icon/landmarks/islam.svg"
+     // }
+     //},
+     //{
+     // "type": "Feature",
+     // "geometry": {
+     //  "type": "Point",
+     //  "coordinates": [
+     //   17.184338,
+     //   43.833309
+     //  ]
+     // },
+     // "properties": {
+     //  "name": "Džamija Šujica - Šujica",
+     //  "about": "Džamija Šujica - Šujica je...",
+     //  "img": "/assets/img/DžamijaŠujica1.jpg",
+     //  "img2": "/assets/img/DžamijaŠujica1.jpg",
+     //  "img3": "/assets/img/DžamijaŠujica2.jpg",
+     //  "img4": "/assets/img/DžamijaŠujica3.jpg",
+     //  "img5": "/assets/img/DžamijaŠujica4.jpg",
+     //  "zoom": "15",
+     //  "id": "landmarks",
+     //  "pin": "/assets/icon/landmarks/islam.svg"
+     // }
+     //}
     ]
    }

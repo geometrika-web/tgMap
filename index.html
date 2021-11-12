@@ -75,8 +75,8 @@
       </div>
       <!--Meet-->
       <div class="position-relative sidebar-scroll" id='msg'>
-        <div id="kategorije" class="container-fluid mt-5 mb-5 cursor-pointer position-relative p-0-2-m">
-          <div class="text-left mb-4 text-font">Kategorije</div>
+        <div id="kategorije" class="container-fluid mt-5-m mb-5-m cursor-pointer position-relative p-0-2-m">
+          <div class="text-left mb-2 mt-4 text-font">Kategorije</div>
           <div class="row">
             <img id="kategorije-check" src="assets/icon/kategorije_Check.svg" alt="">
             <div class="col-3">
@@ -322,35 +322,62 @@
             <div class="bar2"></div>
             <div class="bar3"></div>
           </div>
-          
-          <button class="navbar-toggler no-outline position-absolute" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
         </div>
-        <img id="logo" onclick="zoomOut()" src="assets/logo/logo_figma.svg" class="mt-0 mr-0 mb-0 ml-0 p-0 position-absolute logo logo-toggle pointer-cursor"  alt="TomislavGuides">
+        <img id="logo" src="assets/logo/logo_figma.svg" class="mt-0 mr-0 mb-0 ml-0 p-0 position-absolute logo logo-toggle pointer-cursor"  alt="TomislavGuides">
         <div class="dropdown dropdown-layer position-absolute dropdown-menu-right">
-          <button class="bg-transparent border-0 pr-4 pl-5 pt-4 pb-2  no-outline" type="button" id="dropdownMenuButton" data-toggle="" aria-haspopup="true" aria-expanded="false">
-            <img class="mobile-scale" src="/assets/icon/layers.svg" alt="">
+          <button class="bg-transparent border-0 pr-4 pl-5 pt-4 pb-2 no-outline" type="button" id="dropdownMenuButton" data-toggle="" aria-haspopup="true" aria-expanded="false">
+            <img onclick="slojevi()" class="mobile-scale" src="/assets/icon/layers.svg" alt="">
           </button>
-          <div class="dropdown-menu2 dropdown-menu-right border-0 p-0 top-0" aria-labelledby="dropdownMenuButton">
-              <div class='mt-2 ml-3 mt-5 text-left'><small><b class="text-muted">SLOJEVI</b></small></div>
-              <div class="list-group list-group-flush">
-                <span id="popupZastaveOpcina" title="Zastave općina moguće vidjeti samo pri sitnijim mjerilima"><button title="" style="width: 90%;" class="scale-animation05 dropdown-item2 text-center layer-hover activate-layer no-outline ml-3 mr-3 mt-2" href="#" id="zastaveOpcina" onclick="zastaveOpcina()">Zastave općina</button></span>
-                <button class="scale-animation05 dropdown-item2 text-center layer-hover activate-layer no-outline ml-3 mr-3 mt-2" href="#" id="naseljaTomislavgrad" onclick="naselja()">Naselja</button>
-                <button class="scale-animation05 dropdown-item2 text-center layer-hover activate-layer no-outline ml-3 mr-3 mt-2" href="#" id="znamenitosti" onclick="znamenitosti()">Znamenitosti</button>
-                <button class="scale-animation05 dropdown-item2 text-center layer-hover activate-layer no-outline ml-3 mr-3 mt-2" href="#" id="udruge" onclick="udruge()">Udruge</button>
-                <div class='mt-3 ml-3 text-left text-black mb-2'><small><b class="text-muted">PODLOGA</b></small></div>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                  <button id="topo" onclick="basemapTopo()" type="button" class="list-group-item list-group-item-action bg-warn text-white text-center m-0 activate-baselayer bg-topo no-outline">Topo</button>
-                  <button id="satellite" onclick="basemapSatellite()" type="button" class="list-group-item list-group-item-action bg-warn text-white text-center m-0 bg-satellite no-outline">Satelit</button>
+          <div id="dropdown-menu" class="dropdown-menu2 dropdown-menu-right border-0 p-0 top-0" aria-labelledby="dropdownMenuButton">
+            <div class="w-100"><img onclick="slojeviClose()" class="layer-close-btn" src="assets/icon/close.svg" alt=""> </div>
+            <div id="kategorije" class="container-fluid mt-5-m mb-5-m cursor-pointer position-relative p-0-2-m">
+              <div class="text-left mt-5 text-font">Slojevi</div>
+              <div class="p-2">
+                <div class="box" id="zastaveOpcinaBox">
+                  <input id="zastaveOpcina" type="checkbox" onclick="zastaveOpcina()">
+                  <span class="check"></span>
+                  <label for="zastaveOpcina" class="w-100 text-left">Općina</label>
+                </div>
+                <div class="box">
+                  <input id="naseljaTomislavgrad" type="checkbox" onclick="naselja()">
+                  <span class="check"></span>
+                  <label for="naseljaTomislavgrad" class="w-100 text-left">Naselja</label>
+                </div>
+                <div class="box">
+                  <input id="vjerski" type="checkbox" onclick="vjerski()">
+                  <span class="check"></span>
+                  <label for="vjerski" class="w-100 text-left">Vjerski objekti</label>
+                </div>
+                <div class="box">
+                  <input id="znamenitosti" type="checkbox" onclick="znamenitosti()">
+                  <span class="check"></span>
+                  <label for="znamenitosti" class="w-100 text-left">Znamenitosti</label>
                 </div>
               </div>
             </div>
+            <div id="kategorije" class="container-fluid mb-4 cursor-pointer position-relative p-0-2-m">
+              <div class="text-left mb-3 mt-4 text-font">Podloge</div>
+              <div class="row">
+                <div class="col-6">
+                  <div class="image-center menu-btn" onclick="basemapTopo()">
+                    <div id="topo" class="bg-topo center"></div>
+                    <div class="d-inline d-block mt-2 text-c3">Topo</div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="image-center menu-btn" onclick="basemapSatellite()">
+                    <div id="satellite" class="bg-satellite center"></div>           
+                    <div class="d-inline d-block mt-2 text-c3">Satelit</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
           </div>
-          <button onclick="zoomOut()" class="zoom-extents bg-transparent position-absolute border-0 no-outline d-block mt-5 scale-animation-13" type="button">
+          <button onclick="zoomOut()" class="zoom-extents bg-transparent position-absolute border-0 no-outline d-block mt-5" type="button">
             <img class="mobile-scale" src="/assets/icon/zoomOut.svg" alt="">
           </button>
-          <button onclick="" class="info bg-transparent position-absolute border-0 no-outline d-block scale-animation-13" type="button">
+          <button onclick="" class="info bg-transparent position-absolute border-0 no-outline d-block" type="button">
             <img  class="mobile-scale" src="/assets/icon/info.svg" alt="">
           </button>
         </div>
