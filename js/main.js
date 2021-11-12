@@ -863,7 +863,7 @@ function getFeatureStyle(feature, resolution, sel) {
         crop: true,
         kind: sel ? 'square' : 'circle',
         shadow: 25,
-        //onload: function(){vector.changed(); nature.changed(); tourist.changed(); vjerskiObjekti.changed()},
+        onload: function(){vector.changed(); nature.changed(); tourist.changed()},
         stroke: new ol.style.Stroke({
           width: 1.5 + (sel ? 1 : 0),
           color: sel ? '#fff' : '#fff'
