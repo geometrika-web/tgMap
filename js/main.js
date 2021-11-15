@@ -62,6 +62,7 @@ var map = new ol.Map({
       brightness: 0.1,
       name: 'basemap',
     }),
+    
 
     //topo = new ol.layer.MapboxVector({
     //  styleUrl: 'mapbox://styles/mapbox/outdoors-v11',
@@ -1249,6 +1250,8 @@ window.onload = function () {
       }
     }
   })
+  $("#preloader").slideUp(1000)
+  //document.getElementById('preloader').style.display = 'none'
   //vjerskiObjekti.changed()
 }
 

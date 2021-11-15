@@ -17,6 +17,60 @@
 .p-0-2 {
   padding: 0 2rem;
 }
+
+#preloader {
+  position: absolute;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+}
+.indeterminate {
+  position: relative;
+  width: 100%;
+  height: 10px;
+}
+
+.indeterminate:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  background-color: #f6dc34;
+  animation: indeterminate_first 1.5s infinite ease-out;
+}
+
+.indeterminate:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  background-color: #fdc82f;
+  animation: indeterminate_second 1.5s infinite ease-in;
+}
+
+@keyframes indeterminate_first {
+  0% {
+      left: -100%;
+      width: 100%;
+  }
+  100% {
+      left: 100%;
+      width: 10%;
+  }
+}
+
+@keyframes indeterminate_second {
+  0% {
+      left: -150%;
+      width: 100%;
+  }
+  100% {
+      left: 100%;
+      width: 10%;
+  }
+}
+
 .center {
   position: relative;
   top: 50%;
@@ -41,7 +95,7 @@
  }
 
  .z-index {
-   z-index: 100000;
+   z-index: 100;
  }
  .top-0 {
    top: 0;
@@ -65,7 +119,7 @@
   overflow: hidden;
   width: 40rem;
   min-width: 28rem;
-  z-index: 100000;
+  z-index: 1;
 }
 
 #sidebar-wrapper .sidebar-heading {
@@ -73,7 +127,7 @@
   text-align: center;
   font-size: 1.6rem;
   margin-left: 0;
-  z-index: 100000;
+  z-index: 1;
 }
 
 /*#sidebar-wrapper .list-group {
@@ -114,7 +168,7 @@
     width: 100vw;
     left: 0;
     margin-left: -100vw;
-    z-index: 10000;
+    z-index: 1;
   }
 
   #page-content-wrapper {
@@ -258,7 +312,7 @@
   height: 60px; 
   left: 50%; 
   transform: translate(-50%);
-  z-index: 100000000000;
+  z-index: 1;
 }
 .text-font {
   font-family: 'Open Sans', sans-serif;
@@ -280,7 +334,7 @@
     top: 58px;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 100000000000;
+    z-index: 1;
     transition:             left 500ms ease;
         -moz-transition:    left 500ms ease;
         -ms-transition:     left 500ms ease;
@@ -289,7 +343,7 @@
   }
   .logo-toggle {
     left: 320px;
-    z-index: 100000000000;
+    z-index: 1;
     
   }
   .logo-color {
@@ -538,14 +592,14 @@
   margin: 30px 30px 0 0;
   width: 30px;
   cursor: pointer;
-  z-index: 10000000;
+  z-index: 10;
 }
 
 .dropdown-menu2 {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 10;
   width: 15rem;
   padding: 0rem 0;
   font-size: 1rem;
@@ -557,7 +611,7 @@
   transition: ease-in-out 0.3s;
   visibility: hidden;
   opacity: 0;
-  z-index: 10000000000;
+  z-index: 10;
 }
 
 .dropdown-item2 {
