@@ -863,7 +863,7 @@ function getFeatureStyle(feature, resolution, sel) {
         crop: true,
         kind: sel ? 'square' : 'circle',
         shadow: 25,
-        onload: function(){vector.changed(); nature.changed(); tourist.changed()},
+        //onload: function(){vector.changed(); nature.changed(); tourist.changed()},
         stroke: new ol.style.Stroke({
           width: 1.5 + (sel ? 1 : 0),
           color: sel ? '#fff' : '#fff'
@@ -930,13 +930,18 @@ function zoomTo(i) {
     toggle(document.getElementById('menu-toggle'))
   }
 }
-
+function onLoadChanged(){
+  vector.changed()
+  nature.changed()
+  tourist.changed()
+}
 // Load list from GeoJSON file
 coord = []
 landmarksZoom = []
 window.onload = function () {
   // Load list of all landmarks from GeoJSON file
   //$.getJSON("assets/landmarks/landmarks.geojson", function(data) {
+  onLoadChanged()
   for (i in landmarksData.features) {
     console.log(landmarksData.features[i])
     var landmarkAll = document.createElement('button')
@@ -978,16 +983,17 @@ window.onload = function () {
       landmarkText.appendChild(landmark360)
     }
   }
+  length = landmarksZoom.length
   for (i in natureData.features) {
     var landmarkAll = document.createElement('button')
-    landmarkAll.id = i
+    landmarkAll.id = i+length
     landmarkAll.classList.add("list-group-item", "list-group-item-action", "no-outline", "mt-4", "pl-5", "landmarkList-height", "scale-animation-right", "display-flex", "text-font")
     landmarkAll.classList.add(natureData.features[i].properties.id)
     landmarkAll.onclick = function () { zoomTo(this.id); };
     var parent = document.getElementById('landmark-name')
     parent.appendChild(landmarkAll)
-    coord[i] = natureData.features[i].geometry.coordinates
-    landmarksZoom[i] = natureData.features[i].properties.zoom
+    coord[i+length] = natureData.features[i].geometry.coordinates
+    landmarksZoom[i+length] = natureData.features[i].properties.zoom
     console.log(natureData.features[i].properties.zoom)
     var landmarkImg = document.createElement('img')
     landmarkImg.src = natureData.features[i].properties.img
@@ -1018,16 +1024,17 @@ window.onload = function () {
       landmarkText.appendChild(landmark360)
     }
   }
+  length = landmarksZoom.length
   for (i in touristData.features) {
     var landmarkAll = document.createElement('button')
-    landmarkAll.id = i
+    landmarkAll.id = i+length
     landmarkAll.classList.add("list-group-item", "list-group-item-action", "no-outline", "mt-4", "pl-5", "landmarkList-height", "scale-animation-right", "display-flex", "text-font")
     landmarkAll.classList.add(touristData.features[i].properties.id)
     landmarkAll.onclick = function () { zoomTo(this.id); };
     var parent = document.getElementById('landmark-name')
     parent.appendChild(landmarkAll)
-    coord[i] = touristData.features[i].geometry.coordinates
-    landmarksZoom[i] = touristData.features[i].properties.zoom
+    coord[i+length] = touristData.features[i].geometry.coordinates
+    landmarksZoom[i+length] = touristData.features[i].properties.zoom
     console.log(touristData.features[i].properties.zoom)
     var landmarkImg = document.createElement('img')
     landmarkImg.src = touristData.features[i].properties.img
@@ -1242,9 +1249,6 @@ window.onload = function () {
       }
     }
   })
-  vector.changed()
-  nature.changed()
-  tourist.changed()
   //vjerskiObjekti.changed()
 }
 
