@@ -1251,6 +1251,10 @@ window.onload = function () {
     }
   })
   $("#preloader").slideUp(1000)
+  if(sessionStorage.home == 1){
+    document.getElementById('home').style.display = 'none'
+    document.getElementById('homeLogo').style.display = 'none'
+  } 
   //document.getElementById('preloader').style.display = 'none'
   //vjerskiObjekti.changed()
 }
@@ -1258,13 +1262,19 @@ window.onload = function () {
 //Onload End
 
 //To Map
+
 function toMap() {
-  $('#homeLogo').fadeOut(1000)
-  $('#home').fadeOut(1000)
-}
+    //toggle(document.getElementById('menu-toggle'))
+    $('#homeLogo').fadeOut(1000)
+    $('#home').fadeOut(1000)
+    sessionStorage.home = 1
+  }
+  
 function toHome() {
+  //toggle.delay(500)(document.getElementById('menu-toggle'))
   $('#homeLogo').slideToggle(1000)
   $('#home').slideToggle(300)
+  sessionStorage.home = 2
 }
 
 //Kontrola popisa znamenitosti
@@ -1613,6 +1623,7 @@ if (localStorage.basemap == 2) {
   topo.setVisible(false)
   satellite.setVisible(true)
 }
+
 
 var zastave = true
 var zastaveList = [tomislavgradZastava, ramaPodloga, ramaZastava, posusjeZastava, livnoPodloga, livnoZastava, kupresZastava, kupresPodloga_blue, kupresPodloga_red, jablanicaZastava, opcine, opcineGranice]

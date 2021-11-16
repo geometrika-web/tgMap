@@ -104,6 +104,13 @@
   z-index: 100;
   margin-bottom: 1rem;
 }
+.home-btn-text {
+  font-size: 17px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  z-index: 100;
+  margin-bottom: 1rem;
+}
 #home-img {
   position: relative;
   width: 100vw;
@@ -126,6 +133,14 @@
   }
   .p-0-2-m {
     padding: 0 1rem;
+  }
+  .home-title {
+    font-size: 20px;
+    padding: 0 2rem;
+  }
+  .home-text {
+    font-size: 16px;
+    padding: 0 2rem ;
   }
 }
 
