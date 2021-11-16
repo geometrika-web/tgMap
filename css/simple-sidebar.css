@@ -114,12 +114,13 @@
 #home-img {
   position: relative;
   width: 100vw;
-  height: auto;
+  min-height: 400px;
   top: 100%;
   transform: translate(0, -100%);
   z-index: -1;
+  background-image: url('../assets/img/tgHome.jpg');
+  background-size: cover;
 }
-
 .center {
   position: relative;
   top: 50%;
@@ -147,10 +148,6 @@
     top: 20px;
   }
 }
-
-
-
-
  .cursor-pointer {
    cursor: pointer;
  }
