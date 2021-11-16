@@ -16,8 +16,8 @@ const xW = x + 200000
 const lonLatCrkvaTG = [17.225002, 43.721394]
 
 // default zoom, center and rotation
-var zoom = 9.5;
-var center = ol.proj.fromLonLat([lon, lat]);
+var zoom = 10;
+var center = ol.proj.fromLonLat(lonLatCrkvaTG);
 
 
 if (window.location.hash !== '') {
@@ -1257,6 +1257,16 @@ window.onload = function () {
 
 //Onload End
 
+//To Map
+function toMap() {
+  $('#homeLogo').fadeOut(1000)
+  $('#home').fadeOut(1000)
+}
+function toHome() {
+  $('#homeLogo').slideToggle(1000)
+  $('#home').slideToggle(300)
+}
+
 //Kontrola popisa znamenitosti
 const kultura = []
 const priroda = []
@@ -2169,12 +2179,15 @@ function toggleOnSelect() {
     }
   }
 }
-
+//$("#dropdown-menu").slideToggle()
 function slojevi() {
+  console.log('slojevi')
+  //$("#dropdown-menu").animate({width: 'toggle'}, 300)
   document.getElementById('dropdown-menu').style.visibility = 'visible'
   document.getElementById('dropdown-menu').style.opacity = 1
 }
 function slojeviClose() {
+  //$("#dropdown-menu").animate({width: 'toggle'}, 250)
   document.getElementById('dropdown-menu').style.visibility = 'hidden'
   document.getElementById('dropdown-menu').style.opacity = 0
 }
@@ -2641,29 +2654,35 @@ function zoomOut() {
 //  element: document.getElementById('vienna'),
 //});
 //map.addOverlay(vienna);
-if (currZoom < 11.5 && zastave == true) {
-  vector.setVisible(false)
-  nature.setVisible(false)
-  tourist.setVisible(false)
-  assocs.setVisible(false)
-  //vjerskiObjekti.setVisible(false)
 
-} else {
-  vector.setVisible(true)
-  nature.setVisible(true)
-  tourist.setVisible(true)
-  assocs.setVisible(true)
-  //vjerskiObjekti.setVisible(true)
-  document.getElementById('zastaveOpcina').disabled = true
-  document.getElementById('zastaveOpcinaBox').classList.add('disabled')
-}
-if (currZoom < 11.5) {
-  document.getElementById('zastaveOpcina').disabled = false
-  document.getElementById('zastaveOpcinaBox').classList.remove('disabled')
-} else {
-  document.getElementById('zastaveOpcina').disabled = true
-  document.getElementById('zastaveOpcinaBox').classList.add('disabled')
-}
+
+//-----------------------------------------------------------------------------------------------provjeriti
+//if (currZoom < 11.5 && zastave == true) {
+//  vector.setVisible(false)
+//  nature.setVisible(false)
+//  tourist.setVisible(false)
+//  assocs.setVisible(false)
+//  //vjerskiObjekti.setVisible(false)
+//
+//} else {
+//  vector.setVisible(true)
+//  nature.setVisible(true)
+//  tourist.setVisible(true)
+//  assocs.setVisible(true)
+//  //vjerskiObjekti.setVisible(true)
+//  document.getElementById('zastaveOpcina').disabled = true
+//  document.getElementById('zastaveOpcinaBox').classList.add('disabled')
+//}
+//if (currZoom < 11.5) {
+//  document.getElementById('zastaveOpcina').disabled = false
+//  document.getElementById('zastaveOpcinaBox').classList.remove('disabled')
+//} else {
+//  document.getElementById('zastaveOpcina').disabled = true
+//  document.getElementById('zastaveOpcinaBox').classList.add('disabled')
+//}
+//-----------------------------------------------------------------------------------------------
+
+
 
 function sidebarGallery(imgs) {
   var expandImg = document.getElementById("expandedImg");

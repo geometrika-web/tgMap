@@ -28,7 +28,16 @@
 
 <body class="overflow-hidden mobile-height">
   <div id="preloader" class="indeterminate">
-    <img id="logo" src="assets/logo/logo_figma.svg" class="mt-0 mr-0 mb-0 ml-0 p-0 position-absolute logo pointer-cursor"  alt="TomislavGuides">
+    
+  </div>
+  <img id="homeLogo" src="assets/logo/logo_figma.svg" class="mt-0 mr-0 mb-0 ml-0 p-0 position-absolute home-logo pointer-cursor"  alt="TomislavGuides">
+  <div id="home">
+    <div class="home-center-y">
+      <div class="text-center home-title">Dobrodošli dragi gosti i sugrađani<br>istražite Tomislavgrad s nama!</div>
+      <div class="text-center home-text">Platforma <b class="text-warning">TomislavGuides</b> napravljena je u svrhu <br> prikupljanja informacija o Tomislavgradu i njihove prezentacije s ciljem <br> očuvanja i promocije ljepota i zanimljivosti ovog kraja.</div>
+      <div onclick="toMap()" id="toMap" class="text-center text-muted" type="button"><img class="m-2" src="/assets/icon/map.svg" alt=""><span class="home-text">Idi na kartu</span></div>
+    </div>
+    <img id="home-img" class="position-absolute" src="assets/img/tgHome.jpg" alt="">
   </div>
    <!--Dodavanje slika na kartu iz html-a
   <div style="display: none;">
@@ -380,7 +389,7 @@
           <button onclick="zoomOut()" class="zoom-extents bg-transparent position-absolute border-0 no-outline d-block mt-5" type="button">
             <img class="mobile-scale" src="/assets/icon/zoomOut.svg" alt="">
           </button>
-          <button onclick="" class="info bg-transparent position-absolute border-0 no-outline d-block" type="button">
+          <button onclick="toHome()" class="info bg-transparent position-absolute border-0 no-outline d-block" type="button">
             <img  class="mobile-scale" src="/assets/icon/info.svg" alt="">
           </button>
         </div>
