@@ -32,10 +32,10 @@
   </div>
   <img id="homeLogo" src="assets/logo/logo_figma.svg" class="mt-0 mr-0 mb-0 ml-0 p-0 position-absolute home-logo pointer-cursor"  alt="TomislavGuides">
   <div id="home">
-    <div class="home-center-y">
-      <div class="text-center home-title">Dobrodošli dragi gosti i sugrađani<br>istražite Tomislavgrad s nama!</div>
-      <div class="text-center home-text">Platforma <b class="text-warning">TomislavGuides</b> napravljena je u svrhu <br> prikupljanja informacija o Tomislavgradu i njihove prezentacije s ciljem <br> očuvanja i promocije ljepota i zanimljivosti ovog kraja.</div>
-      <div onclick="toMap()" id="toMap" class="text-center text-muted" type="button"><img class="m-2" src="/assets/icon/map.svg" alt=""><span class="home-btn-text">Idi na kartu</span></div>
+    <div class="home-center-y text-center">
+      <div class="text-center home-title">Dobrodošli dragi gosti i sugrađani, istražite Tomislavgrad s nama!</div>
+      <div class="text-center home-text">Platforma <b class="text-warning">TomislavGuides</b> napravljena je u svrhu prikupljanja informacija o Tomislavgradu i njihove prezentacije s ciljem očuvanja i promocije ljepota i zanimljivosti ovog kraja.</div>
+      <div onclick="toMap()" id="toMap" class="text-center" type="button"><img class="pr-3" src="/assets/icon/map.svg" alt="map">ISTRAŽI TOMISLAVGRAD</div>
     </div>
     <div id="home-img" class="position-absolute"></div>
   </div>
@@ -130,10 +130,15 @@
           
           <!--<button onclick="backFromMeet()" id="landmarks-btn" class="mt-4 image-center"><span class='text-2'>Povratak</span><span class="icon"><img src="/assets/icon/back_black.svg" alt=""> </span></button>-->
         </div>
-        <div id="landmark" class="m-4 pt-4 display-4 logo-font text-left d-block"></div>
+        <!--<button class="btn-back" onclick="backFromMeet()"><span style="font-size: larger;">&#8592;</span> POVRATAK</button>-->
+        <div class="w-100"><img onclick="backFromMeet()" class="landmark-close-btn" src="assets/icon/close.svg" alt=""></div>
+        <div id="landmark" class="m-4 pt-5 landmark-title text-left d-block"></div>
+        <!--<div id="landmark-place" class="text-left ml-3 mt-5 d-block"></div>-->
+        <!--<img id="landmark-type" class="ml-3 kategorije-thumb mb-4" src="">-->
         <div id="image" class="">
-          <div class="container"><img id="expandedImg" class="w-100 rounded"></div>
+          <div class="container"><img id="expandedImg" class="w-100"></div>
           <div class="container image-center mt-2">
+            <div id="gallery" class="mt-2">
             <div class="column">
               <img id="image2" src="" onclick="sidebarGallery(this);">  
             </div>
@@ -146,6 +151,7 @@
             <div class="column">
               <img id="image5" src="" onclick="sidebarGallery(this);">
             </div>
+          </div>
           </div>
         </div>
         <div id="landmark-about" class="p-4 mb-2 text-justify d-block text-font"></div>
@@ -160,7 +166,6 @@
         <!--<a href="#" class="list-group-item list-group-item-action bg-light">Events</a>-->
         <!--<a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>-->
         <!--<a href="#" class="list-group-item list-group-item-action bg-light">Status</a>-->
-        <button class="btn-back" onclick="backFromMeet()"><span style="font-size: larger;">&#8592;</span> POVRATAK</button>
       </div>
       <!--Routes-->
     <div id="msg_el"></div>
@@ -341,7 +346,7 @@
             <img onclick="slojevi()" class="mobile-scale" src="/assets/icon/layers.svg" alt="">
           </button>
           <div id="dropdown-menu" class="dropdown-menu2 dropdown-menu-right border-0 p-0 top-0" aria-labelledby="dropdownMenuButton">
-            <div class="w-100"><img onclick="slojeviClose()" class="layer-close-btn" src="assets/icon/close.svg" alt=""> </div>
+            <div class="w-100"><img onclick="slojeviClose()" class="layer-close-btn" src="assets/icon/close.svg" alt=""></div>
             <div id="kategorije" class="container-fluid mt-5-m mb-5-m cursor-pointer position-relative p-0-2-m">
               <div class="text-left mt-5 text-font">Slojevi</div>
               <div class="p-2">
@@ -378,7 +383,7 @@
                 </div>
                 <div class="col-6">
                   <div class="image-center menu-btn" onclick="basemapSatellite()">
-                    <div id="satellite" class="bg-satellite center"></div>           
+                    <div id="satellite" class="bg-satellite center activate-baselayer"></div>           
                     <div class="d-inline d-block mt-2 text-c3">Satelit</div>
                   </div>
                 </div>

@@ -58,6 +58,7 @@ var map = new ol.Map({
 
     topo = new ol.layer.Tile({
       source: new ol.source.OSM(),
+      visible: false,
       opacity: 0.4,
       brightness: 0.1,
       name: 'basemap',
@@ -69,22 +70,23 @@ var map = new ol.Map({
     //  accessToken: 'pk.eyJ1IjoibGF2dGljMjIiLCJhIjoiY2ttdWZhNHZrMHVwNjJxbXdsem4wd2k2MiJ9.enCC1BQeW5JXwCYbkB0Ecw'
     //}),
     satellite = new ol.layer.Tile({
-      visible: false,
       source: new ol.source.XYZ({
         url: 'https://api.mapbox.com/v4/mapbox.satellite/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibGF2dGljMjIiLCJhIjoiY2ttdWZhNHZrMHVwNjJxbXdsem4wd2k2MiJ9.enCC1BQeW5JXwCYbkB0Ecw'
       })
     }),
 
-    //untiled = new ol.layer.Image({
-    //  source: new ol.source.ImageWMS({
-    //    ratio: 1,
-    //    url: 'http://gmetrika.ddns.net:80/geoserver/Tomislavgrad/wms',
-    //    params: {'VERSION': '1.1.1',  
-    //          "LAYERS": 'tomislavgradZastava',
-    //          "exceptions": 'application/vnd.ogc.se_inimage',
-    //    }
-    //  })
-    //}),
+    tomislavgradZastava = new ol.layer.Image({
+      maxZoom: 11.5,
+      opacity: 1,
+      source: new ol.source.ImageWMS({
+        ratio: 1,
+        url: 'http://gmetrika.ddns.net:80/geoserver/Tomislavgrad/wms',
+        params: {'VERSION': '1.1.1',  
+              "LAYERS": 'Tomislavgrad:tomislavgradZastava',
+              "exceptions": 'application/vnd.ogc.se_inimage',
+        }
+      })
+    }),
     //new ol.layer.Image({
     //  source: new ol.source.ImageWMS({
     //    url: 'http://localhost:8080/geoserver/Drinovci/wms',
@@ -128,6 +130,17 @@ var map = new ol.Map({
       })
     }),
     tomislavgradNaselja = new ol.layer.Image({
+      opacity: 0.7,
+      source: new ol.source.ImageWMS({
+        ratio: 1,
+        url: 'http://gmetrika.ddns.net:80/geoserver/Tomislavgrad/wms',
+        params: {'VERSION': '1.1.1',  
+              "LAYERS": 'Tomislavgrad:NM_TG_polygon',
+              "exceptions": 'application/vnd.ogc.se_inimage',
+        }
+      })
+    }),
+    tomislavgradNaselja = new ol.layer.Image({
       //minZoom: 11.6,
       //maxZoom: 13,
       opacity: 1,
@@ -138,6 +151,18 @@ var map = new ol.Map({
         serverType: 'geoserver'
       }),
       name: 'tgnaselja'
+    }),
+    tomislavgradNaselja_nazivi = new ol.layer.Image({
+      minZoom: 11,
+      opacity: 1,
+      source: new ol.source.ImageWMS({
+        ratio: 1,
+        url: 'http://gmetrika.ddns.net:80/geoserver/Tomislavgrad/wms',
+        params: {'VERSION': '1.1.1',  
+              "LAYERS": 'Tomislavgrad:tomislavgradNaselja_nazivi',
+              "exceptions": 'application/vnd.ogc.se_inimage',
+        }
+      })
     }),
     tomislavgradNaselja_nazivi = new ol.layer.Image({
       minZoom: 11,
@@ -164,17 +189,17 @@ var map = new ol.Map({
         name: 'opcine'
       })
     }),
-    tomislavgradZastava = new ol.layer.Image({
-      maxZoom: 11.5,
-      opacity: 1,
-      source: new ol.source.ImageWMS({
-        url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: { 'LAYERS': 'Tomislavgrad:tomislavgradZastava' },
-        ratio: 1,
-        serverType: 'geoserver'
-      }),
-      name: 'tg'
-    }),
+    //tomislavgradZastava = new ol.layer.Image({
+    //  maxZoom: 11.5,
+    //  opacity: 1,
+    //  source: new ol.source.ImageWMS({
+    //    url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
+    //    params: { 'LAYERS': 'Tomislavgrad:tomislavgradZastava' },
+    //    ratio: 1,
+    //    serverType: 'geoserver'
+    //  }),
+    //  name: 'tg'
+    //}),
     ramaPodloga = new ol.layer.Image({
       maxZoom: 11.5,
       opacity: 1,
@@ -284,7 +309,19 @@ var map = new ol.Map({
     //          "exceptions": 'application/vnd.ogc.se_inimage',
     //    },
     //  })
-    //}),   
+    //}),
+    //opcineGranice = new ol.layer.Image({
+    //  minZoom: 11.5,
+    //  opacity: 1,
+    //  source: new ol.source.ImageWMS({
+    //    ratio: 1,
+    //    url: 'http://gmetrika.ddns.net:80/geoserver/Tomislavgrad/wms',
+    //    params: {'VERSION': '1.1.1',  
+    //          "LAYERS": 'Tomislavgrad:opcine_granice',
+    //          "exceptions": 'application/vnd.ogc.se_inimage',
+    //    }
+    //  })
+    //}), 
     opcineGranice = new ol.layer.Image({
       maxZoom: 11.5,
       opacity: 1,
@@ -866,7 +903,7 @@ function getFeatureStyle(feature, resolution, sel) {
         shadow: 25,
         //onload: function(){vector.changed(); nature.changed(); tourist.changed()},
         stroke: new ol.style.Stroke({
-          width: 1.5 + (sel ? 1 : 0),
+          width: 2 + (sel ? 1 : 0),
           color: sel ? '#fff' : '#fff'
         })
       })
@@ -1410,6 +1447,7 @@ var pinStyle = function (feature, resolution) {
     image: new ol.style.Icon({
       src: feature.get('pin'),
       opacity: 1,
+      anchor: [0.5, 1]
     })
   })
   )
@@ -1419,6 +1457,7 @@ var vjerskiPinStyle = function (feature, resolution) {
     image: new ol.style.Icon({
       src: feature.get('pin'),
       opacity: 1,
+      anchor: [0.5, 1]
     })
   })
   )
@@ -1811,11 +1850,8 @@ features = select.getFeatures().on(['add', 'remove'], function (e) {
       toggleOnSelect()
       //var info = $("#select").html("<p>Selection:</p>");
       var feature = e.element;
-      document.getElementById('meet').style.display = 'block';
-      document.getElementById('landmark').style.display = 'inline-block';
-      document.getElementById('image').style.display = 'inline-block';
-      document.getElementById('landmark-about').style.display = 'inline-block';
-      document.getElementById('nodelist').style.display = 'none';
+      //document.getElementById('landmark-type').src = feature.get('thumb');
+      //document.getElementById('landmark-place').innerHTML = feature.get('place');
       document.getElementById('landmark').innerHTML = feature.get('name');
       document.getElementById('landmark-about').innerHTML = feature.get('about');
       document.getElementById('expandedImg').src = feature.get('img2');
@@ -1823,6 +1859,11 @@ features = select.getFeatures().on(['add', 'remove'], function (e) {
       document.getElementById('image3').src = feature.get('img3');
       document.getElementById('image4').src = feature.get('img4');
       document.getElementById('image5').src = feature.get('img5');
+      document.getElementById('meet').style.display = 'block';
+      document.getElementById('landmark').style.display = 'inline-block';
+      document.getElementById('image').style.display = 'inline-block';
+      document.getElementById('landmark-about').style.display = 'inline-block';
+      document.getElementById('nodelist').style.display = 'none';
       //$("<img>").attr('src',el.get("img")).appendTo(info);
       //$("<p>").text(el.get("text")).appendTo(info);
       //$("<p>").text(el.get("commune")+" ("+el.get("region")+" - "+el.get("date").replace(".","/")+")").appendTo(info);
@@ -2562,6 +2603,7 @@ function zastaveOpcina() {
     //vjerskiObjekti.setVisible(true)
   } else {
     zastave = true
+    console.log(zastave)
     document.getElementById('zastaveOpcina').checked = true
     for (zastava in zastaveList) {
       zastaveList[zastava].setVisible(true)

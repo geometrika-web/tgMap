@@ -87,22 +87,26 @@
 }
 .home-center-y {
   position: relative;
-  top: 50%;
+  top: 45%;
   transform: translate(0, -50%);
 }
 .home-title {
-  font-size: 35px;
+  max-width: 600px;
+  margin: auto;
+  font-size: 30px;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   z-index: 100;
   margin-bottom: 1rem;
 }
 .home-text {
+  max-width: 700px;
+  margin: auto;
   font-size: 17px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
   z-index: 100;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 .home-btn-text {
   font-size: 17px;
@@ -127,7 +131,36 @@
   left: 50%;
   transform: translate(-50%);
 }
+#toMap {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  background-color: #fdc82f;
+  color: white;
+  max-width: 300px;
+  line-height: 50px;
+  margin: auto;
+}
+#toMap:hover {
+  background-color: #ffbf00;
+}
+.landmark-title {
+  max-width: 600px;
+  font-size: 25px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  margin: 0 1rem;
+}
+.landmark-close-btn {
+  float: right;
+  margin: 30px 30px 0 0;
+  width: 40px;
+  cursor: pointer;
+  z-index: 10;
+}
  @media (max-width: 575.99px) {
+  .landmark-close-btn {
+    width: 30px;
+  }
   .mobile-height {
     height: 100%;
     width: 100%;
@@ -140,12 +173,15 @@
     padding: 0 2rem;
   }
   .home-text {
-    font-size: 16px;
+    font-size: 15px;
     padding: 0 2rem ;
   }
   .home-logo {
     height: 60px;
     top: 20px;
+  }
+  .landmark-title {
+    font-size: 20px;
   }
 }
  .cursor-pointer {
@@ -175,8 +211,7 @@
   -o-transition: margin .3s ease-out;
   transition: margin .3s ease-out;
   overflow: hidden;
-  width: 40rem;
-  min-width: 28rem;
+  width: 60rem;
   z-index: 1;
 }
 
@@ -197,7 +232,7 @@
 }
 
 #wrapper.toggled #sidebar-wrapper {
-  margin-left: -40rem;
+  margin-left: -60rem;
 }
 
 #wrapper.toggled #map {
@@ -729,27 +764,27 @@
   pointer-events: none;
   color: #c3c3c3;
 }
-
+#gallery {
+  margin: 0px -3px;
+}
 .column {
   float: left;
   width: 25%;
+  padding: 3px;
 }
 .column img {
-  padding: 5px;
   width: 100%;
   opacity: 1;
   cursor: pointer;
-  border-radius: 10%;
 }
-
 .column img:hover {
-  opacity: 0.7;
+  opacity: 0.5;
 }
-
 .line-height-small {
   line-height: small;
   font-size: small;
 }
+
 
 
 #landmarks-btn {
@@ -1062,7 +1097,7 @@
 }
 .kategorije-thumb {
   height: 30px;
-  width: auto;
+  /*width: auto;*/
 }
 .height-50 {
   width: 30%;
