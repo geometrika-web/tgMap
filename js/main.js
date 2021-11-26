@@ -7,12 +7,12 @@ if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elain
 
 const lat = 43.787183
 const lon = 16.732731
-const y = 5421643.41
-const x = 1917834.45
-const yS = y - 120000
-const yN = y + 120000
-const xE = x - 200000
-const xW = x + 200000
+const y = 5422472.06
+const x = 1917463.87
+const yS = y - 60000
+const yN = y + 60000
+const xE = x - 80000
+const xW = x + 100000
 const lonLatCrkvaTG = [17.225002, 43.721394]
 
 // default zoom, center and rotation
@@ -56,12 +56,18 @@ var map = new ol.Map({
     //  opacity: 0.5
     //}),
 
+    //topo = new ol.layer.Tile({
+    //  source: new ol.source.OSM(),
+    //  visible: false,
+    //  opacity: 0.4,
+    //  brightness: 1,
+    //  name: 'basemap',
+    //}),
     topo = new ol.layer.Tile({
-      source: new ol.source.OSM(),
       visible: false,
-      opacity: 0.4,
-      brightness: 0.1,
-      name: 'basemap',
+      source: new ol.source.XYZ({
+        url: 'https://api.mapbox.com/styles/v1/lavtic/ckwgddnu7079914mlt2n24kzw/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibGF2dGljIiwiYSI6ImNqbzhqM2R6MTB6ZHgzcG1kdWFsOWs5anMifQ.1FloBRvYlL8rW8AIbWzJXQ'
+      })
     }),
     
 
@@ -71,22 +77,22 @@ var map = new ol.Map({
     //}),
     satellite = new ol.layer.Tile({
       source: new ol.source.XYZ({
-        url: 'https://api.mapbox.com/v4/mapbox.satellite/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibGF2dGljMjIiLCJhIjoiY2ttdWZhNHZrMHVwNjJxbXdsem4wd2k2MiJ9.enCC1BQeW5JXwCYbkB0Ecw'
+        url: 'https://api.mapbox.com/styles/v1/lavtic/ckwgdeuoj14po14nsp9arx5by/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibGF2dGljIiwiYSI6ImNqbzhqM2R6MTB6ZHgzcG1kdWFsOWs5anMifQ.1FloBRvYlL8rW8AIbWzJXQ'
       })
     }),
 
-    tomislavgradZastava = new ol.layer.Image({
-      maxZoom: 11.5,
-      opacity: 1,
-      source: new ol.source.ImageWMS({
-        ratio: 1,
-        url: 'http://gmetrika.ddns.net:80/geoserver/Tomislavgrad/wms',
-        params: {'VERSION': '1.1.1',  
-              "LAYERS": 'Tomislavgrad:tomislavgradZastava',
-              "exceptions": 'application/vnd.ogc.se_inimage',
-        }
-      })
-    }),
+    //tomislavgradZastava = new ol.layer.Image({
+    //  maxZoom: 11.5,
+    //  opacity: 1,
+    //  source: new ol.source.ImageWMS({
+    //    ratio: 1,
+    //    url: 'http://gmetrika.ddns.net:80/geoserver/Tomislavgrad/wms',
+    //    params: {
+    //          "LAYERS": 'Tomislavgrad:tomislavgradZastava',
+    //          "exceptions": 'application/vnd.ogc.se_inimage',
+    //    }
+    //  })
+    //}),
     //new ol.layer.Image({
     //  source: new ol.source.ImageWMS({
     //    url: 'http://localhost:8080/geoserver/Drinovci/wms',
@@ -115,67 +121,67 @@ var map = new ol.Map({
     //    },
     //  })
     //}),
-    destination1 = new ol.layer.Image({
-      visible: false,
-      name: 'destination1',
-      source: new ol.source.ImageWMS({
-        ratio: 1,
-        url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: {
-          'VERSION': '1.1.1',
-          "STYLES": '',
-          "LAYERS": 'Tomislavgrad:Zukovicalinija',
-          "exceptions": 'application/vnd.ogc.se_inimage',
-        }
-      })
-    }),
-    tomislavgradNaselja = new ol.layer.Image({
-      opacity: 0.7,
-      source: new ol.source.ImageWMS({
-        ratio: 1,
-        url: 'http://gmetrika.ddns.net:80/geoserver/Tomislavgrad/wms',
-        params: {'VERSION': '1.1.1',  
-              "LAYERS": 'Tomislavgrad:NM_TG_polygon',
-              "exceptions": 'application/vnd.ogc.se_inimage',
-        }
-      })
-    }),
-    tomislavgradNaselja = new ol.layer.Image({
-      //minZoom: 11.6,
-      //maxZoom: 13,
-      opacity: 1,
-      source: new ol.source.ImageWMS({
-        url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: { 'LAYERS': 'Tomislavgrad:NM_TG_polygon' },
-        ratio: 1,
-        serverType: 'geoserver'
-      }),
-      name: 'tgnaselja'
-    }),
-    tomislavgradNaselja_nazivi = new ol.layer.Image({
-      minZoom: 11,
-      opacity: 1,
-      source: new ol.source.ImageWMS({
-        ratio: 1,
-        url: 'http://gmetrika.ddns.net:80/geoserver/Tomislavgrad/wms',
-        params: {'VERSION': '1.1.1',  
-              "LAYERS": 'Tomislavgrad:tomislavgradNaselja_nazivi',
-              "exceptions": 'application/vnd.ogc.se_inimage',
-        }
-      })
-    }),
-    tomislavgradNaselja_nazivi = new ol.layer.Image({
-      minZoom: 11,
-      //maxZoom: 13,
-      opacity: 1,
-      source: new ol.source.ImageWMS({
-        url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: { 'LAYERS': 'Tomislavgrad:tomislavgradNaselja_nazivi' },
-        ratio: 1,
-        serverType: 'geoserver'
-      }),
-      name: 'tgnazivi'
-    }),
+    //destination1 = new ol.layer.Image({
+    //  visible: false,
+    //  name: 'destination1',
+    //  source: new ol.source.ImageWMS({
+    //    ratio: 1,
+    //    url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
+    //    params: {
+    //      'VERSION': '1.1.1',
+    //      "STYLES": '',
+    //      "LAYERS": 'Tomislavgrad:Zukovicalinija',
+    //      "exceptions": 'application/vnd.ogc.se_inimage',
+    //    }
+    //  })
+    //}),
+    //tomislavgradNaselja = new ol.layer.Image({
+    //  opacity: 0.7,
+    //  source: new ol.source.ImageWMS({
+    //    ratio: 1,
+    //    url: 'http://gmetrika.ddns.net:80/geoserver/Tomislavgrad/wms',
+    //    params: { 
+    //          "LAYERS": 'Tomislavgrad:NM_TG_polygon',
+    //          "exceptions": 'application/vnd.ogc.se_inimage',
+    //    }
+    //  })
+    //}),
+    //tomislavgradNaselja = new ol.layer.Image({
+    //  //minZoom: 11.6,
+    //  //maxZoom: 13,
+    //  opacity: 1,
+    //  source: new ol.source.ImageWMS({
+    //    url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
+    //    params: { 'LAYERS': 'Tomislavgrad:NM_TG_polygon' },
+    //    ratio: 1,
+    //    serverType: 'geoserver'
+    //  }),
+    //  name: 'tgnaselja'
+    //}),
+    //tomislavgradNaselja_nazivi = new ol.layer.Image({
+    //  minZoom: 11,
+    //  opacity: 1,
+    //  source: new ol.source.ImageWMS({
+    //    ratio: 1,
+    //    url: 'http://gmetrika.ddns.net:80/geoserver/Tomislavgrad/wms',
+    //    params: { 
+    //          "LAYERS": 'Tomislavgrad:tomislavgradNaselja_nazivi',
+    //          "exceptions": 'application/vnd.ogc.se_inimage',
+    //    }
+    //  })
+    //}),
+    //tomislavgradNaselja_nazivi = new ol.layer.Image({
+    //  minZoom: 11,
+    //  //maxZoom: 13,
+    //  opacity: 1,
+    //  source: new ol.source.ImageWMS({
+    //    url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
+    //    params: { 'LAYERS': 'Tomislavgrad:tomislavgradNaselja_nazivi' },
+    //    ratio: 1,
+    //    serverType: 'geoserver'
+    //  }),
+    //  name: 'tgnazivi'
+    //}),
     opcine = new ol.layer.Image({
       maxZoom: 11.5,
       source: new ol.source.ImageWMS({
@@ -189,116 +195,116 @@ var map = new ol.Map({
         name: 'opcine'
       })
     }),
-    //tomislavgradZastava = new ol.layer.Image({
+    tomislavgradZastava = new ol.layer.Image({
+      maxZoom: 11.5,
+      opacity: 1,
+      source: new ol.source.ImageWMS({
+        url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
+        params: { 'LAYERS': 'Tomislavgrad:tomislavgradZastava' },
+        ratio: 1,
+        serverType: 'geoserver'
+      }),
+      name: 'tg'
+    }),
+    //ramaPodloga = new ol.layer.Image({
     //  maxZoom: 11.5,
     //  opacity: 1,
     //  source: new ol.source.ImageWMS({
     //    url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-    //    params: { 'LAYERS': 'Tomislavgrad:tomislavgradZastava' },
+    //    params: { 'LAYERS': 'Tomislavgrad:ramaPodloga' },
     //    ratio: 1,
     //    serverType: 'geoserver'
     //  }),
-    //  name: 'tg'
+    //  name: 'rama'
     //}),
-    ramaPodloga = new ol.layer.Image({
-      maxZoom: 11.5,
-      opacity: 1,
-      source: new ol.source.ImageWMS({
-        url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: { 'LAYERS': 'Tomislavgrad:ramaPodloga' },
-        ratio: 1,
-        serverType: 'geoserver'
-      }),
-      name: 'rama'
-    }),
-    ramaZastava = new ol.layer.Image({
-      maxZoom: 11.5,
-      opacity: 1,
-      source: new ol.source.ImageWMS({
-        url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: { 'LAYERS': 'Tomislavgrad:ramaZastava' },
-        ratio: 1,
-        serverType: 'geoserver'
-      }),
-      name: 'rama'
-    }),
-    posusjeZastava = new ol.layer.Image({
-      maxZoom: 11.5,
-      opacity: 1,
-      source: new ol.source.ImageWMS({
-        url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: { 'LAYERS': 'Tomislavgrad:posusjeZastava' },
-        ratio: 1,
-        serverType: 'geoserver'
-      }),
-      name: 'posusje'
-    }),
-    livnoPodloga = new ol.layer.Image({
-      maxZoom: 11.5,
-      opacity: 1,
-      source: new ol.source.ImageWMS({
-        url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: { 'LAYERS': 'Tomislavgrad:livnoPodloga' },
-        ratio: 1,
-        serverType: 'geoserver'
-      }),
-      name: 'livno'
-    }),
-    livnoZastava = new ol.layer.Image({
-      maxZoom: 11.5,
-      opacity: 1,
-      source: new ol.source.ImageWMS({
-        url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: { 'LAYERS': 'Tomislavgrad:livnoZastava' },
-        ratio: 1,
-        serverType: 'geoserver'
-      }),
-      name: 'livno'
-    }),
-    kupresZastava = new ol.layer.Image({
-      maxZoom: 11.5,
-      opacity: 1,
-      source: new ol.source.ImageWMS({
-        url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: { 'LAYERS': 'Tomislavgrad:kupresZastava' },
-        ratio: 1,
-        serverType: 'geoserver'
-      }),
-      name: 'kupres'
-    }),
-    kupresPodloga_blue = new ol.layer.Image({
-      maxZoom: 11.5,
-      opacity: 1,
-      source: new ol.source.ImageWMS({
-        url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: { 'LAYERS': 'Tomislavgrad:kupresPodloga_blue' },
-        ratio: 1,
-        serverType: 'geoserver'
-      }),
-      name: 'kupres'
-    }),
-    kupresPodloga_red = new ol.layer.Image({
-      maxZoom: 11.5,
-      opacity: 1,
-      source: new ol.source.ImageWMS({
-        url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: { 'LAYERS': 'Tomislavgrad:kupresPodloga_red' },
-        ratio: 1,
-        serverType: 'geoserver'
-      }),
-      name: 'kupres'
-    }),
-    jablanicaZastava = new ol.layer.Image({
-      maxZoom: 11.5,
-      opacity: 1,
-      source: new ol.source.ImageWMS({
-        url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: { 'LAYERS': 'Tomislavgrad:jablanicaZastava' },
-        ratio: 1,
-        serverType: 'geoserver'
-      }),
-      name: 'jablanica'
-    }),
+    //ramaZastava = new ol.layer.Image({
+    //  maxZoom: 11.5,
+    //  opacity: 1,
+    //  source: new ol.source.ImageWMS({
+    //    url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
+    //    params: { 'LAYERS': 'Tomislavgrad:ramaZastava' },
+    //    ratio: 1,
+    //    serverType: 'geoserver'
+    //  }),
+    //  name: 'rama'
+    //}),
+    //posusjeZastava = new ol.layer.Image({
+    //  maxZoom: 11.5,
+    //  opacity: 1,
+    //  source: new ol.source.ImageWMS({
+    //    url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
+    //    params: { 'LAYERS': 'Tomislavgrad:posusjeZastava' },
+    //    ratio: 1,
+    //    serverType: 'geoserver'
+    //  }),
+    //  name: 'posusje'
+    //}),
+    //livnoPodloga = new ol.layer.Image({
+    //  maxZoom: 11.5,
+    //  opacity: 1,
+    //  source: new ol.source.ImageWMS({
+    //    url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
+    //    params: { 'LAYERS': 'Tomislavgrad:livnoPodloga' },
+    //    ratio: 1,
+    //    serverType: 'geoserver'
+    //  }),
+    //  name: 'livno'
+    //}),
+    //livnoZastava = new ol.layer.Image({
+    //  maxZoom: 11.5,
+    //  opacity: 1,
+    //  source: new ol.source.ImageWMS({
+    //    url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
+    //    params: { 'LAYERS': 'Tomislavgrad:livnoZastava' },
+    //    ratio: 1,
+    //    serverType: 'geoserver'
+    //  }),
+    //  name: 'livno'
+    //}),
+    //kupresZastava = new ol.layer.Image({
+    //  maxZoom: 11.5,
+    //  opacity: 1,
+    //  source: new ol.source.ImageWMS({
+    //    url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
+    //    params: { 'LAYERS': 'Tomislavgrad:kupresZastava' },
+    //    ratio: 1,
+    //    serverType: 'geoserver'
+    //  }),
+    //  name: 'kupres'
+    //}),
+    //kupresPodloga_blue = new ol.layer.Image({
+    //  maxZoom: 11.5,
+    //  opacity: 1,
+    //  source: new ol.source.ImageWMS({
+    //    url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
+    //    params: { 'LAYERS': 'Tomislavgrad:kupresPodloga_blue' },
+    //    ratio: 1,
+    //    serverType: 'geoserver'
+    //  }),
+    //  name: 'kupres'
+    //}),
+    //kupresPodloga_red = new ol.layer.Image({
+    //  maxZoom: 11.5,
+    //  opacity: 1,
+    //  source: new ol.source.ImageWMS({
+    //    url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
+    //    params: { 'LAYERS': 'Tomislavgrad:kupresPodloga_red' },
+    //    ratio: 1,
+    //    serverType: 'geoserver'
+    //  }),
+    //  name: 'kupres'
+    //}),
+    //jablanicaZastava = new ol.layer.Image({
+    //  maxZoom: 11.5,
+    //  opacity: 1,
+    //  source: new ol.source.ImageWMS({
+    //    url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
+    //    params: { 'LAYERS': 'Tomislavgrad:jablanicaZastava' },
+    //    ratio: 1,
+    //    serverType: 'geoserver'
+    //  }),
+    //  name: 'jablanica'
+    //}),
     //opcineZastave = new ol.layer.Image({
     //  source: new ol.source.ImageWMS({
     //    ratio: 1,
@@ -322,17 +328,17 @@ var map = new ol.Map({
     //    }
     //  })
     //}), 
-    opcineGranice = new ol.layer.Image({
-      maxZoom: 11.5,
-      opacity: 1,
-      source: new ol.source.ImageWMS({
-        url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
-        params: { 'LAYERS': 'Tomislavgrad:opcine_granice' },
-        ratio: 1,
-        serverType: 'geoserver'
-      }),
-      name: 'opcine'
-    }),
+    //opcineGranice = new ol.layer.Image({
+    //  maxZoom: 11.5,
+    //  opacity: 1,
+    //  source: new ol.source.ImageWMS({
+    //    url: 'http://localhost:8080/geoserver/Tomislavgrad/wms',
+    //    params: { 'LAYERS': 'Tomislavgrad:opcine_granice' },
+    //    ratio: 1,
+    //    serverType: 'geoserver'
+    //  }),
+    //  name: 'opcine'
+    //}),
   ],
   target: 'map',
   view: new ol.View({
@@ -1288,6 +1294,7 @@ window.onload = function () {
     }
   })
   $("#preloader").slideUp(1000)
+  $('#homeLogo').addClass('home-filter')
   if(sessionStorage.home == 1){
     document.getElementById('home').style.display = 'none'
     document.getElementById('homeLogo').style.display = 'none'
@@ -1656,22 +1663,25 @@ var assocs = new ol.layer.Vector({
 
 // localStorage
 var zoom = map.getView().getZoom()
-if (localStorage.basemap == 2) {
+if (localStorage.basemap == 1) {
   //document.getElementById('satellite').classList.add('activate-baselayer')
   //document.getElementById('topo').classList.remove('activate-baselayer')
-  topo.setVisible(false)
-  satellite.setVisible(true)
+  topo.setVisible(true)
+  satellite.setVisible(false);
+  $('#topo').addClass('activate-baselayer');
+  $('#satellite').removeClass('activate-baselayer')
 }
 
 
 var zastave = true
-var zastaveList = [tomislavgradZastava, ramaPodloga, ramaZastava, posusjeZastava, livnoPodloga, livnoZastava, kupresZastava, kupresPodloga_blue, kupresPodloga_red, jablanicaZastava, opcine, opcineGranice]
+var zastaveList = [tomislavgradZastava]//, ramaPodloga, ramaZastava, posusjeZastava, livnoPodloga, livnoZastava, kupresZastava, kupresPodloga_blue, kupresPodloga_red, jablanicaZastava, opcine, opcineGranice]
 for (zastava in zastaveList) {
   zastaveList[zastava].setZIndex(5)
 }
 console.log(localStorage.zastave)
 if (localStorage.zastave == 2) {
   zastave = false
+  $('#zastaveOpcina').checked = false
   //document.getElementById('zastaveOpcina').classList.remove('activate-layer')
   for (zastava in zastaveList) {
     zastaveList[zastava].setVisible(false)
@@ -2617,21 +2627,25 @@ function zastaveOpcina() {
   }
 }
 
-var graniceNaselja = true
-document.getElementById('naseljaTomislavgrad').checked = true
-function naselja() {
-  if (graniceNaselja) {
-    graniceNaselja = false
-    document.getElementById('naseljaTomislavgrad').checked = false
-    tomislavgradNaselja.setVisible(false)
-    tomislavgradNaselja_nazivi.setVisible(false)
-  } else {
-    graniceNaselja = true
-    document.getElementById('naseljaTomislavgrad').checked = true
-    tomislavgradNaselja.setVisible(true)
-    tomislavgradNaselja_nazivi.setVisible(true)
-  }
-}
+//var graniceNaselja = true
+//document.getElementById('naseljaTomislavgrad').checked = true
+//function naselja() {
+//  if (graniceNaselja) {
+//    graniceNaselja = false
+//    document.getElementById('naseljaTomislavgrad').checked = false
+//    tomislavgradNaselja.setVisible(false)
+//    tomislavgradNaselja_nazivi.setVisible(false)
+//  } else {
+//    graniceNaselja = true
+//    document.getElementById('naseljaTomislavgrad').checked = true
+//    tomislavgradNaselja.setVisible(true)
+//    tomislavgradNaselja_nazivi.setVisible(true)
+//  }
+//}
+
+
+$('#znamenitosti').checked = true
+$('#vjerski').checked = false
 
 var landmarksVisible = true
 document.getElementById('znamenitosti').checked = true

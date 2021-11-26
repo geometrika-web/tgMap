@@ -56,44 +56,19 @@ var landmarksData = {
       "geometry": {
         "type": "Point",
         "coordinates": [
-          17.226311,
-          43.721668
-        ]
-      },
-      "properties": {
-        "name": "Franjevački samostan Tomislavgrad",
-        "place": "Tomislavgrad",
-        "about": "Samostan u Tomislavgradu, je franjevački samostan u Mostarsko-duvanjskoj biskupiji, u Tomislavgradu, Bosna i Hercegovina. Proglašen je za nacionalni spomenik Bosne i Hercegovine na sjednici održanoj u Sarajevu od 11. oktobra 2017. godine. Odluku donijela je Komisija u sastavu: Amir Pašić, Goran Milojević (predsjedvajući), Radoje Vidović. Nacionalni spomenik se sastoji od: crkve sv. Nikole Tavelića i zapadnog krila franjevačkog samostana.",
-        "img": "/assets/img/samostanTomislavgrad.jpg",
-        "img2": "/assets/img/samostanTomislavgrad2.jpg",
-        "img3": "/assets/img/samostanTomislavgrad.jpg",
-        "img4": "/assets/img/samostanTomislavgrad.jpg",
-        "img5": "/assets/img/samostanTomislavgrad.jpg",
-        "zoom": "18",
-        "id": "kultura",
-        "thumb": "/assets/icon/kategorije_Kultura.svg",
-        "pin": "/assets/icon/landmarks/povijesneZnamenitosti_pin.svg",
-        "i360": "0"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           17.224871,
           43.721680
         ]
       },
       "properties": {
-        "name": "Crkva sv. Nikole Tavelića",
+        "name": "Bazilika i franjevački muzej",
         "place": "Tomislavgrad",
-        "about": "Samostan u Tomislavgradu, je franjevački samostan u Mostarsko-duvanjskoj biskupiji, u Tomislavgradu, Bosna i Hercegovina. Proglašen je za nacionalni spomenik Bosne i Hercegovine na sjednici održanoj u Sarajevu od 11. oktobra 2017. godine. Odluku donijela je Komisija u sastavu: Amir Pašić, Goran Milojević (predsjedvajući), Radoje Vidović. Nacionalni spomenik se sastoji od: crkve sv. Nikole Tavelića i zapadnog krila franjevačkog samostana.",
-        "img": "/assets/img/crkvaTomislavgrad.jpg",
-        "img2": "/assets/img/crkvaTomislavgrad2.jpg",
-        "img3": "/assets/img/crkvaTomislavgrad.jpg",
-        "img4": "/assets/img/crkvaTomislavgrad.jpg",
-        "img5": "/assets/img/crkvaTomislavgrad.jpg",
+        "about": "Spomen bazilika u Tomislavgradu započela je s izgradnjom 1925. na tisućitu godinjicu krunidbe kralja Tomislava. Kralj Tomislav je prema legendi krunjen na Duvanjskom polju. Pokojni fra. Mijo Čuić, svećenik-fratar vizionar zamislio je ogroman spomenik u vidu Crkve i samostana koji će za vijeke ostati spomenik krunidbi prvog Hrvatskog kralja. Uz ovu spomen baziliku i samostan nalazi se i franjevački muzej koji kroz svoje stalne postavke krije tajnu življenja na Duvanjskom polju vijekovima. Unutar samog samostana čuvaju se i ostaci Duvanjskog praslona koji su izloženi u dijarami, dok lapidarij krije mnoge tajne Rimskoga utjecaja na Duvanjsko polje. ",
+        "img": "/assets/img/crkvaTG.jpg",
+        "img2": "/assets/img/crkvaTG1.jpg",
+        "img3": "/assets/img/crkvaTG2.jpg",
+        "img4": "/assets/img/crkvaTG3.jpg",
+        "img5": "/assets/img/crkvaTG4.jpg",
         "zoom": "18",
         "id": "kultura",
         "thumb": "/assets/icon/kategorije_Kultura.svg",
@@ -113,12 +88,12 @@ var landmarksData = {
       "properties": {
         "name": "Trg gange i hajdučke družine",
         "place": "Tomislavgrad",
-        "about": "Samostan u Tomislavgradu, je franjevački samostan u Mostarsko-duvanjskoj biskupiji, u Tomislavgradu, Bosna i Hercegovina. Proglašen je za nacionalni spomenik Bosne i Hercegovine na sjednici održanoj u Sarajevu od 11. oktobra 2017. godine. Odluku donijela je Komisija u sastavu: Amir Pašić, Goran Milojević (predsjedvajući), Radoje Vidović. Nacionalni spomenik se sastoji od: crkve sv. Nikole Tavelića i zapadnog krila franjevačkog samostana.",
+        "about": "Trg gange i hajdučke družine je europski projekt i turistička infrastruktura sufinancirana od strane Europske unije kroz program prekogranične suradnje pod nazivom “Kulturna ruta bećarca i gange”. Ganga je hrvatska tradicionalna narodna pjesma. Oblik je višeglasnog napjeva u hrvatskom folkloru. Pjeva se u Imotskoj krajini, zapadnoj Hercegovini te u Duvanjskom i Livanjskom kraju. </br></br> Tekst gange pisan je u desetercu, najkarakterističnijem stihu hrvatskih narodnih pjesama. Ministarstvo kulture Republike Hrvatske proglasilo je gangu zaštićenom kulturnom baštinom te je tako ganga postala dijelom hrvatskoga zaštićenoga kulturnog naslijeđa.</br></br>Iako po svom glazbeno-pjevnom ustroju pripada vrlo starom tonskom sustavu – petoglasju, ganga je kao glazbeno-pjevno stvaralaštvo hrvatskog sela relativno mlada. Nastala je tek otprilike prije nešto više od jednog stoljeća, tj. oko godine 1900., kada je tadašnja mladež otkrila da se može pjevati i na drugi način i pri čemu svaki pojedinac može doći do izražaja. Ganga je nastala vjerojatno i prije nego je dobila ime, na prostoru starohrvatske župe Imote – u današnjoj Imotskoj krajini i u zapadnoj Hercegovini, gdje je usmeno kulturno naslijeđe bilo vrlo staro i vrlo živo, prenoseći se od naraštaja do naraštaja i gdje se usmena književnost, namah i bez zapisivanja, očuvala i održala upravo pjevajući i prepričavajući. Kao mladeži zanimljiviji oblik pjevanja od tradicionalnih pjevanja, ganga se širila u druga područja, prvenstveno odlaženjem mladeži ljeti sa stokom na ispašu u planine, seobama i uobičajenim druženjima mladih kako je stigla i do naših krajeva.",
         "img": "/assets/img/trgGange.jpg",
-        "img2": "/assets/img/trgGange2.jpg",
-        "img3": "/assets/img/trgGange.jpg",
-        "img4": "/assets/img/trgGange.jpg",
-        "img5": "/assets/img/trgGange.jpg",
+        "img2": "/assets/img/trgGange1.jpg",
+        "img3": "/assets/img/trgGange2.jpg",
+        "img4": "/assets/img/trgGange3.jpg",
+        "img5": "/assets/img/trgGange4.jpg",
         "zoom": "18",
         "id": "kultura",
         "thumb": "/assets/icon/kategorije_Kultura.svg",
@@ -126,49 +101,50 @@ var landmarksData = {
         "i360": "0"
       }
     },
+    //{
+    //  "type": "Feature",
+    //  "geometry": {
+    //    "type": "Point",
+    //    "coordinates": [
+    //      17.226113,
+    //      43.718290
+    //    ]
+    //  },
+    //  "properties": {
+    //    "name": "Spomenik Kralju Tomislavu",
+    //    "place": "Tomislavgrad",
+    //    "about": "Samostan u Tomislavgradu, je franjevački samostan u Mostarsko-duvanjskoj biskupiji, u Tomislavgradu, Bosna i Hercegovina. Proglašen je za nacionalni spomenik Bosne i Hercegovine na sjednici održanoj u Sarajevu od 11. oktobra 2017. godine. Odluku donijela je Komisija u sastavu: Amir Pašić, Goran Milojević (predsjedvajući), Radoje Vidović. Nacionalni spomenik se sastoji od: crkve sv. Nikole Tavelića i zapadnog krila franjevačkog samostana.",
+    //    "img": "/assets/img/kraljTomislav.jpg",
+    //    "img2": "/assets/img/kraljTomislav2.jpg",
+    //    "img3": "/assets/img/kraljTomislav2.jpg",
+    //    "img4": "/assets/img/kraljTomislav2.jpg",
+    //    "img5": "/assets/img/kraljTomislav2.jpg",
+    //    "zoom": "18",
+    //    "id": "kultura",
+    //    "thumb": "/assets/icon/kategorije_Kultura.svg",
+    //    "pin": "/assets/icon/landmarks/povijesneZnamenitosti_pin.svg",
+    //    "i360": "0"
+    //  }
+    //},
+    
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          17.226113,
-          43.718290
+          17.182671218053603,
+          43.822920516826514 
         ]
       },
       "properties": {
-        "name": "Spomenik Kralju Tomislavu",
-        "place": "Tomislavgrad",
-        "about": "Samostan u Tomislavgradu, je franjevački samostan u Mostarsko-duvanjskoj biskupiji, u Tomislavgradu, Bosna i Hercegovina. Proglašen je za nacionalni spomenik Bosne i Hercegovine na sjednici održanoj u Sarajevu od 11. oktobra 2017. godine. Odluku donijela je Komisija u sastavu: Amir Pašić, Goran Milojević (predsjedvajući), Radoje Vidović. Nacionalni spomenik se sastoji od: crkve sv. Nikole Tavelića i zapadnog krila franjevačkog samostana.",
-        "img": "/assets/img/kraljTomislav.jpg",
-        "img2": "/assets/img/kraljTomislav2.jpg",
-        "img3": "/assets/img/kraljTomislav2.jpg",
-        "img4": "/assets/img/kraljTomislav2.jpg",
-        "img5": "/assets/img/kraljTomislav2.jpg",
-        "zoom": "18",
-        "id": "kultura",
-        "thumb": "/assets/icon/kategorije_Kultura.svg",
-        "pin": "/assets/icon/landmarks/povijesneZnamenitosti_pin.svg",
-        "i360": "0"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          17.227588,
-          43.716840
-        ]
-      },
-      "properties": {
-        "name": "Zgrada Općine Tomislavgrad",
-        "place": "Tomislavgrad",
-        "about": "Samostan u Tomislavgradu, je franjevački samostan u Mostarsko-duvanjskoj biskupiji, u Tomislavgradu, Bosna i Hercegovina. Proglašen je za nacionalni spomenik Bosne i Hercegovine na sjednici održanoj u Sarajevu od 11. oktobra 2017. godine. Odluku donijela je Komisija u sastavu: Amir Pašić, Goran Milojević (predsjedvajući), Radoje Vidović. Nacionalni spomenik se sastoji od: crkve sv. Nikole Tavelića i zapadnog krila franjevačkog samostana.",
-        "img": "/assets/img/opcinaTomislavgrad.jpg",
-        "img2": "/assets/img/opcinaTomislavgrad2.jpg",
-        "img3": "/assets/img/opcinaTomislavgrad2.jpg",
-        "img4": "/assets/img/opcinaTomislavgrad.jpg",
-        "img5": "/assets/img/opcinaTomislavgrad2.jpg",
+        "name": "Rimski most na Šujici",
+        "place": "Šujica",
+        "about": "Rimski most na rijeci Šujici nalazi se u Šujičkom polju odmah ispod sela Glečića. Nalazio se u sustavu cesta koje je izgradilo Rimsko carstvo, a most je povezivao ostatak Duvanjskog polja s gradom Stridonom (Stržnjem). Riječ je o manjem kamenom mostu čiji je lučni stil klasični stil gradnje Rimskoga carstva. Most je korišten dugo godina i nakon pada Rimskog carstva da bi ga na posljetku obnovili Turci.",
+        "img": "/assets/img/mostSujica.jpg",
+        "img2": "/assets/img/mostSujica1.jpg",
+        "img3": "/assets/img/mostSujica2.jpg",
+        "img4": "/assets/img/mostSujica3.jpg",
+        "img5": "/assets/img/mostSujica4.jpg",
         "zoom": "18",
         "id": "kultura",
         "thumb": "/assets/icon/kategorije_Kultura.svg",
@@ -288,12 +264,12 @@ var landmarksData = {
       "properties": {
         "name": "Ostatci starokršćanske bazilike",
         "place": "Crvenice",
-        "about": "Ostatci starokršćanske bazilike ...",
-        "img": "/assets/img/starokrscanskaBazilika1.jpg",
-        "img2": "/assets/img/starokrscanskaBazilika1.jpg",
-        "img3": "/assets/img/starokrscanskaBazilika2.jpg",
-        "img4": "/assets/img/starokrscanskaBazilika3.jpg",
-        "img5": "/assets/img/starokrscanskaBazilika4.jpg",
+        "about": "Nakon što su Rimljani osvojili glavnu utvrdu Delmata - grad Delminium, počeli su širiti svoj utjecaj na Duvanjskom polju. Tako su s vremenom, nakon što je Rimsko Carstvo prihvatilo kršćanstvo u V. stoljeću, izgradili i baziliku u blizini samog Delminiuma, u današnejm selu Crvenice. Ova bazilika uskoro je postala i biskupijom. Baš zbog ove tradicije jedna od 4 biskupije na tlu Bosne i Hercegovine nosi naziv Mostarsko-Duvanjska biskupija.",
+        "img": "/assets/img/starokrscanskabazilika1.jpg",
+        "img2": "/assets/img/starokrscanskabazilika1.jpg",
+        "img3": "/assets/img/starokrscanskabazilika2.jpg",
+        "img4": "/assets/img/starokrscanskabazilika3.jpg",
+        "img5": "/assets/img/starokrscanskabazilika4.jpg",
         "id": "kultura",
         "thumb": "/assets/icon/kategorije_Kultura.svg",
         "pin": "/assets/icon/landmarks/povijesneZnamenitosti_pin.svg",
@@ -336,7 +312,7 @@ var landmarksData = {
       "properties": {
         "name": "Stećci Petrovac",
         "place": "Petrovac",
-        "about": "Stećci Petrovac ...",
+        "about": "Stećci koji se nalaze ispod gradine na planini Lib i neposredno u blizini Kongore. Riječ je o desecima stećaka (biliga) koje povezujemo sa srednjim vijekom, odnosno smatramo da su to srednjovjekovni grobovi imućnijih ljudi. Za neke se smatra da su nastali i puno ranije, za vrijeme doseljenja Ilira na ove prostore. Većina ovih stećaka je potonula u tlo pa pravu brojku ne možemo znati, ali možemo pretpostaviti da imaju poveznicu s gradinom na planini Lib i plemenom Delmata.",
         "img": "/assets/img/stecciPetrovac1.jpg",
         "img2": "/assets/img/stecciPetrovac1.jpg",
         "img3": "/assets/img/stecciPetrovac2.jpg",
@@ -360,7 +336,7 @@ var landmarksData = {
       "properties": {
         "name": "Stećci Lipa",
         "place": "Lipa",
-        "about": "Stećci Lipa ...",
+        "about": "Najveća nekropola stećaka koja se nalazi na Duvanjskom polju. Smještena je u blizini sela Lipe, a stećci su raspoređeni na pravoslavnom i katoličkom groblju (sarkofazi, križevi, ploče) te polju ispod groblja koji su većinom ploče koje su s vremenom potonuli u zemlju. Na nekoliko stećaka nalazimo i zanimljive rezbarije i ukrase koji nam govore o bogatstvu ljudi i naroda koji su u prošlosti živjeli na području naše općine.",
         "img": "/assets/img/stecciLipa1.jpg",
         "img2": "/assets/img/stecciLipa1.jpg",
         "img3": "/assets/img/stecciLipa2.jpg",
@@ -407,6 +383,54 @@ var natureData = {
       "geometry": {
         "type": "Point",
         "coordinates": [
+          17.02362152883257,
+          43.66379296899259 
+        ]
+      },
+      "properties": {
+        "name": "Buško jezero",
+        "place": "",
+        "about": "Buško jezero je umjetno jezero koje je nastalo 60-ih godina u bivšoj Jugoslavji za potrebe Hidroelektrane Orlovac koja se danas nalazi u Hrvatskoj. Buško jezero je nastalo nakupljanjem voda s Duvanjskog i Livanjskog polja zbog izgradnje brane. Površina jezera je 55,8 kilometara kvadratnih, a osim što je najveće u BiH donedavno se smatralo i jednom od većih i Europi. Buško jezero je samo po sebi ogroman potencijal i biser koji se nalazi na području općine Tomislavgrad. Osim što u ljetnim razdobljima njegova pješčana plaža Marinovac privlači sve veći broj ljudi, ovo jezero i dom brojnim slatkovodnim ribama, tako da kroz godinu privlači i mnoge ribiče.",
+        "img": "/assets/img/buskoJezero.jpg",
+        "img2": "/assets/img/buskoJezero1.jpg",
+        "img3": "/assets/img/buskoJezero3.jpg",
+        "img4": "/assets/img/buskoJezero4.jpg",
+        "img5": "/assets/img/buskoJezero2.jpg",
+        "id": "priroda",
+        "thumb": "/assets/icon/kategorije_Priroda.svg",
+        "pin": "/assets/icon/landmarks/prirodneLjepote_pin.svg",
+        "i360": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.49330384665067,
+          43.60688218540923 
+        ]
+      },
+      "properties": {
+        "name": "Blidinjsko jezero",
+        "place": "Blidinje",
+        "about": "Blidinjsko jezero je prirodno jezero nastalo na 1184 metara nadmorske visine na području parka prirode Blidinje. Ovo jezero je ledenjačkog podrijetla i smjestilo se u dnu Dugog polja. Površina mu varira od 2,5 do  km2, a dubine su mu relativno plitke i većina vezera ima prosječnu dubinu do 1 metar. Blidinje svojim vodama zapljuskuje planinu Čvrsnicu, a relativno je blizu planina Vran. Zbog svog ledenjačkog podrijetla i velike nadmorske visine na kojem se nalazi jezero je dobilo nadimak Gorske oči.",
+        "img": "/assets/img/blidinjskoJezero.jpg",
+        "img2": "/assets/img/blidinjskoJezero1.jpg",
+        "img3": "/assets/img/blidinjskoJezero2.jpg",
+        "img4": "/assets/img/blidinjskoJezero3.jpg",
+        "img5": "/assets/img/blidinjskoJezero4.jpg",
+        "id": "priroda",
+        "thumb": "/assets/icon/kategorije_Priroda.svg",
+        "pin": "/assets/icon/landmarks/prirodneLjepote_pin.svg",
+        "i360": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           17.168687,
           43.576575
         ]
@@ -414,8 +438,8 @@ var natureData = {
       "properties": {
         "name": "Izvor Močila - Roško Polje",
         "place": "Roško Polje",
-        "about": "Izvor Močila - Roško Polje je...",
-        "img": "/assets/img/IzvorMočila1.jpg",
+        "about": "Podno planine Zavelim u blizini Roškoga polja smjestila su se Močila. Legenda govori o 77 izvora koje su počeli iskorištavati za vrijeme Austro-Ugarske. Omiljeno je okupljalište i izletište svih Rožana pogotovo onih koji su razasuti po svijetu i koji čeznu za djetinjstvom i svojim zavičajem pa u ljetnim danima svrate na ovo izletište na druženje i okrepu hladnom vodom s ovog izvora.",
+        "img": "/assets/img/IzvorMočila.jpg",
         "img2": "/assets/img/IzvorMočila1.jpg",
         "img3": "/assets/img/IzvorMočila2.jpg",
         "img4": "/assets/img/IzvorMočila3.jpg",
@@ -512,7 +536,7 @@ var natureData = {
       "properties": {
         "name": "Ponor rijeke Šujice",
         "place": "Kovači",
-        "about": "Jedno od najljepših lokacija unutar cijele općine, te ujedino jedan prelijep prirodni fenomen je upravo ovaj ponor rijeke Šujice koji se nalazi u blizini sela Kovača. U uklesanoj stijeni, slično onoj iz koje izvire, rijeka Šujica te sve one rijeke koje se ulijevaju u njen tok ovdje misteriozno nestaju, da bi se ponovno pojavile na izvoru rijeke Ričine. Lokalno stanovništvo vješto je znalo ukrotiti snagu ove rijeke, tako da ovom posljednjem dijelu njenog toka nalazimo nekoliko mlinica. ",
+        "about": "Jedno od najljepših lokacija unutar cijele općine te ujedno jedan prelijep prirodni fenomen je upravo ovaj ponor rijeke Šujice koji se nalazi u blizini sela Kovača. U uklesanoj stijeni, slično onoj iz koje izvire, rijeka Šujica te sve one rijeke koje se ulijevaju u njen tok ovdje misteriozno nestaju, da bi se ponovno pojavile na izvoru rijeke Ričine. Lokalno stanovništvo vješto je znalo ukrotiti snagu ove rijeke, tako da ovom posljednjem dijelu njenog toka nalazimo nekoliko mlinica. ",
         "img": "/assets/img/ponorSujice.jpg",
         "img2": "/assets/img/ponorSujice1.jpg",
         "img3": "/assets/img/ponorSujice2.jpg",
@@ -562,7 +586,7 @@ var natureData = {
       "properties": {
         "name": "Veliki Samograd",
         "place": "Mrkodol",
-        "about": "Veliki Samograd je...",
+        "about": "U Duvanjskom kršu skrivena je duboka okomita urušena vrtača dužine 190 m, širine 110 m i dubine od 40 do 60 m. Ovdje je priroda, kao arhitekt, oblikom i dimenzijama ovog fenomena pokazala svu svoju silu i moć. Samograd, sam stvoren - sam sagrađen, ovalna je golema bunarasta vrtača čije se vrlo strme stijene spuštaju okomito s krške zaravni u dubinu. Na dnu Samograda nalazi se gusta i neprohodna šuma koja je dom raznim vrstama ptica, a uz rub vrtače nalazi se i špilja skromnih dimenzija.",
         "img": "/assets/img/VelikiSamograd1.jpg",
         "img2": "/assets/img/VelikiSamograd1.jpg",
         "img3": "/assets/img/VelikiSamograd2.jpg",
@@ -585,9 +609,9 @@ var natureData = {
         ]
       },
       "properties": {
-        "name": "Vjetropark Mrkodol",
-        "place": "Mrkodol",
-        "about": "Vjetropark Mrkodol je ....",
+        "name": "Vjetropark Mesihovina",
+        "place": "Bukovica, Mrkodol, Gornji Brišnik",
+        "about": "Vjetropark Mesihovina koji se nalazi na lokaciji par tomislavgradskih sela (Bukovica, Mrkodol, Gornji Brišnik) je prvi vjetropark koji je nastao u BiH. Posebnost ovog vjetroparka nije u električnoj energiji, nego u putevima i puteljcima koje su omogućili svima znatiželjnima da dodatno istraže ljepote Tomislavgrada.",
         "img": "/assets/img/vjetroparkMrkodol1.jpg",
         "img2": "/assets/img/vjetroparkMrkodol1.jpg",
         "img3": "/assets/img/vjetroparkMrkodol2.jpg",
@@ -637,7 +661,7 @@ var natureData = {
       "properties": {
         "name": "Studena",
         "place": "Crvenice",
-        "about": "Izletište Studena ...",
+        "about": "Studena su izletište iznad sela Crvenice i zaselka Karačići koje je još jedan u nizu bisera izletišta na Duvanjskom polju. Krase ga izvor vode te prelijep krajolik kojeg u ljednim danima vrlo rado posjećuju svi Duvnjaci.",
         "img": "/assets/img/studena1.jpg",
         "img2": "/assets/img/studena1.jpg",
         "img3": "/assets/img/studena2.jpg",
