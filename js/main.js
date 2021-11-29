@@ -1675,7 +1675,7 @@ var assocs = new ol.layer.Vector({
   //renderOrder: ol.ordering.yOrdering(),
   style: getFeatureStyleAssoc,
 });
-//map.addLayer(assocs)
+map.addLayer(assocs)
 
 // localStorage
 var zoom = map.getView().getZoom()
@@ -1689,7 +1689,7 @@ if (localStorage.basemap == 1) {
 }
 
 
-var zastave = true
+var zastave = false
 var zastaveList = [tomislavgradZastava]//, ramaPodloga, ramaZastava, posusjeZastava, livnoPodloga, livnoZastava, kupresZastava, kupresPodloga_blue, kupresPodloga_red, jablanicaZastava, opcine, opcineGranice]
 for (zastava in zastaveList) {
   zastaveList[zastava].setZIndex(5)
@@ -1870,6 +1870,10 @@ function deselect() {
 features = select.getFeatures().on(['add', 'remove'], function (e) {
   if (!zastave || currZoom > 11.5) {
     if (e.type == "add") {
+      document.getElementById('meet').style.display = 'none';
+      document.getElementById('landmark').style.display = 'none';
+      document.getElementById('image').style.display = 'none';
+      document.getElementById('landmark-about').style.display = 'none';
       if (meet == 1) {
         document.getElementById('msg').style.display = 'none';
       }
@@ -1902,10 +1906,7 @@ features = select.getFeatures().on(['add', 'remove'], function (e) {
 
         document.getElementById('msg').style.display = 'block';
       }
-      document.getElementById('meet').style.display = 'none';
-      document.getElementById('landmark').style.display = 'none';
-      document.getElementById('image').style.display = 'none';
-      document.getElementById('landmark-about').style.display = 'none';
+      
     }
   }
 });
