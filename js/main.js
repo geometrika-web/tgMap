@@ -66,7 +66,7 @@ var map = new ol.Map({
     topo = new ol.layer.Tile({
       visible: false,
       source: new ol.source.XYZ({
-        url: 'https://api.mapbox.com/styles/v1/lavtic/ckwgddnu7079914mlt2n24kzw/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibGF2dGljIiwiYSI6ImNqbzhqM2R6MTB6ZHgzcG1kdWFsOWs5anMifQ.1FloBRvYlL8rW8AIbWzJXQ'
+        url: 'https://api.mapbox.com/styles/v1/lavtic/ckwgddnu7079914mlt2n24kzw/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibGF2dGljIiwiYSI6ImNqbzhqM2R6MTB6ZHgzcG1kdWFsOWs5anMifQ.1FloBRvYlL8rW8AIbWzJXQ&fresh=true'
       })
     }),
     
@@ -77,7 +77,7 @@ var map = new ol.Map({
     //}),
     satellite = new ol.layer.Tile({
       source: new ol.source.XYZ({
-        url: 'https://api.mapbox.com/styles/v1/lavtic/ckwgdeuoj14po14nsp9arx5by/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibGF2dGljIiwiYSI6ImNqbzhqM2R6MTB6ZHgzcG1kdWFsOWs5anMifQ.1FloBRvYlL8rW8AIbWzJXQ'
+        url: 'https://api.mapbox.com/styles/v1/lavtic/ckwgdeuoj14po14nsp9arx5by/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibGF2dGljIiwiYSI6ImNqbzhqM2R6MTB6ZHgzcG1kdWFsOWs5anMifQ.1FloBRvYlL8rW8AIbWzJXQ&fresh=true'
       })
     }),
 
@@ -1333,7 +1333,11 @@ allFilter = function () {
     var turizamElement = document.querySelectorAll('.turizam');
     console.log(kulturaElement)
   }
-  document.getElementById('kategorije-check').style.left = 18 + "%"
+  if(isMobile){
+    $('#kategorije-check').css('left', '18%')
+  } else {
+    $('#kategorije-check').css('left', '17.5%')
+  }
   for (let item1 of prirodaElement) {
     item1.style.display = 'flex'
   }
@@ -1357,7 +1361,11 @@ kulturaFilter = function () {
     var turizamElement = document.querySelectorAll('.turizam');
     console.log(kulturaElement)
   }
-  document.getElementById('kategorije-check').style.left = 43 + "%"
+  if(isMobile){
+    $('#kategorije-check').css('left', '43%')
+  } else {
+    $('#kategorije-check').css('left', '41.5%')
+  }
   for (let item1 of prirodaElement) {
     item1.style.display = 'none'
   }
@@ -1381,7 +1389,11 @@ prirodaFilter = function () {
     var turizamElement = document.querySelectorAll('.turizam');
     console.log(kulturaElement)
   }
-  document.getElementById('kategorije-check').style.left = 66 + "%"
+  if(isMobile){
+    $('#kategorije-check').css('left', '67%')
+  } else {
+    $('#kategorije-check').css('left', '65%')
+  }
   for (let item1 of prirodaElement) {
     item1.style.display = 'flex'
   }
@@ -1404,7 +1416,11 @@ turizamFilter = function () {
     var prirodaElement = document.querySelectorAll('.priroda');
     var turizamElement = document.querySelectorAll('.turizam');
   }
-  document.getElementById('kategorije-check').style.left = 90 + "%"
+  if(isMobile){
+    $('#kategorije-check').css('left', '92.5%')
+  } else {
+    $('#kategorije-check').css('left', '88.5%')
+  }
   for (let item1 of prirodaElement) {
     item1.style.display = 'none'
   }
