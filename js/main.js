@@ -1869,11 +1869,11 @@ function deselect() {
 
 features = select.getFeatures().on(['add', 'remove'], function (e) {
   if (!zastave || currZoom > 11.5) {
+    document.getElementById('meet').style.display = 'none';
+    document.getElementById('landmark').style.display = 'none';
+    document.getElementById('image').style.display = 'none';
+    document.getElementById('landmark-about').style.display = 'none';
     if (e.type == "add") {
-      document.getElementById('meet').style.display = 'none';
-      document.getElementById('landmark').style.display = 'none';
-      document.getElementById('image').style.display = 'none';
-      document.getElementById('landmark-about').style.display = 'none';
       if (meet == 1) {
         document.getElementById('msg').style.display = 'none';
       }
