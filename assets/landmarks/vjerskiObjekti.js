@@ -177,6 +177,29 @@ var vjerskiObjekti = {
        "pin": "/assets/icon/landmarks/catolic.svg"
       }
      },
+     
+     {
+        "type": "Feature",
+        "geometry": {
+         "type": "Point",
+         "coordinates": [
+            17.27997368955981,
+            43.58080534174916 
+         ]
+        },
+        "properties": {
+         "name": "Crkva svetih Petra i Pavla - Mesihovina",
+         "about": ". . .",
+         "img": "/assets/img/crkvaMesihovina1.jpg",
+         "img2": "/assets/img/crkvaMesihovina.jpg",
+         "img3": "/assets/img/crkvaMesihovina2.jpg",
+         "img4": "/assets/img/crkvaMesihovina3.jpg",
+         "img5": "/assets/img/crkvaMesihovina4.jpg",
+         "zoom": "15",
+         "id": "landmarks",
+         "pin": "/assets/icon/landmarks/catolic.svg"
+        }
+       },
      //{
      // "type": "Feature",
      // "geometry": {
