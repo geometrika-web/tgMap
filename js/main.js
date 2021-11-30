@@ -40,7 +40,7 @@ var sourceFeatures = new ol.source.Vector()
 var markers = new ol.layer.Vector({
   source: sourceFeatures,
   declutter: false,
-  minZoom: 13.5,
+  minZoom: 13,
 })
 
 var map = new ol.Map({
@@ -441,6 +441,14 @@ map.on("pointermove", function (evt) {
 
 
 // Add virtual reality icons
+var iconStyle = new ol.style.Style({
+  image: new ol.style.Icon({
+    declutter: true,
+    src: 'assets/icon/360_mapIcon.svg',
+    anchor: [0.5, 2.9],
+    size: [100, 30],
+  })
+})
 const addImage = (obj) => {
 
 
@@ -452,32 +460,24 @@ const addImage = (obj) => {
     name: obj.name,
     url: obj.url,
   })
-  var iconStyle = new ol.style.Style({
-    image: new ol.style.Icon({
-      src: 'assets/icon/virtual-reality.svg',
-      anchor: [0.5, 0, 5],
-      size: [230, 230],
-      scale: 0.4,
-      opacity: 0.75,
-    })
-  })
-
+  
   iconFeature.setStyle(iconStyle)
   sourceFeatures.addFeature(iconFeature)
   //polyFeature.setStyle(polyStyle)
   //sourcePoly.addFeature(polyFeature)
-
-
-
+  
+  
+  
   //iconFeature.type = obj.type
   //imageObjects.push(iconFeature)
   //console.log(iconFeature.type)
-
-
+  
+  
 }
 
 //map.addLayer(layerPoly)
-map.addLayer(markers)
+//map.addLayer(markers)
+
 
 
 //Location and URL for 360 icons
@@ -488,7 +488,7 @@ var images = [
     url: 'panorama_tomislavgrad_2.html#mesihovina'
   },
   {
-    center: [17.299530, 43.585027],
+    center: [17.299530, 43.587027],
     name: 'Glizića mlinica',
     url: 'panorama_tomislavgrad_2.html#glizicaMlin'
   },
@@ -498,9 +498,49 @@ var images = [
     url: 'panorama_tomislavgrad_2.html#maliSamograd'
   },
   {
-    center: [17.299634881518827, 43.68405773083877],
+    center: [17.2994273707524, 43.6839055811983],
     name: 'Mandina gradina',
     url: 'panorama_tomislavgrad_2.html#mandinaGradina'
+  },
+  {
+    center: [17.168687, 43.576575],
+    name: 'Mocila',
+    url: 'panorama_tomislavgrad_2.html#mocila'
+  },
+  {
+    center: [17.262405289239247, 43.61181817391158],
+    name: 'KatedralaBukovica',
+    url: 'panorama_tomislavgrad_2.html#katedralaBukovica'
+  },
+  {
+    center: [17.186369644449563, 43.676401465747986 ],
+    name: 'Ponor Sujice',
+    url: 'panorama_tomislavgrad_2.html#ponorSujice'
+  },
+  {
+    center: [17.209819070657947, 43.72974760543072],
+    name: 'Seget',
+    url: 'panorama_tomislavgrad_2.html#seget'
+  },
+  {
+    center: [17.353109873926073, 43.64657274802597],
+    name: 'Stecci Lipa',
+    url: 'panorama_tomislavgrad_2.html#stecciLipa'
+  },  
+  {
+    center: [17.182671218053603, 43.822920516826514 ],
+    name: 'Most na Sujici',
+    url: 'panorama_tomislavgrad_2.html#mostNaSujici'
+  },
+  {
+    center: [17.185458317579446, 43.66292045587031],
+    name: 'Veliki Samograd',
+    url: 'panorama_tomislavgrad_2.html#velikiSamograd'
+  },
+  {
+    center: [17.233632165733233, 43.62501966943366],
+    name: 'Vjetropark Mesihovina',
+    url: 'panorama_tomislavgrad_2.html#vjetroparkMesihovina'
   },
   //{
   //  center: [17.226113, 43.718290],
@@ -1611,6 +1651,8 @@ map.addLayer(tourist);
 map.addLayer(vector);
 vector.setZIndex(15)
 vjerskiObjekti.setZIndex(0)
+map.addLayer(markers)
+markers.setZIndex(100000000000000000000000000000000000)
 //vectorSource.refresh()
 
 
@@ -2004,20 +2046,19 @@ selectAssoc.getFeatures().on(['add', 'remove'], function (e) {
 //})
 
 
-var iconStyle2 = new ol.style.Style({
-  image: new ol.style.Icon({
-    src: 'assets/icon/virtual-reality.svg',
-    anchor: [0.5, 0, 5],
-    size: [230, 230],
-    scale: 0.5,
-    opacity: 1,
-  })
-})
+//var iconStyle = new ol.style.Style({
+//  image: new ol.style.Icon({
+//    declutter: true,
+//    src: 'assets/icon/360_mapIcon.svg',
+//    anchor: [0.5, 2.9],
+//    size: [100, 30],
+//  })
+//})
 
 var hoverInteraction = new ol.interaction.Select({
   condition: ol.events.condition.pointerMove,
   layers: [markers],
-  style: iconStyle2
+  style: iconStyle
 });
 map.addInteraction(hoverInteraction);
 //selectInteraction.on('select', function (e) {
@@ -2029,7 +2070,7 @@ map.addInteraction(hoverInteraction);
 var select360 = new ol.interaction.Select({
   layers: [markers],
   condition: ol.events.condition.click,
-  style: iconStyle2
+  style: iconStyle
 })
 map.addInteraction(select360);
 select360.getFeatures().on(['add', 'remove'], function (e) {

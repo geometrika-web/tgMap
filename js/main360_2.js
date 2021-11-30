@@ -487,3 +487,123 @@ if (window.location.hash == '#mandinaGradina') {
   
   var markersPlugin = viewer.getPlugin(PhotoSphereViewer.MarkersPlugin);
 }
+
+if (window.location.hash == '#mocila') {
+  var viewer = new PhotoSphereViewer.Viewer({
+    panorama: '../assets/360/mocila.jpg',
+    container: 'photosphere',
+    loadingImg: 'assets/icon/virtual-reality.svg',
+    defaultLat: -0.45,
+    defaultLong: 2.15,
+    touchmoveTwoFingers: false,
+    mousewheelCtrlKey: false,
+    moveInertia: true,
+  });
+  
+  var markersPlugin = viewer.getPlugin(PhotoSphereViewer.MarkersPlugin);
+}
+
+if (window.location.hash == '#katedralaBukovica') {
+  var viewer = new PhotoSphereViewer.Viewer({
+    panorama: '../assets/360/katedralaBukovica.jpg',
+    container: 'photosphere',
+    loadingImg: 'assets/icon/virtual-reality.svg',
+    defaultLat: -0.45,
+    defaultLong: 2.15,
+    touchmoveTwoFingers: false,
+    mousewheelCtrlKey: false,
+    moveInertia: true,
+  });
+  
+  var markersPlugin = viewer.getPlugin(PhotoSphereViewer.MarkersPlugin);
+}
+
+if (window.location.hash == '#ponorSujice') {
+  var viewer = new PhotoSphereViewer.Viewer({
+    panorama: '../assets/360/ponorSujice.jpg',
+    container: 'photosphere',
+    loadingImg: 'assets/icon/virtual-reality.svg',
+    defaultLat: -0.45,
+    defaultLong: 2.15,
+    touchmoveTwoFingers: false,
+    mousewheelCtrlKey: false,
+    moveInertia: true,
+  });
+  
+  var markersPlugin = viewer.getPlugin(PhotoSphereViewer.MarkersPlugin);
+}
+
+if (window.location.hash == '#seget') {
+  var viewer = new PhotoSphereViewer.Viewer({
+    panorama: '../assets/360/seget.jpg',
+    container: 'photosphere',
+    loadingImg: 'assets/icon/virtual-reality.svg',
+    defaultLat: -0.45,
+    defaultLong: 2.15,
+    touchmoveTwoFingers: false,
+    mousewheelCtrlKey: false,
+    moveInertia: true,
+  });
+  
+  var markersPlugin = viewer.getPlugin(PhotoSphereViewer.MarkersPlugin);
+}
+
+if (window.location.hash == '#stecciLipa') {
+  var viewer = new PhotoSphereViewer.Viewer({
+    panorama: '../assets/360/stecciLipa.jpg',
+    container: 'photosphere',
+    loadingImg: 'assets/icon/virtual-reality.svg',
+    defaultLat: -0.45,
+    defaultLong: 2.15,
+    touchmoveTwoFingers: false,
+    mousewheelCtrlKey: false,
+    moveInertia: true,
+  });
+  
+  var markersPlugin = viewer.getPlugin(PhotoSphereViewer.MarkersPlugin);
+}
+
+if (window.location.hash == '#mostNaSujici') {
+  var viewer = new PhotoSphereViewer.Viewer({
+    panorama: '../assets/360/sujicaMost.jpg',
+    container: 'photosphere',
+    loadingImg: 'assets/icon/virtual-reality.svg',
+    defaultLat: -0.45,
+    defaultLong: 2.15,
+    touchmoveTwoFingers: false,
+    mousewheelCtrlKey: false,
+    moveInertia: true,
+  });
+  
+  var markersPlugin = viewer.getPlugin(PhotoSphereViewer.MarkersPlugin);
+}
+
+if (window.location.hash == '#velikiSamograd') {
+  var viewer = new PhotoSphereViewer.Viewer({
+    panorama: '../assets/360/velikiSamograd.jpg',
+    container: 'photosphere',
+    loadingImg: 'assets/icon/virtual-reality.svg',
+    defaultLat: -0.45,
+    defaultLong: 2.15,
+    touchmoveTwoFingers: false,
+    mousewheelCtrlKey: false,
+    moveInertia: true,
+  });
+  
+  var markersPlugin = viewer.getPlugin(PhotoSphereViewer.MarkersPlugin);
+}
+
+if (window.location.hash == '#vjetroparkMesihovina') {
+  var viewer = new PhotoSphereViewer.Viewer({
+    panorama: '../assets/360/vjetrenjačeMesihovina.jpg',
+    container: 'photosphere',
+    loadingImg: 'assets/icon/virtual-reality.svg',
+    defaultLat: -0.45,
+    defaultLong: 2.15,
+    touchmoveTwoFingers: false,
+    mousewheelCtrlKey: false,
+    moveInertia: true,
+  });
+  
+  var markersPlugin = viewer.getPlugin(PhotoSphereViewer.MarkersPlugin);
+}
