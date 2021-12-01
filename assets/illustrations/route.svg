@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    data-name="Layer 1"
-   width="950"
-   height="840"
-   viewBox="0 0 950 839.99999"
+   width="984"
+   height="783.0705"
+   viewBox="0 0 984 783.07049"
    version="1.1"
    id="svg98"
    sodipodi:docname="route.svg"
@@ -24,12 +24,12 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      fit-margin-top="50"
-     fit-margin-left="200"
-     fit-margin-right="200"
+     fit-margin-left="120"
+     fit-margin-right="120"
      fit-margin-bottom="0"
      inkscape:zoom="0.57275542"
-     inkscape:cx="281.97027"
-     inkscape:cy="301.17568"
+     inkscape:cx="629.41351"
+     inkscape:cy="563.06757"
      inkscape:window-width="1920"
      inkscape:window-height="1013"
      inkscape:window-x="-9"
@@ -39,7 +39,7 @@
      height="840px" />
   <g
      id="g26159"
-     transform="matrix(1.4441338,0,0,1.4441338,102.99999,20.318919)">
+     transform="matrix(1.4441338,0,0,1.4441338,120,50)">
     <path
        id="efdf5e1f-6b90-40c1-9274-afa2b16f39be-215"
        data-name="Path 482"
@@ -65,12 +65,12 @@
        fill="#e6e6e6"
        style="stroke-width:0.619195" />
     <polygon
-       points="483.215,179.569 466.576,170.731 467.821,170.069 484.46,178.908 "
+       points="466.576,170.731 467.821,170.069 484.46,178.908 483.215,179.569 "
        fill="#cbcbcb"
        id="polygon6"
        transform="matrix(0.61919504,0,0,0.61919504,-2.8817354e-5,0)" />
     <polygon
-       points="468.701,179.569 467.457,178.908 484.095,170.069 485.34,170.731 "
+       points="467.457,178.908 484.095,170.069 485.34,170.731 468.701,179.569 "
        fill="#cbcbcb"
        id="polygon8"
        transform="matrix(0.61919504,0,0,0.61919504,-2.8817354e-5,0)" />
@@ -115,7 +115,7 @@
        style="isolation:isolate;stroke-width:0.619195"
        id="path20" />
     <polygon
-       points="94.132,216.291 94.304,206.962 94.396,206.962 94.572,217.069 94.801,230.224 94.965,239.558 94.965,239.627 94.972,240.012 94.972,240.014 95.289,258.209 95.322,260.017 95.977,297.624 95.983,297.986 92.646,297.05 92.653,296.691 93.653,242.341 93.703,239.631 93.704,239.552 93.879,230.056 94.132,216.293 "
+       points="95.289,258.209 95.322,260.017 95.977,297.624 95.983,297.986 92.646,297.05 92.653,296.691 93.653,242.341 93.703,239.631 93.704,239.552 93.879,230.056 94.132,216.293 94.132,216.291 94.304,206.962 94.396,206.962 94.572,217.069 94.801,230.224 94.965,239.558 94.965,239.627 94.972,240.012 94.972,240.014 "
        fill="#3f3d56"
        id="polygon22"
        transform="matrix(0.61919504,0,0,0.61919504,-2.8817354e-5,0)" />
@@ -227,7 +227,7 @@
        id="circle56"
        style="stroke-width:0.619195" />
     <polygon
-       points="715.399,625.419 705.62,629.052 686.952,593.062 701.385,587.7 "
+       points="705.62,629.052 686.952,593.062 701.385,587.7 715.399,625.419 "
        fill="#ffb7b7"
        id="polygon58"
        transform="matrix(0.61919504,0,0,0.61919504,-2.8817354e-5,0)" />
@@ -237,7 +237,7 @@
        id="path60"
        style="stroke-width:0.619195" />
     <polygon
-       points="619.162,635.574 608.73,635.573 603.767,595.335 619.164,595.336 "
+       points="608.73,635.573 603.767,595.335 619.164,595.336 619.162,635.574 "
        fill="#ffb7b7"
        id="polygon62"
        transform="matrix(0.61919504,0,0,0.61919504,-2.8817354e-5,0)" />
@@ -341,33 +341,33 @@
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:41.0376px;line-height:1.25;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, @wght=600';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 600;stroke-width:2.77223"
-     x="369.95135"
-     y="727.69165"
+     x="322.95135"
+     y="731.37274"
      id="text2027"><tspan
        sodipodi:role="line"
        id="tspan2025"
-       x="369.95135"
-       y="727.69165"
+       x="322.95135"
+       y="731.37274"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:41.0376px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, @wght=600';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 600;stroke-width:2.77223"></tspan><tspan
        sodipodi:role="line"
-       x="369.95135"
-       y="778.98865"
+       x="322.95135"
+       y="782.66974"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:41.0376px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, @wght=600';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 600;stroke-width:2.77223"
        id="tspan6412">Uskoro . . . </tspan></text>
   <text
      xml:space="preserve"
      style="font-size:24.6226px;line-height:1.25;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, @wght=700';font-variant-ligatures:none;font-variation-settings:'wght' 700;stroke-width:1.02594"
-     x="299.74432"
-     y="697.11578"
+     x="316.74432"
+     y="700.79688"
      id="text6922"><tspan
        sodipodi:role="line"
        id="tspan6920"
-       x="299.74432"
-       y="697.11578"
+       x="316.74432"
+       y="700.79688"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.6226px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, @wght=300';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 300;stroke-width:1.02594">Istražite Tomislavgrad uz naše</tspan><tspan
        sodipodi:role="line"
-       x="299.74432"
-       y="727.89404"
+       x="316.74432"
+       y="731.57513"
        id="tspan7808"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.6226px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, @wght=300';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 300;stroke-width:1.02594">prijedloge ili s lokalnim vodičima</tspan></text>
 </svg>
