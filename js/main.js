@@ -995,7 +995,7 @@ function getFeatureStyleAssoc(feature, resolution, sel) {
         shadow: 25,
         //onload: function(){vector.changed();}, //function(){vector.changed();},
         stroke: new ol.style.Stroke({
-          width: 1.5 + (sel ? 2 : 0),
+          width: 1.5 + (sel ? 1 : 0),
           color: 'black',
         })
       })
