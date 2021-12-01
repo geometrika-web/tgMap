@@ -576,7 +576,7 @@
 }
 
 .sidebar-scroll {
-  height: calc(100vh - 180px);
+  height: calc(100vh - 170px);
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -591,7 +591,7 @@
   overflow: auto;
 }
 .assocs-scroll {
-  height: calc(100vh - 230px);
+  height: calc(100vh - 170px);
   overflow: auto;
 }
 @media(max-width: 575.99px) {

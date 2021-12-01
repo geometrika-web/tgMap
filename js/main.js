@@ -2521,7 +2521,7 @@ function getAssoc(clickedID) {
     clickedID_element.classList.remove('activate-assoc')
     clickedID_text.classList.remove('activate-assoc')
 
-    assocSource.refresh()
+    //assocSource.refresh()
   }
 }
 
@@ -2666,7 +2666,7 @@ function zoomToAssoc(id) {
   view.animate({
     center: ol.proj.fromLonLat(assocCoord[num - 1]),
     duration: 2000,
-    zoom: 16
+    zoom: 15
   })
   //if(id=="assoc1"){
   //  view.animate({
