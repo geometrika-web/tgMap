@@ -1795,6 +1795,9 @@ function meetTg() {
   if (meet == 1) {
     return
   } else {
+    if (meet == 3) {
+      closeAssocDesc()
+    }
     deselect()
     meet = 1
     markers.setVisible(true)
@@ -2658,6 +2661,12 @@ function zoomToDest(id) {
 //  assocDesc[i].style.display = 'none'
 //}
 console.log(assocDesc)
+function closeAssocDesc() {
+  for (var i = 0; i < assocDesc.length; i++) {
+    assocDesc[i].style.display = 'none'
+  }
+  $('.list-group-item').removeClass('activate-assoc')
+}
 function zoomToAssoc(id) {
   for (var i = 0; i < assocDesc.length; i++) {
     assocDesc[i].style.display = 'none'
