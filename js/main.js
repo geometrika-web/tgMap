@@ -1795,6 +1795,7 @@ document.getElementById('meet').style.display = 'none'
 var meet = 1
 document.getElementById('routes').style.display = 'none'
 document.getElementById('assoc').style.display = 'none'
+document.getElementById('assocsAll').style.display = 'none'
 document.getElementById('destinationsAll').style.display = 'none'
 function meetTg() {
   if (meet == 1) {
@@ -1822,6 +1823,7 @@ function meetTg() {
     document.getElementById('meet').style.display = 'block'
     document.getElementById('routes').style.display = 'none'
     document.getElementById('assoc').style.display = 'none'
+    document.getElementById('assocsAll').style.display = 'none'
     var activate = document.getElementsByClassName('activate')
     while (activate.length) {
       activate[0].classList.remove('activate')
@@ -1854,6 +1856,7 @@ function routes() {
     document.getElementById('msg').style.display = 'none'
     document.getElementById('meet').style.display = 'none'
     document.getElementById('assoc').style.display = 'none'
+    document.getElementById('assocsAll').style.display = 'none'
     document.getElementById('routes').style.display = 'block'
     var activate = document.getElementsByClassName('activate')
     while (activate.length) {
