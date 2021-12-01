@@ -79,7 +79,7 @@
             <img src="assets/icon/association.svg" alt=""><div>Udruge</div>
         
           </div>
-          <div id="btn-assoc" onclick="assoc()" class="menuBtn-border col-3 cursor-pointer menu-btn text-c3 text-center no-outline p-0 pt-2 pb-2">
+          <div id="btn-business" onclick="business()" class="menuBtn-border col-3 cursor-pointer menu-btn text-c3 text-center no-outline p-0 pt-2 pb-2">
             <img src="assets/icon/business.svg" alt=""><div>Poduzetnici</div>
         
           </div>
@@ -170,23 +170,24 @@
       <!--Routes-->
     <div id="msg_el"></div>
     <div id="routes" class="list-group list-group-flush">
-        <!--Buttons-->
-        <div class="container-fluid">
-          <div class="row text-small">
-            <div class="col-6 p-0">
-              <button id="btn-touristTours" onclick="touristTours()" class="menu-btn list-group-item list-group-item-action bg-light text-center activate-routes no-outline">TURISTIČKE RUTE</button>
-          
-            </div>
-            <div class="col-6 p-0">
-              <button id="btn-weekendDestinations" onclick="weekendDestinations()" class="menu-btn list-group-item list-group-item-action bg-light text-center no-outline">VIKEND DESTINACIJE</button>
-            </div>
+      <!--Buttons-->
+      <div class="container-fluid">
+        <div class="row text-small">
+          <div class="col-6 p-0">
+            <button id="btn-touristTours" onclick="touristTours()" class="menu-btn list-group-item list-group-item-action bg-light text-center activate-routes no-outline">TURISTIČKE RUTE</button>
+            
+          </div>
+          <div class="col-6 p-0">
+            <button id="btn-weekendDestinations" onclick="weekendDestinations()" class="menu-btn list-group-item list-group-item-action bg-light text-center no-outline">VIKEND DESTINACIJE</button>
           </div>
         </div>
-
-        <!--Tourist Routes-->
-        <div id="routesAll" class="routes-scroll mt-5"></div>
-        <!--Vikend destinacije-->
-        <div id="destinationsAll" class="routes-scroll mt-5"></div>
+      </div>
+      
+      <img class="illustration" class="mt-5" src="/assets/illustrations/route.svg" alt="">
+      <!--Tourist Routes-->
+      <div id="routesAll" class="routes-scroll mt-5"></div>
+      <!--Vikend destinacije-->
+      <div id="destinationsAll" class="routes-scroll mt-5"></div>
     </div>
       <!--Associations-->
       <div id="assocsAll" class="assocs-scroll"></div>
@@ -322,6 +323,11 @@
         </small>
         
         
+      </div>
+
+      <!--Busines-->
+      <div id="business">
+        <img class="illustration p-4" src="/assets/illustrations/business.svg" alt="">
       </div>
     </div>
     <!-- /#sidebar-wrapper-->

@@ -614,6 +614,10 @@
 #routes{
   display: none;
 }
+.illustration {
+  width: 100%;
+  height: auto;
+}
 
 
 .box {
