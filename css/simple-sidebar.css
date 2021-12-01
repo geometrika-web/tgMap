@@ -1122,3 +1122,25 @@
 .d-none {
   display: none !important;
 }
+
+/*SIDEBAR*/
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(196, 78, 78, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffd071
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffd071;
+  width: 10px;
+}
