@@ -1018,6 +1018,7 @@ function onLoadChanged(){
   vector.changed()
   nature.changed()
   tourist.changed()
+  assocs.changed()
 }
 // Load list from GeoJSON file
 coord = []
@@ -1027,7 +1028,6 @@ window.onload = function () {
   //$.getJSON("assets/landmarks/landmarks.geojson", function(data) {
   onLoadChanged()
   for (i in landmarksData.features) {
-    console.log(landmarksData.features[i])
     var landmarkAll = document.createElement('button')
     landmarkAll.id = i
     landmarkAll.classList.add("list-group-item", "list-group-item-action", "no-outline", "mt-4", "pl-5", "landmarkList-height", "scale-animation-right", "display-flex", "text-font")
@@ -1263,22 +1263,39 @@ window.onload = function () {
     }
   })
   var assocInfoList1 = ["Predsjednik:", "Novosti:", "Postani član:"], assocInfoList2 = ["assets/contact/phone.png", "assets/contact/mail.png", "assets/contact/location.png", "assets/contact/facebook.png"];
-  $.getJSON("assets/landmarks/assocs.geojson", function (data) {
-    features = data.features
-    for (i in features) {
+  //$.getJSON("assets/landmarks/assocs.geojson", function (data) {
+  //  features = data.features
+    for (i in assocsData.features) {
+      features = assocsData.features
       var assocsAll = document.createElement('button')
       assocsAll.id = features[i].properties.id
-      assocsAll.classList.add("list-group-item", "list-group-item-action", "no-outline")
-      assocsAll.innerText = features[i].properties.name
+      assocsAll.classList.add("list-group-item", "list-group-item-action", "no-outline", "mt-4", "pl-5", "landmarkList-height", "display-flex", "text-font")
       assocsAll.onclick = function () { getAssoc(this.id); };
       var parent = document.getElementById('assocsAll')
       parent.appendChild(assocsAll)
+      var assocImg = document.createElement('img')
+      assocImg.src = features[i].properties.img
+      assocImg.classList.add("landmarkList-img", "ml-4", "center-y")
+      assocsAll.appendChild(assocImg)
+
+      var assocsTitle = document.createElement('div')
+      assocsTitle.classList.add("pt-4", "pl-4")
+      assocsAll.appendChild(assocsTitle)
+      
+      var assocsPlace = document.createElement('div')
+      assocsPlace.innerText = features[i].properties.place
+      assocsPlace.classList.add('menu-btn', 'text-c3')
+      var assocsName = document.createElement('div')
+      assocsName.innerText = features[i].properties.name
+      assocsName.classList.add('text-font')
+      assocsTitle.appendChild(assocsPlace)
+      assocsTitle.appendChild(assocsName)
 
       assocCoord.push(features[i].geometry.coordinates)
 
       var assocText = document.createElement('small')
       assocText.id = features[i].properties.id + '-text'
-      assocText.classList.add("p-3", "ml-2")
+      assocText.classList.add("p-4")
       assocText.style.display = 'none'
       assocText.innerHTML = features[i].properties.about
       assocDesc.push(assocText)
@@ -1332,7 +1349,7 @@ window.onload = function () {
         item.appendChild(itemText)
       }
     }
-  })
+  //})
   $("#preloader").slideUp(1000)
   $('#homeLogo').addClass('home-filter')
   if(sessionStorage.home == 1){
@@ -1708,11 +1725,10 @@ assocSource = new ol.source.Vector({
 })
 
 var assocs = new ol.layer.Vector({
-  minZoom: 13,
   name: 'assocs',
   source: assocSource,
   declutter: true,
-  opacity: 1,
+  visible: false,
   // y ordering
   //renderOrder: ol.ordering.yOrdering(),
   style: getFeatureStyleAssoc,
@@ -1747,7 +1763,7 @@ if (localStorage.zastave == 2) {
   vector.setVisible(true)
   nature.setVisible(true)
   tourist.setVisible(true)
-  assocs.setVisible(true)
+  //assocs.setVisible(true)
   //vjerskiObjekti.setVisible(true)
 }
 
@@ -1781,7 +1797,10 @@ function meetTg() {
   } else {
     deselect()
     meet = 1
-    assocs.setZIndex(10)
+    markers.setVisible(true)
+    vector.setVisible(true)
+    nature.setVisible(true)
+    tourist.setVisible(true)
     vector.setZIndex(20)
     nature.setZIndex(20)
     tourist.setZIndex(20)
@@ -1803,6 +1822,7 @@ function meetTg() {
     //document.getElementById('btn-routes').classList.remove('activate')
     //document.getElementById('btn-assoc').classList.remove('activate')
     //vectorTours.setVisible(false)
+    assocs.setVisible(false)
     tour1.setVisible(false)
     tour2.setVisible(false)
     destination1.setVisible(false)
@@ -1865,10 +1885,7 @@ function assoc() {
     for (var i = 0; i < weekendDestinationsDesc.length; i++) {
       weekendDestinationsDesc[i].style.display = 'none'
     }
-    assocs.setZIndex(20)
-    vector.setZIndex(10)
-    nature.setZIndex(10)
-    tourist.setZIndex(10)
+    assocs.setVisible(true)
     document.getElementById('msg').style.display = 'none'
     document.getElementById('meet').style.display = 'none'
     document.getElementById('routes').style.display = 'none'
@@ -1878,6 +1895,13 @@ function assoc() {
       activate[0].classList.remove('activate')
     }
     document.getElementById('btn-assoc').classList.add('activate')
+    markers.setVisible(false)
+    vector.setVisible(false)
+    nature.setVisible(false)
+    tourist.setVisible(false)
+    vectorPin.setVisible(false)
+    naturePin.setVisible(false)
+    touristPin.setVisible(false)
     tour1.setVisible(false)
     tour2.setVisible(false)
     destination1.setVisible(false)
@@ -2478,18 +2502,25 @@ function getSourceJSON(clickedID, selected) {
 
 
 function getAssoc(clickedID) {
-  let clickedIDtext = document.getElementById(clickedID + '-text').style.display
-  if (clickedIDtext == 'none') {
+  let clickedID_element = document.getElementById(clickedID)
+  let clickedID_text = document.getElementById(clickedID + '-text')
+  let clickedIDtextStyle = document.getElementById(clickedID + '-text').style.display
+  if (clickedIDtextStyle == 'none') {
     var activate = document.getElementsByClassName('activate-assoc')
     while (activate.length) {
       activate[0].classList.remove('activate-assoc')
     }
     zoomToAssoc(clickedID)
-    document.getElementById(clickedID + "-text").style.display = 'block';
-    document.getElementById(clickedID).classList.add('activate-assoc')
+    clickedID_text.style.display = 'block';
+    clickedID_text.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"})
+    console.log(clickedID)
+    clickedID_element.classList.add('activate-assoc')
+    clickedID_text.classList.add('activate-assoc')
   } else {
-    document.getElementById(clickedID + "-text").style.display = 'none';
-    document.getElementById(clickedID).classList.remove('activate-assoc')
+    clickedID_text.style.display = 'none';
+    clickedID_element.classList.remove('activate-assoc')
+    clickedID_text.classList.remove('activate-assoc')
+
     assocSource.refresh()
   }
 }
@@ -2667,7 +2698,7 @@ function zastaveOpcina() {
     vector.setVisible(true)
     nature.setVisible(true)
     tourist.setVisible(true)
-    assocs.setVisible(true)
+    //assocs.setVisible(true)
     //vjerskiObjekti.setVisible(true)
   } else {
     zastave = true

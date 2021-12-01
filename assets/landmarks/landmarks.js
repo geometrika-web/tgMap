@@ -69,7 +69,7 @@ var landmarksData = {
         "img3": "/assets/img/crkvaTG2.jpg",
         "img4": "/assets/img/crkvaTG3.jpg",
         "img5": "/assets/img/crkvaTG4.jpg",
-        "zoom": "18",
+        "zoom": "17",
         "id": "kultura",
         "thumb": "/assets/icon/kategorije_Kultura.svg",
         "pin": "/assets/icon/landmarks/povijesneZnamenitosti_pin.svg",

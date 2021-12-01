@@ -542,6 +542,9 @@
 .activate {
  filter: brightness(0) saturate(100%) invert(70%) sepia(92%) saturate(696%) hue-rotate(352deg) brightness(100%) contrast(103%);
 }
+.activate-assoc {
+  border-left: 4px solid #fdc82f !important;
+ }
 .activate-baselayer {
   border: 4px solid #fdc82f;
 }
