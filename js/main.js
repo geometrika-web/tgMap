@@ -1030,7 +1030,7 @@ window.onload = function () {
   for (i in landmarksData.features) {
     var landmarkAll = document.createElement('button')
     landmarkAll.id = i
-    landmarkAll.classList.add("list-group-item", "list-group-item-action", "no-outline", "mt-4", "pl-5", "landmarkList-height", "scale-animation-right", "display-flex", "text-font")
+    landmarkAll.classList.add( "list-group-item", "list-group-item-action", "no-outline", "mt-4", "pl-5", "landmarkList-height", "scale-animation-right", "display-flex", "text-font")
     landmarkAll.classList.add(landmarksData.features[i].properties.id)
     landmarkAll.onclick = function () { zoomTo(this.id); };
     var parent = document.getElementById('landmark-name')
@@ -1055,7 +1055,7 @@ window.onload = function () {
     landmarkName.innerText = landmarksData.features[i].properties.name
     landmarkType.src = landmarksData.features[i].properties.thumb
     landmarkPlace.classList.add('menu-btn', 'text-c3')
-    landmarkName.classList.add('text-font')
+    landmarkName.classList.add("sort",'text-font')
     landmarkType.classList.add('kategorije-thumb')
     landmark360.classList.add('kategorije-thumb')
     landmarkText.appendChild(landmarkPlace)
@@ -1811,6 +1811,9 @@ function meetTg() {
     vector.setVisible(true)
     nature.setVisible(true)
     tourist.setVisible(true)
+    vectorPin.setVisible(true)
+    naturePin.setVisible(true)
+    touristPin.setVisible(true)
     vector.setZIndex(20)
     nature.setZIndex(20)
     tourist.setZIndex(20)
@@ -1831,6 +1834,8 @@ function meetTg() {
       activate[0].classList.remove('activate')
     }
     document.getElementById('btn-meet').classList.add('activate')
+
+
     //document.getElementById('btn-routes').classList.remove('activate')
     //document.getElementById('btn-assoc').classList.remove('activate')
     //vectorTours.setVisible(false)
@@ -2948,3 +2953,11 @@ var routeNew = new ol.layer.Vector({
 })
 
 map.addLayer(routeNew)
+
+//$('.sort').sort(function(a, b) {
+//  if (a.textContent < b.textContent) {
+//    return -1;
+//  } else {
+//    return 1;
+//  }
+//}).appendTo('landmarksAll');
