@@ -1267,7 +1267,7 @@ window.onload = function () {
 
 
 
-  var assocInfoList1 = ["Predsjednik:", "Novosti:", "Postani član:"], assocInfoList2 = ["assets/contact/phone.png", "assets/contact/mail.png", "assets/contact/location.png", "assets/contact/facebook.png"];
+  var assocInfoList1 = ["Predsjednik:", "Novosti:"], assocInfoList2 = ["assets/contact/phone.png", "assets/contact/mail.png", "assets/contact/location.png"];
   //$.getJSON("assets/landmarks/assocs.geojson", function (data) {
   //  features = data.features
     for (i in assocsData.features) {
@@ -1361,6 +1361,13 @@ window.onload = function () {
     document.getElementById('home').style.display = 'none'
     document.getElementById('homeLogo').style.display = 'none'
   } 
+  $('.sort').sort(function(a, b) {
+    if (a.textContent < b.textContent) {
+      return -1;
+    } else {
+      return 1;
+    }
+  }).appendTo('landmarksAll');
   //document.getElementById('preloader').style.display = 'none'
   //vjerskiObjekti.changed()
 }
@@ -1724,10 +1731,10 @@ markers.setZIndex(100000000000000000000000000000000000)
 
 // Associations layer
 assocSource = new ol.source.Vector({
-  url: 'assets/landmarks/assocs.geojson',
-  projection: 'EPSG:3857',
-  format: new ol.format.GeoJSON(),
-})
+  features: (new ol.format.GeoJSON()).readFeatures(assocsData, {
+    featureProjection: 'EPSG:3857'
+  }),
+});
 
 var assocs = new ol.layer.Vector({
   name: 'assocs',
@@ -2954,10 +2961,3 @@ var routeNew = new ol.layer.Vector({
 
 map.addLayer(routeNew)
 
-//$('.sort').sort(function(a, b) {
-//  if (a.textContent < b.textContent) {
-//    return -1;
-//  } else {
-//    return 1;
-//  }
-//}).appendTo('landmarksAll');
