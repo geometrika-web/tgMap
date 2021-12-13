@@ -16,7 +16,7 @@ var assocsData = {
        "img": "/assets/assoc/PdOrlovaStina3.jpg",
        "img2": "/assets/assoc/PdOrlovaStina2.jpg",
        "place": "Tomislavgrad",
-       "info": [" Ante Vukadin", " https://www.facebook.com/groups/303782433104991", " orlovastina1999@gmail.com"],
+       "info": [" Ante Vukadin", " www.facebook.com/groups/303782433104991", " orlovastina1999@gmail.com"],
        "contact": [" 063/330-097", "orlovastina1999@gmail.com", "Mijata Tomića bb, Tomislavgrad", "face"],
        "id": "assoc1"
       }
@@ -36,7 +36,7 @@ var assocsData = {
        "img": "/assets/assoc/PedZavelim.jpg",
        "img2": "/assets/assoc/buskoBlato.jpg",
        "place": "Roško Polje",
-       "info": [" Mijo Gačić", " https://www.facebook.com/zavelim.ped"],
+       "info": [" Mijo Gačić", " www.facebook.com/zavelim.ped"],
        "contact": [" 063/331-848", " jablan1969@gmail.com", "Roško Polje bb, Tomislavgrad"],
        "id": "assoc2"
       }
@@ -56,7 +56,7 @@ var assocsData = {
        "img": "/assets/assoc/pdPrisoje.png",
        "img2": "/assets/assoc/pdPrisoje.png",
        "place": "Prisoje",
-       "info": [" Mirko Boščić", " http://www.prisoje.net/html/pd_prisoje.html"],
+       "info": [" Mirko Boščić", " www.prisoje.net/html/pd_prisoje.html"],
        "contact": [" 063/473-734", " pdprisoje@gmail.com", "Prisoje bb, Tomislavgrad"],
        "id": "assoc3"
       }
@@ -96,7 +96,7 @@ var assocsData = {
        "img": "/assets/assoc/nasaBastina.jpg",
        "img2": "/assets/assoc/nasaBastina.jpg",
        "place": "Tomislavgrad",
-       "info": [" Mirko Šarac", " https://www.nasabastina.com/"],
+       "info": [" Mirko Šarac", " www.nasabastina.com/"],
        "contact": [" 063/330-625", " nasa.bastina.tg@gmail.com", "Mandino Selo bb, Tomislavgrad"],
        "id": "assoc5"
       }
@@ -116,7 +116,7 @@ var assocsData = {
        "img": "/assets/assoc/luOrlovKuk.jpg",
        "img2": "/assets/assoc/luOrlovKuk.jpg",
        "place": "Tomislavgrad",
-       "info": [" Mate Buntić", " http://www.lu-orlovkuk.com/"],
+       "info": [" Mate Buntić", " www.lu-orlovkuk.com/"],
        "contact": [" 063/413-270", " orlovkuk0@gmail.com", "Seonička sala b.b., Seonica"],
        "id": "assoc6"
       }
