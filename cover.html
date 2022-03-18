@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      name="viewport"
+    />
+    <title>Općina Tomislavgrad</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/logo/logo_crown+trajectory_black.svg"
+    />
+    <!-- Bootstrap core CSS -->
+    <link rel="shortcut icon" href="#" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css"
+      type="text/css"
+    />
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="css/simple-sidebar.css" rel="stylesheet" />
+
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- The video -->
+    <video autoplay muted loop id="cover-video">
+      <source src="/assets/cover/tg-map2.mp4" type="video/mp4" />
+    </video>
+    <img
+      id="homeLogo"
+      src="assets/logo/logo_figma_white.svg"
+      class="mt-0 mr-0 mb-0 ml-0 p-0 position-absolute home-logo pointer-cursor"
+      alt="TomislavGuides"
+    />
+    <img id="coverImg" src="/assets/img/00home_min.jpg" alt="" />
+    <div id="home">
+      <div class="home-center-y">
+        <div class="home-title">
+          Dobrodošli dragi gosti i sugrađani, istražite Tomislavgrad s nama!
+        </div>
+        <div class="home-text">
+          Platforma <b class="text-warning">TomislavGuides</b> napravljena je u
+          svrhu prikupljanja informacija o Tomislavgradu i njihove prezentacije
+          s ciljem očuvanja i promocije ljepota i zanimljivosti ovog kraja.
+        </div>
+        <a
+          href="index.html"
+          onclick="toMap()"
+          id="toMap"
+          class="text-center home-text"
+          type="button"
+        >
+          <img class="pr-3" src="/assets/icon/map.svg" alt="map" />ISTRAŽI
+          TOMISLAVGRAD
+        </a>
+      </div>
+      <!--<div id="home-img" class="position-absolute"></div>-->
+    </div>
+  </body>
+</html>

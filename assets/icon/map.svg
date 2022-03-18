@@ -23,11 +23,11 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="true"
      showgrid="false"
-     inkscape:zoom="5.4506148"
-     inkscape:cx="14.035114"
-     inkscape:cy="4.8618369"
+     inkscape:zoom="10.90123"
+     inkscape:cx="6.9258242"
+     inkscape:cy="1.6970563"
      inkscape:window-width="1920"
-     inkscape:window-height="1013"
+     inkscape:window-height="991"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
@@ -43,5 +43,5 @@
   <path
      d="M 24.305556,0 24.083333,0.04167 16.666667,2.91667 8.333333,0 0.5,2.638889 C 0.208333,2.736109 0,2.986111 0,3.305556 v 21 C 0,24.694444 0.305556,25 0.694444,25 L 0.916667,24.95833 8.333333,22.08333 16.666667,25 24.5,22.361111 c 0.291667,-0.09722 0.5,-0.347222 0.5,-0.666667 v -21 C 25,0.305556 24.694444,0 24.305556,0 Z M 9.722222,3.430556 15.277778,5.375 V 21.569444 L 9.722222,19.625 Z m -6.944444,1.375 4.166666,-1.402778 v 16.25 l -4.166666,1.611111 z m 19.444444,15.388888 -4.166666,1.402778 V 5.361111 L 22.222222,3.75 Z"
      id="path4"
-     style="fill:#ffffff;stroke-width:1.38889" />
+     style="fill:#000000;stroke-width:0.889;stroke:#fdc82f;stroke-opacity:1;fill-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
 </svg>
