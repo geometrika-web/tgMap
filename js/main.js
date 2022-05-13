@@ -366,6 +366,11 @@ map.on("pointermove", function (evt) {
     this.getTargetElement().style.cursor = "default";
   }
 });
+
+let mouseWheelZoomDuration = new ol.interaction.MouseWheelZoom({
+  mouseWheelOptions: { interval: 0 },
+});
+map.addInteraction(mouseWheelZoomDuration);
 //function setSource() {
 //  var source = new ol.source.ImageStatic({
 //    url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Crkva_Nikole_Taveli%C4%87a-TG09534.JPG/220px-Crkva_Nikole_Taveli%C4%87a-TG09534.JPG',
@@ -2197,7 +2202,6 @@ selectAssoc.getFeatures().on(["add", "remove"], function (e) {
     }
   }
 });
-
 // Scale image on hover ------------------------------------------
 
 //b = map.on('singleclick', function(evt) {
