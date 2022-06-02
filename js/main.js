@@ -1984,14 +1984,15 @@ function getRouteText(clickedID) {
     zoomToRoute(clickedID);
     console.log(clickedID);
     clickedID_text.style.display = "block";
-    let elementPosition = clickedID_element.getBoundingClientRect().top - 260;
+    let elementPosition =
+      clickedID_element.getBoundingClientRect().bottom - 360;
+    console.log(clickedID);
+    clickedID_text.classList.add("activate-assoc");
     document.getElementById("routesAll").scrollTo({
       top: elementPosition,
       left: 0,
       behavior: "smooth",
     });
-    console.log(clickedID);
-    clickedID_text.classList.add("activate-assoc");
   }
 }
 //    for (var i = 0; i < routesDesc.length; i++) {
@@ -3065,8 +3066,8 @@ function getSourceJSON(clickedID, selected) {
     }
   });
 }
-
 function getAssoc(clickedID) {
+  let assocsAll = document.getElementById("assocsAll");
   let clickedID_element = document.getElementById(clickedID);
   let clickedID_text = document.getElementById(clickedID + "-text");
   let clickedIDtextStyle = document.getElementById(clickedID + "-text").style
@@ -3078,11 +3079,16 @@ function getAssoc(clickedID) {
     }
     zoomToAssoc(clickedID);
     clickedID_text.style.display = "block";
-    clickedID_text.scrollIntoView({
+    let elementPosition = clickedID_element.getBoundingClientRect().top - 165;
+    assocsAll.scrollTo({
+      top: elementPosition,
+      behavior: "smooth",
+    });
+    /* clickedID_text.scrollIntoView({
       behavior: "smooth",
       block: "end",
       inline: "nearest",
-    });
+    }); */
     console.log(clickedID);
     clickedID_element.classList.add("activate-assoc");
     clickedID_text.classList.add("activate-assoc");
