@@ -2130,7 +2130,7 @@ function addRoutePins(pins, stopPinStyle, stopPinName, stopPinColor, tour) {
     geometry: new ol.geom.Point(ol.proj.fromLonLat(pins)),
     name: stopPinName,
     pinStyle: stopPinStyle,
-    popupHtml: `<img src="../assets/img/00home.jpg">${stopPinName}`,
+    popupHtml: `<img src="../assets/img/00home_minmin.jpg">${stopPinName}`,
     color: stopPinColor,
   });
 
