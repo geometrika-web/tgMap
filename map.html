@@ -140,7 +140,7 @@
                 alt=""
               />
               <div class="col-3">
-                <div class="image-center menu-btn" onclick="allFilter()">
+                <div class="image-center menu-btn kategorije-btn" id="all">
                   <img
                     class="d-inline kategorije-hover"
                     src="/assets/icon/kategorije_Sve.svg"
@@ -150,7 +150,7 @@
                 </div>
               </div>
               <div class="col-3">
-                <div class="image-center menu-btn" onclick="kulturaFilter()">
+                <div class="image-center menu-btn kategorije-btn" id="kultura">
                   <img
                     class="d-inline kategorije-hover"
                     src="/assets/icon/kategorije_Kultura.svg"
@@ -160,7 +160,7 @@
                 </div>
               </div>
               <div class="col-3">
-                <div class="image-center menu-btn" onclick="prirodaFilter()">
+                <div class="image-center menu-btn kategorije-btn" id="priroda">
                   <img
                     class="d-inline kategorije-hover"
                     src="/assets/icon/kategorije_Priroda.svg"
@@ -170,7 +170,7 @@
                 </div>
               </div>
               <div class="col-3">
-                <div class="image-center menu-btn" onclick="turizamFilter()">
+                <div class="image-center menu-btn kategorije-btn" id="turizam">
                   <img
                     class="d-inline kategorije-hover"
                     src="/assets/icon/kategorije_Turizam.svg"
@@ -277,14 +277,73 @@
             </div>
           </div>
 
-          <img
+          <!-- <img
             class="illustration"
             class="mt-5"
             src="/assets/illustrations/route.svg"
             alt=""
-          />
+          /> -->
           <!--Tourist Routes-->
-          <div id="routesAll" class="routes-scroll mt-5"></div>
+          <div id="routesAll" class="routes-scroll mt-5">
+            <div
+              id="kategorije"
+              class="container-fluid mt-5-m mb-5-m cursor-pointer position-relative p-0-2-m"
+            >
+              <div class="text-left mb-2 mt-4 text-font">Kategorije</div>
+              <div class="row">
+                <img
+                  id="routes-check"
+                  src="assets/icon/kategorije_Check.svg"
+                  alt=""
+                />
+                <div class="col-3">
+                  <div
+                    class="image-center menu-btn kategorije-btn"
+                    id="routesAll"
+                  >
+                    <img
+                      class="d-inline kategorije-hover"
+                      src="/assets/icon/kategorije_Sve.svg"
+                      alt=""
+                    />
+                    <div class="d-inline d-block mt-2 text-c3">Sve</div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="image-center menu-btn kategorije-btn" id="hike">
+                    <img
+                      class="d-inline kategorije-hover"
+                      src="/assets/icon/routes/hike.svg"
+                      alt=""
+                    />
+                    <div class="d-inline d-block mt-2 text-c3">Pješačke</div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="image-center menu-btn kategorije-btn" id="bike">
+                    <img
+                      class="d-inline kategorije-hover"
+                      src="/assets/icon/routes/bike.svg"
+                      alt=""
+                    />
+                    <div class="d-inline d-block mt-2 text-c3">
+                      Biciklističke
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="image-center menu-btn kategorije-btn" id="speleo">
+                    <img
+                      class="d-inline kategorije-hover"
+                      src="/assets/icon/routes/speleo.svg"
+                      alt=""
+                    />
+                    <div class="d-inline d-block mt-2 text-c3">Speleološke</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <!--Vikend destinacije-->
           <div id="destinationsAll" class="routes-scroll mt-5"></div>
         </div>

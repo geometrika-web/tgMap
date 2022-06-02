@@ -349,6 +349,7 @@ var map = new ol.Map({
     extent: [xE, yS, xW, yN],
   }),
 });
+
 //Pointer style
 map.on("pointerdrag", function (evt) {
   this.getTargetElement().style.cursor = "move";
@@ -1059,7 +1060,15 @@ function onLoadChanged() {
   tourist.changed();
   assocs.changed();
 }
+
 // Load list from GeoJSON file
+let kulturaElement;
+let prirodaElement;
+let turizamElement;
+let hikeElement;
+let bikeElement;
+let speleoElement;
+
 coord = [];
 landmarksZoom = [];
 window.onload = function () {
@@ -1230,32 +1239,65 @@ window.onload = function () {
   //$.getJSON("assets/tours/routes.geojson", function(data) {
   features = routesData.features;
   for (i in features) {
-    var routesAll = document.createElement("button");
-    routesAll.id = features[i].properties.id;
-    routesAll.classList.add(
+    var route = document.createElement("button");
+    route.id = features[i].properties.id;
+    route.classList.add(
       "list-group-item",
       "list-group-item-action",
-      "no-outline"
+      "no-outline",
+      "mt-4",
+      "pl-5",
+      "landmarkList-height",
+      "scale-animation-right",
+      "display-flex",
+      "text-font",
+      features[i].properties.routeTypeId
     );
-    routesAll.innerText = features[i].properties.name;
-    routesAll.onclick = function () {
-      getSourceJSON(this.id);
+    route.classList.add(features[i].properties.id);
+    // route.classList.add(features[i].properties.type);
+    // route.innerText = features[i].properties.name;
+    route.setAttribute("color", features[i].properties.color);
+    route.onclick = function () {
+      getRouteText(this.id); //getSourceJSON
     };
     var parent = document.getElementById("routesAll");
-    parent.appendChild(routesAll);
+    parent.appendChild(route);
+
+    var routeImg = document.createElement("img");
+    routeImg.src = features[i].properties.img;
+    routeImg.classList.add("landmarkList-img", "ml-4", "center-y");
+    route.appendChild(routeImg);
+    console.log(features[i].properties.img);
+
+    var routeHeader = document.createElement("div");
+    routeHeader.classList.add("pt-2", "pl-4");
+    route.appendChild(routeHeader);
+
+    var routePlace = document.createElement("div");
+    var routeName = document.createElement("div");
+    var routeType = document.createElement("img");
+    routePlace.innerText = features[i].properties.place;
+    routeName.innerText = features[i].properties.name;
+    routeType.src = features[i].properties.type;
+    routePlace.classList.add("menu-btn", "text-c3");
+    routeName.classList.add("text-font");
+    routeType.classList.add("kategorije-thumb");
+    routeHeader.appendChild(routePlace);
+    routeHeader.appendChild(routeName);
+    routeHeader.appendChild(routeType);
 
     var routeText = document.createElement("small");
     routeText.id = features[i].properties.id + "-text";
     routeText.classList.add("p-3", "ml-4");
     routeText.style.display = "none";
-    toursDesc.push(routeText);
-    document.getElementById("routesAll").appendChild(routeText);
+    routesDesc.push(routeText);
+    parent.appendChild(routeText);
 
     var routeDuration = document.createElement("div");
     routeDuration.classList.add("text-right", "text-muted", "mr-4");
     routeDuration.innerText = features[i].properties.duration;
     var routeType = document.createElement("img");
-    routeType.classList.add("ml-2");
+    routeType.classList.add("ml-2", "img-height-50px");
     routeType.src = features[i].properties.type;
     routeDuration.appendChild(routeType);
     routeText.appendChild(routeDuration);
@@ -1265,15 +1307,15 @@ window.onload = function () {
     for (j in stops) {
       var stopName = document.createElement("div");
       stopName.innerText = stops[j];
-      stopName.classList.add("h6", "mt-2", "pl-4");
+      stopName.classList.add("pl-5", "color-gray");
       routeText.appendChild(stopName);
       if (dists[j]) {
         var dots = document.createElement("img");
         dots.src = "/assets/icon/three-dots-vertical.svg";
-        dots.classList.add("ml-4");
+        dots.classList.add("ml-5");
         var dist = document.createElement("span");
         dist.innerText = dists[j];
-        dist.classList.add("ml-4");
+        dist.classList.add("ml-5", "color-gray");
         routeText.appendChild(dots);
         routeText.appendChild(dist);
       }
@@ -1476,6 +1518,12 @@ window.onload = function () {
     .appendTo("landmarksAll");
   //document.getElementById('preloader').style.display = 'none'
   //vjerskiObjekti.changed()
+  kulturaElement = document.querySelectorAll(".kultura");
+  prirodaElement = document.querySelectorAll(".priroda");
+  turizamElement = document.querySelectorAll(".turizam");
+  hikeElement = document.querySelectorAll(".hike");
+  bikeElement = document.querySelectorAll(".bike");
+  speleoElement = document.querySelectorAll(".speleo");
 };
 
 //Onload End
@@ -1496,124 +1544,236 @@ function toHome() {
   sessionStorage.home = 2;
 }
 
-//Kontrola popisa znamenitosti
-const kultura = [];
-const priroda = [];
-const turizam = [];
-console.log(kultura);
-allFilter = function () {
-  if (kultura.length == 0) {
-    var kulturaElement = document.querySelectorAll(".kultura");
-    var prirodaElement = document.querySelectorAll(".priroda");
-    var turizamElement = document.querySelectorAll(".turizam");
-    console.log(kulturaElement);
-  }
-  if (isMobile) {
-    $("#kategorije-check").css("left", "18%");
-  } else {
-    $("#kategorije-check").css("left", "17.5%");
-  }
-  for (let item1 of prirodaElement) {
-    item1.style.display = "flex";
-  }
-  for (let item2 of turizamElement) {
-    item2.style.display = "flex";
-  }
-  for (let item3 of kulturaElement) {
-    item3.style.display = "flex";
-  }
-  vector.setVisible(true);
-  vectorPin.setVisible(true);
-  nature.setVisible(true);
-  naturePin.setVisible(true);
-  tourist.setVisible(true);
-  touristPin.setVisible(true);
+//Kontrola popisa znamenitosti------------------------------
+
+const kategorijeBtns = document.querySelectorAll(".kategorije-btn");
+const kulturaBtn = document.getElementById("kultura");
+const prirodaBtn = document.getElementById("priroda");
+const turizamBtn = document.getElementById("turizam");
+const kategorijeCheck = document.getElementById("kategorije-check");
+const routesCheck = document.getElementById("routes-check");
+const show = ["flex", true];
+const hide = ["none", false];
+let id;
+
+const kategorijeStyleDisplay = function (
+  kulturaStyleDisplay,
+  prirodaStyleDisplay,
+  turizamStyleDisplay
+) {
+  kulturaElement.forEach(
+    (item) => (item.style.display = kulturaStyleDisplay[0])
+  );
+  prirodaElement.forEach(
+    (item) => (item.style.display = prirodaStyleDisplay[0])
+  );
+  turizamElement.forEach(
+    (item) => (item.style.display = turizamStyleDisplay[0])
+  );
+  vector.setVisible(kulturaStyleDisplay[1]);
+  nature.setVisible(prirodaStyleDisplay[1]);
+  tourist.setVisible(turizamStyleDisplay[1]);
 };
-kulturaFilter = function () {
-  if (kultura.length == 0) {
-    var kulturaElement = document.querySelectorAll(".kultura");
-    var prirodaElement = document.querySelectorAll(".priroda");
-    var turizamElement = document.querySelectorAll(".turizam");
-    console.log(kulturaElement);
-  }
-  if (isMobile) {
-    $("#kategorije-check").css("left", "43%");
-  } else {
-    $("#kategorije-check").css("left", "41.5%");
-  }
-  for (let item1 of prirodaElement) {
-    item1.style.display = "none";
-  }
-  for (let item2 of turizamElement) {
-    item2.style.display = "none";
-  }
-  for (let item3 of kulturaElement) {
-    item3.style.display = "flex";
-  }
-  vector.setVisible(true);
-  vectorPin.setVisible(true);
-  nature.setVisible(false);
-  naturePin.setVisible(false);
-  tourist.setVisible(false);
-  touristPin.setVisible(false);
-};
-prirodaFilter = function () {
-  if (kultura.length == 0) {
-    var kulturaElement = document.querySelectorAll(".kultura");
-    var prirodaElement = document.querySelectorAll(".priroda");
-    var turizamElement = document.querySelectorAll(".turizam");
-    console.log(kulturaElement);
-  }
-  if (isMobile) {
-    $("#kategorije-check").css("left", "67%");
-  } else {
-    $("#kategorije-check").css("left", "65%");
-  }
-  for (let item1 of prirodaElement) {
-    item1.style.display = "flex";
-  }
-  for (let item2 of turizamElement) {
-    item2.style.display = "none";
-  }
-  for (let item3 of kulturaElement) {
-    item3.style.display = "none";
-  }
-  vector.setVisible(false);
-  vectorPin.setVisible(false);
-  nature.setVisible(true);
-  naturePin.setVisible(true);
-  tourist.setVisible(false);
-  touristPin.setVisible(false);
-};
-turizamFilter = function () {
-  if (kultura.length == 0) {
-    var kulturaElement = document.querySelectorAll(".kultura");
-    var prirodaElement = document.querySelectorAll(".priroda");
-    var turizamElement = document.querySelectorAll(".turizam");
-  }
-  if (isMobile) {
-    $("#kategorije-check").css("left", "92.5%");
-  } else {
-    $("#kategorije-check").css("left", "88.5%");
-  }
-  for (let item1 of prirodaElement) {
-    item1.style.display = "none";
-  }
-  for (let item2 of turizamElement) {
-    item2.style.display = "flex";
-  }
-  for (let item3 of kulturaElement) {
-    item3.style.display = "none";
-  }
-  vector.setVisible(false);
-  vectorPin.setVisible(false);
-  nature.setVisible(false);
-  naturePin.setVisible(false);
-  tourist.setVisible(true);
-  touristPin.setVisible(true);
+const routesStyleDisplay = function (
+  hikeStyleDisplay,
+  bikeStyleDisplay,
+  speleoStyleDisplay
+) {
+  hikeElement.forEach((item) => console.log(item));
+  hikeElement.forEach((item) => (item.style.display = hikeStyleDisplay[0]));
+  bikeElement.forEach((item) => (item.style.display = bikeStyleDisplay[0]));
+  speleoElement.forEach((item) => (item.style.display = speleoStyleDisplay[0]));
 };
 
-var toursDesc = [],
+const kategorijeCheckOffset = function (mobileOffset, offset, type) {
+  if (isMobile) {
+    if (type == "meet") {
+      kategorijeCheck.style.left = mobileOffset;
+    } else {
+      routesCheck.style.left = mobileOffset;
+    }
+  } else {
+    if (type == "meet") {
+      kategorijeCheck.style.left = offset;
+    } else {
+      routesCheck.style.left = offset;
+    }
+  }
+};
+const allFilter = function () {
+  kategorijeStyleDisplay(show, show, show);
+  kategorijeCheckOffset("17.5%", "18%", "meet");
+};
+const kulturaFilter = function () {
+  kategorijeStyleDisplay(show, hide, hide);
+  kategorijeCheckOffset("43%", "41.5%", "meet");
+};
+const prirodaFilter = function () {
+  kategorijeStyleDisplay(hide, show, hide);
+  kategorijeCheckOffset("67%", "65%", "meet");
+};
+const turizamFilter = function () {
+  kategorijeStyleDisplay(hide, hide, show);
+  kategorijeCheckOffset("92.5%", "88.5%", "meet");
+};
+const routesAllFilter = function () {
+  routesStyleDisplay(show, show, show);
+  kategorijeCheckOffset("17.5%", "18%", "routes");
+};
+const hikeFilter = function () {
+  routesStyleDisplay(show, hide, hide);
+  kategorijeCheckOffset("43%", "41.5%", "routes");
+};
+const bikeFilter = function () {
+  routesStyleDisplay(hide, show, hide);
+  kategorijeCheckOffset("67%", "65%", "routes");
+};
+const speleoFilter = function () {
+  routesStyleDisplay(hide, hide, show);
+  kategorijeCheckOffset("92.5%", "88.5%", "routes");
+};
+
+const filter = function (e) {
+  e.preventDefault();
+  if (!e.target.id) {
+    id = e.target.parentElement.id;
+  } else {
+    id = e.target.id;
+  }
+  if (id == "all") {
+    allFilter();
+  }
+  if (id == "kultura") {
+    kulturaFilter();
+  }
+  if (id == "priroda") {
+    prirodaFilter();
+  }
+  if (id == "turizam") {
+    turizamFilter();
+  }
+  if (id == "routesAll") {
+    routesAllFilter();
+  }
+  if (id == "hike") {
+    hikeFilter();
+  }
+  if (id == "bike") {
+    bikeFilter();
+  }
+  if (id == "speleo") {
+    speleoFilter();
+  }
+};
+kategorijeBtns.forEach((btn) => btn.addEventListener("click", filter));
+// allFilter = function () {
+//   if (isMobile) {
+//     $("#kategorije-check").css("left", "18%");
+//   } else {
+//     $("#kategorije-check").css("left", "17.5%");
+//   }
+//   for (let item1 of prirodaElement) {
+//     item1.style.display = "flex";
+//   }
+//   for (let item2 of turizamElement) {
+//     item2.style.display = "flex";
+//   }
+//   for (let item3 of kulturaElement) {
+//     item3.style.display = "flex";
+//   }
+//   vector.setVisible(true);
+//   vectorPin.setVisible(true);
+//   nature.setVisible(true);
+//   naturePin.setVisible(true);
+//   tourist.setVisible(true);
+//   touristPin.setVisible(true);
+// };
+// kulturaFilter = function () {
+//   // if (kultura.length == 0) {
+//   //   var kulturaElement = document.querySelectorAll(".kultura");
+//   //   var prirodaElement = document.querySelectorAll(".priroda");
+//   //   var turizamElement = document.querySelectorAll(".turizam");
+//   //   console.log(kulturaElement);
+//   // }
+//   if (isMobile) {
+//     $("#kategorije-check").css("left", "43%");
+//   } else {
+//     $("#kategorije-check").css("left", "41.5%");
+//   }
+//   for (let item1 of prirodaElement) {
+//     item1.style.display = "none";
+//   }
+//   for (let item2 of turizamElement) {
+//     item2.style.display = "none";
+//   }
+//   for (let item3 of kulturaElement) {
+//     item3.style.display = "flex";
+//   }
+//   vector.setVisible(true);
+//   vectorPin.setVisible(true);
+//   nature.setVisible(false);
+//   naturePin.setVisible(false);
+//   tourist.setVisible(false);
+//   touristPin.setVisible(false);
+// };
+// prirodaFilter = function () {
+//   // if (kultura.length == 0) {
+//   //   var kulturaElement = document.querySelectorAll(".kultura");
+//   //   var prirodaElement = document.querySelectorAll(".priroda");
+//   //   var turizamElement = document.querySelectorAll(".turizam");
+//   //   console.log(kulturaElement);
+//   // }
+//   if (isMobile) {
+//     $("#kategorije-check").css("left", "67%");
+//   } else {
+//     $("#kategorije-check").css("left", "65%");
+//   }
+//   for (let item1 of prirodaElement) {
+//     item1.style.display = "flex";
+//   }
+//   for (let item2 of turizamElement) {
+//     item2.style.display = "none";
+//   }
+//   for (let item3 of kulturaElement) {
+//     item3.style.display = "none";
+//   }
+//   vector.setVisible(false);
+//   vectorPin.setVisible(false);
+//   nature.setVisible(true);
+//   naturePin.setVisible(true);
+//   tourist.setVisible(false);
+//   touristPin.setVisible(false);
+// };
+// turizamFilter = function () {
+//   // if (kultura.length == 0) {
+//   //   var kulturaElement = document.querySelectorAll(".kultura");
+//   //   var prirodaElement = document.querySelectorAll(".priroda");
+//   //   var turizamElement = document.querySelectorAll(".turizam");
+//   // }
+//   if (isMobile) {
+//     $("#kategorije-check").css("left", "92.5%");
+//   } else {
+//     $("#kategorije-check").css("left", "88.5%");
+//   }
+//   for (let item1 of prirodaElement) {
+//     item1.style.display = "none";
+//   }
+//   for (let item2 of turizamElement) {
+//     item2.style.display = "flex";
+//   }
+//   for (let item3 of kulturaElement) {
+//     item3.style.display = "none";
+//   }
+//   vector.setVisible(false);
+//   vectorPin.setVisible(false);
+//   nature.setVisible(false);
+//   naturePin.setVisible(false);
+//   tourist.setVisible(true);
+//   touristPin.setVisible(true);
+// };
+//Kontrola popisa znamenitosti------------------------
+
+var routesDesc = [],
   weekendDestinationsDesc = [],
   assocDesc = [],
   assocCoord = [];
@@ -1798,6 +1958,218 @@ markers.setZIndex(100000000000000000000000000000000000);
 //vectorSource.refresh()
 
 // Tours
+for (var i = 0; i < routesDesc.length; i++) {
+  routesDesc[i].style.display = "none";
+}
+var tourSource;
+function getRouteText(clickedID) {
+  let clickedID_element = document.getElementById(clickedID);
+  let clickedID_text = document.getElementById(clickedID + "-text");
+  let clickedIDtextStyle = clickedID_text.style.display;
+  // if (clickedIDtextStyle == "none") {
+  if (clickedIDtextStyle == "block") {
+    tourSource.clear();
+    tourStopsSource.clear();
+    clickedID_text.style.display = "none";
+    clickedID_text.classList.remove("activate-assoc");
+  } else {
+    for (var i = 0; i < routesDesc.length; i++) {
+      if (routesDesc[i].style.display == "block") {
+        tourSource.clear();
+        routesDesc[i].style.display = "none";
+        routesDesc[i].classList.remove("activate-assoc");
+      }
+    }
+    renderRoute(clickedID, clickedID_element);
+    zoomToRoute(clickedID);
+    console.log(clickedID);
+    clickedID_text.style.display = "block";
+    let elementPosition = clickedID_element.getBoundingClientRect().top - 260;
+    document.getElementById("routesAll").scrollTo({
+      top: elementPosition,
+      left: 0,
+      behavior: "smooth",
+    });
+    console.log(clickedID);
+    clickedID_text.classList.add("activate-assoc");
+  }
+}
+//    for (var i = 0; i < routesDesc.length; i++) {
+//      if ((routesDesc[i].style.display = "block")) {
+//        tourSource.clear();
+//        routesDesc[i].style.display = "none";
+//        routesDesc[i].classList.remove("activate-assoc");
+//      }
+//    }
+//    tourSource.clear();
+//    clickedID_text.style.display = "none";
+//    clickedID_text.classList.remove("activate-assoc");
+//  }
+//
+//  //assocSource.refresh()
+//}
+
+//Popup controls-------------------------------------
+// var tourStopsSource = new ol.source.Vector({
+//   features: new ol.format.GeoJSON().readFeatures(routesData, {
+//     featureProjection: "EPSG:3857",
+//   }),
+// });
+// var vector = new ol.layer.Vector({
+//   minZoom: 10.5,
+//   name: "landmarks",
+//   source: vectorSource,
+//   declutter: true,
+//   style: function (feature, resolution) {
+//     return getFeatureStyle(feature, resolution, false);
+//   },
+// });
+
+// tourPath layer and tourStops layer and source-------------
+let tourPath = new ol.layer.Vector({
+  //minZoom: 13,
+  name: "tourPath",
+  opacity: 1,
+  zIndex: 100,
+  declutter: true,
+  // y ordering
+  //renderOrder: ol.ordering.yOrdering(),
+});
+map.addLayer(tourPath);
+tourStopsSource = new ol.source.Vector({});
+var tourStops = new ol.layer.Vector({
+  //minZoom: 13,
+  source: tourStopsSource,
+  name: "tourStops",
+  opacity: 1,
+  zIndex: 200,
+  declutter: true,
+  style: function (feature, resolution) {
+    return getStopsStyle(feature, resolution, false);
+  },
+});
+map.addLayer(tourStops);
+//---------------------------------tourPath layer and tourStops layer and source
+
+function getStopsStyle(feature, resolution, sel) {
+  if (!style && !text) {
+    var style = new ol.style.Style({
+      image: new ol.style.Icon({
+        src: feature.get("pinStyle"),
+        anchor: [0.5, 1],
+        scale: sel ? 1.2 : 1,
+      }),
+    });
+    var text = new ol.style.Style({
+      text: new ol.style.Text({
+        text: feature.get("name"),
+        font: "10px Open Sans,sans-serif",
+        overflow: true,
+        fill: new ol.style.Fill({
+          color: "#000",
+        }),
+        stroke: new ol.style.Stroke({
+          color: "#fff",
+          width: 2.8,
+        }),
+        offsetY: 10,
+      }),
+    });
+  }
+  return [style, text];
+}
+
+let stopSelect = new ol.interaction.Select({
+  layers: [tourStops],
+  condition: ol.events.condition.click,
+  style: function (feature, resolution) {
+    return getStopsStyle(feature, resolution, true);
+  },
+});
+map.addInteraction(stopSelect);
+
+let stopPopup = new ol.Overlay.Popup({
+  popupClass: "ol-popup popup-border",
+  closeBox: true,
+  onclose: () => stopSelect.getFeatures().clear(),
+  positioning: "bottom-center",
+  autoPan: true,
+  autoPanAnimation: { duration: 500 },
+});
+map.addOverlay(stopPopup);
+
+stopSelect.getFeatures().on(["add", "remove"], function (e) {
+  console.log(e);
+  feature = e.element;
+  let content = feature.get("popupHtml");
+  let color = feature.get("color");
+  document.querySelector(
+    ".popup-border"
+  ).style.borderLeft = `5px solid ${color}`;
+  if (e.type == "add") {
+    stopPopup.show(feature.getGeometry().getCoordinates(), content);
+  }
+  if (e.type == "remove") {
+    stopPopup.hide();
+  }
+});
+// map.addInteraction(select);
+
+function addRoutePins(pins, stopPinStyle, stopPinName, stopPinColor, tour) {
+  /* var stopStyle = new ol.style.Style({
+    image: new ol.style.Icon({
+      src: stopPinStyle,
+      anchor: [0.5, 1],
+    }),
+  }); */
+
+  // style = [stopStyle, stopLabelStyle];
+
+  // stopLabelStyle.getText().setText(stopPinName);
+  var stopFeature = new ol.Feature({
+    geometry: new ol.geom.Point(ol.proj.fromLonLat(pins)),
+    name: stopPinName,
+    pinStyle: stopPinStyle,
+    popupHtml: `<img src="../assets/img/00home.jpg">${stopPinName}`,
+    color: stopPinColor,
+  });
+
+  /* stopFeature.setStyle(function () {
+    stopLabelStyle.getText().setText(stopPinName);
+    return style;
+  }); */
+
+  tourStopsSource.addFeature(stopFeature);
+}
+function renderRoute(tour, element) {
+  function tourStyle() {
+    return new ol.style.Style({
+      stroke: new ol.style.Stroke({
+        color: element.getAttribute("color"),
+        width: 5,
+      }),
+    });
+  }
+  tourSource = new ol.source.Vector({
+    url: `../assets/tours/${tour}.geojson`,
+    projection: "EPSG:3857",
+    format: new ol.format.GeoJSON(),
+  });
+
+  tourPath.setSource(tourSource);
+  tourPath.setStyle(tourStyle);
+
+  let pins = routesData.features[tour].properties.pins;
+  let stopPinStyle = routesData.features[tour].properties.pinStyle;
+  console.log(stopPinStyle);
+  let stopPinName = routesData.features[tour].properties.stops;
+  console.log(stopPinName);
+  let stopPinColor = routesData.features[tour].properties.color;
+  for (let i = 0; i < pins.length; i++) {
+    addRoutePins(pins[i], stopPinStyle, stopPinName[i], stopPinColor, tour);
+  }
+  // map.addLayer(stopPin);f
+}
 
 // tour1
 //var tour1Source = new ol.source.Vector({
@@ -1935,8 +2307,12 @@ function meetTg() {
     vector.setZIndex(20);
     nature.setZIndex(20);
     tourist.setZIndex(20);
-    for (var i = 0; i < toursDesc.length; i++) {
-      toursDesc[i].style.display = "none";
+    for (var i = 0; i < routesDesc.length; i++) {
+      if (routesDesc[i].style.display == "block") {
+        tourSource.clear();
+        routesDesc[i].style.display = "none";
+        routesDesc[i].classList.remove("activate-assoc");
+      }
     }
     for (var i = 0; i < weekendDestinationsDesc.length; i++) {
       weekendDestinationsDesc[i].style.display = "none";
@@ -2021,8 +2397,12 @@ function assoc() {
   } else {
     deselect();
     meet = 3;
-    for (var i = 0; i < toursDesc.length; i++) {
-      toursDesc[i].style.display = "none";
+    for (var i = 0; i < routesDesc.length; i++) {
+      if (routesDesc[i].style.display == "block") {
+        tourSource.clear();
+        routesDesc[i].style.display = "none";
+        routesDesc[i].classList.remove("activate-assoc");
+      }
     }
     for (var i = 0; i < weekendDestinationsDesc.length; i++) {
       weekendDestinationsDesc[i].style.display = "none";
@@ -2062,8 +2442,12 @@ function business() {
       closeAssocDesc();
     }
     if (meet == 2) {
-      for (var i = 0; i < toursDesc.length; i++) {
-        toursDesc[i].style.display = "none";
+      for (var i = 0; i < routesDesc.length; i++) {
+        if (routesDesc[i].style.display == "block") {
+          tourSource.clear();
+          routesDesc[i].style.display = "none";
+          routesDesc[i].classList.remove("activate-assoc");
+        }
       }
       for (var i = 0; i < weekendDestinationsDesc.length; i++) {
         weekendDestinationsDesc[i].style.display = "none";
@@ -2779,15 +3163,12 @@ map.getLayers().forEach(function (layer) {
     }
   }
 });
-//var toursDesc = ["tour2-text", "tour1-text"]
+//var routesDesc = ["tour2-text", "tour1-text"]
 //
 ////for(var i = 1; i <= tours.length; i++){
 ////  var id = document.getElementById("tour"+i+"-text")
-////  toursDesc.push(id)
+////  routesDesc.push(id)
 ////}
-for (var i = 0; i < toursDesc.length; i++) {
-  toursDesc[i].style.display = "none";
-}
 
 //var weekendDestinationsDesc = []
 //for(var i = 1; i <= weekendDestinationsList.length; i++){
@@ -2799,23 +3180,15 @@ for (var i = 0; i < weekendDestinationsDesc.length; i++) {
 }
 
 function zoomToRoute(id) {
-  for (var i = 0; i < toursDesc.length; i++) {
-    toursDesc[i].style.display = "none";
-  }
-  if (id == "tour1") {
-    view.animate({
-      center: [1917682, 5422196],
-      duration: 3000,
-      zoom: 16.5,
-    });
-  }
-  if (id == "tour2") {
-    view.animate({
-      center: [1931475, 5409191],
-      duration: 3000,
-      zoom: 11.5,
-    });
-  }
+  // for (var i = 0; i < routesDesc.length; i++) {
+  //   routesDesc[i].style.display = "none";
+  // }
+  console.log(id);
+  view.animate({
+    center: routesData.features[id].geometry.coordinates,
+    duration: 3000,
+    zoom: routesData.features[id].geometry.zoom,
+  });
 }
 
 //Destinations zoom to

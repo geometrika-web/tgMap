@@ -1,0 +1,56 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.233632165733233,
+	 43.62501966943366
+    ]
+   },
+   "properties": {
+    "name": "Vjetroelektrana Mrkodol",
+    "about": "Samostan u Tomislavgradu, je franjevački samostan u Mostarsko-duvanjskoj biskupiji, u Tomislavgradu, Bosna i Hercegovina. Proglašen je za nacionalni spomenik Bosne i Hercegovine na sjednici održanoj u Sarajevu od 11. oktobra 2017. godine. Odluku donijela je Komisija u sastavu: Amir Pašić, Goran Milojević (predsjedvajući), Radoje Vidović. Nacionalni spomenik se sastoji od: crkve sv. Nikole Tavelića i zapadnog krila franjevačkog samostana.",
+    "img": "/assets/vjetroparkMrkodol.jpg",
+	"img2": "/assets/vjetroparkMrkodol2.jpg",
+	"id": "landmarks"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.298278,
+	 43.586705
+    ]
+   },
+   "properties": {
+    "name": "Mlinica u Mesihovini",
+    "about": "Samostan u Tomislavgradu, je franjevački samostan u Mostarsko-duvanjskoj biskupiji, u Tomislavgradu, Bosna i Hercegovina. Proglašen je za nacionalni spomenik Bosne i Hercegovine na sjednici održanoj u Sarajevu od 11. oktobra 2017. godine. Odluku donijela je Komisija u sastavu: Amir Pašić, Goran Milojević (predsjedvajući), Radoje Vidović. Nacionalni spomenik se sastoji od: crkve sv. Nikole Tavelića i zapadnog krila franjevačkog samostana.",
+    "img": "/assets/mlinicaMesihovina.jpg",
+	"img2": "/assets/mlinicaMesihovina.jpg",
+	"id": "landmarks"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.532945,
+	 43.653143
+    ]
+   },
+   "properties": {
+    "name": "Hajdučke vrleti",
+    "about": "Samostan u Tomislavgradu, je franjevački samostan u Mostarsko-duvanjskoj biskupiji, u Tomislavgradu, Bosna i Hercegovina. Proglašen je za nacionalni spomenik Bosne i Hercegovine na sjednici održanoj u Sarajevu od 11. oktobra 2017. godine. Odluku donijela je Komisija u sastavu: Amir Pašić, Goran Milojević (predsjedvajući), Radoje Vidović. Nacionalni spomenik se sastoji od: crkve sv. Nikole Tavelića i zapadnog krila franjevačkog samostana.",
+    "img": "/assets/hajduckeVrleti.jpg",
+	"img2": "/assets/hajduckeVrleti.jpg",
+	"id": "landmarks"
+   }
+  }
+ ]
+}

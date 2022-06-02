@@ -1,56 +1,8 @@
 {
- "type": "FeatureCollection",
- "features": [
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     17.233632165733233,
-	 43.62501966943366
-    ]
-   },
-   "properties": {
-    "name": "Vjetroelektrana Mrkodol",
-    "about": "Samostan u Tomislavgradu, je franjevački samostan u Mostarsko-duvanjskoj biskupiji, u Tomislavgradu, Bosna i Hercegovina. Proglašen je za nacionalni spomenik Bosne i Hercegovine na sjednici održanoj u Sarajevu od 11. oktobra 2017. godine. Odluku donijela je Komisija u sastavu: Amir Pašić, Goran Milojević (predsjedvajući), Radoje Vidović. Nacionalni spomenik se sastoji od: crkve sv. Nikole Tavelića i zapadnog krila franjevačkog samostana.",
-    "img": "/assets/vjetroparkMrkodol.jpg",
-	"img2": "/assets/vjetroparkMrkodol2.jpg",
-	"id": "landmarks"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     17.298278,
-	 43.586705
-    ]
-   },
-   "properties": {
-    "name": "Mlinica u Mesihovini",
-    "about": "Samostan u Tomislavgradu, je franjevački samostan u Mostarsko-duvanjskoj biskupiji, u Tomislavgradu, Bosna i Hercegovina. Proglašen je za nacionalni spomenik Bosne i Hercegovine na sjednici održanoj u Sarajevu od 11. oktobra 2017. godine. Odluku donijela je Komisija u sastavu: Amir Pašić, Goran Milojević (predsjedvajući), Radoje Vidović. Nacionalni spomenik se sastoji od: crkve sv. Nikole Tavelića i zapadnog krila franjevačkog samostana.",
-    "img": "/assets/mlinicaMesihovina.jpg",
-	"img2": "/assets/mlinicaMesihovina.jpg",
-	"id": "landmarks"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     17.532945,
-	 43.653143
-    ]
-   },
-   "properties": {
-    "name": "Hajdučke vrleti",
-    "about": "Samostan u Tomislavgradu, je franjevački samostan u Mostarsko-duvanjskoj biskupiji, u Tomislavgradu, Bosna i Hercegovina. Proglašen je za nacionalni spomenik Bosne i Hercegovine na sjednici održanoj u Sarajevu od 11. oktobra 2017. godine. Odluku donijela je Komisija u sastavu: Amir Pašić, Goran Milojević (predsjedvajući), Radoje Vidović. Nacionalni spomenik se sastoji od: crkve sv. Nikole Tavelića i zapadnog krila franjevačkog samostana.",
-    "img": "/assets/hajduckeVrleti.jpg",
-	"img2": "/assets/hajduckeVrleti.jpg",
-	"id": "landmarks"
-   }
-  }
- ]
+"type": "FeatureCollection",
+"name": "tour3",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "Untitled Polygon", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": -1, "drawOrder": null, "icon": null }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 17.35991727244329, 43.66738171406989 ], [ 17.362121555869599, 43.670904833586349 ], [ 17.363215821984479, 43.672530334210371 ], [ 17.365090844983751, 43.673466697402212 ], [ 17.369473468870691, 43.675153392572319 ], [ 17.372902662961241, 43.675181755902393 ], [ 17.376247155724371, 43.675775510626721 ], [ 17.386353573956161, 43.674690551710079 ], [ 17.394052529096619, 43.673454017281003 ], [ 17.40430837964141, 43.670256755855718 ], [ 17.398803881729009, 43.686126661228137 ], [ 17.40348977603001, 43.702562518366349 ], [ 17.401688977408948, 43.708194171983664 ], [ 17.401349437103761, 43.709303181935788 ], [ 17.401222836825958, 43.71103130070005 ], [ 17.400915709581579, 43.711892914765642 ], [ 17.39959425214283, 43.712306652801132 ], [ 17.397876000652719, 43.71196970601769 ], [ 17.39534328799596, 43.711367148769902 ], [ 17.393583352909939, 43.711045136030783 ], [ 17.393022825440291, 43.710037439610112 ], [ 17.392796493252181, 43.708711877689232 ], [ 17.39151246713265, 43.707710737946321 ], [ 17.38824274447736, 43.706274073786808 ], [ 17.385916464431691, 43.70512213319823 ], [ 17.382421488093009, 43.704741265880962 ], [ 17.381784589535759, 43.704182269570587 ], [ 17.381053888372541, 43.703193616423398 ], [ 17.380500275572238, 43.702274725867397 ], [ 17.379116806507831, 43.700550044919503 ], [ 17.378551435091769, 43.699848125272823 ], [ 17.377608632594949, 43.698561747161442 ], [ 17.37617823064507, 43.697161839441989 ], [ 17.374126057875088, 43.695837730940177 ], [ 17.371408228255511, 43.692988280834193 ], [ 17.37057950172505, 43.691563740741479 ], [ 17.37013938059199, 43.691605907875953 ], [ 17.36933038209018, 43.691727319042158 ], [ 17.368417785172628, 43.691874041820881 ], [ 17.36664279174213, 43.69225831717624 ], [ 17.366163930109341, 43.692142913313297 ], [ 17.36419284240095, 43.69004347243213 ], [ 17.359855570491991, 43.689108230688333 ], [ 17.357799421818878, 43.688458574290763 ], [ 17.353103197532992, 43.686906183714953 ], [ 17.351103467398929, 43.687051541236663 ], [ 17.346629072612849, 43.687464171756687 ], [ 17.345412801851001, 43.687440989038343 ], [ 17.34419653108916, 43.687417806319999 ], [ 17.339485430039449, 43.687575262457692 ], [ 17.337427479692028, 43.687060843034843 ], [ 17.33985971442381, 43.681459269814617 ], [ 17.34266165659535, 43.68169018921536 ], [ 17.34607964344211, 43.676714308376937 ], [ 17.355935115387009, 43.665795926276161 ], [ 17.35991727244329, 43.66738171406989 ] ] ] } }
+]
 }

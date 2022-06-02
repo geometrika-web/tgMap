@@ -193,7 +193,7 @@ body {
   color: #fdc82f;
 }
 #google-maps a {
-  color: #7a797f;
+  color: #4d5153;
   text-decoration: none;
   display: block;
 }
@@ -210,6 +210,9 @@ body {
   width: 40px;
   cursor: pointer;
   z-index: 10;
+}
+.color-gray {
+  color: #6a6f71;
 }
 @media (max-width: 575.99px) {
   .landmark-close-btn {
@@ -657,9 +660,9 @@ body {
   }
 }
 
-#routes {
+/* #routes {
   display: none;
-}
+} */
 .illustration {
   width: 100%;
   height: auto;
@@ -1136,7 +1139,8 @@ body {
 #kategorije {
   text-align: center;
 }
-#kategorije-check {
+#kategorije-check,
+#routes-check {
   position: absolute;
   left: 18%;
   top: 35px;
@@ -1160,6 +1164,9 @@ body {
 }
 .height-50 {
   width: 30%;
+}
+.img-height-50px {
+  height: 50px;
 }
 .display-flex {
   display: flex;
@@ -1188,4 +1195,32 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #ffd071;
   width: 10px;
+}
+/* Popup style */
+.ol-popup {
+  top: -50px;
+  max-width: 300px;
+  min-width: 200px;
+  min-height: 1em;
+  background-color: #fff;
+  padding: 0.8rem 1rem 0.8rem 0.8rem;
+}
+/* Image on popup */
+.ol-popup img {
+  float: left;
+  padding: 0 0.5rem 0 0;
+  max-width: 100px;
+  max-height: 100px;
+}
+.closeBox {
+  float: right;
+  background-color: #fff;
+  border: 0;
+  margin: 0px 0px 0 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 10;
+  background-image: url("../assets/icon/close.svg");
+  background-position: center;
 }
