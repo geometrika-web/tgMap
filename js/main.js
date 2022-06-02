@@ -1976,6 +1976,7 @@ function getRouteText(clickedID) {
     for (var i = 0; i < routesDesc.length; i++) {
       if (routesDesc[i].style.display == "block") {
         tourSource.clear();
+        tourStopsSource.clear();
         routesDesc[i].style.display = "none";
         routesDesc[i].classList.remove("activate-assoc");
       }
@@ -2311,6 +2312,7 @@ function meetTg() {
     for (var i = 0; i < routesDesc.length; i++) {
       if (routesDesc[i].style.display == "block") {
         tourSource.clear();
+        tourStopsSource.clear();
         routesDesc[i].style.display = "none";
         routesDesc[i].classList.remove("activate-assoc");
       }
@@ -2401,6 +2403,7 @@ function assoc() {
     for (var i = 0; i < routesDesc.length; i++) {
       if (routesDesc[i].style.display == "block") {
         tourSource.clear();
+        tourStopsSource.clear();
         routesDesc[i].style.display = "none";
         routesDesc[i].classList.remove("activate-assoc");
       }
@@ -2446,6 +2449,7 @@ function business() {
       for (var i = 0; i < routesDesc.length; i++) {
         if (routesDesc[i].style.display == "block") {
           tourSource.clear();
+          tourStopsSource.clear();
           routesDesc[i].style.display = "none";
           routesDesc[i].classList.remove("activate-assoc");
         }
