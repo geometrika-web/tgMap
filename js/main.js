@@ -349,7 +349,7 @@ var map = new ol.Map({
     extent: [xE, yS, xW, yN],
   }),
 });
-
+// map.addControl(ctrl);
 //Pointer style
 map.on("pointerdrag", function (evt) {
   this.getTargetElement().style.cursor = "move";
@@ -490,7 +490,7 @@ var images = [
     url: "panorama_tomislavgrad_2.html#glizicaMlin",
   },
   {
-    center: [17.176775523281634, 43.66570343497966],
+    center: [17.177038117059727, 43.666291419131305],
     name: "Mali samograd",
     url: "panorama_tomislavgrad_2.html#maliSamograd",
   },
@@ -1104,7 +1104,7 @@ window.onload = function () {
     landmarkAll.appendChild(landmarkImg);
 
     var landmarkText = document.createElement("div");
-    landmarkText.classList.add("pt-2", "pl-4");
+    landmarkText.classList.add("pt-2", "pl-4", "pr-4");
     landmarkAll.appendChild(landmarkText);
 
     var landmarkPlace = document.createElement("div");
@@ -1157,7 +1157,7 @@ window.onload = function () {
     landmarkAll.appendChild(landmarkImg);
 
     var landmarkText = document.createElement("div");
-    landmarkText.classList.add("pt-2", "pl-4");
+    landmarkText.classList.add("pt-2", "pl-4", "pr-4");
     landmarkAll.appendChild(landmarkText);
 
     var landmarkPlace = document.createElement("div");
@@ -1210,7 +1210,7 @@ window.onload = function () {
     landmarkAll.appendChild(landmarkImg);
 
     var landmarkText = document.createElement("div");
-    landmarkText.classList.add("pt-2", "pl-4");
+    landmarkText.classList.add("pt-2", "pl-4", "pr-4");
     landmarkAll.appendChild(landmarkText);
 
     var landmarkPlace = document.createElement("div");
@@ -1246,7 +1246,6 @@ window.onload = function () {
       "list-group-item-action",
       "no-outline",
       "mt-4",
-      "pl-5",
       "landmarkList-height",
       "scale-animation-right",
       "display-flex",
@@ -1270,7 +1269,7 @@ window.onload = function () {
     console.log(features[i].properties.img);
 
     var routeHeader = document.createElement("div");
-    routeHeader.classList.add("pt-2", "pl-4");
+    routeHeader.classList.add("pt-2", "pl-4", "pr-4");
     route.appendChild(routeHeader);
 
     var routePlace = document.createElement("div");
@@ -1306,7 +1305,7 @@ window.onload = function () {
     var dists = features[i].properties.dists;
     for (j in stops) {
       var stopName = document.createElement("div");
-      stopName.innerText = stops[j];
+      stopName.innerText = stops[j].name;
       stopName.classList.add("pl-5", "color-gray");
       routeText.appendChild(stopName);
       if (dists[j]) {
@@ -1322,7 +1321,7 @@ window.onload = function () {
     }
     var aboutRoute = document.createElement("div");
     aboutRoute.innerText = features[i].properties.about;
-    aboutRoute.classList.add("mt-4", "pl-4");
+    aboutRoute.classList.add("mt-4", "pl-4", "pr-4");
     routeText.appendChild(aboutRoute);
   }
   //})
@@ -1415,6 +1414,7 @@ window.onload = function () {
       "no-outline",
       "mt-4",
       "pl-5",
+      "pr-4",
       "landmarkList-height",
       "display-flex",
       "text-font"
@@ -1430,7 +1430,7 @@ window.onload = function () {
     assocsAll.appendChild(assocImg);
 
     var assocsTitle = document.createElement("div");
-    assocsTitle.classList.add("pt-4", "pl-4");
+    assocsTitle.classList.add("pt-4", "pl-4", "pr-4");
     assocsAll.appendChild(assocsTitle);
 
     var assocsPlace = document.createElement("div");
@@ -1968,15 +1968,16 @@ function getRouteText(clickedID) {
   let clickedIDtextStyle = clickedID_text.style.display;
   // if (clickedIDtextStyle == "none") {
   if (clickedIDtextStyle == "block") {
-    tourSource.clear();
-    tourStopsSource.clear();
+    clearRoute();
     clickedID_text.style.display = "none";
     clickedID_text.classList.remove("activate-assoc");
+    if (isMobile) {
+      document.querySelector(".routes-arrow").classList.add("hidden");
+    }
   } else {
     for (var i = 0; i < routesDesc.length; i++) {
       if (routesDesc[i].style.display == "block") {
-        tourSource.clear();
-        tourStopsSource.clear();
+        clearRoute();
         routesDesc[i].style.display = "none";
         routesDesc[i].classList.remove("activate-assoc");
       }
@@ -1985,15 +1986,20 @@ function getRouteText(clickedID) {
     zoomToRoute(clickedID);
     console.log(clickedID);
     clickedID_text.style.display = "block";
-    let elementPosition =
-      clickedID_element.getBoundingClientRect().bottom - 360;
     console.log(clickedID);
-    clickedID_text.classList.add("activate-assoc");
+    let elementPosition = clickedID_element.offsetTop - 185;
+    console.log(elementPosition);
     document.getElementById("routesAll").scrollTo({
       top: elementPosition,
       left: 0,
       behavior: "smooth",
     });
+    clickedID_text.classList.add("activate-assoc");
+    if (isMobile) {
+      setTimeout(() => {
+        document.querySelector(".routes-arrow").classList.remove("hidden");
+      }, 1700);
+    }
   }
 }
 //    for (var i = 0; i < routesDesc.length; i++) {
@@ -2092,10 +2098,10 @@ map.addInteraction(stopSelect);
 
 let stopPopup = new ol.Overlay.Popup({
   popupClass: "ol-popup popup-border",
-  closeBox: true,
+  closeBox: false,
   onclose: () => stopSelect.getFeatures().clear(),
-  positioning: "bottom-center",
-  autoPan: true,
+  positioning: "auto",
+  autoPan: false,
   autoPanAnimation: { duration: 500 },
 });
 map.addOverlay(stopPopup);
@@ -2116,8 +2122,23 @@ stopSelect.getFeatures().on(["add", "remove"], function (e) {
   }
 });
 // map.addInteraction(select);
-
-function addRoutePins(pins, stopPinStyle, stopPinName, stopPinColor, tour) {
+let clearRoute = function () {
+  stopPopup.hide();
+  tourSource.clear();
+  tourStopsSource.clear();
+  if (isMobile) {
+    document.querySelector(".routes-arrow").classList.add("hidden");
+  }
+};
+function addRoutePins(
+  pins,
+  stopPinStyle,
+  stopPinName,
+  stopPinColor,
+  img,
+  about,
+  tour
+) {
   /* var stopStyle = new ol.style.Style({
     image: new ol.style.Icon({
       src: stopPinStyle,
@@ -2128,11 +2149,21 @@ function addRoutePins(pins, stopPinStyle, stopPinName, stopPinColor, tour) {
   // style = [stopStyle, stopLabelStyle];
 
   // stopLabelStyle.getText().setText(stopPinName);
+  let popupHtml = ``;
+  if (!img && !about) {
+    popupHtml = `<h6>${stopPinName}</h6>`;
+  }
+  if (img) {
+    popupHtml += `<div><img src=${img}><h6 class="overlay-title">${stopPinName}</h6>`;
+  }
+  if (about) {
+    popupHtml += `<p>${about}</p></div>`;
+  }
   var stopFeature = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat(pins)),
     name: stopPinName,
     pinStyle: stopPinStyle,
-    popupHtml: `<img src="../assets/img/00home_minmin.jpg">${stopPinName}`,
+    popupHtml: popupHtml,
     color: stopPinColor,
   });
 
@@ -2161,15 +2192,32 @@ function renderRoute(tour, element) {
   tourPath.setSource(tourSource);
   tourPath.setStyle(tourStyle);
 
-  let pins = routesData.features[tour].properties.pins;
+  let stops = routesData.features[tour].properties.stops;
+  // let pins = routesData.features[tour].properties.pins;
   let stopPinStyle = routesData.features[tour].properties.pinStyle;
-  console.log(stopPinStyle);
-  let stopPinName = routesData.features[tour].properties.stops;
-  console.log(stopPinName);
+  // let stopPinName = routesData.features[tour].properties.stops;
   let stopPinColor = routesData.features[tour].properties.color;
-  for (let i = 0; i < pins.length; i++) {
-    addRoutePins(pins[i], stopPinStyle, stopPinName[i], stopPinColor, tour);
-  }
+  stops.forEach((stop) => {
+    name = stop.name;
+    coordinates = stop.coordinates;
+    let img = false;
+    let about = false;
+    if (stop.img) {
+      img = stop.img;
+    }
+    if (stop.about) {
+      about = stop.about;
+    }
+    addRoutePins(
+      coordinates,
+      stopPinStyle,
+      name,
+      stopPinColor,
+      img,
+      about,
+      tour
+    );
+  });
   // map.addLayer(stopPin);f
 }
 
@@ -2311,8 +2359,7 @@ function meetTg() {
     tourist.setZIndex(20);
     for (var i = 0; i < routesDesc.length; i++) {
       if (routesDesc[i].style.display == "block") {
-        tourSource.clear();
-        tourStopsSource.clear();
+        clearRoute();
         routesDesc[i].style.display = "none";
         routesDesc[i].classList.remove("activate-assoc");
       }
@@ -2402,8 +2449,7 @@ function assoc() {
     meet = 3;
     for (var i = 0; i < routesDesc.length; i++) {
       if (routesDesc[i].style.display == "block") {
-        tourSource.clear();
-        tourStopsSource.clear();
+        clearRoute();
         routesDesc[i].style.display = "none";
         routesDesc[i].classList.remove("activate-assoc");
       }
@@ -2448,8 +2494,7 @@ function business() {
     if (meet == 2) {
       for (var i = 0; i < routesDesc.length; i++) {
         if (routesDesc[i].style.display == "block") {
-          tourSource.clear();
-          tourStopsSource.clear();
+          clearRoute();
           routesDesc[i].style.display = "none";
           routesDesc[i].classList.remove("activate-assoc");
         }
@@ -3083,7 +3128,7 @@ function getAssoc(clickedID) {
     }
     zoomToAssoc(clickedID);
     clickedID_text.style.display = "block";
-    let elementPosition = clickedID_element.getBoundingClientRect().top - 165;
+    let elementPosition = clickedID_element.offsetTop - 185;
     assocsAll.scrollTo({
       top: elementPosition,
       behavior: "smooth",
@@ -3193,12 +3238,19 @@ function zoomToRoute(id) {
   // for (var i = 0; i < routesDesc.length; i++) {
   //   routesDesc[i].style.display = "none";
   // }
-  console.log(id);
+
+  if (isMobile) {
+    toggle(document.getElementById("menu-toggle"));
+    // setTimeout(() => toggle(document.getElementById("menu-toggle")), "1500");
+  }
   view.animate({
     center: routesData.features[id].geometry.coordinates,
-    duration: 3000,
-    zoom: routesData.features[id].geometry.zoom,
+    duration: 1000,
+    zoom: isMobile
+      ? routesData.features[id].geometry.zoomMobile
+      : routesData.features[id].geometry.zoom,
   });
+  // toggle(document.getElementById("menu-toggle"));
 }
 
 //Destinations zoom to
@@ -3236,11 +3288,17 @@ function zoomToAssoc(id) {
     assocDesc[i].style.display = "none";
   }
   var num = id.slice(5);
+  if (isMobile) {
+    toggle(document.getElementById("menu-toggle"));
+  }
   view.animate({
     center: ol.proj.fromLonLat(assocCoord[num - 1]),
     duration: 2000,
     zoom: 15,
   });
+  if (isMobile) {
+    setTimeout(() => toggle(document.getElementById("menu-toggle")), "2500");
+  }
   //if(id=="assoc1"){
   //  view.animate({
   //    center: [1947251.48, 5406108.47],

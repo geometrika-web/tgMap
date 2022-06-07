@@ -10,6 +10,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  text-align: justify;
 }
 .p-0-2-m {
   padding: 0 2rem;
@@ -637,8 +638,9 @@ body {
   overflow-x: hidden;
 }
 .routes-scroll {
-  height: calc(100vh - 270px);
+  height: calc(100vh - 170px);
   overflow: auto;
+  overflow-x: hidden;
 }
 .assocs-scroll {
   height: calc(100vh - 170px);
@@ -800,6 +802,38 @@ body {
 .info {
   right: 20px;
   bottom: 0rem;
+}
+.routes-arrow {
+  left: 0;
+  top: 50vh;
+  /* transform: translate(0, -50%); */
+  animation: popup 1.2s;
+}
+@keyframes popup {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  80% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.hidden {
+  display: none;
 }
 @media (max-width: 575.99px) {
   .mobile-scale {
@@ -1202,21 +1236,39 @@ body {
   max-width: 300px;
   min-width: 200px;
   min-height: 1em;
+  max-height: 300px;
   background-color: #fff;
-  padding: 0.8rem 1rem 0.8rem 0.8rem;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  overflow: auto;
+  z-index: 10000000000000000000000000000000000000000000000000;
 }
+
 /* Image on popup */
 .ol-popup img {
   float: left;
-  padding: 0 0.5rem 0 0;
-  max-width: 100px;
-  max-height: 100px;
+  padding: 2rem 0.5rem 0 0;
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.ol-popup h6 {
+  margin: 0;
+  text-align: left;
+}
+
+.ol-popup p {
+  margin-top: 0.6rem;
+  font-size: small;
+  text-align: justify;
+}
+
+.overlay-title {
+  padding-top: 2rem;
 }
 .closeBox {
   float: right;
   background-color: #fff;
   border: 0;
-  margin: 0px 0px 0 0;
   width: 20px;
   height: 20px;
   cursor: pointer;

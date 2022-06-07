@@ -601,6 +601,31 @@ var natureData = {
       type: "Feature",
       geometry: {
         type: "Point",
+        coordinates: [17.177038117059727, 43.666291419131305],
+      },
+      properties: {
+        name: "Arnautovac i Mali Samograd",
+        place: "Mrkodol",
+        about:
+          "Arnautovac i Mali Samograd geomorfološka su cjelina značajna zbog velikih dimenzija i izraženih litica. Velika vrtača Arnautovac dug je oko 420 metara i širok oko 170 metara.\n\n Mali Samograd je duboka jama koja počinje golemom ulaznom, bunarastom vertikalom, i pridruženi je dio Arnautovca. Otvor ulazne vertikale je promjera 80x45 m i kroz njega se spušta do prvog dna na oko 40 m dubine. Prvo je dno izrazito strmo i obraslo gustom grabovom šumom te divljom lozom.\n\nPo strmini prekivenoj siparom spušta se do ulaza u podzemnu šupljinu, koju u narodu još zovu špilja Rogoševac. Njen ulaz je smješten ispod kamene litice visoke 90 m od reazine krške zaravni. Ulaz je širine oko 16 m i visok do 12 m. Dio ulaza pregrađuju golemi kameni blokovi. Na samom ulazu je prisutna temperaturna razlika koja može iznostiti i više od 20°C - temperatura špiljskog prostora je samo 3°C. Nakon ulaza slijedi golema podzemna dvorana široka u najširem dijelu 90 m, a prema kraju 60-70 m, dok visina varira od 5 m na početku do 30 m u završnom dijelu dvorane. Tlo je prekriveno siparišnim materijalom i strmo se spušta pod uglom mjestimično većim od 45° prema središnjem dijelu dvorane. Dužina glavnog kanala špilje iznosi 135m, dok je s ostalim bočnim kanalima dug preko 250m. Ukupna dubina jame  je 150 m. Unutra se nalaze špiljski saljevi, stalagmiti i saljevni zidovi visoki i do 5 metara.",
+        img: "/assets/img/arnautovac.jpg",
+        img2: "/assets/img/arnautovac1.jpg",
+        img3: "/assets/img/arnautovac2.jpg",
+        img4: "/assets/img/arnautovac3.jpg",
+        img5: "/assets/img/arnautovac4.jpg",
+        zoom: "15",
+        id: "priroda",
+        thumb: "/assets/icon/kategorije_Priroda.svg",
+        pin: "/assets/icon/landmarks/prirodneLjepote_pin.svg",
+        i360: "1",
+        googleMaps:
+          "https://www.google.com/maps/place/Mali+Samograd/@43.6657947,17.1681546,15z/data=!3m1!4b1!4m5!3m4!1s0x134ad36df18202e7:0x430cc7b8db11d72f!8m2!3d43.6657956!4d17.1769094",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
         coordinates: [17.233632165733233, 43.62501966943366],
       },
       properties: {
@@ -630,9 +655,9 @@ var natureData = {
       },
       properties: {
         name: "Vodopad Žukovica",
-        place: "Posušje",
+        place: "Vir Posušje",
         about:
-          "Samostan u Tomislavgradu, je franjevački samostan u Mostarsko-duvanjskoj biskupiji, u Tomislavgradu, Bosna i Hercegovina. Proglašen je za nacionalni spomenik Bosne i Hercegovine na sjednici održanoj u Sarajevu od 11. oktobra 2017. godine. Odluku donijela je Komisija u sastavu: Amir Pašić, Goran Milojević (predsjedvajući), Radoje Vidović. Nacionalni spomenik se sastoji od: crkve sv. Nikole Tavelića i zapadnog krila franjevačkog samostana.",
+          "Vodopad Žukovica je smješten u Posuškom Viru, točnije zaseoku Zagorje. Jedno je od najljepših mjesta u okolici za posjetiti. Ovaj vodopad skriven je daleko od ljudske ruke i nikoga ne ostavlja ravnodušnim. Tik uz vodopad nalazi se i Žukovička pećina koju su istraživali ugledni arheolozi.",
         img: "/assets/img/zukovica.jpg",
         img2: "/assets/img/zukovica.jpg",
         img3: "/assets/img/zukovica.jpg",

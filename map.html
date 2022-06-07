@@ -210,7 +210,9 @@
           <!--<div id="landmark-place" class="text-left ml-3 mt-5 d-block"></div>-->
           <!--<img id="landmark-type" class="ml-3 kategorije-thumb mb-4" src="">-->
           <div id="image" class="">
-            <div class="container"><img id="expandedImg" class="w-100" /></div>
+            <div class="container">
+              <img id="expandedImg" class="w-100" />
+            </div>
             <div class="container image-center mt-2">
               <div id="gallery" class="mt-2">
                 <div class="column">
@@ -254,7 +256,7 @@
         <div id="msg_el"></div>
         <div id="routes" class="list-group list-group-flush">
           <!--Buttons-->
-          <div class="container-fluid">
+          <!-- <div class="container-fluid">
             <div class="row text-small">
               <div class="col-6 p-0">
                 <button
@@ -275,7 +277,7 @@
                 </button>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- <img
             class="illustration"
@@ -284,7 +286,7 @@
             alt=""
           /> -->
           <!--Tourist Routes-->
-          <div id="routesAll" class="routes-scroll mt-5">
+          <div id="routesAll" class="routes-scroll">
             <div
               id="kategorije"
               class="container-fluid mt-5-m mb-5-m cursor-pointer position-relative p-0-2-m"
@@ -759,6 +761,17 @@
             <img class="mobile-scale" src="/assets/icon/info.svg" alt="" />
           </button>
         </div>
+        <button
+          onclick="toggle(document.getElementById('menu-toggle'))"
+          class="routes-arrow bg-transparent position-absolute border-0 no-outline p-0 hidden"
+          type="button"
+        >
+          <img
+            class="mobile-scale"
+            src="/assets/icon/routes-arrow.svg"
+            alt=""
+          />
+        </button>
       </div>
       <!-- /#page-content-wrapper-->
     </div>
