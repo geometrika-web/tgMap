@@ -2108,7 +2108,7 @@ let stopPopup = new ol.Overlay.Popup({
   closeBox: false,
   onclose: () => stopSelect.getFeatures().clear(),
   positioning: "auto",
-  autoPan: false,
+  autoPan: true,
   autoPanAnimation: { duration: 500 },
 });
 map.addOverlay(stopPopup);
