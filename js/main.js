@@ -1071,6 +1071,7 @@ let speleoElement;
 
 coord = [];
 landmarksZoom = [];
+let landmarkAllList = [];
 window.onload = function () {
   // Load list of all landmarks from GeoJSON file
   //$.getJSON("assets/landmarks/landmarks.geojson", function(data) {
@@ -1095,6 +1096,7 @@ window.onload = function () {
     };
     var parent = document.getElementById("landmark-name");
     parent.appendChild(landmarkAll);
+    console.log(landmarkAllList);
     coord[i] = landmarksData.features[i].geometry.coordinates;
     landmarksZoom[i] = landmarksData.features[i].properties.zoom;
     console.log(landmarksData.features[i].properties.zoom);
@@ -1126,6 +1128,7 @@ window.onload = function () {
       landmark360.src = "/assets/icon/360_icon.svg";
       landmarkText.appendChild(landmark360);
     }
+    landmarkAllList.push(landmarkAll);
   }
   length = landmarksZoom.length;
   for (i in natureData.features) {
@@ -1179,6 +1182,7 @@ window.onload = function () {
       landmark360.src = "/assets/icon/360_icon.svg";
       landmarkText.appendChild(landmark360);
     }
+    landmarkAllList.push(landmarkAll);
   }
   length = landmarksZoom.length;
   for (i in touristData.features) {
@@ -1195,6 +1199,7 @@ window.onload = function () {
       "display-flex",
       "text-font"
     );
+    landmarkAll.setAttribute("name", touristData.features[i].properties.name);
     landmarkAll.classList.add(touristData.features[i].properties.id);
     landmarkAll.onclick = function () {
       zoomTo(this.id);
@@ -1232,6 +1237,8 @@ window.onload = function () {
       landmark360.src = "/assets/icon/360_icon.svg";
       landmarkText.appendChild(landmark360);
     }
+    landmarkAllList.push(landmarkAll);
+    console.log(landmarkAllList);
   }
   //})
   //End for landmarks
@@ -1525,7 +1532,7 @@ window.onload = function () {
   bikeElement = document.querySelectorAll(".bike");
   speleoElement = document.querySelectorAll(".speleo");
 };
-
+console.log(landmarkAllList[0]);
 //Onload End
 
 //To Map

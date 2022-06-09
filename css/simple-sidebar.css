@@ -12,6 +12,9 @@ body {
   font-family: "Open Sans", sans-serif;
   text-align: justify;
 }
+a {
+  word-wrap: break-word;
+}
 .p-0-2-m {
   padding: 0 2rem;
 }
@@ -562,6 +565,7 @@ body {
 }
 .list-group-item {
   border: 0px !important;
+  text-align: left;
 }
 .nav-link {
   color: #fff;
@@ -595,6 +599,7 @@ body {
 }
 .activate-assoc {
   border-left: 4px solid #fdc82f !important;
+  text-align: left;
 }
 .activate-baselayer {
   border: 4px solid #fdc82f;
