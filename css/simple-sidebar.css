@@ -385,6 +385,13 @@ a {
 }
 
 @media (max-width: 575.99px) {
+  #izbornik {
+    position: absolute;
+    bottom: 100px;
+  }
+  .mobile-hide {
+    display: none;
+  }
   .center-toggle {
     top: unset;
     bottom: 1.7rem;
