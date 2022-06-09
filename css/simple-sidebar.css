@@ -349,6 +349,7 @@ a {
 .center-toggle {
   top: 30px;
   left: 2rem;
+  height: 40px;
 }
 #menu-toggle {
   background-color: #fff;
@@ -385,7 +386,8 @@ a {
 
 @media (max-width: 575.99px) {
   .center-toggle {
-    top: 1.7rem;
+    top: unset;
+    bottom: 1.7rem;
     left: 1.5rem;
   }
   .bar1 {
@@ -466,7 +468,7 @@ a {
 }
 /*Logo*/
 .logo {
-  top: 10px;
+  bottom: 10px;
   height: 60px;
   left: 50%;
   transform: translate(-50%);
@@ -500,7 +502,7 @@ a {
     -webkit-transition: left 500ms ease;
   }
   .logo-toggle {
-    left: 320px;
+    left: 300px;
     z-index: 1;
   }
   .logo-color {
