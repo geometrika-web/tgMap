@@ -9,7 +9,7 @@
  }*/
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   text-align: justify;
 }
 a {
@@ -20,6 +20,12 @@ a {
 }
 .p-0-2 {
   padding: 0 2rem;
+}
+.ml-305 {
+  margin-left: 1.25rem;
+}
+.text-20 {
+  font-size: 20px;
 }
 
 #cover-video {
@@ -44,7 +50,7 @@ a {
 }
 
 .indeterminate:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   height: 2px;
@@ -53,7 +59,7 @@ a {
 }
 
 .indeterminate:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   height: 2px;
@@ -117,7 +123,7 @@ a {
   max-width: 600px;
   margin-left: 6rem;
   font-size: 2rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   z-index: 100;
   margin-top: 3rem;
@@ -126,14 +132,14 @@ a {
   max-width: 600px;
   margin-left: 6rem;
   font-size: 1rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   z-index: 100;
   margin-bottom: 1.5rem;
 }
 .home-btn-text {
   font-size: 17px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 500;
   z-index: 100;
   margin-bottom: 1rem;
@@ -145,11 +151,11 @@ a {
   top: 100%;
   transform: translate(0, -100%);
   z-index: -1;
-  background-image: url("../assets/img/00home.jpg");
+  background-image: url('../assets/img/00home.jpg');
   background-size: cover;
 }
 #toMap {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   font-size: 12px;
   background-color: #fdc82f;
@@ -187,7 +193,7 @@ a {
 .landmark-title {
   max-width: 600px;
   font-size: 25px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   margin: 0 1rem;
 }
@@ -482,7 +488,7 @@ a {
   z-index: 1;
 }
 .text-font {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 500;
   font-size: 15px;
 }
@@ -606,6 +612,23 @@ a {
   filter: brightness(0) saturate(100%) invert(70%) sepia(92%) saturate(696%)
     hue-rotate(352deg) brightness(100%) contrast(103%);
 }
+#routes-menu {
+  padding: 0.5rem 5rem 0 5rem;
+}
+#show-routes-btn {
+  border-bottom: 1px solid black !important;
+  /* margin-right: 10rem !important; */
+}
+.activate-routes {
+  color: #fdc82f !important;
+  border-bottom: 1px solid #fdc82f !important;
+}
+#btn-touristTours:hover,
+#btn-weekendDestinations:hover,
+#btn-touristTours:focus,
+#btn-weekendDestinations:focus {
+  background-color: #fff !important;
+}
 .activate-assoc {
   border-left: 4px solid #fdc82f !important;
   text-align: left;
@@ -621,7 +644,7 @@ a {
   background-color: #ffc107b2;
 }
 .bg-satellite {
-  background-image: url("../assets/icon/satellite.png");
+  background-image: url('../assets/icon/satellite.png');
   background-position: center;
   background-size: cover;
   height: 80px;
@@ -629,7 +652,7 @@ a {
   border-radius: 10%;
 }
 .bg-topo {
-  background-image: url("../assets/icon/topo.png");
+  background-image: url('../assets/icon/topo.png');
   background-position: center;
   background-size: cover;
   height: 80px;
@@ -728,7 +751,7 @@ a {
   transition: all 0.15s cubic-bezier(0, 1.05, 0.72, 1.07);
 }
 .box .check::after {
-  content: "";
+  content: '';
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -736,7 +759,7 @@ a {
   position: absolute;
   transform: scale(0);
   background-size: 50%;
-  background-image: url("/assets/icon/check.svg");
+  background-image: url('/assets/icon/check.svg');
   background-repeat: no-repeat;
   background-position: center;
   transition-delay: 0.2s !important;
@@ -749,7 +772,7 @@ a {
   width: 45px;
   background-color: transparent;
   border: transparent;
-  background-image: url("../assets/icon/layers.svg");
+  background-image: url('../assets/icon/layers.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -793,7 +816,7 @@ a {
 }
 
 .opcina {
-  background-image: url("/assets/icon/podloga.png");
+  background-image: url('/assets/icon/podloga.png');
   background-size: cover;
   background-repeat: no-repeat;
   width: 30px;
@@ -992,7 +1015,7 @@ a {
 }
 
 .icon-link::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -1098,7 +1121,7 @@ a {
 }
 .btn-arrow-slide-arrow::before {
   position: absolute;
-  content: "";
+  content: '';
   top: -0.25rem;
   right: 0.0625rem;
   width: 0.625rem;
@@ -1287,6 +1310,22 @@ a {
   height: 20px;
   cursor: pointer;
   z-index: 10;
-  background-image: url("../assets/icon/close.svg");
+  background-image: url('../assets/icon/close.svg');
   background-position: center;
+}
+.route-type-badge {
+  width: 40px;
+  float: right;
+}
+.line-40 {
+  line-height: 40px;
+}
+b {
+  color: #000000 !important;
+}
+.text-toggle[aria-expanded=false] .text-expanded {
+  display: none;
+}
+.text-toggle[aria-expanded=true] .text-collapsed {
+  display: none;
 }

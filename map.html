@@ -258,7 +258,7 @@
         <div id="msg_el"></div>
         <div id="routes" class="list-group list-group-flush">
           <!--Buttons-->
-          <!-- <div class="container-fluid">
+          <div id="routes-menu" class="container-fluid">
             <div class="row text-small">
               <div class="col-6 p-0">
                 <button
@@ -279,7 +279,7 @@
                 </button>
               </div>
             </div>
-          </div> -->
+          </div>
 
           <!-- <img
             class="illustration"
@@ -288,61 +288,69 @@
             alt=""
           /> -->
           <!--Tourist Routes-->
-          <div id="routesAll" class="routes-scroll">
-            <div
-              id="kategorije"
-              class="container-fluid mt-5-m mb-5-m cursor-pointer position-relative p-0-2-m"
-            >
-              <div class="text-left mb-2 mt-4 text-font">Kategorije</div>
-              <div class="row">
-                <img
-                  id="routes-check"
-                  src="assets/icon/kategorije_Check.svg"
-                  alt=""
-                />
-                <div class="col-3">
-                  <div
-                    class="image-center menu-btn kategorije-btn"
-                    id="routesAll"
-                  >
-                    <img
-                      class="d-inline kategorije-hover"
-                      src="/assets/icon/kategorije_Sve.svg"
-                      alt=""
-                    />
-                    <div class="d-inline d-block mt-2 text-c3">Sve</div>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="image-center menu-btn kategorije-btn" id="hike">
-                    <img
-                      class="d-inline kategorije-hover"
-                      src="/assets/icon/routes/hike.svg"
-                      alt=""
-                    />
-                    <div class="d-inline d-block mt-2 text-c3">Pješačke</div>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="image-center menu-btn kategorije-btn" id="bike">
-                    <img
-                      class="d-inline kategorije-hover"
-                      src="/assets/icon/routes/bike.svg"
-                      alt=""
-                    />
-                    <div class="d-inline d-block mt-2 text-c3">
-                      Biciklističke
+          <div id="tourist-routes" class="routes-scroll">
+            <div id="route"></div>
+            <div id="routesAll">
+              <div
+                id="kategorije"
+                class="container-fluid mt-5-m mb-5-m cursor-pointer position-relative p-0-2-m"
+              >
+                <div class="text-left mb-2 mt-4 text-font">Kategorije</div>
+                <div class="row">
+                  <img
+                    id="routes-check"
+                    src="assets/icon/kategorije_Check.svg"
+                    alt=""
+                  />
+                  <div class="col-3">
+                    <div
+                      class="image-center menu-btn kategorije-btn"
+                      id="routesAll"
+                    >
+                      <img
+                        class="d-inline kategorije-hover"
+                        src="/assets/icon/kategorije_Sve.svg"
+                        alt=""
+                      />
+                      <div class="d-inline d-block mt-2 text-c3">Sve</div>
                     </div>
                   </div>
-                </div>
-                <div class="col-3">
-                  <div class="image-center menu-btn kategorije-btn" id="speleo">
-                    <img
-                      class="d-inline kategorije-hover"
-                      src="/assets/icon/routes/speleo.svg"
-                      alt=""
-                    />
-                    <div class="d-inline d-block mt-2 text-c3">Speleološke</div>
+                  <div class="col-3">
+                    <div class="image-center menu-btn kategorije-btn" id="hike">
+                      <img
+                        class="d-inline kategorije-hover"
+                        src="/assets/icon/routes/hike.svg"
+                        alt=""
+                      />
+                      <div class="d-inline d-block mt-2 text-c3">Pješačke</div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="image-center menu-btn kategorije-btn" id="bike">
+                      <img
+                        class="d-inline kategorije-hover"
+                        src="/assets/icon/routes/bike.svg"
+                        alt=""
+                      />
+                      <div class="d-inline d-block mt-2 text-c3">
+                        Biciklističke
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div
+                      class="image-center menu-btn kategorije-btn"
+                      id="speleo"
+                    >
+                      <img
+                        class="d-inline kategorije-hover"
+                        src="/assets/icon/routes/speleo.svg"
+                        alt=""
+                      />
+                      <div class="d-inline d-block mt-2 text-c3">
+                        Speleološke
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -672,7 +680,7 @@
             >
               <div class="w-100">
                 <img
-                  onclick="slojeviClose()"
+                  id="slojevi-close"
                   class="layer-close-btn"
                   src="assets/icon/close.svg"
                   alt=""
