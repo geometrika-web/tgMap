@@ -617,7 +617,7 @@ a {
 }
 @media (max-width:575.99px){
   #routes-menu {
-    padding: 0;
+    padding: .5rem 3rem;
 }
 }
 #show-routes-btn {
@@ -851,8 +851,7 @@ a {
 }
 .routes-arrow {
   left: 0;
-  top: 50vh;
-  /* transform: translate(0, -50%); */
+  top: calc(50vh - 32.68px);
   animation: popup 1.2s;
 }
 @keyframes popup {
