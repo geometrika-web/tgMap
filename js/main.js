@@ -2057,12 +2057,15 @@ function getRouteText(clickedID) {
     routesMenu.style.display = 'none';
     routeClicked.innerHTML = routeAbout;
     // let routeClickedPosition = routeClicked.offsetTop + 1000;
-    document.getElementById('tourist-routes').scrollTo(0, 10000);
-    routeClicked.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-      inline: 'nearest',
-    });
+    if (!isMobile) {
+      
+      document.getElementById('tourist-routes').scrollTo(0, 10000);
+      routeClicked.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest',
+      });
+    }
 
     console.log(clickedID);
     // clickedID_text.style.display = "block";
@@ -2543,7 +2546,7 @@ function meetTg() {
       weekendDestinationsDesc[i].style.display = 'none';
     }
     msg.style.display = 'block';
-    // meetElement.style.display = 'block';
+    // 
     document.getElementById('routes').style.display = 'none';
     document.getElementById('assoc').style.display = 'none';
     document.getElementById('assocsAll').style.display = 'none';
@@ -2574,7 +2577,7 @@ function routes() {
     if (zastave) {
       zastaveOpcina();
     }
-    backFromMeet()
+    // backFromMeet()
     markers.setVisible(true);
     vector.setVisible(true);
     nature.setVisible(true);
