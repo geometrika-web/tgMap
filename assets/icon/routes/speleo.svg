@@ -9,7 +9,7 @@
    viewBox="0 0 64 64"
    xml:space="preserve"
    sodipodi:docname="speleo.svg"
-   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    width="64"
    height="64"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -29,7 +29,7 @@
    inkscape:snap-bbox="true"
    inkscape:snap-bbox-midpoints="true"
    inkscape:zoom="7.9328542"
-   inkscape:cx="24.896462"
+   inkscape:cx="3.907799"
    inkscape:cy="23.005591"
    inkscape:window-width="1920"
    inkscape:window-height="991"
@@ -40,7 +40,9 @@
    fit-margin-top="0"
    fit-margin-left="0"
    fit-margin-right="0"
-   fit-margin-bottom="0" />
+   fit-margin-bottom="0"
+   inkscape:showpageshadow="2"
+   inkscape:deskcolor="#d1d1d1" />
 
 <circle
    cx="32"
@@ -48,7 +50,7 @@
    r="32"
    fill="#4460a0"
    id="circle2"
-   style="fill:#17171c;fill-opacity:1" /><g
+   style="fill:#565654;fill-opacity:1" /><g
    id="XMLID_2_"
    transform="matrix(0.16306015,0,0,0.16306015,11.134884,9.1235136)"
    style="fill:#ffffff">
