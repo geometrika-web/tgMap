@@ -615,6 +615,11 @@ a {
 #routes-menu {
   padding: 0.5rem 5rem 0 5rem;
 }
+@media (max-width:575.99px){
+  #routes-menu {
+    padding: 0;
+}
+}
 #show-routes-btn {
   border-bottom: 1px solid black !important;
   /* margin-right: 10rem !important; */
@@ -694,7 +699,11 @@ a {
     overflow-x: hidden;
   }
   .routes-scroll {
-    height: calc(95vh - 227px);
+    height: calc(95vh - 230px);
+    overflow: auto;
+  }
+  .assocs-scroll {
+    height: calc(95vh - 180px);
     overflow: auto;
   }
 }

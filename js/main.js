@@ -888,9 +888,9 @@ let routeClicked = document.getElementById('route');
 
 a = map.on('singleclick', function (evt) {
   if (currZoom < 11.5 && zastave) {
-    landmark.style.display = 'none';
+    /* landmark.style.display = 'none';
     image.style.display = 'none';
-    landmarkAbout.style.display = 'none';
+    landmarkAbout.style.display = 'none'; */
     document.getElementById('nodelist').style.display = 'inline-block';
     document.getElementById('nodelist').innerHTML = 'Učitavanje';
     var view = map.getView();
@@ -2543,7 +2543,7 @@ function meetTg() {
       weekendDestinationsDesc[i].style.display = 'none';
     }
     msg.style.display = 'block';
-    meetElement.style.display = 'block';
+    // meetElement.style.display = 'block';
     document.getElementById('routes').style.display = 'none';
     document.getElementById('assoc').style.display = 'none';
     document.getElementById('assocsAll').style.display = 'none';
@@ -2574,6 +2574,7 @@ function routes() {
     if (zastave) {
       zastaveOpcina();
     }
+    backFromMeet()
     markers.setVisible(true);
     vector.setVisible(true);
     nature.setVisible(true);
@@ -2640,6 +2641,7 @@ function assoc() {
     for (var i = 0; i < weekendDestinationsDesc.length; i++) {
       weekendDestinationsDesc[i].style.display = 'none';
     }
+    backFromMeet()
     backFromRoute();
     assocs.setVisible(true);
     msg.style.display = 'none';
@@ -2688,6 +2690,7 @@ function business() {
       }
     }
     meet = 4;
+    backFromMeet()
     backFromRoute();
     assocs.setVisible(false);
     msg.style.display = 'none';
@@ -2715,7 +2718,7 @@ function business() {
 
 function backFromMeet() {
   deselect();
-
+  meetElement.style.display = 'none'
   if (meet == 1) {
     msg.style.display = 'block';
   } else if (meet == 2) {
@@ -2756,9 +2759,9 @@ let image5 = document.getElementById('image5');
 features = select.getFeatures().on(['add', 'remove'], function (e) {
   if (!zastave || currZoom > 11.5) {
     meetElement.style.display = 'none';
-    landmark.style.display = 'none';
+    /* landmark.style.display = 'none';
     image.style.display = 'none';
-    landmarkAbout.style.display = 'none';
+    landmarkAbout.style.display = 'none'; */
     if (e.type == 'add') {
       if (meet == 1) {
         msg.style.display = 'none';
@@ -2777,9 +2780,9 @@ features = select.getFeatures().on(['add', 'remove'], function (e) {
       image4.src = feature.get('img4');
       image5.src = feature.get('img5');
       meetElement.style.display = 'block';
-      landmark.style.display = 'inline-block';
+      /* landmark.style.display = 'inline-block';
       image.style.display = 'inline-block';
-      landmarkAbout.style.display = 'inline-block';
+      landmarkAbout.style.display = 'inline-block'; */
       nodeList.style.display = 'none';
       //$("<img>").attr('src',el.get("img")).appendTo(info);
       //$("<p>").text(el.get("text")).appendTo(info);
