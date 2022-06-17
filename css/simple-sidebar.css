@@ -453,7 +453,7 @@ a {
   }
 }
 
-@media (min-width: 575.99px) {
+/* @media (min-width: 575.99px) {
   .scale-animation {
     transition: ease-in-out 0.2s;
   }
@@ -478,7 +478,7 @@ a {
   .scale-animation-right:hover {
     transform: translate(1rem);
   }
-}
+} */
 /*Logo*/
 .logo {
   bottom: 18px;
