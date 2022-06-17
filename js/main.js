@@ -2034,9 +2034,9 @@ function getRouteText(clickedID) {
         routesDesc[i].classList.remove('activate-assoc');
       }
     }
+    hidePins();
     renderRoute(clickedID, clickedID_element);
     zoomToRoute(clickedID);
-    hidePins();
     routeAbout = `<img onclick="backFromRoute()" class="landmark-close-btn" src="assets/icon/close.svg" alt="">
     <div class="m-4 pt-5 landmark-title text-left d-block" style="display: inline-block;">${name}</div>
     <div class='pt-2 pb-2 pl-5 pr-5'>
@@ -3643,13 +3643,14 @@ function basemapSatellite() {
 }
 
 function zoomOut() {
+  meetTg();
+  deselect();
   view.animate({
     center: [1922049.9, 5426332.39],
     duration: 4000,
     zoom: 9.8,
   });
-  meetTg();
-  deselect();
+  
 }
 
 // Dodavanje slika na kartu iz html-a

@@ -5,7 +5,7 @@
    viewBox="0 0 32.275759 40.000003"
    xml:space="preserve"
    sodipodi:docname="speleoPin.svg"
-   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    width="32.275757"
    height="40"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -22,8 +22,8 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="8.175922"
-     inkscape:cx="6.054363"
-     inkscape:cy="25.379401"
+     inkscape:cx="-34.980764"
+     inkscape:cy="25.624021"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"
@@ -38,13 +38,15 @@
      inkscape:snap-others="true"
      inkscape:snap-bbox="false"
      inkscape:snap-bbox-midpoints="true"
-     inkscape:snap-object-midpoints="true" /><g
+     inkscape:snap-object-midpoints="true"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#ffa0a0" /><g
      id="g132"
      transform="translate(19.225944,8.5366932)"><path
        d="m -3.088066,-7.8472932 c -8.531961,-4e-7 -15.448481,6.91652234 -15.448478,15.448484 0,10.3118592 11.8760184,23.1727162 15.448478,23.1727162 3.57246144,0 15.448479,-12.860857 15.448479,-23.1727162 5e-6,-8.53196179 -6.9165165,-15.4484849 -15.448479,-15.448484 z"
        fill="#464646"
        id="path4"
-       style="fill:#17171c;fill-opacity:1;stroke:#fcfcfc;stroke-width:1.3788;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#0d1214;fill-opacity:1;stroke:#fcfcfc;stroke-width:1.3788;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        sodipodi:nodetypes="ssscs" /><g
        id="XMLID_2_"
        transform="matrix(0.0727486,0,0,0.0727486,-11.752884,-0.39942244)"

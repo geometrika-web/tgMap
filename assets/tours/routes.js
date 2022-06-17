@@ -43,7 +43,7 @@ var routesData = {
         imgs: ['/assets/tours/img/zukovica1.jpg', '/assets/tours/img/zukovica2.jpg', '/assets/tours/img/zukovica3.jpg', '/assets/tours/img/zukovica4.jpg'],
         type: '/assets/icon/routes/hike.svg',
         pinStyle: '/assets/icon/routes/hikePin.svg',
-        color: '#449d59', //#ca4935 bike-color, #449d59 hike-color, #17171c speleo-color
+        color: '#67b779', //#e46353ff bike-color, #67b779 hike-color, #0d121 speleo-color
         routeTypeId: 'hike',
         id: 'tour1',
       },
@@ -106,10 +106,10 @@ var routesData = {
         about:
           'Velike urušne vrtače (ponikve) na prijevoju između Duvanjskog polja i Buškog blata specifične su kako po svojoj duljini i dubini, tako i po određenim morfološkim karakteristikama. Njihov postanak vezan je uz izrazita rasjedanja u debelo uslojenim krednim vapnencima, te uz hidrogeološke procese poniranja voda na razini Duvanjskog polja i njihovog izbijanja na horizontu niže položenog Buškog blata.\n\nNa Grabovičkoj visoravni se nalazi više od 8500 vrtača. Prema tome, govori se o iznimnom prirodnom fenomenu na kojem je već sad previše antropogenog devastiranja prirodnog stanja, a u budućnosti bi mogao još biti i još više, stoga ga je potrebno urediti i zaštititi. Zbog istinske ljepote prirode i njezine jedinstvenosti na ovom prostoru, potrebno ih je turistički valorizirati.\n\nZbog toga je Speleološko društvo Mijatovi dvori razvija projekt Poučna staza urušnih vrtača Grabovičke visoravni. Poučna staza bila bi edukativnog karaktera, te se na taj način planira raznim aktivnostima i istraživanjima prezentirati iznimna ljepota najvećih i najznačajnijih urušnih vrtača Grabovičke visoravni. Rezultat svega toga bio bi buduća zaštita urušnih vrtača Grabovičke visoravni kao „Geomorfoloških spomenika prirode“. No, da bi se došlo do kvalitetnih i vjerodostojnih podataka neophodno je provesti niz aktivnosti koji se odnose na terensko dokumentiranje i prezentaciju urušnih vrtača, čija valorizacija se planira uz podršku domaćih i stranih projekata.\n\n\n\nIdejni projekt je zamišljen kao izgradnja i uređenje kružne planinarsko poučne staze s polaznim i završnim stajalištem, te nekoliko karakterističnih stajališta. \n\nZamišljeno je uređenje duge i kratke staze. Kratka staza zamišljena je kao dio puta planinarske poučne staze u dužini od 3 kilometra, te bi kružila oko urušnih vrtača Veliki Samograd, Arnautovac i Mali Samograd. Duga staza bila bi nastavak kratke staze, i to način da se nakon obilaska Velikog Samograda, Arnautovca i Malog Samograda nastavlja dalje prema urušnim vrtačama Surdup i Roška peć, te ponovo vraća na početnu točku kod urušne vrtače Veliki Samograd, a bila bi duga oko 12 kilometara. \n\nStaza bi se protezala već postojećim šumskim prosjecima i putevima (koji su sada dijelom i zapušteni), dok bi jedan dio staze trebalo i prosjeći, te urediti kao planinarski put. \n\nTrasa puta bi se označila planinarskim markacijama, te smjerokazima.',
         img: '/assets/img/VelikiSamogradd.jpg',
-        imgs:["assets/tours/img/vrtace1.jpg", "assets/tours/img/vrtace2.jpg","assets/tours/img/vrtace3.jpg","assets/tours/img/vrtace4.jpg", "assets/tours/img/vrtace5.jpg","assets/tours/img/vrtace5.jpg", "assets/tours/img/vrtace6.jpg", "assets/tours/img/tour3-maliSamograd.jpg", "/assets/img/VelikiSamograd1.jpg", '/assets/tours/img/tour3-surdup.jpg'],
+        imgs:["assets/tours/img/vrtace1.jpg", "assets/tours/img/vrtace2.jpg","assets/tours/img/vrtace3.jpg","assets/tours/img/vrtace4.jpg", "assets/tours/img/vrtace5.jpg","assets/tours/img/vrtace5.jpg", "assets/tours/img/vrtace6.jpg", "assets/tours/img/tour3-maliSamograd.jpg", "/assets/img/VelikiSamogradd1.jpg", '/assets/tours/img/tour3-surdup.jpg'],
         type: '/assets/icon/routes/speleo.svg',
         pinStyle: '/assets/icon/routes/speleoPin.svg',
-        color: '#17171c', //#ca4935 bike-color, #449d59 hike-color, #17171c speleo-color
+        color: '#0d121', //#e46353ff bike-color, #67b779 hike-color, #0d121 speleo-color
         routeTypeId: 'speleo',
         id: 'tour4',
       },
@@ -245,7 +245,7 @@ var routesData = {
         img: '/assets/tours/img/sv-hubert.jpg',
         type: '/assets/icon/routes/hike.svg',
         pinStyle: '/assets/icon/routes/hikePin.svg',
-        color: '#449d59', //#ca4935 bike-color, #449d59 hike-color, #17171c speleo-color
+        color: '#67b779', //#e46353ff bike-color, #67b779 hike-color, #0d121 speleo-color
         routeTypeId: 'hike',
         id: 'tour2',
       },
@@ -307,7 +307,7 @@ var routesData = {
         img: '/assets/tours/img/sv-hubert.jpg',
         type: '/assets/icon/routes/speleo.svg',
         pinStyle: '/assets/icon/routes/speleoPin.svg',
-        color: '#17171c', //#ca4935 bike-color, #449d59 hike-color, #17171c speleo-color
+        color: '#0d121', //#e46353ff bike-color, #67b779 hike-color, #0d121 speleo-color
         routeTypeId: 'speleo',
         id: 'tour3',
       },

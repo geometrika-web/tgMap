@@ -613,11 +613,11 @@ a {
     hue-rotate(352deg) brightness(100%) contrast(103%);
 }
 #routes-menu {
-  padding: 0.5rem 5rem 0 5rem;
+  padding: 0.5rem 3rem 0 3rem;
 }
 @media (max-width:575.99px){
   #routes-menu {
-    padding: .5rem 3rem;
+    padding: .5rem 2rem;
 }
 }
 #show-routes-btn {
@@ -680,7 +680,7 @@ a {
   overflow-x: hidden;
 }
 .routes-scroll {
-  height: calc(100vh - 170px);
+  height: calc(100vh - 230px);
   overflow: auto;
   overflow-x: hidden;
 }
