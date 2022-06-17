@@ -11,7 +11,9 @@
 body {
   font-family: 'Open Sans', sans-serif;
   text-align: justify;
+  touch-action: pan-x pan-y;
   touch-action: none;
+  box-sizing: border-box;
 }
 a {
   word-wrap: break-word;
