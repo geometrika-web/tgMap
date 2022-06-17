@@ -11,6 +11,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   text-align: justify;
+  touch-action: none;
 }
 a {
   word-wrap: break-word;
