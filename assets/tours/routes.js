@@ -114,7 +114,7 @@ var routesData = {
         id: 'tour4',
       },
     },
-    tour2: {
+    /* tour2: {
       type: 'Feature',
       geometry: {
         type: 'Point',
@@ -311,7 +311,7 @@ var routesData = {
         routeTypeId: 'speleo',
         id: 'tour3',
       },
-    },
+    }, */
     
   },
 };
