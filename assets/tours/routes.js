@@ -69,7 +69,7 @@ var routesData = {
           {
             name: 'Veliki Samograd',
             coordinates: [17.18618, 43.66343],
-            img: '/assets/img/VelikiSamogradd1.jpg',
+            img: '/assets/img/velikiSamogradd.jpg',
             about:
               'Golema urušena vrtača na kršnoj zaravni, japaga duljine 180, širine 100 metara te dubine između 40 i 70 metara. Okružen je strmim liticama te je spuštanje moguće uz konopac i profesionalnu opremu za spuštanje. Na dnu Samograda nalazi se gusta i neprohodna šuma koja je dom raznim vrstama ptica, a uz rub vrtače nalazi se i špilja skromnih dimenzija.',
           },
