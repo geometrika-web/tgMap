@@ -1087,6 +1087,19 @@ let speleoElement;
 coord = [];
 landmarksZoom = [];
 let landmarkAllList = [];
+
+function routeColor(routeType){
+  if (routeType == 'hike') {
+    color = '#67b779'
+  }
+  if (routeType == 'bike') {
+    color = '#e46353'
+  }
+  if (routeType == 'speleo') {
+    color = '#0d121f'
+  }
+}
+
 window.onload = function () {
   // Load list of all landmarks from GeoJSON file
   //$.getJSON("assets/landmarks/landmarks.geojson", function(data) {
@@ -1274,6 +1287,7 @@ window.onload = function () {
   //$.getJSON("assets/tours/routes.geojson", function(data) {
   features = routesData.features;
   for (i in features) {
+    let routeType = features[i].properties.routeTypeId
     var route = document.createElement('button');
     route.id = features[i].properties.id;
     route.classList.add(
@@ -1285,12 +1299,16 @@ window.onload = function () {
       'scale-animation-right',
       'display-flex',
       'text-font',
-      features[i].properties.routeTypeId
+      routeType
     );
     route.classList.add(features[i].properties.id);
     // route.classList.add(features[i].properties.type);
     // route.innerText = features[i].properties.name;
-    route.setAttribute('color', features[i].properties.color);
+    route.setAttribute('type', routeType)
+    routeColor(routeType)
+    route.setAttribute('color', color)
+    
+    
     route.onclick = function () {
       getRouteText(this.id); //getSourceJSON
     };
@@ -1309,16 +1327,16 @@ window.onload = function () {
 
     var routePlace = document.createElement('div');
     var routeName = document.createElement('div');
-    var routeType = document.createElement('img');
+    var routeTypeImg = document.createElement('img');
     routePlace.innerText = features[i].properties.place;
     routeName.innerText = features[i].properties.name;
-    routeType.src = features[i].properties.type;
+    routeTypeImg.src = `/assets/icon/routes/${routeType}.svg`;
     routePlace.classList.add('menu-btn', 'text-c3');
     routeName.classList.add('text-font');
-    routeType.classList.add('kategorije-thumb');
+    routeTypeImg.classList.add('kategorije-thumb');
     routeHeader.appendChild(routePlace);
     routeHeader.appendChild(routeName);
-    routeHeader.appendChild(routeType);
+    routeHeader.appendChild(routeTypeImg);
 
     var routeText = document.createElement('small');
     routeText.id = features[i].properties.id + '-text';
@@ -1330,10 +1348,10 @@ window.onload = function () {
     var routeDuration = document.createElement('div');
     routeDuration.classList.add('text-right', 'text-muted', 'mr-4');
     routeDuration.innerText = features[i].properties.duration;
-    var routeType = document.createElement('img');
-    routeType.classList.add('ml-2', 'img-height-50px');
-    routeType.src = features[i].properties.type;
-    routeDuration.appendChild(routeType);
+    var routeTypeImg = document.createElement('img');
+    routeTypeImg.classList.add('ml-2', 'img-height-50px');
+    routeType.src = `/assets/icon/routes/${routeType}.svg`;
+    routeDuration.appendChild(routeTypeImg);
     routeText.appendChild(routeDuration);
 
     var stops = features[i].properties.stops;
@@ -2014,7 +2032,7 @@ function getRouteText(clickedID) {
 
   let name = routesData.features[clickedID].properties.name;
   let text = routesData.features[clickedID].properties.about;
-  let type = routesData.features[clickedID].properties.type;
+  let type = `/assets/icon/routes/${routesData.features[clickedID].properties.routeTypeId}.svg`;
   let dist = routesData.features[clickedID].properties.dist;
   let duration = routesData.features[clickedID].properties.duration;
   // if (clickedIDtextStyle == "none") {
@@ -2265,6 +2283,8 @@ function showPins() {
 let defaultStyle = ol.style.Style.defaultStyle();
 let stopsHtml;
 let carouselHtml
+
+
 function renderRoute(tour, element) {
   function tourStyle() {
     let style = new ol.style.Style({
@@ -2326,14 +2346,16 @@ function renderRoute(tour, element) {
 
   tourPath.setSource(tourSource);
   tourPath.setStyle(tourStyle);
-
+  let routeType = routesData.features[tour].properties.routeTypeId
+  routeColor(routeType)
+  let stopPinColor = color
   let stops = routesData.features[tour].properties.stops;
   let dists = routesData.features[tour].properties.dists;
   let imgs = routesData.features[tour].properties.imgs
   // let pins = routesData.features[tour].properties.pins;
-  let stopPinStyle = routesData.features[tour].properties.pinStyle;
+  let stopPinStyle = `/assets/icon/routes/${routeType}Pin.svg`;
   // let stopPinName = routesData.features[tour].properties.stops;
-  let stopPinColor = routesData.features[tour].properties.color;
+  // let stopPinColor = routesData.features[tour].properties.color;
   stopsHtml = ``;
   stops.forEach((stop, index) => {
     name = stop.name;
@@ -2350,6 +2372,7 @@ function renderRoute(tour, element) {
     if (index < stops.length - 1) {
       stopsHtml += `<img class="ml-305" src="/assets/icon/three-dots-vertical.svg"><small class="ml-305 color-gray">${dists[index]}</small>`;
     }
+    routeColor(routeType)
     addRoutePins(
       coordinates,
       stopPinStyle,
@@ -2721,11 +2744,14 @@ function business() {
 
 function backFromMeet() {
   deselect();
+  allFilter()
   meetElement.style.display = 'none'
   if (meet == 1) {
     msg.style.display = 'block';
   } else if (meet == 2) {
     document.getElementById('routes').style.display = 'block';
+    routesAllElement.style.display = 'block'
+    routesMenu.style.display = 'block'
   } else if (meet == 3) {
     document.getElementById('assoc').style.display = 'block';
   }
@@ -2735,6 +2761,7 @@ function backFromRoute() {
   routeClicked.innerHTML = '';
   routesAllElement.style.display = 'block';
   routesMenu.style.display = 'block';
+  routesAllFilter()
   clearRoute();
 }
 // Control Select
@@ -2759,6 +2786,9 @@ let image3 = document.getElementById('image3');
 let image4 = document.getElementById('image4');
 let image5 = document.getElementById('image5');
 
+
+
+//On landmark select
 features = select.getFeatures().on(['add', 'remove'], function (e) {
   if (!zastave || currZoom > 11.5) {
     meetElement.style.display = 'none';
@@ -2770,6 +2800,8 @@ features = select.getFeatures().on(['add', 'remove'], function (e) {
         msg.style.display = 'none';
       }
       toggleOnSelect();
+      routesMenu.style.display = 'none'
+      routesAllElement.style.display = 'none'
       //var info = $("#select").html("<p>Selection:</p>");
       var feature = e.element;
       //document.getElementById('landmark-type').src = feature.get('thumb');
@@ -2834,6 +2866,7 @@ selectAssoc.getFeatures().on(['add', 'remove'], function (e) {
       if (meet == 1) {
         msg.style.display = 'block';
       }
+      
       document.getElementById(id + '-text').style.display = 'block';
       getAssoc(id);
     }
@@ -3353,6 +3386,11 @@ function getAssoc(clickedID) {
       top: elementPosition,
       behavior: 'smooth',
     });
+    if (isMobile) {
+      setTimeout(() => {
+        document.querySelector('.routes-arrow').classList.remove('hidden');
+      }, 1700);
+    }
     /* clickedID_text.scrollIntoView({
       behavior: "smooth",
       block: "end",
@@ -3365,7 +3403,9 @@ function getAssoc(clickedID) {
     clickedID_text.style.display = 'none';
     clickedID_element.classList.remove('activate-assoc');
     clickedID_text.classList.remove('activate-assoc');
-
+    if (isMobile) {
+      document.querySelector('.routes-arrow').classList.add('hidden');
+    }
     //assocSource.refresh()
   }
 }
@@ -3516,9 +3556,9 @@ function zoomToAssoc(id) {
     duration: 2000,
     zoom: 15,
   });
-  if (isMobile) {
+  /* if (isMobile) {
     setTimeout(() => toggle(document.getElementById('menu-toggle')), '2500');
-  }
+  } */
   //if(id=="assoc1"){
   //  view.animate({
   //    center: [1947251.48, 5406108.47],

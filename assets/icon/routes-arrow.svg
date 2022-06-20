@@ -6,12 +6,12 @@
    id="Layer_1"
    x="0px"
    y="0px"
-   viewBox="0 0 31.483289 73.537606"
+   viewBox="0 0 31.132398 73.537606"
    xml:space="preserve"
    sodipodi:docname="routes-arrow.svg"
-   width="31.483288"
+   width="31.132397"
    height="73.537605"
-   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -29,9 +29,9 @@
    fit-margin-left="0"
    fit-margin-right="0"
    fit-margin-bottom="0"
-   inkscape:zoom="3.0769859"
-   inkscape:cx="-25.186986"
-   inkscape:cy="48.911502"
+   inkscape:zoom="4.3515152"
+   inkscape:cx="14.937326"
+   inkscape:cy="46.535515"
    inkscape:window-width="1920"
    inkscape:window-height="991"
    inkscape:window-x="-9"
@@ -39,77 +39,118 @@
    inkscape:window-maximized="1"
    inkscape:current-layer="Layer_1"
    inkscape:snap-bbox="true"
-   inkscape:snap-bbox-midpoints="true" />
+   inkscape:snap-bbox-midpoints="true"
+   inkscape:showpageshadow="2"
+   inkscape:deskcolor="#ffff00" />
 <rect
-   style="fill:#ffffff;fill-rule:evenodd;stroke-width:1.50646"
+   style="fill:#ffffff;fill-rule:evenodd;stroke-width:1.71546"
    id="rect2638"
-   width="24.00844"
+   width="31.132397"
    height="73.537605"
    x="0"
    y="0"
-   ry="8.618268"
-   rx="8.2667971" /><path
+   ry="6.2047353"
+   rx="8.2729807" /><path
    id="XMLID_224_"
-   d="m 8.1016194,51.369382 9.0909056,-13.63672 c 0.170485,-0.255638 0.266242,-0.602546 0.266242,-0.964182 0,-0.361728 -0.09582,-0.708546 -0.266302,-0.964272 L 8.1015587,22.168211 c -0.35503,-0.532545 -0.9306059,-0.532545 -1.2856359,0 -0.3549693,0.532455 -0.35503,1.395909 0,1.928454 L 15.263981,36.76848 6.8159228,49.440928 c -0.1775146,0.266274 -0.266242,0.615273 -0.266242,0.964272 0,0.349001 0.088727,0.698001 0.2663027,0.964274 0.35503,0.532453 0.9306059,0.532453 1.2856359,-9.2e-5 z"
+   d="m -63.597544,50.220357 9.090906,-13.63672 c 0.170485,-0.255638 0.266242,-0.602546 0.266242,-0.964182 0,-0.361728 -0.09582,-0.708546 -0.266302,-0.964272 l -9.090907,-13.635997 c -0.35503,-0.532545 -0.930606,-0.532545 -1.285636,0 -0.354969,0.532455 -0.35503,1.395909 0,1.928454 l 8.448058,12.671815 -8.448058,12.672448 c -0.177515,0.266274 -0.266242,0.615273 -0.266242,0.964272 0,0.349001 0.08873,0.698001 0.266303,0.964274 0.35503,0.532453 0.930606,0.532453 1.285636,-9.2e-5 z"
    style="stroke-width:0.0742271" />
 <g
    id="g3"
-   transform="translate(-10.654094,2.0682456)">
+   transform="translate(-10.654093,2.0682456)">
 </g>
 <g
    id="g5"
-   transform="translate(-10.654094,2.0682456)">
+   transform="translate(-10.654093,2.0682456)">
 </g>
 <g
    id="g7"
-   transform="translate(-10.654094,2.0682456)">
+   transform="translate(-10.654093,2.0682456)">
 </g>
 <g
    id="g9"
-   transform="translate(-10.654094,2.0682456)">
+   transform="translate(-10.654093,2.0682456)">
 </g>
 <g
    id="g11"
-   transform="translate(-10.654094,2.0682456)">
+   transform="translate(-10.654093,2.0682456)">
 </g>
 <g
    id="g13"
-   transform="translate(-10.654094,2.0682456)">
+   transform="translate(-10.654093,2.0682456)">
 </g>
 <g
    id="g15"
-   transform="translate(-10.654094,2.0682456)">
+   transform="translate(-10.654093,2.0682456)">
 </g>
 <g
    id="g17"
-   transform="translate(-10.654094,2.0682456)">
+   transform="translate(-10.654093,2.0682456)">
 </g>
 <g
    id="g19"
-   transform="translate(-10.654094,2.0682456)">
+   transform="translate(-10.654093,2.0682456)">
 </g>
 <g
    id="g21"
-   transform="translate(-10.654094,2.0682456)">
+   transform="translate(-10.654093,2.0682456)">
 </g>
 <g
    id="g23"
-   transform="translate(-10.654094,2.0682456)">
+   transform="translate(-10.654093,2.0682456)">
 </g>
 <g
    id="g25"
-   transform="translate(-10.654094,2.0682456)">
+   transform="translate(-10.654093,2.0682456)">
 </g>
 <g
    id="g27"
-   transform="translate(-10.654094,2.0682456)">
+   transform="translate(-10.654093,2.0682456)">
 </g>
 <g
    id="g29"
-   transform="translate(-10.654094,2.0682456)">
+   transform="translate(-10.654093,2.0682456)">
 </g>
 <g
    id="g31"
-   transform="translate(-10.654094,2.0682456)">
+   transform="translate(-10.654093,2.0682456)">
 </g>
-</svg>
+<text
+   xml:space="preserve"
+   style="font-size:13.3333px;line-height:1.1;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, @wght=700';font-variant-ligatures:none;font-variation-settings:'wght' 700"
+   x="16.438593"
+   y="19.785122"
+   id="text913"><tspan
+     sodipodi:role="line"
+     id="tspan911"
+     x="16.438593"
+     y="19.785122"
+     style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:13.3333px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Ultra-Bold';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle">i</tspan><tspan
+     style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:13.3333px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Ultra-Bold';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle"
+     sodipodi:role="line"
+     id="tspan3286"
+     x="16.438593"
+     y="34.451752">n</tspan><tspan
+     style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:13.3333px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Ultra-Bold';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle"
+     sodipodi:role="line"
+     id="tspan3253"
+     x="16.438593"
+     y="49.118382">f</tspan><tspan
+     sodipodi:role="line"
+     x="16.438593"
+     y="63.785011"
+     id="tspan919"
+     style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:13.3333px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Ultra-Bold';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle">o</tspan></text><rect
+   style="fill:#67b779;fill-rule:evenodd;stroke-width:1.88976"
+   id="rect3390"
+   width="0.68941504"
+   height="6.2047353"
+   x="23.899721"
+   y="1.3788301" /><rect
+   style="fill:#ffffff;fill-rule:evenodd;stroke-width:1.16158"
+   id="rect3444"
+   width="9.4220057"
+   height="73.537605"
+   x="8.3266727e-17"
+   y="8.8817842e-16"
+   rx="0"
+   ry="0" /></svg>
