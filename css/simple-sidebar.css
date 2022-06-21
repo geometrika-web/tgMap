@@ -694,20 +694,20 @@ a {
 }
 @media (max-width: 575.99px) {
   .sidebar-scroll {
-    height: calc(95vh - 180px);
+    height: calc(95% - 180px);
     overflow: auto;
   }
   .landmarksAll-scroll {
-    height: calc(95vh - 270px);
+    height: calc(95% - 270px);
     overflow: auto;
     overflow-x: hidden;
   }
   .routes-scroll {
-    height: calc(95vh - 230px);
+    height: calc(95% - 231px);
     overflow: auto;
   }
   .assocs-scroll {
-    height: calc(95vh - 180px);
+    height: calc(95% - 180px);
     overflow: auto;
   }
 }
@@ -778,6 +778,12 @@ a {
   transition: all 0.25s cubic-bezier(0, 1.05, 0.72, 1.07);
 }
 
+#dropdownMenuButton {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.7rem;
+}
+
 .layer-dropdown {
   position: absolute;
   height: 45px;
@@ -845,11 +851,11 @@ a {
 }
 
 .zoom-extents {
-  right: 20px;
+  right: 1.5rem;
   top: 2rem;
 }
 .info {
-  right: 20px;
+  right: 1.5rem;
   bottom: 0rem;
 }
 .routes-arrow {
