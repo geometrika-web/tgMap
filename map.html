@@ -6,7 +6,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <meta
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      content="width=device-width"
       name="viewport"
     />
     <title>Općina Tomislavgrad</title>
@@ -131,7 +131,7 @@
         <!--Meet-->
         <div class="position-relative sidebar-scroll" id="msg">
           <div
-            id="kategorije"
+            id="kategorije-meet"
             class="container-fluid mt-5-m mb-5-m cursor-pointer position-relative p-0-2-m"
           >
             <div class="text-left mb-2 mt-4 text-font">Kategorije</div>
@@ -292,7 +292,7 @@
             <div id="route"></div>
             <div id="routesAll">
               <div
-                id="kategorije"
+                id="kategorije-routes"
                 class="container-fluid mt-5-m mb-5-m cursor-pointer position-relative p-0-2-m"
               >
                 <div class="text-left mb-2 mt-4 text-font">Kategorije</div>
@@ -638,7 +638,7 @@
 
       <!-- Page Content -->
       <div id="page-content-wrapper">
-        <div class="container-fluid p-0">
+        <!-- <div class="container-fluid p-0"> -->
           <div id="map" class="map"></div>
           <div id="div-toggle" class="position-absolute z-index center-toggle">
             <div class="change" onclick="toggle(this)" id="menu-toggle">
@@ -687,11 +687,11 @@
                 />
               </div>
               <div
-                id="kategorije"
+                id="slojevi"
                 class="container-fluid mt-5-m mb-5-m cursor-pointer position-relative p-0-2-m"
               >
                 <div class="text-left mt-5 text-font">Slojevi</div>
-                <div class="p-2">
+                <!-- <div class="p-2"> -->
                   <div class="box" id="zastaveOpcinaBox">
                     <input
                       id="zastaveOpcina"
@@ -699,7 +699,7 @@
                       onclick="zastaveOpcina()"
                     />
                     <span class="check"></span>
-                    <label for="zastaveOpcina" class="w-100 text-left"
+                    <label for="zastaveOpcina" class="text-left"
                       >Općina</label
                     >
                   </div>
@@ -711,7 +711,7 @@
                   <div class="box">
                     <input id="vjerski" type="checkbox" onclick="vjerski()" />
                     <span class="check"></span>
-                    <label for="vjerski" class="w-100 text-left"
+                    <label for="vjerski" class="text-left"
                       >Vjerski objekti</label
                     >
                   </div>
@@ -722,14 +722,14 @@
                       onclick="znamenitosti()"
                     />
                     <span class="check"></span>
-                    <label for="znamenitosti" class="w-100 text-left"
+                    <label for="znamenitosti" class=" text-left"
                       >Znamenitosti</label
                     >
                   </div>
-                </div>
+                <!-- </div> -->
               </div>
               <div
-                id="kategorije"
+                id="podloge"
                 class="container-fluid mb-4 cursor-pointer position-relative p-0-2-m"
               >
                 <div class="text-left mb-3 mt-4 text-font">Podloge</div>
@@ -770,7 +770,7 @@
           >
             <img class="mobile-scale" src="/assets/icon/info.svg" alt="" />
           </button>
-        </div>
+        <!-- </div> -->
         <button
           onclick="toggle(document.getElementById('menu-toggle'))"
           class="routes-arrow bg-transparent position-absolute border-0 no-outline p-0 hidden"

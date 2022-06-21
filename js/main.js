@@ -2600,7 +2600,7 @@ function routes() {
     if (zastave) {
       zastaveOpcina();
     }
-    // backFromMeet()
+    backFromMeet()
     markers.setVisible(true);
     vector.setVisible(true);
     nature.setVisible(true);
