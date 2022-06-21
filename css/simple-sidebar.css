@@ -13,8 +13,8 @@ body {
   text-align: justify;
   touch-action: pan-x pan-y;
   touch-action: none;
-  box-sizing: border-box;
-  overflow-x: hidden;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
 }
 a {
   word-wrap: break-word;
