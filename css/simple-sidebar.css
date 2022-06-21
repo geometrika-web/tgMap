@@ -1218,7 +1218,7 @@ a {
   color: white;
   bottom: 10%;
 }
-#kategorije {
+#kategorije-meet, #kategorije-routes, #slojevi, #podloge {
   text-align: center;
 }
 #kategorije-check,
