@@ -121,6 +121,7 @@ a {
     transform: translate(-50%);
     z-index: 1000000000000;
 }
+
 .home-filter {
     opacity: 0;
 }
@@ -254,8 +255,9 @@ a {
         padding: 0 2rem;
     }
     .home-logo {
+        top: unset;
         height: 60px;
-        top: 20px;
+        bottom: 20px;
     }
     .landmark-title {
         font-size: 20px;
