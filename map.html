@@ -1,79 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
+    <head>
+        <meta charset="utf-8" />
 
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>Općina Tomislavgrad</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="assets/logo/logo_crown+trajectory_black.svg"
-    />
-    <!-- Bootstrap core CSS -->
-    <link rel="shortcut icon" href="#" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css"
-      type="text/css"
-    />
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        />
+        <title>Općina Tomislavgrad</title>
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="assets/logo/logo_crown+trajectory_black.svg"
+        />
+        <!-- Bootstrap core CSS -->
+        <link rel="shortcut icon" href="#" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css"
+            type="text/css"
+        />
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
 
-    <!-- Custom styles for this template -->
-    <link href="css/simple-sidebar.css" rel="stylesheet" />
-    <link href="ol-ext/style.css" rel="stylesheet" />
+        <!-- Custom styles for this template -->
+        <link href="css/simple-sidebar.css" rel="stylesheet" />
+        <link href="ol-ext/style.css" rel="stylesheet" />
 
-    <!--Font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+        <!--Font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+    </head>
 
-  <body class="overflow-hidden mobile-height">
-    <div id="preloader" class="indeterminate"></div>
-    <!-- <img
+    <body class="overflow-hidden mobile-height">
+        <div id="preloader" class="indeterminate"></div>
+        <!-- <img
       id="homeLogo"
       src="assets/logo/logo_figma.svg"
       class="mt-0 mr-0 mb-0 ml-0 p-0 position-absolute home-logo pointer-cursor"
       alt="TomislavGuides"
     /> -->
-    <!-- Home screen -->
-    <!-- <div id="home"> -->
-    <!-- <div class="home-center-y text-center"> -->
-    <!-- <div class="text-center home-title"> -->
-    <!-- Dobrodošli dragi gosti i sugrađani, istražite Tomislavgrad s nama! -->
-    <!-- </div> -->
-    <!-- <div class="text-center home-text"> -->
-    <!-- Platforma <b class="text-warning">TomislavGuides</b> napravljena je u -->
-    <!-- svrhu prikupljanja informacija o Tomislavgradu i njihove prezentacije -->
-    <!-- s ciljem očuvanja i promocije ljepota i zanimljivosti ovog kraja. -->
-    <!-- </div> -->
-    <!-- <div onclick="toMap()" id="toMap" class="text-center" type="button"> -->
-    <!-- <img class="pr-3" src="/assets/icon/map.svg" alt="map" />ISTRAŽI -->
-    <!-- TOMISLAVGRAD -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- <div id="home-img" class="position-absolute"></div> -->
-    <!-- </div> -->
+        <!-- Home screen -->
+        <!-- <div id="home"> -->
+        <!-- <div class="home-center-y text-center"> -->
+        <!-- <div class="text-center home-title"> -->
+        <!-- Dobrodošli dragi gosti i sugrađani, istražite Tomislavgrad s nama! -->
+        <!-- </div> -->
+        <!-- <div class="text-center home-text"> -->
+        <!-- Platforma <b class="text-warning">TomislavGuides</b> napravljena je u -->
+        <!-- svrhu prikupljanja informacija o Tomislavgradu i njihove prezentacije -->
+        <!-- s ciljem očuvanja i promocije ljepota i zanimljivosti ovog kraja. -->
+        <!-- </div> -->
+        <!-- <div onclick="toMap()" id="toMap" class="text-center" type="button"> -->
+        <!-- <img class="pr-3" src="/assets/icon/map.svg" alt="map" />ISTRAŽI -->
+        <!-- TOMISLAVGRAD -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- <div id="home-img" class="position-absolute"></div> -->
+        <!-- </div> -->
 
-    <!--Dodavanje slika na kartu iz html-a
+        <!--Dodavanje slika na kartu iz html-a
   <div style="display: none;">
     <img src="/assets/kraljTomislav.jpg" id="vienna" style="height: 100px; box-shadow: 10px 10px 20px" class="scale-animation" alt="">
   </div>-->
 
-    <div class="d-flex" id="wrapper">
-      <!-- Sidebar -->
-      <div class="bg-white border-right border-0" id="sidebar-wrapper">
-        <nav
-          class="navbar navbar-expand-lg navbar-dark bg-tomislav p-0-2 mobile-hide"
-        >
-          <!--<div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar -->
+            <div class="bg-white border-right border-0" id="sidebar-wrapper">
+                <nav
+                    class="navbar navbar-expand-lg navbar-dark bg-tomislav p-0-2 mobile-hide"
+                >
+                    <!--<div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -88,720 +91,856 @@
             </li>
           </ul>
         </div>-->
-        </nav>
-        <div class="container p-0-2 mt-2">
-          <div class="row text-small">
-            <div
-              id="btn-meet"
-              onclick="meetTg()"
-              class="menuBtn-border activate col-3 cursor-pointer menu-btn text-c3 text-center no-outline p-0 pt-2 pb-2"
-            >
-              <img src="assets/icon/placeholder.svg" alt="" />
-              <div>Upoznaj</div>
-            </div>
-            <div
-              id="btn-routes"
-              onclick="routes()"
-              class="menuBtn-border col-3 cursor-pointer menu-btn text-c3 text-center no-outline p-0 pt-2 pb-2"
-            >
-              <img src="assets/icon/route.svg" alt="" />
-              <div>Obilascio</div>
-            </div>
-            <div
-              id="btn-assoc"
-              onclick="assoc()"
-              class="menuBtn-border col-3 cursor-pointer menu-btn text-c3 text-center no-outline p-0 pt-2 pb-2"
-            >
-              <img src="assets/icon/association.svg" alt="" />
-              <div>Udruge</div>
-            </div>
-            <div
-              id="btn-business"
-              onclick="business()"
-              class="menuBtn-border col-3 cursor-pointer menu-btn text-c3 text-center no-outline p-0 pt-2 pb-2"
-            >
-              <img src="assets/icon/business.svg" alt="" />
-              <div>Poduzetnici</div>
-            </div>
-          </div>
-        </div>
-        <!--Meet-->
-        <div class="position-relative sidebar-scroll" id="msg">
-          <div
-            id="kategorije-meet"
-            class="container-fluid mt-5-m mb-5-m cursor-pointer position-relative p-0-2-m"
-          >
-            <div class="text-left mb-2 mt-4 text-font">Kategorije</div>
-            <div class="row">
-              <img
-                id="kategorije-check"
-                src="assets/icon/kategorije_Check.svg"
-                alt=""
-              />
-              <div class="col-3">
-                <div class="image-center menu-btn kategorije-btn" id="all">
-                  <img
-                    class="d-inline kategorije-hover"
-                    src="/assets/icon/kategorije_Sve.svg"
-                    alt=""
-                  />
-                  <div class="d-inline d-block mt-2 text-c3">Sve</div>
+                </nav>
+                <div class="container p-0-2 mt-2">
+                    <div class="row text-small">
+                        <div
+                            id="btn-meet"
+                            onclick="meetTg()"
+                            class="menuBtn-border activate col-3 cursor-pointer menu-btn text-c3 text-center no-outline p-0 pt-2 pb-2"
+                        >
+                            <img src="assets/icon/placeholder.svg" alt="" />
+                            <div>Upoznaj</div>
+                        </div>
+                        <div
+                            id="btn-routes"
+                            onclick="routes()"
+                            class="menuBtn-border col-3 cursor-pointer menu-btn text-c3 text-center no-outline p-0 pt-2 pb-2"
+                        >
+                            <img src="assets/icon/route.svg" alt="" />
+                            <div>Obilascio</div>
+                        </div>
+                        <div
+                            id="btn-assoc"
+                            onclick="assoc()"
+                            class="menuBtn-border col-3 cursor-pointer menu-btn text-c3 text-center no-outline p-0 pt-2 pb-2"
+                        >
+                            <img src="assets/icon/association.svg" alt="" />
+                            <div>Udruge</div>
+                        </div>
+                        <div
+                            id="btn-business"
+                            onclick="business()"
+                            class="menuBtn-border col-3 cursor-pointer menu-btn text-c3 text-center no-outline p-0 pt-2 pb-2"
+                        >
+                            <img src="assets/icon/business.svg" alt="" />
+                            <div>Poduzetnici</div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="col-3">
-                <div class="image-center menu-btn kategorije-btn" id="kultura">
-                  <img
-                    class="d-inline kategorije-hover"
-                    src="/assets/icon/kategorije_Kultura.svg"
-                    alt=""
-                  />
-                  <div class="d-inline d-block mt-2 text-c3">Kultura</div>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="image-center menu-btn kategorije-btn" id="priroda">
-                  <img
-                    class="d-inline kategorije-hover"
-                    src="/assets/icon/kategorije_Priroda.svg"
-                    alt=""
-                  />
-                  <div class="d-inline d-block mt-2 text-c3">Priroda</div>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="image-center menu-btn kategorije-btn" id="turizam">
-                  <img
-                    class="d-inline kategorije-hover"
-                    src="/assets/icon/kategorije_Turizam.svg"
-                    alt=""
-                  />
-                  <div class="d-inline d-block mt-2 text-c3">Turizam</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="landmarksAll" class="">
-            <!--<button onclick="allLandmarks()" id="landmarks-btn" class="mt-4 image-center"><span class='text'>Povratak na početnu</span><span class="icon"><img src="/assets/icon/back_black.svg" alt=""> </span></button>-->
+                <!--Meet-->
+                <div class="position-relative sidebar-scroll" id="msg">
+                    <div
+                        id="kategorije-meet"
+                        class="container-fluid mt-5-m mb-5-m cursor-pointer position-relative p-0-2-m"
+                    >
+                        <div class="text-left mb-2 mt-4 text-font">
+                            Kategorije
+                        </div>
+                        <div class="row">
+                            <img
+                                id="kategorije-check"
+                                src="assets/icon/kategorije_Check.svg"
+                                alt=""
+                            />
+                            <div class="col-3">
+                                <div
+                                    class="image-center menu-btn kategorije-btn"
+                                    id="all"
+                                >
+                                    <img
+                                        class="d-inline kategorije-hover"
+                                        src="/assets/icon/kategorije_Sve.svg"
+                                        alt=""
+                                    />
+                                    <div class="d-inline d-block mt-2 text-c3">
+                                        Sve
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div
+                                    class="image-center menu-btn kategorije-btn"
+                                    id="kultura"
+                                >
+                                    <img
+                                        class="d-inline kategorije-hover"
+                                        src="/assets/icon/kategorije_Kultura.svg"
+                                        alt=""
+                                    />
+                                    <div class="d-inline d-block mt-2 text-c3">
+                                        Kultura
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div
+                                    class="image-center menu-btn kategorije-btn"
+                                    id="priroda"
+                                >
+                                    <img
+                                        class="d-inline kategorije-hover"
+                                        src="/assets/icon/kategorije_Priroda.svg"
+                                        alt=""
+                                    />
+                                    <div class="d-inline d-block mt-2 text-c3">
+                                        Priroda
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div
+                                    class="image-center menu-btn kategorije-btn"
+                                    id="turizam"
+                                >
+                                    <img
+                                        class="d-inline kategorije-hover"
+                                        src="/assets/icon/kategorije_event.svg"
+                                        alt=""
+                                    />
+                                    <div class="d-inline d-block mt-2 text-c3">
+                                        Događanja
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="landmarksAll" class="">
+                        <!--<button onclick="allLandmarks()" id="landmarks-btn" class="mt-4 image-center"><span class='text'>Povratak na početnu</span><span class="icon"><img src="/assets/icon/back_black.svg" alt=""> </span></button>-->
 
-            <div id="landmark-name" class="border-bottom"></div>
-          </div>
-        </div>
-        <div
-          id="meet"
-          class="list-group list-group-flush sidebar-scroll text-center"
-        >
-          <div>
-            <!--<button onclick="backFromMeet()" id="landmarks-btn" class="mt-4 image-center"><span class='text-2'>Povratak</span><span class="icon"><img src="/assets/icon/back_black.svg" alt=""> </span></button>-->
-          </div>
-          <!--<button class="btn-back" onclick="backFromMeet()"><span style="font-size: larger;">&#8592;</span> POVRATAK</button>-->
-          <div class="w-100">
-            <img
-              onclick="backFromMeet()"
-              class="landmark-close-btn"
-              src="assets/icon/close.svg"
-              alt=""
-            />
-          </div>
-          <div
-            id="landmark"
-            class="m-4 pt-5 landmark-title text-left d-block"
-          ></div>
-          <!--<div id="landmark-place" class="text-left ml-3 mt-5 d-block"></div>-->
-          <!--<img id="landmark-type" class="ml-3 kategorije-thumb mb-4" src="">-->
-          <div id="image" class="">
-            <div class="container">
-              <img id="expandedImg" class="w-100" />
-            </div>
-            <div class="container image-center mt-2">
-              <div id="gallery" class="mt-2">
-                <div class="column">
-                  <img id="image2" src="" onclick="sidebarGallery(this);" />
+                        <div id="landmark-name" class="border-bottom"></div>
+                    </div>
                 </div>
-                <div class="column">
-                  <img id="image3" src="" onclick="sidebarGallery(this);" />
-                </div>
-                <div class="column">
-                  <img id="image4" src="" onclick="sidebarGallery(this);" />
-                </div>
-                <div class="column">
-                  <img id="image5" src="" onclick="sidebarGallery(this);" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            id="landmark-about"
-            class="p-4 mb-2 text-justify d-block text-font"
-          ></div>
-          <div id="google-maps">
-            <a id="googleMaps-href" target="_blank" href="">
-              <img src="/assets/icon/googleMaps.svg" alt="" />
-              Upute &#10132;</a
-            >
-          </div>
-          <div id="nodelist" class="p-4">
-            <em class="text-center"></em>
-          </div>
-
-          <!--<img id="image" class="hover p-2" src="" width= "100%" height="auto">-->
-          <!--<a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>-->
-          <!--<a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>-->
-          <!--<a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>-->
-          <!--<a href="#" class="list-group-item list-group-item-action bg-light">Events</a>-->
-          <!--<a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>-->
-          <!--<a href="#" class="list-group-item list-group-item-action bg-light">Status</a>-->
-        </div>
-        <!--Routes-->
-        <div id="msg_el"></div>
-        <div id="routes" class="list-group list-group-flush">
-          <!--Buttons-->
-          <div id="routes-menu" class="container-fluid">
-            <div class="row text-small">
-              <div class="col-6 p-0">
-                <button
-                  id="btn-touristTours"
-                  onclick="touristTours()"
-                  class="menu-btn list-group-item list-group-item-action text-center activate-routes no-outline"
+                <div
+                    id="meet"
+                    class="list-group list-group-flush sidebar-scroll text-center"
                 >
-                  TURISTIČKE RUTE
-                </button>
-              </div>
-              <div class="col-6 p-0">
-                <button
-                  id="btn-weekendDestinations"
-                  onclick="weekendDestinations()"
-                  class="menu-btn list-group-item list-group-item-action text-center no-outline"
-                >
-                  VIKEND DESTINACIJE
-                </button>
-              </div>
-            </div>
-          </div>
+                    <div>
+                        <!--<button onclick="backFromMeet()" id="landmarks-btn" class="mt-4 image-center"><span class='text-2'>Povratak</span><span class="icon"><img src="/assets/icon/back_black.svg" alt=""> </span></button>-->
+                    </div>
+                    <!--<button class="btn-back" onclick="backFromMeet()"><span style="font-size: larger;">&#8592;</span> POVRATAK</button>-->
+                    <div class="w-100">
+                        <img
+                            onclick="backFromMeet()"
+                            class="landmark-close-btn"
+                            src="assets/icon/close.svg"
+                            alt=""
+                        />
+                    </div>
+                    <div
+                        id="landmark"
+                        class="mt-4 ml-4 pt-5 landmark-title text-left d-block"
+                    ></div>
+                    <div
+                        id="landmark-location"
+                        class="ml-4 mb-4 text-left"
+                    ></div>
+                    <!--<div id="landmark-place" class="text-left ml-3 mt-5 d-block"></div>-->
+                    <!--<img id="landmark-type" class="ml-3 kategorije-thumb mb-4" src="">-->
+                    <div id="image" class="">
+                        <div class="container">
+                            <img id="expandedImg" class="w-100" />
+                        </div>
+                        <div class="container image-center mt-2">
+                            <div id="gallery" class="mt-2">
+                                <div class="column">
+                                    <img
+                                        id="image2"
+                                        src=""
+                                        onclick="sidebarGallery(this);"
+                                    />
+                                </div>
+                                <div class="column">
+                                    <img
+                                        id="image3"
+                                        src=""
+                                        onclick="sidebarGallery(this);"
+                                    />
+                                </div>
+                                <div class="column">
+                                    <img
+                                        id="image4"
+                                        src=""
+                                        onclick="sidebarGallery(this);"
+                                    />
+                                </div>
+                                <div class="column">
+                                    <img
+                                        id="image5"
+                                        src=""
+                                        onclick="sidebarGallery(this);"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        id="landmark-about"
+                        class="p-4 mb-2 mt-6rem text-justify d-block text-font"
+                    ></div>
+                    <div id="google-maps">
+                        <a id="googleMaps-href" target="_blank" href="">
+                            <img src="/assets/icon/googleMaps.svg" alt="" />
+                            Upute &#10132;</a
+                        >
+                    </div>
+                    <div id="nodelist" class="p-4">
+                        <em class="text-center"></em>
+                    </div>
 
-          <!-- <img
+                    <!--<img id="image" class="hover p-2" src="" width= "100%" height="auto">-->
+                    <!--<a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>-->
+                    <!--<a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>-->
+                    <!--<a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>-->
+                    <!--<a href="#" class="list-group-item list-group-item-action bg-light">Events</a>-->
+                    <!--<a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>-->
+                    <!--<a href="#" class="list-group-item list-group-item-action bg-light">Status</a>-->
+                </div>
+                <!--Routes-->
+                <div id="msg_el"></div>
+                <div id="routes" class="list-group list-group-flush">
+                    <!--Buttons-->
+                    <div id="routes-menu" class="container-fluid">
+                        <div class="row text-small">
+                            <div class="col-6 p-0">
+                                <button
+                                    id="btn-touristTours"
+                                    onclick="touristTours()"
+                                    class="menu-btn list-group-item list-group-item-action text-center activate-routes no-outline"
+                                >
+                                    TURISTIČKE RUTE
+                                </button>
+                            </div>
+                            <div class="col-6 p-0">
+                                <button
+                                    id="btn-weekendDestinations"
+                                    onclick="weekendDestinations()"
+                                    class="menu-btn list-group-item list-group-item-action text-center no-outline"
+                                >
+                                    VIKEND DESTINACIJE
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <img
             class="illustration"
             class="mt-5"
             src="/assets/illustrations/route.svg"
             alt=""
           /> -->
-          <!--Tourist Routes-->
-          <div id="tourist-routes" class="routes-scroll">
-            <div id="route"></div>
-            <div id="routesAll">
-              <div
-                id="kategorije-routes"
-                class="container-fluid mt-5-m mb-5-m cursor-pointer position-relative p-0-2-m"
-              >
-                <div class="text-left mb-2 mt-4 text-font">Kategorije</div>
-                <div class="row">
-                  <img
-                    id="routes-check"
-                    src="assets/icon/kategorije_Check.svg"
-                    alt=""
-                  />
-                  <div class="col-3">
-                    <div
-                      class="image-center menu-btn kategorije-btn"
-                      id="routesAll"
-                    >
-                      <img
-                        class="d-inline kategorije-hover"
-                        src="/assets/icon/kategorije_Sve.svg"
-                        alt=""
-                      />
-                      <div class="d-inline d-block mt-2 text-c3">Sve</div>
+                    <!--Tourist Routes-->
+                    <div id="tourist-routes" class="routes-scroll">
+                        <div id="route"></div>
+                        <div id="routesAll">
+                            <div
+                                id="kategorije-routes"
+                                class="container-fluid mt-5-m mb-5-m cursor-pointer position-relative p-0-2-m"
+                            >
+                                <div class="text-left mb-2 mt-4 text-font">
+                                    Kategorije
+                                </div>
+                                <div class="row">
+                                    <img
+                                        id="routes-check"
+                                        src="assets/icon/kategorije_Check.svg"
+                                        alt=""
+                                    />
+                                    <div class="col-3">
+                                        <div
+                                            class="image-center menu-btn kategorije-btn"
+                                            id="routesAll"
+                                        >
+                                            <img
+                                                class="d-inline kategorije-hover"
+                                                src="/assets/icon/kategorije_Sve.svg"
+                                                alt=""
+                                            />
+                                            <div
+                                                class="d-inline d-block mt-2 text-c3"
+                                            >
+                                                Sve
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div
+                                            class="image-center menu-btn kategorije-btn"
+                                            id="hike"
+                                        >
+                                            <img
+                                                class="d-inline kategorije-hover"
+                                                src="/assets/icon/routes/hike.svg"
+                                                alt=""
+                                            />
+                                            <div
+                                                class="d-inline d-block mt-2 text-c3"
+                                            >
+                                                Pješačke
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div
+                                            class="image-center menu-btn kategorije-btn"
+                                            id="bike"
+                                        >
+                                            <img
+                                                class="d-inline kategorije-hover"
+                                                src="/assets/icon/routes/bike.svg"
+                                                alt=""
+                                            />
+                                            <div
+                                                class="d-inline d-block mt-2 text-c3"
+                                            >
+                                                Biciklističke
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div
+                                            class="image-center menu-btn kategorije-btn"
+                                            id="speleo"
+                                        >
+                                            <img
+                                                class="d-inline kategorije-hover"
+                                                src="/assets/icon/routes/speleo.svg"
+                                                alt=""
+                                            />
+                                            <div
+                                                class="d-inline d-block mt-2 text-c3"
+                                            >
+                                                Speleološke
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-3">
-                    <div class="image-center menu-btn kategorije-btn" id="hike">
-                      <img
-                        class="d-inline kategorije-hover"
-                        src="/assets/icon/routes/hike.svg"
-                        alt=""
-                      />
-                      <div class="d-inline d-block mt-2 text-c3">Pješačke</div>
-                    </div>
-                  </div>
-                  <div class="col-3">
-                    <div class="image-center menu-btn kategorije-btn" id="bike">
-                      <img
-                        class="d-inline kategorije-hover"
-                        src="/assets/icon/routes/bike.svg"
-                        alt=""
-                      />
-                      <div class="d-inline d-block mt-2 text-c3">
-                        Biciklističke
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-3">
-                    <div
-                      class="image-center menu-btn kategorije-btn"
-                      id="speleo"
-                    >
-                      <img
-                        class="d-inline kategorije-hover"
-                        src="/assets/icon/routes/speleo.svg"
-                        alt=""
-                      />
-                      <div class="d-inline d-block mt-2 text-c3">
-                        Speleološke
-                      </div>
-                    </div>
-                  </div>
+                    <!--Vikend destinacije-->
+                    <div id="destinationsAll" class="routes-scroll mt-5"></div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <!--Vikend destinacije-->
-          <div id="destinationsAll" class="routes-scroll mt-5"></div>
-        </div>
-        <!--Associations-->
-        <div id="assocsAll" class="assocs-scroll"></div>
-        <div id="assoc" class="list-group-flush">
-          <div id="destinationsAll" class="routes-scroll mt-5"></div>
-          <button
-            onclick="getAssoc(this.id)"
-            id="assoc1"
-            class="mt-5 list-group-item list-group-item-action mt-2 no-outline"
-          >
-            Planinarsko društvo 'Orlova Stina'
-          </button>
-          <small id="assoc1-text" class="p-3">
-            Justo vero magna clita sea et ea ea dolor elitr no. Sea gubergren
-            sed magna labore ipsum. Dolores amet sea.Girls of was his though
-            below given loathed lowly. Her on vast loathed eros he at lemans
-            flaunting, prose childe.
-            <div class="row">
-              <ul class="list-unstyled mb-0 mt-4 col-6">
-                <li class="mt-2">
-                  <div>
-                    <span class="text-muted">Predsjednik:</span
-                    ><span> Ivo Ivić</span>
-                  </div>
-                </li>
-                <li class="mt-2">
-                  <div>
-                    <span class="text-muted">Novosti:</span
-                    ><a href="www.facebook.com"> www.novosti.ba</a>
-                  </div>
-                </li>
-                <li class="mt-2">
-                  <div>
-                    <span class="text-muted">Postani član:</span
-                    ><a href="www.facebook.com"> www.clanstvo.ba</a>
-                  </div>
-                </li>
-              </ul>
-              <ul class="list-unstyled mb-0 mt-4 col-6">
-                <li class="mt-2">
-                  <img
-                    class="contact-image mr-2"
-                    src="assets/contact/phone.png"
-                    alt=""
-                  /><span>+387 63 123 456</span>
-                </li>
-                <li class="mt-2">
-                  <img
-                    class="contact-image mr-2"
-                    src="assets/contact/mail.png"
-                    alt=""
-                  /><span>udruga@gmail.com</span>
-                </li>
-                <li class="mt-2">
-                  <img
-                    class="contact-image mr-2"
-                    src="assets/contact/location.png"
-                    alt=""
-                  /><span>Ulica br., Tomislavgrad</span>
-                </li>
-                <li class="mt-2">
-                  <img
-                    class="contact-image mr-2"
-                    src="assets/contact/facebook.png"
-                    alt=""
-                  /><a href="www.facebook.com">www.facebook.com</a>
-                </li>
-              </ul>
-            </div>
-          </small>
-          <button
-            onclick="getAssoc(this.id)"
-            id="assoc2"
-            class="list-group-item list-group-item-action mt-2 no-outline"
-          >
-            Športsko društvo 'Buško blato'
-          </button>
-          <small id="assoc2-text" class="p-3">
-            Justo vero magna clita sea et ea ea dolor elitr no. Sea gubergren
-            sed magna labore ipsum. Dolores amet sea.Girls of was his though
-            below given loathed lowly. Her on vast loathed eros he at lemans
-            flaunting, prose childe.
-            <div class="row">
-              <ul class="list-unstyled mb-0 mt-4 col-6">
-                <li class="mt-2">
-                  <div>
-                    <span class="text-muted">Predsjednik:</span
-                    ><span> Mišo Renić</span>
-                  </div>
-                </li>
-                <li class="mt-2">
-                  <div>
-                    <span class="text-muted">Novosti:</span
-                    ><a href="www.facebook.com"> www.novosti.ba</a>
-                  </div>
-                </li>
-                <li class="mt-2">
-                  <div>
-                    <span class="text-muted">Postani član:</span
-                    ><a href="www.facebook.com"> www.clanstvo.ba</a>
-                  </div>
-                </li>
-              </ul>
-              <ul class="list-unstyled mb-0 mt-4 col-6">
-                <li class="mt-2">
-                  <img
-                    class="contact-image mr-2"
-                    src="assets/contact/phone.png"
-                    alt=""
-                  /><span>+387 63 123 456</span>
-                </li>
-                <li class="mt-2">
-                  <img
-                    class="contact-image mr-2"
-                    src="assets/contact/mail.png"
-                    alt=""
-                  /><span>udruga@gmail.com</span>
-                </li>
-                <li class="mt-2">
-                  <img
-                    class="contact-image mr-2"
-                    src="assets/contact/location.png"
-                    alt=""
-                  /><span>Kazaginac b.b., Tomislavgrad</span>
-                </li>
-                <li class="mt-2">
-                  <img
-                    class="contact-image mr-2"
-                    src="assets/contact/facebook.png"
-                    alt=""
-                  /><a href="www.facebook.com">www.facebook.com</a>
-                </li>
-              </ul>
-            </div>
-          </small>
-          <button
-            onclick="getAssoc(this.id)"
-            id="assoc3"
-            class="list-group-item list-group-item-action mt-2 no-outline"
-          >
-            Lovačka udruga 'Zavelim'
-          </button>
-          <small id="assoc3-text" class="p-3">
-            Justo vero magna clita sea et ea ea dolor elitr no. Sea gubergren
-            sed magna labore ipsum. Dolores amet sea.Girls of was his though
-            below given loathed lowly. Her on vast loathed eros he at lemans
-            flaunting, prose childe.
-            <div class="row">
-              <ul class="list-unstyled mb-0 mt-4 col-6">
-                <li class="mt-2">
-                  <div>
-                    <span class="text-muted">Predsjednik:</span
-                    ><span> Marijo Sušilović</span>
-                  </div>
-                </li>
-                <li class="mt-2">
-                  <div>
-                    <span class="text-muted">Novosti:</span
-                    ><a href="www.facebook.com"> www.novosti.ba</a>
-                  </div>
-                </li>
-                <li class="mt-2">
-                  <div>
-                    <span class="text-muted">Postani član:</span
-                    ><a href="www.facebook.com"> www.clanstvo.ba</a>
-                  </div>
-                </li>
-              </ul>
-              <ul class="list-unstyled mb-0 mt-4 col-6">
-                <li class="mt-2">
-                  <img
-                    class="contact-image mr-2"
-                    src="assets/contact/phone.png"
-                    alt=""
-                  /><span>+387 63 123 456</span>
-                </li>
-                <li class="mt-2">
-                  <img
-                    class="contact-image mr-2"
-                    src="assets/contact/mail.png"
-                    alt=""
-                  /><span>udruga@gmail.com</span>
-                </li>
-                <li class="mt-2">
-                  <img
-                    class="contact-image mr-2"
-                    src="assets/contact/location.png"
-                    alt=""
-                  /><span>Roško Polje b.b., Tomislavgrad</span>
-                </li>
-                <li class="mt-2">
-                  <img
-                    class="contact-image mr-2"
-                    src="assets/contact/facebook.png"
-                    alt=""
-                  /><a href="www.facebook.com">www.facebook.com</a>
-                </li>
-              </ul>
-            </div>
-          </small>
-          <button
-            onclick="getAssoc(this.id)"
-            id="assoc4"
-            class="list-group-item list-group-item-action mt-2 no-outline"
-          >
-            Duhovno-humanitarna udruga 'Kap ljubavi'
-          </button>
-          <small id="assoc4-text" class="p-3">
-            Justo vero magna clita sea et ea ea dolor elitr no. Sea gubergren
-            sed magna labore ipsum. Dolores amet sea.Girls of was his though
-            below given loathed lowly. Her on vast loathed eros he at lemans
-            flaunting, prose childe.
-            <div class="row">
-              <ul class="list-unstyled mb-0 mt-4 col-6">
-                <li class="mt-2">
-                  <div>
-                    <span class="text-muted">Predsjednik:</span
-                    ><span> fra Jozo Radoš Đoka</span>
-                  </div>
-                </li>
-                <li class="mt-2">
-                  <div>
-                    <span class="text-muted">Novosti:</span
-                    ><a href="www.facebook.com"> www.novosti.ba</a>
-                  </div>
-                </li>
-                <li class="mt-2">
-                  <div>
-                    <span class="text-muted">Postani član:</span
-                    ><a href="www.facebook.com"> www.clanstvo.ba</a>
-                  </div>
-                </li>
-              </ul>
-              <ul class="list-unstyled mb-0 mt-4 col-6">
-                <li class="mt-2">
-                  <img
-                    class="contact-image mr-2"
-                    src="assets/contact/phone.png"
-                    alt=""
-                  /><span>+387 63 123 456</span>
-                </li>
-                <li class="mt-2">
-                  <img
-                    class="contact-image mr-2"
-                    src="assets/contact/mail.png"
-                    alt=""
-                  /><span>udruga@gmail.com</span>
-                </li>
-                <li class="mt-2">
-                  <img
-                    class="contact-image mr-2"
-                    src="assets/contact/location.png"
-                    alt=""
-                  /><span>Stjepana Radića b.b., Tomislavgrad</span>
-                </li>
-                <li class="mt-2">
-                  <img
-                    class="contact-image mr-2"
-                    src="assets/contact/facebook.png"
-                    alt=""
-                  /><a href="www.facebook.com">www.facebook.com</a>
-                </li>
-              </ul>
-            </div>
-          </small>
-        </div>
-
-        <!--Busines-->
-        <div id="business">
-          <img
-            class="illustration p-4"
-            src="/assets/illustrations/business.svg"
-            alt=""
-          />
-        </div>
-      </div>
-      <!-- /#sidebar-wrapper-->
-
-      <!-- Page Content -->
-      <div id="page-content-wrapper">
-        <!-- <div class="container-fluid p-0"> -->
-          <div id="map" class="map"></div>
-          <div id="div-toggle" class="position-absolute z-index center-toggle">
-            <div class="change" onclick="toggle(this)" id="menu-toggle">
-              <div class="bar1"></div>
-              <div class="bar2"></div>
-              <div class="bar3"></div>
-            </div>
-          </div>
-          <a href="index.html">
-            <img
-              id="logo"
-              src="assets/logo/logo_figma.svg"
-              class="mt-0 mr-0 mb-0 ml-0 p-0 position-absolute logo logo-toggle pointer-cursor"
-              alt="TomislavGuides"
-            />
-          </a>
-          <div
-            class="dropdown dropdown-layer position-absolute dropdown-menu-right"
-          >
-            <button
-              class="bg-transparent border-0 no-outline"
-              type="button"
-              id="dropdownMenuButton"
-              data-toggle=""
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              <img
-                onclick="slojevi()"
-                class="mobile-scale"
-                src="/assets/icon/layers.svg"
-                alt=""
-              />
-            </button>
-            <div
-              id="dropdown-menu"
-              class="dropdown-menu2 dropdown-menu-right border-0 p-0 top-0"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <div class="w-100">
-                <img
-                  id="slojevi-close"
-                  class="layer-close-btn"
-                  src="assets/icon/close.svg"
-                  alt=""
-                />
-              </div>
-              <div
-                id="slojevi"
-                class="container-fluid mt-5-m mb-5-m cursor-pointer position-relative p-0-2-m"
-              >
-                <div class="text-left mt-5 text-font">Slojevi</div>
-                <!-- <div class="p-2"> -->
-                  <div class="box" id="zastaveOpcinaBox">
-                    <input
-                      id="zastaveOpcina"
-                      type="checkbox"
-                      onclick="zastaveOpcina()"
-                    />
-                    <span class="check"></span>
-                    <label for="zastaveOpcina" class="text-left"
-                      >Općina</label
+                <!--Associations-->
+                <div id="assocsAll" class="assocs-scroll"></div>
+                <div id="assoc" class="list-group-flush">
+                    <div id="destinationsAll" class="routes-scroll mt-5"></div>
+                    <button
+                        onclick="getAssoc(this.id)"
+                        id="assoc1"
+                        class="mt-5 list-group-item list-group-item-action mt-2 no-outline"
                     >
-                  </div>
-                  <!--<div class="box">
+                        Planinarsko društvo 'Orlova Stina'
+                    </button>
+                    <small id="assoc1-text" class="p-3">
+                        Justo vero magna clita sea et ea ea dolor elitr no. Sea
+                        gubergren sed magna labore ipsum. Dolores amet sea.Girls
+                        of was his though below given loathed lowly. Her on vast
+                        loathed eros he at lemans flaunting, prose childe.
+                        <div class="row">
+                            <ul class="list-unstyled mb-0 mt-4 col-6">
+                                <li class="mt-2">
+                                    <div>
+                                        <span class="text-muted"
+                                            >Predsjednik:</span
+                                        ><span> Ivo Ivić</span>
+                                    </div>
+                                </li>
+                                <li class="mt-2">
+                                    <div>
+                                        <span class="text-muted">Novosti:</span
+                                        ><a href="www.facebook.com">
+                                            www.novosti.ba</a
+                                        >
+                                    </div>
+                                </li>
+                                <li class="mt-2">
+                                    <div>
+                                        <span class="text-muted"
+                                            >Postani član:</span
+                                        ><a href="www.facebook.com">
+                                            www.clanstvo.ba</a
+                                        >
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled mb-0 mt-4 col-6">
+                                <li class="mt-2">
+                                    <img
+                                        class="contact-image mr-2"
+                                        src="assets/contact/phone.png"
+                                        alt=""
+                                    /><span>+387 63 123 456</span>
+                                </li>
+                                <li class="mt-2">
+                                    <img
+                                        class="contact-image mr-2"
+                                        src="assets/contact/mail.png"
+                                        alt=""
+                                    /><span>udruga@gmail.com</span>
+                                </li>
+                                <li class="mt-2">
+                                    <img
+                                        class="contact-image mr-2"
+                                        src="assets/contact/location.png"
+                                        alt=""
+                                    /><span>Ulica br., Tomislavgrad</span>
+                                </li>
+                                <li class="mt-2">
+                                    <img
+                                        class="contact-image mr-2"
+                                        src="assets/contact/facebook.png"
+                                        alt=""
+                                    /><a href="www.facebook.com"
+                                        >www.facebook.com</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </small>
+                    <button
+                        onclick="getAssoc(this.id)"
+                        id="assoc2"
+                        class="list-group-item list-group-item-action mt-2 no-outline"
+                    >
+                        Športsko društvo 'Buško blato'
+                    </button>
+                    <small id="assoc2-text" class="p-3">
+                        Justo vero magna clita sea et ea ea dolor elitr no. Sea
+                        gubergren sed magna labore ipsum. Dolores amet sea.Girls
+                        of was his though below given loathed lowly. Her on vast
+                        loathed eros he at lemans flaunting, prose childe.
+                        <div class="row">
+                            <ul class="list-unstyled mb-0 mt-4 col-6">
+                                <li class="mt-2">
+                                    <div>
+                                        <span class="text-muted"
+                                            >Predsjednik:</span
+                                        ><span> Mišo Renić</span>
+                                    </div>
+                                </li>
+                                <li class="mt-2">
+                                    <div>
+                                        <span class="text-muted">Novosti:</span
+                                        ><a href="www.facebook.com">
+                                            www.novosti.ba</a
+                                        >
+                                    </div>
+                                </li>
+                                <li class="mt-2">
+                                    <div>
+                                        <span class="text-muted"
+                                            >Postani član:</span
+                                        ><a href="www.facebook.com">
+                                            www.clanstvo.ba</a
+                                        >
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled mb-0 mt-4 col-6">
+                                <li class="mt-2">
+                                    <img
+                                        class="contact-image mr-2"
+                                        src="assets/contact/phone.png"
+                                        alt=""
+                                    /><span>+387 63 123 456</span>
+                                </li>
+                                <li class="mt-2">
+                                    <img
+                                        class="contact-image mr-2"
+                                        src="assets/contact/mail.png"
+                                        alt=""
+                                    /><span>udruga@gmail.com</span>
+                                </li>
+                                <li class="mt-2">
+                                    <img
+                                        class="contact-image mr-2"
+                                        src="assets/contact/location.png"
+                                        alt=""
+                                    /><span>Kazaginac b.b., Tomislavgrad</span>
+                                </li>
+                                <li class="mt-2">
+                                    <img
+                                        class="contact-image mr-2"
+                                        src="assets/contact/facebook.png"
+                                        alt=""
+                                    /><a href="www.facebook.com"
+                                        >www.facebook.com</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </small>
+                    <button
+                        onclick="getAssoc(this.id)"
+                        id="assoc3"
+                        class="list-group-item list-group-item-action mt-2 no-outline"
+                    >
+                        Lovačka udruga 'Zavelim'
+                    </button>
+                    <small id="assoc3-text" class="p-3">
+                        Justo vero magna clita sea et ea ea dolor elitr no. Sea
+                        gubergren sed magna labore ipsum. Dolores amet sea.Girls
+                        of was his though below given loathed lowly. Her on vast
+                        loathed eros he at lemans flaunting, prose childe.
+                        <div class="row">
+                            <ul class="list-unstyled mb-0 mt-4 col-6">
+                                <li class="mt-2">
+                                    <div>
+                                        <span class="text-muted"
+                                            >Predsjednik:</span
+                                        ><span> Marijo Sušilović</span>
+                                    </div>
+                                </li>
+                                <li class="mt-2">
+                                    <div>
+                                        <span class="text-muted">Novosti:</span
+                                        ><a href="www.facebook.com">
+                                            www.novosti.ba</a
+                                        >
+                                    </div>
+                                </li>
+                                <li class="mt-2">
+                                    <div>
+                                        <span class="text-muted"
+                                            >Postani član:</span
+                                        ><a href="www.facebook.com">
+                                            www.clanstvo.ba</a
+                                        >
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled mb-0 mt-4 col-6">
+                                <li class="mt-2">
+                                    <img
+                                        class="contact-image mr-2"
+                                        src="assets/contact/phone.png"
+                                        alt=""
+                                    /><span>+387 63 123 456</span>
+                                </li>
+                                <li class="mt-2">
+                                    <img
+                                        class="contact-image mr-2"
+                                        src="assets/contact/mail.png"
+                                        alt=""
+                                    /><span>udruga@gmail.com</span>
+                                </li>
+                                <li class="mt-2">
+                                    <img
+                                        class="contact-image mr-2"
+                                        src="assets/contact/location.png"
+                                        alt=""
+                                    /><span
+                                        >Roško Polje b.b., Tomislavgrad</span
+                                    >
+                                </li>
+                                <li class="mt-2">
+                                    <img
+                                        class="contact-image mr-2"
+                                        src="assets/contact/facebook.png"
+                                        alt=""
+                                    /><a href="www.facebook.com"
+                                        >www.facebook.com</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </small>
+                    <button
+                        onclick="getAssoc(this.id)"
+                        id="assoc4"
+                        class="list-group-item list-group-item-action mt-2 no-outline"
+                    >
+                        Duhovno-humanitarna udruga 'Kap ljubavi'
+                    </button>
+                    <small id="assoc4-text" class="p-3">
+                        Justo vero magna clita sea et ea ea dolor elitr no. Sea
+                        gubergren sed magna labore ipsum. Dolores amet sea.Girls
+                        of was his though below given loathed lowly. Her on vast
+                        loathed eros he at lemans flaunting, prose childe.
+                        <div class="row">
+                            <ul class="list-unstyled mb-0 mt-4 col-6">
+                                <li class="mt-2">
+                                    <div>
+                                        <span class="text-muted"
+                                            >Predsjednik:</span
+                                        ><span> fra Jozo Radoš Đoka</span>
+                                    </div>
+                                </li>
+                                <li class="mt-2">
+                                    <div>
+                                        <span class="text-muted">Novosti:</span
+                                        ><a href="www.facebook.com">
+                                            www.novosti.ba</a
+                                        >
+                                    </div>
+                                </li>
+                                <li class="mt-2">
+                                    <div>
+                                        <span class="text-muted"
+                                            >Postani član:</span
+                                        ><a href="www.facebook.com">
+                                            www.clanstvo.ba</a
+                                        >
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled mb-0 mt-4 col-6">
+                                <li class="mt-2">
+                                    <img
+                                        class="contact-image mr-2"
+                                        src="assets/contact/phone.png"
+                                        alt=""
+                                    /><span>+387 63 123 456</span>
+                                </li>
+                                <li class="mt-2">
+                                    <img
+                                        class="contact-image mr-2"
+                                        src="assets/contact/mail.png"
+                                        alt=""
+                                    /><span>udruga@gmail.com</span>
+                                </li>
+                                <li class="mt-2">
+                                    <img
+                                        class="contact-image mr-2"
+                                        src="assets/contact/location.png"
+                                        alt=""
+                                    /><span
+                                        >Stjepana Radića b.b.,
+                                        Tomislavgrad</span
+                                    >
+                                </li>
+                                <li class="mt-2">
+                                    <img
+                                        class="contact-image mr-2"
+                                        src="assets/contact/facebook.png"
+                                        alt=""
+                                    /><a href="www.facebook.com"
+                                        >www.facebook.com</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </small>
+                </div>
+
+                <!--Busines-->
+                <div id="business">
+                    <img
+                        class="illustration p-4"
+                        src="/assets/illustrations/business.svg"
+                        alt=""
+                    />
+                </div>
+            </div>
+            <!-- /#sidebar-wrapper-->
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <!-- <div class="container-fluid p-0"> -->
+                <div id="map" class="map"></div>
+                <div
+                    id="div-toggle"
+                    class="position-absolute z-index center-toggle"
+                >
+                    <div class="change" onclick="toggle(this)" id="menu-toggle">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </div>
+                <a href="index.html">
+                    <img
+                        id="logo"
+                        src="assets/logo/logo_figma.svg"
+                        class="mt-0 mr-0 mb-0 ml-0 p-0 position-absolute logo logo-toggle pointer-cursor"
+                        alt="TomislavGuides"
+                    />
+                </a>
+                <div
+                    class="dropdown dropdown-layer position-absolute dropdown-menu-right"
+                >
+                    <button
+                        class="bg-transparent border-0 no-outline"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-toggle=""
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                    >
+                        <img
+                            onclick="slojevi()"
+                            class="mobile-scale"
+                            src="/assets/icon/layers.svg"
+                            alt=""
+                        />
+                    </button>
+                    <div
+                        id="dropdown-menu"
+                        class="dropdown-menu2 dropdown-menu-right border-0 p-0 top-0"
+                        aria-labelledby="dropdownMenuButton"
+                    >
+                        <div class="w-100">
+                            <img
+                                id="slojevi-close"
+                                class="layer-close-btn"
+                                src="assets/icon/close.svg"
+                                alt=""
+                            />
+                        </div>
+                        <div
+                            id="slojevi"
+                            class="container-fluid mt-5-m mb-5-m cursor-pointer position-relative p-0-2-m"
+                        >
+                            <div class="text-left mt-5 text-font">Slojevi</div>
+                            <!-- <div class="p-2"> -->
+                            <div class="box" id="zastaveOpcinaBox">
+                                <input
+                                    id="zastaveOpcina"
+                                    type="checkbox"
+                                    onclick="zastaveOpcina()"
+                                />
+                                <span class="check"></span>
+                                <label for="zastaveOpcina" class="text-left"
+                                    >Općina</label
+                                >
+                            </div>
+                            <!--<div class="box">
                   <input id="naseljaTomislavgrad" type="checkbox" onclick="naselja()">
                   <span class="check"></span>
                   <label for="naseljaTomislavgrad" class="w-100 text-left">Naselja</label>
                 </div>-->
-                  <div class="box">
-                    <input id="vjerski" type="checkbox" onclick="vjerski()" />
-                    <span class="check"></span>
-                    <label for="vjerski" class="text-left"
-                      >Vjerski objekti</label
-                    >
-                  </div>
-                  <div class="box">
-                    <input
-                      id="znamenitosti"
-                      type="checkbox"
-                      onclick="znamenitosti()"
-                    />
-                    <span class="check"></span>
-                    <label for="znamenitosti" class=" text-left"
-                      >Znamenitosti</label
-                    >
-                  </div>
-                <!-- </div> -->
-              </div>
-              <div
-                id="podloge"
-                class="container-fluid mb-4 cursor-pointer position-relative p-0-2-m"
-              >
-                <div class="text-left mb-3 mt-4 text-font">Podloge</div>
-                <div class="row">
-                  <div class="col-6">
-                    <div class="image-center menu-btn" onclick="basemapTopo()">
-                      <div id="topo" class="bg-topo center"></div>
-                      <div class="d-inline d-block mt-2 text-c3">Topo</div>
+                            <div class="box">
+                                <input
+                                    id="vjerski"
+                                    type="checkbox"
+                                    onclick="vjerski()"
+                                />
+                                <span class="check"></span>
+                                <label for="vjerski" class="text-left"
+                                    >Vjerski objekti</label
+                                >
+                            </div>
+                            <div class="box">
+                                <input
+                                    id="znamenitosti"
+                                    type="checkbox"
+                                    onclick="znamenitosti()"
+                                />
+                                <span class="check"></span>
+                                <label for="znamenitosti" class="text-left"
+                                    >Znamenitosti</label
+                                >
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        <div
+                            id="podloge"
+                            class="container-fluid mb-4 cursor-pointer position-relative p-0-2-m"
+                        >
+                            <div class="text-left mb-3 mt-4 text-font">
+                                Podloge
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div
+                                        class="image-center menu-btn"
+                                        onclick="basemapTopo()"
+                                    >
+                                        <div
+                                            id="topo"
+                                            class="bg-topo center"
+                                        ></div>
+                                        <div
+                                            class="d-inline d-block mt-2 text-c3"
+                                        >
+                                            Topo
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div
+                                        class="image-center menu-btn"
+                                        onclick="basemapSatellite()"
+                                    >
+                                        <div
+                                            id="satellite"
+                                            class="bg-satellite center activate-baselayer"
+                                        ></div>
+                                        <div
+                                            class="d-inline d-block mt-2 text-c3"
+                                        >
+                                            Satelit
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-6">
-                    <div
-                      class="image-center menu-btn"
-                      onclick="basemapSatellite()"
-                    >
-                      <div
-                        id="satellite"
-                        class="bg-satellite center activate-baselayer"
-                      ></div>
-                      <div class="d-inline d-block mt-2 text-c3">Satelit</div>
-                    </div>
-                  </div>
                 </div>
-              </div>
+                <button
+                    onclick="zoomOut()"
+                    class="zoom-extents bg-transparent position-absolute border-0 no-outline d-block mt-5"
+                    type="button"
+                >
+                    <img
+                        class="mobile-scale"
+                        src="/assets/icon/zoomOut.svg"
+                        alt=""
+                    />
+                </button>
+                <button
+                    onclick="toHome()"
+                    class="info bg-transparent position-absolute border-0 no-outline d-block"
+                    type="button"
+                >
+                    <img
+                        class="mobile-scale"
+                        src="/assets/icon/info.svg"
+                        alt=""
+                    />
+                </button>
+                <!-- </div> -->
+                <button
+                    onclick="toggle(document.getElementById('menu-toggle'))"
+                    class="routes-arrow bg-transparent position-absolute border-0 no-outline p-0 hidden"
+                    type="button"
+                >
+                    <img
+                        class="mobile-scale"
+                        src="/assets/icon/routes-arrow.svg"
+                        alt=""
+                    />
+                </button>
             </div>
-          </div>
-          <button
-            onclick="zoomOut()"
-            class="zoom-extents bg-transparent position-absolute border-0 no-outline d-block mt-5"
-            type="button"
-          >
-            <img class="mobile-scale" src="/assets/icon/zoomOut.svg" alt="" />
-          </button>
-          <button
-            onclick="toHome()"
-            class="info bg-transparent position-absolute border-0 no-outline d-block"
-            type="button"
-          >
-            <img class="mobile-scale" src="/assets/icon/info.svg" alt="" />
-          </button>
-        <!-- </div> -->
-        <button
-          onclick="toggle(document.getElementById('menu-toggle'))"
-          class="routes-arrow bg-transparent position-absolute border-0 no-outline p-0 hidden"
-          type="button"
-        >
-          <img
-            class="mobile-scale"
-            src="/assets/icon/routes-arrow.svg"
-            alt=""
-          />
-        </button>
-      </div>
-      <!-- /#page-content-wrapper-->
-    </div>
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <!-- /#page-content-wrapper-->
+        </div>
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script src="ol-ext/ol-ext.js"></script>
-    <script
-      src="assets/landmarks/vjerskiObjekti.js"
-      type="text/javascript"
-    ></script>
-    <script src="assets/landmarks/landmarks.js" type="text/javascript"></script>
-    <script src="assets/tours/routes.js" type="text/javascript"></script>
-    <script src="assets/landmarks/assocs.js" type="text/javascript"></script>
-    <script src="js/main.js" type="text/javascript"></script>
-    <!-- /#wrapper -->
+        <script src="ol-ext/ol-ext.js"></script>
+        <script
+            src="assets/landmarks/vjerskiObjekti.js"
+            type="text/javascript"
+        ></script>
+        <script
+            src="assets/landmarks/landmarks.js"
+            type="text/javascript"
+        ></script>
+        <script src="assets/tours/routes.js" type="text/javascript"></script>
+        <script
+            src="assets/landmarks/assocs.js"
+            type="text/javascript"
+        ></script>
+        <script src="js/main.js" type="text/javascript"></script>
+        <!-- /#wrapper -->
 
-    <!-- Menu Toggle Script -->
-    <script>
-      $(document).ready(function () {
-        $('[data-toggle="popover"]').popover();
-      });
-    </script>
-  </body>
+        <!-- Menu Toggle Script -->
+        <script>
+            $(document).ready(function () {
+                $('[data-toggle="popover"]').popover();
+            });
+        </script>
+    </body>
 </html>
