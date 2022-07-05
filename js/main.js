@@ -1966,7 +1966,7 @@ var vector = new ol.layer.Vector({
     source: vectorSource,
     declutter: true,
     style: function (feature, resolution) {
-        return getFeatureStyle(feature, resolution, false, '#7084b2');
+        return getFeatureStyle(feature, resolution, false, '#fff');
     }
 });
 var nature = new ol.layer.Vector({
@@ -1975,7 +1975,7 @@ var nature = new ol.layer.Vector({
     source: natureSource,
     declutter: true,
     style: function (feature, resolution) {
-        return getFeatureStyle(feature, resolution, false, '#70cdce');
+        return getFeatureStyle(feature, resolution, false, '#fff');
     }
 });
 var tourist = new ol.layer.Vector({
