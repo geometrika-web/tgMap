@@ -105,8 +105,111 @@ a {
     height: 100vh;
     width: 100vw;
     /* background-color: #fff; */
-    /* background-image: url("/assets/img/00home_min.jpg"); */
-    background-size: cover;
+    /* background-image: url('/assets/img/00home_min.jpg');
+    background-size: cover; */
+}
+#info {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+    background-color: #fff;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* background-image: url('/assets/img/00home_min.jpg');
+    background-size: cover; */
+}
+.info-row {
+    position: relative;
+    top: 100px;
+    padding: 0 5rem;
+}
+.info-col {
+    margin: 0 1rem;
+}
+.info-title {
+    margin-left: 0rem;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+.info-text {
+    /* margin: 1rem 1rem; */
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    z-index: 100;
+    margin-bottom: 1.5rem;
+}
+.info-img {
+    margin-top: 4rem;
+    min-width: 100vw;
+    height: auto;
+}
+.info-btn {
+    position: relative;
+    background-color: #ffc107;
+    color: #fff;
+    margin-top: 2rem;
+    font-weight: 700;
+    font-size: 12px;
+    background-color: #fdc82f;
+    color: rgb(0, 0, 0);
+    width: 200px;
+    line-height: 50px;
+    border-radius: 3px;
+    display: inherit;
+    cursor: pointer;
+    padding-left: 1.5rem;
+}
+
+.info-btn:before {
+    content: '';
+    width: 25px;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    right: 24px;
+    transition: all 0.3s ease;
+}
+
+.info-btn:hover:before {
+    right: 34px;
+    width: 35px;
+}
+
+.info-btn:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-color: transparent transparent transparent #000;
+    position: absolute;
+    top: 50%;
+    margin-top: -5px;
+    right: 20px;
+    transition: all 0.3s ease;
+}
+
+.info-btn:hover:after {
+    right: 34px;
+    right: 30px;
+}
+@media (max-width: 575.99px) {
+    .info-img {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .info-row {
+        padding: 0;
+    }
+}
+.container {
+    max-width: unset;
 }
 #coverImg {
     position: absolute;
@@ -121,7 +224,13 @@ a {
     transform: translate(-50%);
     z-index: 1000000000000;
 }
-
+#info-logo {
+    position: relative;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1000000000000;
+}
 .home-filter {
     opacity: 0;
 }

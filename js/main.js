@@ -1573,7 +1573,7 @@ window.onload = function () {
     $('#preloader').slideUp(1000);
     $('#homeLogo').addClass('home-filter');
     if (sessionStorage.home == 1) {
-        document.getElementById('home').style.display = 'none';
+        document.getElementById('info').style.display = 'none';
         document.getElementById('homeLogo').style.display = 'none';
     }
     /* console.log(
@@ -1609,14 +1609,17 @@ console.log(landmarkAllList[0]);
 function toMap() {
     //toggle(document.getElementById('menu-toggle'))
     $('#homeLogo').fadeOut(1000);
-    $('#home').fadeOut(1000);
+
+    $('#info').fadeOut(1000);
     sessionStorage.home = 1;
 }
 
 function toHome() {
     //toggle.delay(500)(document.getElementById('menu-toggle'))
-    $('#homeLogo').slideToggle(1000);
-    $('#home').slideToggle(300);
+    // $('#homeLogo').slideToggle(1000);
+    console.log($('#info'));
+
+    $('#info').slideToggle(300);
     sessionStorage.home = 2;
 }
 
