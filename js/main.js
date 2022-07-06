@@ -1572,10 +1572,10 @@ window.onload = function () {
     //})
     $('#preloader').slideUp(1000);
     $('#homeLogo').addClass('home-filter');
-    if (sessionStorage.home == 1) {
+    /* if (sessionStorage.home == 1) {
         document.getElementById('info').style.display = 'none';
         document.getElementById('homeLogo').style.display = 'none';
-    }
+    } */
     /* console.log(
     landmarkAllList.sort(function (a, b) {
       console.log(a.innerHTML);
@@ -1611,7 +1611,7 @@ function toMap() {
     $('#homeLogo').fadeOut(1000);
 
     $('#info').fadeOut(1000);
-    sessionStorage.home = 1;
+    // sessionStorage.home = 1;
 }
 
 function toHome() {
@@ -1620,9 +1620,9 @@ function toHome() {
     console.log($('#info'));
 
     $('#info').slideToggle(300);
-    sessionStorage.home = 2;
+    // sessionStorage.home = 2;
 }
-
+$('#info').fadeOut();
 //Kontrola popisa znamenitosti------------------------------
 
 const kategorijeBtns = document.querySelectorAll('.kategorije-btn');
