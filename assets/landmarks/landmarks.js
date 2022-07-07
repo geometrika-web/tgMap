@@ -30,17 +30,41 @@ var touristData = {
             type: 'Feature',
             geometry: {
                 type: 'Point',
-                coordinates: [17.225290569468847, 43.71927553754601]
+                coordinates: [17.224871, 43.72168]
             },
             properties: {
-                name: '19. festival srednjoškolskog teatra BiH',
-                place: '21. lipnja 2022.  ·  Kinodvorana KIC-a',
-                about: 'Tomislavgrad  očekuje izuzetno značajna kulturna manifestacija posvećena isključivo mladim ljudima. Naime, u ovom gradu organizirat će se 19. Festival srednjoškolskog teatra Bosne i Hercegovine. <br><br>Ovaj događaj upriličit će se na sam Svjetski dan glazbe, 21. lipnja. Do sada je Festival organiziran u Konjicu, Mostaru, Goraždu, Travniku i Živinicama. Vrijeme je da i Tomislavgrad pokaže svoje “daske koje život znače” i bude domaćin istome.<br><br>Svojim predstavama, mladi ljudi, srednjoškolci, će nam se predstaviti kroz predstave koje će se odvijati čitav dan u kinodvorani Kulturno informativnog centra Tomislavgrad. Festival je programski i estetski profiliran u duhu osnovnih principa dramske pedagogije. Stručni žiri na kraju Festivala nagradit će najzanimljivija pojedinačna i kolektivna ostvarenja.<br><br>Zanimljiv repertoar i nivo kvaliteta koji su dostigli mladi glumci amateri jamči Vam odličnu zabavu za publiku, najavljuju organizatori. Festival organiziraju Centar za dramski odgoj iz Mostara i Kulturno informativni centar Tomislavgrad. Glavni pokrovitelj ovog događaja je Općina Tomislavgrad.<br><br>Na kraju moramo reći kako su Kulturno informativni centar Tomislavgrad kao i naša Škola mjuzikla i glume svojim predanim radom zaslužili ovakav događaj te vjerujemo kako ćemo na ovaj način podići još na veću razinu dramsku umjetnost kao i rad s mladima.',
-                img: '/assets/img/19festivalTeatra.jpg',
-                img2: '/assets/img/19festivalTeatra.jpg',
-                img3: '/assets/img/19festivalTeatra3.jpg',
-                img4: '/assets/img/19festivalTeatra2.jpg',
-                img5: '/assets/img/19festivalTeatra4.jpg',
+                name: 'Koncert Jasne Zlokić',
+                place: '10. srpnja 2022. · 18 h ·  Ispred spomen bazilike',
+                about: 'Deseti, središnji i završni dan tradicionalne duhovno-kulturne manifestacije “Dani sv. Nikole Tavelića” bit će nedjelju, 10. srpnja, 2022. godine.<br><br>U 10:00 sati održat će se procesija gradskim ulicama, a nakon toga svečano misno slavlje ispred Spomen bazilike, koje će predvoditi biskup mostarsko–duvanjski, mons. Petar Palić.<br><br>U predvečerje, u 18:00 sati ispred Spomen bazilike koncert će održati poznata hrvatska pjevačica Jasna Zlokić, čiji nastup i pjesme koje izvodi posebno će obradovati publiku srednje generacije, da ne kažemo malo starije. Njezina je, sigurni smo, najpopularnija i najizvođenija pjesma “Skitnica”, koja s godina postaje sve popularnija,',
+                img: '/assets/img/koncertJasnaZlokic.jpg',
+                img2: '/assets/img/koncertJasnaZlokic1.jpg',
+                img3: '/assets/img/koncertJasnaZlokic2.jpg',
+                img4: '/assets/img/koncertJasnaZlokic3.jpg',
+                img5: '/assets/img/koncertJasnaZlokic4.jpg',
+                zoom: '17.8',
+                id: 'turizam',
+                thumb: '/assets/icon/kategorije_event.svg',
+                pin: '/assets/icon/landmarks/turistickaPonuda_pin.svg',
+                i360: '0',
+                googleMaps:
+                    'https://www.google.com/maps/place/Hajdu%C4%8Dke+vrleti/@43.653291,17.5311293,2498m/data=!3m1!1e3!4m8!3m7!1s0x475f628a4e1249f1:0x5bc6ecfb06098586!5m2!4m1!1i2!8m2!3d43.6530877!4d17.5330123'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [17.225279, 43.718993]
+            },
+            properties: {
+                name: 'Ususret tisuću i stotoj obljetnici hrvatskog kraljevstva',
+                place: '7. srpnja 2022. · 20 h ·  Trg gange i hajdučke družine',
+                about: 'Na Trgu gange i hajdučke družine u Tomislavgradu najavljen je bogat program u susret 1100 obljetnice Hrvatskog kraljevstva i krunidbe kralja Tomislava na Duvanjskom polju. Kao gosti nastupit će Sandra Bagarić i Đani Stipaničev uz klavirsku pratnju Darka Domitrovića te razne folklorne skupine, a Nives Ivanković čitat će prikladne tekstove.',
+                img: '/assets/img/tisucu.jpg',
+                img2: '/assets/img/tisucu1.jpg',
+                img3: '/assets/img/tisucu2.jpg',
+                img4: '/assets/img/tisucu3.jpg',
+                img5: '/assets/img/tisucu4.jpg',
                 zoom: '20',
                 id: 'turizam',
                 thumb: '/assets/icon/kategorije_event.svg',
@@ -54,17 +78,17 @@ var touristData = {
             type: 'Feature',
             geometry: {
                 type: 'Point',
-                coordinates: [17.225179, 43.719093]
+                coordinates: [17.225079, 43.719193]
             },
             properties: {
-                name: 'Svjetski dan glazbe',
-                place: '28. lipnja 2022.  ·  Kinodvorana KIC-a, Trg gange i hajdučke družine',
-                about: 'Dragi naši, iako je službeno međunarodni dan glazbe bio 21. lipnja, zbog preuzetih obaveza oko organizacije 19. međunarodnog festivala srednjoškolskog teatra BiH, našu manifestaciju "Svjetski dan glazbe Tomislavgrad 2022." smo prebacili na sljedeći utorak 28. lipnja 2022.<br><br>Program započinje u 18:00 sati mjuziklom Matilda kojeg će polaznici Škole mjuzikla i glume KIC-a izvesti u našoj kino dvorani.<br><br>Od 19:30 sati na Trgu gange i hajdučke družine plesom će nas zabaviti Tomislavgradske mažoretkinje, a nakon toga imat ćete priliku poslušat nastup Puhačkog orkestra KIC-a.<br><br>Za dobru svirku na našem trgu pobrinut će se bendovi "Krivi smjer" i "Brig".<br><br>Ulaznice za mjuzikl su od jutros u prodaji u KIC-u, knjižari "ANIV", i trgovini igračaka "FILIP" po cijeni od 5KM.',
-                img: '/assets/img/svjetskiDanGlazbe.jpg',
-                img2: '/assets/img/svjetskiDanGlazbe.jpg',
-                img3: '/assets/img/svjetskiDanGlazbe.jpg',
-                img4: '/assets/img/svjetskiDanGlazbe.jpg',
-                img5: '/assets/img/svjetskiDanGlazbe.jpg',
+                name: 'Deveta revija tradicijske odjeće i Koncert klape Intrade',
+                place: '8. srpnja 2022. · 19 h ·  Trg gange i hajdučke družine',
+                about: 'U sklopu manifestacije "Dani sv. Nikole Tavelića" u Tomislavgradu 8. srpnja se obilježava i Dan općine u spomen na 1924. godinu, kada je u čast tisućite obljetnice krunidbe kralja Tomislava položen kamen temeljac za izgradnju duvanjske bazilike.<br><br>Događaj će započeti polaganjem vijenaca i paljenjem svijeća pred spomen-obilježjem poginulim hrvatskim braniteljima, a nastavit će se Devetom revijom tradicijske odjeće i izborom najljepše Hrvatice u narodnoj nošnji izvan Republike Hrvatske.<br><br>Bogati program svečane proslave završava koncertom klape “Intrade” na Trgu gange i Hajdučke družine u Tomislavgradu.',
+                img: '/assets/img/deveta.jpg',
+                img2: '/assets/img/trgGange2.jpg',
+                img3: '/assets/img/deveta1.jpg',
+                img4: '/assets/img/deveta3.jpg',
+                img5: '/assets/img/deveta4.jpg',
                 zoom: '20',
                 id: 'turizam',
                 thumb: '/assets/icon/kategorije_event.svg',
@@ -89,7 +113,7 @@ var landmarksData = {
             properties: {
                 name: 'Dvojna gradina',
                 place: 'Mokronoge',
-                about: 'Dvojna gradina u Mokronoga je jedna od najspecifičniji gradina u istom tom sustavu na Duvanjskom polju. Naime ova gradina se nalazi iznad kanjona rijeke Šujice, točnije velika gradina na lijevoj dijelu kanjona, a mala na desnom dijelu kanjona rijeke Šujice. Velika i mala gradina su služile kao čuvarnice, ali kao i ulaz u Duvanjsko polje. Prema teorijam arheologa ove dvije gradne su bile povezane visećim mostom. ',
+                about: 'Dvojna gradina u Mokronoga je jedna od najspecifičniji gradina u sustavu gradina na Duvanjskom polju. Naime, ova gradina se nalazi iznad kanjona rijeke Šujice, točnije velika gradina na lijevoj dijelu kanjona, a mala na desnom dijelu kanjona rijeke Šujice. Velika i mala gradina su služile kao čuvarnice, ali kao i ulaz u Duvanjsko polje. Prema teorijam arheologa ove dvije gradne su bile povezane visećim mostom. ',
                 img: '/assets/img/dvojnaGradina.jpg',
                 img2: '/assets/img/dvojnaGradina1.jpg',
                 img3: '/assets/img/dvojnaGradina2.jpg',
@@ -132,18 +156,18 @@ var landmarksData = {
             type: 'Feature',
             geometry: {
                 type: 'Point',
-                coordinates: [17.224871, 43.72168]
+                coordinates: [17.225871, 43.72188]
             },
             properties: {
                 name: 'Bazilika i franjevački muzej',
                 place: 'Tomislavgrad',
-                about: 'Izgradnja spomen bazilike u Tomislavgradu započeta je 1925. na tisućitu godinjicu krunidbe kralja Tomislava. Kralj Tomislav je prema legendi okrunjen na Duvanjskom polju. Pokojni fra. Mijo Čuić, svećenik-fratar vizionar zamislio je ogroman spomenik u vidu Crkve i samostana koji će za vijeke ostati spomenik krunidbi prvog Hrvatskog kralja. Uz ovu spomen baziliku i samostan nalazi se i franjevački muzej koji kroz svoje stalne postavke krije tajnu življenja na Duvanjskom polju vijekovima. Unutar samog samostana čuvaju se i ostaci Duvanjskog praslona koji su izloženi u dijarami, dok lapidarij krije mnoge tajne Rimskoga utjecaja na Duvanjsko polje. ',
+                about: 'Duvanjska bazilika smatra se glavnom gradskom atrakcijom. Ispred bazilike možete sjesti u lijepo uređenom parku i jednostavno uživati. Izvana je bazilika monumentalana, tlocrtno ima izgled pravilnoga križa, a iznad križa se izdiže prelijepa okrugla kupola. Izgradnja spomen bazilike u Tomislavgradu započeta je 1925. na tisućitu godinjicu krunidbe kralja Tomislava. Legendea kaće da je prvi hrvatski kralj Tomislav okrunjen na Duvanjskom polju prema čemu je pokojni fra. Mijo Čuić zamislio spomenik u vidu Crkve i samostana koji će za vijeke ostati spomen krunidbi prvog Hrvatskog kralja. Unutrašnjost bazilike krasi slika „Isus prijatelj malenih“ svjetski poznatog slikara Vlahe Bukovca.<br><br>Muzej, koji se nalazi uz crkvu, u svojoj postavi sadrži predmete iz dalje i bliže prošlosti te krije tajnu življenja na Duvanjskom polju vijekovima. Unutar samog samostana čuvaju se i ostaci Duvanjskog praslona koji su izloženi u dijarami, dok lapidarij krije mnoge tajne Rimskoga utjecaja na Duvanjsko polje.',
                 img: '/assets/img/crkvaTG.jpg',
                 img2: '/assets/img/crkvaTG1.jpg',
                 img3: '/assets/img/crkvaTG2.jpg',
                 img4: '/assets/img/crkvaTG3.jpg',
                 img5: '/assets/img/crkvaTG4.jpg',
-                zoom: '17',
+                zoom: '17.9',
                 id: 'kultura',
                 thumb: '/assets/icon/kategorije_Kultura.svg',
                 pin: '/assets/icon/landmarks/povijesneZnamenitosti_pin.svg',
@@ -156,7 +180,7 @@ var landmarksData = {
             type: 'Feature',
             geometry: {
                 type: 'Point',
-                coordinates: [17.225179, 43.719093]
+                coordinates: [17.2254, 43.7193]
             },
             properties: {
                 name: 'Trg gange i hajdučke družine',
@@ -167,7 +191,7 @@ var landmarksData = {
                 img3: '/assets/img/trgGange2.jpg',
                 img4: '/assets/img/trgGange3.jpg',
                 img5: '/assets/img/trgGange4.jpg',
-                zoom: '18',
+                zoom: '20',
                 id: 'kultura',
                 thumb: '/assets/icon/kategorije_Kultura.svg',
                 pin: '/assets/icon/landmarks/povijesneZnamenitosti_pin.svg',
@@ -210,23 +234,23 @@ var landmarksData = {
             },
             properties: {
                 name: 'Rimski most na Šujici',
-                place: 'Šujica',
+                place: 'Galečić, Šujica',
                 about: 'Rimski most na rijeci Šujici nalazi se u Šujičkom polju odmah ispod sela Glečića. Nalazio se u sustavu cesta koje je izgradilo Rimsko carstvo, a most je povezivao ostatak Duvanjskog polja s gradom Stridonom (Stržnjem). Riječ je o manjem kamenom mostu čiji je lučni stil klasični stil gradnje Rimskoga carstva. Most je korišten dugo godina i nakon pada Rimskog carstva da bi ga na posljetku obnovili Turci.',
                 img: '/assets/img/rimskiMostSujica.jpg',
                 img2: '/assets/img/rimskiMostSujica1.jpg',
                 img3: '/assets/img/rimskiMostSujica2.jpg',
                 img4: '/assets/img/rimskiMostSujica3.jpg',
                 img5: '/assets/img/rimskiMostSujica4.jpg',
-                zoom: '18',
+                zoom: '14.25',
                 id: 'kultura',
                 thumb: '/assets/icon/kategorije_Kultura.svg',
                 pin: '/assets/icon/landmarks/povijesneZnamenitosti_pin.svg',
-                i360: '0',
+                i360: '1',
                 googleMaps:
                     'https://www.google.com/maps/place/Rimski+most+na+%C5%A0uici/@43.8228859,17.1804204,605m/data=!3m2!1e3!4b1!4m5!3m4!1s0x475f856763b63f37:0x234162da9f7acd3!8m2!3d43.8228821!4d17.1826091'
             }
         },
-        {
+        /* {
             type: 'Feature',
             geometry: {
                 type: 'Point',
@@ -249,8 +273,8 @@ var landmarksData = {
                 googleMaps:
                     "https://www.google.com/maps/place/43%C2%B035'13.3%22N+17%C2%B017'58.3%22E/@43.5870302,17.2977419,607m/data=!3m2!1e3!4b1!4m5!3m4!1s0x0:0x78dff04eb0754381!8m2!3d43.587027!4d17.29953"
             }
-        },
-        {
+        }, */
+        /* {
             type: 'Feature',
             geometry: {
                 type: 'Point',
@@ -273,7 +297,7 @@ var landmarksData = {
                 googleMaps:
                     "https://www.google.com/maps/place/43%C2%B035'54.6%22N+17%C2%B018'18.2%22E/@43.5985029,17.3028593,607m/data=!3m2!1e3!4b1!4m5!3m4!1s0x0:0x323ec8fe073c0296!8m2!3d43.598499!4d17.305048"
             }
-        },
+        }, */
         {
             type: 'Feature',
             geometry: {
@@ -282,11 +306,11 @@ var landmarksData = {
             },
             properties: {
                 name: 'Delminium na Libu',
-                place: 'Kongora',
-                about: 'Planina Lib dom je jednog od najznačajnijih povijesnih lokaliteta Tomislavgrada (Duvna). Sama planina izgleda kao klin koji je oštro zabio u Duvanjsko polje, a s planine se pruža pogled na isto to polje, pa stječemo dojam da je planina Lib čuvarnica Duvna. Ovo nam zvuči još uvjerljivije kad znamo da se na Libu smjestio glavni grad Delmata - Delminium (Delminij) -čuvar svih Delmata, čuvar Duvanjskog polja. Delminium su opisali rimski povjesničari od kojih saznajemo o čvrstoći ovog grada i njegovih građana. Naime, Rim je morao povesti dva rata kako bi osvojio ovo područje te sam grad Delminium (Delminij).',
+                place: 'Borčani, Kongora',
+                about: 'Planina Lib dom je jednog od najznačajnijih povijesnih lokaliteta Tomislavgrada (Duvna). Sama planina izgleda kao klin koji je oštro zabio u Duvanjsko polje, a s planine se pruža pogled na isto to polje, pa stječemo dojam da je planina Lib čuvarnica Duvna. Ovo nam zvuči još uvjerljivije kad znamo da se na Libu smjestio glavni grad Delmata - Delminium (Delminij) - čuvar svih Delmata, čuvar Duvanjskog polja. Delminium su opisali rimski povjesničari od kojih saznajemo o čvrstoći ovog grada i njegovih građana. Naime, Rim je morao povesti dva rata kako bi osvojio ovo područje te sam grad Delminium .',
                 img: '/assets/img/delminiumLib.jpg',
-                img2: '/assets/img/delminiumLib1.jpg',
-                img3: '/assets/img/delminiumLib2.jpg',
+                img3: '/assets/img/delminiumLib1.jpg',
+                img2: '/assets/img/delminiumLib2.jpg',
                 img4: '/assets/img/delminiumLib3.jpg',
                 img5: '/assets/img/delminiumLib4.jpg',
                 zoom: '15',
@@ -306,14 +330,14 @@ var landmarksData = {
             },
             properties: {
                 name: 'Mandina gradina',
-                place: 'Mandino Selo',
-                about: 'Mandina gradina nalazi se neposredno pokraj sela Rašćani i Mandinog sela uz Lib te se smatra jednom od najvažnijih gradina na Duvanjskom polju. Značenje ove gradine nije u obrambenom smislu, jer na prvi pogled zaključujemo da je pozicija bila loša za obranu. Značenje ove gradine je u kultnom smislu, naime smatra se da je Mandina gradina bila kultna gradina Delmata, prostor na kojem su Delmati izvodili svoje rituale i prenosili žrtve bogovima. Bogatstvo arheoloških nalaza potkrepljuje sve ove teorije, a blizina samog Delminium također daje važnost ovoj gradini. Prema legendi na Duvanjskom polju je krunjen prvi Hrvatski kralj Tomislav, a Mandina gradina bi prema legendi upravo mogla biti to mjesto. ',
+                place: 'Raščani',
+                about: 'Mandina gradina nalazi se u selu Rašćani neposredno pored Mandinog sela te u blizini Liba. Smatra jednom od važnijih gradina na Duvanjskom polju. Značenje ove gradine nije u obrambenom smislu, jer na prvi pogled zaključujemo da je pozicija bila loša za obranu. Značenje ove gradine je u kultnom smislu, naime smatra se da je Mandina gradina bila kultna gradina Delmata, prostor na kojem su Delmati izvodili svoje rituale i prenosili žrtve bogovima. Bogatstvo arheoloških nalaza potkrepljuje sve ove teorije, a blizina samog Delminium također daje važnost ovoj gradini. Prema legendi na Duvanjskom polju je krunjen prvi Hrvatski kralj Tomislav, a Mandina gradina bi prema legendi upravo mogla biti to mjesto.<br><br>Godine 2021. Mandina gradina proglašena je nacionalnim spomenikom BiH.',
                 img: '/assets/img/mandinaGradina.jpg',
                 img2: '/assets/img/mandinaGradina1.jpg',
                 img3: '/assets/img/mandinaGradina2.jpg',
                 img4: '/assets/img/mandinaGradina3.jpg',
                 img5: '/assets/img/mandinaGradina4.jpg',
-                zoom: '15',
+                zoom: '14.42',
                 id: 'kultura',
                 thumb: '/assets/icon/kategorije_Kultura.svg',
                 pin: '/assets/icon/landmarks/povijesneZnamenitosti_pin.svg',
@@ -337,6 +361,7 @@ var landmarksData = {
                 img3: '/assets/img/ostatciStarokrscanskeBazilike2.jpg',
                 img4: '/assets/img/ostatciStarokrscanskeBazilike3.jpg',
                 img5: '/assets/img/ostatciStarokrscanskeBazilike4.jpg',
+                zoom: '14',
                 id: 'kultura',
                 thumb: '/assets/icon/kategorije_Kultura.svg',
                 pin: '/assets/icon/landmarks/povijesneZnamenitosti_pin.svg',
@@ -345,7 +370,7 @@ var landmarksData = {
                     "https://www.google.com/maps/place/43%C2%B035'19.7%22N+17%C2%B019'07.6%22E/@43.5888024,17.3165906,607m/data=!3m2!1e3!4b1!4m5!3m4!1s0x0:0x99601aa0214fdb28!8m2!3d43.5887985!4d17.3187793"
             }
         },
-        {
+        /* {
             type: 'Feature',
             geometry: {
                 type: 'Point',
@@ -367,7 +392,7 @@ var landmarksData = {
                 googleMaps:
                     "https://www.google.com/maps/place/43%C2%B035'03.8%22N+17%C2%B020'18.4%22E/@43.5843937,17.3362461,608m/data=!3m2!1e3!4b1!4m5!3m4!1s0x0:0xb705e09dab0b1500!8m2!3d43.5843898!4d17.3384348"
             }
-        },
+        }, */
         {
             type: 'Feature',
             geometry: {
@@ -376,13 +401,14 @@ var landmarksData = {
             },
             properties: {
                 name: 'Stećci Petrovac',
-                place: 'Petrovac',
+                place: 'Kongora',
                 about: 'Stećci koji se nalaze ispod gradine na planini Lib i neposredno u blizini Kongore. Riječ je o desecima stećaka (biliga) koje povezujemo sa srednjim vijekom, odnosno smatramo da su to srednjovjekovni grobovi imućnijih ljudi. Za neke se smatra da su nastali i puno ranije, za vrijeme doseljenja Ilira na ove prostore. Većina ovih stećaka je potonule u tlo pa pravu brojku ne možemo znati, ali možemo pretpostaviti da imaju poveznicu s gradinom na planini Lib i plemenom Delmata.',
                 img: '/assets/img/stecciPetrovac.jpg',
                 img2: '/assets/img/stecciPetrovac1.jpg',
                 img3: '/assets/img/stecciPetrovac2.jpg',
                 img4: '/assets/img/stecciPetrovac3.jpg',
                 img5: '/assets/img/stecciPetrovac4.jpg',
+                zoom: '15.2',
                 id: 'kultura',
                 thumb: '/assets/icon/kategorije_Kultura.svg',
                 pin: '/assets/icon/landmarks/povijesneZnamenitosti_pin.svg',
@@ -406,6 +432,7 @@ var landmarksData = {
                 img3: '/assets/img/stecciLipa2.jpg',
                 img4: '/assets/img/stecciLipa3.jpg',
                 img5: '/assets/img/stecciLipa4.jpg',
+                zoom: '14.1',
                 id: 'kultura',
                 thumb: '/assets/icon/kategorije_Kultura.svg',
                 pin: '/assets/icon/landmarks/povijesneZnamenitosti_pin.svg',
@@ -429,7 +456,7 @@ var natureData = {
             properties: {
                 name: 'Bukovačka katedrala',
                 place: 'Bukovica',
-                about: 'Bukovačka katedrala ...',
+                about: 'Bukovačka katedrala je špilja kojoj su se u vrijeme osmanske vladavine služile svete mise. Svojevrsni oltar isječen u kamenom zidu špilje bio je sačuvan do poslijeratnog vremena pod kamenim svodom te građevine, a ulaz u špilju toliko je prostran da se u tom neobičnom graditeljskom dijelu prirode nalaze i mala jezerca hladne vode do kojih se može doći jedino puzajući.<br><br>Bukovička katedrala dugo je služila kao bogomolja i u njoj su podijeljeni sveti sakramenti tisućama osoba, sve dok u blizini nije izgrađena prava zidana župna crkva. U novije vrijeme iz istog posvećenog tla izrasla je jedna od najljepših novosagrađenih crkava, ne samo u Tomislavgradu.<br><br>Prije dvadesetak godina tadašnji župnik fra Marko Jurič obnovio je praksu bogoslužja u Bukovičkoj katedrali u spomen na tradiciju i stradalnike tog kraja. Svake godine u mjesecu kolovozu u špilji se služi sveta misa kojoj nazoče brojni Duvnjaci.<br><br>Zanimljivo je i to što se na toj misi blagoslivljaju automobili brojnih “gastarbajtera” po kojima je Tomislavgrad poznat, a koji ljetne mjesece provode u rodnom kraju.<br><br>U prošlosti su mještani vodotok iz špilje koristili za pokretanje tri vodenice, a prije nekoliko godina mještani i tadašnji župnik fra Jozo Radoš na temelju jedne od tri vodenice rekonstruirali su i podigli novu vodenicu u istovjetnom obliku sa svim svojim sadržajima.',
                 img: '/assets/img/bukovackaKatedrala.jpg',
                 img2: '/assets/img/bukovackaKatedrala1.jpg',
                 img3: '/assets/img/bukovackaKatedrala2.jpg',
@@ -452,12 +479,13 @@ var natureData = {
             properties: {
                 name: 'Buško jezero',
                 place: '',
-                about: 'Buško jezero je umjetno jezero koje je nastalo 60-ih godina u bivšoj Jugoslavji za potrebe Hidroelektrane Orlovac koja se danas nalazi u Hrvatskoj. Buško jezero je nastalo nakupljanjem voda s Duvanjskog i Livanjskog polja zbog izgradnje brane. Površina jezera je 55,8 kilometara kvadratnih, a osim što je najveće u BiH donedavno se smatralo i jednom od većih i Europi. Buško jezero je samo po sebi ogroman potencijal i biser koji se nalazi na području općine Tomislavgrad. Osim što u ljetnim razdobljima njegova pješčana plaža Marinovac privlači sve veći broj ljudi, ovo jezero i dom brojnim slatkovodnim ribama, tako da kroz godinu privlači i mnoge ribiče.',
+                about: 'Buško jezero, na nadmorskoj visini od 700 metara, najveće je umjetno jezero u ovom dijelu Europe. Nastalo je potapanjem Buškoga blata 70-ih godina prošloga stoljeća. Zanimljiva povijest ovoga kraja ostavila je brojna arheološka nalazišta, brojne gradine iz ilirskoga i rimskoga doba, brojne artefakte te nekropole s velikim brojem stećaka.<br><br> Osim povijesnih zanimljivosti ovo područje nudi i mogućnost bavljenja brojnim sportovima. U ljetnim mjesecima voda Buškog jezera izrazito je topla i ugodna za kupanje. Jezero je također pogodno za gotovo sve sportove koji trebaju vjetar. A brda i planine koje ga okružuju omogućuju izletnicima penjanje i odmor u planinarskim domovima. Osim spomenutoga, jezero je jako atraktivno i ribičima. Ulovljeni i fotografirani primjerci, osobito somova, privlače lovce na trofejne primjerke i bude maštu ribolovaca.',
                 img: '/assets/img/buskoJezero.jpg',
                 img2: '/assets/img/buskoJezero1.jpg',
-                img3: '/assets/img/buskoJezero3.jpg',
-                img4: '/assets/img/buskoJezero4.jpg',
-                img5: '/assets/img/buskoJezero2.jpg',
+                img3: '/assets/img/buskoJezero2.jpg',
+                img4: '/assets/img/buskoJezero3.jpg',
+                img5: '/assets/img/buskoJezero4.jpg',
+                zoom: '12',
                 id: 'priroda',
                 thumb: '/assets/icon/kategorije_Priroda.svg',
                 pin: '/assets/icon/landmarks/prirodneLjepote_pin.svg',
@@ -475,7 +503,7 @@ var natureData = {
             properties: {
                 name: 'Blidinjsko jezero',
                 place: 'Blidinje',
-                about: 'Blidinjsko jezero je prirodno jezero nastalo na 1184 metara nadmorske visine na području parka prirode Blidinje. Ovo jezero je ledenjačkog podrijetla i smjestilo se u dnu Dugog polja. Površina mu varira od 2,5 do  km2, a dubine su mu relativno plitke i većina vezera ima prosječnu dubinu do 1 metar. Blidinje svojim vodama zapljuskuje planinu Čvrsnicu, a relativno je blizu planina Vran. Zbog svog ledenjačkog podrijetla i velike nadmorske visine na kojem se nalazi jezero je dobilo nadimak Gorske oči.',
+                about: 'Blidinjsko jezero je najveće planinsko jezero u Bosni i Hercegovini. Zaštićeni je geomorfološki spomenik prirode u sastavu Parka prirode Blidinje. Smješteno je na Dugom polju između planina Čvrsnice i Vrana.<br><br>Jezero je na 1183 metara nadmorske visine. Površina mu varira od 2,5 do 6 kilometra četvornih. Najveća dubina jezera je 4,5 metra, a najvećim dijelom je dubine od jednog metra. Nema površinskih tokova koji vode do i od jezera. Voda u jezero dolazi s padalinama i procjeđivanjem vode s okolnih planina Vrana i Čvrsnice, ponajviše s proljetnim otapanjem snijega. Ljeti veliki dio vode nestaje isparavanjem i otjecanjem kroz ponore zbog čega znatno opadne razina jezera. Procijenjeni gubici vode iz jezera su veliki s obzirom na malu zapreminu i iznose 10 mm/dan. Na južnoj strani jezera voda kroz ponor u Ivan Docu otječe prema istoku i ponovno izvire kod brane u Grabovici i Neretve. Ostaci morena upućuju na glacijalni nastanak jezera, no prema dokumentima iz župe Poklečani oborinska voda je odlazila kroz ponore i nije se zadržavala na polju pa je zahvaljujući antropogenoj intervenciji stočara koji su zatvorili ponore oblikovano jezero. U svibnju 1940. voda je pronašla put do ponora, ali jlifornijska pastrva. Jezero je nekoliko puta poribljavano ribom iz Buškog jezera, i to oštre on ponovno zatvoren.<br><br>U zimskim mjesecima jezero je uglavnom zaleđeno.<br><br>U jezeru obitava endemska riba oštrulja (Aulopyge huegelii), bjelica, klen i alohtona kalifornijska pastrva. Jezero je nekoliko puta poribljavano ribom iz Buškog jezera, i to oštruljom, klenom te kalifornijskom pastrvom.',
                 img: '/assets/img/blidinjskoJezero.jpg',
                 img2: '/assets/img/blidinjskoJezero1.jpg',
                 img3: '/assets/img/blidinjskoJezero2.jpg',
@@ -484,7 +512,7 @@ var natureData = {
                 id: 'priroda',
                 thumb: '/assets/icon/kategorije_Priroda.svg',
                 pin: '/assets/icon/landmarks/prirodneLjepote_pin.svg',
-                i360: '1',
+                i360: '0',
                 googleMaps:
                     'https://www.google.com/maps/place/Blidinje+Lake/@43.6071469,17.48819,2429m/data=!3m2!1e3!4b1!4m5!3m4!1s0x134b3289f464d9bd:0xba8ad22ad2e33850!8m2!3d43.6088843!4d17.4943069'
             }
@@ -521,18 +549,18 @@ var natureData = {
             },
             properties: {
                 name: 'Grad Stridon - izvor Šujice',
-                place: 'Šujica',
+                place: 'Bogdašić',
                 about: 'Grad Stridon (Stžanj) je grad nastao na liticama ispod kojih izvire rijeka Šujica. Zidine ovog grada odišu snažnom prošlošću i snalažljivosti starih Rimljana koji su se usudila napraviti grad na tako nepristupačnom mjestu. Grad je po legendi i rodno mjesto svetog Jeronima. Iako je Rimsko carstvo izgubilo svoj značaj na ovim prostorima, grad Stridon ostaje još uvjek živ i odišući prkosom nepokolebljivosti. Ljudi su nastavili živjeti u ovom gradu i u srednjem vijeku kada nosi ime Stržanj. Nakon srednjeg vijeka sve više gubi značaj, tako da s vremenom biva napušten i ostavljen vremenu i silama prirode da mijenjaju njegov izgled.',
                 img: '/assets/img/gradStridon.jpg',
-                img2: '/assets/img/gradStridon1.jpg',
-                img3: '/assets/img/gradStridon2.jpg',
-                img4: '/assets/img/gradStridon3.jpg',
-                img5: '/assets/img/gradStridon4.jpg',
+                img2: '/assets/img/gradStridon4.jpg',
+                img3: '/assets/img/gradStridon3.jpg',
+                img4: '/assets/img/gradStridon2.jpg',
+                img5: '/assets/img/gradStridon1.jpg',
                 zoom: '15',
                 id: 'priroda',
                 thumb: '/assets/icon/kategorije_Priroda.svg',
                 pin: '/assets/icon/landmarks/prirodneLjepote_pin.svg',
-                i360: '1',
+                i360: '0',
                 googleMaps:
                     "https://www.google.com/maps/place/43%C2%B052'50.1%22N+17%C2%B012'02.3%22E/@43.8786192,17.1945945,2033m/data=!3m1!1e3!4m5!3m4!1s0x0:0xe525d2ab2a75eb2e!8m2!3d43.8805803!4d17.2006377"
             }
@@ -546,17 +574,17 @@ var natureData = {
             properties: {
                 name: 'Divlji konji i vjetropark na Jelovači',
                 place: 'Eminovo Selo',
-                about: 'Vjetropark Jelovača nalazi se na planini Jelovača na 1500 metara nadmorske visine. Ova planina svakodnevno je izložena snažnim vjetrovima koji su specifični za ovaj kraj. Osim što je jedna od prvih vjetroelektrana na području BiH, Jelovača je i dom mnogih divljih životinja, među kojima se posebno izdvajaju divlji konji koji slobodno lutaju planinom. Također, područje oblikuje mnoštvo krških reljefnih oblika. Zbog puteva koji su probijeni Jelovača nam pruža mnoge vidikovce s kojih ćete doživjeti nezaboravne poglede na Duvanjsko polje dok vam u lice udaraju hladni vjetrovi, pa nismo sigurni je li zbog toga ili zbog tako lijepog pogleda Jelovača prirasla srcu svakom Duvnjaku.',
+                about: 'Vjetropark Jelovača nalazi se na planini Jelovača na 1500 metara nadmorske visine. Ova planina svakodnevno je izložena snažnim vjetrovima koji su specifični za ovaj kraj. Osim što je jedna od prvih vjetroelektrana na području BiH, Jelovača je i dom mnogih divljih životinja, među kojima se posebno izdvajaju divlji konji koji slobodno lutaju planinom. <br><br>Također, područje oblikuje mnoštvo krških reljefnih oblika. Zbog puteva koji su probijeni Jelovača nam pruža mnoge vidikovce s kojih ćete doživjeti nezaboravne poglede na Duvanjsko polje dok vam u lice udaraju hladni vjetrovi, pa nismo sigurni je li zbog toga ili zbog tako lijepog pogleda Jelovača prirasla srcu svakom Duvnjaku.',
                 img: '/assets/img/divljiKonji-jelovaca.jpg',
                 img2: '/assets/img/divljiKonji-jelovaca1.jpg',
-                img3: '/assets/img/divljiKonji-jelovaca2.jpg',
+                img3: '/assets/img/divljiKonji-jelovaca4.jpg',
                 img4: '/assets/img/divljiKonji-jelovaca3.jpg',
-                img5: '/assets/img/divljiKonji-jelovaca4.jpg',
+                img5: '/assets/img/divljiKonji-jelovaca2.jpg',
                 zoom: '15',
                 id: 'priroda',
                 thumb: '/assets/icon/kategorije_Priroda.svg',
                 pin: '/assets/icon/landmarks/prirodneLjepote_pin.svg',
-                i360: '1',
+                i360: '0',
                 googleMaps:
                     'https://www.google.com/maps/place/Jelovaca/@43.7477652,17.1340332,1980m/data=!3m1!1e3!4m5!3m4!1s0x475f863a9a2cc98d:0x5b0df36a8770fc59!8m2!3d43.7458333!4d17.1413889'
             }
@@ -580,7 +608,7 @@ var natureData = {
                 id: 'priroda',
                 thumb: '/assets/icon/kategorije_Priroda.svg',
                 pin: '/assets/icon/landmarks/prirodneLjepote_pin.svg',
-                i360: '1',
+                i360: '0',
                 googleMaps:
                     "https://www.google.com/maps/place/43%C2%B046'47.8%22N+17%C2%B012'57.0%22E/@43.7787462,17.2115347,1664m/data=!3m1!1e3!4m5!3m4!1s0x0:0xee88e619cc07e1cb!8m2!3d43.77995!4d17.2158287"
             }
@@ -604,12 +632,12 @@ var natureData = {
                 id: 'priroda',
                 thumb: '/assets/icon/kategorije_Priroda.svg',
                 pin: '/assets/icon/landmarks/prirodneLjepote_pin.svg',
-                i360: '0',
+                i360: '1',
                 googleMaps:
                     "https://www.google.com/maps/place/43%C2%B040'35.1%22N+17%C2%B011'10.9%22E/@43.6763728,17.1845604,496m/data=!3m1!1e3!4m5!3m4!1s0x0:0x3944b159b68710ef!8m2!3d43.6764015!4d17.1863696"
             }
         },
-        {
+        /* {
             type: 'Feature',
             geometry: {
                 type: 'Point',
@@ -632,7 +660,7 @@ var natureData = {
                 googleMaps:
                     'https://www.google.com/maps/place/Tabakova+Lokva/@43.761959,17.1768008,2423m/data=!3m2!1e3!4b1!4m5!3m4!1s0x475f867e7862914f:0x5f4b9d8c4048cc3!8m2!3d43.7619444!4d17.1855556'
             }
-        },
+        }, */
         {
             type: 'Feature',
             geometry: {
@@ -641,7 +669,7 @@ var natureData = {
             },
             properties: {
                 name: 'Veliki Samograd',
-                place: 'Mrkodol',
+                place: 'Omerovići',
                 about: 'U Duvanjskom kršu skrivena je duboka okomita urušena vrtača dužine 190 m, širine 110 m i dubine od 40 do 60 m. Ovdje je priroda, kao arhitekt, oblikom i dimenzijama ovog fenomena pokazala svu svoju silu i moć. Samograd, sam stvoren - sam sagrađen, ovalna je golema bunarasta vrtača čije se vrlo strme stijene spuštaju okomito s krške zaravni u dubinu. Na dnu Samograda nalazi se gusta i neprohodna šuma koja je dom raznim vrstama ptica, a uz rub vrtače nalazi se i špilja skromnih dimenzija.',
                 img: '/assets/img/velikiSamogradd.jpg',
                 img2: '/assets/img/velikiSamogradd1.jpg',
@@ -665,8 +693,8 @@ var natureData = {
             },
             properties: {
                 name: 'Arnautovac i Mali Samograd',
-                place: 'Mrkodol',
-                about: 'Arnautovac i Mali Samograd geomorfološka su cjelina značajna zbog velikih dimenzija i izraženih litica. Velika vrtača Arnautovac duga je oko 420 metara i široka oko 170 metara.</br></br> Mali Samograd je duboka jama koja počinje golemom ulaznom, bunarastom vertikalom, i pridruženi je dio Arnautovca. Otvor ulazne vertikale je promjera 80x45 m i kroz njega se spušta do prvog dna na oko 40 m dubine. Prvo je dno izrazito strmo i obraslo gustom grabovom šumom te divljom lozom.</br></br>Po strmini prekivenoj siparom spušta se do ulaza u podzemnu šupljinu, koju u narodu još zovu špilja Rogoševac. Njen ulaz je smješten ispod kamene litice visoke 90 m od reazine krške zaravni. Ulaz je širine oko 16 m i visok do 12 m. Dio ulaza pregrađuju golemi kameni blokovi. Na samom ulazu je prisutna temperaturna razlika koja može iznostiti i više od 20°C - temperatura špiljskog prostora je samo 3°C. Nakon ulaza slijedi golema podzemna dvorana široka u najširem dijelu 90 m, a prema kraju 60-70 m, dok visina varira od 5 m na početku do 30 m u završnom dijelu dvorane. Tlo je prekriveno siparišnim materijalom i strmo se spušta pod uglom mjestimično većim od 45° prema središnjem dijelu dvorane. Dužina glavnog kanala špilje iznosi 135m, dok je s ostalim bočnim kanalima dug preko 250m. Ukupna dubina jame  je 150 m. Unutra se nalaze špiljski saljevi, stalagmiti i saljevni zidovi visoki i do 5 metara.',
+                place: 'Kovači',
+                about: 'Arnautovac i Mali Samograd geomorfološka su cjelina značajna zbog velikih dimenzija i izraženih litica. Velika vrtača Arnautovac duga je oko 420 metara i široka oko 170 metara.</br></br> Mali Samograd je duboka jama koja počinje golemom ulaznom, bunarastom vertikalom i pridruženi je dio Arnautovca. Otvor ulazne vertikale je promjera 80x45 m i kroz njega se spušta do prvog dna na oko 40 m dubine. Prvo je dno izrazito strmo i obraslo gustom grabovom šumom te divljom lozom.</br></br>Po strmini prekivenoj siparom spušta se do ulaza u podzemnu šupljinu, koju u narodu još zovu špilja Rogoševac. Njen ulaz je smješten ispod kamene litice visoke 90 m od razine krške zaravni. Ulaz je širok oko 16 m i visok do 12 m. Dio ulaza pregrađuju golemi kameni blokovi. Na samom ulazu je prisutna temperaturna razlika koja može iznostiti i više od 20°C. Nakon ulaza slijedi golema podzemna dvorana široka u najširem dijelu 90 m, a prema kraju 60-70 m, dok visina varira od 5 m na početku do 30 m u završnom dijelu dvorane. Tlo je prekriveno siparišnim materijalom i strmo se spušta pod uglom mjestimično većim od 45° prema središnjem dijelu dvorane. Dužina glavnog kanala špilje iznosi 135 m, dok je s ostalim bočnim kanalima dug preko 250 m. Ukupna dubina jame  je 150 m. Unutra se nalaze špiljski saljevi, stalagmiti i saljevni zidovi visoki i do 5 metara.',
                 img: '/assets/img/arnautovac.jpg',
                 img2: '/assets/img/arnautovac1.jpg',
                 img3: '/assets/img/arnautovac2.jpg',
@@ -690,13 +718,13 @@ var natureData = {
             properties: {
                 name: 'Vjetropark Mesihovina',
                 place: 'Bukovica, Mrkodol, Gornji Brišnik',
-                about: 'Vjetropark Mesihovina koji se nalazi na lokaciji par tomislavgradskih sela (Bukovica, Mrkodol, Gornji Brišnik) je prvi vjetropark koji je nastao u BiH. Posebnost ovog vjetroparka nije u električnoj energiji, nego u putevima i puteljcima koje su omogućili svima znatiželjnima da dodatno istraže ljepote Tomislavgrada.',
+                about: 'Vjetropark Mesihovina koji se nalazi na lokaciji par tomislavgradskih sela (Bukovica, Mrkodol, Gornji Brišnik) je prvi vjetropark izgrađen u BiH. Posebnost ovog vjetroparka nije u električnoj energiji, nego u putevima i puteljcima koje su omogućili svima znatiželjnima da dodatno istraže ljepote Tomislavgrada s raznih vidikovaca.',
                 img: '/assets/img/vjetroparkMrkodol.jpg',
                 img2: '/assets/img/vjetroparkMrkodol1.jpg',
                 img3: '/assets/img/vjetroparkMrkodol2.jpg',
                 img4: '/assets/img/vjetroparkMrkodol3.jpg',
                 img5: '/assets/img/vjetroparkMrkodol4.jpg',
-                zoom: '15',
+                zoom: '14.1',
                 id: 'priroda',
                 thumb: '/assets/icon/kategorije_Priroda.svg',
                 pin: '/assets/icon/landmarks/prirodneLjepote_pin.svg',
@@ -716,10 +744,10 @@ var natureData = {
                 place: 'Vir Posušje',
                 about: 'Vodopad Žukovica je smješten u Posuškom Viru, točnije zaseoku Zagorje. Jedno je od najljepših mjesta u okolici za posjetiti. Ovaj vodopad skriven je daleko od ljudske ruke i nikoga ne ostavlja ravnodušnim. Tik uz vodopad nalazi se i Žukovička pećina koju su istraživali ugledni arheolozi.',
                 img: '/assets/img/zukovica.jpg',
-                img2: '/assets/img/zukovica.jpg',
-                img3: '/assets/img/zukovica.jpg',
-                img4: '/assets/img/zukovica.jpg',
-                img5: '/assets/img/zukovica.jpg',
+                img2: '/assets/img/zukovica4.jpg',
+                img3: '/assets/img/zukovica1.jpg',
+                img4: '/assets/img/zukovica2.jpg',
+                img5: '/assets/img/zukovica3.jpg',
                 zoom: '15',
                 id: 'priroda',
                 thumb: '/assets/icon/kategorije_Priroda.svg',
@@ -747,7 +775,7 @@ var natureData = {
                 id: 'priroda',
                 thumb: '/assets/icon/kategorije_Priroda.svg',
                 pin: '/assets/icon/landmarks/prirodneLjepote_pin.svg',
-                i360: '1',
+                i360: '0',
                 googleMaps:
                     'https://www.google.com/maps/place/Studena/@43.5792788,17.3375422,3062m/data=!3m1!1e3!4m12!1m6!3m5!1s0x134ad720ad7c546d:0x892f44f48ce750dd!2sStudena+Vrila!8m2!3d43.5602183!4d17.2788139!3m4!1s0x134b293c5cf33d13:0x8245251f3fa834bc!8m2!3d43.5784692!4d17.3521874'
             }
@@ -760,17 +788,18 @@ var natureData = {
             },
             properties: {
                 name: 'Šarčevo jezero',
-                place: 'Mandino Selo',
-                about: 'Šarčevo jezero je umjetno jezero smješteno na lokaciji Mandinog sela. Jezero je nastalo vađenjem šljunka za potrebe obližnje pjeskare, pa se vremenom ta rupa ispunila vodom te stvorila jednu manju ljepoticu koja krasi Tomislavgrad. Šarčevo jezero je nastalo 2003. godine i od tada je nezaobilazna destinacija stanovnika Mandinog sela, Lipe i Kongore u ljetnjim danima kad stanovništvo u njoj traži osvježenje. A zbog ceste koja ide rubom cijelog jezera postala je jedno od omiljenih šetališta.',
+                place: 'Lipa',
+                about: 'Šarčevo jezero je umjetno jezero nastalo vađenjem šljunka za potrebe obližnje pjeskare. S vremenom taj iskop se ispunio vodom te je nastala jedna manja ljepotica koja krasi Tomislavgrad. Šarčevo jezero je nastalo 2003. godine i od tada je nezaobilazna destinacija stanovnika Mandinog sela, Lipe i Kongore u ljetnjim danima kad stanovništvo u njoj traži osvježenje. Zbog puta koji ide rubom cijelog jezera postalo je jedno od omiljenih šetališta.',
                 img: '/assets/img/sarcevo.jpg',
                 img2: '/assets/img/sarcevo1.jpg',
                 img3: '/assets/img/sarcevo2.jpg',
                 img4: '/assets/img/sarcevo3.jpg',
                 img5: '/assets/img/sarcevo4.jpg',
+                zoom: '14.25',
                 id: 'priroda',
                 thumb: '/assets/icon/kategorije_Priroda.svg',
                 pin: '/assets/icon/landmarks/prirodneLjepote_pin.svg',
-                i360: '1',
+                i360: '0',
                 googleMaps:
                     'https://www.google.com/maps/place/%C5%A0ar%C4%8Devo+jezero/@43.6650297,17.3190608,607m/data=!3m2!1e3!4b1!4m5!3m4!1s0x134b2be42537e063:0x796fc8f63fda3bbf!8m2!3d43.6650258!4d17.3212495'
             }
@@ -794,7 +823,7 @@ var natureData = {
                 id: 'priroda',
                 thumb: '/assets/icon/kategorije_Priroda.svg',
                 pin: '/assets/icon/landmarks/prirodneLjepote_pin.svg',
-                i360: '0',
+                i360: '1',
                 googleMaps:
                     "https://www.google.com/maps/place/43%C2%B043'47.1%22N+17%C2%B012'35.4%22E/@43.7297515,17.2076304,606m/data=!3m2!1e3!4b1!4m5!3m4!1s0x0:0xd9c4e722f06099e6!8m2!3d43.7297476!4d17.2098191"
             }
@@ -807,14 +836,14 @@ var natureData = {
             },
             properties: {
                 name: 'Šumarska kuća u Grlima',
-                place: 'Letka',
+                place: 'Kongora',
                 about: 'Šumarska kuća u Grlima prestavlja jedno od vikend-izletišta na koje stanovinici Tomislavgrada često odlaze. Smješteno u prirodi uz cestu prema Blidinju, okruženo bjelogoričnom i crnogoričnom šumom, prestavlja svojevrsnu oazu mira koja dobro dođe svima onima koji žele pobjeći od svakodnevnog stresa.',
                 img: '/assets/img/sumarska-grla.jpg',
                 img2: '/assets/img/sumarska-grla1.jpg',
                 img3: '/assets/img/sumarska-grla2.jpg',
                 img4: '/assets/img/sumarska-grla3.jpg',
                 img5: '/assets/img/sumarska-grla4.jpg',
-                zoom: '18',
+                zoom: '13.3',
                 id: 'priroda',
                 thumb: '/assets/icon/kategorije_Priroda.svg',
                 pin: '/assets/icon/landmarks/prirodneLjepote_pin.svg',

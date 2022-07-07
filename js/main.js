@@ -20,11 +20,11 @@ const yS = y - 60000;
 const yN = y + 60000;
 const xE = x - 80000;
 const xW = x + 100000;
-const lonLatCrkvaTG = [17.225002, 43.721394];
+// const center = [1922955.15, 5421755.43];
 
 // default zoom, center and rotation
-var zoom = 10;
-var center = ol.proj.fromLonLat(lonLatCrkvaTG);
+var zoom = 10.67;
+var center = [1922955.15, 5421755.43];
 
 if (window.location.hash !== '') {
     // try to restore center, zoom-level and rotation from the URL
@@ -82,7 +82,7 @@ var map = new ol.Map({
             source: new ol.source.XYZ({
                 url: 'https://api.mapbox.com/styles/v1/lavtic/ckwgdeuoj14po14nsp9arx5by/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibGF2dGljIiwiYSI6ImNqbzhqM2R6MTB6ZHgzcG1kdWFsOWs5anMifQ.1FloBRvYlL8rW8AIbWzJXQ&fresh=true'
             })
-        })),
+        }))
         //tomislavgradZastava = new ol.layer.Image({
         //  maxZoom: 11.5,
         //  opacity: 1,
@@ -184,7 +184,7 @@ var map = new ol.Map({
         //  }),
         //  name: 'tgnazivi'
         //}),
-        (opcine = new ol.layer.Image({
+        /* (opcine = new ol.layer.Image({
             maxZoom: 11.5,
             source: new ol.source.ImageWMS({
                 ratio: 1,
@@ -207,7 +207,7 @@ var map = new ol.Map({
                 serverType: 'geoserver'
             }),
             name: 'tg'
-        }))
+        })) */
         //ramaPodloga = new ol.layer.Image({
         //  maxZoom: 11.5,
         //  opacity: 1,
@@ -481,16 +481,16 @@ const addImage = (obj) => {
 
 //Location and URL for 360 icons
 var images = [
-    {
+    /* {
         center: [17.282138, 43.580198],
         name: 'Crkva svetog Nikole Tavelića',
         url: 'panorama_tomislavgrad_2.html#mesihovina'
-    },
-    {
+    }, */
+    /* {
         center: [17.29953, 43.587027],
         name: 'Glizića mlinica',
         url: 'panorama_tomislavgrad_2.html#glizicaMlin'
-    },
+    }, */
     {
         center: [17.177038117059727, 43.666291419131305],
         name: 'Mali samograd',
@@ -1220,6 +1220,7 @@ window.onload = function () {
         }
         landmarkAllList.push(landmarkAll);
     }
+    length = coord.length;
     for (i in touristData.features) {
         var landmarkAll = document.createElement('button');
         landmarkAll.id = i + length;
@@ -1618,7 +1619,7 @@ function toHome() {
     //toggle.delay(500)(document.getElementById('menu-toggle'))
     // $('#homeLogo').slideToggle(1000);
     console.log($('#info'));
-
+    document.getElementById('info-logo').scrollTop = '0';
     $('#info').slideToggle(300);
     // sessionStorage.home = 2;
 }
@@ -1991,6 +1992,47 @@ var tourist = new ol.layer.Vector({
         return getFeatureStyle(feature, resolution, false, '#ff7262');
     }
 });
+
+const clusterSource = new ol.source.Cluster({
+    distance: 100,
+    minDistance: 10,
+    source: touristSource
+});
+
+// Clustering-------------------------------------
+/* const styleCache = {};
+const clusters = new ol.layer.Vector({
+    declutter: true,
+    zIndex: 1000,
+    source: clusterSource,
+    style: function (feature) {
+        const size = feature.get('features').length;
+        let style = styleCache[size];
+        if (!style) {
+            style = new ol.style.Style({
+                image: new ol.style.Circle({
+                    radius: 15,
+                    stroke: new ol.style.Stroke({
+                        color: '#fff'
+                    }),
+                    fill: new ol.style.Fill({
+                        color: '#ff7262'
+                    })
+                }),
+                text: new ol.style.Text({
+                    text: size.toString(),
+                    fill: new ol.style.Fill({
+                        color: '#fff'
+                    })
+                })
+            });
+            styleCache[size] = style;
+        }
+        return style;
+    }
+});
+map.addLayer(clusters); */
+// ---------------------------------------------------Clusterimg
 
 var vjerskiObjektiSource = new ol.source.Vector({
     features: new ol.format.GeoJSON().readFeatures(vjerskiObjekti, {
@@ -2520,7 +2562,7 @@ if (localStorage.basemap == 1) {
 }
 
 var zastave = false;
-var zastaveList = [tomislavgradZastava]; //, ramaPodloga, ramaZastava, posusjeZastava, livnoPodloga, livnoZastava, kupresZastava, kupresPodloga_blue, kupresPodloga_red, jablanicaZastava, opcine, opcineGranice]
+var zastaveList = []; //, tomislavgradZastava,ramaPodloga, ramaZastava, posusjeZastava, livnoPodloga, livnoZastava, kupresZastava, kupresPodloga_blue, kupresPodloga_red, jablanicaZastava, opcine, opcineGranice]
 for (zastava in zastaveList) {
     zastaveList[zastava].setZIndex(5);
 }
