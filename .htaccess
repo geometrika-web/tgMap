@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteBase /
+# redirect html pages to the root domain
+RewriteRule ^index\.html$ / [NC,R,L]
+
+RewriteEngine On
+RewriteRule ^/?about/?$ about.html [L]
+RewriteRule ^/?otherlink/?$ otherlink.html [L]

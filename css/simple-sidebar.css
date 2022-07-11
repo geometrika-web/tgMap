@@ -37,7 +37,11 @@ a {
 .mt-6rem {
     margin-top: 7rem;
 }
-
+@media (max-width: 575.99px) {
+    .mt-6rem {
+        margin-top: 4rem;
+    }
+}
 #cover-video {
     position: fixed;
     right: 0;

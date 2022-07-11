@@ -47,7 +47,7 @@ var touristData = {
                 pin: '/assets/icon/landmarks/turistickaPonuda_pin.svg',
                 i360: '0',
                 googleMaps:
-                    'https://www.google.com/maps/place/Hajdu%C4%8Dke+vrleti/@43.653291,17.5311293,2498m/data=!3m1!1e3!4m8!3m7!1s0x475f628a4e1249f1:0x5bc6ecfb06098586!5m2!4m1!1i2!8m2!3d43.6530877!4d17.5330123'
+                    'https://www.google.com/maps/place/Franciscan+friary+Tomislavgrad/@43.7219316,17.2228271,405m/data=!3m1!1e3!4m5!3m4!1s0x475f80d7b8355803:0xa2bbbd187c9095db!8m2!3d43.7216557!4d17.225551'
             }
         },
         {
