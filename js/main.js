@@ -687,7 +687,7 @@ map.on('moveend', function (e) {
         console.log('currzooom  ' + newZoom);
         currZoom = newZoom;
         console.log(currZoom);
-        if (currZoom > 11.5) {
+        /* if (currZoom > 11.5) {
             document.getElementById('zastaveOpcina').disabled = true;
             document
                 .getElementById('zastaveOpcinaBox')
@@ -698,7 +698,7 @@ map.on('moveend', function (e) {
             document
                 .getElementById('zastaveOpcinaBox')
                 .classList.remove('disabled');
-        }
+        } */
         //if (currZoom < 11.5 && zastave == true) {
         //  vector.setVisible(false)
         //  nature.setVisible(false)
@@ -1069,7 +1069,7 @@ function getFeatureStyleAssoc(feature, resolution, sel) {
 function zoomTo(i) {
     view.animate({
         center: ol.proj.fromLonLat(coord[i]),
-        duration: 3000,
+        duration: 1000,
         zoom: landmarksZoom[i]
     });
     if (isMobile) {
@@ -2032,7 +2032,6 @@ const clusters = new ol.layer.Vector({
     }
 });
 map.addLayer(clusters); */
-// ---------------------------------------------------Clusterimg
 
 var vjerskiObjektiSource = new ol.source.Vector({
     features: new ol.format.GeoJSON().readFeatures(vjerskiObjekti, {
@@ -2566,7 +2565,7 @@ var zastaveList = []; //, tomislavgradZastava,ramaPodloga, ramaZastava, posusjeZ
 for (zastava in zastaveList) {
     zastaveList[zastava].setZIndex(5);
 }
-console.log(localStorage.zastave);
+/* console.log(localStorage.zastave);
 if (localStorage.zastave == 2) {
     zastave = false;
     $('#zastaveOpcina').checked = false;
@@ -2579,7 +2578,7 @@ if (localStorage.zastave == 2) {
     tourist.setVisible(true);
     //assocs.setVisible(true)
     //vjerskiObjekti.setVisible(true)
-}
+} */
 
 // MeetTg and Routes functions -----------------------------------------------
 var allLandmarksMenu = false;
@@ -2665,9 +2664,9 @@ function routes() {
     } else {
         deselect();
         meet = 2;
-        if (zastave) {
+        /* if (zastave) {
             zastaveOpcina();
-        }
+        } */
         backFromMeet();
         markers.setVisible(true);
         vector.setVisible(true);
@@ -2927,6 +2926,8 @@ selectAssoc.getFeatures().on(['add', 'remove'], function (e) {
             getAssoc(id);
             if (isMobile) {
                 toggle(document.getElementById('menu-toggle'));
+            } else {
+                toggleOnSelect();
             }
             //$("<img>").attr('src',el.get("img")).appendTo(info);
             //$("<p>").text(el.get("text")).appendTo(info);
@@ -3647,7 +3648,7 @@ function zoomToAssoc(id) {
     }
     view.animate({
         center: ol.proj.fromLonLat(assocCoord[num - 1]),
-        duration: 2000,
+        duration: 1000,
         zoom: 15
     });
     /* if (isMobile) {
@@ -3670,35 +3671,7 @@ function zoomToAssoc(id) {
 }
 
 // Layer controls
-console.log(localStorage.zastave);
-function zastaveOpcina() {
-    if (zastave) {
-        zastave = false;
-        document.getElementById('zastaveOpcina').checked = false;
-        for (zastava in zastaveList) {
-            zastaveList[zastava].setVisible(false);
-        }
-        localStorage.zastave = 2;
-        vector.setVisible(true);
-        nature.setVisible(true);
-        tourist.setVisible(true);
-        //assocs.setVisible(true)
-        //vjerskiObjekti.setVisible(true)
-    } else {
-        zastave = true;
-        console.log(zastave);
-        document.getElementById('zastaveOpcina').checked = true;
-        for (zastava in zastaveList) {
-            zastaveList[zastava].setVisible(true);
-        }
-        localStorage.zastave = 1;
-        vector.setVisible(false);
-        nature.setVisible(false);
-        tourist.setVisible(false);
-        assocs.setVisible(false);
-        //vjerskiObjekti.setVisible(false)
-    }
-}
+/* F */
 
 //var graniceNaselja = true
 //document.getElementById('naseljaTomislavgrad').checked = true

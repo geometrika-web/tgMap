@@ -409,7 +409,8 @@ a {
     -o-transition: margin 0.3s ease-out;
     transition: margin 0.3s ease-out;
     overflow: hidden;
-    width: 60rem;
+    width: 45rem;
+    min-width: 30rem;
     z-index: 1;
 }
 
@@ -430,7 +431,7 @@ a {
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    margin-left: -60rem;
+    margin-left: -45rem;
 }
 
 #wrapper.toggled #map {
@@ -987,7 +988,7 @@ a {
 }
 .routes-arrow {
     left: 0;
-    top: calc(50vh - 32.68px);
+    top: calc(50% - 32.68px);
     animation: popup 1.2s;
 }
 @keyframes popup {
@@ -1179,13 +1180,15 @@ a {
 }
 
 .landmarkList-img {
+    top: 45px;
+    transform: translateY(-50);
     height: 85px;
     width: 85px;
     border-radius: 100px;
 }
 
 .landmarkList-height {
-    height: 90px;
+    min-height: 90px;
     padding: 0 !important;
 }
 
