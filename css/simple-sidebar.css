@@ -457,9 +457,9 @@ a {
     #sidebar-wrapper {
         position: absolute;
         min-width: 0;
-        width: 94vw;
+        width: 98vw;
         left: 0;
-        margin-left: -94vw;
+        margin-left: -98vw;
         z-index: 1;
     }
 
