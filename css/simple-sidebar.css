@@ -235,7 +235,7 @@ a {
     z-index: 1000000000000;
 }
 .home-filter {
-    opacity: 0;
+    display: none;
 }
 .home-center-y {
     position: relative;
