@@ -75,7 +75,6 @@ if (window.location.hash !== '') {
 })(window); */
 
 window.onpopstate = function (e) {
-    e.preventDefault();
     window.open('index.html', '_self');
     // toggle(document.getElementById('menu-toggle'));
 };
