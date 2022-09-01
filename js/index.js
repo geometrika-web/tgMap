@@ -25,6 +25,13 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
+document.getElementById('Hr').addEventListener('click', function () {
+    translate('Hr');
+});
+document.getElementById('En').addEventListener('click', function () {
+    translate('En');
+});
+
 const enCheck = document.getElementById('EnCheck');
 const hrCheck = document.getElementById('HrCheck');
 const en = document.getElementById('En');

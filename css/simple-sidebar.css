@@ -320,7 +320,7 @@ a {
         /* padding: 0 2rem; */
     }
     .home-center-y {
-        transform: translate(0, -60%);
+        transform: translate(0, -80%);
     }
     #toMap {
         margin: auto;
@@ -1010,6 +1010,7 @@ a {
     height: 40px; */
     font-weight: 650;
     border-bottom: 2px solid #fff !important;
+    z-index: 10000;
 }
 
 @media (max-width: 575.99px) {
