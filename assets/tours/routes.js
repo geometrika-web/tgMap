@@ -1,7 +1,7 @@
 var routesData = {
     type: 'FeatureCollection',
     features: {
-        tourJeronim: {
+        tour5: {
             type: 'Feature',
             geometry: {
                 type: 'Point',
@@ -19,7 +19,7 @@ var routesData = {
                     {
                         nameHr: 'Vjetropark na Jelovači',
                         nameEn: 'Jelovača Wind Park',
-                        coordinates: [17.141217202228713, 43.74657647507245],
+                        coordinates: [17.158281884020315, 43.752349835105264],
                         img: '../assets/img/divljiKonji-jelovaca.jpg',
                         aboutHr:
                             'Vjetropark Jelovača nalazi se na planini Jelovača na 1500 metara nadmorske visine. Ova planina svakodnevno je izložena snažnim vjetrovima koji su specifični za ovaj kraj. Osim što je jedna od prvih vjetroelektrana na području BiH, Jelovača je i dom mnogih divljih životinja, među kojima se posebno izdvajaju divlji konji koji slobodno lutaju planinom.',
@@ -29,7 +29,7 @@ var routesData = {
                     {
                         nameHr: 'Dvojna gradina',
                         nameEn: 'Double gradina hillfort',
-                        coordinates: [17.226949443618253, 43.77323265638181],
+                        coordinates: [17.228359496724266, 43.77435063761613],
                         img: '/assets/img/dvojnaGradina.jpg',
                         aboutHr:
                             'Dvojna gradina u Mokronoga je jedna od najspecifičniji gradina u sustavu gradina na Duvanjskom polju. Naime, ova gradina se nalazi iznad kanjona rijeke Šujice, točnije velika gradina na lijevoj dijelu kanjona, a mala na desnom dijelu kanjona rijeke Šujice. Velika i mala gradina su služile kao čuvarnice, ali kao i ulaz u Duvanjsko polje. Prema teorijam arheologa ove dvije gradne su bile povezane visećim mostom. ',
@@ -39,7 +39,7 @@ var routesData = {
                     {
                         nameHr: 'Ručak u Mokronogama',
                         nameEn: 'Lunch in Mokronoge',
-                        coordinates: [17.224403039066406, 43.764861033347415],
+                        coordinates: [17.224235944233836, 43.76459168101646],
                         img: '',
                         aboutHr: 'Tradicionalni ručak, peka ispod sača',
                         aboutEn: 'Traditional lunch, baked under the sač'
@@ -57,7 +57,7 @@ var routesData = {
                     {
                         nameEn: 'Stridon town - Šujica spring',
                         nameHr: 'Grad Stridon - izvor Šujice',
-                        coordinates: [17.200637745283533, 43.88058032370555],
+                        coordinates: [17.201782812728027, 43.880437245332864],
                         img: '/assets/img/gradStridon.jpg',
                         aboutEn:
                             'The town of Stridon is a town built on the cliffs below which the river Šujica springs. The walls of this city exude a strong past and the resourcefulness of the ancient Romans who dared to make the city in such an inaccessible place. According to legend, the city is also the birthplace of St. Jerome. Although the Roman Empire lost its significance in this area, the city of Stridon still remains alive and exudes defiance of steadfastness. People continued to live in this town in the Middle Ages when it was named Stržanj. After the Middle Ages, it became more and more important, so that over time it was abandoned and left to time and the forces of nature to change its appearance. ',
@@ -79,7 +79,7 @@ var routesData = {
                 img: '/assets/img/zukovica.jpg',
                 imgs: [],
                 routeTypeId: 'guided',
-                id: 'tourJeronim'
+                id: 'tour5'
             }
         }
 

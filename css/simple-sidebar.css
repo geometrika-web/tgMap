@@ -767,7 +767,7 @@ a {
 }
 @media (max-width: 575.99px) {
     #routes-menu {
-        padding: 0.5rem 2rem;
+        padding: 0.5rem 1.5rem;
     }
 }
 #show-routes-btn {
