@@ -1014,7 +1014,13 @@ a {
 
 @media (max-width: 575.99px) {
     #languagesMenuBtn {
-        left: 4rem;
+        left: 2rem;
+        top: 25px;
+        font-size: smaller;
+    }
+    #languages-menu {
+        top: 80px;
+        left: 2rem;
     }
 }
 

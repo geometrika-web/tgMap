@@ -87,6 +87,12 @@ const dict = {
 const translationImg = document.querySelectorAll('.translate-img');
 let translation;
 
+document.getElementById('Hr').addEventListener('click', function () {
+    translate('Hr');
+});
+document.getElementById('En').addEventListener('click', function () {
+    translate('En');
+});
 let translate = function (lang) {
     translation = document.querySelectorAll('.translate');
     translation.forEach((element) => {
