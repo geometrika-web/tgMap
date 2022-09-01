@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="450"
+   height="450.00104"
+   viewBox="0 0 450 450.00104"
+   version="1.1"
+   id="svg272"
+   sodipodi:docname="translate.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs276" />
+  <sodipodi:namedview
+     id="namedview274"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.4609375"
+     inkscape:cx="224.54237"
+     inkscape:cy="209.35593"
+     inkscape:window-width="1660"
+     inkscape:window-height="981"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg272" />
+  <title
+     id="title266">ionicons-v5-l</title>
+  <path
+     d="M 448.33575,417.0199 357.92971,181.25657 a 22.099252,23.79263 0 0 0 -40.85348,0 L 226.67021,417.0199 a 22.099252,23.79263 0 1 0 40.85347,18.1581 l 18.4127,-48.00703 h 103.13318 l 18.41271,48.00703 a 22.099252,23.79263 0 0 0 20.43177,14.719 22.099252,23.79263 0 0 0 20.41166,-32.8771 z m -144.14739,-77.43419 33.31964,-86.89717 33.31965,86.89717 z"
+     id="path268"
+     style="stroke-width:1.04228" />
+  <path
+     d="m 236.89613,318.95101 a 22.099252,23.79263 0 0 0 -4.91206,-33.20153 c -0.20091,-0.16223 -15.06768,-12.03691 -36.65462,-37.55991 39.82887,-58.05401 62.39021,-124.1002 71.59153,-155.182013 h 32.41558 a 22.099252,23.79263 0 0 0 0,-47.585257 H 182.81324 V 23.792637 a 22.09926,23.792638 0 0 0 -44.19852,0 V 45.4223 H 22.091405 a 22.099252,23.79263 0 0 0 0,47.585257 H 220.23128 c -9.56295,29.145963 -27.17204,75.163073 -54.03267,117.189513 -31.5517,-45.07623 -43.27435,-74.24382 -43.36476,-74.48175 a 22.099252,23.79263 0 0 0 -40.763065,18.38521 c 0.58262,1.49245 14.615645,37.01918 53.098465,90.76889 0.92415,1.28696 1.83826,2.54149 2.75236,3.796 -39.417018,47.96378 -78.090709,77.71538 -94.27339,87.31895 a 22.100521,23.793995 0 1 0 21.165056,41.7777 c 2.169745,-1.27615 48.819244,-29.08108 102.088494,-92.56415 22.62161,26.04212 38.17144,38.32777 39.10563,39.04155 a 22.099252,23.79263 0 0 0 30.88873,-5.29927 z"
+     id="path270"
+     style="fill:#000000;fill-opacity:1;stroke-width:1.04228" />
+  <metadata
+     id="metadata6016">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>ionicons-v5-l</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

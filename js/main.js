@@ -11,7 +11,7 @@ if (
 ) {
     isMobile = true;
 }
-console.log(document.documentElement.clientWidth);
+
 const lat = 43.787183;
 const lon = 16.732731;
 const y = 5422472.06;
@@ -450,7 +450,7 @@ map.addInteraction(mouseWheelZoomDuration);
 var iconStyle = new ol.style.Style({
     image: new ol.style.Icon({
         declutter: true,
-        src: 'assets/icon/360_mapIcon.svg',
+        src: `assets/icon/360_mapIcon${localStorage.lang}.svg`,
         anchor: [0.5, 2.95],
         size: [100, 30]
     })
@@ -882,13 +882,14 @@ map.on('moveend', function (e) {
 let msg = document.getElementById('msg');
 let meetElement = document.getElementById('meet');
 let routesAllElement = document.getElementById('routesAll');
+let destinationsAllElement = document.getElementById('destinationsAll');
 let routesMenu = document.getElementById('routes-menu');
 let landmark = document.getElementById('landmark');
 let image = document.getElementById('image');
 let landmarkAbout = document.getElementById('landmark-about');
 let landmarkLocation = document.getElementById('landmark-location');
 let landmarkCloseBtn = document.querySelector('.landmark-close-btn');
-let googleMapsHref = document.getElementById('googleMaps-href');
+let googleMapsHref = document.getElementById('googleMapsHref');
 
 let routeClicked = document.getElementById('route');
 
@@ -1089,7 +1090,7 @@ let prirodaElement;
 let turizamElement;
 let hikeElement;
 let bikeElement;
-let speleoElement;
+let guidedElement;
 
 coord = [];
 landmarksZoom = [];
@@ -1097,13 +1098,13 @@ let landmarkAllList = [];
 
 function routeColor(routeType) {
     if (routeType == 'hike') {
-        color = '#67b779';
+        color = '#4ca6a8';
     }
     if (routeType == 'bike') {
-        color = '#e46353';
+        color = '#ff7262';
     }
-    if (routeType == 'speleo') {
-        color = '#0d121f';
+    if (routeType == 'guided') {
+        color = '#4460a0';
     }
 }
 
@@ -1132,10 +1133,10 @@ window.onload = function () {
         };
         var parent = document.getElementById('landmark-name');
         parent.appendChild(landmarkAll);
-        console.log(landmarkAllList);
+        // console.log(landmarkAllList);
         coord[i] = landmarksData.features[i].geometry.coordinates;
         landmarksZoom[i] = landmarksData.features[i].properties.zoom;
-        console.log(landmarksData.features[i].properties.zoom);
+        // console.log(landmarksData.features[i].properties.zoom);
         var landmarkImg = document.createElement('img');
         landmarkImg.src = landmarksData.features[i].properties.img;
         landmarkImg.classList.add('landmarkList-img', 'ml-4', 'center-y');
@@ -1150,7 +1151,8 @@ window.onload = function () {
         var landmarkType = document.createElement('img');
         var landmark360 = document.createElement('img');
         landmarkPlace.innerText = landmarksData.features[i].properties.place;
-        landmarkName.innerText = landmarksData.features[i].properties.name;
+        landmarkName.innerText =
+            landmarksData.features[i].properties[`name${localStorage.lang}`];
         landmarkType.src = landmarksData.features[i].properties.thumb;
         landmarkPlace.classList.add('menu-btn', 'text-c3');
         landmarkName.classList.add('sort', 'text-font');
@@ -1189,7 +1191,7 @@ window.onload = function () {
         parent.appendChild(landmarkAll);
         coord[i + length] = natureData.features[i].geometry.coordinates;
         landmarksZoom[i + length] = natureData.features[i].properties.zoom;
-        console.log(natureData.features[i].properties.zoom);
+        // console.log(natureData.features[i].properties.zoom);
         var landmarkImg = document.createElement('img');
         landmarkImg.src = natureData.features[i].properties.img;
         landmarkImg.classList.add('landmarkList-img', 'ml-4', 'center-y');
@@ -1204,7 +1206,8 @@ window.onload = function () {
         var landmarkType = document.createElement('img');
         var landmark360 = document.createElement('img');
         landmarkPlace.innerText = natureData.features[i].properties.place;
-        landmarkName.innerText = natureData.features[i].properties.name;
+        landmarkName.innerText =
+            natureData.features[i].properties[`name${localStorage.lang}`];
         landmarkType.src = natureData.features[i].properties.thumb;
         landmarkPlace.classList.add('menu-btn', 'text-c3');
         landmarkName.classList.add('text-font');
@@ -1262,7 +1265,8 @@ window.onload = function () {
         var landmarkType = document.createElement('img');
         var landmark360 = document.createElement('img');
         landmarkPlace.innerText = touristData.features[i].properties.place;
-        landmarkName.innerText = touristData.features[i].properties.name;
+        landmarkName.innerText =
+            touristData.features[i].properties[`name${localStorage.lang}`];
         landmarkType.src = touristData.features[i].properties.thumb;
         landmarkPlace.classList.add('menu-btn', 'text-c3');
         landmarkName.classList.add('text-font');
@@ -1291,12 +1295,11 @@ window.onload = function () {
     for (let el = 0; el < landmarkAllList.length; el++) {
         parent.appendChild(landmarkAllList[el]);
     }
-    console.log(landmarkAllList);
+    // console.log(landmarkAllList);
 
     //})
     //End for landmarks
-    // Load list of all routes from GeoJSON file
-    //$.getJSON("assets/tours/routes.geojson", function(data) {
+    //Routes list build
     features = routesData.features;
     for (i in features) {
         let routeType = features[i].properties.routeTypeId;
@@ -1323,14 +1326,14 @@ window.onload = function () {
         route.onclick = function () {
             getRouteText(this.id); //getSourceJSON
         };
-        var parent = document.getElementById('routesAll');
+        var parent = routesAllElement;
         parent.appendChild(route);
 
         var routeImg = document.createElement('img');
         routeImg.src = features[i].properties.img;
         routeImg.classList.add('landmarkList-img', 'ml-4', 'center-y');
         route.appendChild(routeImg);
-        console.log(features[i].properties.img);
+        // console.log(features[i].properties.img);
 
         var routeHeader = document.createElement('div');
         routeHeader.classList.add('pt-2', 'pl-4', 'pr-4');
@@ -1340,7 +1343,104 @@ window.onload = function () {
         var routeName = document.createElement('div');
         var routeTypeImg = document.createElement('img');
         routePlace.innerText = features[i].properties.place;
-        routeName.innerText = features[i].properties.name;
+        routeName.innerText =
+            features[i].properties[`name${localStorage.lang}`];
+        routeTypeImg.src = `/assets/icon/routes/${routeType}.svg`;
+        routePlace.classList.add('menu-btn', 'text-c3');
+        routeName.classList.add('text-font');
+        routeTypeImg.classList.add('kategorije-thumb');
+        routeHeader.appendChild(routePlace);
+        routeHeader.appendChild(routeName);
+        routeHeader.appendChild(routeTypeImg);
+
+        /* var routeText = document.createElement('small');
+        routeText.id = features[i].properties.id + '-text';
+        routeText.classList.add('p-3', 'ml-4');
+        routeText.style.display = 'none';
+        routesDesc.push(routeText);
+        parent.appendChild(routeText);
+ */
+        /* var routeDuration = document.createElement('div');
+        routeDuration.classList.add('text-right', 'text-muted', 'mr-4');
+        routeDuration.innerText = features[i].properties.duration;
+        var routeTypeImg = document.createElement('img');
+        routeTypeImg.classList.add('ml-2', 'img-height-50px');
+        routeType.src = `/assets/icon/routes/${routeType}.svg`;
+        routeDuration.appendChild(routeTypeImg);
+        routeText.appendChild(routeDuration); */
+
+        /* var stops = features[i].properties.stops;
+        var dists = features[i].properties.dists;
+        for (j in stops) {
+            var stopName = document.createElement('div');
+            stopName.innerText = stops[j].name;
+            stopName.classList.add('pl-5', 'color-gray');
+            routeText.appendChild(stopName);
+            if (dists[j]) {
+                var dots = document.createElement('img');
+                dots.src = '/assets/icon/three-dots-vertical.svg';
+                dots.classList.add('ml-5');
+                var dist = document.createElement('span');
+                dist.innerText = dists[j];
+                dist.classList.add('ml-5', 'color-gray');
+                routeText.appendChild(dots);
+                routeText.appendChild(dist);
+            }
+        } */
+        /* var aboutRoute = document.createElement('div');
+        aboutRoute.innerText = features[i].properties.about;
+        aboutRoute.classList.add('mt-4', 'pl-4', 'pr-4');
+        routeText.appendChild(aboutRoute); */
+    }
+    //})
+    //End for routes
+    //Weekend destinations
+
+    features = destinationsData.features;
+    for (i in features) {
+        let routeType = features[i].properties.routeTypeId;
+        var route = document.createElement('button');
+        route.id = features[i].properties.id;
+        route.classList.add(
+            'list-group-item',
+            'list-group-item-action',
+            'no-outline',
+            'mt-4',
+            'landmarkList-height',
+            'scale-animation-right',
+            'display-flex',
+            'text-font',
+            routeType
+        );
+        route.classList.add(features[i].properties.id);
+        // route.classList.add(features[i].properties.type);
+        // route.innerText = features[i].properties.name;
+        route.setAttribute('type', routeType);
+        routeColor(routeType);
+        route.setAttribute('color', color);
+
+        route.onclick = function () {
+            getRouteText(this.id); //getSourceJSON
+        };
+        var parent = destinationsAllElement;
+        parent.appendChild(route);
+
+        var routeImg = document.createElement('img');
+        routeImg.src = features[i].properties.img;
+        routeImg.classList.add('landmarkList-img', 'ml-4', 'center-y');
+        route.appendChild(routeImg);
+        // console.log(features[i].properties.img);
+
+        var routeHeader = document.createElement('div');
+        routeHeader.classList.add('pt-2', 'pl-4', 'pr-4');
+        route.appendChild(routeHeader);
+
+        var routePlace = document.createElement('div');
+        var routeName = document.createElement('div');
+        var routeTypeImg = document.createElement('img');
+        routePlace.innerText = features[i].properties.place;
+        routeName.innerText =
+            features[i].properties[`name${localStorage.lang}`];
         routeTypeImg.src = `/assets/icon/routes/${routeType}.svg`;
         routePlace.classList.add('menu-btn', 'text-c3');
         routeName.classList.add('text-font');
@@ -1365,6 +1465,17 @@ window.onload = function () {
         routeDuration.appendChild(routeTypeImg);
         routeText.appendChild(routeDuration);
 
+        /*         var startTime = document.createElement('div');
+        startTime.classList.add('text-right', 'text-muted', 'mr-4');
+        startTime.innerText = features[i].properties.startTime;
+        var day = document.createElement('div');
+        day.classList.add('text-right', 'text-muted', 'mr-4');
+        day.innerText = features[i].properties.day;
+        var startPlace = document.createElement('div');
+        startPlace.classList.add('text-right', 'text-muted', 'mr-4');
+        startPlace.innerText = features[i].properties.startPlace;
+        routeText.appendChild(startTime); */
+
         var stops = features[i].properties.stops;
         var dists = features[i].properties.dists;
         for (j in stops) {
@@ -1388,9 +1499,7 @@ window.onload = function () {
         aboutRoute.classList.add('mt-4', 'pl-4', 'pr-4');
         routeText.appendChild(aboutRoute);
     }
-    //})
-    //End for routes
-    //Weekend destinations GeoJSON
+
     destInfoList = [
         'Mjesto polaska:',
         'Vrijeme polaska:',
@@ -1460,12 +1569,15 @@ window.onload = function () {
     //  }
     //})
 
-    var assocInfoList1 = ['Predsjednik:', 'Novosti:'],
-        assocInfoList2 = [
-            'assets/contact/phone.png',
-            'assets/contact/mail.png',
-            'assets/contact/location.png'
-        ];
+    var assocInfoListLang = {
+        Hr: ['Predsjednik:', 'Novosti:'],
+        En: ['President:', 'News:']
+    };
+    assocInfoList2 = [
+        'assets/contact/phone.png',
+        'assets/contact/mail.png',
+        'assets/contact/location.png'
+    ];
     //$.getJSON("assets/landmarks/assocs.geojson", function (data) {
     //  features = data.features
     for (i in assocsData.features) {
@@ -1507,7 +1619,8 @@ window.onload = function () {
         assocsPlace.innerText = features[i].properties.place;
         assocsPlace.classList.add('menu-btn', 'text-c3');
         var assocsName = document.createElement('div');
-        assocsName.innerText = features[i].properties.name;
+        assocsName.innerText =
+            features[i].properties[`name${localStorage.lang}`];
         assocsName.classList.add('text-font');
         assocsTitle.appendChild(assocsPlace);
         assocsTitle.appendChild(assocsName);
@@ -1518,7 +1631,8 @@ window.onload = function () {
         assocText.id = features[i].properties.id + '-text';
         assocText.classList.add('p-4');
         assocText.style.display = 'none';
-        assocText.innerHTML = features[i].properties.about;
+        assocText.innerHTML =
+            features[i].properties[`about${localStorage.lang}`];
         assocDesc.push(assocText);
         document.getElementById('assocsAll').appendChild(assocText);
 
@@ -1537,7 +1651,7 @@ window.onload = function () {
         var list2 = document.createElement('ul');
         list2.classList.add('list-unstyled', 'mb-0', 'mt-4', 'col-6');
         assocInfo.appendChild(list2);
-
+        let assocInfoList1 = assocInfoListLang[localStorage.lang];
         for (g in assocInfoList1) {
             var item = document.createElement('li');
             item.classList.add('mt-2');
@@ -1572,7 +1686,7 @@ window.onload = function () {
     }
     //})
     $('#preloader').slideUp(1000);
-    $('#homeLogo').addClass('home-filter');
+    $('#preloaderLogo').addClass('home-filter');
     /* if (sessionStorage.home == 1) {
         document.getElementById('info').style.display = 'none';
         document.getElementById('homeLogo').style.display = 'none';
@@ -1600,9 +1714,9 @@ window.onload = function () {
     turizamElement = document.querySelectorAll('.turizam');
     hikeElement = document.querySelectorAll('.hike');
     bikeElement = document.querySelectorAll('.bike');
-    speleoElement = document.querySelectorAll('.speleo');
+    guidedElement = document.querySelectorAll('.guided');
 };
-console.log(landmarkAllList[0]);
+// console.log(landmarkAllList[0]);
 //Onload End
 
 //To Map
@@ -1619,7 +1733,7 @@ function toHome() {
     //toggle.delay(500)(document.getElementById('menu-toggle'))
     // $('#homeLogo').slideToggle(1000);
     console.log($('#info'));
-    document.getElementById('info-logo').scrollTop = '0';
+    document.getElementById('infoLogo').scrollTop = '0';
     $('#info').slideToggle(300);
     // sessionStorage.home = 2;
 }
@@ -1660,13 +1774,13 @@ const kategorijeStyleDisplay = function (
 const routesStyleDisplay = function (
     hikeStyleDisplay,
     bikeStyleDisplay,
-    speleoStyleDisplay
+    guidedStyleDisplay
 ) {
-    hikeElement.forEach((item) => console.log(item));
+    // hikeElement.forEach((item) => console.log(item));
     hikeElement.forEach((item) => (item.style.display = hikeStyleDisplay[0]));
     bikeElement.forEach((item) => (item.style.display = bikeStyleDisplay[0]));
-    speleoElement.forEach(
-        (item) => (item.style.display = speleoStyleDisplay[0])
+    guidedElement.forEach(
+        (item) => (item.style.display = guidedStyleDisplay[0])
     );
 };
 
@@ -1713,7 +1827,7 @@ const bikeFilter = function () {
     routesStyleDisplay(hide, show, hide);
     kategorijeCheckOffset('67%', '65%', 'routes');
 };
-const speleoFilter = function () {
+const guidedFilter = function () {
     routesStyleDisplay(hide, hide, show);
     kategorijeCheckOffset('92.5%', '88.5%', 'routes');
 };
@@ -1746,8 +1860,8 @@ const filter = function (e) {
     if (id == 'bike') {
         bikeFilter();
     }
-    if (id == 'speleo') {
-        speleoFilter();
+    if (id == 'guided') {
+        guidedFilter();
     }
 };
 kategorijeBtns.forEach((btn) => btn.addEventListener('click', filter));
@@ -2085,22 +2199,43 @@ markers.setZIndex(100000000000000000000000000000000000);
 //vectorSource.refresh()
 
 // Tours
+
 for (var i = 0; i < routesDesc.length; i++) {
     routesDesc[i].style.display = 'none';
 }
-let tourSource;
+let tourSource, tourDataSource;
 function getRouteText(clickedID) {
+    if (weekendDestinationsIndicator == 1) {
+        tourDataSource = destinationsData;
+    } else {
+        tourDataSource = routesData;
+    }
     let clickedID_element = document.getElementById(clickedID);
-    let clickedID_text = document.getElementById(clickedID + '-text');
-    let clickedIDtextStyle = clickedID_text.style.display;
+    // let clickedID_text = document.getElementById(clickedID + '-text');
+    // let clickedIDtextStyle = clickedID_text.style.display;
+    tourDataProperties = tourDataSource.features[clickedID].properties;
+    tourDataGeometry = tourDataSource.features[clickedID].geometry;
+    let name = tourDataProperties[`name${localStorage.lang}`];
 
-    let name = routesData.features[clickedID].properties.name;
-    let text = routesData.features[clickedID].properties.about;
-    let type = `/assets/icon/routes/${routesData.features[clickedID].properties.routeTypeId}.svg`;
-    let dist = routesData.features[clickedID].properties.dist;
-    let duration = routesData.features[clickedID].properties.duration;
+    let text = tourDataProperties[`about${localStorage.lang}`];
+    let type = `/assets/icon/routes/${tourDataProperties.routeTypeId}.svg`;
+    let dist = tourDataProperties.dist;
+    let duration = tourDataProperties.duration;
+    let day;
+    let startPlace;
+    var startTime;
+    let needed;
+    let contact;
+    // console.log(weekendDestinationsIndicator);
+
     // if (clickedIDtextStyle == "none") {
-    if (clickedIDtextStyle == 'block') {
+    /* if (document.getElementById(clickedID + '-text')) {
+        document
+            .getElementById('tourist-routes')
+            .classList.add('routes-scroll');
+        document
+            .getElementById('tourist-routes')
+            .classList.remove('sidebar-scroll');
         clearRoute();
         showPins();
         clickedID_text.style.display = 'none';
@@ -2108,36 +2243,57 @@ function getRouteText(clickedID) {
         if (isMobile) {
             document.querySelector('.routes-arrow').classList.add('hidden');
         }
-    } else {
-        for (var i = 0; i < routesDesc.length; i++) {
-            if (routesDesc[i].style.display == 'block') {
-                clearRoute();
-                routesDesc[i].style.display = 'none';
-                routesDesc[i].classList.remove('activate-assoc');
-            }
+    } else { */
+    document.getElementById('tourist-routes').classList.remove('routes-scroll');
+    document.getElementById('tourist-routes').classList.add('sidebar-scroll');
+    for (var i = 0; i < routesDesc.length; i++) {
+        if (routesDesc[i].style.display == 'block') {
+            clearRoute();
+            routesDesc[i].style.display = 'none';
+            routesDesc[i].classList.remove('activate-assoc');
         }
+        // }
         hidePins();
+        zoomToRoute();
         renderRoute(clickedID, clickedID_element);
-        zoomToRoute(clickedID);
         routeAbout = `<img onclick="backFromRoute()" class="landmark-close-btn" src="assets/icon/close.svg" alt="">
-    <div class="m-4 pt-5 landmark-title text-left d-block" style="display: inline-block;">${name}</div>
-    <div class='pt-2 pb-2 pl-5 pr-5'>
-    <img class="route-type-badge mr-5" src=${type}>
+        <div class="m-4 pt-5 landmark-title text-left d-block" style="display: inline-block;">${name}</div>
+        <div class='pt-2 pb-2 pl-5 pr-5'>`;
+        if (weekendDestinationsIndicator == 1) {
+            startTime = tourDataProperties.startTime;
+            day = tourDataProperties[`day${localStorage.lang}`];
+            startPlace = tourDataProperties[`startPlace${localStorage.lang}`];
+            needed = tourDataProperties[`needed${localStorage.lang}`];
+            contact = tourDataProperties.contact;
+            routeAbout += `
+            <p class="text-16 align-middle ml-4"><p id="timeDesc" class="translate mb-0 d-inline">Vrijeme: </p><b>${startTime}</b></p>
+            <p class="text-16 align-middle ml-4"><p id="placeDesc" class="translate mb-0 d-inline">Mjesto: </p><b>${startPlace}</b></p>
+            <p class="text-16 align-middle ml-4"><p id="dayDesc" class="translate mb-0 d-inline">Dan:      </p><b>${day}</b></p>
+            <p class="text-16 align-middle ml-4"><p id="neededDesc" class="translate mb-0 d-inline">Potrebno: </p><b>${needed}</b></p>
+            <p class="text-16 align-middle ml-4 mb-3"><p id="contactDesc" class="translate mb-0 d-inline">Kontakt: </p><b>${contact}</b></p>
+            `;
+        }
+
+        routeAbout += `<img class="route-type-badge mr-5" src=${type}>
     <p class="text-20 align-middle ml-5 line-40"><b>${duration} | ${dist}</b></p>
     <button id="show-routes-btn" data-toggle="collapse" data-target="#stops" aria-expanded="false" class="text-toggle list-group-item list-group-item-action no-outline route-type align-middle line-40">
     
-    <span class="text-collapsed">Pokaži stanice</span>
-    <span class="text-expanded">Sakrij stanice</span>
+    <span class="text-collapsed">${dict[localStorage.lang].showStations}</span>
+    <span class="text-expanded">${dict[localStorage.lang].hideStations}</span>
   
     </button>
-    <div id="stops" class="collapse">${stopsHtml}</div>
+    <div id="stops" class="ml-4 collapse">${stopsHtml}</div>
     <span id="profile" style="min-width:300px;"></span>
     </div>
     <div id="landmark-about" class="p-4 mb-2 text-justify d-block text-font" style="display: inline-block;">${text}</div>
     ${carouselHtml};`;
         routesAllElement.style.display = 'none';
+        destinationsAllElement.style.display = 'none';
         routesMenu.style.display = 'none';
         routeClicked.innerHTML = routeAbout;
+        translate(localStorage.lang);
+        console.log(localStorage.lang);
+
         // let routeClickedPosition = routeClicked.offsetTop + 1000;
         if (!isMobile) {
             document.getElementById('tourist-routes').scrollTo(0, 10000);
@@ -2148,10 +2304,10 @@ function getRouteText(clickedID) {
             });
         }
 
-        console.log(clickedID);
+        // console.log(clickedID);
         // clickedID_text.style.display = "block";
-        console.log(clickedID);
-        clickedID_text.classList.add('activate-assoc');
+        // console.log(clickedID);
+        // clickedID_text.classList.add('activate-assoc');
         if (isMobile) {
             setTimeout(() => {
                 document
@@ -2407,34 +2563,34 @@ function renderRoute(tour, element) {
       pt.setStyle([]);
     }
   }); */
-
     tourPath.setSource(tourSource);
     tourPath.setStyle(tourStyle);
-    let routeType = routesData.features[tour].properties.routeTypeId;
+    let routeType = tourDataProperties.routeTypeId;
     routeColor(routeType);
     let stopPinColor = color;
-    let stops = routesData.features[tour].properties.stops;
-    let dists = routesData.features[tour].properties.dists;
-    let imgs = routesData.features[tour].properties.imgs;
+    let stops = tourDataProperties.stops;
+    let dists = tourDataProperties.dists;
+    let imgs = tourDataProperties.imgs;
     // let pins = routesData.features[tour].properties.pins;
     let stopPinStyle = `/assets/icon/routes/${routeType}Pin.svg`;
     // let stopPinName = routesData.features[tour].properties.stops;
     // let stopPinColor = routesData.features[tour].properties.color;
     stopsHtml = ``;
     stops.forEach((stop, index) => {
-        name = stop.name;
+        name = stop[`name${localStorage.lang}`];
+        id = stop.nameHr;
         coordinates = stop.coordinates;
         let img = false;
         let about = false;
         if (stop.img) {
             img = stop.img;
         }
-        if (stop.about) {
-            about = stop.about;
+        if (stop.aboutHr) {
+            about = stop[`about${localStorage.lang}`];
         }
-        stopsHtml += `<button id="${name}" class="list-group-item no-outline display-flex text-font"><img src="/assets/icon/placeholder-black.svg"><div class="text-font line-40 ml-4">${name}</div></button>`;
+        stopsHtml += `<button id="${id}" class="list-group-item no-outline display-flex text-font p-0"><img src="/assets/icon/placeholder-black.svg"><div class="text-font line-40 ml-4">${name}</div></button>`;
         if (index < stops.length - 1) {
-            stopsHtml += `<img class="ml-305" src="/assets/icon/three-dots-vertical.svg"><small class="ml-305 color-gray">${dists[index]}</small>`;
+            stopsHtml += `<img class="" src="/assets/icon/three-dots-vertical.svg"><small class="ml-4 color-gray">${dists[index]}</small>`;
         }
         routeColor(routeType);
         addRoutePins(
@@ -2447,7 +2603,7 @@ function renderRoute(tour, element) {
             tour
         );
     });
-    carouselHtml = `<div id="carousel" class="carousel slide" data-ride="carousel">
+    carouselHtml = `<div id="carousel" class="p-3 carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">`;
     imgs.forEach((img, index) => {
         if (index < 1) {
@@ -2602,7 +2758,7 @@ var meet = 1;
 document.getElementById('routes').style.display = 'none';
 document.getElementById('assoc').style.display = 'none';
 document.getElementById('assocsAll').style.display = 'none';
-document.getElementById('destinationsAll').style.display = 'none';
+destinationsAllElement.style.display = 'none';
 document.getElementById('business').style.display = 'none';
 function meetTg() {
     if (meet == 1) {
@@ -2614,6 +2770,7 @@ function meetTg() {
         deselect();
         allFilter();
         backFromRoute();
+        touristTours();
         meet = 1;
         markers.setVisible(true);
         vector.setVisible(true);
@@ -2700,23 +2857,23 @@ function routes() {
 }
 
 function touristTours() {
-    document.getElementById('routesAll').style.display = 'block';
-    document.getElementById('destinationsAll').style.display = 'none';
+    weekendDestinationsIndicator = 0;
+    routesAllElement.style.display = 'block';
+    destinationsAllElement.style.display = 'none';
+    document.getElementById('btnTouristTours').classList.add('activate-routes');
     document
-        .getElementById('btn-touristTours')
-        .classList.add('activate-routes');
-    document
-        .getElementById('btn-weekendDestinations')
+        .getElementById('btnWeekendDestinations')
         .classList.remove('activate-routes');
 }
 function weekendDestinations() {
-    document.getElementById('routesAll').style.display = 'none';
-    document.getElementById('destinationsAll').style.display = 'block';
+    weekendDestinationsIndicator = 1;
+    routesAllElement.style.display = 'none';
+    destinationsAllElement.style.display = 'block';
     document
-        .getElementById('btn-weekendDestinations')
+        .getElementById('btnWeekendDestinations')
         .classList.add('activate-routes');
     document
-        .getElementById('btn-touristTours')
+        .getElementById('btnTouristTours')
         .classList.remove('activate-routes');
 }
 
@@ -2825,13 +2982,21 @@ function backFromMeet() {
         document.getElementById('assoc').style.display = 'block';
     }
 }
-
+let weekendDestinationsIndicator = 0;
 function backFromRoute() {
     routeClicked.innerHTML = '';
-    routesAllElement.style.display = 'block';
     routesMenu.style.display = 'block';
+    if (weekendDestinationsIndicator == 0) {
+        routesAllElement.style.display = 'block';
+    } else {
+        destinationsAllElement.style.display = 'block';
+    }
     routesAllFilter();
     clearRoute();
+    document.getElementById('tourist-routes').classList.add('routes-scroll');
+    document
+        .getElementById('tourist-routes')
+        .classList.remove('sidebar-scroll');
 }
 // Control Select
 var select = new ol.interaction.Select({
@@ -2873,9 +3038,9 @@ features = select.getFeatures().on(['add', 'remove'], function (e) {
             var feature = e.element;
             //document.getElementById('landmark-type').src = feature.get('thumb');
             //document.getElementById('landmark-place').innerHTML = feature.get('place');
-            landmark.innerHTML = feature.get('name');
+            landmark.innerHTML = feature.get(`name${localStorage.lang}`);
             landmarkLocation.innerHTML = feature.get('place');
-            landmarkAbout.innerHTML = feature.get('about');
+            landmarkAbout.innerHTML = feature.get(`about${localStorage.lang}`);
             googleMapsHref.href = feature.get('googleMaps');
             expandedImg.src = feature.get('img2');
             image2.src = feature.get('img2');
@@ -3350,7 +3515,7 @@ var utils = {
 };
 
 // Get geojson file and draw route from it function
-function getSourceJSON(clickedID, selected) {
+/* function getSourceJSON(clickedID, selected) {
     //document.getElementById('sidebar-wrapper').style.pointerEvents = 'none'
     routeSource.clear();
     map.getLayers().forEach(function (layer) {
@@ -3455,7 +3620,7 @@ function getSourceJSON(clickedID, selected) {
             }
         }
     });
-}
+} */
 
 function assocToggle() {
     setTimeout(() => {
@@ -3592,7 +3757,7 @@ for (var i = 0; i < weekendDestinationsDesc.length; i++) {
     weekendDestinationsDesc[i].style.display = 'none';
 }
 
-function zoomToRoute(id) {
+function zoomToRoute() {
     // for (var i = 0; i < routesDesc.length; i++) {
     //   routesDesc[i].style.display = "none";
     // }
@@ -3602,11 +3767,9 @@ function zoomToRoute(id) {
         // setTimeout(() => toggle(document.getElementById("menu-toggle")), "1500");
     }
     view.animate({
-        center: routesData.features[id].geometry.coordinates,
+        center: tourDataGeometry.coordinates,
         duration: 1000,
-        zoom: isMobile
-            ? routesData.features[id].geometry.zoomMobile
-            : routesData.features[id].geometry.zoom
+        zoom: isMobile ? tourDataGeometry.zoomMobile : tourDataGeometry.zoom
     });
     // toggle(document.getElementById("menu-toggle"));
 }
@@ -3634,7 +3797,7 @@ function zoomToDest(id) {
 //for (var i = 0; i < assocDesc.length; i++){
 //  assocDesc[i].style.display = 'none'
 //}
-console.log(assocDesc);
+// console.log(assocDesc);
 function closeAssocDesc() {
     for (var i = 0; i < assocDesc.length; i++) {
         assocDesc[i].style.display = 'none';
@@ -3798,7 +3961,7 @@ function sidebarGallery(imgs) {
     expandImg.parentElement.style.display = 'block';
 }
 
-let request = new XMLHttpRequest();
+/* let request = new XMLHttpRequest();
 
 request.open(
     'POST',
@@ -3845,4 +4008,4 @@ var routeNew = new ol.layer.Vector({
     style: routesStyle
 });
 
-map.addLayer(routeNew);
+map.addLayer(routeNew); */

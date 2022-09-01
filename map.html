@@ -42,21 +42,22 @@
         <div id="preloader" class="indeterminate"></div>
         <a href="index.html"
             ><img
-                id="homeLogo"
+                id="preloaderLogo"
                 src="assets/logo/logo_figma.svg"
-                class="position-absolute home-logo"
+                class="translate-img position-absolute home-logo"
                 alt="TomislavGuides"
+                
         /></a>
         <!-- Home screen -->
-        <div id="info">
+        <div id="info" class="">
             <a href="index.html"
                 ><img
-                    id="info-logo"
+                    id="infoLogo"
                     src="assets/logo/logo_figma.svg"
-                    class=""
+                    class="translate-img"
                     alt="TomislavGuides"
             /></a>
-            <div class="row info-row">
+            <div id="infoRow" class="translate row info-row">
                 <div class="col-lg info-col pl-4">
                     <div class="info-title">Tomislavgrad</div>
                     <div class="info-text">
@@ -128,7 +129,7 @@
                         
                     </div>
                 </div>
-                <img src="assets/img/info-background.png" class="info-img" alt="" />
+                <img src="assets/img/00home.jpg" class="info-img" alt="" />
             </div>
             <!-- <div class="home-center-y text-center">
                 <div class="text-center home-title">
@@ -193,7 +194,7 @@
                             class="menuBtn-border activate col-3 cursor-pointer menu-btn text-c3 text-center no-outline p-0 pt-2 pb-2"
                         >
                             <img src="assets/icon/placeholder.svg" alt="" />
-                            <div>Upoznaj</div>
+                            <div id="meetTranslate" class="translate">Upoznaj</div>
                         </div>
                         <div
                             id="btn-routes"
@@ -201,7 +202,7 @@
                             class="menuBtn-border col-3 cursor-pointer menu-btn text-c3 text-center no-outline p-0 pt-2 pb-2"
                         >
                             <img src="assets/icon/route.svg" alt="" />
-                            <div>Obilasci</div>
+                            <div id="toursTranslate" class="translate">Obilasci</div>
                         </div>
                         <div
                             id="btn-assoc"
@@ -209,7 +210,7 @@
                             class="menuBtn-border col-3 cursor-pointer menu-btn text-c3 text-center no-outline p-0 pt-2 pb-2"
                         >
                             <img src="assets/icon/association.svg" alt="" />
-                            <div>Udruge</div>
+                            <div id="associationsTranslate" class="translate">Udruge</div>
                         </div>
                         <div
                             id="btn-business"
@@ -217,7 +218,7 @@
                             class="menuBtn-border col-3 cursor-pointer menu-btn text-c3 text-center no-outline p-0 pt-2 pb-2"
                         >
                             <img src="assets/icon/business.svg" alt="" />
-                            <div>Poduzetnici</div>
+                            <div id="businessTranslate" class="translate">Poduzetnici</div>
                         </div>
                     </div>
                 </div>
@@ -246,7 +247,7 @@
                                         src="/assets/icon/kategorije_Sve.svg"
                                         alt=""
                                     />
-                                    <div class="d-inline d-block mt-2 text-c3">
+                                    <div id="allTranslate" class="d-inline d-block mt-2 text-c3 translate">
                                         Sve
                                     </div>
                                 </div>
@@ -261,7 +262,7 @@
                                         src="/assets/icon/kategorije_Kultura.svg"
                                         alt=""
                                     />
-                                    <div class="d-inline d-block mt-2 text-c3">
+                                    <div id="cultureTranslate" class="translate d-inline d-block mt-2 text-c3">
                                         Kultura
                                     </div>
                                 </div>
@@ -276,7 +277,7 @@
                                         src="/assets/icon/kategorije_Priroda.svg"
                                         alt=""
                                     />
-                                    <div class="d-inline d-block mt-2 text-c3">
+                                    <div id="natureTranslate" class="translate d-inline d-block mt-2 text-c3">
                                         Priroda
                                     </div>
                                 </div>
@@ -291,7 +292,7 @@
                                         src="/assets/icon/kategorije_event.svg"
                                         alt=""
                                     />
-                                    <div class="d-inline d-block mt-2 text-c3">
+                                    <div id="eventsTranslate" class="translate d-inline d-block mt-2 text-c3">
                                         Događanja
                                     </div>
                                 </div>
@@ -372,7 +373,7 @@
                         class="p-4 mb-2 mt-6rem text-justify d-block text-font"
                     ></div>
                     <div id="google-maps">
-                        <a id="googleMaps-href" target="_blank" href="">
+                        <a id="googleMapsHref" target="_blank" href="" class="translate">
                             <img src="/assets/icon/googleMaps.svg" alt="" />
                             Upute &#10132;</a
                         >
@@ -397,18 +398,18 @@
                         <div class="row text-small">
                             <div class="col-6 p-0">
                                 <button
-                                    id="btn-touristTours"
+                                    id="btnTouristTours"
                                     onclick="touristTours()"
-                                    class="menu-btn list-group-item list-group-item-action text-center activate-routes no-outline"
+                                    class="translate menu-btn list-group-item list-group-item-action text-center activate-routes no-outline"
                                 >
                                     TURISTIČKE RUTE
                                 </button>
                             </div>
                             <div class="col-6 p-0">
                                 <button
-                                    id="btn-weekendDestinations"
+                                    id="btnWeekendDestinations"
                                     onclick="weekendDestinations()"
-                                    class="menu-btn list-group-item list-group-item-action text-center no-outline"
+                                    class="translate menu-btn list-group-item list-group-item-action text-center no-outline"
                                 >
                                     VIKEND DESTINACIJE
                                 </button>
@@ -430,7 +431,7 @@
                                 id="kategorije-routes"
                                 class="container-fluid mt-5-m mb-5-m cursor-pointer position-relative p-0-2-m"
                             >
-                                <div class="text-left mb-2 mt-4 text-font">
+                                <div id="categoriesToursTranslate" class="translate text-left mb-2 mt-4 text-font">
                                     Kategorije
                                 </div>
                                 <div class="row">
@@ -449,8 +450,8 @@
                                                 src="/assets/icon/kategorije_Sve.svg"
                                                 alt=""
                                             />
-                                            <div
-                                                class="d-inline d-block mt-2 text-c3"
+                                            <div id="allToursTranslate"
+                                                class="translate d-inline d-block mt-2 text-c3"
                                             >
                                                 Sve
                                             </div>
@@ -466,8 +467,8 @@
                                                 src="/assets/icon/routes/hike.svg"
                                                 alt=""
                                             />
-                                            <div
-                                                class="d-inline d-block mt-2 text-c3"
+                                            <div id="hikeTranslate"
+                                                class="translate d-inline d-block mt-2 text-c3"
                                             >
                                                 Pješačke
                                             </div>
@@ -483,8 +484,8 @@
                                                 src="/assets/icon/routes/bike.svg"
                                                 alt=""
                                             />
-                                            <div
-                                                class="d-inline d-block mt-2 text-c3"
+                                            <div id="bikeTranslate"
+                                                class="translate d-inline d-block mt-2 text-c3"
                                             >
                                                 Biciklističke
                                             </div>
@@ -493,31 +494,31 @@
                                     <div class="col-3">
                                         <div
                                             class="image-center menu-btn kategorije-btn"
-                                            id="speleo"
+                                            id="guided"
                                         >
                                             <img
                                                 class="d-inline kategorije-hover"
-                                                src="/assets/icon/routes/speleo.svg"
+                                                src="/assets/icon/routes/guided.svg"
                                                 alt=""
                                             />
-                                            <div
-                                                class="d-inline d-block mt-2 text-c3"
+                                            <div id="guidedTranslate"
+                                                class="translate d-inline d-block mt-2 text-c3"
                                             >
-                                                Speleološke
+                                                S vodičem
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div id="destinationsAll" class="routes-scroll mt-5"></div>
                     </div>
                     <!--Vikend destinacije-->
-                    <div id="destinationsAll" class="routes-scroll mt-5"></div>
                 </div>
                 <!--Associations-->
                 <div id="assocsAll" class="assocs-scroll"></div>
                 <div id="assoc" class="list-group-flush">
-                    <div id="destinationsAll" class="routes-scroll mt-5"></div>
+                    <!-- <div id="destinationsAll" class="routes-scroll mt-5"></div> -->
                     <button
                         onclick="getAssoc(this.id)"
                         id="assoc1"
@@ -824,7 +825,7 @@
                         src="/assets/illustrations/business.svg"
                         alt=""
                     />
-                    <div class="m-5">Istražite lokalne poslove, zanate, OPG-ove, proizvođače rukotvorina, domaćih proizvoda i slično <br><b>Uskoro!</b>  </div>
+                    <div id="businessDesc" class="translate m-5">Istražite lokalne poslove, zanate, OPG-ove, proizvođače rukotvorina, domaćih proizvoda i slično <br><b>Uskoro!</b>  </div>
                 </div>
             </div>
             <!-- /#sidebar-wrapper-->
@@ -847,7 +848,7 @@
                     <img
                         id="logo"
                         src="assets/logo/logo_figma.svg"
-                        class="mt-0 mr-0 mb-0 ml-0 p-0 position-absolute logo logo-toggle pointer-cursor"
+                        class="translate-img mt-0 mr-0 mb-0 ml-0 p-0 position-absolute logo logo-toggle pointer-cursor"
                         alt="TomislavGuides"
                     />
                 </a>
@@ -1028,6 +1029,8 @@
             type="text/javascript"
         ></script>
         <script src="js/main.js" type="text/javascript"></script>
+        <script src="js/translate.js" type="text/javascript"></script>
+
         <!-- /#wrapper -->
 
         <!-- Menu Toggle Script -->
