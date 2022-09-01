@@ -44,6 +44,9 @@ a {
     .mt-6rem {
         margin-top: 4rem;
     }
+    .pb-8 {
+        padding-bottom: 8rem !important;
+    }
 }
 
 .weight-600 {
