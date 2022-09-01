@@ -251,8 +251,7 @@ a {
 }
 .home-center-y {
     position: relative;
-    top: 50%;
-    transform: translate(0, -30%);
+    bottom: -50%;
 }
 .home-title {
     max-width: 600px;
@@ -320,7 +319,7 @@ a {
         /* padding: 0 2rem; */
     }
     .home-center-y {
-        transform: translate(0, -80%);
+        transform: translate(0, -50%);
     }
     #toMap {
         margin: auto;
