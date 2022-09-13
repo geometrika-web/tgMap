@@ -2631,7 +2631,7 @@ function renderRoute(tour, element) {
         if (stop.aboutHr) {
             about = stop[`about${localStorage.lang}`];
         }
-        stopsHtml += `<button id="${id}" class="list-group-item no-outline display-flex text-font p-0"><img src="/assets/icon/placeholder-black.svg"><div class="text-font line-40 ml-4">${name}</div></button>`;
+        stopsHtml += `<button id="${id}" class="pt-1 pb-1 list-group-item no-outline display-flex text-font p-0"><img src="/assets/icon/placeholder-black.svg"><div class="text-font  ml-4">${name}</div></button>`;
         if (index < stops.length - 1) {
             stopsHtml += `<img class="" src="/assets/icon/three-dots-vertical.svg"><small class="ml-4 color-gray">${dists[index]}</small>`;
         }

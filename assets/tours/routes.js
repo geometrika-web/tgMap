@@ -1,7 +1,7 @@
 var routesData = {
     type: 'FeatureCollection',
     features: {
-        tour5: {
+        svJeronim: {
             type: 'Feature',
             geometry: {
                 type: 'Point',
@@ -19,7 +19,7 @@ var routesData = {
                     {
                         nameHr: 'Vjetropark na Jelovači',
                         nameEn: 'Jelovača Wind Park',
-                        coordinates: [17.158281884020315, 43.752349835105264],
+                        coordinates: [17.161676895396642, 43.753005157401475],
                         img: '../assets/img/divljiKonji-jelovaca.jpg',
                         aboutHr:
                             'Vjetropark Jelovača nalazi se na planini Jelovača na 1500 metara nadmorske visine. Ova planina svakodnevno je izložena snažnim vjetrovima koji su specifični za ovaj kraj. Osim što je jedna od prvih vjetroelektrana na području BiH, Jelovača je i dom mnogih divljih životinja, među kojima se posebno izdvajaju divlji konji koji slobodno lutaju planinom.',
@@ -37,12 +37,14 @@ var routesData = {
                             'Double gradina in Mokronoge is one of the most specific forts in the system in Duvanjsko polje. Namely, this fort is located above the canyon of the river Šujica, more precisely a large fort on the left part of the canyon, and a small one on the right part of the canyon of the river Šujica. The large and small forts served as guardhouses, but also as the entrance to the Duvanjsko polje. According to archaeologists, these two buildings were connected by a suspension bridge. '
                     },
                     {
-                        nameHr: 'Ručak u Mokronogama',
-                        nameEn: 'Lunch in Mokronoge',
+                        nameHr: 'Tradicionalni ručak, peka ispod sača',
+                        nameEn: 'Traditional lunch in Mokronoge',
                         coordinates: [17.224235944233836, 43.76459168101646],
-                        img: '',
-                        aboutHr: 'Tradicionalni ručak, peka ispod sača',
-                        aboutEn: 'Traditional lunch, baked under the sač'
+                        img: 'assets/img/peka.jpg',
+                        aboutHr:
+                            'Sač je zvonolika je keramička ili željezna posuda za pečenje na otvorenom ognjištu. Na vrhu ima jednu ili dvije ručke; željezna je u obliku glatke kupole, a keramičkoj su dodani obruči za zadržavanje žeravice. Jelo (kruh, pogača, meso, krumpir i sl.), položeno na toplo tlo ognjišta ili u plitku tepsiju, prekriva se sač prethodno zagrijanom do užarenosti, koja se zatim prekriva žeravicom i toplim pepelom. U južnoj Panoniji i na Balkanu koristi se od pretpovijesti (neolitik). Uz upotrebu otvorenih ognjišta zadržala se u istočnoj Sloveniji, južnoj Mađarskoj, Rumunjskoj, Bugarskoj, Srbiji i Crnoj Gori, Bosni i Hercegovini i Italiji (dakle na područjima koja su nastanjivali Iliri). ',
+                        aboutEn:
+                            'Sač is a bell-shaped ceramic or iron vessel for baking on an open hearth. It has one or two handles at the top; the iron one is in the form of a smooth dome, and the ceramic one has rings added to contain the embers. The dish (bread, cake, meat, potatoes, etc.), placed on the warm floor of the hearth or in a shallow pan, is covered with a sach pre-heated until red-hot, which is then covered with embers and hot ashes. In southern Pannonia and the Balkans, it has been used since prehistoric times (Neolithic). With the use of open hearths, it remained in eastern Slovenia, southern Hungary, Romania, Bulgaria, Serbia and Montenegro, Bosnia and Herzegovina and Italy (therefore in the areas inhabited by the Illyrians).'
                     },
                     {
                         nameEn: 'Roman bridge on Šujica river',
@@ -76,10 +78,150 @@ var routesData = {
                     'Ova  tura nazvana je po svetom Jeronimu kojega legenda usko veže za grad Stridon. Antički grad Stridon danas se nalazi iznad izvora rijeke Šujice u istoimenom mjestu. U ovoj turističkoj turi vidjet ćemo neke od putova kojima je sv. Jeronim hodao u antičkim vremenima. Krenut ćemo od planine Jelovače s koje se pruža odličan pogledat na Duvanjsko polje i na kojoj slobodno lutaju divlji konji. Na Jelovači ćemo se upoznati i sa tradicionalnom gastronomijom Duvanjskog kraja i probati suhomesnate proizvode koji su karakteristični baš za ovo podneblje. Spustit ćemo se do kanjona rijeke Šujice i vidjeti dvije gradine koje su Iliri koristili kao ulaz na Duvanjsko polje. Nakon šetnje iznad kanjona spustit ćemo se na ručak u obližnje Mokronoge kod obitelji Baković na tradicionalni ručak ispod sača. Uz ovaj ručak naši domaćini će nam pokazati i ukratko objasniti kako se spremaju jela ispod sača. Nakon ručka slijedi naš put uzvodno rijekom Šujicom gdje ćemo doći do sela Galečić i starog Rimskog mosta koji povezivao dvije obale rijeke Šujice. Vrhunac naše jednodnevne ture bit će posjeta antičkom i srednjovjekovnom gradu Stridonu/Stržnju koji je izgrađen na liticama iznad izvora rijeke Šujice. Ovi ostaci kamenih zidina kriju tajne Duvanjske prošlosti, a hladna rijeka koja izvire ispod samoga grada obaviju tu istu prošlost debelim slojem magle kroz koju ćemo na kratko zaviriti i otkriti što nam glasovi Duvanjskih ratnika šapuću dok promatramo zalazak sunca. U ovoj turi upoznat ćemo se s Duvanjskom antičkom povijesti, gastronomijom ovoga kraja te svim prirodnim ljepotama koje krase ovu jednodnevnu turu.',
                 aboutEn:
                     "This tour is named after St. Jerome, whose legend is closely linked to the town of Stridon. Today, the ancient city of Stridon is located above the source of the river Šujica in the place of the same name. In this tourist tour, we will see some of the paths that St. Jerome walked in ancient times. We will start from Jelovača mountain, which offers a great view of the Duvanjsko field and where wild horses roam freely. At Jelovača, we will get to know the traditional gastronomy of the Tomislavgrad region and try dried meat products that are characteristic of this climate. We will go down to the canyon of the river Šujica and see two castles that the Illyrians used as an entrance to the Duvanjsko field. After the walk above the canyon, we will go down to the nearby Mokronoge for lunch at the Baković family's place for a traditional lunch under the sach. Along with this lunch, our hosts will show us and briefly explain how the dishes are prepared under the sach. After lunch, we continue our journey upstream along the river Šujica, where we will reach the village of Galečić and the old Roman bridge that connected the two banks of the river Šujica. The highlight of our one-day tour will be a visit to the ancient and medieval town of Stridon/Stržnje, which was built on the cliffs above the source of the river Šujica. These remains of stone walls hide the secrets of Tomislavgrad past, and the cold river that springs from under the city itself envelops that same past in a thick layer of fog through which we will briefly peek and discover what the voices of Tomislavgrad warriors whisper to us as we observe sunset. In this tour, we will get to know the ancient history of Tomislavgrad, the gastronomy of this region and all the natural beauties that adorn this one-day tour.",
-                img: '/assets/img/zukovica.jpg',
+                img: '/assets/img/gradStridon.jpg',
                 imgs: [],
                 routeTypeId: 'guided',
-                id: 'tour5'
+                id: 'svJeronim'
+            }
+        },
+        delminium: {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                zoom: '11.5',
+                zoomMobile: '11',
+                coordinates: [1916844.28, 5419439.76]
+            },
+            properties: {
+                nameHr: 'Tura Delminium',
+                nameEn: 'Delminium Tour',
+                place: '',
+                path: '',
+                duration: '4 h',
+                dist: '10 km',
+                dists: [
+                    '7 km',
+                    '8 km',
+                    '9 km',
+                    '4km',
+                    '8 km',
+                    '5 km',
+                    '3 km',
+                    '5 km',
+                    '700 m'
+                ],
+                aboutHr:
+                    'Ova tura će nas na trenutak vratiti u povijest gdje ćete uz priču našeg vodiča, ali i niz lokaliteta, upoznati povijest Duvanjskog kraja za vrijeme Ilira-Delmata i Rimskih osvajanja. Ovu turu započet ćemo na lokalitetu Privala-Vidikovac iznad sela Prisoje gdje nam se pruža prelijep pogled na Buško jezero. Samo nekoliko metara od ovog vidikovca nalazi se stara rimska cesta koja će nas povesti u ovu zajedničku avanturu. Nakon toga slijedi nam put prema selu Brišnik i Mrkodol gdje ćemo uz put svratiti na Veliki Samograd. Ovo je lokacija koja će vas ostaviti bez daha. geomorfološka struktura Samograda stvarana tisućama godina pomjeranjem, uzdizanjem i spuštanjem tektonskih ploča nikoga ne ostavlja ravnodušnim. Nakon obilaska ove lokacije doručkovat ćemo na tradicionalni Duvanjski način uz organski proizvedenu hranu, a pogled na samu lokaciju hranit će našu dušu dok naši tradicionalni proizvodi budu hranili vaše tijelo. Dalje, nastavljamo do sela Mrkodol i vidikovca iznad njega. Na vidikovcu ćemo zastati gdje nam slijedi priča našeg vodiča o morfologiji Duvanjskog polja kao i priča o sustavu ilirskih gradina koje okružuju Duvanjsko polje. Tu će vas naš vodič upoznati i sa Mrkodoljskom gradinom, jednom od rijetkih sustava dvojnih gradina koje pronalazimo unutar BiH. U blizini ćemo svratiti do terase starog Rimskog puta koji nas vodi do naše glavne destinacije do koje moramo prijeći Duvanjsko polje do mjesta gdje se nalazi najveća i najpoznatija gradina ovog kraja, ona na planini Lib. Ova gradina je bila glavni grad i glavno uporište Ilirskog plemena Delmata, grad Delminium. Tu slijedi priča o ratu protiv Rima. Nakon Delminiuma spustit ćemo se u obližnje Mandino selo u kojem se nalazi Mandina gradina. Mandina gradina je bila kultno mjesto svih Delmata. Ova gradina je služila mnogim mitskim ritualima te je bila glavno svetište gdje su Delmati prinosili žrtve svojim bogovima. Nakon ove gradine idemo do sela Letke i do jedne od značajnijih gradina ovog kraja a to je Lečićka gradina. Značajna je i po starom Rimskom putu koji prolazi kraj nje i koji je spajao Delminium sa udaljenim rudnicima srednje Bosne. Nakon ovoga nam slijedi ručak u Mokronogama u obitelji Baković koji će nam na tradicionalni način spremiti ukusna jela pod sačem koji će biti po vašem izboru. Nakon ručka zaputit ćemo se do Tomislavgrada i Selimovića gradine koja se nalazi na samom ulazu u grad. Ovu turu ćemo završiti u franjevačkom muzeju Tomislavgrad u kojem ćemo vidjeti arheološke ostatke starih Rimljana i Delmata kako bismo upotpunili sve viđeno.',
+                aboutEn:
+                    "This tour will take us back in history for a moment, where along with the story of our guide, as well as a number of localities, you will get to know the history of the Tomislavgrad region during the Illyrian-Delmatae and Roman conquests. We will start this tour at the location of Privala-Vidikovac above the village of Prisoje, where we have a beautiful view of Lake Buško. Just a few meters from this viewpoint, there is an old Roman road that will take us on this adventure. After that, we will continue our journey towards the villages of Brišnik and Mrkodol, where we will stop at Veliki Samograd along the way. This is a location that will leave you breathless. The geomorphological structure of Samograd, created over thousands of years by the movement, rising and lowering of tectonic plates, leaves no one indifferent. After visiting this location, we will have breakfast in a traditional way with organically produced food as the view of the location will feed our soul while our traditional products will feed your body. Next, we continue to the village of Mrkodol and the viewpoint above it. We will stop at the viewpoint where our guide will tell us about the morphology of the Duvanjsko Field as well as the story about the system of Illyrian fortifications that surround the Duvanjsko Field. There, our guide will also introduce you to the Mrkodol hillfort, one of the rare systems of double hillforts found in Bosnia and Herzegovina. Nearby we will stop at the terrace of the old Roman road that leads us to our main destination, on the way to which we have to cross the Duvanjsko Field to the place where the largest and most famous hillfort of this region is located, the one on Mount Lib. This fortress was the capital and main stronghold of the Illyrian tribe Delmatae, the city of Delminium. There follows the story of the Illyrian war against Rome. After Delminium, we will descend to the nearby Manda’s village, where Manda's hillfort is located. Manda's hillfort was a cult place for all Delmatae. This fortress served many mythical rituals and was the main sanctuary where the Delmatae offered sacrifices to their gods. After this hillfort we go to the village of Letka and to one of the most important hillforts in this region, Lečićka hillfort. It is also significant for the old Roman road that passes by it and which connected Delminium with the remote mines of central Bosnia. After this, we will have lunch in Mokronoge village at the Baković family, who will prepare delicious dishes of your choice in the traditional way under the sač. After lunch, we will head to Tomislavgrad and Selimovića Hillfort, which is located at the very entrance to the city. We will end this tour in the Tomislavgrad Franciscan Museum, where we will see the archaeological remains of the ancient Romans and Delmatians to complete everything seen.",
+                img: '/assets/img/delminiumLib.jpg',
+                imgs: [],
+                routeTypeId: 'guided',
+                id: 'delminium',
+                stops: [
+                    {
+                        nameHr: 'Vidikovac Privala',
+                        nameEn: 'Privala Viewpoint',
+                        coordinates: [17.123415070844445, 43.69894833165399],
+                        img: '../assets/img/buskoJezero.jpg',
+                        aboutHr:
+                            'S ovog vidikovca puca predivan pogled na Buško jezero, najveće umjetno jezero u ovom dijelu Europe. Nastalo je potapanjem Buškoga blata 70-ih godina prošloga stoljeća. Zanimljiva povijest ovoga kraja ostavila je brojna arheološka nalazišta, brojne gradine iz ilirskoga i rimskoga doba, brojne artefakte te nekropole s velikim brojem stećaka.<br><br> Osim povijesnih zanimljivosti ovo područje nudi i mogućnost bavljenja brojnim sportovima. U ljetnim mjesecima voda Buškog jezera izrazito je topla i ugodna za kupanje. Jezero je također pogodno za gotovo sve sportove koji trebaju vjetar. A brda i planine koje ga okružuju omogućuju izletnicima penjanje i odmor u planinarskim domovima. Osim spomenutoga, jezero je jako atraktivno i ribičima. Ulovljeni i fotografirani primjerci, osobito somova, privlače lovce na trofejne primjerke i bude maštu ribolovaca.',
+                        aboutEn:
+                            "From this viewpoint there is beautiful view of Buško Lake, an artificial lake that was created in the 60's in the former Yugoslavia for the needs of the Orlovac Hydroelectric Power Plant, which is now located in Croatia. Buško Lake was created by the accumulation of water from the Duvanjsko and Livanjsko fields due to the construction of a dam. The surface of the lake is 55.8 square kilometers, and in addition to being the largest in BiH, until recently it was considered one of the largest in Europe. Buško Lake is in itself a huge potential and a pearl located in the municipality of Tomislavgrad. Apart from the fact that in the summer its sandy beach Marinovac attracts an increasing number of people, this lake and home to many freshwater fish, so that throughout the year it attracts many fishermen. "
+                    },
+                    {
+                        nameHr: 'Veliki Samograd',
+                        nameEn: 'Veliki Samograd (Big Self-made)',
+                        coordinates: [17.185458317579446, 43.66292045587031],
+                        img: '/assets/img/velikiSamogradd.jpg',
+                        aboutEn:
+                            'Hidden in the Duvanjsko Karst is a deep vertical collapsed sinkhole 190 m long, 110 m wide and 40 to 60 m deep. Here, nature, as an architect, showed all its strength and power with the shape and dimensions of this phenomenon. Samograd, self-built - self-built, is an oval huge well-shaped sinkhole whose very steep cliffs descend vertically from the karst plateau into the depths. At the bottom of Samograd there is a dense and impassable forest that is home to various species of birds, and along the edge of the sinkhole there is a cave of modest dimensions.',
+                        aboutHr:
+                            'U Duvanjskom kršu skrivena je duboka okomita urušena vrtača dužine 190 m, širine 110 m i dubine od 40 do 60 m. Ovdje je priroda, kao arhitekt, oblikom i dimenzijama ovog fenomena pokazala svu svoju silu i moć. Samograd, sam stvoren - sam sagrađen, ovalna je golema bunarasta vrtača čije se vrlo strme stijene spuštaju okomito s krške zaravni u dubinu. Na dnu Samograda nalazi se gusta i neprohodna šuma koja je dom raznim vrstama ptica, a uz rub vrtače nalazi se i špilja skromnih dimenzija.'
+                    },
+                    {
+                        nameHr: 'Vidikovac Mrkodol',
+                        nameEn: 'Mrkodol Viewpoint',
+                        coordinates: [17.23069093844383, 43.61963259658108],
+                        img: 'assets/img/vjetroparkMrkodol.jpg',
+                        aboutEn:
+                            'The Mesihovina wind park, located in a couple of Tomislavgrad villages (Bukovica, Mrkodol, Gornji Brisnik), is the first wind park to be built in BiH. The special feature of this wind farm is not in the electricity, but in the roads and paths that have enabled all the curious to further explore the beauties of Tomislavgrad. ',
+                        aboutHr:
+                            'Vjetropark Mesihovina koji se nalazi na lokaciji par tomislavgradskih sela (Bukovica, Mrkodol, Gornji Brišnik) je prvi vjetropark izgrađen u BiH. Posebnost ovog vjetroparka nije u električnoj energiji, nego u putevima i puteljcima koje su omogućili svima znatiželjnima da dodatno istraže ljepote Tomislavgrada s raznih vidikovaca.'
+                    },
+                    {
+                        nameEn: 'Delminium on Mount Lib',
+                        nameHr: 'Delminium na Libu',
+                        coordinates: [17.311369191788106, 43.65199055522603],
+                        img: '/assets/img/delminiumLib.jpg',
+                        aboutEn:
+                            'Mount Lib is one of the most important historical sites in Tomislavgrad (Duvno). The mountain itself looks like a wedge that was sharply driven into the Duvanjsko field, and the mountain offers a view of the same field, so we get the impression that the mountain Lib is the guardhouse of Duvno. This sounds even more convincing when we know that the capital of Delmata is located on Lib - Delminium - the guardian of all Delmats, the guardian of the Duvno Field. Delminium was described by Roman historians from whom we learn about the strength of this city and its citizens. Namely, Rome had to wage two wars in order to conquer this area and the city of Delminium itself.',
+                        aboutHr:
+                            'Planina Lib dom je jednog od najznačajnijih povijesnih lokaliteta Tomislavgrada (Duvna). Sama planina izgleda kao klin koji je oštro zabio u Duvanjsko polje, a s planine se pruža pogled na isto to polje, pa stječemo dojam da je planina Lib čuvarnica Duvna. Ovo nam zvuči još uvjerljivije kad znamo da se na Libu smjestio glavni grad Delmata - Delminium (Delminij) - čuvar svih Delmata, čuvar Duvanjskog polja. Delminium su opisali rimski povjesničari od kojih saznajemo o čvrstoći ovog grada i njegovih građana. Naime, Rim je morao povesti dva rata kako bi osvojio ovo područje te sam grad Delminium .'
+                    },
+                    {
+                        coordinates: [17.2994273707524, 43.6839055811983],
+                        nameEn: "Mandina gradina (Manda's hillfort)",
+                        nameHr: 'Mandina gradina',
+                        place: 'Raščani',
+                        aboutEn:
+                            "Mandina gradina (Manda's hillfort) is located next to the village of Raščani and Mandino selo near Lib and is considered one of the most important forts in Duvanjsko polje. The significance of this hillfort is not in the defensive sense, because at first glance we conclude that the position was bad for the defense. The significance of this fort is in the cult sense, namely it is believed that Manda's fort was a cult fort of the Delmats, a place where the Delmats performed their rituals and offered sacrifices to the gods. The wealth of archaeological finds supports all these theories, and the proximity of the Delminium itself also makes this fort important. According to the legend, the first Croatian king Tomislav was crowned on Duvanjsko polje, and according to the legend, Mandina gradina could be the place. ",
+                        aboutHr:
+                            'Mandina gradina nalazi se u selu Rašćani neposredno pored Mandinog sela te u blizini Liba. Smatra jednom od važnijih gradina na Duvanjskom polju. Značenje ove gradine nije u obrambenom smislu, jer na prvi pogled zaključujemo da je pozicija bila loša za obranu. Značenje ove gradine je u kultnom smislu, naime smatra se da je Mandina gradina bila kultna gradina Delmata, prostor na kojem su Delmati izvodili svoje rituale i prenosili žrtve bogovima. Bogatstvo arheoloških nalaza potkrepljuje sve ove teorije, a blizina samog Delminium također daje važnost ovoj gradini. Prema legendi na Duvanjskom polju je krunjen prvi Hrvatski kralj Tomislav, a Mandina gradina bi prema legendi upravo mogla biti to mjesto.<br><br>Godine 2021. Mandina gradina proglašena je nacionalnim spomenikom BiH.',
+                        img: '/assets/img/mandinaGradina.jpg'
+                    },
+                    {
+                        coordinates: [17.267336556206544, 43.74261455442339],
+                        nameEn: 'Gradina (hillfort) and Roman road',
+                        nameHr: 'Gradina i rimski put',
+                        place: 'Letka',
+                        aboutEn:
+                            'The fort in Letka is one of the largest forts in the Duvanjsko polje fort system. It is believed to have been inhabited by the Illyrian and later the Roman population. Below the hillfort lies the old Roman road, and above it, like in Privala, are the remains of wheels carved into the rock. This hillfort was located on one of the roads leading to Rama, and the river Šujica flowed below it. ',
+                        aboutHr:
+                            'Gradina u Letki jedna je od najvećih gradina u sustavu gradina Duvanjskog polja. Smatra se da je bila nastanjena Ilirskim, a kasnije i Rimskim stanovništvom. Ispod gradine se prostire stari Rimski put, a iznad nje su kao na Privali u stijeni uklesani ostaci kotača. Ova gradina se nalazila na jednom od puteva koji su vodili prema Rami, a ispod nje je proticala rijeka Šujica.',
+                        img: '/assets/img/gradinaLetka.jpg'
+                    },
+                    {
+                        coordinates: [17.226949443618253, 43.77323265638181],
+                        nameEn: 'Double gradina hillfort',
+                        nameHr: 'Dvojna gradina',
+                        place: 'Mokronoge',
+                        aboutEn:
+                            'Double gradina in Mokronoge is one of the most specific forts in the system in Duvanjsko polje. Namely, this fort is located above the canyon of the river Šujica, more precisely a large fort on the left part of the canyon, and a small one on the right part of the canyon of the river Šujica. The large and small forts served as guardhouses, but also as the entrance to the Duvanjsko polje. According to archaeologists, these two buildings were connected by a suspension bridge. ',
+                        aboutHr:
+                            'Dvojna gradina u Mokronoga je jedna od najspecifičniji gradina u sustavu gradina na Duvanjskom polju. Naime, ova gradina se nalazi iznad kanjona rijeke Šujice, točnije velika gradina na lijevoj dijelu kanjona, a mala na desnom dijelu kanjona rijeke Šujice. Velika i mala gradina su služile kao čuvarnice, ali kao i ulaz u Duvanjsko polje. Prema teorijam arheologa ove dvije gradne su bile povezane visećim mostom. ',
+                        img: '/assets/img/dvojnaGradina.jpg'
+                    },
+                    {
+                        nameHr: 'Tradicionalni ručak, peka ispod sača',
+                        nameEn: 'Traditional lunch in Mokronoge',
+                        coordinates: [17.224235944233836, 43.76459168101646],
+                        img: 'assets/img/peka.jpg',
+                        aboutHr:
+                            'Sač je zvonolika je keramička ili željezna posuda za pečenje na otvorenom ognjištu. Na vrhu ima jednu ili dvije ručke; željezna je u obliku glatke kupole, a keramičkoj su dodani obruči za zadržavanje žeravice. Jelo (kruh, pogača, meso, krumpir i sl.), položeno na toplo tlo ognjišta ili u plitku tepsiju, prekriva se sač prethodno zagrijanom do užarenosti, koja se zatim prekriva žeravicom i toplim pepelom. U južnoj Panoniji i na Balkanu koristi se od pretpovijesti (neolitik). Uz upotrebu otvorenih ognjišta zadržala se u istočnoj Sloveniji, južnoj Mađarskoj, Rumunjskoj, Bugarskoj, Srbiji i Crnoj Gori, Bosni i Hercegovini i Italiji (dakle na područjima koja su nastanjivali Iliri). ',
+                        aboutEn:
+                            'Sač is a bell-shaped ceramic or iron vessel for baking on an open hearth. It has one or two handles at the top; the iron one is in the form of a smooth dome, and the ceramic one has rings added to contain the embers. The dish (bread, cake, meat, potatoes, etc.), placed on the warm floor of the hearth or in a shallow pan, is covered with a sach pre-heated until red-hot, which is then covered with embers and hot ashes. In southern Pannonia and the Balkans, it has been used since prehistoric times (Neolithic). With the use of open hearths, it remained in eastern Slovenia, southern Hungary, Romania, Bulgaria, Serbia and Montenegro, Bosnia and Herzegovina and Italy (therefore in the areas inhabited by the Illyrians).'
+                    },
+                    {
+                        nameHr: 'Selimovića gradina',
+                        nameEn: 'Selimovića hillfort',
+                        coordinates: [17.22155864587528, 43.7267944398485],
+                        img: '',
+                        aboutHr: '',
+                        aboutEn: ''
+                    },
+                    {
+                        coordinates: [17.225871, 43.72188],
+                        nameEn: 'Basilica and Franciscan Museum',
+                        nameHr: 'Bazilika i franjevački muzej',
+                        place: 'Tomislavgrad',
+                        aboutEn:
+                            'The memorial basilica in Tomislavgrad began construction in 1925 on the thousandth anniversary of the coronation of King Tomislav. According to legend, King Tomislav was crowned on Duvanjsko polje. The late Fr. Mijo Čuić, a visionary priest-friar, imagined a huge monument in the form of a church and a monastery that will forever remain a monument to the coronation of the first Croatian king. Along with this memorial basilica and monastery, there is also the Franciscan Museum, which through its permanent exhibitions hides the secret of living on the Duvanjsko polje for centuries. Inside the monastery itself, the remains of the Tomislavgrad mammoth are preserved, which are exhibited in diaramas, while the lapidary hides many secrets of Roman influence on the Duvanjsko polje. ',
+                        aboutHr:
+                            'Duvanjska bazilika smatra se glavnom gradskom atrakcijom. Ispred bazilike možete sjesti u lijepo uređenom parku i jednostavno uživati. Izvana je bazilika monumentalana, tlocrtno ima izgled pravilnoga križa, a iznad križa se izdiže prelijepa okrugla kupola. Izgradnja spomen bazilike u Tomislavgradu započeta je 1925. na tisućitu godinjicu krunidbe kralja Tomislava. Legendea kaće da je prvi hrvatski kralj Tomislav okrunjen na Duvanjskom polju prema čemu je pokojni fra. Mijo Čuić zamislio spomenik u vidu Crkve i samostana koji će za vijeke ostati spomen krunidbi prvog Hrvatskog kralja. Unutrašnjost bazilike krasi slika „Isus prijatelj malenih“ svjetski poznatog slikara Vlahe Bukovca.<br><br>Muzej, koji se nalazi uz crkvu, u svojoj postavi sadrži predmete iz dalje i bliže prošlosti te krije tajnu življenja na Duvanjskom polju vijekovima. Unutar samog samostana čuvaju se i ostaci Duvanjskog praslona koji su izloženi u dijarami, dok lapidarij krije mnoge tajne Rimskoga utjecaja na Duvanjsko polje.',
+                        img: '/assets/img/crkvaTG.jpg'
+                    }
+                ]
             }
         }
 
