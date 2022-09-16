@@ -1496,7 +1496,7 @@ window.onload = function () {
         routeText.id = features[i].properties.id + '-text';
         routeText.classList.add('p-3', 'ml-4');
         routeText.style.display = 'none';
-        routesDesc.push(routeText);
+        // routesDesc.push(routeText);
         parent.appendChild(routeText);
 
         var routeDuration = document.createElement('div');
@@ -2015,10 +2015,8 @@ kategorijeBtns.forEach((btn) => btn.addEventListener('click', filter));
 // };
 //Kontrola popisa znamenitosti------------------------
 
-var routesDesc = [],
-    weekendDestinationsDesc = [],
-    assocDesc = [],
-    assocCoord = [];
+// var routesDesc = [],
+(weekendDestinationsDesc = []), (assocDesc = []), (assocCoord = []);
 //Landmarks Pins
 var vectorPinSource = new ol.source.Vector({
     features: new ol.format.GeoJSON().readFeatures(landmarksData, {
@@ -2243,9 +2241,9 @@ markers.setZIndex(100000000000000000000000000000000000);
 
 // Tours
 
-for (var i = 0; i < routesDesc.length; i++) {
+/* for (var i = 0; i < routesDesc.length; i++) {
     routesDesc[i].style.display = 'none';
-}
+} */
 let tourSource, tourDataSource;
 function getRouteText(clickedID) {
     if (weekendDestinationsIndicator == 1) {
@@ -2253,6 +2251,7 @@ function getRouteText(clickedID) {
     } else {
         tourDataSource = routesData;
     }
+
     let clickedID_element = document.getElementById(clickedID);
     // let clickedID_text = document.getElementById(clickedID + '-text');
     // let clickedIDtextStyle = clickedID_text.style.display;
@@ -2289,35 +2288,37 @@ function getRouteText(clickedID) {
     } else { */
     document.getElementById('tourist-routes').classList.remove('routes-scroll');
     document.getElementById('tourist-routes').classList.add('sidebar-scroll');
-    for (var i = 0; i < routesDesc.length; i++) {
-        if (routesDesc[i].style.display == 'block') {
-            clearRoute();
-            routesDesc[i].style.display = 'none';
-            routesDesc[i].classList.remove('activate-assoc');
-        }
-        // }
-        hidePins();
-        zoomToRoute();
-        renderRoute(clickedID, clickedID_element);
-        routeAbout = `<img onclick="backFromRoute()" class="landmark-close-btn" src="assets/icon/close.svg" alt="">
+    // for (var i = 0; i < routesDesc.length; i++) {
+    //     if (routesDesc[i].style.display == 'block') {
+    //         clearRoute();
+    //         routesDesc[i].style.display = 'none';
+    //         routesDesc[i].classList.remove('activate-assoc');
+    //     }
+    // }
+    // toggleOnSelect();
+    hidePins();
+    zoomToRoute();
+
+    renderRoute(clickedID, clickedID_element);
+    routeAbout = `<img onclick="backFromRoute()" class="landmark-close-btn" src="assets/icon/close.svg" alt="">
         <div class="m-4 pt-5 landmark-title text-left d-block" style="display: inline-block;">${name}</div>
         <div class='pt-2 pb-2 pl-5 pr-5'>`;
-        if (weekendDestinationsIndicator == 1) {
-            startTime = tourDataProperties.startTime;
-            day = tourDataProperties[`day${localStorage.lang}`];
-            startPlace = tourDataProperties[`startPlace${localStorage.lang}`];
-            needed = tourDataProperties[`needed${localStorage.lang}`];
-            contact = tourDataProperties.contact;
-            routeAbout += `
+    if (weekendDestinationsIndicator == 1) {
+        startTime = tourDataProperties.startTime;
+        day = tourDataProperties[`day${localStorage.lang}`];
+        startPlace = tourDataProperties[`startPlace${localStorage.lang}`];
+        needed = tourDataProperties[`needed${localStorage.lang}`];
+        contact = tourDataProperties.contact;
+        routeAbout += `
             <p class="text-16 align-middle ml-4"><p id="timeDesc" class="translate mb-0 d-inline">Vrijeme: </p><b>${startTime}</b></p>
             <p class="text-16 align-middle ml-4"><p id="placeDesc" class="translate mb-0 d-inline">Mjesto: </p><b>${startPlace}</b></p>
             <p class="text-16 align-middle ml-4"><p id="dayDesc" class="translate mb-0 d-inline">Dan:      </p><b>${day}</b></p>
             <p class="text-16 align-middle ml-4"><p id="neededDesc" class="translate mb-0 d-inline">Potrebno: </p><b>${needed}</b></p>
             <p class="text-16 align-middle ml-4 mb-3"><p id="contactDesc" class="translate mb-0 d-inline">Kontakt: </p><b>${contact}</b></p>
             `;
-        }
+    }
 
-        routeAbout += `<img class="route-type-badge mr-5" src=${type}>
+    routeAbout += `<img class="route-type-badge mr-5" src=${type}>
     <p class="text-20 align-middle ml-5 line-40"><b>${duration} | ${dist}</b></p>
     <button id="show-routes-btn" data-toggle="collapse" data-target="#stops" aria-expanded="false" class="text-toggle list-group-item list-group-item-action no-outline route-type align-middle line-40">
     
@@ -2330,34 +2331,31 @@ function getRouteText(clickedID) {
     </div>
     <div id="landmark-about" class="p-4 mb-2 text-justify d-block text-font" style="display: inline-block;">${text}</div>
     ${carouselHtml};`;
-        routesAllElement.style.display = 'none';
-        destinationsAllElement.style.display = 'none';
-        routesMenu.style.display = 'none';
-        routeClicked.innerHTML = routeAbout;
-        translate(localStorage.lang);
-        console.log(localStorage.lang);
+    routesAllElement.style.display = 'none';
+    destinationsAllElement.style.display = 'none';
+    routesMenu.style.display = 'none';
+    routeClicked.innerHTML = routeAbout;
+    translate(localStorage.lang);
+    console.log(localStorage.lang);
 
-        // let routeClickedPosition = routeClicked.offsetTop + 1000;
-        if (!isMobile) {
-            document.getElementById('tourist-routes').scrollTo(0, 10000);
-            routeClicked.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start',
-                inline: 'nearest'
-            });
-        }
+    // let routeClickedPosition = routeClicked.offsetTop + 1000;
+    if (!isMobile) {
+        document.getElementById('tourist-routes').scrollTo(0, 10000);
+        routeClicked.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+        });
+    }
 
-        // console.log(clickedID);
-        // clickedID_text.style.display = "block";
-        // console.log(clickedID);
-        // clickedID_text.classList.add('activate-assoc');
-        if (isMobile) {
-            setTimeout(() => {
-                document
-                    .querySelector('.routes-arrow')
-                    .classList.remove('hidden');
-            }, 1700);
-        }
+    // console.log(clickedID);
+    // clickedID_text.style.display = "block";
+    // console.log(clickedID);
+    // clickedID_text.classList.add('activate-assoc');
+    if (isMobile) {
+        setTimeout(() => {
+            document.querySelector('.routes-arrow').classList.remove('hidden');
+        }, 500);
     }
 }
 //    for (var i = 0; i < routesDesc.length; i++) {
@@ -2825,13 +2823,13 @@ function meetTg() {
         vector.setZIndex(20);
         nature.setZIndex(20);
         tourist.setZIndex(30);
-        for (var i = 0; i < routesDesc.length; i++) {
-            if (routesDesc[i].style.display == 'block') {
-                clearRoute();
-                routesDesc[i].style.display = 'none';
-                routesDesc[i].classList.remove('activate-assoc');
-            }
-        }
+        // for (var i = 0; i < routesDesc.length; i++) {
+        //     if (routesDesc[i].style.display == 'block') {
+        //         clearRoute();
+        //         routesDesc[i].style.display = 'none';
+        //         routesDesc[i].classList.remove('activate-assoc');
+        //     }
+        // }
         for (var i = 0; i < weekendDestinationsDesc.length; i++) {
             weekendDestinationsDesc[i].style.display = 'none';
         }
@@ -2927,13 +2925,13 @@ function assoc() {
     } else {
         deselect();
         meet = 3;
-        for (var i = 0; i < routesDesc.length; i++) {
+        /* for (var i = 0; i < routesDesc.length; i++) {
             if (routesDesc[i].style.display == 'block') {
                 clearRoute();
                 routesDesc[i].style.display = 'none';
                 routesDesc[i].classList.remove('activate-assoc');
             }
-        }
+        } */
         for (var i = 0; i < weekendDestinationsDesc.length; i++) {
             weekendDestinationsDesc[i].style.display = 'none';
         }
@@ -2974,13 +2972,13 @@ function business() {
             closeAssocDesc();
         }
         if (meet == 2) {
-            for (var i = 0; i < routesDesc.length; i++) {
+            /* for (var i = 0; i < routesDesc.length; i++) {
                 if (routesDesc[i].style.display == 'block') {
                     clearRoute();
                     routesDesc[i].style.display = 'none';
                     routesDesc[i].classList.remove('activate-assoc');
                 }
-            }
+            } */
             for (var i = 0; i < weekendDestinationsDesc.length; i++) {
                 weekendDestinationsDesc[i].style.display = 'none';
             }
@@ -3432,6 +3430,7 @@ function toggle(x) {
     $('#wrapper').toggleClass('toggled');
     $('#logo').toggleClass('logo-toggle');
     $('#logo').toggleClass('logo-color');
+    console.log('test');
     //document.getElementById('div-toggle').classList.toggle('bg-toggle');
 }
 
@@ -3800,21 +3799,20 @@ map.getLayers().forEach(function (layer) {
 for (var i = 0; i < weekendDestinationsDesc.length; i++) {
     weekendDestinationsDesc[i].style.display = 'none';
 }
-
+const menuToggle = document.getElementById('menu-toggle');
 function zoomToRoute() {
     // for (var i = 0; i < routesDesc.length; i++) {
     //   routesDesc[i].style.display = "none";
     // }
-
+    toggle(menuToggle);
     if (isMobile) {
-        toggle(document.getElementById('menu-toggle'));
-        // setTimeout(() => toggle(document.getElementById("menu-toggle")), "1500");
     }
     view.animate({
         center: tourDataGeometry.coordinates,
         duration: 1000,
         zoom: isMobile ? tourDataGeometry.zoomMobile : tourDataGeometry.zoom
     });
+
     // toggle(document.getElementById("menu-toggle"));
 }
 
