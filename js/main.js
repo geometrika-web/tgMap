@@ -3804,8 +3804,8 @@ function zoomToRoute() {
     // for (var i = 0; i < routesDesc.length; i++) {
     //   routesDesc[i].style.display = "none";
     // }
-    toggle(menuToggle);
     if (isMobile) {
+        toggle(menuToggle);
     }
     view.animate({
         center: tourDataGeometry.coordinates,
