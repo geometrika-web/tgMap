@@ -1014,6 +1014,7 @@ a {
     padding: 0.6rem;
     /* width: 40px;
     height: 40px; */
+    font-size: 0.9rem;
     font-weight: 650;
     border-bottom: 2px solid #fff !important;
     z-index: 10000;

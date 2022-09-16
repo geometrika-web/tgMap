@@ -2909,6 +2909,7 @@ function touristTours() {
         .classList.remove('activate-routes');
 }
 function weekendDestinations() {
+    routesAllFilter();
     weekendDestinationsIndicator = 1;
     routesAllElement.style.display = 'none';
     destinationsAllElement.style.display = 'block';
