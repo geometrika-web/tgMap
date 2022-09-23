@@ -1558,3 +1558,35 @@ b {
 .text-toggle[aria-expanded='true'] .text-collapsed {
     display: none;
 }
+@media (max-height: 500px) and (orientation: landscape) {
+    .navbar,
+    .logo {
+        display: none;
+    }
+    .center-toggle {
+        top: unset;
+        left: unset;
+        bottom: 1.83rem;
+        right: 5.5rem;
+    }
+    .sidebar-scroll {
+        height: calc(100vh - 72.8px);
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .routes-scroll {
+        height: calc(100vh - 123.6px);
+        overflow: auto;
+        overflow-x: hidden;
+    }
+    .assocs-scroll {
+        height: calc(100vh - 72.8px);
+        overflow: auto;
+        overflow-x: hidden;
+    }
+    .illustration {
+        width: 70%;
+        display: flex;
+        margin: auto;
+    }
+}
