@@ -21,6 +21,9 @@ if (
 
 function getOrientation() {
     isMobile = window.innerWidth > window.innerHeight ? false : true;
+    if (isMobile) {
+        document.getElementById('logo').classList.add('logo-color');
+    }
 }
 
 window.onresize = function () {
