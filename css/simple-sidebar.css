@@ -843,36 +843,39 @@ a {
 }
 .landmarksAll-scroll {
     height: calc(100vh - 220px);
-    overflow: auto;
+    overflow-y: scroll;
     overflow-x: hidden;
 }
 .routes-scroll {
     height: calc(100vh - 231px);
-    overflow: auto;
+    overflow-y: scroll;
     overflow-x: hidden;
 }
 .assocs-scroll {
     height: calc(100vh - 180px);
-    overflow: auto;
+    overflow-y: scroll;
     overflow-x: hidden;
 }
 @media (max-width: 575.99px) {
     .sidebar-scroll {
         height: calc(95vh - 180px);
-        overflow: auto;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
     .landmarksAll-scroll {
         height: calc(95vh - 270px);
-        overflow: auto;
+        overflow-y: scroll;
         overflow-x: hidden;
     }
     .routes-scroll {
         height: calc(95vh - 220px);
-        overflow: auto;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
     .assocs-scroll {
         height: calc(95vh - 180px);
-        overflow: auto;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
 }
 
@@ -1580,16 +1583,16 @@ b {
     }
     .routes-scroll {
         height: calc(var(--doc-height) - 123.6px);
-        overflow: auto;
+        overflow-y: scroll;
         overflow-x: hidden;
     }
     .assocs-scroll {
         height: calc(var(--doc-height) - 72.8px);
-        overflow: auto;
+        overflow-y: scroll;
         overflow-x: hidden;
     }
     .illustration {
-        width: 60%;
+        width: 70%;
         display: flex;
         margin: auto;
     }
