@@ -646,11 +646,19 @@ a {
     filter: brightness(0) saturate(100%) invert(100%);
 }
 .bg-tomislav {
-    height: 70px;
+    height: 90px;
+    position: fixed;
+    bottom: 0;
+    width: 98%;
+    background-color: #fff;
+    z-index: 1;
 }
 @media (min-width: 575.99px) {
     .bg-tomislav {
+        position: unset;
         height: 100px;
+        bottom: unset;
+        top: 0;
     }
     .logo {
         height: 80px;
@@ -764,6 +772,10 @@ a {
 }
 #routes-menu {
     padding: 0.5rem 3rem 0 3rem;
+}
+#btnTouristTours,
+#btnWeekendDestinations {
+    padding: 12px 0;
 }
 @media (max-width: 575.99px) {
     #routes-menu {

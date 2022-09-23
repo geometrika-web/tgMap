@@ -2319,7 +2319,7 @@ function getRouteText(clickedID) {
     }
 
     routeAbout += `<img class="route-type-badge mr-5" src=${type}>
-    <p class="text-20 align-middle ml-5 line-40"><b>${duration} | ${dist}</b></p>
+    <p class="text-20 align-middle ml-3 line-40"><b>${duration} | ${dist}</b></p>
     <button id="show-routes-btn" data-toggle="collapse" data-target="#stops" aria-expanded="false" class="text-toggle list-group-item list-group-item-action no-outline route-type align-middle line-40">
     
     <span class="text-collapsed">${dict[localStorage.lang].showStations}</span>
