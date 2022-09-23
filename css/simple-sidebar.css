@@ -564,17 +564,17 @@ a {
         height: 0.1rem;
         /*background-color: #5f6368;*/
         background-color: #000;
-        margin: 0.17rem 0;
+        margin: 0.25rem 0;
         transition: 0.4s;
-        -webkit-transform: rotate(-45deg) translate(-2px, 0px);
-        transform: rotate(-45deg) translate(-2px, 0px);
+        -webkit-transform: rotate(-45deg) translate(-3.5px, 0px);
+        transform: rotate(-45deg) translate(-3.5px, 0px);
     }
     .bar2 {
         width: 20px;
         height: 0.1rem;
         /*background-color: #5f6368;*/
         background-color: #000;
-        margin: 0.17rem 0;
+        margin: 0.25rem 0;
         transition: 0.4s;
         opacity: 1;
     }
@@ -583,15 +583,16 @@ a {
         height: 0.1rem;
         /*background-color: #5f6368;*/
         background-color: #000;
-        margin: 0.17rem 0;
+        margin: 0.25rem 0;
         transition: 0.4s;
-        -webkit-transform: rotate(0deg) translate(-2px, 0px);
-        transform: rotate(45deg) translate(-2px, 0px);
+        -webkit-transform: rotate(0deg) translate(-3.5px, 0px);
+        transform: rotate(45deg) translate(-3.5px, 0px);
     }
     .change .bar1 {
         width: 20px;
         -webkit-transform: rotate(0deg) translate(0px, 0px);
         transform: rotate(0deg) translate(0px, 0px);
+        margin-top: 0.065rem;
     }
 
     .change .bar2 {
@@ -602,6 +603,7 @@ a {
         width: 20px;
         -webkit-transform: rotate(0deg) translate(0px, 0px);
         transform: rotate(0deg) translate(0px, 0px);
+        margin-bottom: 0.065rem;
     }
     #menu-toggle {
         cursor: pointer;
