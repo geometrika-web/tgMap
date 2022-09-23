@@ -125,8 +125,10 @@ var routesData = {
                 imgs: [],
                 routeTypeId: 'guided',
                 guide: 'Ivan Iko Baković',
-                guideAbout:
+                guideAboutHr:
                     'Profesor povijesti, nogometaš, zaljubljenik u prirodu i Tomislavgrad',
+                guideAboutEn:
+                    'History teacher, football player, lover of nature and Tomislavgrad',
                 guidePhone: '+387 63 868 427',
                 guideMail: 'ivanbakovic991tg@gmail.com',
                 id: 'delminium',
@@ -260,8 +262,10 @@ var routesData = {
                 imgs: [],
                 routeTypeId: 'guided',
                 guide: 'Ivan Iko Baković',
-                guideAbout:
+                guideAboutHr:
                     'Profesor povijesti, nogometaš, zaljubljenik u prirodu i Tomislavgrad',
+                guideAboutEn:
+                    'History teacher, football player, lover of nature and Tomislavgrad',
                 guidePhone: '+387 63 868 427',
                 guideMail: 'ivanbakovic991tg@gmail.com',
                 id: 'mokronoskiRibici',
@@ -343,8 +347,10 @@ var routesData = {
                 imgs: [],
                 routeTypeId: 'guided',
                 guide: 'Ivan Iko Baković',
-                guideAbout:
+                guideAboutHr:
                     'Profesor povijesti, nogometaš, zaljubljenik u prirodu i Tomislavgrad',
+                guideAboutEn:
+                    'History teacher, football player, lover of nature and Tomislavgrad',
                 guidePhone: '+387 63 868 427',
                 guideMail: 'ivanbakovic991tg@gmail.com',
                 id: 'mijat',
