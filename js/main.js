@@ -21,7 +21,10 @@ if (
 
 function getOrientation() {
     isMobile = window.innerWidth > window.innerHeight ? false : true;
-    if (isMobile) {
+    if (
+        isMobile &&
+        document.getElementById('menu-toggle').classList == 'change'
+    ) {
         document.getElementById('logo').classList.add('logo-color');
     }
 }
