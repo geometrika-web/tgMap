@@ -15,6 +15,23 @@ var routesData = {
                 place: 'Šujica',
                 path: '',
                 duration: '6 h',
+                dist: '42.5 km',
+                dists: ['15 km', '4 km', '14.5 km', '9 km'],
+                aboutHr:
+                    'Ova  tura nazvana je po svetom Jeronimu kojega legenda usko veže za grad Stridon. Antički grad Stridon danas se nalazi iznad izvora rijeke Šujice u istoimenom mjestu. U ovoj turističkoj turi vidjet ćemo neke od putova kojima je sv. Jeronim hodao u antičkim vremenima.<br><br> Krenut ćemo od planine Jelovače s koje se pruža odličan pogledat na Duvanjsko polje i na kojoj slobodno lutaju divlji konji. Na Jelovači ćemo se upoznati i sa tradicionalnom gastronomijom Duvanjskog kraja i probati suhomesnate proizvode koji su karakteristični baš za ovo podneblje. Spustit ćemo se do kanjona rijeke Šujice i vidjeti dvije gradine koje su Iliri koristili kao ulaz na Duvanjsko polje. Nakon šetnje iznad kanjona spustit ćemo se na ručak u obližnje Mokronoge kod obitelji Baković na tradicionalni ručak ispod sača. Uz ovaj ručak naši domaćini će nam pokazati i ukratko objasniti kako se spremaju jela ispod sača. <br><br>Nakon ručka slijedi naš put uzvodno rijekom Šujicom gdje ćemo doći do sela Galečić i starog Rimskog mosta koji povezivao dvije obale rijeke Šujice.<br><br>Vrhunac naše jednodnevne ture bit će posjeta antičkom i srednjovjekovnom gradu Stridonu/Stržnju koji je izgrađen na liticama iznad izvora rijeke Šujice. Ovi ostaci kamenih zidina kriju tajne Duvanjske prošlosti, a hladna rijeka koja izvire ispod samoga grada obaviju tu istu prošlost debelim slojem magle kroz koju ćemo na kratko zaviriti i otkriti što nam glasovi Duvanjskih ratnika šapuću dok promatramo zalazak sunca. U ovoj turi upoznat ćemo se s Duvanjskom antičkom povijesti, gastronomijom ovoga kraja te svim prirodnim ljepotama koje krase ovu jednodnevnu turu.',
+                aboutEn:
+                    "This tour is named after St. Jerome, whose legend is closely linked to the town of Stridon. Today, the ancient city of Stridon is located above the source of the river Šujica in the place of the same name. In this tourist tour, we will see some of the paths that St. Jerome walked in ancient times.<br><br> We will start from Jelovača mountain, which offers a great view of the Duvanjsko field and where wild horses roam freely. At Jelovača, we will get to know the traditional gastronomy of the Tomislavgrad region and try dried meat products that are characteristic of this climate. We will go down to the canyon of the river Šujica and see two castles that the Illyrians used as an entrance to the Duvanjsko field. After the walk above the canyon, we will go down to the nearby Mokronoge for lunch at the Baković family's place for a traditional lunch under the sach. Along with this lunch, our hosts will show us and briefly explain how the dishes are prepared under the sach. After lunch, we continue our journey upstream along the river Šujica, where we will reach the village of Galečić and the old Roman bridge that connected the two banks of the river Šujica.<br><br> The highlight of our one-day tour will be a visit to the ancient and medieval town of Stridon/Stržnje, which was built on the cliffs above the source of the river Šujica. These remains of stone walls hide the secrets of Tomislavgrad past, and the cold river that springs from under the city itself envelops that same past in a thick layer of fog through which we will briefly peek and discover what the voices of Tomislavgrad warriors whisper to us as we observe sunset. In this tour, we will get to know the ancient history of Tomislavgrad, the gastronomy of this region and all the natural beauties that adorn this one-day tour.",
+                img: '/assets/img/gradStridon.jpg',
+                imgs: [],
+                routeTypeId: 'guided',
+                guide: 'Ivan Iko Baković',
+                guideAboutHr:
+                    'Profesor povijesti, nogometaš, zaljubljenik u prirodu i Tomislavgrad',
+                guideAboutEn:
+                    'History teacher, football player, lover of nature and Tomislavgrad',
+                guidePhone: '+387 63 868 427',
+                guideMail: 'ivanbakovic991tg@gmail.com',
+                id: 'svJeronim',
                 stops: [
                     {
                         nameHr: 'Vjetropark na Jelovači',
@@ -66,22 +83,12 @@ var routesData = {
                         aboutHr:
                             'Grad Stridon (Stžanj) je grad nastao na liticama ispod kojih izvire rijeka Šujica. Zidine ovog grada odišu snažnom prošlošću i snalažljivosti starih Rimljana koji su se usudila napraviti grad na tako nepristupačnom mjestu. Grad je po legendi i rodno mjesto svetog Jeronima. Iako je Rimsko carstvo izgubilo svoj značaj na ovim prostorima, grad Stridon ostaje još uvjek živ i odišući prkosom nepokolebljivosti. Ljudi su nastavili živjeti u ovom gradu i u srednjem vijeku kada nosi ime Stržanj. Nakon srednjeg vijeka sve više gubi značaj, tako da s vremenom biva napušten i ostavljen vremenu i silama prirode da mijenjaju njegov izgled.'
                     }
-                ],
+                ]
                 /* pins: [
           [17.27997368955981, 43.58080534174916],
           [17.24143, 43.559407],
         ],
         stops: ['Crkva u Mesihovini', 'Vodopad Žukovica'], */
-                dist: '42.5 km',
-                dists: ['15 km', '4 km', '14.5 km', '9 km'],
-                aboutHr:
-                    'Ova  tura nazvana je po svetom Jeronimu kojega legenda usko veže za grad Stridon. Antički grad Stridon danas se nalazi iznad izvora rijeke Šujice u istoimenom mjestu. U ovoj turističkoj turi vidjet ćemo neke od putova kojima je sv. Jeronim hodao u antičkim vremenima.<br><br> Krenut ćemo od planine Jelovače s koje se pruža odličan pogledat na Duvanjsko polje i na kojoj slobodno lutaju divlji konji. Na Jelovači ćemo se upoznati i sa tradicionalnom gastronomijom Duvanjskog kraja i probati suhomesnate proizvode koji su karakteristični baš za ovo podneblje. Spustit ćemo se do kanjona rijeke Šujice i vidjeti dvije gradine koje su Iliri koristili kao ulaz na Duvanjsko polje. Nakon šetnje iznad kanjona spustit ćemo se na ručak u obližnje Mokronoge kod obitelji Baković na tradicionalni ručak ispod sača. Uz ovaj ručak naši domaćini će nam pokazati i ukratko objasniti kako se spremaju jela ispod sača. <br><br>Nakon ručka slijedi naš put uzvodno rijekom Šujicom gdje ćemo doći do sela Galečić i starog Rimskog mosta koji povezivao dvije obale rijeke Šujice.<br><br>Vrhunac naše jednodnevne ture bit će posjeta antičkom i srednjovjekovnom gradu Stridonu/Stržnju koji je izgrađen na liticama iznad izvora rijeke Šujice. Ovi ostaci kamenih zidina kriju tajne Duvanjske prošlosti, a hladna rijeka koja izvire ispod samoga grada obaviju tu istu prošlost debelim slojem magle kroz koju ćemo na kratko zaviriti i otkriti što nam glasovi Duvanjskih ratnika šapuću dok promatramo zalazak sunca. U ovoj turi upoznat ćemo se s Duvanjskom antičkom povijesti, gastronomijom ovoga kraja te svim prirodnim ljepotama koje krase ovu jednodnevnu turu.',
-                aboutEn:
-                    "This tour is named after St. Jerome, whose legend is closely linked to the town of Stridon. Today, the ancient city of Stridon is located above the source of the river Šujica in the place of the same name. In this tourist tour, we will see some of the paths that St. Jerome walked in ancient times.<br><br> We will start from Jelovača mountain, which offers a great view of the Duvanjsko field and where wild horses roam freely. At Jelovača, we will get to know the traditional gastronomy of the Tomislavgrad region and try dried meat products that are characteristic of this climate. We will go down to the canyon of the river Šujica and see two castles that the Illyrians used as an entrance to the Duvanjsko field. After the walk above the canyon, we will go down to the nearby Mokronoge for lunch at the Baković family's place for a traditional lunch under the sach. Along with this lunch, our hosts will show us and briefly explain how the dishes are prepared under the sach. After lunch, we continue our journey upstream along the river Šujica, where we will reach the village of Galečić and the old Roman bridge that connected the two banks of the river Šujica.<br><br> The highlight of our one-day tour will be a visit to the ancient and medieval town of Stridon/Stržnje, which was built on the cliffs above the source of the river Šujica. These remains of stone walls hide the secrets of Tomislavgrad past, and the cold river that springs from under the city itself envelops that same past in a thick layer of fog through which we will briefly peek and discover what the voices of Tomislavgrad warriors whisper to us as we observe sunset. In this tour, we will get to know the ancient history of Tomislavgrad, the gastronomy of this region and all the natural beauties that adorn this one-day tour.",
-                img: '/assets/img/gradStridon.jpg',
-                imgs: [],
-                routeTypeId: 'guided',
-                id: 'svJeronim'
             }
         },
         delminium: {
@@ -117,6 +124,11 @@ var routesData = {
                 img: '/assets/img/delminiumLib.jpg',
                 imgs: [],
                 routeTypeId: 'guided',
+                guide: 'Ivan Iko Baković',
+                guideAbout:
+                    'Profesor povijesti, nogometaš, zaljubljenik u prirodu i Tomislavgrad',
+                guidePhone: '+387 63 868 427',
+                guideMail: 'ivanbakovic991tg@gmail.com',
                 id: 'delminium',
                 stops: [
                     {
@@ -247,6 +259,11 @@ var routesData = {
                 img: '/assets/img/kanjonSujica.jpg',
                 imgs: [],
                 routeTypeId: 'guided',
+                guide: 'Ivan Iko Baković',
+                guideAbout:
+                    'Profesor povijesti, nogometaš, zaljubljenik u prirodu i Tomislavgrad',
+                guidePhone: '+387 63 868 427',
+                guideMail: 'ivanbakovic991tg@gmail.com',
                 id: 'mokronoskiRibici',
                 stops: [
                     {
@@ -325,6 +342,11 @@ var routesData = {
                 img: '/assets/img/mijatTomic.jpg',
                 imgs: [],
                 routeTypeId: 'guided',
+                guide: 'Ivan Iko Baković',
+                guideAbout:
+                    'Profesor povijesti, nogometaš, zaljubljenik u prirodu i Tomislavgrad',
+                guidePhone: '+387 63 868 427',
+                guideMail: 'ivanbakovic991tg@gmail.com',
                 id: 'mijat',
                 stops: [
                     {

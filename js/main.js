@@ -2348,7 +2348,16 @@ function getRouteText(clickedID) {
     <span id="profile" style="min-width:300px;"></span>
     </div>
     <div id="landmark-about" class="p-4 mb-2 text-justify d-block text-font" style="display: inline-block;">${text}</div>
-    ${carouselHtml};`;
+    ${carouselHtml}`;
+    if (tourDataProperties.routeTypeId == 'guided') {
+        let guide = tourDataProperties.guide;
+        let guidePhone = tourDataProperties.guidePhone;
+        let guideMail = tourDataProperties.guideMail;
+        let guideAbout = tourDataProperties[`guideAbout${localStorage.lang}`];
+        routeAbout += ` <hr class="mr-4 ml-4"><div id="guideMan" class="translate text-left ml-5 mt-1 mb-1 text-font">
+        Vodič
+    </div><div class="list-group-item list-group-item-action no-outline mt-4 pl-5 landmarkList-height scale-animation-right display-flex text-font kultura" style="display: flex;"><img src="/assets/guides/noPhoto.png" class="landmarkList-img ml-4 center-y"><div class="margin-auto ml-3 mr-2"><div class="text-20">${guide}</div><div class="menu-btn pr-5">${guideAbout}</div><div class="menu-btn mb-5">${guidePhone} | ${guideMail}</div>`;
+    }
     routesAllElement.style.display = 'none';
     destinationsAllElement.style.display = 'none';
     routesMenu.style.display = 'none';

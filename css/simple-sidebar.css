@@ -1596,7 +1596,7 @@ b {
     .center-toggle {
         top: unset;
         left: unset;
-        bottom: 1.83rem;
+        bottom: 2rem;
         right: 5.5rem;
     }
     .sidebar-scroll {

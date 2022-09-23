@@ -39,7 +39,8 @@ const dict = {
         timeDesc: 'Vrijeme: ',
         dayDesc: 'Dan: ',
         neededDesc: 'Potrebno: ',
-        contactDesc: 'Kontakt: '
+        contactDesc: 'Kontakt: ',
+        guideMan: 'Vaš vodič'
     },
     En: {
         languagesMenuBtn: 'English',
@@ -80,7 +81,8 @@ const dict = {
         timeDesc: 'Time: ',
         dayDesc: 'Day: ',
         neededDesc: 'Needed: ',
-        contactDesc: 'Contact: '
+        contactDesc: 'Contact: ',
+        guideMan: 'Your guide'
     }
 };
 
