@@ -8,6 +8,10 @@
     
  }*/
 
+:root {
+    --doc-height: 100%;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     text-align: justify;
@@ -340,7 +344,7 @@ a {
 }
 .landmark-title {
     max-width: 600px;
-    font-size: 25px;
+    font-size: 1.5rem;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     margin: 0 0rem;
@@ -1570,17 +1574,17 @@ b {
         right: 5.5rem;
     }
     .sidebar-scroll {
-        height: calc(100vh - 72.8px);
+        height: calc(var(--doc-height) - 72.8px);
         overflow-y: scroll;
         overflow-x: hidden;
     }
     .routes-scroll {
-        height: calc(100vh - 123.6px);
+        height: calc(var(--doc-height) - 123.6px);
         overflow: auto;
         overflow-x: hidden;
     }
     .assocs-scroll {
-        height: calc(100vh - 72.8px);
+        height: calc(var(--doc-height)- 72.8px);
         overflow: auto;
         overflow-x: hidden;
     }
@@ -1588,5 +1592,8 @@ b {
         width: 70%;
         display: flex;
         margin: auto;
+    }
+    #sidebar-wrapper {
+        width: 50vw;
     }
 }
