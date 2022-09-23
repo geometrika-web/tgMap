@@ -1584,16 +1584,19 @@ b {
         overflow-x: hidden;
     }
     .assocs-scroll {
-        height: calc(var(--doc-height)- 72.8px);
+        height: calc(var(--doc-height) - 72.8px);
         overflow: auto;
         overflow-x: hidden;
     }
     .illustration {
-        width: 70%;
+        width: 60%;
         display: flex;
         margin: auto;
     }
     #sidebar-wrapper {
         width: 50vw;
+    }
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -50vw;
     }
 }
