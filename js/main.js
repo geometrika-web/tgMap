@@ -19,6 +19,14 @@ if (
     documentHeight();
 }
 
+function getOrientation() {
+    isMobile = window.innerWidth > window.innerHeight ? false : true;
+}
+
+window.onresize = function () {
+    getOrientation();
+};
+
 const lat = 43.787183;
 const lon = 16.732731;
 const y = 5422472.06;
@@ -2127,7 +2135,7 @@ var touristSource = new ol.source.Vector({
     })
 });
 var vector = new ol.layer.Vector({
-    minZoom: 10.5,
+    minZoom: 9.5,
     name: 'landmarks',
     source: vectorSource,
     declutter: true,
@@ -2136,7 +2144,7 @@ var vector = new ol.layer.Vector({
     }
 });
 var nature = new ol.layer.Vector({
-    minZoom: 10.5,
+    minZoom: 9.5,
     name: 'nature',
     source: natureSource,
     declutter: true,
@@ -2145,7 +2153,7 @@ var nature = new ol.layer.Vector({
     }
 });
 var tourist = new ol.layer.Vector({
-    minZoom: 10.5,
+    minZoom: 9.5,
     name: 'tourist',
     source: touristSource,
     declutter: true,
