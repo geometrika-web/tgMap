@@ -126,10 +126,11 @@ var routesData = {
                 imgs: [],
                 routeTypeId: 'guided',
                 guide: 'Ivan Iko Baković',
+                guidePhoto: 'ikoBakovic.jpg',
                 guideAboutHr:
-                    'Profesor povijesti, nogometaš, zaljubljenik u prirodu i Tomislavgrad',
+                    'Profesor povijesti i geografije, nogometaš, fotograf, zaljubljenik u prirodu i Tomislavgrad',
                 guideAboutEn:
-                    'History teacher, football player, lover of nature and Tomislavgrad',
+                    'History and geography teacher, football player, photographer, lover of nature and Tomislavgrad',
                 guidePhone: '+387 63 868 427',
                 guideMail: 'ivanbakovic991tg@gmail.com',
                 id: 'delminium',
@@ -263,10 +264,11 @@ var routesData = {
                 imgs: [],
                 routeTypeId: 'guided',
                 guide: 'Ivan Iko Baković',
+                guidePhoto: 'ikoBakovic.jpg',
                 guideAboutHr:
-                    'Profesor povijesti, nogometaš, zaljubljenik u prirodu i Tomislavgrad',
+                    'Profesor povijesti i geografije, nogometaš, fotograf, zaljubljenik u prirodu i Tomislavgrad',
                 guideAboutEn:
-                    'History teacher, football player, lover of nature and Tomislavgrad',
+                    'History and geography teacher, football player, photographer, lover of nature and Tomislavgrad',
                 guidePhone: '+387 63 868 427',
                 guideMail: 'ivanbakovic991tg@gmail.com',
                 id: 'mokronoskiRibici',
@@ -348,10 +350,11 @@ var routesData = {
                 imgs: [],
                 routeTypeId: 'guided',
                 guide: 'Ivan Iko Baković',
+                guidePhoto: 'ikoBakovic.jpg',
                 guideAboutHr:
-                    'Profesor povijesti, nogometaš, zaljubljenik u prirodu i Tomislavgrad',
+                    'Profesor povijesti i geografije, nogometaš, fotograf, zaljubljenik u prirodu i Tomislavgrad',
                 guideAboutEn:
-                    'History teacher, football player, lover of nature and Tomislavgrad',
+                    'History and geography teacher, football player, photographer, lover of nature and Tomislavgrad',
                 guidePhone: '+387 63 868 427',
                 guideMail: 'ivanbakovic991tg@gmail.com',
                 id: 'mijat',
