@@ -240,6 +240,88 @@ var routesData = {
                 ]
             }
         },
+        viking: {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                zoom: '12.5',
+                zoomMobile: '11.5',
+                coordinates: [1911792.38, 5421966.43]
+            },
+            properties: {
+                nameHr: 'Tura duvanjskog vikinga',
+                nameEn: 'Viking tour',
+                place: '',
+                path: '',
+                duration: '4 h',
+                dist: '14.5 km',
+                dists: ['7 km', '4 km', '3.5 km'],
+                aboutHr:
+                    'U ovoj turi upoznat ćemo se s prirodnim ljepotama Duvanjskog kraja kao i sa osobom koja na najbolji način prikazuje suživot prirode i čovjeka, posebno u ratničkom smislu.<br><br> Ovu turu započet ćemo u Franjevačkom muzeju u Tomislavgradu u kojem ćemo upoznati cjelokupnu povijest i tradiciju Duvanjskog kraja od prapovijesti do danas. Nakon toga ćemo posjetiti i izložbu Duvanjskog praslona - diva iz pretpovijesti, dijagramu napravljenu unutar muzeja s kostima, kljovama i izrađenom replikom mastodonta pronađenog na Duvanjskom polju. Nakon obilaska muzeja zaputit ćemo se preko obližnje šume u Kologaju prema izvoru malene rječice Ostrožac. Na putu ćemo stajati i polako na na svakom stajalištu korak po korak stapati s prirodom. Doći ćemo i do odmarališta Ostrožac, gdje će nam hladna voda obližnjeg istoimenog potoka i zelenilo šume razbistriti um, a priče iz prošlosti vratiti nas na kratko u starija vremena. Ovdje ćemo kušati i tradicionalna suhomesnata jela Duvanjskog kraja i mliječne proizvode kojih ima u izobilju zbog bogatstva pašnjaka. <br><br> Vrhunac naše ture bit će posjet Duvanjskom Vikingu - Stipi Pleići Fliku i njegovoj Vikinškoj kući u kojoj ćemo vidjeti sav raskoš Vikinške tradicije i opreme. Stipine nadaleko poznate sjekire pretvorit će i vas na trenutak u vikinške ratnike, a poligon za bacanje sjekira u iskusne borce Nordijskih zemalja. Nakon razgovora s Duvanjskim Vikingom i bacanjem sjekira u Vikinškoj kući slijedi nam tradicionalno jelo koje će okrijepiti naša tijela a našu dušu ispreplesti s Duvanjskom i Vikinškom tradicijom. Nakon ovoga provest ćemo se do obližnjeg vidikovca s kojeg se pruža pogled na beskraj Buškog jezera. Na ovom mjestu ćemo pogledati i zalazak sunca, kojeg ćemo u odrazu biste vode ispratiti kako odlazi zapadnije donijeti svjetlost nekim drugim krajevima.',
+                aboutEn:
+                    "In this tour, we will get to know the natural beauties of the Duvno region, as well as the person who best portrays the coexistence of nature and man, especially in the warrior sense.<br><br> We will start this tour at the Franciscan Museum in Tomislavgrad, where we will get to know the entire history and tradition of the Duvno region from prehistory to the present day. After that, we will also visit the exhibition of the ancient elephant - a giant from prehistory, a diagram made inside the museum with bones, tusks and a replica of the Mastodon found in the Duvno Field. After visiting the museum, we will head through the nearby forest in Kologaj towards the source of the small Ostrožac river. On the way we will stop and slowly merge with nature step by step at each stop. We will also reach the Ostrožac picnic area, where the cold water of the nearby stream of the same name and the greenery of the forest will clear our minds, and the stories from the past will take us back for a while to older times. Here we will taste the traditional dried meat dishes of the Duvno region and dairy products, which are abundant due to the richness of the pastures. <br><br>The highlight of our tour will be a visit to the Duvno Viking - Stipe Pleići Flik and his Viking house, where we will see all the splendor of the Viking tradition and equipment. Stipe's well-known axes will turn you into Viking warriors for a moment, and the ax throwing range into experienced fighters of the Nordic countries. After the conversation with the Duvno Viking and the ax throwing in the Viking house, we will have a traditional meal that will invigorate our bodies and intertwine our souls with the Duvno and Viking traditions. After this, we will take a walk to the nearby viewpoint, which offers a view of the infinity of the Buško Lake. In this place, we will watch the sunset, where we will see sun in the reflection of the water as it goes further west to bring light to other regions.",
+                img: '/assets/img/viking.jpg',
+                imgs: [],
+                routeTypeId: 'guided',
+                guide: 'Ivan Iko Baković',
+                guidePhoto: 'ikoBakovic.jpg',
+                guideAboutHr:
+                    'Profesor povijesti i geografije, nogometaš, fotograf, zaljubljenik u prirodu i Tomislavgrad',
+                guideAboutEn:
+                    'History and geography teacher, football player, photographer, lover of nature and Tomislavgrad',
+                guidePhone: '+387 63 868 427',
+                guideMail: 'ivanbakovic991tg@gmail.com',
+                id: 'viking',
+                stops: [
+                    {
+                        coordinates: [17.225871, 43.72188],
+                        nameEn: 'Basilica and Franciscan Museum',
+                        nameHr: 'Bazilika i franjevački muzej',
+                        place: 'Tomislavgrad',
+                        aboutEn:
+                            'The memorial basilica in Tomislavgrad began construction in 1925 on the thousandth anniversary of the coronation of King Tomislav. According to legend, King Tomislav was crowned on Duvanjsko polje. The late Fr. Mijo Čuić, a visionary priest-friar, imagined a huge monument in the form of a church and a monastery that will forever remain a monument to the coronation of the first Croatian king. Along with this memorial basilica and monastery, there is also the Franciscan Museum, which through its permanent exhibitions hides the secret of living on the Duvanjsko polje for centuries. Inside the monastery itself, the remains of the Tomislavgrad mammoth are preserved, which are exhibited in diaramas, while the lapidary hides many secrets of Roman influence on the Duvanjsko polje. ',
+                        aboutHr:
+                            'Duvanjska bazilika smatra se glavnom gradskom atrakcijom. Ispred bazilike možete sjesti u lijepo uređenom parku i jednostavno uživati. Izvana je bazilika monumentalana, tlocrtno ima izgled pravilnoga križa, a iznad križa se izdiže prelijepa okrugla kupola. Izgradnja spomen bazilike u Tomislavgradu započeta je 1925. na tisućitu godinjicu krunidbe kralja Tomislava. Legendea kaće da je prvi hrvatski kralj Tomislav okrunjen na Duvanjskom polju prema čemu je pokojni fra. Mijo Čuić zamislio spomenik u vidu Crkve i samostana koji će za vijeke ostati spomen krunidbi prvog Hrvatskog kralja. Unutrašnjost bazilike krasi slika „Isus prijatelj malenih“ svjetski poznatog slikara Vlahe Bukovca.<br><br>Muzej, koji se nalazi uz crkvu, u svojoj postavi sadrži predmete iz dalje i bliže prošlosti te krije tajnu življenja na Duvanjskom polju vijekovima. Unutar samog samostana čuvaju se i ostaci Duvanjskog praslona koji su izloženi u dijarami, dok lapidarij krije mnoge tajne Rimskoga utjecaja na Duvanjsko polje.',
+                        img: '/assets/img/crkvaTG.jpg'
+                    },
+                    {
+                        nameHr: 'Izletište Ostrožac',
+                        nameEn: 'Ostrožac picnic area',
+                        coordinates: [17.184858173473383, 43.72292534975422],
+                        img: '/assets/img/ostrozac.jpg',
+                        aboutHr:
+                            'Izletište Ostrožac uređen je prostor za izlete pokraj istoimenog potoka Ostrožac. Potok Ostrožac glavni je izvor pitke vode za Tomislavgrad i okolna sela. Izvire ispod Vučipolja, a ulijeva se neposredno prije ponora u Šujicu u Kovačima. ',
+                        aboutEn:
+                            'The Ostrožac picnic area is an organized area for excursions next to the stream of the same name. The Ostrožac stream is the main source of drinking water for Tomislavgrad and the surrounding villages. It springs from under Vučipolje, and flows into Šujica in Kovače just before the abyss.'
+                    },
+                    {
+                        nameHr: 'Vikinška kuća',
+                        nameEn: 'Viking house',
+                        coordinates: [17.157527873377074, 43.70699038540245],
+                        img: 'assets/img/vikinskaKuca.jpg',
+                        aboutHr:
+                            'Posjet Duvanjskom Vikingu - Stipi Pleići Fliku i njegovoj Vikinškoj kući u kojoj ćemo vidjeti sav raskoš Vikinške tradicije i opreme. Stipine nadaleko poznate sjekire pretvorit će i vas na trenutak u vikinške ratnike, a poligon za bacanje sjekira u iskusne borce Nordijskih zemalja. ',
+                        aboutEn:
+                            "Visit to the Duvno Viking - Stipe Pleići Flik and his Viking house, where we will see all the splendor of the Viking tradition and equipment. Stipe's well-known axes will turn you into Viking warriors for a moment, and the ax throwing range into experienced fighters of the Nordic countries."
+                    },
+                    {
+                        nameHr: 'Vidikovac Privala',
+                        nameEn: 'Privala Viewpoint',
+                        coordinates: [17.123398823008568, 43.69883810638026],
+                        img: '../assets/img/buskoJezero.jpg',
+                        aboutHr:
+                            'S ovog vidikovca puca predivan pogled na Buško jezero, najveće umjetno jezero u ovom dijelu Europe. Nastalo je potapanjem Buškoga blata 70-ih godina prošloga stoljeća. Zanimljiva povijest ovoga kraja ostavila je brojna arheološka nalazišta, brojne gradine iz ilirskoga i rimskoga doba, brojne artefakte te nekropole s velikim brojem stećaka.<br><br> Osim povijesnih zanimljivosti ovo područje nudi i mogućnost bavljenja brojnim sportovima. U ljetnim mjesecima voda Buškog jezera izrazito je topla i ugodna za kupanje. Jezero je također pogodno za gotovo sve sportove koji trebaju vjetar. A brda i planine koje ga okružuju omogućuju izletnicima penjanje i odmor u planinarskim domovima. Osim spomenutoga, jezero je jako atraktivno i ribičima. Ulovljeni i fotografirani primjerci, osobito somova, privlače lovce na trofejne primjerke i bude maštu ribolovaca.',
+                        aboutEn:
+                            "From this viewpoint there is beautiful view of Buško Lake, an artificial lake that was created in the 60's in the former Yugoslavia for the needs of the Orlovac Hydroelectric Power Plant, which is now located in Croatia. Buško Lake was created by the accumulation of water from the Duvanjsko and Livanjsko fields due to the construction of a dam. The surface of the lake is 55.8 square kilometers, and in addition to being the largest in BiH, until recently it was considered one of the largest in Europe. Buško Lake is in itself a huge potential and a pearl located in the municipality of Tomislavgrad. Apart from the fact that in the summer its sandy beach Marinovac attracts an increasing number of people, this lake and home to many freshwater fish, so that throughout the year it attracts many fishermen. "
+                    }
+                ]
+                /* pins: [
+          [17.27997368955981, 43.58080534174916],
+          [17.24143, 43.559407],
+        ],
+        stops: ['Crkva u Mesihovini', 'Vodopad Žukovica'], */
+            }
+        },
         mokronoskiRibici: {
             type: 'Feature',
             geometry: {
@@ -321,7 +403,7 @@ var routesData = {
             geometry: {
                 type: 'Point',
                 zoom: '11.5',
-                zoomMobile: '11',
+                zoomMobile: '10.5',
                 coordinates: [1933632.22, 5407862.34]
             },
             properties: {
