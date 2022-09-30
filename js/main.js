@@ -10,7 +10,7 @@ if (
     document.documentElement.clientWidth < 575.99
 ) {
     isMobile = true;
-
+    isMobileDevice = true;
     const documentHeight = () => {
         const doc = document.documentElement;
         doc.style.setProperty('--doc-height', `${window.innerHeight}px`);
@@ -21,6 +21,7 @@ if (
 
 function getOrientation() {
     isMobile = window.innerWidth > window.innerHeight ? false : true;
+
     if (
         isMobile &&
         document.getElementById('menu-toggle').classList == 'change'
@@ -2377,7 +2378,7 @@ function getRouteText(clickedID) {
     console.log(localStorage.lang);
 
     // let routeClickedPosition = routeClicked.offsetTop + 1000;
-    if (!isMobile) {
+    if (!isMobile && !isMobileDevice) {
         document.getElementById('tourist-routes').scrollTo(0, 10000);
         routeClicked.scrollIntoView({
             behavior: 'smooth',
