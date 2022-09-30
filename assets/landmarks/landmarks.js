@@ -916,6 +916,8 @@ var natureData = {
                 nameEn: 'Seget',
                 nameHr: 'Seget',
                 place: 'Tomislavgrad',
+                aboutEn:
+                    'A popular picnic spot for everyone, for all people of Duvno (Tomislavgrad), especially those located in the center, in Tomislavgrad. The nearby forest and the source of the river attract anyone who is a true lover of nature. The picnic area is well connected to the city and is relatively close to it, so the people flock to it every day due to its accessibility and beauty.',
                 aboutHr:
                     'Popularno izletište za sve za sve Duvnjake, a posebno onih koji su smješteni u središtu, u Tomislavgradu. Obližnja šuma i izvor rijeke privlači svakog tko je istinski ljubitelj prirode. Izletište je dobro povezano s gradom i nalazi mu se u relativnoj blizini, pa zbog svoje pristupačnosti i ljepote Duvnjaci u njega svakodnevno hrle.',
                 img: '/assets/img/seget.jpg',

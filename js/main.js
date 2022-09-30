@@ -32,6 +32,12 @@ function getOrientation() {
 window.onresize = function () {
     getOrientation();
 };
+let viewport = document.querySelector('meta[name=viewport]');
+function resetViewportZoom() {
+    viewportContent =
+        'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0';
+    viewport.setAttribute('content', viewportContent);
+}
 
 const lat = 43.787183;
 const lon = 16.732731;
@@ -2272,7 +2278,8 @@ function getRouteText(clickedID) {
     } else {
         tourDataSource = routesData;
     }
-
+    znamenitosti();
+    markers.setVisible(false);
     let clickedID_element = document.getElementById(clickedID);
     // let clickedID_text = document.getElementById(clickedID + '-text');
     // let clickedIDtextStyle = clickedID_text.style.display;
@@ -3057,6 +3064,8 @@ function backFromMeet() {
 }
 let weekendDestinationsIndicator = 0;
 function backFromRoute() {
+    znamenitosti();
+    markers.setVisible(true);
     routeClicked.innerHTML = '';
     routesMenu.style.display = 'block';
     if (weekendDestinationsIndicator == 0) {
@@ -3461,7 +3470,7 @@ function toggle(x) {
     $('#wrapper').toggleClass('toggled');
     $('#logo').toggleClass('logo-toggle');
     $('#logo').toggleClass('logo-color');
-    console.log('test');
+    resetViewportZoom();
     //document.getElementById('div-toggle').classList.toggle('bg-toggle');
 }
 
