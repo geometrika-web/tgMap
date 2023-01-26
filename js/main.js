@@ -1158,6 +1158,18 @@ function zoomTo(i) {
         toggle(document.getElementById('menu-toggle'));
     }
 }
+
+function zoomToBusiness(clickedID) {
+    clickedElement = document.getElementById(clickedID);
+    let id = accommodationData.features[accommodationDataKeys[clickedID]];
+    console.log(id);
+    view.animate({
+        center: ol.proj.fromLonLat(id.geometry.coordinates),
+        duration: 1000,
+        zoom: id.geometry.zoom
+    });
+}
+
 function onLoadChanged() {
     vector.changed();
     nature.changed();
@@ -1189,6 +1201,7 @@ function routeColor(routeType) {
     }
 }
 
+// Load sidebar data
 window.onload = function () {
     // Load list of all landmarks from GeoJSON file
     //$.getJSON("assets/landmarks/landmarks.geojson", function(data) {
@@ -1279,7 +1292,7 @@ window.onload = function () {
         landmarkAll.appendChild(landmarkImg);
 
         var landmarkText = document.createElement('div');
-        landmarkText.classList.add('margin-auto', 'ml-3', 'mr-2');
+        landmarkText.classList.add('margin-auto', 'ml-3', 'mr-3');
         landmarkAll.appendChild(landmarkText);
 
         var landmarkPlace = document.createElement('div');
@@ -1765,6 +1778,42 @@ window.onload = function () {
             item.appendChild(itemText);
         }
     }
+    features = accommodationData.features;
+    parent = document.getElementById('businessList');
+    accommodationDataKeys = {};
+    for (i in features) {
+        properties = features[i].properties;
+        geometry = features[i].geometry;
+        let previewFacilities = properties.previewFacilities;
+        var accommodationUnit = document.createElement('button');
+        accommodationUnit.id = properties.id;
+        accommodationDataKeys[accommodationUnit.id] = i;
+        accommodationUnit.classList.add(
+            'list-group-item',
+            'list-group-item-action',
+            'no-outline',
+            'mt-4',
+            'pl-5',
+            'pr-4',
+            'landmarkList-height',
+            'display-flex',
+            'text-font'
+        );
+        accommodationUnit.onclick = function () {
+            zoomToBusiness(this.id);
+        };
+        innerHTML = `
+        <img src="${properties.img}" class="landmarkList-img ml-4 center-y">
+        <div class="pt-2 pl-4 pr-4"><div class="menu-btn text-c3">${
+            properties.place
+        }</div>
+        <h5 class="text-font m-0">${properties['name' + localStorage.lang]}</h5>
+        <div class="fifty-chars text-small">${
+            properties['about' + localStorage.lang].split('<br>')[0]
+        }</div>`;
+        accommodationUnit.innerHTML = innerHTML;
+        parent.appendChild(accommodationUnit);
+    }
     //})
     $('#preloader').slideUp(1000);
     $('#preloaderLogo').addClass('home-filter');
@@ -2054,7 +2103,8 @@ kategorijeBtns.forEach((btn) => btn.addEventListener('click', filter));
 //Kontrola popisa znamenitosti------------------------
 
 // var routesDesc = [],
-(weekendDestinationsDesc = []), (assocDesc = []), (assocCoord = []);
+// (weekendDestinationsDesc = []),
+(assocDesc = []), (assocCoord = []);
 //Landmarks Pins
 var vectorPinSource = new ol.source.Vector({
     features: new ol.format.GeoJSON().readFeatures(landmarksData, {
@@ -2353,7 +2403,7 @@ function getRouteText(clickedID) {
             <p class="text-16 align-middle ml-4"><p id="placeDesc" class="translate mb-0 d-inline">Mjesto: </p><b>${startPlace}</b></p>
             <p class="text-16 align-middle ml-4"><p id="dayDesc" class="translate mb-0 d-inline">Dan:      </p><b>${day}</b></p>
             <p class="text-16 align-middle ml-4"><p id="neededDesc" class="translate mb-0 d-inline">Potrebno: </p><b>${needed}</b></p>
-            <p class="text-16 align-middle ml-4 mb-3"><p id="contactDesc" class="translate mb-0 d-inline">Kontakt: </p><b>${contact}</b></p>
+            <p class="text-16 align-middle ml-4 mb-3"><p id="contactDesc" class="translate mb-0 d-inline">Kontakt: </p><b>${contact}: </b></p>
             `;
     }
 
@@ -2593,7 +2643,7 @@ function showPins() {
 }
 let defaultStyle = ol.style.Style.defaultStyle();
 let stopsHtml;
-let carouselHtml;
+// let carouselHtml;
 
 function renderRoute(tour, element) {
     function tourStyle() {
@@ -2661,6 +2711,7 @@ function renderRoute(tour, element) {
     let stops = tourDataProperties.stops;
     let dists = tourDataProperties.dists;
     let imgs = tourDataProperties.imgs;
+    let carouselHtml = renderCarousel(imgs);
     // let pins = routesData.features[tour].properties.pins;
     let stopPinStyle = `/assets/icon/routes/${routeType}Pin.svg`;
     // let stopPinName = routesData.features[tour].properties.stops;
@@ -2693,43 +2744,6 @@ function renderRoute(tour, element) {
             tour
         );
     });
-    carouselHtml = `<div id="carousel" class="p-3 carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">`;
-    imgs.forEach((img, index) => {
-        if (index < 1) {
-            carouselHtml += `<li data-target="#carousel" data-slide-to="${
-                index + 1
-            }" class="active"></li>`;
-        } else {
-            carouselHtml += `<li data-target="#carousel" data-slide-to="${
-                index + 1
-            }"></li>`;
-        }
-    });
-    carouselHtml += `</ol>
-  <div class="carousel-inner">`;
-    imgs.forEach((img, index) => {
-        if (index < 1) {
-            carouselHtml += `<div class="carousel-item active">
-      <img class="d-block w-100" src="${img}">
-    </div>`;
-        } else {
-            carouselHtml += `<div class="carousel-item">
-      <img class="d-block w-100" src="${img}">
-    </div>`;
-        }
-    });
-    carouselHtml += `</div>
-  <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>`;
-
     // map.addLayer(stopPin);
 }
 
@@ -2795,6 +2809,25 @@ var assocs = new ol.layer.Vector({
 });
 map.addLayer(assocs);
 
+//Business laccommodationSource = new ol.source.Vector(ayer
+accommodationSource = new ol.source.Vector({
+    features: new ol.format.GeoJSON().readFeatures(accommodationData, {
+        featureProjection: 'EPSG:3857'
+    })
+});
+
+let accommodation = new ol.layer.Vector({
+    name: 'a    source: accommodationSourceccommodation',
+    source: accommodationSource,
+    declutter: true,
+    visible: false,
+    style: function (feature, resolution) {
+        return getFeatureStyle(feature, resolution, false, '#fff');
+    }
+});
+map.addLayer(accommodation);
+console.log(accommodationSource.getFeatureById('tarziniDvori'));
+
 // localStorage
 var zoom = map.getView().getZoom();
 if (localStorage.basemap == 1) {
@@ -2849,7 +2882,7 @@ document.getElementById('routes').style.display = 'none';
 document.getElementById('assoc').style.display = 'none';
 document.getElementById('assocsAll').style.display = 'none';
 destinationsAllElement.style.display = 'none';
-document.getElementById('business').style.display = 'none';
+document.getElementById('businesses').style.display = 'none';
 function meetTg() {
     if (meet == 1) {
         return;
@@ -2869,6 +2902,7 @@ function meetTg() {
         vectorPin.setVisible(true);
         naturePin.setVisible(true);
         touristPin.setVisible(true);
+        accommodation.setVisible(false);
         vector.setZIndex(20);
         nature.setZIndex(20);
         tourist.setZIndex(30);
@@ -2879,15 +2913,15 @@ function meetTg() {
         //         routesDesc[i].classList.remove('activate-assoc');
         //     }
         // }
-        for (var i = 0; i < weekendDestinationsDesc.length; i++) {
+        /* for (var i = 0; i < weekendDestinationsDesc.length; i++) {
             weekendDestinationsDesc[i].style.display = 'none';
-        }
+        } */
         msg.style.display = 'block';
         //
         document.getElementById('routes').style.display = 'none';
         document.getElementById('assoc').style.display = 'none';
         document.getElementById('assocsAll').style.display = 'none';
-        document.getElementById('business').style.display = 'none';
+        document.getElementById('businesses').style.display = 'none';
         var activate = document.getElementsByClassName('activate');
         while (activate.length) {
             activate[0].classList.remove('activate');
@@ -2914,6 +2948,7 @@ function routes() {
         /* if (zastave) {
             zastaveOpcina();
         } */
+        touristTours();
         backFromMeet();
         markers.setVisible(true);
         vector.setVisible(true);
@@ -2923,6 +2958,7 @@ function routes() {
         naturePin.setVisible(true);
         touristPin.setVisible(true);
         assocs.setVisible(false);
+        accommodation.setVisible(false);
         assocs.setZIndex(10);
         vector.setZIndex(20);
         nature.setZIndex(20);
@@ -2931,7 +2967,7 @@ function routes() {
         meetElement.style.display = 'none';
         document.getElementById('assoc').style.display = 'none';
         document.getElementById('assocsAll').style.display = 'none';
-        document.getElementById('business').style.display = 'none';
+        document.getElementById('businesses').style.display = 'none';
         document.getElementById('routes').style.display = 'block';
         var activate = document.getElementsByClassName('activate');
         while (activate.length) {
@@ -2981,16 +3017,16 @@ function assoc() {
                 routesDesc[i].classList.remove('activate-assoc');
             }
         } */
-        for (var i = 0; i < weekendDestinationsDesc.length; i++) {
+        /* for (var i = 0; i < weekendDestinationsDesc.length; i++) {
             weekendDestinationsDesc[i].style.display = 'none';
-        }
+        } */
         backFromMeet();
         backFromRoute();
         assocs.setVisible(true);
         msg.style.display = 'none';
         meetElement.style.display = 'none';
         document.getElementById('routes').style.display = 'none';
-        document.getElementById('business').style.display = 'none';
+        document.getElementById('businesses').style.display = 'none';
         document.getElementById('assoc').style.display = 'block';
         document.getElementById('assocsAll').style.display = 'block';
         var activate = document.getElementsByClassName('activate');
@@ -3005,6 +3041,7 @@ function assoc() {
         vectorPin.setVisible(false);
         naturePin.setVisible(false);
         touristPin.setVisible(false);
+        accommodation.setVisible(false);
         //tour1.setVisible(false)
         //tour2.setVisible(false)
         //destination1.setVisible(false)
@@ -3028,9 +3065,9 @@ function business() {
                     routesDesc[i].classList.remove('activate-assoc');
                 }
             } */
-            for (var i = 0; i < weekendDestinationsDesc.length; i++) {
+            /* for (var i = 0; i < weekendDestinationsDesc.length; i++) {
                 weekendDestinationsDesc[i].style.display = 'none';
-            }
+            } */
         }
         meet = 4;
         backFromMeet();
@@ -3041,7 +3078,7 @@ function business() {
         document.getElementById('routes').style.display = 'none';
         document.getElementById('assoc').style.display = 'none';
         document.getElementById('assocsAll').style.display = 'none';
-        document.getElementById('business').style.display = 'block';
+        document.getElementById('businesses').style.display = 'block';
 
         $('.menuBtn-border').removeClass('activate');
         //var activate = document.getElementsByClassName('activate')
@@ -3053,6 +3090,7 @@ function business() {
         vector.setVisible(false);
         nature.setVisible(false);
         tourist.setVisible(false);
+        accommodation.setVisible(true);
         vectorPin.setVisible(false);
         naturePin.setVisible(false);
         touristPin.setVisible(false);
@@ -3098,6 +3136,12 @@ function backFromRoute() {
         .getElementById('tourist-routes')
         .classList.remove('sidebar-scroll');
 }
+
+function backFromBusiness() {
+    deselect();
+    businessSelected.innerHTML = '';
+    businessAll.style.display = 'block';
+}
 // Control Select
 var select = new ol.interaction.Select({
     layers: [vector, nature, tourist, vjerskiObjekti],
@@ -3111,6 +3155,7 @@ map.addInteraction(select);
 
 function deselect() {
     select.getFeatures().clear();
+    selectAccommodation.getFeatures().clear();
 }
 
 let nodeList = document.getElementById('nodelist');
@@ -3165,6 +3210,133 @@ features = select.getFeatures().on(['add', 'remove'], function (e) {
     }
 });
 
+let selectAccommodation = new ol.interaction.Select({
+    layers: [accommodation],
+    condition: ol.events.condition.click,
+    style: function (feature, resolution) {
+        return getFeatureStyle(feature, resolution, true, '#fff');
+    }
+});
+
+map.addInteraction(selectAccommodation);
+
+let businessSelected = document.getElementById('businessSelected');
+let businessAll = document.getElementById('businessAll');
+
+selectAccommodation.getFeatures().on(['add', 'remove'], function (e) {
+    let feature = e.element;
+    let id = feature.get('id');
+    console.log(id);
+    let key = accommodationDataKeys[id];
+    let dataProperties = accommodationData.features[key].properties;
+    let imgs = dataProperties.imgs;
+    let facilities = dataProperties.facilities;
+    let fastFacilities = dataProperties.fastFacilities;
+    let houseRules = dataProperties.houseRules;
+    let about = dataProperties['about' + localStorage.lang];
+    accommodationAbout = `<img onclick="backFromBusiness()" class="landmark-close-btn mr-3 mt-4" src="assets/icon/close.svg" alt="">
+    <div class="row w-100 pt-4">
+    <div class="col-8">
+    <div class="landmark-title text-left"">${
+        dataProperties['name' + localStorage.lang]
+    }</div>
+    <img class="contact-image mr-1" src='assets/contact/location-bold.png'><div id="landmark-location" class="font-09 mb-4 text-left d-inline-block">${
+        dataProperties.place
+    } </div> &#124; <a target="blank" class="color-yellow font-09" href="${
+        dataProperties.googleMaps
+    }"> ${dict[localStorage.lang].navigation}  &#10230;</a>
+    </div>
+    <div class="col-4 p-0 pt-3"><button onclick="scrollIt('scrollIt')" class="bookBtn text-uppercase">${
+        dict[localStorage.lang].book
+    }</button></div>
+    
+    </div>
+    ${renderCarousel(imgs)} 
+    <div id="description" class="text-left font-weight-bold  mt-4 mb-2 font-09">${
+        dict[localStorage.lang].description
+    }</div>
+    <div id="landmark-about" class="text-justify d-block text-font">${about}</div>
+    <hr class="mt-4">
+    <div id="facilities" class="text-left  mt-4 mb-2 font-weight-bold  font-09">${
+        dict[localStorage.lang].facilities
+    }</div>
+    <div class='row ml-3 mr-3'>${renderAccommodationFastFacilities(
+        fastFacilities
+    )}</div>
+    <button onclick="scrollIntoViewe()"  data-toggle="collapse" data-target="#accommodationFacilities" aria-expanded="false" class="bg-white text-small ml-4 mr-4 text-toggle no-outline underline w-50 text-left">
+    
+    <span class="text-collapsed ml-2">${
+        dict[localStorage.lang].showFacilities
+    }</span>
+    <span class="text-expanded">${dict[localStorage.lang].hideFacilities}</span>
+  
+    </button>
+    <div id="accommodationFacilities" class="text-left collapse ml-4 mr-4">${renderAccommodationFacilities(
+        facilities
+    )}</div>
+    <hr class="mt-4">
+    <div id="houseRules" class="text-left  mt-4 mb-2 font-weight-bold font-09">${
+        dict[localStorage.lang].houseRules
+    }</div>
+    <div>${renderHouseRules(houseRules)}</div>
+    <hr id='scrollIt' class="mt-4">
+    <div id="availability" class="text-left  mt-4 mb-2 font-weight-bold font-09">${
+        dict[localStorage.lang].availability
+    }</div>
+    <div class="ml-5 mr-5">
+    
+    <form action="https://formsubmit.co/${dataProperties.mail}" method="post">
+  <div class="elem-group">
+    <input type="text" id="name" name="Ime i prezime" placeholder="${
+        dict[localStorage.lang].name
+    }" pattern=[A-Z\sa-z]{3,20} required>
+  </div>
+  <div class="elem-group">
+    <input type="email" id="email" name="Adresa e-pošte" placeholder="${
+        dict[localStorage.lang].email
+    }" required>
+  </div>
+  <div class="elem-group">
+    <input type="tel" id="phone" name="Broj telefona" placeholder="${
+        dict[localStorage.lang].phone
+    }"  required>
+  </div>
+  <div class="elem-group inlined">
+    <label for="adult">${dict[localStorage.lang].adults}</label>
+    <input type="number" id="adult" name="Broj odraslih" placeholder="2" min="1" required>
+  </div>
+  <div class="elem-group inlined">
+    <label for="child">${dict[localStorage.lang].children}</label>
+    <input type="number" id="child" name="Broj djece" placeholder="0" min="0" required>
+  </div>
+  <div class="elem-group inlined">
+    <label for="checkin-date">${dict[localStorage.lang].checkIn}</label>
+    <input type="date" id="checkin-date" name="Dolazak" required>
+  </div>
+  <div class="elem-group inlined">
+    <label for="checkout-date">${dict[localStorage.lang].checkOut}</label>
+    <input type="date" id="checkout-date" name="Odlazak" required>
+  </div>
+  <div class="elem-group">
+    <label for="message">${dict[localStorage.lang].else}</label>
+    <textarea id="message" name="Dodatna pitanja" placeholder="${
+        dict[localStorage.lang].elseMsg
+    }" required></textarea>
+  </div>
+  <button class="formBtn text-uppercase" type="submit">${
+      dict[localStorage.lang].availability
+  }</button>
+</form>
+
+    </div>
+    <hr class="mt-4">
+    `;
+
+    businessAll.style.display = 'none';
+    businessSelected.innerHTML = accommodationAbout;
+    dateFormControl();
+});
+
 var selectAssoc = new ol.interaction.Select({
     layers: [assocs],
     condition: ol.events.condition.click,
@@ -3178,6 +3350,7 @@ map.addInteraction(selectAssoc);
 selectAssoc.getFeatures().on(['add', 'remove'], function (e) {
     if (!zastave || currZoom > 11.5) {
         // toggleOnSelect();
+        console.log(e);
         var feature = e.element;
         var id = feature.get('id');
         if (e.type == 'add') {
@@ -3854,9 +4027,9 @@ map.getLayers().forEach(function (layer) {
 //  var id = document.getElementById("destination"+i+"-text")
 //  weekendDestinationsDesc.push(id)
 //}
-for (var i = 0; i < weekendDestinationsDesc.length; i++) {
+/* for (var i = 0; i < weekendDestinationsDesc.length; i++) {
     weekendDestinationsDesc[i].style.display = 'none';
-}
+} */
 const menuToggle = document.getElementById('menu-toggle');
 function zoomToRoute() {
     // for (var i = 0; i < routesDesc.length; i++) {
@@ -4061,6 +4234,150 @@ function sidebarGallery(imgs) {
     var expandImg = document.getElementById('expandedImg');
     expandImg.src = imgs.src;
     expandImg.parentElement.style.display = 'block';
+}
+
+function renderCarousel(imgs) {
+    carouselHtml = `<div id="carousel" class="pt-3 carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">`;
+    imgs.forEach((img, index) => {
+        if (index < 1) {
+            carouselHtml += `<li data-target="#carousel" data-slide-to="${
+                index + 1
+            }" class="active"></li>`;
+        } else {
+            carouselHtml += `<li data-target="#carousel" data-slide-to="${
+                index + 1
+            }"></li>`;
+        }
+    });
+    carouselHtml += `</ol>
+  <div class="carousel-inner">`;
+    imgs.forEach((img, index) => {
+        if (index < 1) {
+            carouselHtml += `<div class="carousel-item active">
+      <img class="d-block w-100" src="${img}">
+    </div>`;
+        } else {
+            carouselHtml += `<div class="carousel-item">
+      <img class="d-block w-100" src="${img}">
+    </div>`;
+        }
+    });
+    carouselHtml += `</div>
+  <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>`;
+    return carouselHtml;
+}
+
+function renderAccommodationFastFacilities(facilities) {
+    fastFacilitiesHtml = '';
+    for (i in facilities) {
+        if (facilities[i].check === true) {
+            fastFacilitiesHtml += `<div class='col text-small text-center mb-3 min-w-80'><img class="w-20" src='assets/icon/facilities/${
+                facilities[i].id
+            }.svg'><div class=''>${
+                facilities[i]['name' + localStorage.lang]
+            }</div></div>`;
+        }
+    }
+    return fastFacilitiesHtml;
+}
+
+function renderAccommodationFacilities(facilities) {
+    facilitiesHtml = '';
+    for (i in facilities) {
+        if (facilities[i].facilitiesHr.length > 0) {
+            if (facilities[i].nameEn == 'Bedrooms') {
+                facilitiesHtml += `<div class="text-left mt-4 mb-2 facilities-font">
+                ${facilities[i]['name' + localStorage.lang]}
+            </div>
+            <div class="container">
+                        <ul class="m-0">
+
+            `;
+                for (j in facilities[i].facilitiesHr) {
+                    facilitiesHtml += `
+                        <li><b>Spavaća soba ${parseInt(j) + 1} &#x2192; </b>${
+                        facilities[i]['facilities' + localStorage.lang][j]
+                    } </li>
+                    `;
+                }
+                facilitiesHtml += `</ul></div>`;
+            } else {
+                facilitiesHtml += `<div class="text-left mt-4 mb-2 facilities-font">
+                ${facilities[i]['name' + localStorage.lang]}
+            </div>
+            <div class="container">
+                        <ul class="row m-0">
+            `;
+                for (j in facilities[i].facilitiesHr) {
+                    facilitiesHtml += `
+                        <li class="col-sm-6">${
+                            facilities[i]['facilities' + localStorage.lang][j]
+                        } </li>
+                    `;
+                }
+                facilitiesHtml += `</ul></div>`;
+            }
+        }
+    }
+    return facilitiesHtml;
+}
+
+function renderHouseRules(houseRules) {
+    houseRulesHtml = '';
+    for (i in houseRules) {
+        if (houseRules[i].check === true) {
+            houseRulesHtml += `<div class="row text-small mt-2 mb-2 ml-5 mr-5"><div class='text-small text-center col-4'><img class="w-20" src='assets/icon/facilities/${
+                houseRules[i].id
+            }.svg'><div class=''>${
+                houseRules[i]['name' + localStorage.lang]
+            }</div></div><div class="col-8 margin-auto">${
+                houseRules[i]['value' + localStorage.lang]
+            }</div></div>`;
+        }
+    }
+    return houseRulesHtml;
+}
+
+/* Form control */
+function dateFormControl() {
+    var currentDateTime = new Date();
+    var year = currentDateTime.getFullYear();
+    var month = currentDateTime.getMonth() + 1;
+    var date = currentDateTime.getDate() + 1;
+
+    if (date < 10) {
+        date = '0' + date;
+    }
+    if (month < 10) {
+        month = '0' + month;
+    }
+
+    var dateTomorrow = year + '-' + month + '-' + date;
+    var checkinElem = document.querySelector('#checkin-date');
+    var checkoutElem = document.querySelector('#checkout-date');
+
+    checkinElem.setAttribute('min', dateTomorrow);
+
+    checkinElem.onchange = function () {
+        checkoutElem.setAttribute('min', this.value);
+    };
+}
+
+function scrollIt(id) {
+    document.getElementById(id).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest'
+    });
 }
 
 /* let request = new XMLHttpRequest();

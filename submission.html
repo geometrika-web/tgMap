@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/submission.css" rel="stylesheet" />
+        <title>Document</title>
+    </head>
+    <body class="h-100 align-content-center d-flex">
+        <div id="container" class="container">
+            <div class="row flex-md-row-reverse">
+                <div class="col-lg-5">
+                    <img
+                        src="assets/illustrations/submission2.svg"
+                        alt=""
+                        class="d-block mx-md-auto img-fluid h-100"
+                    />
+                </div>
+                <div class="col-lg-7 m-auto">
+                    <p class="text-uppercase m-0 mb-1">
+                        Upit je zaprimljen. Hvala vam!
+                    </p>
+                    <h2 class="display-5 mb-2">
+                        Poruka je proslijeđena domaćinu kuće koji će vam se
+                        javiti uskoro.
+                    </h2>
+                    <p class="lead">
+                        Do tad iskoristite TomislavGuides kako biste isplanirali
+                        vaš posjet Tomislavgradu.
+                    </p>
+                    <div
+                        class="d-grid gap-2 d-md-flex justify-content-md-start"
+                    >
+                        <a id="back-href">
+                            <button type="button" class="px-4">
+                                Povratak na kartu
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document
+                .getElementById('back-href')
+                .setAttribute('href', 'map.html' + localStorage.hash);
+        </script>
+    </body>
+</html>

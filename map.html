@@ -228,7 +228,7 @@
                         id="kategorije-meet"
                         class="container-fluid mt-5-m mb-5-m cursor-pointer position-relative p-0-2-m"
                     >
-                        <div class="text-left mb-2 mt-4 text-font">
+                        <div id="categoriesTranslate" class="translate text-left mb-2 mt-4 text-font">
                             Kategorije
                         </div>
                         <div class="row">
@@ -818,14 +818,93 @@
                     </small> -->
                 </div>
 
-                <!--Busines-->
-                <div id="business" class="sidebar-scroll">
-                    <img
+                <!--Business-->
+                <div id="businesses" class="sidebar-scroll">
+                    <div id="businessSelected" class="ml-4 mr-4"></div>
+                    <div id="businessAll">
+                    <div
+                        id="kategorije-business"
+                        class="container-fluid mt-5-m mb-5-m cursor-pointer position-relative p-0-2-m"
+                    >
+                        <div class="text-left mb-2 mt-4 text-font">
+                            Kategorije
+                        </div>
+                        <div class="row">
+                            <img
+                                id="business-check"
+                                src="assets/icon/kategorije_Check.svg"
+                                alt=""
+                            />
+                            <div class="col-3">
+                                <div
+                                    class="image-center menu-btn kategorije-btn"
+                                    id="businessAll"
+                                >
+                                    <img
+                                        class="d-inline kategorije-hover"
+                                        src="/assets/icon/kategorije_Sve.svg"
+                                        alt=""
+                                    />
+                                    <div id="allBusinessTranslate" class="d-inline d-block mt-2 text-c3 translate">
+                                        Sve
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div
+                                    class="image-center menu-btn kategorije-btn"
+                                    id="aktivnosti"
+                                >
+                                    <img
+                                        class="d-inline kategorije-hover"
+                                        src="/assets/icon/kategorije_Kultura.svg"
+                                        alt=""
+                                    />
+                                    <div id="activityTranslate" class="translate d-inline d-block mt-2 text-c3">
+                                        Aktivnosti
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div
+                                    class="image-center menu-btn kategorije-btn"
+                                    id="opg"
+                                >
+                                    <img
+                                        class="d-inline kategorije-hover"
+                                        src="/assets/icon/kategorije_Priroda.svg"
+                                        alt=""
+                                    />
+                                    <div id="foodTranslate" class="translate d-inline d-block mt-2 text-c3">
+                                        Hrana i OPG
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div
+                                    class="image-center menu-btn kategorije-btn"
+                                    id="smjestaj"
+                                >
+                                    <img
+                                        class="d-inline kategorije-hover"
+                                        src="/assets/icon/kategorije_event.svg"
+                                        alt=""
+                                    />
+                                    <div id="accommodationTranslate" class="translate d-inline d-block mt-2 text-c3">
+                                        Smještaj
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="businessList" class="list-group"></div>
+                </div>
+                    <!-- <img
                         class="illustration pl-5 pr-5 pt-2"
                         src="/assets/illustrations/business.svg"
                         alt=""
                     />
-                    <div id="businessDesc" class="translate m-5">Istražite lokalne poslove, zanate, OPG-ove, proizvođače rukotvorina, domaćih proizvoda i slično <br><b>Uskoro!</b>  </div>
+                    <div id="businessDesc" class="translate m-5">Istražite lokalne poslove, zanate, OPG-ove, proizvođače rukotvorina, domaćih proizvoda i slično <br><b>Uskoro!</b>  </div> -->
                 </div>
             </div>
             <!-- /#sidebar-wrapper-->
@@ -1028,6 +1107,10 @@
         <script src="assets/tours/routes.js" type="text/javascript"></script>
         <script
             src="assets/landmarks/assocs.js"
+            type="text/javascript"
+        ></script>
+        <script
+            src="assets/landmarks/business.js"
             type="text/javascript"
         ></script>
         <script src="js/main.js" type="text/javascript"></script>
