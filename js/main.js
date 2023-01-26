@@ -1168,6 +1168,9 @@ function zoomToBusiness(clickedID) {
         duration: 1000,
         zoom: id.geometry.zoom
     });
+    if (isMobile) {
+        toggle(document.getElementById('menu-toggle'));
+    }
 }
 
 function onLoadChanged() {
@@ -3099,9 +3102,9 @@ function business() {
 
 landmarkCloseBtn.addEventListener('click', function () {
     backFromMeet();
-    if (isMobile) {
+    /* if (isMobile) {
         toggle(menuToggle);
-    }
+    } */
 });
 
 function backFromMeet() {
@@ -3224,6 +3227,9 @@ let businessSelected = document.getElementById('businessSelected');
 let businessAll = document.getElementById('businessAll');
 
 selectAccommodation.getFeatures().on(['add', 'remove'], function (e) {
+    if (e.type === 'add') {
+        toggleOnSelect();
+    }
     let feature = e.element;
     let id = feature.get('id');
     console.log(id);
