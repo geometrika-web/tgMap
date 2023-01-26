@@ -27,7 +27,7 @@ const dict = {
         guidedTranslate: 'S vodičem',
         allBusinessTranslate: 'Sve',
         activityTranslate: 'Aktivnosti',
-        foodTranslate: 'Hrana i OPG',
+        foodTranslate: 'Hrana',
         accommodationTranslate: 'Smještaj',
         businessDesc:
             'Istražite lokalne poslove, zanate, OPG-ove, proizvođače rukotvorina, domaćih proizvoda i slično <br><b>Uskoro!</b>',
@@ -91,7 +91,7 @@ const dict = {
         guidedTranslate: 'Guided',
         allBusinessTranslate: 'All',
         activityTranslate: 'Activities',
-        foodTranslate: 'Food and family farms',
+        foodTranslate: 'Food',
         accommodationTranslate: 'Accommodation',
         businessDesc:
             'Explore local businesses, crafts, makers of handicrafts, homemade products and more.<br><b>Comming soon!</b>',
