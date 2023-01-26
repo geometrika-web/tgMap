@@ -1,4 +1,5 @@
-var isMobile = false; //initiate as false
+var isMobile = false;
+let businessBookBtn = '4'; //initiate as false
 var isMobileDevice = false;
 // device detection
 if (
@@ -28,6 +29,7 @@ if (
     };
     window.addEventListener('resize', documentHeight);
     documentHeight();
+    businessBookBtn = '12';
 }
 
 function getOrientation() {
@@ -3241,8 +3243,8 @@ selectAccommodation.getFeatures().on(['add', 'remove'], function (e) {
     let houseRules = dataProperties.houseRules;
     let about = dataProperties['about' + localStorage.lang];
     accommodationAbout = `<img onclick="backFromBusiness()" class="landmark-close-btn mr-3 mt-4" src="assets/icon/close.svg" alt="">
-    <div class="row w-100 pt-4">
-    <div class="col-8">
+    <div class="row w-100 pt-4 pl-3">
+    <div class="col-8 p-0">
     <div class="landmark-title text-left"">${
         dataProperties['name' + localStorage.lang]
     }</div>
@@ -3252,7 +3254,7 @@ selectAccommodation.getFeatures().on(['add', 'remove'], function (e) {
         dataProperties.googleMaps
     }"> ${dict[localStorage.lang].navigation}  &#10230;</a>
     </div>
-    <div class="col-4 p-0 pt-3"><button onclick="scrollIt('scrollIt')" class="bookBtn text-uppercase">${
+    <div class="col-${businessBookBtn} p-0 pt-3"><button onclick="scrollIt('scrollIt')" class="bookBtn text-uppercase">${
         dict[localStorage.lang].book
     }</button></div>
     

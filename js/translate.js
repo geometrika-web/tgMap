@@ -92,7 +92,7 @@ const dict = {
         allBusinessTranslate: 'All',
         activityTranslate: 'Activities',
         foodTranslate: 'Food',
-        accommodationTranslate: 'Accommodation',
+        accommodationTranslate: 'Stays',
         businessDesc:
             'Explore local businesses, crafts, makers of handicrafts, homemade products and more.<br><b>Comming soon!</b>',
         infoRow:
