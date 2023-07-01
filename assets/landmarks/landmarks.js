@@ -1,6 +1,117 @@
 var touristData = {
     type: 'FeatureCollection',
     features: [
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [17.168687, 43.576575]
+            },
+            properties: {
+                nameEn: 'Močila spring',
+                nameHr: 'Izvor Močila',
+                place: 'Roško Polje',
+                aboutEn:
+                    'At the foot of the Zavelim mountain near Roško polje are the Močila. Legend has it that 77 springs began to be used during the Austro-Hungarian Empire. It is a favorite gathering place and picnic area for all people of Roško polje, especially those who are scattered around the world and who long for their childhood and homeland, so in the summer days they visit this picnic area to socialize and refresh themselves with cold water from this spring. ',
+                aboutHr:
+                    'Podno planine Zavelim u blizini Roškoga polja smjestila su se Močila. Legenda govori o 77 izvora koje su počeli iskorištavati za vrijeme Austro-Ugarske. Omiljeno je okupljalište i izletište svih Rožana pogotovo onih koji su razasuti po svijetu i koji čeznu za djetinjstvom i svojim zavičajem pa u ljetnim danima svrate na ovo izletište na druženje i okrepu hladnom vodom s ovog izvora.',
+                img: '/assets/img/izvorMočila.jpg',
+                img2: '/assets/img/izvorMočila1.jpg',
+                img3: '/assets/img/izvorMočila2.jpg',
+                img4: '/assets/img/izvorMočila3.jpg',
+                img5: '/assets/img/izvorMočila4.jpg',
+                zoom: '15',
+                id: 'turizam',
+                thumb: '/assets/icon/kategorije_picnic2.svg',
+                pin: '/assets/icon/landmarks/turistickaPonuda_pin.svg',
+                i360: '1',
+                googleMaps:
+                    "https://www.google.com/maps/place/43%C2%B034'35.7%22N+17%C2%B010'07.3%22E/@43.5770715,17.1653718,1364m/data=!3m1!1e3!4m5!3m4!1s0x0:0xc3070152420958e7!8m2!3d43.576575!4d17.168687"
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [17.35208, 43.578464]
+            },
+            properties: {
+                nameEn: 'Studena',
+                nameHr: 'Studena',
+                place: 'Crvenice',
+                aboutEn:
+                    'Studena is a resort above the village of Crvenica and the hamlet of Karacici, which is another in a series of pearls of the resort on Duvanjsko polje. It is adorned by a spring of water and a beautiful landscape which is very gladly visited by all people of Tomislavgrad. ',
+                aboutHr:
+                    'Studena su izletište iznad sela Crvenice i zaselka Karačići koje je još jedan u nizu bisera izletišta na Duvanjskom polju. Krase ga izvor vode te prelijep krajolik kojeg u ljednim danima vrlo rado posjećuju svi Duvnjaci.',
+                img: '/assets/img/studena.jpg',
+                img2: '/assets/img/studena1.jpg',
+                img3: '/assets/img/studena2.jpg',
+                img4: '/assets/img/studena3.jpg',
+                img5: '/assets/img/studena4.jpg',
+                zoom: '13.5',
+                id: 'turizam',
+                thumb: '/assets/icon/kategorije_picnic2.svg',
+                pin: '/assets/icon/landmarks/turistickaPonuda_pin.svg',
+                i360: '0',
+                googleMaps:
+                    'https://www.google.com/maps/place/Studena/@43.5792788,17.3375422,3062m/data=!3m1!1e3!4m12!1m6!3m5!1s0x134ad720ad7c546d:0x892f44f48ce750dd!2sStudena+Vrila!8m2!3d43.5602183!4d17.2788139!3m4!1s0x134b293c5cf33d13:0x8245251f3fa834bc!8m2!3d43.5784692!4d17.3521874'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [17.209819070657947, 43.72974760543072]
+            },
+            properties: {
+                nameEn: 'Seget',
+                nameHr: 'Seget',
+                place: 'Tomislavgrad',
+                aboutEn:
+                    'A popular picnic spot for everyone, for all people of Duvno (Tomislavgrad), especially those located in the center, in Tomislavgrad. The nearby forest and the source of the river attract anyone who is a true lover of nature. The picnic area is well connected to the city and is relatively close to it, so the people flock to it every day due to its accessibility and beauty.',
+                aboutHr:
+                    'Popularno izletište za sve za sve Duvnjake, a posebno onih koji su smješteni u središtu, u Tomislavgradu. Obližnja šuma i izvor rijeke privlači svakog tko je istinski ljubitelj prirode. Izletište je dobro povezano s gradom i nalazi mu se u relativnoj blizini, pa zbog svoje pristupačnosti i ljepote Duvnjaci u njega svakodnevno hrle.',
+                img: '/assets/img/seget.jpg',
+                img2: '/assets/img/seget1.jpg',
+                img3: '/assets/img/seget2.jpg',
+                img4: '/assets/img/seget3.jpg',
+                img5: '/assets/img/seget4.jpg',
+                zoom: '18',
+                id: 'turizam',
+                thumb: '/assets/icon/kategorije_picnic2.svg',
+                pin: '/assets/icon/landmarks/turistickaPonuda_pin.svg',
+                i360: '1',
+                googleMaps:
+                    "https://www.google.com/maps/place/43%C2%B043'47.1%22N+17%C2%B012'35.4%22E/@43.7297515,17.2076304,606m/data=!3m2!1e3!4b1!4m5!3m4!1s0x0:0xd9c4e722f06099e6!8m2!3d43.7297476!4d17.2098191"
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [17.38442675773904, 43.625576909966085]
+            },
+            properties: {
+                nameEn: 'Forest house in Grla',
+                nameHr: 'Šumarska kuća u Grlima',
+                place: 'Kongora',
+                aboutEn:
+                    'The forest house in Grla is one of the weekend resorts that Tomislavgrad residents often go to. Located in nature along the road to Blidinje, surrounded by deciduous and coniferous forests, it is a kind of oasis of peace for all who welcome from everyday stress.',
+                aboutHr:
+                    'Šumarska kuća u Grlima prestavlja jedno od vikend-izletišta na koje stanovinici Tomislavgrada često odlaze. Smješteno u prirodi uz cestu prema Blidinju, okruženo bjelogoričnom i crnogoričnom šumom, prestavlja svojevrsnu oazu mira koja dobro dođe svima onima koji žele pobjeći od svakodnevnog stresa.',
+                img: '/assets/img/sumarska-grla.jpg',
+                img2: '/assets/img/sumarska-grla1.jpg',
+                img3: '/assets/img/sumarska-grla2.jpg',
+                img4: '/assets/img/sumarska-grla3.jpg',
+                img5: '/assets/img/sumarska-grla4.jpg',
+                zoom: '13.3',
+                id: 'turizam',
+                thumb: '/assets/icon/kategorije_picnic2.svg',
+                pin: '/assets/icon/landmarks/turistickaPonuda_pin.svg',
+                googleMaps:
+                    "https://www.google.com/maps/place/43%C2%B037'32.1%22N+17%C2%B023'03.9%22E/@43.6253383,17.3769904,2042m/data=!3m1!1e3!4m5!3m4!1s0x0:0x9bb19c59465515bf!8m2!3d43.6255769!4d17.3844268"
+            }
+        }
         /* {
     type: 'Feature',
     geometry: {
@@ -578,34 +689,6 @@ var natureData = {
             type: 'Feature',
             geometry: {
                 type: 'Point',
-                coordinates: [17.168687, 43.576575]
-            },
-            properties: {
-                nameEn: 'Močila spring',
-                nameHr: 'Izvor Močila',
-                place: 'Roško Polje',
-                aboutEn:
-                    'At the foot of the Zavelim mountain near Roško polje are the Močila. Legend has it that 77 springs began to be used during the Austro-Hungarian Empire. It is a favorite gathering place and picnic area for all people of Roško polje, especially those who are scattered around the world and who long for their childhood and homeland, so in the summer days they visit this picnic area to socialize and refresh themselves with cold water from this spring. ',
-                aboutHr:
-                    'Podno planine Zavelim u blizini Roškoga polja smjestila su se Močila. Legenda govori o 77 izvora koje su počeli iskorištavati za vrijeme Austro-Ugarske. Omiljeno je okupljalište i izletište svih Rožana pogotovo onih koji su razasuti po svijetu i koji čeznu za djetinjstvom i svojim zavičajem pa u ljetnim danima svrate na ovo izletište na druženje i okrepu hladnom vodom s ovog izvora.',
-                img: '/assets/img/izvorMočila.jpg',
-                img2: '/assets/img/izvorMočila1.jpg',
-                img3: '/assets/img/izvorMočila2.jpg',
-                img4: '/assets/img/izvorMočila3.jpg',
-                img5: '/assets/img/izvorMočila4.jpg',
-                zoom: '15',
-                id: 'priroda',
-                thumb: '/assets/icon/kategorije_Priroda.svg',
-                pin: '/assets/icon/landmarks/prirodneLjepote_pin.svg',
-                i360: '1',
-                googleMaps:
-                    "https://www.google.com/maps/place/43%C2%B034'35.7%22N+17%C2%B010'07.3%22E/@43.5770715,17.1653718,1364m/data=!3m1!1e3!4m5!3m4!1s0x0:0xc3070152420958e7!8m2!3d43.576575!4d17.168687"
-            }
-        },
-        {
-            type: 'Feature',
-            geometry: {
-                type: 'Point',
                 coordinates: [17.200637745283533, 43.88058032370555]
             },
             properties: {
@@ -854,34 +937,6 @@ var natureData = {
             type: 'Feature',
             geometry: {
                 type: 'Point',
-                coordinates: [17.35208, 43.578464]
-            },
-            properties: {
-                nameEn: 'Studena',
-                nameHr: 'Studena',
-                place: 'Crvenice',
-                aboutEn:
-                    'Studena is a resort above the village of Crvenica and the hamlet of Karacici, which is another in a series of pearls of the resort on Duvanjsko polje. It is adorned by a spring of water and a beautiful landscape which is very gladly visited by all people of Tomislavgrad. ',
-                aboutHr:
-                    'Studena su izletište iznad sela Crvenice i zaselka Karačići koje je još jedan u nizu bisera izletišta na Duvanjskom polju. Krase ga izvor vode te prelijep krajolik kojeg u ljednim danima vrlo rado posjećuju svi Duvnjaci.',
-                img: '/assets/img/studena.jpg',
-                img2: '/assets/img/studena1.jpg',
-                img3: '/assets/img/studena2.jpg',
-                img4: '/assets/img/studena3.jpg',
-                img5: '/assets/img/studena4.jpg',
-                zoom: '13.5',
-                id: 'priroda',
-                thumb: '/assets/icon/kategorije_Priroda.svg',
-                pin: '/assets/icon/landmarks/prirodneLjepote_pin.svg',
-                i360: '0',
-                googleMaps:
-                    'https://www.google.com/maps/place/Studena/@43.5792788,17.3375422,3062m/data=!3m1!1e3!4m12!1m6!3m5!1s0x134ad720ad7c546d:0x892f44f48ce750dd!2sStudena+Vrila!8m2!3d43.5602183!4d17.2788139!3m4!1s0x134b293c5cf33d13:0x8245251f3fa834bc!8m2!3d43.5784692!4d17.3521874'
-            }
-        },
-        {
-            type: 'Feature',
-            geometry: {
-                type: 'Point',
                 coordinates: [17.321380291385694, 43.66545427839296]
             },
             properties: {
@@ -904,62 +959,6 @@ var natureData = {
                 i360: '0',
                 googleMaps:
                     'https://www.google.com/maps/place/%C5%A0ar%C4%8Devo+jezero/@43.6650297,17.3190608,607m/data=!3m2!1e3!4b1!4m5!3m4!1s0x134b2be42537e063:0x796fc8f63fda3bbf!8m2!3d43.6650258!4d17.3212495'
-            }
-        },
-        {
-            type: 'Feature',
-            geometry: {
-                type: 'Point',
-                coordinates: [17.209819070657947, 43.72974760543072]
-            },
-            properties: {
-                nameEn: 'Seget',
-                nameHr: 'Seget',
-                place: 'Tomislavgrad',
-                aboutEn:
-                    'A popular picnic spot for everyone, for all people of Duvno (Tomislavgrad), especially those located in the center, in Tomislavgrad. The nearby forest and the source of the river attract anyone who is a true lover of nature. The picnic area is well connected to the city and is relatively close to it, so the people flock to it every day due to its accessibility and beauty.',
-                aboutHr:
-                    'Popularno izletište za sve za sve Duvnjake, a posebno onih koji su smješteni u središtu, u Tomislavgradu. Obližnja šuma i izvor rijeke privlači svakog tko je istinski ljubitelj prirode. Izletište je dobro povezano s gradom i nalazi mu se u relativnoj blizini, pa zbog svoje pristupačnosti i ljepote Duvnjaci u njega svakodnevno hrle.',
-                img: '/assets/img/seget.jpg',
-                img2: '/assets/img/seget1.jpg',
-                img3: '/assets/img/seget2.jpg',
-                img4: '/assets/img/seget3.jpg',
-                img5: '/assets/img/seget4.jpg',
-                zoom: '18',
-                id: 'priroda',
-                thumb: '/assets/icon/kategorije_Priroda.svg',
-                pin: '/assets/icon/landmarks/prirodneLjepote_pin.svg',
-                i360: '1',
-                googleMaps:
-                    "https://www.google.com/maps/place/43%C2%B043'47.1%22N+17%C2%B012'35.4%22E/@43.7297515,17.2076304,606m/data=!3m2!1e3!4b1!4m5!3m4!1s0x0:0xd9c4e722f06099e6!8m2!3d43.7297476!4d17.2098191"
-            }
-        },
-        {
-            type: 'Feature',
-            geometry: {
-                type: 'Point',
-                coordinates: [17.38442675773904, 43.625576909966085]
-            },
-            properties: {
-                nameEn: 'Forest house in Grla',
-                nameHr: 'Šumarska kuća u Grlima',
-                place: 'Kongora',
-                aboutEn:
-                    'The forest house in Grla is one of the weekend resorts that Tomislavgrad residents often go to. Located in nature along the road to Blidinje, surrounded by deciduous and coniferous forests, it is a kind of oasis of peace for all who welcome from everyday stress.',
-                aboutHr:
-                    'Šumarska kuća u Grlima prestavlja jedno od vikend-izletišta na koje stanovinici Tomislavgrada često odlaze. Smješteno u prirodi uz cestu prema Blidinju, okruženo bjelogoričnom i crnogoričnom šumom, prestavlja svojevrsnu oazu mira koja dobro dođe svima onima koji žele pobjeći od svakodnevnog stresa.',
-                img: '/assets/img/sumarska-grla.jpg',
-                img2: '/assets/img/sumarska-grla1.jpg',
-                img3: '/assets/img/sumarska-grla2.jpg',
-                img4: '/assets/img/sumarska-grla3.jpg',
-                img5: '/assets/img/sumarska-grla4.jpg',
-                zoom: '13.3',
-                id: 'priroda',
-                thumb: '/assets/icon/kategorije_Priroda.svg',
-                pin: '/assets/icon/landmarks/prirodneLjepote_pin.svg',
-                i360: '0',
-                googleMaps:
-                    "https://www.google.com/maps/place/43%C2%B037'32.1%22N+17%C2%B023'03.9%22E/@43.6253383,17.3769904,2042m/data=!3m1!1e3!4m5!3m4!1s0x0:0x9bb19c59465515bf!8m2!3d43.6255769!4d17.3844268"
             }
         }
     ]

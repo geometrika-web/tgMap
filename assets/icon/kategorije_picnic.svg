@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="64"
+   height="64"
+   viewBox="0 0 64 64"
+   fill="none"
+   stroke="currentColor"
+   stroke-width="2"
+   stroke-linecap="round"
+   stroke-linejoin="round"
+   class="lucide lucide-radio-tower"
+   version="1.1"
+   id="svg21790"
+   sodipodi:docname="kategorije_picnic.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs21794" />
+  <sodipodi:namedview
+     id="namedview21792"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="4"
+     inkscape:cx="-9.125"
+     inkscape:cy="14.25"
+     inkscape:window-width="1536"
+     inkscape:window-height="793"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg21790" />
+  <circle
+     cx="32"
+     cy="32"
+     r="32"
+     fill="#ff7262"
+     id="circle295"
+     style="stroke:none" />
+  <g
+     id="g27546"
+     transform="translate(1.322134,1.493841e-5)">
+    <path
+       d="M 21.91569,33.764691 H 39.440042"
+       id="path21786"
+       style="stroke:#ffffff;stroke-width:2.30769;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       d="M 24.908634,25.653718 H 36.447098"
+       id="path21786-1"
+       style="stroke:#ffffff;stroke-width:2.30769;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       d="M 26.06248,38.34603 30.677867,25.653718 35.293252,38.34603"
+       id="path21788"
+       style="stroke:#ffffff;stroke-width:2.30769;stroke-opacity:1" />
+  </g>
+</svg>

@@ -28,6 +28,8 @@
         <!-- Custom styles for this template -->
         <link href="css/simple-sidebar.css" rel="stylesheet" />
         <link href="ol-ext/style.css" rel="stylesheet" />
+        <link href="css/upload.css" rel="stylesheet" />
+        <link href="css/login.css" rel="stylesheet" />
 
         <!--Font-->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -36,6 +38,9 @@
             href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
             rel="stylesheet"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     </head>
 
     <body class="overflow-hidden mobile-height">
@@ -159,12 +164,13 @@
             <div id="home-img" class="position-absolute"></div> -->
         </div>
 
-        <!--Dodavanje slika na kartu iz html-a
-  <div style="display: none;">
-    <img src="/assets/kraljTomislav.jpg" id="vienna" style="height: 100px; box-shadow: 10px 10px 20px" class="scale-animation" alt="">
-  </div>-->
+        <!--Dodavanje slika na kartu iz html-a-->
+  <!-- <div style="">
+    <img src="/assets/img/00home_min.jpg" id="vienna" style="height: 100px; box-shadow: 10px 10px 20px" class="scale-animation" alt="">
+  </div>  -->
 
         <div class="d-flex" id="wrapper">
+            
             <!-- Sidebar -->
             <div class="bg-white border-right border-0" id="sidebar-wrapper">
                 <nav
@@ -188,38 +194,41 @@
                 </nav>
                 <div class="container p-0-2 mt-2">
                     <div class="row text-small">
-                        <div
+                        <a
+                            href="#"
                             id="btn-meet"
                             onclick="meetTg()"
-                            class="menuBtn-border activate col-3 cursor-pointer menu-btn text-c3 text-center no-outline p-0 pt-2 pb-2"
+                            class="non-api menuBtn-border activate col-3 cursor-pointer menu-btn text-c3 text-center no-outline p-0 pt-2 pb-2"
                         >
-                            <img src="assets/icon/placeholder.svg" alt="" />
+                            <img src="assets/icon/mapPin.svg" alt="" />
                             <div id="meetTranslate" class="translate">Upoznaj</div>
-                        </div>
-                        <div
+                        </a>
+                        <a
+                        href="#"
                             id="btn-routes"
                             onclick="routes()"
-                            class="menuBtn-border col-3 cursor-pointer menu-btn text-c3 text-center no-outline p-0 pt-2 pb-2"
+                            class="non-api menuBtn-border col-3 cursor-pointer menu-btn text-c3 text-center no-outline p-0 pt-2 pb-2"
                         >
                             <img src="assets/icon/route.svg" alt="" />
                             <div id="toursTranslate" class="translate">Obilasci</div>
-                        </div>
-                        <div
-                            id="btn-assoc"
-                            onclick="assoc()"
+                    </a>
+                        <a
+                        id="btn-assoc"
+                            href="#events"
                             class="menuBtn-border col-3 cursor-pointer menu-btn text-c3 text-center no-outline p-0 pt-2 pb-2"
                         >
-                            <img src="assets/icon/association.svg" alt="" />
-                            <div id="associationsTranslate" class="translate">Udruge</div>
-                        </div>
-                        <div
+                            <img src="assets/icon/event2.svg" alt="" />
+                            <div id="eventsTranslate" class="translate">Događanja</div>
+                        </a>
+                        <a
+                            href="#"
                             id="btn-business"
                             onclick="business()"
-                            class="menuBtn-border col-3 cursor-pointer menu-btn text-c3 text-center no-outline p-0 pt-2 pb-2"
+                            class="non-api menuBtn-border col-3 cursor-pointer menu-btn text-c3 text-center no-outline p-0 pt-2 pb-2"
                         >
-                            <img src="assets/icon/business.svg" alt="" />
-                            <div id="businessTranslate" class="translate">Odmor</div>
-                        </div>
+                            <img src="assets/icon/luggage.svg" alt="" />
+                            <div id="businessTranslate" class="translate">Smještaj</div>
+                        </a>
                     </div>
                 </div>
                 <!--Meet-->
@@ -289,11 +298,11 @@
                                 >
                                     <img
                                         class="d-inline kategorije-hover"
-                                        src="/assets/icon/kategorije_event.svg"
+                                        src="/assets/icon/kategorije_picnic2.svg"
                                         alt=""
                                     />
-                                    <div id="eventsTranslate" class="translate d-inline d-block mt-2 text-c3">
-                                        Događanja
+                                    <div id="picnicTranslate" class="translate d-inline d-block mt-2 text-c3">
+                                        Izletišta
                                     </div>
                                 </div>
                             </div>
@@ -517,7 +526,7 @@
                 </div>
                 <!--Associations-->
                 <div id="assocsAll" class="assocs-scroll"></div>
-                <div id="assoc" class="list-group-flush">
+                <div id="assoc" class="list-group-flush ml-4 mr-4">
                     <!-- <div id="destinationsAll" class="routes-scroll mt-5"></div> -->
                     <!-- <button
                         onclick="getAssoc(this.id)"
@@ -826,7 +835,7 @@
                         id="kategorije-business"
                         class="container-fluid mt-5-m mb-5-m cursor-pointer position-relative p-0-2-m"
                     >
-                        <div class="text-left mb-2 mt-4 text-font">
+                        <!-- <div class="text-left mb-2 mt-4 text-font">
                             Kategorije
                         </div>
                         <div class="row">
@@ -895,7 +904,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div id="businessList" class="list-group"></div>
                 </div>
@@ -943,6 +952,7 @@
                         data-toggle=""
                         aria-haspopup="true"
                         aria-expanded="false"
+                        title="Slojevi"
                     >
                         <img
                             onclick="slojevi()"
@@ -1058,10 +1068,36 @@
                     onclick="zoomOut()"
                     class="zoom-extents bg-transparent position-absolute border-0 no-outline d-block mt-5"
                     type="button"
+                    title="Prikaži sve"
                 >
                     <img
                         class="mobile-scale"
                         src="/assets/icon/zoomOut.svg"
+                        alt=""
+                        
+                    />
+                </button>
+                <button
+                    id="login-btn"
+                    class="bg-transparent position-absolute border-0 no-outline mt-5"
+                    type="button"
+                    title="Prijavi se"
+                >
+                    <img
+                        class="mobile-scale"
+                        src="/assets/icon/login.svg"
+                        alt=""
+                    />
+                </button>
+                <button
+                    id="logout-btn"
+                    class="bg-transparent position-absolute border-0 no-outline mt-5 hidden"
+                    type="button"
+                    title="Odjavi se"
+                >
+                    <img
+                        class="mobile-scale"
+                        src="/assets/icon/logout.svg"
                         alt=""
                     />
                 </button>
@@ -1069,6 +1105,7 @@
                     onclick="toHome()"
                     class="info bg-transparent position-absolute border-0 no-outline d-block"
                     type="button"
+                    title="Info"
                 >
                     <img
                         class="mobile-scale"
@@ -1090,8 +1127,142 @@
                 </button>
             </div>
             <!-- /#page-content-wrapper-->
+            
+      
+            
+</div>
+
+      <!-- Add event -->
+      <div class="overlay hidden"></div>
+      <div class="overlay hidden"></div>
+      <div class="add-event-window hidden">
+          <h3>PODATCI O DOGAĐAJU</h3>
+        <button class="btn--close-modal">&times;</button>
+        <form class="upload row">
+          <div class="col-lg-6 p-4 upload__column">
+            <!-- <h3 class="upload__heading">Podatci o događaju</h3> -->
+            <label>Naziv događaja (hrvatski)</label>
+            <input placeholder="Naziv (hrvatski)" required name="nameHr" id="nameHr" type="text" />
+            <label>Naziv događaja (engleski)</label>
+            <input placeholder="Naziv (engleski)" required name="nameEn" id="nameEn" type="text" />
+            <label>Opis (hrvatski)</label>
+            <textarea placeholder="Opis događaja (hrvatski)" required name="descriptionHr" id="descriptionHr" type="text"></textarea>
+            <label>Opis (engleski)</label>
+            <textarea placeholder="Opis događaja (engleski)" required name="descriptionEn" id="descriptionEn" type="text" rows="4"></textarea>
+            
+            <!--             <label>URL</label>
+            <input placeholder="TEST23" required name="sourceUrl" type="text" />
+            <label>Image URL</label>
+            <input placeholder="TEST23" required name="image" type="text" />
+            <label>Publisher</label>
+            <input placeholder="TEST23" required name="publisher" type="text" />
+            <label>Prep time</label>
+            <input placeholder="23" drequired name="cookingTime" type="number" />
+            <label>Servings</label>
+            <input placeholder="23" required name="servings" type="number" /> -->
         </div>
-        <!-- Bootstrap core JavaScript -->
+        
+        <div class="col-lg-6 p-4 upload__column">
+            <!-- <h3 class="upload__heading">Lokacija</h3> -->
+            <label>Datum</label>
+            <input placeholder="Datum održavanja" required name="date" id="date" type="date" />
+            <label>Vrijeme</label>
+            <input placeholder="Vrijeme održavanja" required name="time" id="time" type="time" />
+            <label>Adresa i mjesto održavanja</label>
+            <input placeholder="Adresa i mjesto" required name="address" id="address" type="text" />
+            <label>Lokacija na karti</label>
+            <input
+            placeholder="43.824107177611666, 17.002830019809274"
+            type="text"
+            required
+            name="coordinates"
+            id="coordinates"
+            placeholder="Format: '[Latitude, Longitude]'"
+            />
+            <label>Naslovna slika</label>
+            <input type="file" id="imageCover" name="imageCover" id="imageCover" accept="image/jpeg" required>
+            <label>Slike</label>
+            <input type="file" id="images" name="images" id="images" accept="image/*" multiple required >
+
+            
+            <!-- <label>Ingredient 2</label>
+            <input
+              placeholder="1,,Avocado"
+              type="text"
+              name="ingredient-2"
+              placeholder="Format: 'Quantity,Unit,Description'"
+            />
+            <label>Ingredient 3</label>
+            <input
+              value=",,salt"
+              type="text"
+              name="ingredient-3"
+              placeholder="Format: 'Quantity,Unit,Description'"
+            />
+            <label>Ingredient 4</label>
+            <input
+              type="text"
+              name="ingredient-4"
+              placeholder="Format: 'Quantity,Unit,Description'"
+            />
+            <label>Ingredient 5</label>
+            <input
+              type="text"
+              name="ingredient-5"
+              placeholder="Format: 'Quantity,Unit,Description'"
+            />
+            <label>Ingredient 6</label>
+            <input
+              type="text"
+              name="ingredient-6"
+              placeholder="Format: 'Quantity,Unit,Description'"
+            /> -->
+          </div>
+  
+          <button class="btn upload__btn">
+
+            <span>Upload</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Login form -->
+      <div id="loginModal" class="login-window hidden">
+        <div>
+          <h4 class="text-center">Prijavi se</h4>
+          <button class="btn--close-login">&times;</button>
+        <form class="row login p-4 ">
+          <div class="upload__column w-100">
+            <!-- <h3 class="upload__heading">Podatci o događaju</h3> -->
+            <label>Adresa e-pošte</label>
+            <input placeholder="email@email.com" required name="email" id="email" type="text" />
+            <label>Lozinka</label>
+            <input placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" required name="password" id="password" type="password" />
+            <button class="btn login-btn w-100 mt-3">Prijavi se
+              </button>
+        </div>
+        </form>
+    </div>
+        </div>
+
+    <!-- Share Modal -->
+    <div id="shareModal" class="share-window hidden">
+        <div>
+          <h4 class="text-center">Podijeli</h4>
+          <button class="btn--close">&times;</button>
+        <form class="share row login p-4 ">
+          <div class="upload__column w-100">
+            <!-- <h3 class="upload__heading">Podatci o događaju</h3> -->
+            <input class="share-link text-muted" readonly="" type="text" value=""/>
+            <button type="button" class="share btn share-btn w-100 mt-3">Kopiraj poveznicu
+              </button>
+        </div>
+        </form>
+    </div>
+        </div>
+  
+  
+<!-- Bootstrap core JavaScript -->
         <script src="vendor/jquery/jquery.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -1115,6 +1286,10 @@
         ></script>
         <script src="js/main.js" type="text/javascript"></script>
         <script src="js/translate.js" type="text/javascript"></script>
+        <script src="js/controller.js" type="module"></script>
+        <script src="node_modules/moment/moment.js"></script>
+        <script src="node_modules/moment/locale/hr.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
 
         <!-- /#wrapper -->
 

@@ -66,14 +66,21 @@ const xW = x + 100000;
 var zoom = 10.67;
 var center = [1922955.15, 5421755.43];
 
-if (window.location.hash !== '') {
+if (window.location.href.includes('=')) {
     // try to restore center, zoom-level and rotation from the URL
-    var hash = window.location.hash.replace('#map=', '');
-    var parts = hash.split('/');
+    var hash = window.location.href.slice(
+        window.location.href.indexOf('=') + 1,
+        window.location.href.indexOf('#')
+    );
+    var parts = hash.split(',');
     if (parts.length === 3) {
         zoom = parseFloat(parts[0]);
-        center = [parseFloat(parts[1]), parseFloat(parts[2])];
+        center = ol.proj.fromLonLat([
+            parseFloat(parts[1]),
+            parseFloat(parts[2])
+        ]);
     }
+    window.history.pushState(center, '', window.location.href);
 }
 
 // NO BACK FUNCTION
@@ -114,10 +121,14 @@ if (window.location.hash !== '') {
     };
 })(window); */
 
+// VRATI!
 window.onpopstate = function (e) {
-    window.open('index.html', '_self');
+    e.preventDefault();
+    console.log(e);
+    /* window.open('index.html', '_self'); */
     // toggle(document.getElementById('menu-toggle'));
 };
+
 //var imageExtent = [1917834.45, 5421643.41, 2500000, 6500000];
 //var imageExtent2 = [2500000, 5421000, 2500000, 6500000];
 
@@ -745,220 +756,221 @@ for (i; i < images.length; i++) {
 
 var view = map.getView();
 var updatePermalink = function () {
-    var center = view.getCenter();
-    var hash =
-        '#map=' +
+    var center = ol.proj.transform(view.getCenter(), 'EPSG:3857', 'EPSG:4326');
+    let hash = window.location.hash;
+    var location =
+        '?map=' +
         view.getZoom().toFixed(2) +
-        '/' +
-        center[0].toFixed(2) +
-        '/' +
-        center[1].toFixed(2);
+        ',' +
+        center[1].toFixed(7) +
+        ',' +
+        center[0].toFixed(7) +
+        hash;
     var state = {
         zoom: view.getZoom(),
         center: view.getCenter()
     };
-    localStorage.hash = hash;
-    window.history.pushState(state, 'map', hash);
+    localStorage.hash = location;
+    window.history.pushState(state, 'map', location);
 };
-console.log(localStorage.hash);
 map.on('moveend', updatePermalink);
 
 var currZoom = map.getView().getZoom();
-map.on('moveend', function (e) {
-    var newZoom = map.getView().getZoom();
-    if (currZoom != newZoom) {
-        console.log('currzooom  ' + newZoom);
-        currZoom = newZoom;
-        console.log(currZoom);
-        /* if (currZoom > 11.5) {
-            document.getElementById('zastaveOpcina').disabled = true;
-            document
-                .getElementById('zastaveOpcinaBox')
-                .classList.add('disabled');
-        }
-        if (currZoom <= 11.5) {
-            document.getElementById('zastaveOpcina').disabled = false;
-            document
-                .getElementById('zastaveOpcinaBox')
-                .classList.remove('disabled');
-        } */
-        //if (currZoom < 11.5 && zastave == true) {
-        //  vector.setVisible(false)
-        //  nature.setVisible(false)
-        //  tourist.setVisible(false)
-        //  assocs.setVisible(false)
-        //  vjerskiObjekti.setVisible(false)
-        //} else {
-        //  if (landmarksVisible == true) {
-        //    vector.setVisible(true)
-        //    nature.setVisible(true)
-        //    tourist.setVisible(true)
-        //    vjerskiObjekti.setVisible(true)
-        //  } else {
-        //    vector.setVisible(false)
-        //    nature.setVisible(false)
-        //    tourist.setVisible(false)
-        //  }
-        //if (assocsVisible == true) {
-        //  assocs.setVisible(true)
-        //} else {
-        //  assocs.setVisible(false)
-        //}
-    }
-    //  if (currZoom <= 11.5) {
-    //    //layerPoly.setOpacity(0)
-    //    opcine.setOpacity(1)
-    //    tomislavgradNaselja.setOpacity(0)
-    //    opcineGranice.setOpacity(1)
-    //    //opcineZastave.setOpacity(1)
-    //    tomislavgradZastava.setOpacity(1)
-    //    livnoZastava.setOpacity(1)
-    //    kupresZastava.setOpacity(1)
-    //    jablanicaZastava.setOpacity(1)
-    //    posusjeZastava.setOpacity(1)
-    //    ramaZastava.setOpacity(1)
-    //    livnoPodloga.setOpacity(1)
-    //    ramaPodloga.setOpacity(1)
-    //    kupresPodloga_blue.setOpacity(1)
-    //    kupresPodloga_red.setOpacity(1)
-    //
-    //    //for (const img in imageObjects){
-    //    //  if (imageObjects[img].type == 'znamenitost'){
-    //    //    imageObjects[img].getStyle().getImage().setOpacity(0)
-    //    //    imageObjects[img].changed()
-    //    //  } else {
-    //    //    imageObjects[img].getStyle().getImage().setOpacity(0)
-    //    //    imageObjects[img].changed()
-    //    //  }
-    //    //}
-    //  //marker1.getStyle().getImage().setOpacity(1);
-    //  //marker2.getStyle().getImage().setOpacity(0);
-    //  //marker2.getSource().changed()
-    //  }
-    //  if (currZoom <= 11.5) {
-    //    vector.setOpacity(0)
-    //    opcine.setOpacity(1)
-    //    tomislavgradNaselja.setOpacity(0)
-    //    opcineGranice.setOpacity(1)
-    //    //opcineZastave.setOpacity(1)
-    //    tomislavgradZastava.setOpacity(1)
-    //    livnoZastava.setOpacity(1)
-    //    kupresZastava.setOpacity(1)
-    //    jablanicaZastava.setOpacity(1)
-    //    posusjeZastava.setOpacity(1)
-    //    ramaZastava.setOpacity(1)
-    //    livnoPodloga.setOpacity(1)
-    //    ramaPodloga.setOpacity(1)
-    //    kupresPodloga_blue.setOpacity(1)
-    //    kupresPodloga_red.setOpacity(1)
-    //
-    //    //for (const img in imageObjects){
-    //    //  if (imageObjects[img].type == 'znamenitost'){
-    //    //    imageObjects[img].getStyle().getImage().setOpacity(0)
-    //    //    imageObjects[img].changed()
-    //    //  } else {
-    //    //    imageObjects[img].getStyle().getImage().setOpacity(0)
-    //    //    imageObjects[img].changed()
-    //    //  }
-    //    //}
-    //  //marker1.getStyle().getImage().setOpacity(1);
-    //  //marker2.getStyle().getImage().setOpacity(0);
-    //  //marker2.getSource().changed()
-    //  }
-    //  if (currZoom > 11.5 && currZoom < 13) {
-    //
-    //    //map.on('singleclick', function (evt) {
-    //    console.log("zoom je veći od 10 manji od 13");
-    //      //map.forEachLayerAtPixel(evt.pixel, function(layer) {
-    //      //    console.log(evt.pixel);
-    //      //    console.log(layer);
-    //      //    var id = layer.get('title');
-    //      //    console.log(id);
-    //      //    var title = layer.get('title');
-    //      //    console.log(title);
-    //      //    var whatever = layer.get('whatever');
-    //      //    console.log(whatever);
-    //      //});
-    //    //});
-    //    vector.setOpacity(0)
-    //    opcine.setOpacity(0)
-    //    tomislavgradNaselja.setOpacity(1)
-    //    opcineGranice.setOpacity(1)
-    //    //opcineZastave.setOpacity(0)
-    //
-    //    tomislavgradZastava.setOpacity(0)
-    //    livnoZastava.setOpacity(0)
-    //    kupresZastava.setOpacity(0)
-    //    jablanicaZastava.setOpacity(0)
-    //    posusjeZastava.setOpacity(0)
-    //    ramaZastava.setOpacity(0)
-    //    livnoPodloga.setOpacity(0)
-    //    ramaPodloga.setOpacity(0)
-    //    kupresPodloga_blue.setOpacity(0)
-    //    kupresPodloga_red.setOpacity(0)
-    //
-    //    //for (const img in imageObjects){
-    //    //  if (imageObjects[img].type == 'znamenitost'){
-    //    //  imageObjects[img].getStyle().getImage().setOpacity(0)
-    //    //  imageObjects[img].changed()
-    //    //} else {
-    //    //  console.log(imageObjects[img].type)
-    //    //  imageObjects[img].getStyle().getImage().setOpacity(0)
-    //    //  imageObjects[img].changed()
-    //    //}
-    ////
-    //    //}
-    //    //marker1.getStyle().getImage().setOpacity(1);
-    //    //marker2.getStyle().getImage().setOpacity(1);
-    //    //marker2.getSource().changed()
-    //  }
-    //  if (currZoom > 13) {
-    //
-    //    //map.on('singleclick', function (evt) {
-    //    console.log("zoom je veći od 13");
-    //      //map.forEachLayerAtPixel(evt.pixel, function(layer) {
-    //      //    console.log(evt.pixel);
-    //      //    console.log(layer);
-    //      //    var id = layer.get('title');
-    //      //    console.log(id);
-    //      //    var title = layer.get('title');
-    //      //    console.log(title);
-    //      //    var whatever = layer.get('whatever');
-    //      //    console.log(whatever);
-    //      //});
-    //    //});
-    //    vector.setOpacity(1)
-    //    opcine.setOpacity(0)
-    //    tomislavgradNaselja.setOpacity(0)
-    //    //opcineZastave.setOpacity(0)
-    //
-    //    tomislavgradZastava.setOpacity(0)
-    //    livnoZastava.setOpacity(0)
-    //    kupresZastava.setOpacity(0)
-    //    jablanicaZastava.setOpacity(0)
-    //    posusjeZastava.setOpacity(0)
-    //    ramaZastava.setOpacity(0)
-    //    livnoPodloga.setOpacity(0)
-    //    ramaPodloga.setOpacity(0)
-    //    kupresPodloga_blue.setOpacity(0)
-    //    kupresPodloga_red.setOpacity(0)
-    //
-    //    //for (const img in imageObjects){
-    //    //  if (imageObjects[img].type == 'znamenitost'){
-    //    //  imageObjects[img].getStyle().getImage().setOpacity(1)
-    //    //  imageObjects[img].changed()
-    //    //} else {
-    //    //  console.log(imageObjects[img].type)
-    //    //  imageObjects[img].getStyle().getImage().setOpacity(1)
-    //    //  imageObjects[img].changed()
-    //    //}
-    ////
-    //    //}
-    //    //marker1.getStyle().getImage().setOpacity(1);
-    //    //marker2.getStyle().getImage().setOpacity(1);
-    //    //marker2.getSource().changed()
-    //  }
-});
+// map.on('moveend', function (e) {
+//     var newZoom = map.getView().getZoom();
+//     if (currZoom != newZoom) {
+//         console.log('currzooom  ' + newZoom);
+//         currZoom = newZoom;
+//         console.log(currZoom);
+//         /* if (currZoom > 11.5) {
+//             document.getElementById('zastaveOpcina').disabled = true;
+//             document
+//                 .getElementById('zastaveOpcinaBox')
+//                 .classList.add('disabled');
+//         }
+//         if (currZoom <= 11.5) {
+//             document.getElementById('zastaveOpcina').disabled = false;
+//             document
+//                 .getElementById('zastaveOpcinaBox')
+//                 .classList.remove('disabled');
+//         } */
+//         //if (currZoom < 11.5 && zastave == true) {
+//         //  vector.setVisible(false)
+//         //  nature.setVisible(false)
+//         //  tourist.setVisible(false)
+//         //  assocs.setVisible(false)
+//         //  vjerskiObjekti.setVisible(false)
+//         //} else {
+//         //  if (landmarksVisible == true) {
+//         //    vector.setVisible(true)
+//         //    nature.setVisible(true)
+//         //    tourist.setVisible(true)
+//         //    vjerskiObjekti.setVisible(true)
+//         //  } else {
+//         //    vector.setVisible(false)
+//         //    nature.setVisible(false)
+//         //    tourist.setVisible(false)
+//         //  }
+//         //if (assocsVisible == true) {
+//         //  assocs.setVisible(true)
+//         //} else {
+//         //  assocs.setVisible(false)
+//         //}
+//     }
+//     //  if (currZoom <= 11.5) {
+//     //    //layerPoly.setOpacity(0)
+//     //    opcine.setOpacity(1)
+//     //    tomislavgradNaselja.setOpacity(0)
+//     //    opcineGranice.setOpacity(1)
+//     //    //opcineZastave.setOpacity(1)
+//     //    tomislavgradZastava.setOpacity(1)
+//     //    livnoZastava.setOpacity(1)
+//     //    kupresZastava.setOpacity(1)
+//     //    jablanicaZastava.setOpacity(1)
+//     //    posusjeZastava.setOpacity(1)
+//     //    ramaZastava.setOpacity(1)
+//     //    livnoPodloga.setOpacity(1)
+//     //    ramaPodloga.setOpacity(1)
+//     //    kupresPodloga_blue.setOpacity(1)
+//     //    kupresPodloga_red.setOpacity(1)
+//     //
+//     //    //for (const img in imageObjects){
+//     //    //  if (imageObjects[img].type == 'znamenitost'){
+//     //    //    imageObjects[img].getStyle().getImage().setOpacity(0)
+//     //    //    imageObjects[img].changed()
+//     //    //  } else {
+//     //    //    imageObjects[img].getStyle().getImage().setOpacity(0)
+//     //    //    imageObjects[img].changed()
+//     //    //  }
+//     //    //}
+//     //  //marker1.getStyle().getImage().setOpacity(1);
+//     //  //marker2.getStyle().getImage().setOpacity(0);
+//     //  //marker2.getSource().changed()
+//     //  }
+//     //  if (currZoom <= 11.5) {
+//     //    vector.setOpacity(0)
+//     //    opcine.setOpacity(1)
+//     //    tomislavgradNaselja.setOpacity(0)
+//     //    opcineGranice.setOpacity(1)
+//     //    //opcineZastave.setOpacity(1)
+//     //    tomislavgradZastava.setOpacity(1)
+//     //    livnoZastava.setOpacity(1)
+//     //    kupresZastava.setOpacity(1)
+//     //    jablanicaZastava.setOpacity(1)
+//     //    posusjeZastava.setOpacity(1)
+//     //    ramaZastava.setOpacity(1)
+//     //    livnoPodloga.setOpacity(1)
+//     //    ramaPodloga.setOpacity(1)
+//     //    kupresPodloga_blue.setOpacity(1)
+//     //    kupresPodloga_red.setOpacity(1)
+//     //
+//     //    //for (const img in imageObjects){
+//     //    //  if (imageObjects[img].type == 'znamenitost'){
+//     //    //    imageObjects[img].getStyle().getImage().setOpacity(0)
+//     //    //    imageObjects[img].changed()
+//     //    //  } else {
+//     //    //    imageObjects[img].getStyle().getImage().setOpacity(0)
+//     //    //    imageObjects[img].changed()
+//     //    //  }
+//     //    //}
+//     //  //marker1.getStyle().getImage().setOpacity(1);
+//     //  //marker2.getStyle().getImage().setOpacity(0);
+//     //  //marker2.getSource().changed()
+//     //  }
+//     //  if (currZoom > 11.5 && currZoom < 13) {
+//     //
+//     //    //map.on('singleclick', function (evt) {
+//     //    console.log("zoom je veći od 10 manji od 13");
+//     //      //map.forEachLayerAtPixel(evt.pixel, function(layer) {
+//     //      //    console.log(evt.pixel);
+//     //      //    console.log(layer);
+//     //      //    var id = layer.get('title');
+//     //      //    console.log(id);
+//     //      //    var title = layer.get('title');
+//     //      //    console.log(title);
+//     //      //    var whatever = layer.get('whatever');
+//     //      //    console.log(whatever);
+//     //      //});
+//     //    //});
+//     //    vector.setOpacity(0)
+//     //    opcine.setOpacity(0)
+//     //    tomislavgradNaselja.setOpacity(1)
+//     //    opcineGranice.setOpacity(1)
+//     //    //opcineZastave.setOpacity(0)
+//     //
+//     //    tomislavgradZastava.setOpacity(0)
+//     //    livnoZastava.setOpacity(0)
+//     //    kupresZastava.setOpacity(0)
+//     //    jablanicaZastava.setOpacity(0)
+//     //    posusjeZastava.setOpacity(0)
+//     //    ramaZastava.setOpacity(0)
+//     //    livnoPodloga.setOpacity(0)
+//     //    ramaPodloga.setOpacity(0)
+//     //    kupresPodloga_blue.setOpacity(0)
+//     //    kupresPodloga_red.setOpacity(0)
+//     //
+//     //    //for (const img in imageObjects){
+//     //    //  if (imageObjects[img].type == 'znamenitost'){
+//     //    //  imageObjects[img].getStyle().getImage().setOpacity(0)
+//     //    //  imageObjects[img].changed()
+//     //    //} else {
+//     //    //  console.log(imageObjects[img].type)
+//     //    //  imageObjects[img].getStyle().getImage().setOpacity(0)
+//     //    //  imageObjects[img].changed()
+//     //    //}
+//     ////
+//     //    //}
+//     //    //marker1.getStyle().getImage().setOpacity(1);
+//     //    //marker2.getStyle().getImage().setOpacity(1);
+//     //    //marker2.getSource().changed()
+//     //  }
+//     //  if (currZoom > 13) {
+//     //
+//     //    //map.on('singleclick', function (evt) {
+//     //    console.log("zoom je veći od 13");
+//     //      //map.forEachLayerAtPixel(evt.pixel, function(layer) {
+//     //      //    console.log(evt.pixel);
+//     //      //    console.log(layer);
+//     //      //    var id = layer.get('title');
+//     //      //    console.log(id);
+//     //      //    var title = layer.get('title');
+//     //      //    console.log(title);
+//     //      //    var whatever = layer.get('whatever');
+//     //      //    console.log(whatever);
+//     //      //});
+//     //    //});
+//     //    vector.setOpacity(1)
+//     //    opcine.setOpacity(0)
+//     //    tomislavgradNaselja.setOpacity(0)
+//     //    //opcineZastave.setOpacity(0)
+//     //
+//     //    tomislavgradZastava.setOpacity(0)
+//     //    livnoZastava.setOpacity(0)
+//     //    kupresZastava.setOpacity(0)
+//     //    jablanicaZastava.setOpacity(0)
+//     //    posusjeZastava.setOpacity(0)
+//     //    ramaZastava.setOpacity(0)
+//     //    livnoPodloga.setOpacity(0)
+//     //    ramaPodloga.setOpacity(0)
+//     //    kupresPodloga_blue.setOpacity(0)
+//     //    kupresPodloga_red.setOpacity(0)
+//     //
+//     //    //for (const img in imageObjects){
+//     //    //  if (imageObjects[img].type == 'znamenitost'){
+//     //    //  imageObjects[img].getStyle().getImage().setOpacity(1)
+//     //    //  imageObjects[img].changed()
+//     //    //} else {
+//     //    //  console.log(imageObjects[img].type)
+//     //    //  imageObjects[img].getStyle().getImage().setOpacity(1)
+//     //    //  imageObjects[img].changed()
+//     //    //}
+//     ////
+//     //    //}
+//     //    //marker1.getStyle().getImage().setOpacity(1);
+//     //    //marker2.getStyle().getImage().setOpacity(1);
+//     //    //marker2.getSource().changed()
+//     //  }
+// });
 
 // Eventlistener za općine
 
@@ -1151,6 +1163,7 @@ function getFeatureStyleAssoc(feature, resolution, sel) {
 }
 
 function zoomTo(i) {
+    console.log(coord[i]);
     view.animate({
         center: ol.proj.fromLonLat(coord[i]),
         duration: 1000,
@@ -1160,6 +1173,14 @@ function zoomTo(i) {
         toggle(document.getElementById('menu-toggle'));
     }
 }
+
+const zoomToView = function (coordinates) {
+    view.animate({
+        center: ol.proj.fromLonLat(coordinates),
+        duration: 1000,
+        zoom: 10
+    });
+};
 
 function zoomToBusiness(clickedID) {
     clickedElement = document.getElementById(clickedID);
@@ -1210,7 +1231,7 @@ function routeColor(routeType) {
 window.onload = function () {
     // Load list of all landmarks from GeoJSON file
     //$.getJSON("assets/landmarks/landmarks.geojson", function(data) {
-    onLoadChanged();
+    // onLoadChanged();
 
     for (i in landmarksData.features) {
         var landmarkAll = document.createElement('button');
@@ -1380,7 +1401,6 @@ window.onload = function () {
             landmarkText.appendChild(landmark360);
         }
         landmarkAllList.push(landmarkAll);
-        console.log(landmarkAllList);
     }
     length = landmarksZoom.length;
 
@@ -1867,7 +1887,6 @@ function toMap() {
 function toHome() {
     //toggle.delay(500)(document.getElementById('menu-toggle'))
     // $('#homeLogo').slideToggle(1000);
-    console.log($('#info'));
     document.getElementById('infoLogo').scrollTop = '0';
     $('#info').slideToggle(300);
     // sessionStorage.home = 2;
@@ -2237,7 +2256,7 @@ var tourist = new ol.layer.Vector({
     declutter: true,
     zIndex: 30,
     style: function (feature, resolution) {
-        return getFeatureStyle(feature, resolution, false, '#ff7262');
+        return getFeatureStyle(feature, resolution, false, '#fff');
     }
 });
 
@@ -2344,7 +2363,7 @@ function getRouteText(clickedID) {
     } else {
         tourDataSource = routesData;
     }
-    znamenitosti();
+    // znamenitosti();
     markers.setVisible(false);
     let clickedID_element = document.getElementById(clickedID);
     // let clickedID_text = document.getElementById(clickedID + '-text');
@@ -2440,7 +2459,6 @@ function getRouteText(clickedID) {
     routesMenu.style.display = 'none';
     routeClicked.innerHTML = routeAbout;
     translate(localStorage.lang);
-    console.log(localStorage.lang);
 
     // let routeClickedPosition = routeClicked.offsetTop + 1000;
     if (!isMobile && !isMobileDevice) {
@@ -2567,7 +2585,6 @@ let stopPopup = new ol.Overlay.Popup({
 map.addOverlay(stopPopup);
 
 stopSelect.getFeatures().on(['add', 'remove'], function (e) {
-    console.log(e);
     feature = e.element;
     let content = feature.get('popupHtml');
     let color = feature.get('color');
@@ -2831,7 +2848,6 @@ let accommodation = new ol.layer.Vector({
     }
 });
 map.addLayer(accommodation);
-console.log(accommodationSource.getFeatureById('tarziniDvori'));
 
 // localStorage
 var zoom = map.getView().getZoom();
@@ -2898,6 +2914,7 @@ function meetTg() {
         deselect();
         allFilter();
         backFromRoute();
+        backFromBusiness();
         touristTours();
         meet = 1;
         markers.setVisible(true);
@@ -2955,13 +2972,14 @@ function routes() {
         } */
         touristTours();
         backFromMeet();
-        markers.setVisible(true);
-        vector.setVisible(true);
-        nature.setVisible(true);
-        tourist.setVisible(true);
-        vectorPin.setVisible(true);
-        naturePin.setVisible(true);
-        touristPin.setVisible(true);
+        backFromBusiness();
+        markers.setVisible(false);
+        vector.setVisible(false);
+        nature.setVisible(false);
+        tourist.setVisible(false);
+        vectorPin.setVisible(false);
+        naturePin.setVisible(false);
+        touristPin.setVisible(false);
         assocs.setVisible(false);
         accommodation.setVisible(false);
         assocs.setZIndex(10);
@@ -3027,7 +3045,8 @@ function assoc() {
         } */
         backFromMeet();
         backFromRoute();
-        assocs.setVisible(true);
+        backFromBusiness();
+        // assocs.setVisible(true);
         msg.style.display = 'none';
         meetElement.style.display = 'none';
         document.getElementById('routes').style.display = 'none';
@@ -3125,8 +3144,8 @@ function backFromMeet() {
 }
 let weekendDestinationsIndicator = 0;
 function backFromRoute() {
-    znamenitosti();
-    markers.setVisible(true);
+    // znamenitosti();
+    // markers.setVisible(true);
     routeClicked.innerHTML = '';
     routesMenu.style.display = 'block';
     if (weekendDestinationsIndicator == 0) {
@@ -3134,7 +3153,8 @@ function backFromRoute() {
     } else {
         destinationsAllElement.style.display = 'block';
     }
-    routesAllFilter();
+    // VRATI!
+    // routesAllFilter();
     clearRoute();
     document.getElementById('tourist-routes').classList.add('routes-scroll');
     document
@@ -3231,32 +3251,31 @@ let businessAll = document.getElementById('businessAll');
 selectAccommodation.getFeatures().on(['add', 'remove'], function (e) {
     if (e.type === 'add') {
         toggleOnSelect();
-    }
-    let feature = e.element;
-    let id = feature.get('id');
-    console.log(id);
-    let key = accommodationDataKeys[id];
-    let dataProperties = accommodationData.features[key].properties;
-    let imgs = dataProperties.imgs;
-    let facilities = dataProperties.facilities;
-    let fastFacilities = dataProperties.fastFacilities;
-    let houseRules = dataProperties.houseRules;
-    let about = dataProperties['about' + localStorage.lang];
-    accommodationAbout = `<img onclick="backFromBusiness()" class="landmark-close-btn mr-3 mt-4" src="assets/icon/close.svg" alt="">
+
+        let feature = e.element;
+        let id = feature.get('id');
+        let key = accommodationDataKeys[id];
+        let dataProperties = accommodationData.features[key].properties;
+        let imgs = dataProperties.imgs;
+        let facilities = dataProperties.facilities;
+        let fastFacilities = dataProperties.fastFacilities;
+        let houseRules = dataProperties.houseRules;
+        let about = dataProperties['about' + localStorage.lang];
+        accommodationAbout = `<img onclick="backFromBusiness()" class="landmark-close-btn mr-3 mt-4" src="assets/icon/close.svg" alt="">
     <div class="row w-100 pt-4 pl-3">
     <div class="col-8 p-0">
     <div class="landmark-title text-left"">${
         dataProperties['name' + localStorage.lang]
     }</div>
-    <img class="contact-image mr-1" src='assets/contact/location-bold.png'><div id="landmark-location" class="font-09 mb-4 text-left d-inline-block">${
+    <img class="info-icon mr-1" src='assets/icon/mapPin.svg'><div id="landmark-location" class="font-09 mb-4 text-left d-inline-block">${
         dataProperties.place
     } </div> &#124; <a target="blank" class="color-yellow font-09" href="${
-        dataProperties.googleMaps
-    }"> ${dict[localStorage.lang].navigation}  &#10230;</a>
+            dataProperties.googleMaps
+        }"> ${dict[localStorage.lang].navigation}  &#10230;</a>
     </div>
     <div class="col-${businessBookBtn} p-0 pt-3"><button onclick="scrollIt('scrollIt')" class="bookBtn text-uppercase">${
-        dict[localStorage.lang].book
-    }</button></div>
+            dict[localStorage.lang].book
+        }</button></div>
     
     </div>
     ${renderCarousel(imgs)} 
@@ -3271,7 +3290,7 @@ selectAccommodation.getFeatures().on(['add', 'remove'], function (e) {
     <div class='row ml-3 mr-3'>${renderAccommodationFastFacilities(
         fastFacilities
     )}</div>
-    <button onclick="scrollIntoViewe()"  data-toggle="collapse" data-target="#accommodationFacilities" aria-expanded="false" class="bg-white text-small ml-4 mr-4 text-toggle no-outline underline w-50 text-left">
+    <button onclick="scrollIntoView()"  data-toggle="collapse" data-target="#accommodationFacilities" aria-expanded="false" class="bg-white text-small ml-4 mr-4 text-toggle no-outline underline w-50 text-left">
     
     <span class="text-collapsed ml-2">${
         dict[localStorage.lang].showFacilities
@@ -3340,9 +3359,12 @@ selectAccommodation.getFeatures().on(['add', 'remove'], function (e) {
     <hr class="mt-4">
     `;
 
-    businessAll.style.display = 'none';
-    businessSelected.innerHTML = accommodationAbout;
-    dateFormControl();
+        businessAll.style.display = 'none';
+        businessSelected.innerHTML = accommodationAbout;
+        dateFormControl();
+    } else {
+        backFromBusiness();
+    }
 });
 
 var selectAssoc = new ol.interaction.Select({
@@ -3358,7 +3380,6 @@ map.addInteraction(selectAssoc);
 selectAssoc.getFeatures().on(['add', 'remove'], function (e) {
     if (!zastave || currZoom > 11.5) {
         // toggleOnSelect();
-        console.log(e);
         var feature = e.element;
         var id = feature.get('id');
         if (e.type == 'add') {
@@ -3366,7 +3387,6 @@ selectAssoc.getFeatures().on(['add', 'remove'], function (e) {
                 msg.style.display = 'none';
             }
             //var info = $("#select").html("<p>Selection:</p>");
-            console.log(id);
             // assoc();
             document.getElementById(id + '-text').style.display = 'none';
             getAssoc(id);
@@ -3686,7 +3706,6 @@ function toggleOnSelect() {
 }
 //$("#dropdown-menu").slideToggle()
 function slojevi() {
-    console.log('slojevi');
     //$("#dropdown-menu").animate({width: 'toggle'}, 300)
     document.getElementById('dropdown-menu').style.visibility = 'visible';
     document.getElementById('dropdown-menu').style.opacity = 1;
@@ -3940,7 +3959,6 @@ function getAssoc(clickedID) {
       block: "end",
       inline: "nearest",
     }); */
-        console.log(clickedID);
         clickedID_element.classList.add('activate-assoc');
         clickedID_text.classList.add('activate-assoc');
     } else {
@@ -4061,7 +4079,6 @@ function zoomToRoute() {
 var destCoord = [[[1919403.44, 5398854.51], 14]];
 function zoomToDest(id) {
     var num = id.slice(11);
-    console.log(destCoord[num - 1]);
     view.animate({
         center: destCoord[num - 1][0],
         duration: 1000,
@@ -4206,11 +4223,11 @@ function zoomOut() {
 }
 
 // Dodavanje slika na kartu iz html-a
-//var vienna = new ol.Overlay({
-//  position: [1917126.71, 5421738.68],
-//  element: document.getElementById('vienna'),
-//});
-//map.addOverlay(vienna);
+/* var vienna = new ol.Overlay({
+    position: [1917090.85, 5421814.72],
+    element: document.getElementById('vienna')
+});
+map.addOverlay(vienna); */
 
 //-----------------------------------------------------------------------------------------------provjeriti
 //if (currZoom < 11.5 && zastave == true) {

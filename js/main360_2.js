@@ -250,10 +250,8 @@ if (window.location.hash == '#mesihovina') {
      * Or change the image if the user right-clicks on it
      */
     markersPlugin.on('select-marker', function (e, marker, data) {
-        console.log(marker);
         if (marker.data == 'href') {
             location.href = 'https://' + marker.id + '.com';
-            console.log(marker.id);
         }
     });
 }
@@ -475,10 +473,8 @@ if (window.location.hash == '#glizicaMlin') {
      * Or change the image if the user right-clicks on it
      */
     markersPlugin.on('select-marker', function (e, marker, data) {
-        console.log(marker);
         if (marker.data == 'href') {
             location.href = 'https://' + marker.id + '.com';
-            console.log(marker.id);
         }
     });
 }
