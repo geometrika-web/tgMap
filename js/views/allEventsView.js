@@ -47,7 +47,7 @@ class AllEventsView extends View {
     _generateMarkup() {
         const addNewBtn = `<button class="btn add__btn"><h3 class="m-0 bold">&#43</h3></span></button>`;
         const markup = this._data.map(this._generateMarkupListItem).join('');
-        if (localStorage.isLoggedIn === 'true') {
+        if (localStorage.logged === 'true') {
             return [addNewBtn, markup].join('');
         }
         return markup;
@@ -63,7 +63,7 @@ class AllEventsView extends View {
         }</div><div class="text-font">${
             result[`name${localStorage.lang}`]
         }</div><div class="menu-btn text-c3">${result.date}</div></div>${
-            localStorage.isLoggedIn == 'true'
+            localStorage.logged == 'true'
                 ? `<div><img id="delete" title="Izbriši događaj" data-id="${result.id}" class="kategorije-thumb center-y mr-4" src="./assets/icon/delete2.svg"></div>`
                 : ''
         }</button>

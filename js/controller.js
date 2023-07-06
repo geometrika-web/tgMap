@@ -114,7 +114,7 @@ const controlLogin = async function (loginData) {
     try {
         const data = await model.login(loginData);
         if (data.status === 'success') {
-            localStorage.isLoggedIn = true;
+            localStorage.logged = true;
             // loginView.hideWindow();
             loginView.showAlert('success', 'Prijava uspješna!');
             window.setTimeout(() => {

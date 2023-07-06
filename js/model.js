@@ -126,7 +126,7 @@ export const logout = async function () {
     try {
         const data = await getJSON(`${API_URL}/users/logout`);
         if (data.status === 'success') {
-            localStorage.isLoggedIn = false;
+            localStorage.logged = false;
 
             location.reload(true);
         }

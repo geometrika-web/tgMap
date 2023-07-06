@@ -15,11 +15,11 @@ class Login extends ModalView {
         super();
         this.addHandlerShowWindow();
         this.addHandlerHideWindow();
-        this.isLoggedIn();
+        this.logged();
     }
 
-    isLoggedIn() {
-        if (localStorage.isLoggedIn === 'true') {
+    logged() {
+        if (localStorage.logged === 'true') {
             this._btnOpen.classList.toggle('hidden');
             this._btnLogout.classList.toggle('hidden');
         }
