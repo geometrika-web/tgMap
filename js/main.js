@@ -124,7 +124,6 @@ if (window.location.href.includes('=')) {
 // VRATI!
 window.onpopstate = function (e) {
     e.preventDefault();
-    console.log(e);
     /* window.open('index.html', '_self'); */
     // toggle(document.getElementById('menu-toggle'));
 };
@@ -1370,7 +1369,6 @@ window.onload = function () {
         parent.appendChild(landmarkAll);
         coord[i + length] = touristData.features[i].geometry.coordinates;
         landmarksZoom[i + length] = touristData.features[i].properties.zoom;
-        console.log(touristData.features[i].properties.zoom);
         var landmarkImg = document.createElement('img');
         landmarkImg.src = touristData.features[i].properties.img;
         landmarkImg.classList.add('landmarkList-img', 'ml-4', 'center-y');
