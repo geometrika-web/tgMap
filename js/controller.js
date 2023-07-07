@@ -147,11 +147,8 @@ const controlDeleteEvent = async function (id) {
 const controlShareBtn = async function () {
     try {
         // TODO: Riješiti nazi, opis i link
-        await navigator.share({
-            title: 'TomislavGuides',
-            text: 'Learn web development on MDN!',
-            url: 'https://developer.mozilla.org'
-        });
+
+        await eventView.shareEvent();
     } catch (error) {
         shareView.addHandlerShare();
         // navigator.clipboard.writeText(window.location.href);

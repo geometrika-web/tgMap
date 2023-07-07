@@ -30,6 +30,14 @@ class EventView extends View {
         });
     }
 
+    shareEvent() {
+        navigator.share({
+            title: this._data.name,
+            text: this._data.description,
+            url: window.location.href
+        });
+    }
+
     _renderCarousel(imgs) {
         let carouselHtml = `<div id="carousel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">`;
