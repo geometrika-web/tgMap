@@ -32,9 +32,10 @@ class EventView extends View {
 
     shareEvent() {
         navigator.share({
-            title: this._data.name,
-            text: this._data.description,
-            url: window.location.href
+            title: this._data[`name${localStorage.lang}`],
+            text: this._data[`description${localStorage.lang}`],
+            url: window.location.href,
+            files: this._data.images[0]
         });
     }
 
