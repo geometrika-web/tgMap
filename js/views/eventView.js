@@ -30,12 +30,21 @@ class EventView extends View {
         });
     }
 
-    shareEvent() {
-        navigator.share({
+    async shareEvent() {
+        const blob = await fetch(this._data.images[0]).then((img) =>
+            img.blob()
+        );
+        await navigator.share({
             title: this._data[`name${localStorage.lang}`],
             text: this._data[`description${localStorage.lang}`],
             url: window.location.href,
-            files: this._data.images[0]
+            files: [
+                new File([blob]),
+                `this._data[name${localStorage.lang}].jpg`,
+                {
+                    type: 'image/jpg'
+                }
+            ]
         });
     }
 
