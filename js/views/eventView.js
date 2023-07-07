@@ -36,7 +36,7 @@ class EventView extends View {
         ); */
         navigator.share({
             title: this._data[`name${localStorage.lang}`],
-            text: this._data[`description${localStorage.lang}`],
+            text: this._data[`name${localStorage.lang}`],
             url: window.location.href
             /* files: [
                 new File([blob]),
