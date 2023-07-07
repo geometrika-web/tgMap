@@ -148,7 +148,11 @@ const controlShareBtn = async function () {
     try {
         // TODO: Riješiti nazi, opis i link
 
-        await eventView.shareEvent();
+        await navigator.share({
+            title: 'TomislavGuides',
+            text: 'Learn web development on MDN!',
+            url: 'https://developer.mozilla.org'
+        });
     } catch (error) {
         shareView.addHandlerShare();
         // navigator.clipboard.writeText(window.location.href);
