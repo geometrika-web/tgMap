@@ -72,15 +72,18 @@ if (window.location.href.includes('=')) {
         window.location.href.indexOf('=') + 1,
         window.location.href.indexOf('#')
     );
+    console.log(hash);
     var parts = hash.split(',');
     if (parts.length === 3) {
         zoom = parseFloat(parts[0]);
         center = ol.proj.fromLonLat([
-            parseFloat(parts[1]),
-            parseFloat(parts[2])
+            parseFloat(parts[2]),
+            parseFloat(parts[1])
         ]);
+        console.log(center);
     }
-    window.history.pushState(center, '', window.location.href);
+    // TODO: Komentirano jer mislim da ničem ne služi, provjeriti je li potrebno
+    // window.history.pushState(center, '', window.location.href);
 }
 
 // NO BACK FUNCTION
