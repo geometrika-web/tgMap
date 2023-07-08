@@ -81,14 +81,12 @@ export default class View {
 
     toggleSidebarOnSelect() {
         if (window.innerWidth < 575.99) {
-            if ((document.getElementById('menu-toggle').classList = 'change')) {
-                document
-                    .getElementById('menu-toggle')
-                    .classList.toggle('change');
-                document.querySelector('#wrapper').classList.toggle('toggled');
-                document.querySelector('#logo').classList.toggle('logo-toggle');
-                document.querySelector('#logo').classList.toggle('logo-color');
-            }
+            // if ((document.getElementById('menu-toggle').classList = 'change')) {
+            document.getElementById('menu-toggle').classList.toggle('change');
+            document.querySelector('#wrapper').classList.toggle('toggled');
+            document.querySelector('#logo').classList.toggle('logo-toggle');
+            document.querySelector('#logo').classList.toggle('logo-color');
+            // }
         } else {
             if (document.getElementById('menu-toggle').classList != 'change') {
                 document
