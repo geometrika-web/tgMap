@@ -91,7 +91,7 @@ export const uploadEvent = async function (newEvent) {
 
         const formData = new FormData();
         newEvent.forEach((arr) => {
-            console.log(arr);
+            // console.log(arr);
             // Za koordinate upisane u formu u formatu "43.7191761238794, 17.225182792091076" potrebno je za GeoJSON format smjestiti ih u propertie location s propertiom coordinates u kojem su koordinate spremljene u array u obliku [17.225182792091076, 43.7191761238794], pa zbog toga ide split().reverse()
             if (arr[0] === 'coordinates') {
                 formData.append(
