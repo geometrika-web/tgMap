@@ -102,7 +102,7 @@ export const uploadEvent = async function (newEvent) {
                 formData.append(arr[0], arr[1]);
             }
         });
-        // const data = await sendData(`${API_URL}/events`, formData);
+        const data = await sendData(`${API_URL}/events`, formData);
         return data;
         /* const res = await axios({
             method: 'POST',

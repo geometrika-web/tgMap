@@ -32,7 +32,10 @@ class AddEventView extends ModalView {
             // this je parentElement jer se nalazi unutar eventListenera koji se poziva na parentElementu
             // daje array sa svim vrijednostima forme
             const formData = new FormData(this);
-            formData.set(date, `${formData.get(date)}T${formData.get(time)}`);
+            formData.set(
+                'date',
+                `${formData.get('date')}T${formData.get('time')}`
+            );
             const formDataArray = [...formData];
             /* const data = Object.fromEntries(formDataArray);
 

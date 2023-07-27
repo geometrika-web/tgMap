@@ -4157,7 +4157,7 @@ $('#znamenitosti').checked = true;
 $('#vjerski').checked = false;
 
 var landmarksVisible = true;
-document.getElementById('znamenitosti').checked = true;
+// document.getElementById('znamenitosti').checked = true;
 function znamenitosti() {
     if (landmarksVisible) {
         landmarksVisible = false;
