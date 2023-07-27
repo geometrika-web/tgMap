@@ -777,7 +777,7 @@ var destinationsData = {
                 startTime: '09:00',
                 neededHr: 'Užina i piće',
                 neededEn: 'Snack and drinks',
-                contact: '+387 63 123 456',
+                contact: '',
                 remark: '...',
                 stops: [
                     {
@@ -844,7 +844,7 @@ var destinationsData = {
                 startTime: '09:00',
                 neededHr: 'Užina i piće',
                 neededEn: 'Snack and drinks',
-                contact: '+387 63 123 456',
+                contact: '',
                 stops: [
                     {
                         nameHr: 'Polazna točka',
