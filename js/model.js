@@ -22,7 +22,7 @@ export const loadOne = async function (pathname, id) {
             nameHr: result.nameHr,
             nameEn: result.nameEn,
             slug: result.slug,
-            date: moment(result.date).format('LLLL'), // srijeda, 26. travnja 2023 12:30
+            date: moment(result.date).subtract(2, 'hours').format('LLLL'), // srijeda, 26. travnja 2023 12:30
             address: result.address,
             descriptionHr: result.descriptionHr,
             descriptionEn: result.descriptionEn,
@@ -45,7 +45,7 @@ export const loadAll = async function (type) {
                 nameHr: el.nameHr,
                 nameEn: el.nameEn,
                 slug: el.slug,
-                date: moment(el.date).format('LLLL'), // srijeda, 26. travnja 2023 12:30
+                date: moment(el.date).subtract(2, 'hours').format('LLLL'), // srijeda, 26. travnja 2023 12:30
                 address: el.address,
                 descriptionHr: el.descriptionHr,
                 descriptionEn: el.descriptionEn,
@@ -102,7 +102,7 @@ export const uploadEvent = async function (newEvent) {
                 formData.append(arr[0], arr[1]);
             }
         });
-        const data = await sendData(`${API_URL}/events`, formData);
+        // const data = await sendData(`${API_URL}/events`, formData);
         return data;
         /* const res = await axios({
             method: 'POST',
