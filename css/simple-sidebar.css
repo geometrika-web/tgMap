@@ -426,6 +426,7 @@ a {
     font-size: 0.9rem;
     letter-spacing: 1px;
     font-family: 'Poppins', sans-serif;
+    white-space: break-spaces;
 }
 #google-maps {
     display: flex;

@@ -609,7 +609,7 @@ var natureData = {
             },
             properties: {
                 nameEn: 'Bukovica Cathedral',
-                nameHr: 'Bukovačka katedrala',
+                nameHr: 'Bukovička katedrala',
                 place: 'Bukovica',
                 aboutEn:
                     'The Bukovica Cathedral is a cave with a large opening where holy masses were celebrated during the Ottoman rule. A kind of altar cut in the stone wall of the cave has been preserved under the stone vault of that building. <br><br> The Bukovica Cathedral served as a place of worship for a long time and holy sacraments were distributed in it to thousands of people, until a brick parish church was built nearby.<br><br> About twenty years ago, then pastor Fr. Marko Jurič renewed the service in the Bukovica Cathedral in memory of the tradition and martyrs of that region. Every year in the month of August, a holy mass is celebrated in the cave, to which many people from Duvno area come. <br><br> It is also interesting that the cars of numerous gastarbeiters, for whom Tomislavgrad is known and who spend the summer months in their hometown, are also blessed at that mass.<br><br>In the past, the locals used the water from the cave to run three mills, and a few years ago, the locals and the then pastor Fr. Jozo Radoš reconstructed and built a new mill in the same form with all accompanying facilities.',
