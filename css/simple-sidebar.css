@@ -1729,7 +1729,7 @@ div.elem-group {
 
 div.elem-group.inlined {
     width: 49%;
-    display: inline-block;
+    /* display: inline-block; */
     float: left;
     margin-left: 1%;
 }
@@ -1817,8 +1817,8 @@ textarea {
     margin: 1rem 0 0rem 0;
 }
 
-.alert {
-    /*  position: fixed;
+/* .alert {
+     position: fixed;
     bottom: 0;
     width: 100%;
     left: 50%;
@@ -1835,8 +1835,8 @@ textarea {
     padding: 1rem 0rem;
     margin: 0;
     -webkit-box-shadow: 4rem 0rem 0rem rgba(0, 0, 0, 0.25);
-    box-shadow: 4rem 0rem 0rem rgba(0, 0, 0, 0.25); */
-}
+    box-shadow: 4rem 0rem 0rem rgba(0, 0, 0, 0.25);
+} */
 .error-alert {
     bottom: 0;
     width: 100%;
@@ -1858,9 +1858,9 @@ textarea {
 .alert--success {
     background-color: #20bf6b;
 }
-.alert--error {
-    /* background-color: #eb4d4b; */
-}
+/* .alert--error {
+    background-color: #eb4d4b;
+} */
 
 .success-overlay {
     position: fixed;
