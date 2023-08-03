@@ -2842,7 +2842,7 @@ accommodationSource = new ol.source.Vector({
 let accommodation = new ol.layer.Vector({
     name: 'a    source: accommodationSourceccommodation',
     source: accommodationSource,
-    declutter: true,
+    declutter: false,
     visible: false,
     style: function (feature, resolution) {
         return getFeatureStyle(feature, resolution, false, '#fff');

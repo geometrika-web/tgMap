@@ -5,8 +5,8 @@ var accommodationData = {
             type: 'Feature',
             geometry: {
                 type: 'Point',
-                zoom: '15',
-                zoomMobile: '11.5',
+                zoom: '19',
+                zoomMobile: '16',
                 coordinates: [43.62184114042035, 17.40512056985246].reverse()
             },
             properties: {
@@ -182,8 +182,8 @@ var accommodationData = {
             type: 'Feature',
             geometry: {
                 type: 'Point',
-                zoom: '15',
-                zoomMobile: '11.5',
+                zoom: '17',
+                zoomMobile: '13',
                 coordinates: [43.66209778378221, 17.083797515344237].reverse()
             },
             properties: {
@@ -628,8 +628,8 @@ var accommodationData = {
             type: 'Feature',
             geometry: {
                 type: 'Point',
-                zoom: '15',
-                zoomMobile: '11.5',
+                zoom: '17',
+                zoomMobile: '13',
                 coordinates: [43.72058890669987, 17.22230361070488].reverse()
             },
             properties: {
@@ -835,6 +835,526 @@ var accommodationData = {
                         nameEn: 'Pets',
                         valueHr: 'Kućni ljubimci su dozvoljeni',
                         valueEn: 'Pets are allowed'
+                    }
+                ]
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                zoom: '19',
+                zoomMobile: '16',
+                coordinates: [43.62176686924638, 17.403992188885315].reverse()
+            },
+            properties: {
+                id: 'maliRaj',
+                nameHr: 'Mali Raj',
+                nameEn: 'Mali Raj (A Little Paradise)',
+                place: 'Kongora',
+                phone: '+387 63/436-880',
+                mail: 'lavtic22@gmail.com',
+                insta: '@malirajblidinje',
+                face: '',
+                googleMaps:
+                    'https://www.google.com/maps/place/Vikendica+Mali+Raj+Blidinje/@43.6225199,17.3995741,15.21z/data=!4m6!3m5!1s0x134b2d57c9bf44bd:0xe2e0814e4c3651!8m2!3d43.6205436!4d17.4044428!16s%2Fg%2F11rnhxr8sv?hl=hr-HR&entry=ttu',
+                aboutHr:
+                    '"Mali Raj" je vikendica ušuškana u prirodnim ljepotama Vran planine, par kilometara udaljena od centra Tomislavgrada i Parka prirode Blidinje, idealno mjesto za obiteljski odmor, romantične noći, djevojačke večeri, rođendane ili jednostavno bijeg od gradske svakodnevnice.<br>Oko vikendice se nalazi prostrano imanje s dvorištem koje je okruženo zimzelenom šumom koja joj daje posebnu čar. Vikendica "Mali Raj" nudi smještaj za 8 osoba, a dnevni boravak je pogodan za do 20 osoba. Posjedujemo tri spavaće sobe, dnevnu sobu, opremljenu kuhinju sa svim pratećim aparatima i posuđem, toalet i kupaonica s tuš kabinom.<br>Ispred kuće je vanjski kamin s velikim stolom i klupama.<br>U dvorištu je boćalište, veliki travnjak i dvije velike ljuljačke za zabavu. Za one koji vole šetnju, pored vikendice, kroz borovu šumu, prolazi nekoliko pješačkih staza od pet i više kilometara. Skijalište na Blidinju je udaljeno svega par kilometara od vikendice<br><br>Ako vam je dosta užurbanog života, stresa i obaveza onda je "Mali Raj" idealno mjesto za vaš odmor. Vidimo se!',
+                aboutEn:
+                    "'Mali Raj' is a cottage tucked away in the natural beauty of the Vran mountain, a few kilometers away from the center of Tomislavgrad and the Blidinje Nature Park, an ideal place for a family holiday, romantic nights, bachelorette parties, birthdays or simply an escape from everyday life in the city.<br>The cottage is surrounded by there is a spacious property with a yard, and the yard is surrounded by an evergreen forest that gives it a special charm. Cottage 'Mali Raj' offers accommodation for 8 people, and the living room is suitable for up to 20 people. We have three bedrooms, a living room, an equipped kitchen with all accompanying appliances and dishes, a toilet and a bathroom with a shower cabin.<br>In front of the house there is an outdoor fireplace with a large table and benches.<br>In the yard there is a boules alley, a large lawn and two large swings for fun. For those who like to walk, next to the cottage, through the pine forest, there are several hiking trails of five or more kilometers. The ski resort on Blidinje is only a few kilometers away from the cottage<br><br>If you are tired of the busy life, stress and obligations, then 'Mali Raj' is the ideal place for your vacation. See you!",
+                img: 'assets/img/accommodation/maliRaj.jpg',
+                imgs: [
+                    '/assets/img/accommodation/maliRaj1.jpg',
+                    '/assets/img/accommodation/maliRaj2.jpg',
+                    '/assets/img/accommodation/maliRaj3.jpg',
+                    '/assets/img/accommodation/maliRaj4.jpg',
+                    '/assets/img/accommodation/maliRaj5.jpg',
+                    '/assets/img/accommodation/maliRaj6.jpg'
+                ],
+                previewFacilities: `<div class='mb-3 min-w-80'><img class="w-20" src='assets/icon/facilities/sleeps.svg'><div class='d-inline'> 6</div></div>`,
+                fastFacilities: [
+                    {
+                        id: 'sleeps',
+                        check: true,
+                        nameHr: 'x8',
+                        nameEn: 'x8'
+                    },
+                    {
+                        id: 'bathroom',
+                        check: true,
+                        nameHr: 'Kupaonica',
+                        nameEn: 'Bathroom'
+                    },
+                    {
+                        id: 'kitchen',
+                        check: true,
+                        nameHr: 'Kuhinja',
+                        nameEn: 'Kitchen'
+                    },
+                    {
+                        id: 'fireplace',
+                        check: true,
+                        nameHr: 'Kamin',
+                        nameEn: 'Fireplace'
+                    },
+                    {
+                        id: 'terrace',
+                        check: true,
+                        nameHr: 'Terasa',
+                        nameEn: 'Terrace'
+                    },
+                    {
+                        id: 'bbq',
+                        check: true,
+                        nameHr: 'Roštilj',
+                        nameEn: 'BBQ '
+                    },
+                    {
+                        id: 'garden',
+                        check: true,
+                        nameHr: 'Vrt',
+                        nameEn: 'Garden'
+                    },
+                    {
+                        id: 'bocce',
+                        check: true,
+                        nameHr: 'Zog za bućanje',
+                        nameEn: 'Bocce court'
+                    },
+                    {
+                        id: 'wifi',
+                        check: true,
+                        nameHr: 'WiFi',
+                        nameEn: 'Free WiFi'
+                    },
+                    {
+                        id: 'parking',
+                        check: true,
+                        nameHr: 'Parking',
+                        nameEn: 'Parking'
+                    }
+                ],
+                facilities: [
+                    /* {
+                        nameHr: 'Spavaće sobe',
+                        nameEn: 'Bedrooms',
+                        facilitiesHr: [
+                            'Jedan veliki bračni krevet',
+                            'Jedan veliki bračni krevet',
+                            'Dva kreveta za jednu osobu'
+                        ],
+                        facilitiesEn: [
+                            'One king size bed',
+                            'One king size bed',
+                            'Two bunk beds'
+                        ]
+                    }, */
+                    {
+                        nameHr: 'Kupaonica',
+                        nameEn: 'Bathroom',
+                        facilitiesHr: [
+                            'Toaletni papir',
+                            'Ručnici',
+                            'Sušilo za kosu',
+                            'Tuš kabina'
+                        ],
+                        facilitiesEn: [
+                            'Toalet paper',
+                            'Towels',
+                            'Hair dryer',
+                            'Shower cabin'
+                        ]
+                    },
+                    {
+                        nameHr: 'Kuhinja',
+                        nameEn: 'Kitchen',
+                        facilitiesHr: [
+                            'Kuhinjski pribor',
+                            'Posuđe',
+                            'Pećnica',
+                            'Štednjak',
+                            'Hladnjak',
+                            'Kuhalo za vodu'
+                        ],
+                        facilitiesEn: [
+                            'Kitchen accessories',
+                            'Dishes',
+                            'Oven',
+                            'Stove',
+                            'Refrigerator',
+                            'Kettle'
+                        ]
+                    }
+                ],
+                houseRules: [
+                    {
+                        id: 'checkIn',
+                        check: true,
+                        nameHr: 'Dolazak',
+                        nameEn: 'Check in',
+                        valueHr: '15:00 - 20:00',
+                        valueEn: '15:00 - 20:00'
+                    },
+                    {
+                        id: 'checkOut',
+                        check: true,
+                        nameHr: 'Odlazak',
+                        nameEn: 'Check out',
+                        valueHr: '07:00 - 12:00',
+                        valueEn: '07:00 - 12:00'
+                    },
+                    {
+                        id: 'smoking',
+                        check: true,
+                        nameHr: 'Pušenje',
+                        nameEn: 'Smoking',
+                        valueHr: 'Pušenje nije dozvoljeno',
+                        valueEn: 'Smoking is not allowed'
+                    },
+                    {
+                        id: 'pets',
+                        check: true,
+                        nameHr: 'Kućni ljubimci',
+                        nameEn: 'Pets',
+                        valueHr: 'Kućni ljubimci nisu dozvoljeni u kući',
+                        valueEn: 'Pets are not allowed in the house'
+                    }
+                ]
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                zoom: '17',
+                zoomMobile: '13',
+                coordinates: [43.71337276518505, 17.23654862883606].reverse()
+            },
+            properties: {
+                id: 'apartmentMaria',
+                nameHr: 'Apartman Maria',
+                nameEn: 'Apartment Maria',
+                place: 'Tomislavgrad',
+                phone: '+387 63/217-488',
+                mail: 'lavtic22@gmail.com',
+                insta: '',
+                face: '',
+                googleMaps:
+                    'https://www.google.com/maps/place/Apartment+Maria/@43.7132293,17.2365379,17z/data=!3m1!4b1!4m6!3m5!1s0x475f81f473a12a19:0x7002fb4d2d03f4f!8m2!3d43.7132293!4d17.2365379!16s%2Fg%2F11y1dv1ncd?entry=ttu',
+                aboutHr:
+                    'Apartman Maria je udoban i moderan apartman smješten u srcu Tomislavgrada, malog grada u Bosni i Hercegovini. Apartman se nalazi na četvrtom katu novoizgrađene stambene zgrade i može primiti do šest osobe. Zgrada ima lift.<br><br>Pri ulasku u stan goste će dočekati prostran i svijetao dnevni boravak. Soba je ukusno uređena s udobnim namještajem. Tu je i veliki TV ravnog ekrana s kabelskim kanalima i brzi Wi-Fi, što ga čini savršenim mjestom za opuštanje i opuštanje nakon dugog dana istraživanja grada.<br><br>Dnevni boravak povezan je s potpuno opremljenom kuhinjom koja sadrži sve potrebne aparate i posuđe za pripremu ukusnih jela. Ima štednjak, pećnicu, hladnjak, mikrovalnu pećnicu i perilicu posuđa. Gosti mogu uživati u obrocima za udobnim blagovaonskim stolom za četiri osobe.<br><br>Apartman ima dvije spavaće sobe, obje su komforne i prostrane. Glavna spavaća soba ima bračni krevet, dok druga spavaća soba ima dva odvojena kreveta. Obje spavaće sobe imaju velike ormare, koji pružaju dovoljno prostora za odlaganje stvari gostiju.<br><br>Kupaonica je moderna i potpuno opremljena s tuš kabinom, WC školjkom i umivaonikom. Gostima je na raspolaganju i perilica rublja, što je čini pogodnom za duži boravak.<br><br>Jedna od najboljih karakteristika stana je njegova lokacija. Nalazi se u centru Tomislavgrada, s lakoćom pristupa svim gradskim sadržajima. Na pješačkoj udaljenosti nalaze se brojne trgovine, restorani i kafići.<br><br> Apartman se nalazi u neposrednoj blizini carine, prodajnog centra Baković, benzinske crpke Papić, kružnog toka te samog centra Tomislavgrada.<br><br>Zaključno, Apartman Maria je lijep i udoban apartman koji pruža sve potrebne sadržaje za ugodan boravak u Tomislavgradu. Njegov moderan dizajn, potpuno opremljena kuhinja, udobne spavaće sobe i pogodan položaj čine ga idealnim izborom za kraće i dulje boravke.',
+                aboutEn:
+                    'Apartman Maria je udoban i moderan apartman smješten u srcu Tomislavgrada, malog grada u Bosni i Hercegovini. Apartman se nalazi na četvrtom katu novoizgrađene stambene zgrade i može primiti do šest osobe. Zgrada ima lift.<br><br>Pri ulasku u stan goste će dočekati prostran i svijetao dnevni boravak. Soba je ukusno uređena s udobnim namještajem. Tu je i veliki TV ravnog ekrana s kabelskim kanalima i brzi Wi-Fi, što ga čini savršenim mjestom za opuštanje i opuštanje nakon dugog dana istraživanja grada.<br><br>Dnevni boravak povezan je s potpuno opremljenom kuhinjom koja sadrži sve potrebne aparate i posuđe za pripremu ukusnih jela. Ima štednjak, pećnicu, hladnjak, mikrovalnu pećnicu i perilicu posuđa. Gosti mogu uživati u obrocima za udobnim blagovaonskim stolom za četiri osobe.<br><br>Apartman ima dvije spavaće sobe, obje su komforne i prostrane. Glavna spavaća soba ima bračni krevet, dok druga spavaća soba ima dva odvojena kreveta. Obje spavaće sobe imaju velike ormare, koji pružaju dovoljno prostora za odlaganje stvari gostiju.<br><br>Kupaonica je moderna i potpuno opremljena s tuš kabinom, WC školjkom i umivaonikom. Gostima je na raspolaganju i perilica rublja, što je čini pogodnom za duži boravak.<br><br>Jedna od najboljih karakteristika stana je njegova lokacija. Nalazi se u centru Tomislavgrada, s lakoćom pristupa svim gradskim sadržajima. Na pješačkoj udaljenosti nalaze se brojne trgovine, restorani i kafići.<br><br> Apartman se nalazi u neposrednoj blizini carine, prodajnog centra Baković, benzinske crpke Papić, kružnog toka te samog centra Tomislavgrada.<br><br>Zaključno, Apartman Maria je lijep i udoban apartman koji pruža sve potrebne sadržaje za ugodan boravak u Tomislavgradu. Njegov moderan dizajn, potpuno opremljena kuhinja, udobne spavaće sobe i pogodan položaj čine ga idealnim izborom za kraće i dulje boravke.',
+                img: 'assets/img/accommodation/apartmanMaria.jpg',
+                imgs: [
+                    '/assets/img/accommodation/apartmanMaria1.jpg',
+                    '/assets/img/accommodation/apartmanMaria2.jpg',
+                    '/assets/img/accommodation/apartmanMaria3.jpg',
+                    '/assets/img/accommodation/apartmanMaria4.jpg',
+                    '/assets/img/accommodation/apartmanMaria5.jpg'
+                ],
+                previewFacilities: `<div class='mb-3 min-w-80'><img class="w-20" src='assets/icon/facilities/sleeps.svg'><div class='d-inline'> 6</div></div>`,
+                fastFacilities: [
+                    {
+                        id: 'sleeps',
+                        check: true,
+                        nameHr: 'x6',
+                        nameEn: 'x6'
+                    },
+                    {
+                        id: 'bathroom',
+                        check: true,
+                        nameHr: 'Kupaonica',
+                        nameEn: 'Bathroom'
+                    },
+                    {
+                        id: 'kitchen',
+                        check: true,
+                        nameHr: 'Kuhinja',
+                        nameEn: 'Kitchen'
+                    },
+                    {
+                        id: 'wifi',
+                        check: true,
+                        nameHr: 'WiFi',
+                        nameEn: 'Free WiFi'
+                    },
+                    {
+                        id: 'parking',
+                        check: true,
+                        nameHr: 'Parking',
+                        nameEn: 'Parking'
+                    }
+                ],
+                facilities: [
+                    {
+                        nameHr: 'Spavaće sobe',
+                        nameEn: 'Bedrooms',
+                        facilitiesHr: [
+                            'Jedan veliki bračni krevet',
+                            'Dva kreveta za jednu osobu'
+                        ],
+                        facilitiesEn: ['One king size bed', 'Two bunk beds']
+                    },
+                    {
+                        nameHr: 'Kupaonica',
+                        nameEn: 'Bathroom',
+                        facilitiesHr: [
+                            'Toaletni papir',
+                            'Ručnici',
+                            'Sušilo za kosu',
+                            'Tuš kabina'
+                        ],
+                        facilitiesEn: [
+                            'Toalet paper',
+                            'Towels',
+                            'Hair dryer',
+                            'Shower cabin'
+                        ]
+                    },
+                    {
+                        nameHr: 'Kuhinja',
+                        nameEn: 'Kitchen',
+                        facilitiesHr: [
+                            'Kuhinjski pribor',
+                            'Posuđe',
+                            'Pećnica',
+                            'Štednjak',
+                            'Hladnjak',
+                            'Kuhalo za vodu'
+                        ],
+                        facilitiesEn: [
+                            'Kitchen accessories',
+                            'Dishes',
+                            'Oven',
+                            'Stove',
+                            'Refrigerator',
+                            'Kettle'
+                        ]
+                    }
+                ],
+                houseRules: [
+                    {
+                        id: 'checkIn',
+                        check: true,
+                        nameHr: 'Dolazak',
+                        nameEn: 'Check in',
+                        valueHr: '15:00 - 20:00',
+                        valueEn: '15:00 - 20:00'
+                    },
+                    {
+                        id: 'checkOut',
+                        check: true,
+                        nameHr: 'Odlazak',
+                        nameEn: 'Check out',
+                        valueHr: '07:00 - 12:00',
+                        valueEn: '07:00 - 12:00'
+                    },
+                    {
+                        id: 'smoking',
+                        check: true,
+                        nameHr: 'Pušenje',
+                        nameEn: 'Smoking',
+                        valueHr: 'Pušenje nije dozvoljeno',
+                        valueEn: 'Smoking is not allowed'
+                    },
+                    {
+                        id: 'pets',
+                        check: true,
+                        nameHr: 'Kućni ljubimci',
+                        nameEn: 'Pets',
+                        valueHr: 'Kućni ljubimci nisu dozvoljeni u kući',
+                        valueEn: 'Pets are not allowed in the house'
+                    }
+                ]
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                zoom: '18',
+                zoomMobile: '15',
+                coordinates: [43.650553, 17.355422].reverse()
+            },
+            properties: {
+                id: 'lipaLuxury',
+                nameHr: 'Lipa Luxury',
+                nameEn: 'Lipa Luxury',
+                place: 'Lipa',
+                phone: '+387 63/864-037',
+                mail: 'lavtic22@gmail.com',
+                insta: '@lipa_luxury',
+                face: '',
+                googleMaps:
+                    'https://www.google.com/maps/place/Lipa+luxury/@43.6502644,17.3575995,135m/data=!3m1!1e3!4m12!1m5!3m4!2zNDPCsDM5JzAyLjAiTiAxN8KwMjEnMTkuNSJF!8m2!3d43.650553!4d17.355422!3m5!1s0x134b2b0028ddb5f7:0x70edab5a59b562b4!8m2!3d43.650211!4d17.3582293!16s%2Fg%2F11trcclms7?entry=ttu',
+                aboutHr:
+                    'Lipa luxury luksuzna je kuća za odmor smještena u općini Tomislavgrad. Nalazi se na potpuno ograđenom imanju od 30 000 m2 što omogućuju privatnost svim našim posjetiteljima.Mir i tišina te nestvarni zalasci sunca čine je savršenim mjestom za odmor duše i tijela. Namijenjena je svima koji su željni odmora u prirodi daleko od buke i gradske vreve, a istovremeno imaju sve blagodati koje nude veliki spa centri.<br><br>Naziv Lipa luxury se nekako nametnuo sam. Lipa je mjesto u Općini Tomislavgrad gdje se naša kuća s bazenom i nalazi, a uz to ide luxury ako dodate sav luksuz koji ćete kod nas i pronaći. Grijani, hidromasažni, unutarnji bazen sa slanom vodom koji boravak u objektu čini posebnim tijekom cijele godine, finska sauna, moderno uređena kuća, vanjska kupola za noć pod zvijezdama te ostali unutarnji i vanjski sadržaj koji je čini modernom, posebnom, atraktivnom i jednostavno luxury.',
+                aboutEn:
+                    'Lipa luxury is a luxury holiday home located in the municipality of Tomislavgrad. It is located on a completely fenced property of 30,000 m2, which allows privacy for all our visitors. The peace and quiet and unreal sunsets make it the perfect place to rest the soul and body. It is intended for everyone who wants to relax in nature, away from the noise and hustle and bustle of the city, and at the same time have all the benefits offered by large spa centers.<br><br>The name Lipa luxury somehow imposed itself. Lipa is a place in the Municipality of Tomislavgrad where our house with a swimming pool is located, and luxury goes with it if you add all the luxury that you will find here. Heated, hydromassage, indoor pool with salt water that makes staying in the facility special all year round, Finnish sauna, modernly decorated house, outdoor dome for a night under the stars and other indoor and outdoor facilities that make it modern, special, attractive and simply luxury.',
+                img: 'assets/img/accommodation/lipaLuxury.jpg',
+                imgs: [
+                    '/assets/img/accommodation/lipaLuxury1.jpg',
+                    '/assets/img/accommodation/lipaLuxury2.jpg',
+                    '/assets/img/accommodation/lipaLuxury3.jpg',
+                    '/assets/img/accommodation/lipaLuxury4.jpg',
+                    '/assets/img/accommodation/lipaLuxury7.jpg',
+                    '/assets/img/accommodation/lipaLuxury5.jpg',
+                    '/assets/img/accommodation/lipaLuxury6.jpg'
+                ],
+                previewFacilities: `<div class='mb-3 min-w-80'><img class="w-20" src='assets/icon/facilities/sleeps.svg'><div class='d-inline'> 6</div></div>`,
+                fastFacilities: [
+                    {
+                        id: 'sleeps',
+                        check: true,
+                        nameHr: 'x8',
+                        nameEn: 'x8'
+                    },
+                    {
+                        id: 'bathroom',
+                        check: true,
+                        nameHr: 'Kupaonica',
+                        nameEn: 'Bathroom'
+                    },
+                    {
+                        id: 'kitchen',
+                        check: true,
+                        nameHr: 'Kuhinja',
+                        nameEn: 'Kitchen'
+                    },
+                    {
+                        id: 'garden',
+                        check: true,
+                        nameHr: 'Vrt',
+                        nameEn: 'Garden'
+                    },
+                    {
+                        id: 'terrace',
+                        check: true,
+                        nameHr: 'Terasa',
+                        nameEn: 'Terrace'
+                    },
+                    {
+                        id: 'fireplace',
+                        check: true,
+                        nameHr: 'Kamin',
+                        nameEn: 'Fireplace'
+                    },
+                    {
+                        id: 'bbq',
+                        check: true,
+                        nameHr: 'Roštilj',
+                        nameEn: 'BBQ '
+                    },
+                    {
+                        id: 'pool',
+                        check: true,
+                        nameHr: 'Unutarnji bazen',
+                        nameEn: 'Indoor pool'
+                    },
+                    {
+                        id: 'sauna',
+                        check: true,
+                        nameHr: 'Finska sauna',
+                        nameEn: 'Finnish sauna'
+                    },
+                    {
+                        id: 'wifi',
+                        check: true,
+                        nameHr: 'WiFi',
+                        nameEn: 'Free WiFi'
+                    },
+                    {
+                        id: 'parking',
+                        check: true,
+                        nameHr: 'Parking',
+                        nameEn: 'Parking'
+                    }
+                ],
+                facilities: [
+                    /* {
+                        nameHr: 'Spavaće sobe',
+                        nameEn: 'Bedrooms',
+                        facilitiesHr: [
+                            'Jedan veliki bračni krevet',
+                            'Jedan veliki bračni krevet',
+                            'Dva kreveta za jednu osobu'
+                        ],
+                        facilitiesEn: [
+                            'One king size bed',
+                            'One king size bed',
+                            'Two bunk beds'
+                        ]
+                    }, */
+                    {
+                        nameHr: 'Kupaonica',
+                        nameEn: 'Bathroom',
+                        facilitiesHr: [
+                            'Toaletni papir',
+                            'Ručnici',
+                            'Sušilo za kosu',
+                            'Tuš kabina'
+                        ],
+                        facilitiesEn: [
+                            'Toalet paper',
+                            'Towels',
+                            'Hair dryer',
+                            'Shower cabin'
+                        ]
+                    },
+                    {
+                        nameHr: 'Kuhinja',
+                        nameEn: 'Kitchen',
+                        facilitiesHr: [
+                            'Kuhinjski pribor',
+                            'Posuđe',
+                            'Pećnica',
+                            'Štednjak',
+                            'Hladnjak',
+                            'Kuhalo za vodu'
+                        ],
+                        facilitiesEn: [
+                            'Kitchen accessories',
+                            'Dishes',
+                            'Oven',
+                            'Stove',
+                            'Refrigerator',
+                            'Kettle'
+                        ]
+                    }
+                ],
+                houseRules: [
+                    {
+                        id: 'checkIn',
+                        check: true,
+                        nameHr: 'Dolazak',
+                        nameEn: 'Check in',
+                        valueHr: '15:00 - 20:00',
+                        valueEn: '15:00 - 20:00'
+                    },
+                    {
+                        id: 'checkOut',
+                        check: true,
+                        nameHr: 'Odlazak',
+                        nameEn: 'Check out',
+                        valueHr: '07:00 - 12:00',
+                        valueEn: '07:00 - 12:00'
+                    },
+                    {
+                        id: 'smoking',
+                        check: true,
+                        nameHr: 'Pušenje',
+                        nameEn: 'Smoking',
+                        valueHr: 'Pušenje nije dozvoljeno',
+                        valueEn: 'Smoking is not allowed'
+                    },
+                    {
+                        id: 'pets',
+                        check: true,
+                        nameHr: 'Kućni ljubimci',
+                        nameEn: 'Pets',
+                        valueHr: 'Kućni ljubimci nisu dozvoljeni u kući',
+                        valueEn: 'Pets are not allowed in the house'
                     }
                 ]
             }
