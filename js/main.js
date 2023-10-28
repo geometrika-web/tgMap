@@ -1216,6 +1216,7 @@ let guidedElement;
 coord = [];
 landmarksZoom = [];
 let landmarkAllList = [];
+let routesAllList = [];
 
 function routeColor(routeType) {
     if (routeType == 'hike') {
@@ -1254,7 +1255,8 @@ window.onload = function () {
             zoomTo(this.id);
         };
         var parent = document.getElementById('landmark-name');
-        parent.appendChild(landmarkAll);
+        // VRATI!
+        // parent.appendChild(landmarkAll);
         // console.log(landmarkAllList);
         coord[i] = landmarksData.features[i].geometry.coordinates;
         landmarksZoom[i] = landmarksData.features[i].properties.zoom;
@@ -1447,7 +1449,7 @@ window.onload = function () {
             getRouteText(this.id); //getSourceJSON
         };
         var parent = routesAllElement;
-        parent.appendChild(route);
+        // parent.appendChild(route);
 
         var routeImg = document.createElement('img');
         routeImg.src = features[i].properties.img;
@@ -1511,7 +1513,20 @@ window.onload = function () {
         aboutRoute.innerText = features[i].properties.about;
         aboutRoute.classList.add('mt-4', 'pl-4', 'pr-4');
         routeText.appendChild(aboutRoute); */
+        routesAllList.push(route);
     }
+    console.log(routesAllList);
+    routesAllList.sort(function (a, b) {
+        if (a.id > b.id) {
+            return 1;
+        } else {
+            return -1;
+        }
+    });
+    for (let el = 0; el < routesAllList.length; el++) {
+        parent.appendChild(routesAllList[el]);
+    }
+    console.log(routesAllList);
     //})
     //End for routes
     //Weekend destinations
@@ -2416,7 +2431,7 @@ function getRouteText(clickedID) {
     renderRoute(clickedID, clickedID_element);
     routeAbout = `<img onclick="backFromRoute()" class="landmark-close-btn" src="assets/icon/close.svg" alt="">
         <div class="m-4 pt-5 landmark-title text-left d-block" style="display: inline-block;">${name}</div>
-        <div class='pt-2 pb-2 pl-5 pr-5'>`;
+        <div class='pt-2 pb-2 pl-4 pr-4'>`;
     if (weekendDestinationsIndicator == 1) {
         startTime = tourDataProperties.startTime;
         day = tourDataProperties[`day${localStorage.lang}`];
@@ -2434,27 +2449,28 @@ function getRouteText(clickedID) {
 
     routeAbout += `<img class="route-type-badge mr-5" src=${type}>
     <p class="text-20 align-middle ml-3 line-40"><b>${duration} | ${dist}</b></p>
-    <button id="show-routes-btn" data-toggle="collapse" data-target="#stops" aria-expanded="false" class="text-toggle list-group-item list-group-item-action no-outline route-type align-middle line-40">
+    <button id="show-routes-btn" data-toggle="collapse" data-target="#stops" aria-expanded="false" class="text-toggle dropdown-toggle ml-2">
     
     <span class="text-collapsed">${dict[localStorage.lang].showStations}</span>
     <span class="text-expanded">${dict[localStorage.lang].hideStations}</span>
-  
+    
     </button>
     <div id="stops" class="ml-4 collapse">${stopsHtml}</div>
     <span id="profile" style="min-width:300px;"></span>
     </div>
+    <div class="ml-4 mr-4">${carouselHtml}</div>
     <div id="landmark-about" class="p-4 mb-2 text-justify d-block text-font" style="display: inline-block;">${text}</div>
-    ${carouselHtml}`;
-    if (tourDataProperties.routeTypeId == 'guided') {
-        let guide = tourDataProperties.guide;
-        let guidePhoto = tourDataProperties.guidePhoto;
-        let guidePhone = tourDataProperties.guidePhone;
-        let guideMail = tourDataProperties.guideMail;
-        let guideAbout = tourDataProperties[`guideAbout${localStorage.lang}`];
-        routeAbout += ` <hr class="mr-4 ml-4"><div id="guideMan" class="translate text-left ml-5 mt-1 mb-1 text-font">
+    `;
+    // if (tourDataProperties.routeTypeId == 'guided') {
+    let guide = tourDataProperties.guide;
+    let guidePhoto = tourDataProperties.guidePhoto;
+    let guidePhone = tourDataProperties.guidePhone;
+    let guideMail = tourDataProperties.guideMail;
+    let guideAbout = tourDataProperties[`guideAbout${localStorage.lang}`];
+    routeAbout += ` <hr class="mr-4 ml-4"><div id="guideMan" class="translate text-left ml-5 mt-1 mb-1 text-font">
         Vodič
     </div><div class="list-group-item list-group-item-action no-outline mt-4 pl-5 landmarkList-height scale-animation-right display-flex text-font kultura" style="display: flex;"><img src="/assets/guides/${guidePhoto}" class="landmarkList-img ml-4 center-y"><div class="margin-auto ml-3 mr-2"><div class="text-20">${guide}</div><div class="menu-btn pr-5">${guideAbout}</div><div class="menu-btn mb-5">${guidePhone} | ${guideMail}</div>`;
-    }
+    // }
     routesAllElement.style.display = 'none';
     destinationsAllElement.style.display = 'none';
     routesMenu.style.display = 'none';

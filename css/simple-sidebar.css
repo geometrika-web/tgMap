@@ -894,9 +894,16 @@ a {
 }
 #show-routes-btn {
     margin-bottom: 1.5rem;
-    border-bottom: 1px solid black !important;
+    border: none;
+    border-bottom: 1px solid #c3c3c3 !important;
+    background-color: transparent;
     /* margin-right: 10rem !important; */
 }
+#show-routes-btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
 .activate-routes {
     color: #fdc82f !important;
     border-bottom: 1px solid #fdc82f !important;

@@ -10,8 +10,8 @@ var routesData = {
                 coordinates: [1912918.72, 5438484.16]
             },
             properties: {
-                nameHr: 'Tura sv. Jeronima',
-                nameEn: 'Saint Jerome tour',
+                nameHr: 'Putovi svetog Jeronima',
+                nameEn: "Saint Jerome's paths",
                 place: 'Šujica',
                 path: '',
                 duration: '6 h',
@@ -101,8 +101,8 @@ var routesData = {
                 coordinates: [1916844.28, 5419439.76]
             },
             properties: {
-                nameHr: 'Tura Delminium',
-                nameEn: 'Delminium Tour',
+                nameHr: ' Delminium - rimska povijest Tomislavgrada',
+                nameEn: 'Delminium Tour - roman history of Tomislavgrad',
                 place: '',
                 path: '',
                 duration: '6 h',
@@ -249,8 +249,8 @@ var routesData = {
                 coordinates: [1911792.38, 5421966.43]
             },
             properties: {
-                nameHr: 'Tura duvanjskog vikinga',
-                nameEn: 'Viking tour',
+                nameHr: 'Vikinška priča',
+                nameEn: 'Viking story',
                 place: '',
                 path: '',
                 duration: '4 h',
@@ -331,7 +331,7 @@ var routesData = {
                 coordinates: [1916320.89, 5432769.14]
             },
             properties: {
-                nameHr: 'Tura mokronoških ribiča',
+                nameHr: 'Mokronoški ribiči',
                 nameEn: "Mokronoge fisherman's tour",
                 place: 'Mokronoge',
                 path: '',
@@ -407,7 +407,7 @@ var routesData = {
                 coordinates: [1933632.22, 5407862.34]
             },
             properties: {
-                nameHr: 'Tura Mijata Tomića i hajdučke družine',
+                nameHr: 'Mijat Tomić i hajdučka družina',
                 nameEn: 'Mijat Tomić and Hajduks tour',
                 place: '',
                 path: '',
@@ -547,6 +547,352 @@ var routesData = {
                         aboutHr:
                             'Planinski biser u podnožju Čvrsnice, s prekrasnom crkvom sv. Ilije koja se idealno uklopila u taj prirodni ambijent, čini zasigurno jedno od najljepših mjesta u Parku prirode Blidinje. Ovaj dio se odlikuje velikim bogatstvom borove i jelove šume, te je bogat s nekoliko izvora pitke vode. Upravljani prirodni rezervat Masna Luka, kao najveće europsko stanište endemskog bora munike, čini savršeno mjesto za odmor duše i tijela, i potpuno prepuštanje prirodi. Ovdje imate mogućnost posjetiti franjevačku galeriju s bogatim umjetninama ovoga područja ili pak uživati uz jedan od izvora pitke vode, od kojih je svakako najpoznatije vrelo Jasle.',
                         img: '/assets/img/masnaLuka.jpg'
+                    }
+                ]
+            }
+        },
+        maliVran: {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                zoom: '14',
+                zoomMobile: '13',
+                coordinates: [1942113.86675, 5412350.31197]
+            },
+            properties: {
+                nameHr: 'Mali vran (2017 m)',
+                nameEn: 'Mali Vran mountain tour (2017 m)',
+                place: '',
+                path: '',
+                duration: '5 h',
+                dist: '7.5 km',
+                difficulty: 'medium',
+                dists: ['7.5 km'],
+                aboutHr:
+                    'Vran planina je smještena u sjeverozapadnom dijelu Hercegovine. S istoka je omeđena Dugim poljem i Čvrsnicom, sa sjevera Ramskom kotlinom, sa zapada Duvanjskim poljem i Ljubušom, a s juga Blidinjskim  jezerom. Pravac pružanja masiva Vran je sjever- jug, što nije osnovni pravac dinarskih planina  koje se pružaju u smjeru sjeverozapad-jugoistok. Podnožje planine leži na visini od oko 1200 m i od tu se njegove strane uzdižu do visine od 2074 m, koliko je visok Veliki Vran, najviši vrh ove planine.<br></br>Vran planina ima nekoliko vrhova koji prelaze visinu od 2000 m. Gledano sa zapadne strane, prvi vrh je Mali Vran (1961 m) pa do vrha Vran (2020 m), cijelim se putem proteže planinski hrbat visok preko 2000 m. S istočne i južne strane planina se strmo spušta u područje Dugog polja i Blidinjskog jezera, dok je spuštanje na sjevernoj i zapadnoj strani postupnije i to je predio s mnogo vrtača, zaravni, visoravni i dolova.<br></br>Za vrijeme cijelog uspona, u prvom dijelu pogled se pruža na Duvanjsko polje, a zatim planine Ljubušu, Tušnicu, Kamešnicu i Cincar. Nakon izlaska na vršni greben i na vrh Mali Vran pogled se pruža u svim smjerovima na okolne planine: ostale vrhove Vrana, Čvrsnicu, Prenj, Radušu, Vranicu, Biokovo, Zavelim.',
+                aboutEn:
+                    'Vran mountain is located in the northwestern part of Herzegovina. It is bounded on the east by Dugo polje (Long field) and Čvrsnica, on the north by Rama basin, on the west by Duvno field and Ljubuša, and on the south by Blidinje lake. The direction of the Vran massif is north-south, which is not the basic direction of the Dinaric mountains, which extend in the northwest-southeast direction. The foot of the mountain lies at a height of about 1200 m and from there its sides rise to a height of 2074 m, which is the height of Veliki Vran, the highest peak of this mountain.<br></br>Vran mountain has several peaks that exceed the height of 2000 m. Seen from the western side, the first peak is Mali Vran (1961 m) and up to the peak of Vran (2020 m), a mountain ridge with a height of over 2000 m stretches the entire way. From the eastern and southern sides of the mountain, the steep descends in the area of Dugo polje and Blidinje lake, while the descent on the northern and western side is more gradual and is a region with many sinkholes, plateaus, plateaus and valleys.<br></br>During the entire ascent, in the first part there is a view of the Duvno field, and then the mountains of Ljubuša, Tušnica, Kamešnica and Cincar. After climbing the summit ridge and the top of Mali Vran (Little Vran), the view extends in all directions to the surrounding mountains: the other peaks of Vran, Čvrsnica, Prenj, Raduša, Vranica, Biokovo, Zavelim.',
+                img: '/assets/tours/img/maliVran/maliVran.jpg',
+                imgs: [
+                    '/assets/tours/img/maliVran/maliVran1.jpg',
+                    '/assets/tours/img/maliVran/maliVran2.jpg',
+                    '/assets/tours/img/maliVran/maliVran3.jpg'
+                ],
+                routeTypeId: 'hike',
+                guide: 'Ivan Baković - Baka',
+                guidePhoto: 'ivanBakovic-baka.jpg',
+                guideAboutHr:
+                    'Planinar, planinarski vodič, speleolog, član gorske službe spašavanja Tomislavgrad',
+                guideAboutEn:
+                    'Mountaineer, mountain guide, speleologist, member of the mountain rescue service Tomislavgrad',
+                guidePhone: '+387 63 103 549',
+                guideMail: 'ivan.baka19933@gmail.com',
+                id: 'maliVran',
+                stops: [
+                    {
+                        nameHr: 'Početak staze',
+                        nameEn: 'Path start',
+                        coordinates: [17.4190535, 43.6475608],
+                        img: '',
+                        aboutEn: '',
+                        aboutHr: ''
+                    },
+                    {
+                        nameHr: 'Mali Vran',
+                        nameEn: 'Little Vran',
+                        coordinates: [17.4529084, 43.652431],
+                        img: 'assets/tours/img/maliVran/maliVran.jpg',
+                        aboutEn: '',
+                        aboutHr: ''
+                    }
+                ]
+            }
+        },
+        hajduckaVrata: {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                zoom: '13',
+                zoomMobile: '12',
+                coordinates: [1964206.53327, 5411323.68856]
+            },
+            properties: {
+                nameHr: 'Hajdučka vrata (2000 m)',
+                nameEn: "Hajdučka vrata (Hajduk's gate) mountain tour (2000 m)",
+                place: '',
+                path: '',
+                duration: '8 h',
+                dist: '16.5 km',
+                difficulty: 'medium',
+                dists: ['16.5 km'],
+                aboutHr:
+                    'Hajdučka vrata ili Mijatov prolaz je prirodni fenomen na planini Čvrsnici, u Bosni i Hercegovini. Hajdučka se vrata nalaze na 2000 metara nadmorske visine iznad kanjona Dive Grabovice na istočnom dijelu Čvrsnice. To je kameni prsten (otvor) u stijeni, promjera oko 5 metara nastao djelovanjem različitih klimatskih i geomorfoloških faktora<br></br>Od njih se pružaju jako lijepi vidici na stijenu Velikog Kuka, Mezića stijenu, Pestibrdo, Čabulju, Prenj... Mjesto je to s jednim od najljepših pogleda.<br></br>Prema predaji, nekada su se na ovom mjestu odmetnuti momci ovih krajeva proglašavali hajducima. Vjerovalo se da kada jednom prođu kroz Hajdučka vrata, oni se zavjetuju da će čuvati družinu i biti njen uzoran član.<br></br>S obzirom na to da se nalaze na 2.000 metara nadmorske visine, hajduci su ovdje mogli biti sigurni od bilo kakvih potjera i progona.',
+                aboutEn:
+                    "Hajdučka vrata (Hajduk's gate, Hajduk is a romanticised hero figure who steals from, and leads his fighters into battle against the Ottoman authorities) or Mijat's pass (Mijat Tomić, along with Andrijica Šimić, one of the most famous Herzegovinian hajduk) is a natural phenomenon on the mountain Čvrsnica, in Bosnia and Herzegovina. Hajdučka vrata is located 2,000 meters above sea level above the Diva Grabovica canyon in the eastern part of Čvrsnica. It is a stone ring (opening) in the rock, with a diameter of about 5 meters, created by the action of various climatic and geomorphological factors<br></br>From there, there are very beautiful views of the Veliki Kuk rock, the Mezić rock, Pestibrdo, Čabulja, Prenj... It's a place with one of the most beautiful views.<br></br>According to tradition, once upon a time, renegade boys from these regions declared themselves outlaws in this place. It was believed that once they pass through the Hajdučka vrata, they vow to protect the group and be its exemplary member. Given that they are located at 2,000 meters above sea level, the hajduc here could be safe from any pursuits and persecutions.",
+                img: '/assets/tours/img/hajduckaVrata/hajduckaVrata.jpg',
+                imgs: [
+                    '/assets/tours/img/hajduckaVrata/hajduckaVrata1.jpg',
+                    '/assets/tours/img/hajduckaVrata/hajduckaVrata2.jpg',
+                    '/assets/tours/img/hajduckaVrata/hajduckaVrata3.jpg',
+                    '/assets/tours/img/hajduckaVrata/hajduckaVrata4.jpg',
+                    '/assets/tours/img/hajduckaVrata/hajduckaVrata5.jpg'
+                ],
+                routeTypeId: 'hike',
+                guide: 'Ivan Baković - Baka',
+                guidePhoto: 'ivanBakovic-baka.jpg',
+                guideAboutHr:
+                    'Planinar, planinarski vodič, speleolog, član gorske službe spašavanja Tomislavgrad',
+                guideAboutEn:
+                    'Mountaineer, mountain guide, speleologist, member of the mountain rescue service Tomislavgrad',
+                guidePhone: '+387 63 103 549',
+                guideMail: 'ivan.baka19933@gmail.com',
+                id: 'hajduckaVrata',
+                stops: [
+                    {
+                        nameHr: 'Početak staze',
+                        nameEn: 'Path start',
+                        coordinates: [17.6226396, 43.6733374],
+                        img: '',
+                        aboutEn: '',
+                        aboutHr: ''
+                    },
+                    {
+                        nameHr: 'Hajdučka vrata',
+                        nameEn: "Hajduk's gate",
+                        coordinates: [17.6550041, 43.6302763],
+                        img: 'assets/tours/img/hajduckaVrata/hajduckaVrata.jpg',
+                        aboutEn: '',
+                        aboutHr: ''
+                    }
+                ]
+            }
+        },
+        tusnica: {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                zoom: '14',
+                zoomMobile: '13',
+                coordinates: [1905667.5649, 5421824.2258]
+            },
+            properties: {
+                nameHr: 'Tušnica (1697 m)',
+                nameEn: 'Tušnica mountain tour (1697 m)',
+                place: '',
+                path: '',
+                duration: '6 h',
+                dist: '10 km',
+                difficulty: 'medium',
+                dists: ['10 km'],
+                aboutHr:
+                    'Tušnica je planina u jugozapadnom dijelu Bosne i Hercegovine u općinama Tomislavgrad i Livno. Najviši vrh je Vitrenik (1697 m).<br></br>Tušnica je bogata nalazištima mrkog ugljena koje se crpi u rudniku otovrenom 1888. Proizvodnja ugljena 1998. iznosila je 37.500 tona.<br></br>Na Tušnici je 2008. postavljena nova radio tv oprema u funkciji odašiljača. Njihovi signali pokrivaju veći dio Hercegbosanske i djelomično Zapadno hercegovačke županije.<br></br>S vrha Vitrenika pruža se znatiželjnim izletnicima i planinarima fantastičan pogled prema Kamešnici, Buškom Blatu, Livanjskom polju, Cincaru, Vranu, Čvrsnici i Biokovu.',
+                aboutEn:
+                    'Tušnica is a mountain in the southwestern part of Bosnia and Herzegovina in the municipalities of Tomislavgrad and Livno. The highest peak is Vitrenik (1697 m).<br></br>Tušnica is rich in brown coal deposits, which are mined in a mine opened in 1888. Coal production in 1998 was 37500 tons.<br></br>In 2008, new radio and TV equipment was installed on Tušnica as a transmitter. Their signals cover the greater part of Herceg-Bosnia and partly the Western Herzegovina County.<br></br>From the peak of the mountain, peak Vitrenik, curious hikers and hikers can enjoy a fantastic view of Kamešnica, Buško Blat, Livanjsko polje, Cincar, Vran, Čvrsnica and Biokovo.',
+                img: '/assets/tours/img/tusnica/tusnica.jpg',
+                imgs: [
+                    '/assets/tours/img/tusnica/tusnica1.jpg',
+                    '/assets/tours/img/tusnica/tusnica2.jpg',
+                    '/assets/tours/img/tusnica/tusnica3.jpg'
+                ],
+                routeTypeId: 'hike',
+                guide: 'Ivan Baković - Baka',
+                guidePhoto: 'ivanBakovic-baka.jpg',
+                guideAboutHr:
+                    'Planinar, planinarski vodič, speleolog, član gorske službe spašavanja Tomislavgrad',
+                guideAboutEn:
+                    'Mountaineer, mountain guide, speleologist, member of the mountain rescue service Tomislavgrad',
+                guidePhone: '+387 63 103 549',
+                guideMail: 'ivan.baka19933@gmail.com',
+                id: 'tusnica',
+                stops: [
+                    {
+                        nameHr: 'Početak staze',
+                        nameEn: 'Path start',
+                        coordinates: [17.1258272, 43.701348],
+                        img: '',
+                        aboutEn: '',
+                        aboutHr: ''
+                    },
+                    {
+                        nameHr: 'Vrh Vitrenik (1697 m)',
+                        nameEn: 'Vitrenik Peak (1697 m)',
+                        coordinates: [17.095243, 43.7214577],
+                        img: 'assets/tours/img/tusnica/tusnica.jpg',
+                        aboutEn: '',
+                        aboutHr: ''
+                    }
+                ]
+            }
+        },
+        velikiVran: {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                zoom: '14',
+                zoomMobile: '13',
+                coordinates: [1950162.55536, 5413221.44739]
+            },
+            properties: {
+                nameHr: 'Veliki Vran (2074 m)',
+                nameEn: 'Veliki Vran mountain tour (2074 m)',
+                place: '',
+                path: '',
+                duration: '6.5 h',
+                dist: '7 km',
+                difficulty: 'medium',
+                dists: ['7 km'],
+                aboutHr:
+                    'Vran planinu okružuju s jugoistoka Dugo polje (1187 m) i Blidinjsko jezero (1183 m), s istoka Dragajice (1435 m), na sjeveroistoku Baćina, a na sjeveru Kedžara (1520-1571m) i Trebiševo (1273 m). Sjeverozapadno je planina Ljubuša (1686 m). Vran se nalazi u četverokutu između Rame, Tomislavgrada, Jablanice i Posušja. Proteže se od jugo-zapada prema sjevero-istoku. Ima oblik jednostavnog čunja i nije toliko razvedena. Strane su ravne i pločaste, a u unutrašnjosti ponegdje zatičemo ravne i okomite stijene.<br></br>Spominjanje Vran planine najviše je vezano za vrijeme turske vladavine na ovim prostorima, odnosno vrijeme sedamnaestog stoljeća i ime narodnog junaka Mijata Tomića koji se skrivao po obroncima planine. Poznat je i po legendi o Divi Grabovčevoj. U vremenu neposredno nakon Drugog svjetskog rata preko Vrana su vodile mnoge staze kojima su Ramljaci nosili duhan iz Hercegovine i tako pokušavali nešto zaraditi za svoje obitelji.<br></br>Građen je od vapnenaca i dolomita. Ima četiri vrha viša od 2000 m, a najviši je Veliki Vran (2074 m). Podnožje planine obraslo je bukovom šumom i klekovinom, dok je jugoistočna strana gola, bez šume.',
+                aboutEn:
+                    'Vran mountain is surrounded by Dugo polje (engl. Long Field) (1187 m) and Blidinje lake (1183 m) to the southeast, Dragajica (1435 m) to the east, Baćin to the northeast, Kedžara (1520-1571 m) and Trebiševo (1273 m) to the north. To the northwest there is the mountain Ljubuša (1686 m). Vran is located in a quadrangle between Rama, Tomislavgrad, Jablanica and Posušje. It stretches from south-west to north-east. It has the shape of a simple cone and is not so divorced. The sides are flat and plate-like, and in the interior we find flat and vertical rocks in some places.<br></br>The mentioning of Vran mountain is mostly related to the time of the Ottoman rule in these areas, that is, the time of the seventeenth century and the name of the national hero Mijat Tomić, who hid on the slopes of the mountain with his hajduk gang. It is also known for the legend of Diva Grabovčeva. In the time immediately after the Second World War, many paths led through Vran where the people of Rama carried tobacco for resale from Herzegovina and thus tried to earn something for their families.<br></br>It is built of limestone and dolomite. It has four peaks higher than 2000 m, and the highest is Veliki Vran (2074 m). The foot of the mountain is overgrown with beech forest and juniper, while the southeastern side is bare, without forest.',
+                img: '/assets/tours/img/velikiVran/velikiVran.jpg',
+                imgs: [
+                    '/assets/tours/img/velikiVran/velikiVran1.jpg',
+                    '/assets/tours/img/velikiVran/velikiVran2.jpg',
+                    '/assets/tours/img/velikiVran/velikiVran3.jpg'
+                ],
+                routeTypeId: 'hike',
+                guide: 'Ivan Baković - Baka',
+                guidePhoto: 'ivanBakovic-baka.jpg',
+                guideAboutHr:
+                    'Planinar, planinarski vodič, speleolog, član gorske službe spašavanja Tomislavgrad',
+                guideAboutEn:
+                    'Mountaineer, mountain guide, speleologist, member of the mountain rescue service Tomislavgrad',
+                guidePhone: '+387 63 103 549',
+                guideMail: 'ivan.baka19933@gmail.com',
+                id: 'velikiVran',
+                stops: [
+                    {
+                        nameHr: 'Početak staze',
+                        nameEn: 'Path start',
+                        coordinates: [17.5294311, 43.6544208],
+                        img: '',
+                        aboutEn: '',
+                        aboutHr: ''
+                    },
+                    {
+                        nameHr: 'Vrh Veliki Vran (2074 m)',
+                        nameEn: 'Veliki Vran Peak (2074 m)',
+                        coordinates: [17.5055567, 43.6680931],
+                        img: 'assets/tours/img/velikiVran/velikiVran.jpg',
+                        aboutEn: '',
+                        aboutHr: ''
+                    }
+                ]
+            }
+        },
+        vran: {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                zoom: '14',
+                zoomMobile: '13',
+                coordinates: [1947949.99143, 5410419.65838]
+            },
+            properties: {
+                nameHr: 'Vran (2020 m)',
+                nameEn: 'Vran mountain tour (2020 m) ',
+                place: '',
+                path: '',
+                duration: '5 h',
+                dist: '7.5 km',
+                difficulty: 'medium',
+                dists: ['7.5 km'],
+                aboutHr:
+                    'Vran planinu okružuju s jugoistoka Dugo polje (1187 m) i Blidinjsko jezero (1183 m), s istoka Dragajice (1435 m), na sjeveroistoku Baćina, a na sjeveru Kedžara (1520-1571m) i Trebiševo (1273 m). Sjeverozapadno je planina Ljubuša (1686 m). Vran se nalazi u četverokutu između Rame, Tomislavgrada, Jablanice i Posušja. Proteže se od jugo-zapada prema sjevero-istoku. Ima oblik jednostavnog čunja i nije toliko razvedena. Strane su ravne i pločaste, a u unutrašnjosti ponegdje zatičemo ravne i okomite stijene.<br></br>Spominjanje Vran planine najviše je vezano za vrijeme turske vladavine na ovim prostorima, odnosno vrijeme sedamnaestog stoljeća i ime narodnog junaka Mijata Tomića koji se skrivao po obroncima planine. Poznat je i po legendi o Divi Grabovčevoj. U vremenu neposredno nakon Drugog svjetskog rata preko Vrana su vodile mnoge staze kojima su Ramljaci nosili duhan iz Hercegovine i tako pokušavali nešto zaraditi za svoje obitelji.<br></br>Građen je od vapnenaca i dolomita. Ima četiri vrha viša od 2000 m, a najviši je Veliki Vran (2074 m). Podnožje planine obraslo je bukovom šumom i klekovinom, dok je jugoistočna strana gola, bez šume.',
+                aboutEn:
+                    'Vran mountain is surrounded by Dugo polje (engl. Long Field) (1187 m) and Blidinje lake (1183 m) to the southeast, Dragajica (1435 m) to the east, Baćin to the northeast, Kedžara (1520-1571 m) and Trebiševo (1273 m) to the north. To the northwest there is the mountain Ljubuša (1686 m). Vran is located in a quadrangle between Rama, Tomislavgrad, Jablanica and Posušje. It stretches from south-west to north-east. It has the shape of a simple cone and is not so divorced. The sides are flat and plate-like, and in the interior we find flat and vertical rocks in some places.<br></br>The mentioning of Vran mountain is mostly related to the time of the Ottoman rule in these areas, that is, the time of the seventeenth century and the name of the national hero Mijat Tomić, who hid on the slopes of the mountain with his hajduk gang. It is also known for the legend of Diva Grabovčeva. In the time immediately after the Second World War, many paths led through Vran where the people of Rama carried tobacco for resale from Herzegovina and thus tried to earn something for their families.<br></br>It is built of limestone and dolomite. It has four peaks higher than 2000 m, and the highest is Veliki Vran (2074 m). The foot of the mountain is overgrown with beech forest and juniper, while the southeastern side is bare, without forest.',
+                img: '/assets/tours/img/vran/vran.jpg',
+                imgs: [
+                    '/assets/tours/img/vran/vran1.jpg',
+                    '/assets/tours/img/vran/vran2.jpg',
+                    '/assets/tours/img/vran/vran3.jpg',
+                    '/assets/tours/img/vran/vran4.jpg'
+                ],
+                routeTypeId: 'hike',
+                guide: 'Ivan Baković - Baka',
+                guidePhoto: 'ivanBakovic-baka.jpg',
+                guideAboutHr:
+                    'Planinar, planinarski vodič, speleolog, član gorske službe spašavanja Tomislavgrad',
+                guideAboutEn:
+                    'Mountaineer, mountain guide, speleologist, member of the mountain rescue service Tomislavgrad',
+                guidePhone: '+387 63 103 549',
+                guideMail: 'ivan.baka19933@gmail.com',
+                id: 'vran',
+                stops: [
+                    {
+                        nameHr: 'Početak staze',
+                        nameEn: 'Path start',
+                        coordinates: [17.4871244, 43.63198],
+                        img: '',
+                        aboutEn: '',
+                        aboutHr: ''
+                    },
+                    {
+                        nameHr: 'Vrh Vran (2020 m)',
+                        nameEn: 'Vran Peak (2020 m)',
+                        coordinates: [17.4883787, 43.6496301],
+                        img: 'assets/tours/img/vran/vran.jpg',
+                        aboutEn: '',
+                        aboutHr: ''
+                    }
+                ]
+            }
+        },
+        plocno: {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                zoom: '14',
+                zoomMobile: '13',
+                coordinates: [1954877.00259, 5406161.99073]
+            },
+            properties: {
+                nameHr: 'Pločno (2224 m)',
+                nameEn: 'Pločn mountain tour (2224 m)',
+                place: '',
+                path: '',
+                duration: '9 h',
+                dist: '18 km',
+                difficulty: 'medium',
+                dists: ['18 km'],
+                aboutHr:
+                    'Čvrsnica je jedna od najviših planina u BiH. Do nje se dolazi iz dva pravca: sa istočne strane uz Drežancu, pritoku rijeke Neretve, kroz kanjon Dive grabovice i sa zapadne strane, iz smjera Jablanice preko Sovićkih vrata i Blidinjskog jezera.<br></br>Pločno je najviši vrh Čvrsnice. S visinom od 2228 m ujedno je i najviši vrh u središnjim Dinaridima te četvrti vrh u Bosni i Hercegovini. Vrh je kamenit, a na njemu je izgrađen telekomunikacijski objekt te geodetski stup iza objekta. <br></br>Pored Pločnog na planini postoji još 14 vrhova iznad 2000 m.<br></br>S vrha je pogled neometan u svim smjerovima.',
+                aboutEn:
+                    'Čvrsnica is one of the highest mountains in BiH. It can be reached from two directions: from the eastern side along Drežanaca, a tributary of the Neretva River, through the canyon of Diva Grabovica and from the western side, from the direction of Jablanica via Sovićki vrata and Blidinjsko lake.<br></br>Pločno is the highest peak of Čvrsnica. With a height of 2228 m, it is also the highest peak in the central Dinarides and the fourth peak in Bosnia and Herzegovina. The top is rocky, and there is a telecommunications facility on it and a geodetic column behind the facility.<br></br>In addition to Plocno on the mountain, there are 14 more peaks above 2000 m.<br></br>From the top, the view is unobstructed in all directions.',
+                img: '/assets/tours/img/plocno/plocno.jpg',
+                imgs: [
+                    '/assets/tours/img/plocno/plocno1.jpg',
+                    '/assets/tours/img/plocno/plocno2.jpg',
+                    '/assets/tours/img/plocno/plocno3.jpg',
+                    '/assets/tours/img/plocno/plocno4.jpg'
+                ],
+                routeTypeId: 'hike',
+                guide: 'Ivan Baković - Baka',
+                guidePhoto: 'ivanBakovic-baka.jpg',
+                guideAboutHr:
+                    'Planinar, planinarski vodič, speleolog, član gorske službe spašavanja Tomislavgrad',
+                guideAboutEn:
+                    'Mountaineer, mountain guide, speleologist, member of the mountain rescue service Tomislavgrad',
+                guidePhone: '+387 63 103 549',
+                guideMail: 'ivan.baka19933@gmail.com',
+                id: 'plocno',
+                stops: [
+                    {
+                        nameHr: 'Početak staze',
+                        nameEn: 'Path start',
+                        coordinates: [17.5460367, 43.6313487],
+                        img: '',
+                        aboutEn: '',
+                        aboutHr: ''
+                    },
+                    {
+                        nameHr: 'Vrh plocno (2020 m)',
+                        nameEn: 'plocno Peak (2020 m)',
+                        coordinates: [17.5647671, 43.5985226],
+                        img: 'assets/tours/img/plocno/plocno.jpg',
+                        aboutEn: '',
+                        aboutHr: ''
                     }
                 ]
             }
