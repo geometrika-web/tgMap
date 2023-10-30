@@ -77,7 +77,7 @@ var routesData = {
                     {
                         nameEn: 'Stridon town - Šujica spring',
                         nameHr: 'Grad Stridon - izvor Šujice',
-                        coordinates: [17.201782812728027, 43.880437245332864],
+                        coordinates: [17.196182812728027, 43.880437245332864],
                         img: '/assets/img/gradStridon.jpg',
                         aboutEn:
                             'The town of Stridon is a town built on the cliffs below which the river Šujica springs. The walls of this city exude a strong past and the resourcefulness of the ancient Romans who dared to make the city in such an inaccessible place. According to legend, the city is also the birthplace of St. Jerome. Although the Roman Empire lost its significance in this area, the city of Stridon still remains alive and exudes defiance of steadfastness. People continued to live in this town in the Middle Ages when it was named Stržanj. After the Middle Ages, it became more and more important, so that over time it was abandoned and left to time and the forces of nature to change its appearance. ',
@@ -560,8 +560,8 @@ var routesData = {
                 coordinates: [1942113.86675, 5412350.31197]
             },
             properties: {
-                nameHr: 'Mali vran (2017 m)',
-                nameEn: 'Mali Vran mountain tour (2017 m)',
+                nameHr: 'Mali vran (1961 m)',
+                nameEn: 'Mali Vran mountain tour (1961 m)',
                 place: '',
                 path: '',
                 duration: '5 h',
@@ -848,8 +848,8 @@ var routesData = {
                 coordinates: [1954877.00259, 5406161.99073]
             },
             properties: {
-                nameHr: 'Pločno (2224 m)',
-                nameEn: 'Pločn mountain tour (2224 m)',
+                nameHr: 'Pločno (2228 m)',
+                nameEn: 'Pločn mountain tour (2228 m)',
                 place: '',
                 path: '',
                 duration: '9 h',
